@@ -1,0 +1,175 @@
+items:
+- uid: System.Threading.Tasks.TaskCanceledException
+  id: TaskCanceledException
+  parent: System.Threading.Tasks
+  children:
+  - System.Threading.Tasks.TaskCanceledException.#ctor
+  - System.Threading.Tasks.TaskCanceledException.#ctor(System.String)
+  - System.Threading.Tasks.TaskCanceledException.#ctor(System.String,System.Exception)
+  - System.Threading.Tasks.TaskCanceledException.#ctor(System.Threading.Tasks.Task)
+  - System.Threading.Tasks.TaskCanceledException.Task
+  name: TaskCanceledException
+  fullName: System.Threading.Tasks.TaskCanceledException
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Threading/Tasks/TaskCanceledException.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Threading/Tasks/TaskCanceledException.cs
+    startLine: 22
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: Represents an exception used to communicate task cancellation.
+  syntax:
+    content: 'public class TaskCanceledException : OperationCanceledException'
+    content.vb: Public Class TaskCanceledException Inherits OperationCanceledException
+  inheritance:
+  - System.Object
+  - System.OperationCanceledException
+  inheritedMembers:
+  - System.OperationCanceledException.CancellationToken
+- uid: System.Threading.Tasks.TaskCanceledException.#ctor
+  id: '#ctor'
+  parent: System.Threading.Tasks.TaskCanceledException
+  name: TaskCanceledException()
+  fullName: System.Threading.Tasks.TaskCanceledException.TaskCanceledException()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/Tasks/TaskCanceledException.cs
+    startLine: 32
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: Initializes a new instance of the <xref href="System.Threading.Tasks.TaskCanceledException" data-throw-if-not-resolved="false"></xref> class with a system-supplied message that describes the error.
+  syntax:
+    content: public TaskCanceledException()
+    content.vb: Public Sub New
+- uid: System.Threading.Tasks.TaskCanceledException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: System.Threading.Tasks.TaskCanceledException
+  name: TaskCanceledException(String)
+  fullName: System.Threading.Tasks.TaskCanceledException.TaskCanceledException(System.String)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/Tasks/TaskCanceledException.cs
+    startLine: 41
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: Initializes a new instance of the <xref href="System.Threading.Tasks.TaskCanceledException" data-throw-if-not-resolved="false"></xref> class with a specified message that describes the error.
+  syntax:
+    content: public TaskCanceledException(string message)
+    content.vb: Public Sub New(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message that describes the exception. The caller of this constructor is required to ensure that this string has been localized for the current system culture.
+- uid: System.Threading.Tasks.TaskCanceledException.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: System.Threading.Tasks.TaskCanceledException
+  name: TaskCanceledException(String, Exception)
+  fullName: System.Threading.Tasks.TaskCanceledException.TaskCanceledException(System.String, System.Exception)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/Tasks/TaskCanceledException.cs
+    startLine: 52
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: Initializes a new instance of the <xref href="System.Threading.Tasks.TaskCanceledException" data-throw-if-not-resolved="false"></xref> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+  syntax:
+    content: public TaskCanceledException(string message, Exception innerException)
+    content.vb: Public Sub New(message As String, innerException As Exception)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message that describes the exception. The caller of this constructor is required to ensure that this string has been localized for the current system culture.
+    - id: innerException
+      type: System.Exception
+      description: The exception that is the cause of the current exception. If the *innerException* parameter is not null, the current exception is raised in a catch block that handles the inner exception.
+- uid: System.Threading.Tasks.TaskCanceledException.#ctor(System.Threading.Tasks.Task)
+  id: '#ctor(System.Threading.Tasks.Task)'
+  parent: System.Threading.Tasks.TaskCanceledException
+  name: TaskCanceledException(Task)
+  fullName: System.Threading.Tasks.TaskCanceledException.TaskCanceledException(System.Threading.Tasks.Task)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/Tasks/TaskCanceledException.cs
+    startLine: 61
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: Initializes a new instance of the <xref href="System.Threading.Tasks.TaskCanceledException" data-throw-if-not-resolved="false"></xref> class with a reference to the <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> that has been canceled.
+  syntax:
+    content: public TaskCanceledException(Task task)
+    content.vb: Public Sub New(task As Task)
+    parameters:
+    - id: task
+      type: System.Threading.Tasks.Task
+      description: A task that has been canceled.
+- uid: System.Threading.Tasks.TaskCanceledException.Task
+  id: Task
+  parent: System.Threading.Tasks.TaskCanceledException
+  name: Task
+  fullName: System.Threading.Tasks.TaskCanceledException.Task
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/Tasks/TaskCanceledException.cs
+    startLine: 85
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: Gets the task associated with this exception.
+  syntax:
+    content: public Task Task { get; }
+    content.vb: Public ReadOnly Property Task As Task
+    parameters: []
+    return:
+      type: System.Threading.Tasks.Task
+      description: A reference to the <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> that is associated with this exception.
+references:
+- uid: System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.OperationCanceledException
+  parent: System
+  isExternal: false
+  name: OperationCanceledException
+  fullName: System.OperationCanceledException
+- uid: System.OperationCanceledException.CancellationToken
+  parent: System.OperationCanceledException
+  isExternal: false
+  name: CancellationToken
+  fullName: System.OperationCanceledException.CancellationToken
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Exception
+  parent: System
+  isExternal: false
+  name: Exception
+  fullName: System.Exception
+- uid: System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: false
+  name: Threading.Tasks.Task
+  fullName: System.Threading.Tasks.Task

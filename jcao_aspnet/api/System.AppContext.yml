@@ -1,0 +1,160 @@
+items:
+- uid: System.AppContext
+  id: AppContext
+  parent: System
+  children:
+  - System.AppContext.BaseDirectory
+  - System.AppContext.SetSwitch(System.String,System.Boolean)
+  - System.AppContext.TargetFrameworkName
+  - System.AppContext.TryGetSwitch(System.String,System.Boolean@)
+  name: AppContext
+  fullName: System.AppContext
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/AppContext/AppContext.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/AppContext/AppContext.cs
+    startLine: 9
+  assemblies:
+  - System.AppContext
+  namespace: System
+  summary: Provides members for setting and retrieving data about an application's context.
+  syntax:
+    content: 'public class AppContext : object'
+    content.vb: Public Class AppContext Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.AppContext.BaseDirectory
+  id: BaseDirectory
+  parent: System.AppContext
+  name: BaseDirectory
+  fullName: System.AppContext.BaseDirectory
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/AppContext/AppContext.cs
+    startLine: 21
+  assemblies:
+  - System.AppContext
+  namespace: System
+  summary: Gets the pathname of the base directory that the assembly resolver uses to probe for assemblies.
+  syntax:
+    content: public static string BaseDirectory { get; }
+    content.vb: Public Shared ReadOnly Property BaseDirectory As String
+    parameters: []
+    return:
+      type: System.String
+      description: the pathname of the base directory that the assembly resolver uses to probe for assemblies.
+- uid: System.AppContext.SetSwitch(System.String,System.Boolean)
+  id: SetSwitch(System.String,System.Boolean)
+  parent: System.AppContext
+  name: SetSwitch(String, Boolean)
+  fullName: System.AppContext.SetSwitch(System.String, System.Boolean)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/AppContext/AppContext.cs
+    startLine: 152
+  assemblies:
+  - System.AppContext
+  namespace: System
+  summary: Sets the value of a switch.
+  syntax:
+    content: public static void SetSwitch(string switchName, bool isEnabled)
+    content.vb: Public Shared Sub SetSwitch(switchName As String, isEnabled As Boolean)
+    parameters:
+    - id: switchName
+      type: System.String
+      description: The name of the switch.
+    - id: isEnabled
+      type: System.Boolean
+      description: The value of the switch.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*switchName* is null.'
+  - type: System.ArgumentException
+    description: '*switchName* is <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.AppContext.TryGetSwitch(System.String,System.Boolean@)
+  id: TryGetSwitch(System.String,System.Boolean@)
+  parent: System.AppContext
+  name: TryGetSwitch(String, out Boolean)
+  name.vb: TryGetSwitch(String, ByRef Boolean)
+  fullName: System.AppContext.TryGetSwitch(System.String, out System.Boolean)
+  fullName.vb: System.AppContext.TryGetSwitch(System.String, ByRef System.Boolean)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/AppContext/AppContext.cs
+    startLine: 56
+  assemblies:
+  - System.AppContext
+  namespace: System
+  summary: Tries to get the value of a switch.
+  syntax:
+    content: public static bool TryGetSwitch(string switchName, out bool isEnabled)
+    content.vb: Public Shared Function TryGetSwitch(switchName As String, ByRef isEnabled As Boolean) As Boolean
+    parameters:
+    - id: switchName
+      type: System.String
+      description: The name of the switch.
+    - id: isEnabled
+      type: System.Boolean
+      description: When this method returns, contains the value of *switchName* if *switchName* was found, or false if *switchName* was not found. This parameter is passed uninitialized.
+    return:
+      type: System.Boolean
+      description: true if *switchName* was set and the *isEnabled* argument contains the value of the switch; otherwise, false.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*switchName* is null.'
+  - type: System.ArgumentException
+    description: '*switchName* is <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.AppContext.TargetFrameworkName
+  id: TargetFrameworkName
+  parent: System.AppContext
+  name: TargetFrameworkName
+  fullName: System.AppContext.TargetFrameworkName
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/AppContext/AppContext.cs
+    startLine: 34
+  assemblies:
+  - System.AppContext
+  namespace: System
+  syntax:
+    content: public static string TargetFrameworkName { get; }
+    content.vb: Public Shared ReadOnly Property TargetFrameworkName As String
+    parameters: []
+    return:
+      type: System.String
+references:
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException

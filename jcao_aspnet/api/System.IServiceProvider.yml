@@ -1,0 +1,65 @@
+items:
+- uid: System.IServiceProvider
+  id: IServiceProvider
+  parent: System
+  children:
+  - System.IServiceProvider.GetService(System.Type)
+  name: IServiceProvider
+  fullName: System.IServiceProvider
+  type: Interface
+  source:
+    remote:
+      path: src/System.ComponentModel/src/System/IServiceProvider.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.ComponentModel/src/System/IServiceProvider.cs
+    startLine: 6
+  assemblies:
+  - System.ComponentModel
+  namespace: System
+  summary: Defines a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.
+  syntax:
+    content: public interface IServiceProvider
+    content.vb: Public Interface IServiceProvider
+- uid: System.IServiceProvider.GetService(System.Type)
+  id: GetService(System.Type)
+  parent: System.IServiceProvider
+  name: GetService(Type)
+  fullName: System.IServiceProvider.GetService(System.Type)
+  type: Method
+  source:
+    remote:
+      path: src/System.ComponentModel/ref/System.ComponentModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.ComponentModel/ref/System.ComponentModel.cs
+    startLine: 9
+  assemblies:
+  - System.ComponentModel
+  namespace: System
+  summary: Gets the service object of the specified type.
+  syntax:
+    content: object GetService(Type serviceType)
+    content.vb: Function GetService(serviceType As Type) As Object
+    parameters:
+    - id: serviceType
+      type: System.Type
+      description: An object that specifies the type of service object to get.
+    return:
+      type: System.Object
+      description: A service object of type *serviceType*.-or- null if there is no service object of type *serviceType*.
+references:
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Type
+  parent: System
+  isExternal: false
+  name: Type
+  fullName: System.Type
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object

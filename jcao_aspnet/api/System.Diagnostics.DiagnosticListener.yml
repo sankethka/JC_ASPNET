@@ -1,0 +1,625 @@
+items:
+- uid: System.Diagnostics.DiagnosticListener
+  id: DiagnosticListener
+  parent: System.Diagnostics
+  children:
+  - System.Diagnostics.DiagnosticListener.#ctor(System.String)
+  - System.Diagnostics.DiagnosticListener.AllListeners
+  - System.Diagnostics.DiagnosticListener.DefaultListener
+  - System.Diagnostics.DiagnosticListener.Dispose
+  - System.Diagnostics.DiagnosticListener.IsEnabled(System.String)
+  - System.Diagnostics.DiagnosticListener.Name
+  - System.Diagnostics.DiagnosticListener.Subscribe(System.IObserver{System.Collections.Generic.KeyValuePair{System.String,System.Object}})
+  - System.Diagnostics.DiagnosticListener.Subscribe(System.IObserver{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.Predicate{System.String})
+  - System.Diagnostics.DiagnosticListener.Write(System.String,System.Object)
+  name: DiagnosticListener
+  fullName: System.Diagnostics.DiagnosticListener
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/DiagnosticListener.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/DiagnosticListener.cs
+    startLine: 34
+  assemblies:
+  - System.Diagnostics.DiagnosticSource
+  namespace: System.Diagnostics
+  syntax:
+    content: 'public class DiagnosticListener : DiagnosticSource, IDisposable, IObservable<Collections.Generic.KeyValuePair<string, object>>'
+    content.vb: Public Class DiagnosticListener Inherits DiagnosticSource Implements IDisposable, IObservable(Of Collections.Generic.KeyValuePair(Of String, Object))
+  inheritance:
+  - System.Object
+  - System.Diagnostics.DiagnosticSource
+  implements:
+  - System.IDisposable
+  - System.IObservable{System.Collections.Generic.KeyValuePair{System.String,System.Object}}
+  inheritedMembers:
+  - System.Diagnostics.DiagnosticSource.DefaultSource
+- uid: System.Diagnostics.DiagnosticListener.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: System.Diagnostics.DiagnosticListener
+  name: DiagnosticListener(String)
+  fullName: System.Diagnostics.DiagnosticListener.DiagnosticListener(System.String)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/DiagnosticListener.cs
+    startLine: 94
+  assemblies:
+  - System.Diagnostics.DiagnosticSource
+  namespace: System.Diagnostics
+  syntax:
+    content: public DiagnosticListener(string name)
+    content.vb: Public Sub New(name As String)
+    parameters:
+    - id: name
+      type: System.String
+- uid: System.Diagnostics.DiagnosticListener.DefaultListener
+  id: DefaultListener
+  parent: System.Diagnostics.DiagnosticListener
+  name: DefaultListener
+  fullName: System.Diagnostics.DiagnosticListener.DefaultListener
+  type: Property
+  source:
+    remote: &o1
+      path: src/System.Diagnostics.DiagnosticSource/ref/System.Diagnostics.DiagnosticSource.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Diagnostics.DiagnosticSource/ref/System.Diagnostics.DiagnosticSource.cs
+    startLine: 7
+  assemblies:
+  - System.Diagnostics.DiagnosticSource
+  namespace: System.Diagnostics
+  syntax:
+    content: public static DiagnosticListener DefaultListener { get; }
+    content.vb: Public Shared ReadOnly Property DefaultListener As DiagnosticListener
+    parameters: []
+    return:
+      type: System.Diagnostics.DiagnosticListener
+- uid: System.Diagnostics.DiagnosticListener.Name
+  id: Name
+  parent: System.Diagnostics.DiagnosticListener
+  name: Name
+  fullName: System.Diagnostics.DiagnosticListener.Name
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/DiagnosticListener.cs
+    startLine: 164
+  assemblies:
+  - System.Diagnostics.DiagnosticSource
+  namespace: System.Diagnostics
+  syntax:
+    content: public string Name { get; }
+    content.vb: Public ReadOnly Property Name As String
+    parameters: []
+    return:
+      type: System.String
+- uid: System.Diagnostics.DiagnosticListener.AllListeners
+  id: AllListeners
+  parent: System.Diagnostics.DiagnosticListener
+  name: AllListeners
+  fullName: System.Diagnostics.DiagnosticListener.AllListeners
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/DiagnosticListener.cs
+    startLine: 50
+  assemblies:
+  - System.Diagnostics.DiagnosticSource
+  namespace: System.Diagnostics
+  syntax:
+    content: public static IObservable<DiagnosticListener> AllListeners { get; }
+    content.vb: Public Shared ReadOnly Property AllListeners As IObservable(Of DiagnosticListener)
+    parameters: []
+    return:
+      type: IObservable{System.Diagnostics.DiagnosticListener}
+- uid: System.Diagnostics.DiagnosticListener.Dispose
+  id: Dispose
+  parent: System.Diagnostics.DiagnosticListener
+  name: Dispose()
+  fullName: System.Diagnostics.DiagnosticListener.Dispose()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/DiagnosticListener.cs
+    startLine: 122
+  assemblies:
+  - System.Diagnostics.DiagnosticSource
+  namespace: System.Diagnostics
+  syntax:
+    content: public virtual void Dispose()
+    content.vb: Public Overridable Sub Dispose
+- uid: System.Diagnostics.DiagnosticListener.IsEnabled(System.String)
+  id: IsEnabled(System.String)
+  parent: System.Diagnostics.DiagnosticListener
+  name: IsEnabled(String)
+  fullName: System.Diagnostics.DiagnosticListener.IsEnabled(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/DiagnosticListener.cs
+    startLine: 181
+  assemblies:
+  - System.Diagnostics.DiagnosticSource
+  namespace: System.Diagnostics
+  syntax:
+    content: public override bool IsEnabled(string name)
+    content.vb: Public Overrides Function IsEnabled(name As String) As Boolean
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Boolean
+  overridden: System.Diagnostics.DiagnosticSource.IsEnabled(System.String)
+- uid: System.Diagnostics.DiagnosticListener.Subscribe(System.IObserver{System.Collections.Generic.KeyValuePair{System.String,System.Object}})
+  id: Subscribe(System.IObserver{System.Collections.Generic.KeyValuePair{System.String,System.Object}})
+  parent: System.Diagnostics.DiagnosticListener
+  name: Subscribe(IObserver<Collections.Generic.KeyValuePair<String, Object>>)
+  name.vb: Subscribe(IObserver(Of Collections.Generic.KeyValuePair(Of String, Object)))
+  fullName: System.Diagnostics.DiagnosticListener.Subscribe(System.IObserver<System.Collections.Generic.KeyValuePair<System.String, System.Object>>)
+  fullName.vb: System.Diagnostics.DiagnosticListener.Subscribe(System.IObserver(Of System.Collections.Generic.KeyValuePair(Of System.String, System.Object)))
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Diagnostics.DiagnosticSource/ref/System.Diagnostics.DiagnosticSource.cs
+    startLine: 12
+  assemblies:
+  - System.Diagnostics.DiagnosticSource
+  namespace: System.Diagnostics
+  syntax:
+    content: public IDisposable Subscribe(IObserver<Collections.Generic.KeyValuePair<string, object>> observer)
+    content.vb: Public Function Subscribe(observer As IObserver(Of Collections.Generic.KeyValuePair(Of String, Object))) As IDisposable
+    parameters:
+    - id: observer
+      type: System.IObserver{System.Collections.Generic.KeyValuePair{System.String,System.Object}}
+    return:
+      type: System.IDisposable
+- uid: System.Diagnostics.DiagnosticListener.Subscribe(System.IObserver{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.Predicate{System.String})
+  id: Subscribe(System.IObserver{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.Predicate{System.String})
+  parent: System.Diagnostics.DiagnosticListener
+  name: Subscribe(IObserver<Collections.Generic.KeyValuePair<String, Object>>, Predicate<String>)
+  name.vb: Subscribe(IObserver(Of Collections.Generic.KeyValuePair(Of String, Object)), Predicate(Of String))
+  fullName: System.Diagnostics.DiagnosticListener.Subscribe(System.IObserver<System.Collections.Generic.KeyValuePair<System.String, System.Object>>, System.Predicate<System.String>)
+  fullName.vb: System.Diagnostics.DiagnosticListener.Subscribe(System.IObserver(Of System.Collections.Generic.KeyValuePair(Of System.String, System.Object)), System.Predicate(Of System.String))
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Diagnostics.DiagnosticSource/ref/System.Diagnostics.DiagnosticSource.cs
+    startLine: 13
+  assemblies:
+  - System.Diagnostics.DiagnosticSource
+  namespace: System.Diagnostics
+  syntax:
+    content: public virtual IDisposable Subscribe(IObserver<Collections.Generic.KeyValuePair<string, object>> observer, Predicate<string> isEnabled)
+    content.vb: Public Overridable Function Subscribe(observer As IObserver(Of Collections.Generic.KeyValuePair(Of String, Object)), isEnabled As Predicate(Of String)) As IDisposable
+    parameters:
+    - id: observer
+      type: System.IObserver{System.Collections.Generic.KeyValuePair{System.String,System.Object}}
+    - id: isEnabled
+      type: System.Predicate{System.String}
+    return:
+      type: System.IDisposable
+- uid: System.Diagnostics.DiagnosticListener.Write(System.String,System.Object)
+  id: Write(System.String,System.Object)
+  parent: System.Diagnostics.DiagnosticListener
+  name: Write(String, Object)
+  fullName: System.Diagnostics.DiagnosticListener.Write(System.String, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/DiagnosticListener.cs
+    startLine: 194
+  assemblies:
+  - System.Diagnostics.DiagnosticSource
+  namespace: System.Diagnostics
+  syntax:
+    content: public override void Write(string name, object parameters)
+    content.vb: Public Overrides Sub Write(name As String, parameters As Object)
+    parameters:
+    - id: name
+      type: System.String
+    - id: parameters
+      type: System.Object
+  overridden: System.Diagnostics.DiagnosticSource.Write(System.String,System.Object)
+references:
+- uid: System.Diagnostics
+  isExternal: false
+  name: System.Diagnostics
+  fullName: System.Diagnostics
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.Diagnostics.DiagnosticSource
+  parent: System.Diagnostics
+  isExternal: false
+  name: DiagnosticSource
+  fullName: System.Diagnostics.DiagnosticSource
+- uid: System.IDisposable
+  parent: System
+  isExternal: false
+  name: IDisposable
+  fullName: System.IDisposable
+- uid: System.IObservable{System.Collections.Generic.KeyValuePair{System.String,System.Object}}
+  definition: System.IObservable`1
+  name: IObservable<Collections.Generic.KeyValuePair<String, Object>>
+  name.vb: IObservable(Of Collections.Generic.KeyValuePair(Of String, Object))
+  fullName: System.IObservable<System.Collections.Generic.KeyValuePair<System.String, System.Object>>
+  fullName.vb: System.IObservable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.Object))
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    fullName: System.IObservable
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: Collections.Generic.KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    fullName: System.IObservable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: Collections.Generic.KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  - name: )
+    fullName: )
+- uid: System.Diagnostics.DiagnosticSource.DefaultSource
+  parent: System.Diagnostics.DiagnosticSource
+  isExternal: false
+  name: DefaultSource
+  fullName: System.Diagnostics.DiagnosticSource.DefaultSource
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.IObservable`1
+  isExternal: false
+  name: IObservable<T>
+  name.vb: IObservable(Of T)
+  fullName: System.IObservable<T>
+  fullName.vb: System.IObservable(Of T)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    fullName: System.IObservable
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    fullName: System.IObservable
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Diagnostics.DiagnosticListener
+  parent: System.Diagnostics
+  isExternal: false
+  name: DiagnosticListener
+  fullName: System.Diagnostics.DiagnosticListener
+- uid: IObservable{System.Diagnostics.DiagnosticListener}
+  definition: IObservable`1
+  name: IObservable<DiagnosticListener>
+  name.vb: IObservable(Of DiagnosticListener)
+  fullName: IObservable<System.Diagnostics.DiagnosticListener>
+  fullName.vb: IObservable(Of System.Diagnostics.DiagnosticListener)
+  spec.csharp:
+  - uid: IObservable`1
+    name: IObservable
+    fullName: IObservable
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.Diagnostics.DiagnosticListener
+    name: DiagnosticListener
+    fullName: System.Diagnostics.DiagnosticListener
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IObservable`1
+    name: IObservable
+    fullName: IObservable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Diagnostics.DiagnosticListener
+    name: DiagnosticListener
+    fullName: System.Diagnostics.DiagnosticListener
+  - name: )
+    fullName: )
+- uid: IObservable`1
+  isExternal: true
+  name: IObservable<>
+  name.vb: IObservable(Of )
+  fullName: IObservable<>
+  fullName.vb: IObservable(Of )
+  spec.csharp:
+  - uid: IObservable`1
+    name: IObservable
+    fullName: IObservable
+    isExternal: true
+  - name: <
+    fullName: <
+  - {}
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IObservable`1
+    name: IObservable
+    fullName: IObservable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - {}
+  - name: )
+    fullName: )
+- uid: System.Diagnostics.DiagnosticSource.IsEnabled(System.String)
+  parent: System.Diagnostics.DiagnosticSource
+  isExternal: true
+  name: IsEnabled(String)
+  fullName: System.Diagnostics.DiagnosticSource.IsEnabled(System.String)
+  spec.csharp:
+  - uid: System.Diagnostics.DiagnosticSource.IsEnabled(System.String)
+    name: IsEnabled
+    fullName: System.Diagnostics.DiagnosticSource.IsEnabled
+  - name: (
+    fullName: (
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Diagnostics.DiagnosticSource.IsEnabled(System.String)
+    name: IsEnabled
+    fullName: System.Diagnostics.DiagnosticSource.IsEnabled
+  - name: (
+    fullName: (
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.IObserver{System.Collections.Generic.KeyValuePair{System.String,System.Object}}
+  definition: System.IObserver`1
+  name: IObserver<Collections.Generic.KeyValuePair<String, Object>>
+  name.vb: IObserver(Of Collections.Generic.KeyValuePair(Of String, Object))
+  fullName: System.IObserver<System.Collections.Generic.KeyValuePair<System.String, System.Object>>
+  fullName.vb: System.IObserver(Of System.Collections.Generic.KeyValuePair(Of System.String, System.Object))
+  spec.csharp:
+  - uid: System.IObserver`1
+    name: IObserver
+    fullName: System.IObserver
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: Collections.Generic.KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IObserver`1
+    name: IObserver
+    fullName: System.IObserver
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: Collections.Generic.KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  - name: )
+    fullName: )
+- uid: System.IObserver`1
+  parent: System
+  isExternal: false
+  name: IObserver<T>
+  name.vb: IObserver(Of T)
+  fullName: System.IObserver<T>
+  fullName.vb: System.IObserver(Of T)
+  spec.csharp:
+  - uid: System.IObserver`1
+    name: IObserver
+    fullName: System.IObserver
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IObserver`1
+    name: IObserver
+    fullName: System.IObserver
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Predicate{System.String}
+  definition: System.Predicate`1
+  name: Predicate<String>
+  name.vb: Predicate(Of String)
+  fullName: System.Predicate<System.String>
+  fullName.vb: System.Predicate(Of System.String)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    fullName: System.Predicate
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    fullName: System.Predicate
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Predicate`1
+  parent: System
+  isExternal: false
+  name: Predicate<>
+  name.vb: Predicate(Of )
+  fullName: System.Predicate<>
+  fullName.vb: System.Predicate(Of )
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    fullName: System.Predicate
+  - name: <
+    fullName: <
+  - {}
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    fullName: System.Predicate
+  - name: '(Of '
+    fullName: '(Of '
+  - {}
+  - name: )
+    fullName: )
+- uid: System.Diagnostics.DiagnosticSource.Write(System.String,System.Object)
+  parent: System.Diagnostics.DiagnosticSource
+  isExternal: true
+  name: Write(String, Object)
+  fullName: System.Diagnostics.DiagnosticSource.Write(System.String, System.Object)
+  spec.csharp:
+  - uid: System.Diagnostics.DiagnosticSource.Write(System.String,System.Object)
+    name: Write
+    fullName: System.Diagnostics.DiagnosticSource.Write
+  - name: (
+    fullName: (
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Diagnostics.DiagnosticSource.Write(System.String,System.Object)
+    name: Write
+    fullName: System.Diagnostics.DiagnosticSource.Write
+  - name: (
+    fullName: (
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )

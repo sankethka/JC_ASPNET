@@ -1,0 +1,204 @@
+items:
+- uid: System.Text.DecoderFallbackBuffer
+  id: DecoderFallbackBuffer
+  parent: System.Text
+  children:
+  - System.Text.DecoderFallbackBuffer.#ctor
+  - System.Text.DecoderFallbackBuffer.Fallback(System.Byte[],System.Int32)
+  - System.Text.DecoderFallbackBuffer.GetNextChar
+  - System.Text.DecoderFallbackBuffer.MovePrevious
+  - System.Text.DecoderFallbackBuffer.Remaining
+  - System.Text.DecoderFallbackBuffer.Reset
+  name: DecoderFallbackBuffer
+  fullName: System.Text.DecoderFallbackBuffer
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Text/DecoderFallback.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Text/DecoderFallback.cs
+    startLine: 87
+  assemblies:
+  - System.Text.Encoding
+  namespace: System.Text
+  summary: Provides a buffer that allows a fallback handler to return an alternate string to a decoder when it cannot decode an input byte sequence.
+  syntax:
+    content: 'public abstract class DecoderFallbackBuffer : object'
+    content.vb: Public MustInherit Class DecoderFallbackBuffer Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Text.DecoderFallbackBuffer.#ctor
+  id: '#ctor'
+  parent: System.Text.DecoderFallbackBuffer
+  name: DecoderFallbackBuffer()
+  fullName: System.Text.DecoderFallbackBuffer.DecoderFallbackBuffer()
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 37
+  assemblies:
+  - System.Text.Encoding
+  namespace: System.Text
+  summary: Initializes a new instance of the <xref href="System.Text.DecoderFallbackBuffer" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: protected DecoderFallbackBuffer()
+    content.vb: Protected Sub New
+- uid: System.Text.DecoderFallbackBuffer.Remaining
+  id: Remaining
+  parent: System.Text.DecoderFallbackBuffer
+  name: Remaining
+  fullName: System.Text.DecoderFallbackBuffer.Remaining
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Text/DecoderFallback.cs
+    startLine: 106
+  assemblies:
+  - System.Text.Encoding
+  namespace: System.Text
+  summary: When overridden in a derived class, gets the number of characters in the current <xref href="System.Text.DecoderFallbackBuffer" data-throw-if-not-resolved="false"></xref> object that remain to be processed.
+  syntax:
+    content: public abstract int Remaining { get; }
+    content.vb: Public MustOverride ReadOnly Property Remaining As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of characters in the current fallback buffer that have not yet been processed.
+- uid: System.Text.DecoderFallbackBuffer.Fallback(System.Byte[],System.Int32)
+  id: Fallback(System.Byte[],System.Int32)
+  parent: System.Text.DecoderFallbackBuffer
+  name: Fallback(Byte[], Int32)
+  name.vb: Fallback(Byte(), Int32)
+  fullName: System.Text.DecoderFallbackBuffer.Fallback(System.Byte[], System.Int32)
+  fullName.vb: System.Text.DecoderFallbackBuffer.Fallback(System.Byte(), System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Text/DecoderFallback.cs
+    startLine: 94
+  assemblies:
+  - System.Text.Encoding
+  namespace: System.Text
+  summary: When overridden in a derived class, prepares the fallback buffer to handle the specified input byte sequence.
+  syntax:
+    content: public abstract bool Fallback(byte[] bytesUnknown, int index)
+    content.vb: Public MustOverride Function Fallback(bytesUnknown As Byte(), index As Integer) As Boolean
+    parameters:
+    - id: bytesUnknown
+      type: System.Byte[]
+      description: An input array of bytes.
+    - id: index
+      type: System.Int32
+      description: The index position of a byte in *bytesUnknown*.
+    return:
+      type: System.Boolean
+      description: true if the fallback buffer can process *bytesUnknown*; false if the fallback buffer ignores *bytesUnknown*.
+- uid: System.Text.DecoderFallbackBuffer.GetNextChar
+  id: GetNextChar
+  parent: System.Text.DecoderFallbackBuffer
+  name: GetNextChar()
+  fullName: System.Text.DecoderFallbackBuffer.GetNextChar()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Text/DecoderFallback.cs
+    startLine: 98
+  assemblies:
+  - System.Text.Encoding
+  namespace: System.Text
+  summary: When overridden in a derived class, retrieves the next character in the fallback buffer.
+  syntax:
+    content: public abstract char GetNextChar()
+    content.vb: Public MustOverride Function GetNextChar As Char
+    return:
+      type: System.Char
+      description: The next character in the fallback buffer.
+- uid: System.Text.DecoderFallbackBuffer.MovePrevious
+  id: MovePrevious
+  parent: System.Text.DecoderFallbackBuffer
+  name: MovePrevious()
+  fullName: System.Text.DecoderFallbackBuffer.MovePrevious()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Text/DecoderFallback.cs
+    startLine: 102
+  assemblies:
+  - System.Text.Encoding
+  namespace: System.Text
+  summary: When overridden in a derived class, causes the next call to the <xref href="System.Text.DecoderFallbackBuffer.GetNextChar" data-throw-if-not-resolved="false"></xref> method to access the data buffer character position that is prior to the current character position.
+  syntax:
+    content: public abstract bool MovePrevious()
+    content.vb: Public MustOverride Function MovePrevious As Boolean
+    return:
+      type: System.Boolean
+      description: true if the <xref href="System.Text.DecoderFallbackBuffer.MovePrevious" data-throw-if-not-resolved="false"></xref> operation was successful; otherwise, false.
+- uid: System.Text.DecoderFallbackBuffer.Reset
+  id: Reset
+  parent: System.Text.DecoderFallbackBuffer
+  name: Reset()
+  fullName: System.Text.DecoderFallbackBuffer.Reset()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Text/DecoderFallback.cs
+    startLine: 110
+  assemblies:
+  - System.Text.Encoding
+  namespace: System.Text
+  summary: Initializes all data and state information pertaining to this fallback buffer.
+  syntax:
+    content: public virtual void Reset()
+    content.vb: Public Overridable Sub Reset
+references:
+- uid: System.Text
+  isExternal: false
+  name: System.Text
+  fullName: System.Text
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Byte[]
+  isExternal: false
+  name: Byte[]
+  name.vb: Byte()
+  fullName: System.Byte[]
+  fullName.vb: System.Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+  - name: ()
+    fullName: ()
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.Char
+  parent: System
+  isExternal: false
+  name: Char
+  fullName: System.Char

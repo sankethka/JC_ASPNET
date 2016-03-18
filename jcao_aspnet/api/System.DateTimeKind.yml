@@ -1,0 +1,78 @@
+items:
+- uid: System.DateTimeKind
+  id: DateTimeKind
+  parent: System
+  children:
+  - System.DateTimeKind.Local
+  - System.DateTimeKind.Unspecified
+  - System.DateTimeKind.Utc
+  name: DateTimeKind
+  fullName: System.DateTimeKind
+  type: Enum
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/DateTimeKind.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/DateTimeKind.cs
+    startLine: 10
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Specifies whether a <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> object represents a local time, a Coordinated Universal Time (UTC), or is not specified as either local time or UTC.
+  syntax:
+    content: public enum DateTimeKind
+    content.vb: Public Enum DateTimeKind
+- uid: System.DateTimeKind.Local
+  id: Local
+  parent: System.DateTimeKind
+  name: Local
+  fullName: System.DateTimeKind.Local
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/DateTimeKind.cs
+    startLine: 16
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: The time represented is local time.
+  syntax:
+    content: Local = 2
+- uid: System.DateTimeKind.Unspecified
+  id: Unspecified
+  parent: System.DateTimeKind
+  name: Unspecified
+  fullName: System.DateTimeKind.Unspecified
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/DateTimeKind.cs
+    startLine: 14
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: The time represented is not specified as either local time or Coordinated Universal Time (UTC).
+  syntax:
+    content: Unspecified = 0
+- uid: System.DateTimeKind.Utc
+  id: Utc
+  parent: System.DateTimeKind
+  name: Utc
+  fullName: System.DateTimeKind.Utc
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/DateTimeKind.cs
+    startLine: 15
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: The time represented is UTC.
+  syntax:
+    content: Utc = 1
+references:
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System

@@ -1,0 +1,898 @@
+items:
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile
+  id: IsolatedStorageFile
+  parent: System.IO.IsolatedStorage
+  children:
+  - System.IO.IsolatedStorage.IsolatedStorageFile.CopyFile(System.String,System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.CopyFile(System.String,System.String,System.Boolean)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.DirectoryExists(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.Dispose
+  - System.IO.IsolatedStorage.IsolatedStorageFile.FileExists(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.GetCreationTime(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames
+  - System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames
+  - System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.GetLastAccessTime(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.GetLastWriteTime(System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication
+  - System.IO.IsolatedStorage.IsolatedStorageFile.MoveDirectory(System.String,System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.MoveFile(System.String,System.String)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile(System.String,System.IO.FileMode)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile(System.String,System.IO.FileMode,System.IO.FileAccess)
+  - System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  name: IsolatedStorageFile
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 41
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Represents an isolated storage area containing files and directories.
+  syntax:
+    content: 'public sealed class IsolatedStorageFile : IDisposable'
+    content.vb: Public NotInheritable Class IsolatedStorageFile Inherits IDisposable
+  inheritance:
+  - System.Object
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.CopyFile(System.String,System.String)
+  id: CopyFile(System.String,System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: CopyFile(String, String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.CopyFile(System.String, System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 822
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Copies an existing file to a new file.
+  syntax:
+    content: public void CopyFile(string sourceFileName, string destinationFileName)
+    content.vb: Public Sub CopyFile(sourceFileName As String, destinationFileName As String)
+    parameters:
+    - id: sourceFileName
+      type: System.String
+      description: The name of the file to copy.
+    - id: destinationFileName
+      type: System.String
+      description: The name of the destination file. This cannot be a directory or an existing file.
+  exceptions:
+  - type: System.ArgumentException
+    description: '*sourceFileName *or* destinationFileName *is a zero-length string, contains only white space, or contains one or more invalid characters defined by the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
+  - type: System.ArgumentNullException
+    description: '*sourceFileName *or* destinationFileName *is null.'
+  - type: System.InvalidOperationException
+    description: The isolated store has been closed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.FileNotFoundException
+    description: '*sourceFileName *was not found.'
+  - type: System.IO.DirectoryNotFoundException
+    description: '*sourceFileName *was not found.'
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.-or-Isolated storage is disabled.-or-*destinationFileName* exists.-or-An I/O error has occurred.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.CopyFile(System.String,System.String,System.Boolean)
+  id: CopyFile(System.String,System.String,System.Boolean)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: CopyFile(String, String, Boolean)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.CopyFile(System.String, System.String, System.Boolean)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 844
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Copies an existing file to a new file, and optionally overwrites an existing file.
+  syntax:
+    content: public void CopyFile(string sourceFileName, string destinationFileName, bool overwrite)
+    content.vb: Public Sub CopyFile(sourceFileName As String, destinationFileName As String, overwrite As Boolean)
+    parameters:
+    - id: sourceFileName
+      type: System.String
+      description: The name of the file to copy.
+    - id: destinationFileName
+      type: System.String
+      description: The name of the destination file. This cannot be a directory.
+    - id: overwrite
+      type: System.Boolean
+      description: true if the destination file can be overwritten; otherwise, false.
+  exceptions:
+  - type: System.ArgumentException
+    description: '*sourceFileName *or* destinationFileName *is a zero-length string, contains only white space, or contains one or more invalid characters defined by the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
+  - type: System.ArgumentNullException
+    description: '*sourceFileName *or* destinationFileName *is null.'
+  - type: System.InvalidOperationException
+    description: The isolated store has been closed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.FileNotFoundException
+    description: '*sourceFileName *was not found.'
+  - type: System.IO.DirectoryNotFoundException
+    description: '*sourceFileName *was not found.'
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.-or-Isolated storage is disabled.-or-An I/O error has occurred.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory(System.String)
+  id: CreateDirectory(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: CreateDirectory(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 566
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Creates a directory in the isolated storage scope.
+  syntax:
+    content: public void CreateDirectory(string dir)
+    content.vb: Public Sub CreateDirectory(dir As String)
+    parameters:
+    - id: dir
+      type: System.String
+      description: The relative path of the directory to create within the isolated storage scope.
+  exceptions:
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The current code has insufficient permissions to create isolated storage directory.
+  - type: System.ArgumentNullException
+    description: The directory path is null.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile(System.String)
+  id: CreateFile(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: CreateFile(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 719
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Creates a file in the isolated store.
+  syntax:
+    content: public IsolatedStorageFileStream CreateFile(string path)
+    content.vb: Public Function CreateFile(path As String) As IsolatedStorageFileStream
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path of the file to create.
+    return:
+      type: System.IO.IsolatedStorage.IsolatedStorageFileStream
+      description: A new isolated storage file.
+  exceptions:
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed. -or-Isolated storage is disabled.
+  - type: System.ArgumentException
+    description: '*path* is malformed.'
+  - type: System.ArgumentNullException
+    description: '*path* is null.'
+  - type: System.IO.DirectoryNotFoundException
+    description: The directory in *path* does not exist.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory(System.String)
+  id: DeleteDirectory(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: DeleteDirectory(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 626
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Deletes a directory in the isolated storage scope.
+  syntax:
+    content: public void DeleteDirectory(string dir)
+    content.vb: Public Sub DeleteDirectory(dir As String)
+    parameters:
+    - id: dir
+      type: System.String
+      description: The relative path of the directory to delete within the isolated storage scope.
+  exceptions:
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The directory could not be deleted.
+  - type: System.ArgumentNullException
+    description: The directory path was null.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile(System.String)
+  id: DeleteFile(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: DeleteFile(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 455
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Deletes a file in the isolated storage scope.
+  syntax:
+    content: public void DeleteFile(string file)
+    content.vb: Public Sub DeleteFile(file As String)
+    parameters:
+    - id: file
+      type: System.String
+      description: The relative path of the file to delete within the isolated storage scope.
+  exceptions:
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The target file is open or the path is incorrect.
+  - type: System.ArgumentNullException
+    description: The file path is null.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.DirectoryExists(System.String)
+  id: DirectoryExists(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: DirectoryExists(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.DirectoryExists(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 531
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Determines whether the specified path refers to an existing directory in the isolated store.
+  syntax:
+    content: public bool DirectoryExists(string path)
+    content.vb: Public Function DirectoryExists(path As String) As Boolean
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to test.
+    return:
+      type: System.Boolean
+      description: true if *path* refers to an existing directory in the isolated store and is not null; otherwise, false.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*path* is null.'
+  - type: System.InvalidOperationException
+    description: The isolated store is closed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed. -or-Isolated storage is disabled.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.Dispose
+  id: Dispose
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: Dispose()
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.Dispose()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 1835
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Releases all resources used by the <xref href="System.IO.IsolatedStorage.IsolatedStorageFile" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.FileExists(System.String)
+  id: FileExists(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: FileExists(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.FileExists(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 499
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Determines whether the specified path refers to an existing file in the isolated store.
+  syntax:
+    content: public bool FileExists(string path)
+    content.vb: Public Function FileExists(path As String) As Boolean
+    parameters:
+    - id: path
+      type: System.String
+      description: The path and file name to test.
+    return:
+      type: System.Boolean
+      description: true if *path* refers to an existing file in the isolated store and is not null; otherwise, false.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*path* is null.'
+  - type: System.InvalidOperationException
+    description: The isolated store is closed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.GetCreationTime(System.String)
+  id: GetCreationTime(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: GetCreationTime(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.GetCreationTime(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 726
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Returns the creation date and time of a specified file or directory.
+  syntax:
+    content: public DateTimeOffset GetCreationTime(string path)
+    content.vb: Public Function GetCreationTime(path As String) As DateTimeOffset
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to the file or directory for which to obtain creation date and time information.
+    return:
+      type: System.DateTimeOffset
+      description: The creation date and time for the specified file or directory. This value is expressed in local time.
+  exceptions:
+  - type: System.ArgumentException
+    description: '*path *is a zero-length string, contains only white space, or contains one or more invalid characters defined by the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
+  - type: System.ArgumentNullException
+    description: '*path *is null.'
+  - type: System.InvalidOperationException
+    description: The isolated store has been closed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.-or-Isolated storage is disabled.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames
+  id: GetDirectoryNames
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: GetDirectoryNames()
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 678
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Enumerates the directories at the root of an isolated store.
+  syntax:
+    content: public string[] GetDirectoryNames()
+    content.vb: Public Function GetDirectoryNames As String()
+    return:
+      type: System.String[]
+      description: An array of relative paths of directories at the root of the isolated store. A zero-length array specifies that there are no directories at the root.
+  exceptions:
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.InvalidOperationException
+    description: The isolated store is closed.
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.
+  - type: System.UnauthorizedAccessException
+    description: Caller does not have permission to enumerate directories.
+  - type: System.IO.DirectoryNotFoundException
+    description: One or more directories are not found.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames(System.String)
+  id: GetDirectoryNames(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: GetDirectoryNames(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 687
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Enumerates the directories in an isolated storage scope that match a given search pattern.
+  syntax:
+    content: public string[] GetDirectoryNames(string searchPattern)
+    content.vb: Public Function GetDirectoryNames(searchPattern As String) As String()
+    parameters:
+    - id: searchPattern
+      type: System.String
+      description: A search pattern. Both single-character ("?") and multi-character ("*") wildcards are supported.
+    return:
+      type: System.String[]
+      description: An array of the relative paths of directories in the isolated storage scope that match *searchPattern*. A zero-length array specifies that there are no directories that match.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*searchPattern* is null.'
+  - type: System.InvalidOperationException
+    description: The isolated store is closed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.UnauthorizedAccessException
+    description: Caller does not have permission to enumerate directories resolved from *searchPattern*.
+  - type: System.IO.DirectoryNotFoundException
+    description: The directory or directories specified by *searchPattern* are not found.
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames
+  id: GetFileNames
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: GetFileNames()
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 657
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Enumerates the file names at the root of an isolated store.
+  syntax:
+    content: public string[] GetFileNames()
+    content.vb: Public Function GetFileNames As String()
+    return:
+      type: System.String[]
+      description: An array of relative paths of files at the root of the isolated store.  A zero-length array specifies that there are no files at the root.
+  exceptions:
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.DirectoryNotFoundException
+    description: File paths from the isolated store root cannot be determined.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames(System.String)
+  id: GetFileNames(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: GetFileNames(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 665
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Gets the file names that match a search pattern.
+  syntax:
+    content: public string[] GetFileNames(string searchPattern)
+    content.vb: Public Function GetFileNames(searchPattern As String) As String()
+    parameters:
+    - id: searchPattern
+      type: System.String
+      description: A search pattern. Both single-character ("?") and multi-character ("*") wildcards are supported.
+    return:
+      type: System.String[]
+      description: An array of relative paths of files in the isolated storage scope that match *searchPattern*. A zero-length array specifies that there are no files that match.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*searchPattern* is null.'
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.
+  - type: System.IO.DirectoryNotFoundException
+    description: The file path specified by *searchPattern* cannot be found.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.GetLastAccessTime(System.String)
+  id: GetLastAccessTime(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: GetLastAccessTime(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.GetLastAccessTime(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 758
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Returns the date and time a specified file or directory was last accessed.
+  syntax:
+    content: public DateTimeOffset GetLastAccessTime(string path)
+    content.vb: Public Function GetLastAccessTime(path As String) As DateTimeOffset
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to the file or directory for which to obtain last access date and time information.
+    return:
+      type: System.DateTimeOffset
+      description: The date and time that the specified file or directory was last accessed. This value is expressed in local time.
+  exceptions:
+  - type: System.ArgumentException
+    description: '*path *is a zero-length string, contains only white space, or contains one or more invalid characters defined by the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
+  - type: System.ArgumentNullException
+    description: '*path *is null.'
+  - type: System.InvalidOperationException
+    description: The isolated store has been closed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.-or-Isolated storage is disabled.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.GetLastWriteTime(System.String)
+  id: GetLastWriteTime(System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: GetLastWriteTime(String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.GetLastWriteTime(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 790
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Returns the date and time a specified file or directory was last written to.
+  syntax:
+    content: public DateTimeOffset GetLastWriteTime(string path)
+    content.vb: Public Function GetLastWriteTime(path As String) As DateTimeOffset
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to the file or directory for which to obtain last write date and time information.
+    return:
+      type: System.DateTimeOffset
+      description: The date and time that the specified file or directory was last written to. This value is expressed in local time.
+  exceptions:
+  - type: System.ArgumentException
+    description: '*path *is a zero-length string, contains only white space, or contains one or more invalid characters defined by the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
+  - type: System.ArgumentNullException
+    description: '*path *is null.'
+  - type: System.InvalidOperationException
+    description: The isolated store has been closed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.-or-Isolated storage is disabled.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication
+  id: GetUserStoreForApplication
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: GetUserStoreForApplication()
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 1035
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Obtains user-scoped isolated storage corresponding to the calling code's application identity.
+  syntax:
+    content: public static IsolatedStorageFile GetUserStoreForApplication()
+    content.vb: Public Shared Function GetUserStoreForApplication As IsolatedStorageFile
+    return:
+      type: System.IO.IsolatedStorage.IsolatedStorageFile
+      description: An object corresponding to the isolated storage scope based on the calling code's assembly identity.
+  exceptions:
+  - type: System.Security.SecurityException
+    description: Sufficient isolated storage permissions have not been granted.
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: An isolated storage location cannot be initialized.-or-The application identity of the caller cannot be determined, because the <xref href="System.AppDomain.ActivationContext" data-throw-if-not-resolved="false"></xref> property returned null.-or-The permissions for the application domain cannot be determined.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.MoveDirectory(System.String,System.String)
+  id: MoveDirectory(System.String,System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: MoveDirectory(String, String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.MoveDirectory(System.String, System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 987
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Moves a specified directory and its contents to a new location.
+  syntax:
+    content: public void MoveDirectory(string sourceDirectoryName, string destinationDirectoryName)
+    content.vb: Public Sub MoveDirectory(sourceDirectoryName As String, destinationDirectoryName As String)
+    parameters:
+    - id: sourceDirectoryName
+      type: System.String
+      description: The name of the directory to move.
+    - id: destinationDirectoryName
+      type: System.String
+      description: The path to the new location for *sourceDirectoryName*. This cannot be the path to an existing directory.
+  exceptions:
+  - type: System.ArgumentException
+    description: '*sourceFileName *or* destinationFileName *is a zero-length string, contains only white space, or contains one or more invalid characters defined by the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
+  - type: System.ArgumentNullException
+    description: '*sourceFileName *or* destinationFileName *is null.'
+  - type: System.InvalidOperationException
+    description: The isolated store has been closed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.DirectoryNotFoundException
+    description: '*sourceDirectoryName* does not exist.'
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.-or-Isolated storage is disabled.-or-*destinationDirectoryName* already exists.-or-*sourceDirectoryName* and *destinationDirectoryName* refer to the same directory.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.MoveFile(System.String,System.String)
+  id: MoveFile(System.String,System.String)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: MoveFile(String, String)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.MoveFile(System.String, System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 937
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Moves a specified file to a new location, and optionally lets you specify a new file name.
+  syntax:
+    content: public void MoveFile(string sourceFileName, string destinationFileName)
+    content.vb: Public Sub MoveFile(sourceFileName As String, destinationFileName As String)
+    parameters:
+    - id: sourceFileName
+      type: System.String
+      description: The name of the file to move.
+    - id: destinationFileName
+      type: System.String
+      description: The path to the new location for the file. If a file name is included, the moved file will have that name.
+  exceptions:
+  - type: System.ArgumentException
+    description: '*sourceFileName *or* destinationFileName *is a zero-length string, contains only white space, or contains one or more invalid characters defined by the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
+  - type: System.ArgumentNullException
+    description: '*sourceFileName *or* destinationFileName *is null.'
+  - type: System.InvalidOperationException
+    description: The isolated store has been closed.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+  - type: System.IO.FileNotFoundException
+    description: '*sourceFileName* was not found.'
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed.-or-Isolated storage is disabled.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile(System.String,System.IO.FileMode)
+  id: OpenFile(System.String,System.IO.FileMode)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: OpenFile(String, FileMode)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile(System.String, System.IO.FileMode)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 700
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Opens a file in the specified mode.
+  syntax:
+    content: public IsolatedStorageFileStream OpenFile(string path, FileMode mode)
+    content.vb: Public Function OpenFile(path As String, mode As FileMode) As IsolatedStorageFileStream
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path of the file within the isolated store.
+    - id: mode
+      type: System.IO.FileMode
+      description: One of the enumeration values that specifies how to open the file.
+    return:
+      type: System.IO.IsolatedStorage.IsolatedStorageFileStream
+      description: A file that is opened in the specified mode, with read/write access, and is unshared.
+  exceptions:
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed. -or-Isolated storage is disabled.
+  - type: System.ArgumentException
+    description: '*path* is malformed.'
+  - type: System.ArgumentNullException
+    description: '*path* is null.'
+  - type: System.IO.DirectoryNotFoundException
+    description: The directory in *path* does not exist.
+  - type: System.IO.FileNotFoundException
+    description: No file was found and the *mode* is set to <xref href="System.IO.FileMode.Open" data-throw-if-not-resolved="false"></xref>.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile(System.String,System.IO.FileMode,System.IO.FileAccess)
+  id: OpenFile(System.String,System.IO.FileMode,System.IO.FileAccess)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: OpenFile(String, FileMode, FileAccess)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile(System.String, System.IO.FileMode, System.IO.FileAccess)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 707
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Opens a file in the specified mode with the specified read/write access.
+  syntax:
+    content: public IsolatedStorageFileStream OpenFile(string path, FileMode mode, FileAccess access)
+    content.vb: Public Function OpenFile(path As String, mode As FileMode, access As FileAccess) As IsolatedStorageFileStream
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path of the file within the isolated store.
+    - id: mode
+      type: System.IO.FileMode
+      description: One of the enumeration values that specifies how to open the file.
+    - id: access
+      type: System.IO.FileAccess
+      description: One of the enumeration values that specifies whether the file will be opened with read, write, or read/write access.
+    return:
+      type: System.IO.IsolatedStorage.IsolatedStorageFileStream
+      description: A file that is opened in the specified mode and access, and is unshared.
+  exceptions:
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed. -or-Isolated storage is disabled.
+  - type: System.ArgumentException
+    description: '*path* is malformed.'
+  - type: System.ArgumentNullException
+    description: '*path* is null.'
+  - type: System.IO.DirectoryNotFoundException
+    description: The directory in *path* does not exist.
+  - type: System.IO.FileNotFoundException
+    description: No file was found and the *mode* is set to <xref href="System.IO.FileMode.Open" data-throw-if-not-resolved="false"></xref>.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  id: OpenFile(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  parent: System.IO.IsolatedStorage.IsolatedStorageFile
+  name: OpenFile(String, FileMode, FileAccess, FileShare)
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile(System.String, System.IO.FileMode, System.IO.FileAccess, System.IO.FileShare)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/IO/IsolatedStorage/IsolatedStorageFileSmall.cs
+    startLine: 713
+  assemblies:
+  - System.IO.IsolatedStorage
+  namespace: System.IO.IsolatedStorage
+  summary: Opens a file in the specified mode, with the specified read/write access and sharing permission.
+  syntax:
+    content: public IsolatedStorageFileStream OpenFile(string path, FileMode mode, FileAccess access, FileShare share)
+    content.vb: Public Function OpenFile(path As String, mode As FileMode, access As FileAccess, share As FileShare) As IsolatedStorageFileStream
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path of the file within the isolated store.
+    - id: mode
+      type: System.IO.FileMode
+      description: One of the enumeration values that specifies how to open or create the file.
+    - id: access
+      type: System.IO.FileAccess
+      description: One of the enumeration values that specifies whether the file will be opened with read, write, or read/write access
+    - id: share
+      type: System.IO.FileShare
+      description: A bitwise combination of enumeration values that specify the type of access other <xref href="System.IO.IsolatedStorage.IsolatedStorageFileStream" data-throw-if-not-resolved="false"></xref>   objects have to this file.
+    return:
+      type: System.IO.IsolatedStorage.IsolatedStorageFileStream
+      description: A file that is opened in the specified mode and access, and with the specified sharing options.
+  exceptions:
+  - type: System.IO.IsolatedStorage.IsolatedStorageException
+    description: The isolated store has been removed. -or-Isolated storage is disabled.
+  - type: System.ArgumentException
+    description: '*path* is malformed.'
+  - type: System.ArgumentNullException
+    description: '*path* is null.'
+  - type: System.IO.DirectoryNotFoundException
+    description: The directory in *path* does not exist.
+  - type: System.IO.FileNotFoundException
+    description: No file was found and the *mode* is set to <xref href="System.IO.FileInfo.Open(System.IO.FileMode)" data-throw-if-not-resolved="false"></xref>.
+  - type: System.ObjectDisposedException
+    description: The isolated store has been disposed.
+references:
+- uid: System.IO.IsolatedStorage
+  isExternal: false
+  name: System.IO.IsolatedStorage
+  fullName: System.IO.IsolatedStorage
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.IO.IsolatedStorage.IsolatedStorageFileStream
+  parent: System.IO.IsolatedStorage
+  isExternal: false
+  name: IsolatedStorageFileStream
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFileStream
+- uid: System.DateTimeOffset
+  parent: System
+  isExternal: false
+  name: DateTimeOffset
+  fullName: System.DateTimeOffset
+- uid: System.String[]
+  isExternal: false
+  name: String[]
+  name.vb: String()
+  fullName: System.String[]
+  fullName.vb: System.String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    fullName: System.String
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    fullName: System.String
+  - name: ()
+    fullName: ()
+- uid: System.IO.IsolatedStorage.IsolatedStorageFile
+  parent: System.IO.IsolatedStorage
+  isExternal: false
+  name: IsolatedStorageFile
+  fullName: System.IO.IsolatedStorage.IsolatedStorageFile
+- uid: System.IO.FileMode
+  parent: System.IO
+  isExternal: false
+  name: FileMode
+  fullName: System.IO.FileMode
+- uid: System.IO
+  isExternal: false
+  name: System.IO
+  fullName: System.IO
+- uid: System.IO.FileAccess
+  parent: System.IO
+  isExternal: false
+  name: FileAccess
+  fullName: System.IO.FileAccess
+- uid: System.IO.FileShare
+  parent: System.IO
+  isExternal: false
+  name: FileShare
+  fullName: System.IO.FileShare
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.InvalidOperationException
+  parent: System
+  isExternal: false
+  name: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: System.ObjectDisposedException
+  isExternal: false
+  name: ObjectDisposedException
+  fullName: System.ObjectDisposedException
+- uid: System.IO.FileNotFoundException
+  isExternal: false
+  name: FileNotFoundException
+  fullName: System.IO.FileNotFoundException
+- uid: System.IO.DirectoryNotFoundException
+  isExternal: false
+  name: DirectoryNotFoundException
+  fullName: System.IO.DirectoryNotFoundException
+- uid: System.IO.IsolatedStorage.IsolatedStorageException
+  isExternal: false
+  name: IsolatedStorageException
+  fullName: System.IO.IsolatedStorage.IsolatedStorageException
+- uid: System.UnauthorizedAccessException
+  isExternal: false
+  name: UnauthorizedAccessException
+  fullName: System.UnauthorizedAccessException
+- uid: System.Security.SecurityException
+  isExternal: false
+  name: SecurityException
+  fullName: System.Security.SecurityException

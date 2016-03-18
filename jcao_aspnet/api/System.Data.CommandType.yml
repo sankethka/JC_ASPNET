@@ -1,0 +1,81 @@
+items:
+- uid: System.Data.CommandType
+  id: CommandType
+  parent: System.Data
+  children:
+  - System.Data.CommandType.StoredProcedure
+  - System.Data.CommandType.TableDirect
+  - System.Data.CommandType.Text
+  name: CommandType
+  fullName: System.Data.CommandType
+  type: Enum
+  source:
+    remote: &o0
+      path: src/System.Data.Common/src/System/Data/CommandType.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Data.Common/src/System/Data/CommandType.cs
+    startLine: 10
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data
+  summary: Specifies how a command string is interpreted.
+  syntax:
+    content: 'public enum CommandType : int'
+    content.vb: Public Enum CommandType As Integer
+- uid: System.Data.CommandType.StoredProcedure
+  id: StoredProcedure
+  parent: System.Data.CommandType
+  name: StoredProcedure
+  fullName: System.Data.CommandType.StoredProcedure
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/CommandType.cs
+    startLine: 14
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data
+  summary: The name of a stored procedure.
+  syntax:
+    content: StoredProcedure = null
+    content.vb: StoredProcedure = Nothing
+- uid: System.Data.CommandType.TableDirect
+  id: TableDirect
+  parent: System.Data.CommandType
+  name: TableDirect
+  fullName: System.Data.CommandType.TableDirect
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/CommandType.cs
+    startLine: 16
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data
+  summary: The name of a table.
+  syntax:
+    content: TableDirect = null
+    content.vb: TableDirect = Nothing
+- uid: System.Data.CommandType.Text
+  id: Text
+  parent: System.Data.CommandType
+  name: Text
+  fullName: System.Data.CommandType.Text
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/CommandType.cs
+    startLine: 12
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data
+  summary: An SQL text command. (Default.)
+  syntax:
+    content: Text = null
+    content.vb: Text = Nothing
+references:
+- uid: System.Data
+  isExternal: false
+  name: System.Data
+  fullName: System.Data

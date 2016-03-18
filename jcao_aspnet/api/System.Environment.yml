@@ -1,0 +1,480 @@
+items:
+- uid: System.Environment
+  id: Environment
+  parent: System
+  children:
+  - System.Environment.CurrentManagedThreadId
+  - System.Environment.Exit(System.Int32)
+  - System.Environment.ExpandEnvironmentVariables(System.String)
+  - System.Environment.FailFast(System.String)
+  - System.Environment.FailFast(System.String,System.Exception)
+  - System.Environment.GetCommandLineArgs
+  - System.Environment.GetEnvironmentVariable(System.String)
+  - System.Environment.GetEnvironmentVariables
+  - System.Environment.HasShutdownStarted
+  - System.Environment.MachineName
+  - System.Environment.NewLine
+  - System.Environment.ProcessorCount
+  - System.Environment.SetEnvironmentVariable(System.String,System.String)
+  - System.Environment.StackTrace
+  - System.Environment.TickCount
+  name: Environment
+  fullName: System.Environment
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Environment.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 41
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Provides information about, and means to manipulate, the current environment and platform. This class cannot be inherited.
+  syntax:
+    content: 'public class Environment : object'
+    content.vb: Public Class Environment Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Environment.CurrentManagedThreadId
+  id: CurrentManagedThreadId
+  parent: System.Environment
+  name: CurrentManagedThreadId
+  fullName: System.Environment.CurrentManagedThreadId
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 1789
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Gets a unique identifier for the current managed thread.
+  syntax:
+    content: public static int CurrentManagedThreadId { get; }
+    content.vb: Public Shared ReadOnly Property CurrentManagedThreadId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: An integer that represents a unique identifier for this managed thread.
+- uid: System.Environment.HasShutdownStarted
+  id: HasShutdownStarted
+  parent: System.Environment
+  name: HasShutdownStarted
+  fullName: System.Environment.HasShutdownStarted
+  type: Property
+  source:
+    path: mscorlib
+    isExternal: true
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Gets a value that indicates whether the current application domain is being unloaded or the common language runtime (CLR) is shutting down.
+  syntax:
+    content: public static bool HasShutdownStarted { get; }
+    content.vb: Public Shared ReadOnly Property HasShutdownStarted As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the current application domain is being unloaded or the CLR is shutting down; otherwise, false.
+- uid: System.Environment.MachineName
+  id: MachineName
+  parent: System.Environment
+  name: MachineName
+  fullName: System.Environment.MachineName
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 531
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Gets the NetBIOS name of this local computer.
+  syntax:
+    content: public static string MachineName { get; }
+    content.vb: Public Shared ReadOnly Property MachineName As String
+    parameters: []
+    return:
+      type: System.String
+      description: A string containing the name of this computer.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The name of this computer cannot be obtained.
+- uid: System.Environment.NewLine
+  id: NewLine
+  parent: System.Environment
+  name: NewLine
+  fullName: System.Environment.NewLine
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 1074
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Gets the newline string defined for this environment.
+  syntax:
+    content: public static string NewLine { get; }
+    content.vb: Public Shared ReadOnly Property NewLine As String
+    parameters: []
+    return:
+      type: System.String
+      description: A string containing "\r\n" for non-Unix platforms, or a string containing "\n" for Unix platforms.
+- uid: System.Environment.ProcessorCount
+  id: ProcessorCount
+  parent: System.Environment
+  name: ProcessorCount
+  fullName: System.Environment.ProcessorCount
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 560
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Gets the number of processors on the current machine.
+  syntax:
+    content: public static int ProcessorCount { get; }
+    content.vb: Public Shared ReadOnly Property ProcessorCount As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The 32-bit signed integer that specifies the number of processors on the current machine. There is no default. If the current machine contains multiple processor groups, this property returns the number of logical processors that are available for use by the common language runtime (CLR).
+- uid: System.Environment.StackTrace
+  id: StackTrace
+  parent: System.Environment
+  name: StackTrace
+  fullName: System.Environment.StackTrace
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 1242
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Gets current stack trace information.
+  syntax:
+    content: public static string StackTrace { get; }
+    content.vb: Public Shared ReadOnly Property StackTrace As String
+    parameters: []
+    return:
+      type: System.String
+      description: A string containing stack trace information. This value can be <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: The requested stack trace information is out of range.
+- uid: System.Environment.TickCount
+  id: TickCount
+  parent: System.Environment
+  name: TickCount
+  fullName: System.Environment.TickCount
+  type: Property
+  source:
+    path: mscorlib
+    isExternal: true
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Gets the number of milliseconds elapsed since the system started.
+  syntax:
+    content: public static int TickCount { get; }
+    content.vb: Public Shared ReadOnly Property TickCount As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer containing the amount of time in milliseconds that has passed since the last time the computer was started.
+- uid: System.Environment.ExpandEnvironmentVariables(System.String)
+  id: ExpandEnvironmentVariables(System.String)
+  parent: System.Environment
+  name: ExpandEnvironmentVariables(String)
+  fullName: System.Environment.ExpandEnvironmentVariables(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 412
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Replaces the name of each environment variable embedded in the specified string with the string equivalent of the value of the variable, then returns the resulting string.
+  syntax:
+    content: public static string ExpandEnvironmentVariables(string name)
+    content.vb: Public Shared Function ExpandEnvironmentVariables(name As String) As String
+    parameters:
+    - id: name
+      type: System.String
+      description: A string containing the names of zero or more environment variables. Each environment variable is quoted with the percent sign character (%).
+    return:
+      type: System.String
+      description: A string with each environment variable replaced by its value.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*name* is null.'
+- uid: System.Environment.Exit(System.Int32)
+  id: Exit(System.Int32)
+  parent: System.Environment
+  name: Exit(Int32)
+  fullName: System.Environment.Exit(System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 272
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Terminates this process and returns an exit code to the operating system.
+  syntax:
+    content: public static void Exit(int exitCode)
+    content.vb: Public Shared Sub Exit(exitCode As Integer)
+    parameters:
+    - id: exitCode
+      type: System.Int32
+      description: The exit code to return to the operating system. Use 0 (zero) to indicate that the process completed successfully.
+  exceptions:
+  - type: System.Security.SecurityException
+    description: The caller does not have sufficient security permission to perform this function.
+- uid: System.Environment.FailFast(System.String)
+  id: FailFast(System.String)
+  parent: System.Environment
+  name: FailFast(String)
+  fullName: System.Environment.FailFast(System.String)
+  type: Method
+  source:
+    path: mscorlib
+    isExternal: true
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Immediately terminates a process after writing a message to the Windows Application event log, and then includes the message in error reporting to Microsoft.
+  syntax:
+    content: public static void FailFast(string message)
+    content.vb: Public Shared Sub FailFast(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: A message that explains why the process was terminated, or null if no explanation is provided.
+- uid: System.Environment.FailFast(System.String,System.Exception)
+  id: FailFast(System.String,System.Exception)
+  parent: System.Environment
+  name: FailFast(String, Exception)
+  fullName: System.Environment.FailFast(System.String, System.Exception)
+  type: Method
+  source:
+    path: mscorlib
+    isExternal: true
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Immediately terminates a process after writing a message to the Windows Application event log, and then includes the message and exception information in error reporting to Microsoft.
+  syntax:
+    content: public static void FailFast(string message, Exception exception)
+    content.vb: Public Shared Sub FailFast(message As String, exception As Exception)
+    parameters:
+    - id: message
+      type: System.String
+      description: A message that explains why the process was terminated, or null if no explanation is provided.
+    - id: exception
+      type: System.Exception
+      description: An exception that represents the error that caused the termination. This is typically the exception in a catch block.
+- uid: System.Environment.GetEnvironmentVariable(System.String)
+  id: GetEnvironmentVariable(System.String)
+  parent: System.Environment
+  name: GetEnvironmentVariable(String)
+  fullName: System.Environment.GetEnvironmentVariable(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 636
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Retrieves the value of an environment variable from the current process.
+  syntax:
+    content: public static string GetEnvironmentVariable(string variable)
+    content.vb: Public Shared Function GetEnvironmentVariable(variable As String) As String
+    parameters:
+    - id: variable
+      type: System.String
+      description: The name of the environment variable.
+    return:
+      type: System.String
+      description: The value of the environment variable specified by *variable*, or null if the environment variable is not found.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*variable* is null.'
+  - type: System.Security.SecurityException
+    description: The caller does not have the required permission to perform this operation.
+- uid: System.Environment.GetEnvironmentVariables
+  id: GetEnvironmentVariables
+  parent: System.Environment
+  name: GetEnvironmentVariables()
+  fullName: System.Environment.GetEnvironmentVariables()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 772
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Retrieves all environment variable names and their values from the current process.
+  syntax:
+    content: public static Collections.IDictionary GetEnvironmentVariables()
+    content.vb: Public Shared Function GetEnvironmentVariables As Collections.IDictionary
+    return:
+      type: System.Collections.IDictionary
+      description: A dictionary that contains all environment variable names and their values; otherwise, an empty dictionary if no environment variables are found.
+  exceptions:
+  - type: System.Security.SecurityException
+    description: The caller does not have the required permission to perform this operation.
+  - type: System.OutOfMemoryException
+    description: The buffer is out of memory.
+- uid: System.Environment.SetEnvironmentVariable(System.String,System.String)
+  id: SetEnvironmentVariable(System.String,System.String)
+  parent: System.Environment
+  name: SetEnvironmentVariable(String, String)
+  fullName: System.Environment.SetEnvironmentVariable(System.String, System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 901
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Creates, modifies, or deletes an environment variable stored in the current process.
+  syntax:
+    content: public static void SetEnvironmentVariable(string variable, string value)
+    content.vb: Public Shared Sub SetEnvironmentVariable(variable As String, value As String)
+    parameters:
+    - id: variable
+      type: System.String
+      description: The name of an environment variable.
+    - id: value
+      type: System.String
+      description: A value to assign to *variable*.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*variable* is null.'
+  - type: System.ArgumentException
+    description: '*variable* contains a zero-length string, an initial hexadecimal zero character (0x00), or an equal sign ("="). -or-The length of *variable* or *value* is greater than or equal to 32,767 characters.-or-An error occurred during the execution of this operation.'
+  - type: System.Security.SecurityException
+    description: The caller does not have the required permission to perform this operation.
+- uid: System.Environment.GetCommandLineArgs
+  id: GetCommandLineArgs
+  parent: System.Environment
+  name: GetCommandLineArgs()
+  fullName: System.Environment.GetCommandLineArgs()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Environment.cs
+    startLine: 584
+  assemblies:
+  - System.Runtime.Extensions
+  namespace: System
+  summary: Returns a string array containing the command-line arguments for the current process.
+  syntax:
+    content: public static string[] GetCommandLineArgs()
+    content.vb: Public Shared Function GetCommandLineArgs As String()
+    return:
+      type: System.String[]
+      description: An array of string where each element contains a command-line argument. The first element is the executable file name, and the following zero or more elements contain the remaining command-line arguments.
+  exceptions:
+  - type: System.NotSupportedException
+    description: The system does not support command-line arguments.
+references:
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Exception
+  parent: System
+  isExternal: false
+  name: Exception
+  fullName: System.Exception
+- uid: System.Collections.IDictionary
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IDictionary
+  fullName: System.Collections.IDictionary
+- uid: System.Collections
+  isExternal: false
+  name: System.Collections
+  fullName: System.Collections
+- uid: System.String[]
+  isExternal: false
+  name: String[]
+  name.vb: String()
+  fullName: System.String[]
+  fullName.vb: System.String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    fullName: System.String
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    fullName: System.String
+  - name: ()
+    fullName: ()
+- uid: System.InvalidOperationException
+  parent: System
+  isExternal: false
+  name: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: System.ArgumentOutOfRangeException
+  isExternal: false
+  name: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.Security.SecurityException
+  isExternal: false
+  name: SecurityException
+  fullName: System.Security.SecurityException
+- uid: System.OutOfMemoryException
+  isExternal: false
+  name: OutOfMemoryException
+  fullName: System.OutOfMemoryException
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.NotSupportedException
+  parent: System
+  isExternal: false
+  name: NotSupportedException
+  fullName: System.NotSupportedException

@@ -1,0 +1,153 @@
+items:
+- uid: System.Collections.Comparer
+  id: Comparer
+  parent: System.Collections
+  children:
+  - System.Collections.Comparer.#ctor(System.Globalization.CultureInfo)
+  - System.Collections.Comparer.Compare(System.Object,System.Object)
+  - System.Collections.Comparer.Default
+  - System.Collections.Comparer.DefaultInvariant
+  name: Comparer
+  fullName: System.Collections.Comparer
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Collections/Comparer.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Collections/Comparer.cs
+    startLine: 22
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Compares two objects for equivalence, where string comparisons are case-sensitive.
+  syntax:
+    content: 'public sealed class Comparer : IComparer'
+    content.vb: Public NotInheritable Class Comparer Inherits IComparer
+  inheritance:
+  - System.Object
+- uid: System.Collections.Comparer.Default
+  id: Default
+  parent: System.Collections.Comparer
+  name: Default
+  fullName: System.Collections.Comparer.Default
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/Comparer.cs
+    startLine: 27
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Represents an instance of <xref href="System.Collections.Comparer" data-throw-if-not-resolved="false"></xref> that is associated with the <xref href="System.Threading.Thread.CurrentCulture" data-throw-if-not-resolved="false"></xref> of the current thread. This field is read-only.
+  syntax:
+    content: public static readonly Comparer Default
+    content.vb: Public Shared ReadOnly Default As Comparer
+- uid: System.Collections.Comparer.DefaultInvariant
+  id: DefaultInvariant
+  parent: System.Collections.Comparer
+  name: DefaultInvariant
+  fullName: System.Collections.Comparer.DefaultInvariant
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/Comparer.cs
+    startLine: 28
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Represents an instance of <xref href="System.Collections.Comparer" data-throw-if-not-resolved="false"></xref> that is associated with <xref href="System.Globalization.CultureInfo.InvariantCulture" data-throw-if-not-resolved="false"></xref>. This field is read-only.
+  syntax:
+    content: public static readonly Comparer DefaultInvariant
+    content.vb: Public Shared ReadOnly DefaultInvariant As Comparer
+- uid: System.Collections.Comparer.#ctor(System.Globalization.CultureInfo)
+  id: '#ctor(System.Globalization.CultureInfo)'
+  parent: System.Collections.Comparer
+  name: Comparer(Globalization.CultureInfo)
+  fullName: System.Collections.Comparer.Comparer(System.Globalization.CultureInfo)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/Comparer.cs
+    startLine: 36
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Initializes a new instance of the <xref href="System.Collections.Comparer" data-throw-if-not-resolved="false"></xref> class using the specified <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public Comparer(Globalization.CultureInfo culture)
+    content.vb: Public Sub New(culture As Globalization.CultureInfo)
+    parameters:
+    - id: culture
+      type: System.Globalization.CultureInfo
+      description: The <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> to use for the new <xref href="System.Collections.Comparer" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*culture* is null.'
+- uid: System.Collections.Comparer.Compare(System.Object,System.Object)
+  id: Compare(System.Object,System.Object)
+  parent: System.Collections.Comparer
+  name: Compare(Object, Object)
+  fullName: System.Collections.Comparer.Compare(System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/Comparer.cs
+    startLine: 63
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs a case-sensitive comparison of two objects of the same type and returns a value indicating whether one is less than, equal to, or greater than the other.
+  syntax:
+    content: public int Compare(object a, object b)
+    content.vb: Public Function Compare(a As Object, b As Object) As Integer
+    parameters:
+    - id: a
+      type: System.Object
+      description: The first object to compare.
+    - id: b
+      type: System.Object
+      description: The second object to compare.
+    return:
+      type: System.Int32
+      description: A signed integer that indicates the relative values of *a* and *b*, as shown in the following table.Value Meaning Less than zero *a* is less than *b*. Zero *a* equals *b*. Greater than zero *a* is greater than *b*.
+  exceptions:
+  - type: System.ArgumentException
+    description: Neither *a* nor *b* implements the <xref href="System.IComparable" data-throw-if-not-resolved="false"></xref> interface.-or- *a* and *b* are of different types and neither one can handle comparisons with the other.
+references:
+- uid: System.Collections
+  isExternal: false
+  name: System.Collections
+  fullName: System.Collections
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Globalization.CultureInfo
+  parent: System.Globalization
+  isExternal: false
+  name: Globalization.CultureInfo
+  fullName: System.Globalization.CultureInfo
+- uid: System.Globalization
+  isExternal: false
+  name: System.Globalization
+  fullName: System.Globalization
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException

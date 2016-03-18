@@ -1,0 +1,132 @@
+items:
+- uid: System.Threading.Tasks.UnobservedTaskExceptionEventArgs
+  id: UnobservedTaskExceptionEventArgs
+  parent: System.Threading.Tasks
+  children:
+  - System.Threading.Tasks.UnobservedTaskExceptionEventArgs.#ctor(System.AggregateException)
+  - System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Exception
+  - System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Observed
+  - System.Threading.Tasks.UnobservedTaskExceptionEventArgs.SetObserved
+  name: UnobservedTaskExceptionEventArgs
+  fullName: System.Threading.Tasks.UnobservedTaskExceptionEventArgs
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Threading/Tasks/TaskScheduler.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Threading/Tasks/TaskScheduler.cs
+    startLine: 701
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: Provides data for the event that is raised when a faulted <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref>'s exception goes unobserved.
+  syntax:
+    content: 'public class UnobservedTaskExceptionEventArgs : EventArgs'
+    content.vb: Public Class UnobservedTaskExceptionEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+- uid: System.Threading.Tasks.UnobservedTaskExceptionEventArgs.#ctor(System.AggregateException)
+  id: '#ctor(System.AggregateException)'
+  parent: System.Threading.Tasks.UnobservedTaskExceptionEventArgs
+  name: UnobservedTaskExceptionEventArgs(AggregateException)
+  fullName: System.Threading.Tasks.UnobservedTaskExceptionEventArgs.UnobservedTaskExceptionEventArgs(System.AggregateException)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/Tasks/TaskScheduler.cs
+    startLine: 711
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: Initializes a new instance of the <xref href="System.Threading.Tasks.UnobservedTaskExceptionEventArgs" data-throw-if-not-resolved="false"></xref> class with the unobserved exception.
+  syntax:
+    content: public UnobservedTaskExceptionEventArgs(AggregateException exception)
+    content.vb: Public Sub New(exception As AggregateException)
+    parameters:
+    - id: exception
+      type: System.AggregateException
+      description: The Exception that has gone unobserved.
+- uid: System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Exception
+  id: Exception
+  parent: System.Threading.Tasks.UnobservedTaskExceptionEventArgs
+  name: Exception
+  fullName: System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Exception
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/Tasks/TaskScheduler.cs
+    startLine: 727
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: The Exception that went unobserved.
+  syntax:
+    content: public AggregateException Exception { get; }
+    content.vb: Public ReadOnly Property Exception As AggregateException
+    parameters: []
+    return:
+      type: System.AggregateException
+      description: The Exception that went unobserved.
+- uid: System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Observed
+  id: Observed
+  parent: System.Threading.Tasks.UnobservedTaskExceptionEventArgs
+  name: Observed
+  fullName: System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Observed
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/Tasks/TaskScheduler.cs
+    startLine: 722
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: Gets whether this exception has been marked as "observed."
+  syntax:
+    content: public bool Observed { get; }
+    content.vb: Public ReadOnly Property Observed As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if this exception has been marked as "observed"; otherwise false.
+- uid: System.Threading.Tasks.UnobservedTaskExceptionEventArgs.SetObserved
+  id: SetObserved
+  parent: System.Threading.Tasks.UnobservedTaskExceptionEventArgs
+  name: SetObserved()
+  fullName: System.Threading.Tasks.UnobservedTaskExceptionEventArgs.SetObserved()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/Tasks/TaskScheduler.cs
+    startLine: 717
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Threading.Tasks
+  summary: Marks the <xref href="System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Exception" data-throw-if-not-resolved="false"></xref> as "observed," thus preventing it from triggering exception escalation policy which, by default, terminates the process.
+  syntax:
+    content: public void SetObserved()
+    content.vb: Public Sub SetObserved
+references:
+- uid: System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.AggregateException
+  parent: System
+  isExternal: false
+  name: AggregateException
+  fullName: System.AggregateException
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean

@@ -1,0 +1,63 @@
+items:
+- uid: System.Reflection.AssemblyContentType
+  id: AssemblyContentType
+  parent: System.Reflection
+  children:
+  - System.Reflection.AssemblyContentType.Default
+  - System.Reflection.AssemblyContentType.WindowsRuntime
+  name: AssemblyContentType
+  fullName: System.Reflection.AssemblyContentType
+  type: Enum
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Reflection/AssemblyNameFlags.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Reflection/AssemblyNameFlags.cs
+    startLine: 36
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Provides information about the type of code contained in an assembly.
+  syntax:
+    content: 'public enum AssemblyContentType : int'
+    content.vb: Public Enum AssemblyContentType As Integer
+- uid: System.Reflection.AssemblyContentType.Default
+  id: Default
+  parent: System.Reflection.AssemblyContentType
+  name: Default
+  fullName: System.Reflection.AssemblyContentType.Default
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyNameFlags.cs
+    startLine: 40
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: The assembly contains .NET Framework code.
+  syntax:
+    content: Default = null
+    content.vb: Default = Nothing
+- uid: System.Reflection.AssemblyContentType.WindowsRuntime
+  id: WindowsRuntime
+  parent: System.Reflection.AssemblyContentType
+  name: WindowsRuntime
+  fullName: System.Reflection.AssemblyContentType.WindowsRuntime
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyNameFlags.cs
+    startLine: 41
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: The assembly contains Windows Runtime code.
+  syntax:
+    content: WindowsRuntime = null
+    content.vb: WindowsRuntime = Nothing
+references:
+- uid: System.Reflection
+  isExternal: false
+  name: System.Reflection
+  fullName: System.Reflection

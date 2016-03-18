@@ -1,0 +1,1403 @@
+items:
+- uid: System.Numerics.Vector`1
+  id: Vector`1
+  parent: System.Numerics
+  children:
+  - System.Numerics.Vector`1.#ctor(`0)
+  - System.Numerics.Vector`1.#ctor(`0[])
+  - System.Numerics.Vector`1.#ctor(`0[],System.Int32)
+  - System.Numerics.Vector`1.CopyTo(`0[])
+  - System.Numerics.Vector`1.CopyTo(`0[],System.Int32)
+  - System.Numerics.Vector`1.Count
+  - System.Numerics.Vector`1.Equals(System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.Equals(System.Object)
+  - System.Numerics.Vector`1.GetHashCode
+  - System.Numerics.Vector`1.Item(System.Int32)
+  - System.Numerics.Vector`1.One
+  - System.Numerics.Vector`1.op_Addition(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_BitwiseAnd(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_BitwiseOr(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_Division(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_Equality(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_ExclusiveOr(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Byte}
+  - System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Double}
+  - System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int16}
+  - System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int32}
+  - System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int64}
+  - System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.SByte}
+  - System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Single}
+  - System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt16}
+  - System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt32}
+  - System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt64}
+  - System.Numerics.Vector`1.op_Inequality(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_Multiply(`0,System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_Multiply(System.Numerics.Vector{`0},`0)
+  - System.Numerics.Vector`1.op_Multiply(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_OnesComplement(System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_Subtraction(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.op_UnaryNegation(System.Numerics.Vector{`0})
+  - System.Numerics.Vector`1.ToString
+  - System.Numerics.Vector`1.ToString(System.String)
+  - System.Numerics.Vector`1.ToString(System.String,System.IFormatProvider)
+  - System.Numerics.Vector`1.Zero
+  name: Vector<T>
+  name.vb: Vector(Of T)
+  fullName: System.Numerics.Vector<T>
+  fullName.vb: System.Numerics.Vector(Of T)
+  type: Struct
+  source:
+    remote: &o0
+      path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 40
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: 'public struct Vector<T> : IEquatable<Vector<T>>, IFormattable where T : struct'
+    content.vb: Public Structure Vector(Of T As Structure) Implements IEquatable(Of Vector(Of T)), IFormattable
+    typeParameters:
+    - id: T
+  implements:
+  - System.IEquatable{System.Numerics.Vector`1}
+  - System.IFormattable
+- uid: System.Numerics.Vector`1.#ctor(`0)
+  id: '#ctor(`0)'
+  parent: System.Numerics.Vector`1
+  name: Vector(T)
+  fullName: System.Numerics.Vector<T>.Vector(T)
+  fullName.vb: System.Numerics.Vector(Of T).Vector(T)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 147
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public Vector(T value)
+    content.vb: Public Sub New(value As T)
+    parameters:
+    - id: value
+      type: '{T}'
+- uid: System.Numerics.Vector`1.#ctor(`0[])
+  id: '#ctor(`0[])'
+  parent: System.Numerics.Vector`1
+  name: Vector(T[])
+  name.vb: Vector(T())
+  fullName: System.Numerics.Vector<T>.Vector(T[])
+  fullName.vb: System.Numerics.Vector(Of T).Vector(T())
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 358
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public Vector(T[] values)
+    content.vb: Public Sub New(values As T())
+    parameters:
+    - id: values
+      type: '{T}[]'
+- uid: System.Numerics.Vector`1.#ctor(`0[],System.Int32)
+  id: '#ctor(`0[],System.Int32)'
+  parent: System.Numerics.Vector`1
+  name: Vector(T[], Int32)
+  name.vb: Vector(T(), Int32)
+  fullName: System.Numerics.Vector<T>.Vector(T[], System.Int32)
+  fullName.vb: System.Numerics.Vector(Of T).Vector(T(), System.Int32)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 365
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public Vector(T[] values, int index)
+    content.vb: Public Sub New(values As T(), index As Integer)
+    parameters:
+    - id: values
+      type: '{T}[]'
+    - id: index
+      type: System.Int32
+- uid: System.Numerics.Vector`1.Count
+  id: Count
+  parent: System.Numerics.Vector`1
+  name: Count
+  fullName: System.Numerics.Vector<T>.Count
+  fullName.vb: System.Numerics.Vector(Of T).Count
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 50
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static int Count { get; }
+    content.vb: Public Shared ReadOnly Property Count As Integer
+    parameters: []
+    return:
+      type: System.Int32
+- uid: System.Numerics.Vector`1.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: System.Numerics.Vector`1
+  name: Item[Int32]
+  name.vb: Item(Int32)
+  fullName: System.Numerics.Vector<T>.Item[System.Int32]
+  fullName.vb: System.Numerics.Vector(Of T).Item(System.Int32)
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 1049
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public T this[int index] { get; }
+    content.vb: Public ReadOnly Property Item(index As Integer) As T
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: '{T}'
+- uid: System.Numerics.Vector`1.One
+  id: One
+  parent: System.Numerics.Vector`1
+  name: One
+  fullName: System.Numerics.Vector<T>.One
+  fullName.vb: System.Numerics.Vector(Of T).One
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 70
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> One { get; }
+    content.vb: Public Shared ReadOnly Property One As Vector(Of T)
+    parameters: []
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.Zero
+  id: Zero
+  parent: System.Numerics.Vector`1
+  name: Zero
+  fullName: System.Numerics.Vector<T>.Zero
+  fullName.vb: System.Numerics.Vector(Of T).Zero
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 63
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> Zero { get; }
+    content.vb: Public Shared ReadOnly Property Zero As Vector(Of T)
+    parameters: []
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.CopyTo(`0[])
+  id: CopyTo(`0[])
+  parent: System.Numerics.Vector`1
+  name: CopyTo(T[])
+  name.vb: CopyTo(T())
+  fullName: System.Numerics.Vector<T>.CopyTo(T[])
+  fullName.vb: System.Numerics.Vector(Of T).CopyTo(T())
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 761
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public void CopyTo(T[] destination)
+    content.vb: Public Sub CopyTo(destination As T())
+    parameters:
+    - id: destination
+      type: '{T}[]'
+- uid: System.Numerics.Vector`1.CopyTo(`0[],System.Int32)
+  id: CopyTo(`0[],System.Int32)
+  parent: System.Numerics.Vector`1
+  name: CopyTo(T[], Int32)
+  name.vb: CopyTo(T(), Int32)
+  fullName: System.Numerics.Vector<T>.CopyTo(T[], System.Int32)
+  fullName.vb: System.Numerics.Vector(Of T).CopyTo(T(), System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 775
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public void CopyTo(T[] destination, int startIndex)
+    content.vb: Public Sub CopyTo(destination As T(), startIndex As Integer)
+    parameters:
+    - id: destination
+      type: '{T}[]'
+    - id: startIndex
+      type: System.Int32
+- uid: System.Numerics.Vector`1.Equals(System.Numerics.Vector{`0})
+  id: Equals(System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: Equals(Vector<T>)
+  name.vb: Equals(Vector(Of T))
+  fullName: System.Numerics.Vector<T>.Equals(System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).Equals(System.Numerics.Vector(Of T))
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 1155
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public bool Equals(Vector<T> other)
+    content.vb: Public Function Equals(other As Vector(Of T)) As Boolean
+    parameters:
+    - id: other
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Boolean
+- uid: System.Numerics.Vector`1.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: System.Numerics.Vector`1
+  name: Equals(Object)
+  fullName: System.Numerics.Vector<T>.Equals(System.Object)
+  fullName.vb: System.Numerics.Vector(Of T).Equals(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 1140
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public override bool Equals(object obj)
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+- uid: System.Numerics.Vector`1.GetHashCode
+  id: GetHashCode
+  parent: System.Numerics.Vector`1
+  name: GetHashCode()
+  fullName: System.Numerics.Vector<T>.GetHashCode()
+  fullName.vb: System.Numerics.Vector(Of T).GetHashCode()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 1288
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public override int GetHashCode()
+    content.vb: Public Overrides Function GetHashCode As Integer
+    return:
+      type: System.Int32
+- uid: System.Numerics.Vector`1.op_Addition(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  id: op_Addition(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: Addition(Vector<T>, Vector<T>)
+  name.vb: Addition(Vector(Of T), Vector(Of T))
+  fullName: System.Numerics.Vector<T>.Addition(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).Addition(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 1545
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator +(Vector<T> left, Vector<T> right)
+    content.vb: Public Shared Operator +(left As Vector(Of T), right As Vector(Of T)) As Vector(Of T)
+    parameters:
+    - id: left
+      type: System.Numerics.Vector`1
+    - id: right
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.op_BitwiseAnd(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  id: op_BitwiseAnd(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: BitwiseAnd(Vector<T>, Vector<T>)
+  name.vb: BitwiseAnd(Vector(Of T), Vector(Of T))
+  fullName: System.Numerics.Vector<T>.BitwiseAnd(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).BitwiseAnd(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 2641
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator &(Vector<T> left, Vector<T> right)
+    content.vb: Public Shared Operator And(left As Vector(Of T), right As Vector(Of T)) As Vector(Of T)
+    parameters:
+    - id: left
+      type: System.Numerics.Vector`1
+    - id: right
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.op_BitwiseOr(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  id: op_BitwiseOr(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: BitwiseOr(Vector<T>, Vector<T>)
+  name.vb: BitwiseOr(Vector(Of T), Vector(Of T))
+  fullName: System.Numerics.Vector<T>.BitwiseOr(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).BitwiseOr(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 2672
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator |(Vector<T> left, Vector<T> right)
+    content.vb: Public Shared Operator Or(left As Vector(Of T), right As Vector(Of T)) As Vector(Of T)
+    parameters:
+    - id: left
+      type: System.Numerics.Vector`1
+    - id: right
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.op_Division(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  id: op_Division(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: Division(Vector<T>, Vector<T>)
+  name.vb: Division(Vector(Of T), Vector(Of T))
+  fullName: System.Numerics.Vector<T>.Division(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).Division(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 2418
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator /(Vector<T> left, Vector<T> right)
+    content.vb: Public Shared Operator /(left As Vector(Of T), right As Vector(Of T)) As Vector(Of T)
+    parameters:
+    - id: left
+      type: System.Numerics.Vector`1
+    - id: right
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.op_Equality(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  id: op_Equality(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: Equality(Vector<T>, Vector<T>)
+  name.vb: Equality(Vector(Of T), Vector(Of T))
+  fullName: System.Numerics.Vector<T>.Equality(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).Equality(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 2747
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static bool operator ==(Vector<T> left, Vector<T> right)
+    content.vb: Public Shared Operator =(left As Vector(Of T), right As Vector(Of T)) As Boolean
+    parameters:
+    - id: left
+      type: System.Numerics.Vector`1
+    - id: right
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Boolean
+- uid: System.Numerics.Vector`1.op_ExclusiveOr(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  id: op_ExclusiveOr(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: ExclusiveOr(Vector<T>, Vector<T>)
+  name.vb: ExclusiveOr(Vector(Of T), Vector(Of T))
+  fullName: System.Numerics.Vector<T>.ExclusiveOr(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).ExclusiveOr(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 2703
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator ^(Vector<T> left, Vector<T> right)
+    content.vb: Public Shared Operator Xor(left As Vector(Of T), right As Vector(Of T)) As Vector(Of T)
+    parameters:
+    - id: left
+      type: System.Numerics.Vector`1
+    - id: right
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Byte}
+  id: op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Byte}
+  parent: System.Numerics.Vector`1
+  name: Explicit(Vector<T> to Vector<Byte>)
+  name.vb: Narrowing(Vector(Of T) to Vector(Of Byte))
+  fullName: System.Numerics.Vector<T>.Explicit(System.Numerics.Vector<T> to System.Numerics.Vector<System.Byte>)
+  fullName.vb: System.Numerics.Vector(Of T).Narrowing(System.Numerics.Vector(Of T) to System.Numerics.Vector(Of System.Byte))
+  type: Operator
+  source:
+    remote: &o1
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 285
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static explicit operator Vector<byte>(Vector<T> value)
+    content.vb: Public Shared Narrowing Operator CType(value As Vector(Of T)) As Vector(Of Byte)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector{System.Byte}
+- uid: System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Double}
+  id: op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Double}
+  parent: System.Numerics.Vector`1
+  name: Explicit(Vector<T> to Vector<Double>)
+  name.vb: Narrowing(Vector(Of T) to Vector(Of Double))
+  fullName: System.Numerics.Vector<T>.Explicit(System.Numerics.Vector<T> to System.Numerics.Vector<System.Double>)
+  fullName.vb: System.Numerics.Vector(Of T).Narrowing(System.Numerics.Vector(Of T) to System.Numerics.Vector(Of System.Double))
+  type: Operator
+  source:
+    remote: *o1
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 286
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static explicit operator Vector<double>(Vector<T> value)
+    content.vb: Public Shared Narrowing Operator CType(value As Vector(Of T)) As Vector(Of Double)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector{System.Double}
+- uid: System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int16}
+  id: op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int16}
+  parent: System.Numerics.Vector`1
+  name: Explicit(Vector<T> to Vector<Int16>)
+  name.vb: Narrowing(Vector(Of T) to Vector(Of Int16))
+  fullName: System.Numerics.Vector<T>.Explicit(System.Numerics.Vector<T> to System.Numerics.Vector<System.Int16>)
+  fullName.vb: System.Numerics.Vector(Of T).Narrowing(System.Numerics.Vector(Of T) to System.Numerics.Vector(Of System.Int16))
+  type: Operator
+  source:
+    remote: *o1
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 287
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static explicit operator Vector<short>(Vector<T> value)
+    content.vb: Public Shared Narrowing Operator CType(value As Vector(Of T)) As Vector(Of Short)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector{System.Int16}
+- uid: System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int32}
+  id: op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int32}
+  parent: System.Numerics.Vector`1
+  name: Explicit(Vector<T> to Vector<Int32>)
+  name.vb: Narrowing(Vector(Of T) to Vector(Of Int32))
+  fullName: System.Numerics.Vector<T>.Explicit(System.Numerics.Vector<T> to System.Numerics.Vector<System.Int32>)
+  fullName.vb: System.Numerics.Vector(Of T).Narrowing(System.Numerics.Vector(Of T) to System.Numerics.Vector(Of System.Int32))
+  type: Operator
+  source:
+    remote: *o1
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 288
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static explicit operator Vector<int>(Vector<T> value)
+    content.vb: Public Shared Narrowing Operator CType(value As Vector(Of T)) As Vector(Of Integer)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector{System.Int32}
+- uid: System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int64}
+  id: op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Int64}
+  parent: System.Numerics.Vector`1
+  name: Explicit(Vector<T> to Vector<Int64>)
+  name.vb: Narrowing(Vector(Of T) to Vector(Of Int64))
+  fullName: System.Numerics.Vector<T>.Explicit(System.Numerics.Vector<T> to System.Numerics.Vector<System.Int64>)
+  fullName.vb: System.Numerics.Vector(Of T).Narrowing(System.Numerics.Vector(Of T) to System.Numerics.Vector(Of System.Int64))
+  type: Operator
+  source:
+    remote: *o1
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 289
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static explicit operator Vector<long>(Vector<T> value)
+    content.vb: Public Shared Narrowing Operator CType(value As Vector(Of T)) As Vector(Of Long)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector{System.Int64}
+- uid: System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.SByte}
+  id: op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.SByte}
+  parent: System.Numerics.Vector`1
+  name: Explicit(Vector<T> to Vector<SByte>)
+  name.vb: Narrowing(Vector(Of T) to Vector(Of SByte))
+  fullName: System.Numerics.Vector<T>.Explicit(System.Numerics.Vector<T> to System.Numerics.Vector<System.SByte>)
+  fullName.vb: System.Numerics.Vector(Of T).Narrowing(System.Numerics.Vector(Of T) to System.Numerics.Vector(Of System.SByte))
+  type: Operator
+  source:
+    remote: *o1
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 290
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static explicit operator Vector<sbyte>(Vector<T> value)
+    content.vb: Public Shared Narrowing Operator CType(value As Vector(Of T)) As Vector(Of SByte)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector{System.SByte}
+- uid: System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Single}
+  id: op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.Single}
+  parent: System.Numerics.Vector`1
+  name: Explicit(Vector<T> to Vector<Single>)
+  name.vb: Narrowing(Vector(Of T) to Vector(Of Single))
+  fullName: System.Numerics.Vector<T>.Explicit(System.Numerics.Vector<T> to System.Numerics.Vector<System.Single>)
+  fullName.vb: System.Numerics.Vector(Of T).Narrowing(System.Numerics.Vector(Of T) to System.Numerics.Vector(Of System.Single))
+  type: Operator
+  source:
+    remote: *o1
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 292
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static explicit operator Vector<float>(Vector<T> value)
+    content.vb: Public Shared Narrowing Operator CType(value As Vector(Of T)) As Vector(Of Single)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector{System.Single}
+- uid: System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt16}
+  id: op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt16}
+  parent: System.Numerics.Vector`1
+  name: Explicit(Vector<T> to Vector<UInt16>)
+  name.vb: Narrowing(Vector(Of T) to Vector(Of UInt16))
+  fullName: System.Numerics.Vector<T>.Explicit(System.Numerics.Vector<T> to System.Numerics.Vector<System.UInt16>)
+  fullName.vb: System.Numerics.Vector(Of T).Narrowing(System.Numerics.Vector(Of T) to System.Numerics.Vector(Of System.UInt16))
+  type: Operator
+  source:
+    remote: *o1
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 293
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static explicit operator Vector<ushort>(Vector<T> value)
+    content.vb: Public Shared Narrowing Operator CType(value As Vector(Of T)) As Vector(Of UShort)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector{System.UInt16}
+- uid: System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt32}
+  id: op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt32}
+  parent: System.Numerics.Vector`1
+  name: Explicit(Vector<T> to Vector<UInt32>)
+  name.vb: Narrowing(Vector(Of T) to Vector(Of UInt32))
+  fullName: System.Numerics.Vector<T>.Explicit(System.Numerics.Vector<T> to System.Numerics.Vector<System.UInt32>)
+  fullName.vb: System.Numerics.Vector(Of T).Narrowing(System.Numerics.Vector(Of T) to System.Numerics.Vector(Of System.UInt32))
+  type: Operator
+  source:
+    remote: *o1
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 295
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static explicit operator Vector<uint>(Vector<T> value)
+    content.vb: Public Shared Narrowing Operator CType(value As Vector(Of T)) As Vector(Of UInteger)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector{System.UInt32}
+- uid: System.Numerics.Vector`1.op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt64}
+  id: op_Explicit(System.Numerics.Vector{`0})~System.Numerics.Vector{System.UInt64}
+  parent: System.Numerics.Vector`1
+  name: Explicit(Vector<T> to Vector<UInt64>)
+  name.vb: Narrowing(Vector(Of T) to Vector(Of UInt64))
+  fullName: System.Numerics.Vector<T>.Explicit(System.Numerics.Vector<T> to System.Numerics.Vector<System.UInt64>)
+  fullName.vb: System.Numerics.Vector(Of T).Narrowing(System.Numerics.Vector(Of T) to System.Numerics.Vector(Of System.UInt64))
+  type: Operator
+  source:
+    remote: *o1
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 297
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static explicit operator Vector<ulong>(Vector<T> value)
+    content.vb: Public Shared Narrowing Operator CType(value As Vector(Of T)) As Vector(Of ULong)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector{System.UInt64}
+- uid: System.Numerics.Vector`1.op_Inequality(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  id: op_Inequality(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: Inequality(Vector<T>, Vector<T>)
+  name.vb: Inequality(Vector(Of T), Vector(Of T))
+  fullName: System.Numerics.Vector<T>.Inequality(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).Inequality(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 2759
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static bool operator !=(Vector<T> left, Vector<T> right)
+    content.vb: Public Shared Operator <>(left As Vector(Of T), right As Vector(Of T)) As Boolean
+    parameters:
+    - id: left
+      type: System.Numerics.Vector`1
+    - id: right
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Boolean
+- uid: System.Numerics.Vector`1.op_Multiply(`0,System.Numerics.Vector{`0})
+  id: op_Multiply(`0,System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: Multiply(T, Vector<T>)
+  name.vb: Multiply(T, Vector(Of T))
+  fullName: System.Numerics.Vector<T>.Multiply(T, System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).Multiply(T, System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 2299
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator *(T factor, Vector<T> value)
+    content.vb: Public Shared Operator *(factor As T, value As Vector(Of T)) As Vector(Of T)
+    parameters:
+    - id: factor
+      type: '{T}'
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.op_Multiply(System.Numerics.Vector{`0},`0)
+  id: op_Multiply(System.Numerics.Vector{`0},`0)
+  parent: System.Numerics.Vector`1
+  name: Multiply(Vector<T>, T)
+  name.vb: Multiply(Vector(Of T), T)
+  fullName: System.Numerics.Vector<T>.Multiply(System.Numerics.Vector<T>, T)
+  fullName.vb: System.Numerics.Vector(Of T).Multiply(System.Numerics.Vector(Of T), T)
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 2180
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator *(Vector<T> value, T factor)
+    content.vb: Public Shared Operator *(value As Vector(Of T), factor As T) As Vector(Of T)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    - id: factor
+      type: '{T}'
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.op_Multiply(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  id: op_Multiply(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: Multiply(Vector<T>, Vector<T>)
+  name.vb: Multiply(Vector(Of T), Vector(Of T))
+  fullName: System.Numerics.Vector<T>.Multiply(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).Multiply(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 1968
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator *(Vector<T> left, Vector<T> right)
+    content.vb: Public Shared Operator *(left As Vector(Of T), right As Vector(Of T)) As Vector(Of T)
+    parameters:
+    - id: left
+      type: System.Numerics.Vector`1
+    - id: right
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.op_OnesComplement(System.Numerics.Vector{`0})
+  id: op_OnesComplement(System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: OnesComplement(Vector<T>)
+  name.vb: OnesComplement(Vector(Of T))
+  fullName: System.Numerics.Vector<T>.OnesComplement(System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).OnesComplement(System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 2733
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator ~(Vector<T> value)
+    content.vb: Public Shared Operator Not(value As Vector(Of T)) As Vector(Of T)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.op_Subtraction(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  id: op_Subtraction(System.Numerics.Vector{`0},System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: Subtraction(Vector<T>, Vector<T>)
+  name.vb: Subtraction(Vector(Of T), Vector(Of T))
+  fullName: System.Numerics.Vector<T>.Subtraction(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).Subtraction(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 1756
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator -(Vector<T> left, Vector<T> right)
+    content.vb: Public Shared Operator -(left As Vector(Of T), right As Vector(Of T)) As Vector(Of T)
+    parameters:
+    - id: left
+      type: System.Numerics.Vector`1
+    - id: right
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.op_UnaryNegation(System.Numerics.Vector{`0})
+  id: op_UnaryNegation(System.Numerics.Vector{`0})
+  parent: System.Numerics.Vector`1
+  name: UnaryNegation(Vector<T>)
+  name.vb: UnaryNegation(Vector(Of T))
+  fullName: System.Numerics.Vector<T>.UnaryNegation(System.Numerics.Vector<T>)
+  fullName.vb: System.Numerics.Vector(Of T).UnaryNegation(System.Numerics.Vector(Of T))
+  type: Operator
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 2628
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public static Vector<T> operator -(Vector<T> value)
+    content.vb: Public Shared Operator -(value As Vector(Of T)) As Vector(Of T)
+    parameters:
+    - id: value
+      type: System.Numerics.Vector`1
+    return:
+      type: System.Numerics.Vector`1
+- uid: System.Numerics.Vector`1.ToString
+  id: ToString
+  parent: System.Numerics.Vector`1
+  name: ToString()
+  fullName: System.Numerics.Vector<T>.ToString()
+  fullName.vb: System.Numerics.Vector(Of T).ToString()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 1498
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+- uid: System.Numerics.Vector`1.ToString(System.String)
+  id: ToString(System.String)
+  parent: System.Numerics.Vector`1
+  name: ToString(String)
+  fullName: System.Numerics.Vector<T>.ToString(System.String)
+  fullName.vb: System.Numerics.Vector(Of T).ToString(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Numerics.Vectors/src/System/Numerics/Vector.cs
+    startLine: 1508
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public string ToString(string format)
+    content.vb: Public Function ToString(format As String) As String
+    parameters:
+    - id: format
+      type: System.String
+    return:
+      type: System.String
+- uid: System.Numerics.Vector`1.ToString(System.String,System.IFormatProvider)
+  id: ToString(System.String,System.IFormatProvider)
+  parent: System.Numerics.Vector`1
+  name: ToString(String, IFormatProvider)
+  fullName: System.Numerics.Vector<T>.ToString(System.String, System.IFormatProvider)
+  fullName.vb: System.Numerics.Vector(Of T).ToString(System.String, System.IFormatProvider)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 308
+  assemblies:
+  - System.Numerics.Vectors
+  namespace: System.Numerics
+  syntax:
+    content: public string ToString(string format, IFormatProvider formatProvider)
+    content.vb: Public Function ToString(format As String, formatProvider As IFormatProvider) As String
+    parameters:
+    - id: format
+      type: System.String
+    - id: formatProvider
+      type: System.IFormatProvider
+    return:
+      type: System.String
+references:
+- uid: System.Numerics
+  isExternal: false
+  name: System.Numerics
+  fullName: System.Numerics
+- uid: System.IEquatable{System.Numerics.Vector`1}
+  definition: System.IEquatable`1
+  name: IEquatable<Vector<T>>
+  name.vb: IEquatable(Of Vector(Of T))
+  fullName: System.IEquatable<System.Numerics.Vector<T>>
+  fullName.vb: System.IEquatable(Of System.Numerics.Vector(Of T))
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+  - name: )
+    fullName: )
+- uid: System.IFormattable
+  parent: System
+  isExternal: false
+  name: IFormattable
+  fullName: System.IFormattable
+- uid: System.IEquatable`1
+  parent: System
+  isExternal: false
+  name: IEquatable<>
+  name.vb: IEquatable(Of )
+  fullName: System.IEquatable<>
+  fullName.vb: System.IEquatable(Of )
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    fullName: System.IEquatable
+  - name: <
+    fullName: <
+  - {}
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    fullName: System.IEquatable
+  - name: '(Of '
+    fullName: '(Of '
+  - {}
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: '{T}'
+  isExternal: false
+  name: T
+  fullName: T
+- uid: '{T}[]'
+  isExternal: false
+  name: T[]
+  name.vb: T()
+  fullName: T[]
+  fullName.vb: T()
+  spec.csharp:
+  - name: T
+    fullName: T
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - name: T
+    fullName: T
+  - name: ()
+    fullName: ()
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Numerics.Vector`1
+  parent: System.Numerics
+  isExternal: false
+  name: Vector<T>
+  name.vb: Vector(Of T)
+  fullName: System.Numerics.Vector<T>
+  fullName.vb: System.Numerics.Vector(Of T)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.Numerics.Vector{System.Byte}
+  parent: System.Numerics
+  definition: System.Numerics.Vector`1
+  name: Vector<Byte>
+  name.vb: Vector(Of Byte)
+  fullName: System.Numerics.Vector<System.Byte>
+  fullName.vb: System.Numerics.Vector(Of System.Byte)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Numerics.Vector{System.Double}
+  parent: System.Numerics
+  definition: System.Numerics.Vector`1
+  name: Vector<Double>
+  name.vb: Vector(Of Double)
+  fullName: System.Numerics.Vector<System.Double>
+  fullName.vb: System.Numerics.Vector(Of System.Double)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Numerics.Vector{System.Int16}
+  parent: System.Numerics
+  definition: System.Numerics.Vector`1
+  name: Vector<Int16>
+  name.vb: Vector(Of Int16)
+  fullName: System.Numerics.Vector<System.Int16>
+  fullName.vb: System.Numerics.Vector(Of System.Int16)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - uid: System.Int16
+    name: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Int16
+    name: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Numerics.Vector{System.Int32}
+  parent: System.Numerics
+  definition: System.Numerics.Vector`1
+  name: Vector<Int32>
+  name.vb: Vector(Of Int32)
+  fullName: System.Numerics.Vector<System.Int32>
+  fullName.vb: System.Numerics.Vector(Of System.Int32)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Numerics.Vector{System.Int64}
+  parent: System.Numerics
+  definition: System.Numerics.Vector`1
+  name: Vector<Int64>
+  name.vb: Vector(Of Int64)
+  fullName: System.Numerics.Vector<System.Int64>
+  fullName.vb: System.Numerics.Vector(Of System.Int64)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - uid: System.Int64
+    name: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Int64
+    name: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Numerics.Vector{System.SByte}
+  parent: System.Numerics
+  definition: System.Numerics.Vector`1
+  name: Vector<SByte>
+  name.vb: Vector(Of SByte)
+  fullName: System.Numerics.Vector<System.SByte>
+  fullName.vb: System.Numerics.Vector(Of System.SByte)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - uid: System.SByte
+    name: SByte
+    fullName: System.SByte
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.SByte
+    name: SByte
+    fullName: System.SByte
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Numerics.Vector{System.Single}
+  parent: System.Numerics
+  definition: System.Numerics.Vector`1
+  name: Vector<Single>
+  name.vb: Vector(Of Single)
+  fullName: System.Numerics.Vector<System.Single>
+  fullName.vb: System.Numerics.Vector(Of System.Single)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Numerics.Vector{System.UInt16}
+  parent: System.Numerics
+  definition: System.Numerics.Vector`1
+  name: Vector<UInt16>
+  name.vb: Vector(Of UInt16)
+  fullName: System.Numerics.Vector<System.UInt16>
+  fullName.vb: System.Numerics.Vector(Of System.UInt16)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - uid: System.UInt16
+    name: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt16
+    name: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Numerics.Vector{System.UInt32}
+  parent: System.Numerics
+  definition: System.Numerics.Vector`1
+  name: Vector<UInt32>
+  name.vb: Vector(Of UInt32)
+  fullName: System.Numerics.Vector<System.UInt32>
+  fullName.vb: System.Numerics.Vector(Of System.UInt32)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - uid: System.UInt32
+    name: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt32
+    name: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Numerics.Vector{System.UInt64}
+  parent: System.Numerics
+  definition: System.Numerics.Vector`1
+  name: Vector<UInt64>
+  name.vb: Vector(Of UInt64)
+  fullName: System.Numerics.Vector<System.UInt64>
+  fullName.vb: System.Numerics.Vector(Of System.UInt64)
+  spec.csharp:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Numerics.Vector`1
+    name: Vector
+    fullName: System.Numerics.Vector
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.IFormatProvider
+  parent: System
+  isExternal: false
+  name: IFormatProvider
+  fullName: System.IFormatProvider

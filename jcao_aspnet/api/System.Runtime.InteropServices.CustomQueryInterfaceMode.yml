@@ -1,0 +1,61 @@
+items:
+- uid: System.Runtime.InteropServices.CustomQueryInterfaceMode
+  id: CustomQueryInterfaceMode
+  parent: System.Runtime.InteropServices
+  children:
+  - System.Runtime.InteropServices.CustomQueryInterfaceMode.Allow
+  - System.Runtime.InteropServices.CustomQueryInterfaceMode.Ignore
+  name: CustomQueryInterfaceMode
+  fullName: System.Runtime.InteropServices.CustomQueryInterfaceMode
+  type: Enum
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Runtime/InteropServices/Marshal.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Runtime/InteropServices/Marshal.cs
+    startLine: 34
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: Indicates whether the <xref href="System.Runtime.InteropServices.Marshal.GetComInterfaceForObject(System.Object,System.Type,System.Runtime.InteropServices.CustomQueryInterfaceMode)" data-throw-if-not-resolved="false"></xref> method's IUnknown::QueryInterface calls can use the <xref href="System.Runtime.InteropServices.ICustomQueryInterface" data-throw-if-not-resolved="false"></xref> interface.
+  syntax:
+    content: public enum CustomQueryInterfaceMode
+    content.vb: Public Enum CustomQueryInterfaceMode
+- uid: System.Runtime.InteropServices.CustomQueryInterfaceMode.Allow
+  id: Allow
+  parent: System.Runtime.InteropServices.CustomQueryInterfaceMode
+  name: Allow
+  fullName: System.Runtime.InteropServices.CustomQueryInterfaceMode.Allow
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/Marshal.cs
+    startLine: 38
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: IUnknown::QueryInterface method calls can use the <xref href="System.Runtime.InteropServices.ICustomQueryInterface" data-throw-if-not-resolved="false"></xref> interface. When you use this value, the <xref href="System.Runtime.InteropServices.Marshal.GetComInterfaceForObject(System.Object,System.Type,System.Runtime.InteropServices.CustomQueryInterfaceMode)" data-throw-if-not-resolved="false"></xref> method overload functions like the <xref href="System.Runtime.InteropServices.Marshal.GetComInterfaceForObject(System.Object,System.Type)" data-throw-if-not-resolved="false"></xref> overload.
+  syntax:
+    content: Allow = 1
+- uid: System.Runtime.InteropServices.CustomQueryInterfaceMode.Ignore
+  id: Ignore
+  parent: System.Runtime.InteropServices.CustomQueryInterfaceMode
+  name: Ignore
+  fullName: System.Runtime.InteropServices.CustomQueryInterfaceMode.Ignore
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/Marshal.cs
+    startLine: 37
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: IUnknown::QueryInterface method calls should ignore the <xref href="System.Runtime.InteropServices.ICustomQueryInterface" data-throw-if-not-resolved="false"></xref> interface.
+  syntax:
+    content: Ignore = 0
+references:
+- uid: System.Runtime.InteropServices
+  isExternal: false
+  name: System.Runtime.InteropServices
+  fullName: System.Runtime.InteropServices

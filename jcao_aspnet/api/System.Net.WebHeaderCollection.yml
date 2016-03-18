@@ -1,0 +1,293 @@
+items:
+- uid: System.Net.WebHeaderCollection
+  id: WebHeaderCollection
+  parent: System.Net
+  children:
+  - System.Net.WebHeaderCollection.#ctor
+  - System.Net.WebHeaderCollection.AllKeys
+  - System.Net.WebHeaderCollection.Count
+  - System.Net.WebHeaderCollection.Item(System.Net.HttpRequestHeader)
+  - System.Net.WebHeaderCollection.Item(System.Net.HttpResponseHeader)
+  - System.Net.WebHeaderCollection.Item(System.String)
+  - System.Net.WebHeaderCollection.Remove(System.String)
+  - System.Net.WebHeaderCollection.ToString
+  name: WebHeaderCollection
+  fullName: System.Net.WebHeaderCollection
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Net.WebHeaderCollection/src/System/Net/WebHeaderCollection.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Net.WebHeaderCollection/src/System/Net/WebHeaderCollection.cs
+    startLine: 32
+  assemblies:
+  - System.Net.WebHeaderCollection
+  namespace: System.Net
+  summary: Contains protocol headers associated with a request or response.
+  syntax:
+    content: 'public sealed class WebHeaderCollection : Collections.IEnumerable'
+    content.vb: Public NotInheritable Class WebHeaderCollection Inherits Collections.IEnumerable
+  inheritance:
+  - System.Object
+- uid: System.Net.WebHeaderCollection.#ctor
+  id: '#ctor'
+  parent: System.Net.WebHeaderCollection
+  name: WebHeaderCollection()
+  fullName: System.Net.WebHeaderCollection.WebHeaderCollection()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.Net.WebHeaderCollection/src/System/Net/WebHeaderCollection.cs
+    startLine: 531
+  assemblies:
+  - System.Net.WebHeaderCollection
+  namespace: System.Net
+  summary: Initializes a new instance of the <xref href="System.Net.WebHeaderCollection" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: public WebHeaderCollection()
+    content.vb: Public Sub New
+- uid: System.Net.WebHeaderCollection.AllKeys
+  id: AllKeys
+  parent: System.Net.WebHeaderCollection
+  name: AllKeys
+  fullName: System.Net.WebHeaderCollection.AllKeys
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Net.WebHeaderCollection/src/System/Net/WebHeaderCollection.cs
+    startLine: 577
+  assemblies:
+  - System.Net.WebHeaderCollection
+  namespace: System.Net
+  summary: Gets all header names (keys) in the collection.
+  syntax:
+    content: public string[] AllKeys { get; }
+    content.vb: Public ReadOnly Property AllKeys As String()
+    parameters: []
+    return:
+      type: System.String[]
+      description: An array of type <xref href="System.String" data-throw-if-not-resolved="false"></xref> containing all header names in a Web request.
+- uid: System.Net.WebHeaderCollection.Count
+  id: Count
+  parent: System.Net.WebHeaderCollection
+  name: Count
+  fullName: System.Net.WebHeaderCollection.Count
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Net.WebHeaderCollection/src/System/Net/WebHeaderCollection.cs
+    startLine: 546
+  assemblies:
+  - System.Net.WebHeaderCollection
+  namespace: System.Net
+  summary: Gets the number of headers in the collection.
+  syntax:
+    content: public int Count { get; }
+    content.vb: Public ReadOnly Property Count As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: An <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> indicating the number of headers in a request.
+- uid: System.Net.WebHeaderCollection.Item(System.Net.HttpRequestHeader)
+  id: Item(System.Net.HttpRequestHeader)
+  parent: System.Net.WebHeaderCollection
+  name: Item[HttpRequestHeader]
+  name.vb: Item(HttpRequestHeader)
+  fullName: System.Net.WebHeaderCollection.Item[System.Net.HttpRequestHeader]
+  fullName.vb: System.Net.WebHeaderCollection.Item(System.Net.HttpRequestHeader)
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Net.WebHeaderCollection/src/System/Net/WebHeaderCollection.cs
+    startLine: 114
+  assemblies:
+  - System.Net.WebHeaderCollection
+  namespace: System.Net
+  summary: Gets or sets the specified request header.
+  syntax:
+    content: public string this[HttpRequestHeader header] { get; set; }
+    content.vb: Public Property Item(header As HttpRequestHeader) As String
+    parameters:
+    - id: header
+      type: System.Net.HttpRequestHeader
+      description: The request header value.
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> instance containing the specified header value.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: This <xref href="System.Net.WebHeaderCollection" data-throw-if-not-resolved="false"></xref> instance does not allow instances of <xref href="System.Net.HttpRequestHeader" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Net.WebHeaderCollection.Item(System.Net.HttpResponseHeader)
+  id: Item(System.Net.HttpResponseHeader)
+  parent: System.Net.WebHeaderCollection
+  name: Item[HttpResponseHeader]
+  name.vb: Item(HttpResponseHeader)
+  fullName: System.Net.WebHeaderCollection.Item[System.Net.HttpResponseHeader]
+  fullName.vb: System.Net.WebHeaderCollection.Item(System.Net.HttpResponseHeader)
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Net.WebHeaderCollection/src/System/Net/WebHeaderCollection.cs
+    startLine: 134
+  assemblies:
+  - System.Net.WebHeaderCollection
+  namespace: System.Net
+  summary: Gets or sets the specified response header.
+  syntax:
+    content: public string this[HttpResponseHeader header] { get; set; }
+    content.vb: Public Property Item(header As HttpResponseHeader) As String
+    parameters:
+    - id: header
+      type: System.Net.HttpResponseHeader
+      description: The response header value.
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> instance containing the specified header.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: The length of *value* is greater than 65535.
+  - type: System.InvalidOperationException
+    description: This <xref href="System.Net.WebHeaderCollection" data-throw-if-not-resolved="false"></xref> instance does not allow instances of <xref href="System.Net.HttpResponseHeader" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Net.WebHeaderCollection.ToString
+  id: ToString
+  parent: System.Net.WebHeaderCollection
+  name: ToString()
+  fullName: System.Net.WebHeaderCollection.ToString()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Net.WebHeaderCollection/src/System/Net/WebHeaderCollection.cs
+    startLine: 489
+  assemblies:
+  - System.Net.WebHeaderCollection
+  namespace: System.Net
+  summary: This method is obsolete.
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> representation of the collection.
+- uid: System.Net.WebHeaderCollection.Item(System.String)
+  id: Item(System.String)
+  parent: System.Net.WebHeaderCollection
+  name: Item[String]
+  name.vb: Item(String)
+  fullName: System.Net.WebHeaderCollection.Item[System.String]
+  fullName.vb: System.Net.WebHeaderCollection.Item(System.String)
+  type: Property
+  source:
+    remote:
+      path: src/System.Net.WebHeaderCollection/ref/System.Net.WebHeaderCollection.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Net.WebHeaderCollection/ref/System.Net.WebHeaderCollection.Manual.cs
+    startLine: 8
+  assemblies:
+  - System.Net.WebHeaderCollection
+  namespace: System.Net
+  syntax:
+    content: public string this[string name] { get; set; }
+    content.vb: Public Property Item(name As String) As String
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.String
+- uid: System.Net.WebHeaderCollection.Remove(System.String)
+  id: Remove(System.String)
+  parent: System.Net.WebHeaderCollection
+  name: Remove(String)
+  fullName: System.Net.WebHeaderCollection.Remove(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Net.WebHeaderCollection/src/System/Net/WebHeaderCollection.cs
+    startLine: 377
+  assemblies:
+  - System.Net.WebHeaderCollection
+  namespace: System.Net
+  summary: Removes the specified header from the collection.
+  syntax:
+    content: public void Remove(string name)
+    content.vb: Public Sub Remove(name As String)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the header to remove from the collection.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*name* is null<xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.ArgumentException
+    description: '*name* is a restricted header.-or- *name* contains invalid characters.'
+references:
+- uid: System.Net
+  isExternal: false
+  name: System.Net
+  fullName: System.Net
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.String[]
+  isExternal: false
+  name: String[]
+  name.vb: String()
+  fullName: System.String[]
+  fullName.vb: System.String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    fullName: System.String
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    fullName: System.String
+  - name: ()
+    fullName: ()
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Net.HttpRequestHeader
+  parent: System.Net
+  isExternal: false
+  name: HttpRequestHeader
+  fullName: System.Net.HttpRequestHeader
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Net.HttpResponseHeader
+  parent: System.Net
+  isExternal: false
+  name: HttpResponseHeader
+  fullName: System.Net.HttpResponseHeader
+- uid: System.InvalidOperationException
+  parent: System
+  isExternal: false
+  name: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: System.ArgumentOutOfRangeException
+  isExternal: false
+  name: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException

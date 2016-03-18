@@ -1,0 +1,63 @@
+items:
+- uid: System.Security.Cryptography.KeyNumber
+  id: KeyNumber
+  parent: System.Security.Cryptography
+  children:
+  - System.Security.Cryptography.KeyNumber.Exchange
+  - System.Security.Cryptography.KeyNumber.Signature
+  name: KeyNumber
+  fullName: System.Security.Cryptography.KeyNumber
+  type: Enum
+  source:
+    remote: &o0
+      path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/KeyNumber.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/KeyNumber.cs
+    startLine: 10
+  assemblies:
+  - System.Security.Cryptography.Csp
+  namespace: System.Security.Cryptography
+  summary: Specifies whether to create an asymmetric signature key or an asymmetric exchange key.
+  syntax:
+    content: 'public enum KeyNumber : int'
+    content.vb: Public Enum KeyNumber As Integer
+- uid: System.Security.Cryptography.KeyNumber.Exchange
+  id: Exchange
+  parent: System.Security.Cryptography.KeyNumber
+  name: Exchange
+  fullName: System.Security.Cryptography.KeyNumber.Exchange
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/KeyNumber.cs
+    startLine: 13
+  assemblies:
+  - System.Security.Cryptography.Csp
+  namespace: System.Security.Cryptography
+  summary: An exchange key pair used to encrypt session keys so that they can be safely stored and exchanged with other users.
+  syntax:
+    content: Exchange = null
+    content.vb: Exchange = Nothing
+- uid: System.Security.Cryptography.KeyNumber.Signature
+  id: Signature
+  parent: System.Security.Cryptography.KeyNumber
+  name: Signature
+  fullName: System.Security.Cryptography.KeyNumber.Signature
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/KeyNumber.cs
+    startLine: 14
+  assemblies:
+  - System.Security.Cryptography.Csp
+  namespace: System.Security.Cryptography
+  summary: A signature key pair used for authenticating digitally signed messages or files.
+  syntax:
+    content: Signature = null
+    content.vb: Signature = Nothing
+references:
+- uid: System.Security.Cryptography
+  isExternal: false
+  name: System.Security.Cryptography
+  fullName: System.Security.Cryptography

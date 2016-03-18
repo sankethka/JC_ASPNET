@@ -1,0 +1,466 @@
+items:
+- uid: System.Runtime.InteropServices.SafeBuffer
+  id: SafeBuffer
+  parent: System.Runtime.InteropServices
+  children:
+  - System.Runtime.InteropServices.SafeBuffer.#ctor(System.Boolean)
+  - System.Runtime.InteropServices.SafeBuffer.AcquirePointer(System.Byte*@)
+  - System.Runtime.InteropServices.SafeBuffer.ByteLength
+  - System.Runtime.InteropServices.SafeBuffer.Initialize(System.UInt32,System.UInt32)
+  - System.Runtime.InteropServices.SafeBuffer.Initialize(System.UInt64)
+  - System.Runtime.InteropServices.SafeBuffer.Initialize``1(System.UInt32)
+  - System.Runtime.InteropServices.SafeBuffer.IsInvalid
+  - System.Runtime.InteropServices.SafeBuffer.Read``1(System.UInt64)
+  - System.Runtime.InteropServices.SafeBuffer.ReadArray``1(System.UInt64,``0[],System.Int32,System.Int32)
+  - System.Runtime.InteropServices.SafeBuffer.ReleasePointer
+  - System.Runtime.InteropServices.SafeBuffer.Write``1(System.UInt64,``0)
+  - System.Runtime.InteropServices.SafeBuffer.WriteArray``1(System.UInt64,``0[],System.Int32,System.Int32)
+  name: SafeBuffer
+  fullName: System.Runtime.InteropServices.SafeBuffer
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 80
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Provides a controlled memory buffer that can be used for reading and writing. Attempts to access memory outside the controlled buffer (underruns and overruns) raise exceptions.
+  syntax:
+    content: 'public abstract class SafeBuffer : SafeHandle'
+    content.vb: Public MustInherit Class SafeBuffer Inherits SafeHandle
+  inheritance:
+  - System.Object
+- uid: System.Runtime.InteropServices.SafeBuffer.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: SafeBuffer(Boolean)
+  fullName: System.Runtime.InteropServices.SafeBuffer.SafeBuffer(System.Boolean)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 89
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Creates a new instance of the <xref href="System.Runtime.InteropServices.SafeBuffer" data-throw-if-not-resolved="false"></xref> class, and specifies whether the buffer handle is to be reliably released.
+  syntax:
+    content: protected SafeBuffer(bool ownsHandle)
+    content.vb: Protected Sub New(ownsHandle As Boolean)
+    parameters:
+    - id: ownsHandle
+      type: System.Boolean
+      description: true to reliably release the handle during the finalization phase; false to prevent reliable release (not recommended).
+- uid: System.Runtime.InteropServices.SafeBuffer.IsInvalid
+  id: IsInvalid
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: IsInvalid
+  fullName: System.Runtime.InteropServices.SafeBuffer.IsInvalid
+  type: Property
+  source:
+    remote:
+      path: src/System.Runtime.InteropServices.PInvoke/ref/System.Runtime.InteropServices.PInvoke.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Runtime.InteropServices.PInvoke/ref/System.Runtime.InteropServices.PInvoke.cs
+    startLine: 215
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  syntax:
+    content: public override bool IsInvalid { get; }
+    content.vb: Public Overrides ReadOnly Property IsInvalid As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+- uid: System.Runtime.InteropServices.SafeBuffer.ByteLength
+  id: ByteLength
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: ByteLength
+  fullName: System.Runtime.InteropServices.SafeBuffer.ByteLength
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 355
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Gets the size of the buffer, in bytes.
+  syntax:
+    content: public ulong ByteLength { get; }
+    content.vb: Public ReadOnly Property ByteLength As ULong
+    parameters: []
+    return:
+      type: System.UInt64
+      description: The number of bytes in the memory buffer.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> method has not been called.
+- uid: System.Runtime.InteropServices.SafeBuffer.AcquirePointer(System.Byte*@)
+  id: AcquirePointer(System.Byte*@)
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: AcquirePointer(ref Byte*)
+  name.vb: AcquirePointer(ByRef Byte*)
+  fullName: System.Runtime.InteropServices.SafeBuffer.AcquirePointer(ref System.Byte*)
+  fullName.vb: System.Runtime.InteropServices.SafeBuffer.AcquirePointer(ByRef System.Byte*)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 176
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Obtains a pointer from a <xref href="System.Runtime.InteropServices.SafeBuffer" data-throw-if-not-resolved="false"></xref> object for a block of memory.
+  syntax:
+    content: public void AcquirePointer(ref byte *pointer)
+    content.vb: Public Sub AcquirePointer(ByRef pointer As Byte *)
+    parameters:
+    - id: pointer
+      type: System.Byte*
+      description: A byte pointer, passed by reference, to receive the pointer from within the <xref href="System.Runtime.InteropServices.SafeBuffer" data-throw-if-not-resolved="false"></xref> object. You must set this pointer to null before you call this method.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> method has not been called.
+- uid: System.Runtime.InteropServices.SafeBuffer.Initialize(System.UInt32,System.UInt32)
+  id: Initialize(System.UInt32,System.UInt32)
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: Initialize(UInt32, UInt32)
+  fullName: System.Runtime.InteropServices.SafeBuffer.Initialize(System.UInt32, System.UInt32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 118
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Specifies the allocation size of the memory buffer by using the specified number of elements and element size. You must call this method before you use the <xref href="System.Runtime.InteropServices.SafeBuffer" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public void Initialize(uint numElements, uint sizeOfEachElement)
+    content.vb: Public Sub Initialize(numElements As UInteger, sizeOfEachElement As UInteger)
+    parameters:
+    - id: numElements
+      type: System.UInt32
+      description: The number of elements in the buffer.
+    - id: sizeOfEachElement
+      type: System.UInt32
+      description: The size of each element in the buffer.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*numElements* is less than zero. -or-*sizeOfEachElement* is less than zero.-or-*numElements* multiplied by *sizeOfEachElement* is greater than the available address space.'
+- uid: System.Runtime.InteropServices.SafeBuffer.Initialize(System.UInt64)
+  id: Initialize(System.UInt64)
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: Initialize(UInt64)
+  fullName: System.Runtime.InteropServices.SafeBuffer.Initialize(System.UInt64)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 99
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Defines the allocation size of the memory region in bytes. You must call this method before you use the <xref href="System.Runtime.InteropServices.SafeBuffer" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public void Initialize(ulong numBytes)
+    content.vb: Public Sub Initialize(numBytes As ULong)
+    parameters:
+    - id: numBytes
+      type: System.UInt64
+      description: The number of bytes in the buffer.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*numBytes* is less than zero.-or-*numBytes* is greater than the available address space.'
+- uid: System.Runtime.InteropServices.SafeBuffer.Initialize``1(System.UInt32)
+  id: Initialize``1(System.UInt32)
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: Initialize<T>(UInt32)
+  name.vb: Initialize(Of T)(UInt32)
+  fullName: System.Runtime.InteropServices.SafeBuffer.Initialize<T>(System.UInt32)
+  fullName.vb: System.Runtime.InteropServices.SafeBuffer.Initialize(Of T)(System.UInt32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 140
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Defines the allocation size of the memory region by specifying the number of value types. You must call this method before you use the <xref href="System.Runtime.InteropServices.SafeBuffer" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: 'public void Initialize<T>(uint numElements)where T : struct'
+    content.vb: Public Sub Initialize(Of T As Structure)(numElements As UInteger)
+    parameters:
+    - id: numElements
+      type: System.UInt32
+      description: The number of elements of the value type to allocate memory for.
+    typeParameters:
+    - id: T
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*numElements* is less than zero.-or-*numElements* multiplied by the size of each element is greater than the available address space.'
+- uid: System.Runtime.InteropServices.SafeBuffer.Read``1(System.UInt64)
+  id: Read``1(System.UInt64)
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: Read<T>(UInt64)
+  name.vb: Read(Of T)(UInt64)
+  fullName: System.Runtime.InteropServices.SafeBuffer.Read<T>(System.UInt64)
+  fullName.vb: System.Runtime.InteropServices.SafeBuffer.Read(Of T)(System.UInt64)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 213
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Reads a value type from memory at the specified offset.
+  syntax:
+    content: 'public T Read<T>(ulong byteOffset)where T : struct'
+    content.vb: Public Function Read(Of T As Structure)(byteOffset As ULong) As T
+    parameters:
+    - id: byteOffset
+      type: System.UInt64
+      description: The location from which to read the value type. You may have to consider alignment issues.
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+      description: The value type that was read from memory.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> method has not been called.
+- uid: System.Runtime.InteropServices.SafeBuffer.ReadArray``1(System.UInt64,``0[],System.Int32,System.Int32)
+  id: ReadArray``1(System.UInt64,``0[],System.Int32,System.Int32)
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: ReadArray<T>(UInt64, T[], Int32, Int32)
+  name.vb: ReadArray(Of T)(UInt64, T(), Int32, Int32)
+  fullName: System.Runtime.InteropServices.SafeBuffer.ReadArray<T>(System.UInt64, T[], System.Int32, System.Int32)
+  fullName.vb: System.Runtime.InteropServices.SafeBuffer.ReadArray(Of T)(System.UInt64, T(), System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 241
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Reads the specified number of value types from memory starting at the offset, and writes them into an array starting at the index.
+  syntax:
+    content: 'public void ReadArray<T>(ulong byteOffset, T[] array, int index, int count)where T : struct'
+    content.vb: Public Sub ReadArray(Of T As Structure)(byteOffset As ULong, array As T(), index As Integer, count As Integer)
+    parameters:
+    - id: byteOffset
+      type: System.UInt64
+      description: The location from which to start reading.
+    - id: array
+      type: '{T}[]'
+      description: The output array to write to.
+    - id: index
+      type: System.Int32
+      description: The location in the output array to begin writing to.
+    - id: count
+      type: System.Int32
+      description: The number of value types to read from the input array and to write to the output array.
+    typeParameters:
+    - id: T
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or-*count* is less than zero.'
+  - type: System.ArgumentNullException
+    description: '*array* is null.'
+  - type: System.ArgumentException
+    description: The length of the array minus the index is less than *count*.
+  - type: System.InvalidOperationException
+    description: The <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> method has not been called.
+- uid: System.Runtime.InteropServices.SafeBuffer.ReleasePointer
+  id: ReleasePointer
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: ReleasePointer()
+  fullName: System.Runtime.InteropServices.SafeBuffer.ReleasePointer()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 196
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Releases a pointer that was obtained by the <xref href="System.Runtime.InteropServices.SafeBuffer.AcquirePointer(System.Byte*@)" data-throw-if-not-resolved="false"></xref> method.
+  syntax:
+    content: public void ReleasePointer()
+    content.vb: Public Sub ReleasePointer
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> method has not been called.
+- uid: System.Runtime.InteropServices.SafeBuffer.Write``1(System.UInt64,``0)
+  id: Write``1(System.UInt64,``0)
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: Write<T>(UInt64, T)
+  name.vb: Write(Of T)(UInt64, T)
+  fullName: System.Runtime.InteropServices.SafeBuffer.Write<T>(System.UInt64, T)
+  fullName.vb: System.Runtime.InteropServices.SafeBuffer.Write(Of T)(System.UInt64, T)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 288
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Writes a value type to memory at the given location.
+  syntax:
+    content: 'public void Write<T>(ulong byteOffset, T value)where T : struct'
+    content.vb: Public Sub Write(Of T As Structure)(byteOffset As ULong, value As T)
+    parameters:
+    - id: byteOffset
+      type: System.UInt64
+      description: The location at which to start writing. You may have to consider alignment issues.
+    - id: value
+      type: '{T}'
+      description: The value to write.
+    typeParameters:
+    - id: T
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> method has not been called.
+- uid: System.Runtime.InteropServices.SafeBuffer.WriteArray``1(System.UInt64,``0[],System.Int32,System.Int32)
+  id: WriteArray``1(System.UInt64,``0[],System.Int32,System.Int32)
+  parent: System.Runtime.InteropServices.SafeBuffer
+  name: WriteArray<T>(UInt64, T[], Int32, Int32)
+  name.vb: WriteArray(Of T)(UInt64, T(), Int32, Int32)
+  fullName: System.Runtime.InteropServices.SafeBuffer.WriteArray<T>(System.UInt64, T[], System.Int32, System.Int32)
+  fullName.vb: System.Runtime.InteropServices.SafeBuffer.WriteArray(Of T)(System.UInt64, T(), System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/SafeBuffer.cs
+    startLine: 313
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Writes the specified number of value types to a memory location by reading bytes starting from the specified location in the input array.
+  syntax:
+    content: 'public void WriteArray<T>(ulong byteOffset, T[] array, int index, int count)where T : struct'
+    content.vb: Public Sub WriteArray(Of T As Structure)(byteOffset As ULong, array As T(), index As Integer, count As Integer)
+    parameters:
+    - id: byteOffset
+      type: System.UInt64
+      description: The location in memory to write to.
+    - id: array
+      type: '{T}[]'
+      description: The input array.
+    - id: index
+      type: System.Int32
+      description: The offset in the array to start reading from.
+    - id: count
+      type: System.Int32
+      description: The number of value types to write.
+    typeParameters:
+    - id: T
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*array* is null.'
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* or *count* is less than zero.'
+  - type: System.ArgumentException
+    description: The length of the input array minus *index* is less than *count*.
+  - type: System.InvalidOperationException
+    description: The <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> method has not been called.
+references:
+- uid: System.Runtime.InteropServices
+  isExternal: false
+  name: System.Runtime.InteropServices
+  fullName: System.Runtime.InteropServices
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.UInt64
+  parent: System
+  isExternal: false
+  name: UInt64
+  fullName: System.UInt64
+- uid: System.Byte*
+  isExternal: true
+  name: Byte*
+  fullName: System.Byte*
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '*'
+    fullName: '*'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '*'
+    fullName: '*'
+- uid: System.UInt32
+  parent: System
+  isExternal: false
+  name: UInt32
+  fullName: System.UInt32
+- uid: '{T}'
+  isExternal: false
+  name: T
+  fullName: T
+- uid: '{T}[]'
+  isExternal: false
+  name: T[]
+  name.vb: T()
+  fullName: T[]
+  fullName.vb: T()
+  spec.csharp:
+  - name: T
+    fullName: T
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - name: T
+    fullName: T
+  - name: ()
+    fullName: ()
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.InvalidOperationException
+  parent: System
+  isExternal: false
+  name: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: System.ArgumentOutOfRangeException
+  isExternal: false
+  name: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException

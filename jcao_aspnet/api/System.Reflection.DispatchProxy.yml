@@ -1,0 +1,134 @@
+items:
+- uid: System.Reflection.DispatchProxy
+  id: DispatchProxy
+  parent: System.Reflection
+  children:
+  - System.Reflection.DispatchProxy.#ctor
+  - System.Reflection.DispatchProxy.Create``2
+  - System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo,System.Object[])
+  name: DispatchProxy
+  fullName: System.Reflection.DispatchProxy
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Reflection.DispatchProxy/src/System/Reflection/DispatchProxy.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Reflection.DispatchProxy/src/System/Reflection/DispatchProxy.cs
+    startLine: 13
+  assemblies:
+  - System.Reflection.DispatchProxy
+  namespace: System.Reflection
+  syntax:
+    content: 'public abstract class DispatchProxy : object'
+    content.vb: Public MustInherit Class DispatchProxy Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Reflection.DispatchProxy.#ctor
+  id: '#ctor'
+  parent: System.Reflection.DispatchProxy
+  name: DispatchProxy()
+  fullName: System.Reflection.DispatchProxy.DispatchProxy()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.Reflection.DispatchProxy/src/System/Reflection/DispatchProxy.cs
+    startLine: 15
+  assemblies:
+  - System.Reflection.DispatchProxy
+  namespace: System.Reflection
+  syntax:
+    content: protected DispatchProxy()
+    content.vb: Protected Sub New
+- uid: System.Reflection.DispatchProxy.Create``2
+  id: Create``2
+  parent: System.Reflection.DispatchProxy
+  name: Create<T, TProxy>()
+  name.vb: Create(Of T, TProxy)()
+  fullName: System.Reflection.DispatchProxy.Create<T, TProxy>()
+  fullName.vb: System.Reflection.DispatchProxy.Create(Of T, TProxy)()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Reflection.DispatchProxy/src/System/Reflection/DispatchProxy.cs
+    startLine: 37
+  assemblies:
+  - System.Reflection.DispatchProxy
+  namespace: System.Reflection
+  syntax:
+    content: 'public static T Create<T, TProxy>()where TProxy : DispatchProxy'
+    content.vb: Public Shared Function Create(Of T, TProxy As DispatchProxy) As T
+    typeParameters:
+    - id: T
+    - id: TProxy
+    return:
+      type: '{T}'
+- uid: System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo,System.Object[])
+  id: Invoke(System.Reflection.MethodInfo,System.Object[])
+  parent: System.Reflection.DispatchProxy
+  name: Invoke(MethodInfo, Object[])
+  name.vb: Invoke(MethodInfo, Object())
+  fullName: System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo, System.Object[])
+  fullName.vb: System.Reflection.DispatchProxy.Invoke(System.Reflection.MethodInfo, System.Object())
+  type: Method
+  source:
+    remote:
+      path: src/System.Reflection.DispatchProxy/ref/System.Reflection.DispatchProxy.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Reflection.DispatchProxy/ref/System.Reflection.DispatchProxy.cs
+    startLine: 11
+  assemblies:
+  - System.Reflection.DispatchProxy
+  namespace: System.Reflection
+  syntax:
+    content: protected abstract object Invoke(MethodInfo targetMethod, object[] args)
+    content.vb: Protected MustOverride Function Invoke(targetMethod As MethodInfo, args As Object()) As Object
+    parameters:
+    - id: targetMethod
+      type: System.Reflection.MethodInfo
+    - id: args
+      type: System.Object[]
+    return:
+      type: System.Object
+references:
+- uid: System.Reflection
+  isExternal: false
+  name: System.Reflection
+  fullName: System.Reflection
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: '{T}'
+  isExternal: false
+  name: T
+  fullName: T
+- uid: System.Reflection.MethodInfo
+  parent: System.Reflection
+  isExternal: false
+  name: MethodInfo
+  fullName: System.Reflection.MethodInfo
+- uid: System.Object[]
+  isExternal: false
+  name: Object[]
+  name.vb: Object()
+  fullName: System.Object[]
+  fullName.vb: System.Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ()
+    fullName: ()

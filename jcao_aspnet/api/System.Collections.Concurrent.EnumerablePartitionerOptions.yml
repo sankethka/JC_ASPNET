@@ -1,0 +1,63 @@
+items:
+- uid: System.Collections.Concurrent.EnumerablePartitionerOptions
+  id: EnumerablePartitionerOptions
+  parent: System.Collections.Concurrent
+  children:
+  - System.Collections.Concurrent.EnumerablePartitionerOptions.NoBuffering
+  - System.Collections.Concurrent.EnumerablePartitionerOptions.None
+  name: EnumerablePartitionerOptions
+  fullName: System.Collections.Concurrent.EnumerablePartitionerOptions
+  type: Enum
+  source:
+    remote: &o0
+      path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
+    startLine: 24
+  assemblies:
+  - System.Collections.Concurrent
+  namespace: System.Collections.Concurrent
+  summary: Specifies options to control the buffering behavior of a partitioner
+  syntax:
+    content: 'public enum EnumerablePartitionerOptions : int'
+    content.vb: Public Enum EnumerablePartitionerOptions As Integer
+- uid: System.Collections.Concurrent.EnumerablePartitionerOptions.NoBuffering
+  id: NoBuffering
+  parent: System.Collections.Concurrent.EnumerablePartitionerOptions
+  name: NoBuffering
+  fullName: System.Collections.Concurrent.EnumerablePartitionerOptions.NoBuffering
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
+    startLine: 39
+  assemblies:
+  - System.Collections.Concurrent
+  namespace: System.Collections.Concurrent
+  summary: Create a partitioner that takes items from the source enumerable one at a time and does not use intermediate storage that can be accessed more efficiently by multiple threads. This option provides support for low latency (items will be processed as soon as they are available from the source) and provides partial support for dependencies between items (a thread cannot deadlock waiting for an item that the thread itself is responsible for processing).
+  syntax:
+    content: NoBuffering = null
+    content.vb: NoBuffering = Nothing
+- uid: System.Collections.Concurrent.EnumerablePartitionerOptions.None
+  id: None
+  parent: System.Collections.Concurrent.EnumerablePartitionerOptions
+  name: None
+  fullName: System.Collections.Concurrent.EnumerablePartitionerOptions.None
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
+    startLine: 30
+  assemblies:
+  - System.Collections.Concurrent
+  namespace: System.Collections.Concurrent
+  summary: Use the default behavior, which is to use buffering to achieve optimal performance.
+  syntax:
+    content: None = null
+    content.vb: None = Nothing
+references:
+- uid: System.Collections.Concurrent
+  isExternal: false
+  name: System.Collections.Concurrent
+  fullName: System.Collections.Concurrent

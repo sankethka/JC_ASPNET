@@ -1,0 +1,117 @@
+items:
+- uid: System.Net.NetworkInformation.DuplicateAddressDetectionState
+  id: DuplicateAddressDetectionState
+  parent: System.Net.NetworkInformation
+  children:
+  - System.Net.NetworkInformation.DuplicateAddressDetectionState.Deprecated
+  - System.Net.NetworkInformation.DuplicateAddressDetectionState.Duplicate
+  - System.Net.NetworkInformation.DuplicateAddressDetectionState.Invalid
+  - System.Net.NetworkInformation.DuplicateAddressDetectionState.Preferred
+  - System.Net.NetworkInformation.DuplicateAddressDetectionState.Tentative
+  name: DuplicateAddressDetectionState
+  fullName: System.Net.NetworkInformation.DuplicateAddressDetectionState
+  type: Enum
+  source:
+    remote: &o0
+      path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/DuplicateAddressDetectionState.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/DuplicateAddressDetectionState.cs
+    startLine: 9
+  assemblies:
+  - System.Net.NetworkInformation
+  namespace: System.Net.NetworkInformation
+  summary: Specifies the current state of an IP address.
+  syntax:
+    content: 'public enum DuplicateAddressDetectionState : int'
+    content.vb: Public Enum DuplicateAddressDetectionState As Integer
+- uid: System.Net.NetworkInformation.DuplicateAddressDetectionState.Deprecated
+  id: Deprecated
+  parent: System.Net.NetworkInformation.DuplicateAddressDetectionState
+  name: Deprecated
+  fullName: System.Net.NetworkInformation.DuplicateAddressDetectionState.Deprecated
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/DuplicateAddressDetectionState.cs
+    startLine: 14
+  assemblies:
+  - System.Net.NetworkInformation
+  namespace: System.Net.NetworkInformation
+  summary: The address is valid, but it is nearing its lease lifetime and should not be used by applications.
+  syntax:
+    content: Deprecated = null
+    content.vb: Deprecated = Nothing
+- uid: System.Net.NetworkInformation.DuplicateAddressDetectionState.Duplicate
+  id: Duplicate
+  parent: System.Net.NetworkInformation.DuplicateAddressDetectionState
+  name: Duplicate
+  fullName: System.Net.NetworkInformation.DuplicateAddressDetectionState.Duplicate
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/DuplicateAddressDetectionState.cs
+    startLine: 13
+  assemblies:
+  - System.Net.NetworkInformation
+  namespace: System.Net.NetworkInformation
+  summary: The address is not unique. This address should not be assigned to the network interface.
+  syntax:
+    content: Duplicate = null
+    content.vb: Duplicate = Nothing
+- uid: System.Net.NetworkInformation.DuplicateAddressDetectionState.Invalid
+  id: Invalid
+  parent: System.Net.NetworkInformation.DuplicateAddressDetectionState
+  name: Invalid
+  fullName: System.Net.NetworkInformation.DuplicateAddressDetectionState.Invalid
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/DuplicateAddressDetectionState.cs
+    startLine: 11
+  assemblies:
+  - System.Net.NetworkInformation
+  namespace: System.Net.NetworkInformation
+  summary: The address is not valid. A nonvalid address is expired and no longer assigned to an interface; applications should not send data packets to it.
+  syntax:
+    content: Invalid = null
+    content.vb: Invalid = Nothing
+- uid: System.Net.NetworkInformation.DuplicateAddressDetectionState.Preferred
+  id: Preferred
+  parent: System.Net.NetworkInformation.DuplicateAddressDetectionState
+  name: Preferred
+  fullName: System.Net.NetworkInformation.DuplicateAddressDetectionState.Preferred
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/DuplicateAddressDetectionState.cs
+    startLine: 15
+  assemblies:
+  - System.Net.NetworkInformation
+  namespace: System.Net.NetworkInformation
+  summary: The address is valid and its use is unrestricted.
+  syntax:
+    content: Preferred = null
+    content.vb: Preferred = Nothing
+- uid: System.Net.NetworkInformation.DuplicateAddressDetectionState.Tentative
+  id: Tentative
+  parent: System.Net.NetworkInformation.DuplicateAddressDetectionState
+  name: Tentative
+  fullName: System.Net.NetworkInformation.DuplicateAddressDetectionState.Tentative
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/DuplicateAddressDetectionState.cs
+    startLine: 12
+  assemblies:
+  - System.Net.NetworkInformation
+  namespace: System.Net.NetworkInformation
+  summary: The duplicate address detection procedure's evaluation of the address has not completed successfully. Applications should not use the address because it is not yet valid and packets sent to it are discarded.
+  syntax:
+    content: Tentative = null
+    content.vb: Tentative = Nothing
+references:
+- uid: System.Net.NetworkInformation
+  isExternal: false
+  name: System.Net.NetworkInformation
+  fullName: System.Net.NetworkInformation

@@ -1,0 +1,619 @@
+items:
+- uid: System.Data.Common.DbParameterCollection
+  id: DbParameterCollection
+  parent: System.Data.Common
+  children:
+  - System.Data.Common.DbParameterCollection.#ctor
+  - System.Data.Common.DbParameterCollection.Add(System.Object)
+  - System.Data.Common.DbParameterCollection.AddRange(System.Array)
+  - System.Data.Common.DbParameterCollection.Clear
+  - System.Data.Common.DbParameterCollection.Contains(System.Object)
+  - System.Data.Common.DbParameterCollection.Contains(System.String)
+  - System.Data.Common.DbParameterCollection.CopyTo(System.Array,System.Int32)
+  - System.Data.Common.DbParameterCollection.Count
+  - System.Data.Common.DbParameterCollection.GetEnumerator
+  - System.Data.Common.DbParameterCollection.GetParameter(System.Int32)
+  - System.Data.Common.DbParameterCollection.GetParameter(System.String)
+  - System.Data.Common.DbParameterCollection.IndexOf(System.Object)
+  - System.Data.Common.DbParameterCollection.IndexOf(System.String)
+  - System.Data.Common.DbParameterCollection.Insert(System.Int32,System.Object)
+  - System.Data.Common.DbParameterCollection.Item(System.Int32)
+  - System.Data.Common.DbParameterCollection.Item(System.String)
+  - System.Data.Common.DbParameterCollection.Remove(System.Object)
+  - System.Data.Common.DbParameterCollection.RemoveAt(System.Int32)
+  - System.Data.Common.DbParameterCollection.RemoveAt(System.String)
+  - System.Data.Common.DbParameterCollection.SetParameter(System.Int32,System.Data.Common.DbParameter)
+  - System.Data.Common.DbParameterCollection.SetParameter(System.String,System.Data.Common.DbParameter)
+  - System.Data.Common.DbParameterCollection.SyncRoot
+  name: DbParameterCollection
+  fullName: System.Data.Common.DbParameterCollection
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 14
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: The base class for a collection of parameters relevant to a <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: 'public abstract class DbParameterCollection : Collections.ICollection, Collections.IEnumerable, Collections.IList, Collections.ICollection'
+    content.vb: Public MustInherit Class DbParameterCollection Inherits Collections.ICollection Implements Collections.IEnumerable, Collections.IList, Collections.ICollection
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.IEnumerable
+  - System.Collections.IList
+  - System.Collections.ICollection
+- uid: System.Data.Common.DbParameterCollection.#ctor
+  id: '#ctor'
+  parent: System.Data.Common.DbParameterCollection
+  name: DbParameterCollection()
+  fullName: System.Data.Common.DbParameterCollection.DbParameterCollection()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 17
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Initializes a new instance of the <xref href="System.Data.Common.DbParameterCollection" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: protected DbParameterCollection()
+    content.vb: Protected Sub New
+- uid: System.Data.Common.DbParameterCollection.Count
+  id: Count
+  parent: System.Data.Common.DbParameterCollection
+  name: Count
+  fullName: System.Data.Common.DbParameterCollection.Count
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 21
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Specifies the number of items in the collection.
+  syntax:
+    content: public abstract int Count { get; }
+    content.vb: Public MustOverride ReadOnly Property Count As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of items in the collection.
+- uid: System.Data.Common.DbParameterCollection.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: System.Data.Common.DbParameterCollection
+  name: Item[Int32]
+  name.vb: Item(Int32)
+  fullName: System.Data.Common.DbParameterCollection.Item[System.Int32]
+  fullName.vb: System.Data.Common.DbParameterCollection.Item(System.Int32)
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 59
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Gets and sets the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> at the specified index.
+  syntax:
+    content: public DbParameter this[int index] { get; set; }
+    content.vb: Public Property Item(index As Integer) As DbParameter
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the parameter.
+    return:
+      type: System.Data.Common.DbParameter
+      description: The <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> at the specified index.
+  exceptions:
+  - type: System.IndexOutOfRangeException
+    description: The specified index does not exist.
+- uid: System.Data.Common.DbParameterCollection.Item(System.String)
+  id: Item(System.String)
+  parent: System.Data.Common.DbParameterCollection
+  name: Item[String]
+  name.vb: Item(String)
+  fullName: System.Data.Common.DbParameterCollection.Item[System.String]
+  fullName.vb: System.Data.Common.DbParameterCollection.Item(System.String)
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 71
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Gets and sets the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> with the specified name.
+  syntax:
+    content: public DbParameter this[string parameterName] { get; set; }
+    content.vb: Public Property Item(parameterName As String) As DbParameter
+    parameters:
+    - id: parameterName
+      type: System.String
+      description: The name of the parameter.
+    return:
+      type: System.Data.Common.DbParameter
+      description: The <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> with the specified name.
+  exceptions:
+  - type: System.IndexOutOfRangeException
+    description: The specified index does not exist.
+- uid: System.Data.Common.DbParameterCollection.SyncRoot
+  id: SyncRoot
+  parent: System.Data.Common.DbParameterCollection
+  name: SyncRoot
+  fullName: System.Data.Common.DbParameterCollection.SyncRoot
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 41
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Specifies the <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to be used to synchronize access to the collection.
+  syntax:
+    content: public abstract object SyncRoot { get; }
+    content.vb: Public MustOverride ReadOnly Property SyncRoot As Object
+    parameters: []
+    return:
+      type: System.Object
+      description: A <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to be used to synchronize access to the <xref href="System.Data.Common.DbParameterCollection" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Data.Common.DbParameterCollection.Add(System.Object)
+  id: Add(System.Object)
+  parent: System.Data.Common.DbParameterCollection
+  name: Add(Object)
+  fullName: System.Data.Common.DbParameterCollection.Add(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 83
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Adds the specified <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object to the <xref href="System.Data.Common.DbParameterCollection" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public abstract int Add(object value)
+    content.vb: Public MustOverride Function Add(value As Object) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Data.Common.DbParameter.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> to add to the collection.
+    return:
+      type: System.Int32
+      description: The index of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object in the collection.
+- uid: System.Data.Common.DbParameterCollection.AddRange(System.Array)
+  id: AddRange(System.Array)
+  parent: System.Data.Common.DbParameterCollection
+  name: AddRange(Array)
+  fullName: System.Data.Common.DbParameterCollection.AddRange(System.Array)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 85
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Adds an array of items with the specified values to the <xref href="System.Data.Common.DbParameterCollection" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public abstract void AddRange(Array values)
+    content.vb: Public MustOverride Sub AddRange(values As Array)
+    parameters:
+    - id: values
+      type: System.Array
+      description: An array of values of type <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> to add to the collection.
+- uid: System.Data.Common.DbParameterCollection.Clear
+  id: Clear
+  parent: System.Data.Common.DbParameterCollection
+  name: Clear()
+  fullName: System.Data.Common.DbParameterCollection.Clear()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 93
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Removes all <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> values from the <xref href="System.Data.Common.DbParameterCollection" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public abstract void Clear()
+    content.vb: Public MustOverride Sub Clear
+- uid: System.Data.Common.DbParameterCollection.Contains(System.Object)
+  id: Contains(System.Object)
+  parent: System.Data.Common.DbParameterCollection
+  name: Contains(Object)
+  fullName: System.Data.Common.DbParameterCollection.Contains(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 87
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Indicates whether a <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> with the specified <xref href="System.Data.Common.DbParameter.Value" data-throw-if-not-resolved="false"></xref> is contained in the collection.
+  syntax:
+    content: public abstract bool Contains(object value)
+    content.vb: Public MustOverride Function Contains(value As Object) As Boolean
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Data.Common.DbParameter.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> to look for in the collection.
+    return:
+      type: System.Boolean
+      description: true if the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> is in the collection; otherwise false.
+- uid: System.Data.Common.DbParameterCollection.Contains(System.String)
+  id: Contains(System.String)
+  parent: System.Data.Common.DbParameterCollection
+  name: Contains(String)
+  fullName: System.Data.Common.DbParameterCollection.Contains(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 89
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Indicates whether a <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> with the specified name exists in the collection.
+  syntax:
+    content: public abstract bool Contains(string value)
+    content.vb: Public MustOverride Function Contains(value As String) As Boolean
+    parameters:
+    - id: value
+      type: System.String
+      description: The name of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> to look for in the collection.
+    return:
+      type: System.Boolean
+      description: true if the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> is in the collection; otherwise false.
+- uid: System.Data.Common.DbParameterCollection.CopyTo(System.Array,System.Int32)
+  id: CopyTo(System.Array,System.Int32)
+  parent: System.Data.Common.DbParameterCollection
+  name: CopyTo(Array, Int32)
+  fullName: System.Data.Common.DbParameterCollection.CopyTo(System.Array, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 91
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Copies an array of items to the collection starting at the specified index.
+  syntax:
+    content: public abstract void CopyTo(Array array, int index)
+    content.vb: Public MustOverride Sub CopyTo(array As Array, index As Integer)
+    parameters:
+    - id: array
+      type: System.Array
+      description: The array of items to copy to the collection.
+    - id: index
+      type: System.Int32
+      description: The index in the collection to copy the items.
+- uid: System.Data.Common.DbParameterCollection.GetEnumerator
+  id: GetEnumerator
+  parent: System.Data.Common.DbParameterCollection
+  name: GetEnumerator()
+  fullName: System.Data.Common.DbParameterCollection.GetEnumerator()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 95
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Exposes the <xref href="System.Collections.IEnumerable.GetEnumerator" data-throw-if-not-resolved="false"></xref> method, which supports a simple iteration over a collection by a .NET Framework data provider.
+  syntax:
+    content: public abstract Collections.IEnumerator GetEnumerator()
+    content.vb: Public MustOverride Function GetEnumerator As Collections.IEnumerator
+    return:
+      type: System.Collections.IEnumerator
+      description: An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> that can be used to iterate through the collection.
+- uid: System.Data.Common.DbParameterCollection.GetParameter(System.Int32)
+  id: GetParameter(System.Int32)
+  parent: System.Data.Common.DbParameterCollection
+  name: GetParameter(Int32)
+  fullName: System.Data.Common.DbParameterCollection.GetParameter(System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 97
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Returns the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object at the specified index in the collection.
+  syntax:
+    content: protected abstract DbParameter GetParameter(int index)
+    content.vb: Protected MustOverride Function GetParameter(index As Integer) As DbParameter
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The index of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> in the collection.
+    return:
+      type: System.Data.Common.DbParameter
+      description: The <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object at the specified index in the collection.
+- uid: System.Data.Common.DbParameterCollection.GetParameter(System.String)
+  id: GetParameter(System.String)
+  parent: System.Data.Common.DbParameterCollection
+  name: GetParameter(String)
+  fullName: System.Data.Common.DbParameterCollection.GetParameter(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 99
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Returns <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> the object with the specified name.
+  syntax:
+    content: protected abstract DbParameter GetParameter(string parameterName)
+    content.vb: Protected MustOverride Function GetParameter(parameterName As String) As DbParameter
+    parameters:
+    - id: parameterName
+      type: System.String
+      description: The name of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> in the collection.
+    return:
+      type: System.Data.Common.DbParameter
+      description: The <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> the object with the specified name.
+- uid: System.Data.Common.DbParameterCollection.IndexOf(System.Object)
+  id: IndexOf(System.Object)
+  parent: System.Data.Common.DbParameterCollection
+  name: IndexOf(Object)
+  fullName: System.Data.Common.DbParameterCollection.IndexOf(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 101
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Returns the index of the specified <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object.
+  syntax:
+    content: public abstract int IndexOf(object value)
+    content.vb: Public MustOverride Function IndexOf(value As Object) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object in the collection.
+    return:
+      type: System.Int32
+      description: The index of the specified <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object.
+- uid: System.Data.Common.DbParameterCollection.IndexOf(System.String)
+  id: IndexOf(System.String)
+  parent: System.Data.Common.DbParameterCollection
+  name: IndexOf(String)
+  fullName: System.Data.Common.DbParameterCollection.IndexOf(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 103
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Returns the index of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object with the specified name.
+  syntax:
+    content: public abstract int IndexOf(string parameterName)
+    content.vb: Public MustOverride Function IndexOf(parameterName As String) As Integer
+    parameters:
+    - id: parameterName
+      type: System.String
+      description: The name of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object in the collection.
+    return:
+      type: System.Int32
+      description: The index of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object with the specified name.
+- uid: System.Data.Common.DbParameterCollection.Insert(System.Int32,System.Object)
+  id: Insert(System.Int32,System.Object)
+  parent: System.Data.Common.DbParameterCollection
+  name: Insert(Int32, Object)
+  fullName: System.Data.Common.DbParameterCollection.Insert(System.Int32, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 105
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Inserts the specified index of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object with the specified name into the collection at the specified index.
+  syntax:
+    content: public abstract void Insert(int index, object value)
+    content.vb: Public MustOverride Sub Insert(index As Integer, value As Object)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The index at which to insert the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object.
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object to insert into the collection.
+- uid: System.Data.Common.DbParameterCollection.Remove(System.Object)
+  id: Remove(System.Object)
+  parent: System.Data.Common.DbParameterCollection
+  name: Remove(Object)
+  fullName: System.Data.Common.DbParameterCollection.Remove(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 107
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Removes the specified <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object from the collection.
+  syntax:
+    content: public abstract void Remove(object value)
+    content.vb: Public MustOverride Sub Remove(value As Object)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object to remove.
+- uid: System.Data.Common.DbParameterCollection.RemoveAt(System.Int32)
+  id: RemoveAt(System.Int32)
+  parent: System.Data.Common.DbParameterCollection
+  name: RemoveAt(Int32)
+  fullName: System.Data.Common.DbParameterCollection.RemoveAt(System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 109
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Removes the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object at the specified from the collection.
+  syntax:
+    content: public abstract void RemoveAt(int index)
+    content.vb: Public MustOverride Sub RemoveAt(index As Integer)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The index where the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object is located.
+- uid: System.Data.Common.DbParameterCollection.RemoveAt(System.String)
+  id: RemoveAt(System.String)
+  parent: System.Data.Common.DbParameterCollection
+  name: RemoveAt(String)
+  fullName: System.Data.Common.DbParameterCollection.RemoveAt(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 111
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Removes the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object with the specified name from the collection.
+  syntax:
+    content: public abstract void RemoveAt(string parameterName)
+    content.vb: Public MustOverride Sub RemoveAt(parameterName As String)
+    parameters:
+    - id: parameterName
+      type: System.String
+      description: The name of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object to remove.
+- uid: System.Data.Common.DbParameterCollection.SetParameter(System.Int32,System.Data.Common.DbParameter)
+  id: SetParameter(System.Int32,System.Data.Common.DbParameter)
+  parent: System.Data.Common.DbParameterCollection
+  name: SetParameter(Int32, DbParameter)
+  fullName: System.Data.Common.DbParameterCollection.SetParameter(System.Int32, System.Data.Common.DbParameter)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 113
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Sets the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object at the specified index to a new value.
+  syntax:
+    content: protected abstract void SetParameter(int index, DbParameter value)
+    content.vb: Protected MustOverride Sub SetParameter(index As Integer, value As DbParameter)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The index where the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object is located.
+    - id: value
+      type: System.Data.Common.DbParameter
+      description: The new <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> value.
+- uid: System.Data.Common.DbParameterCollection.SetParameter(System.String,System.Data.Common.DbParameter)
+  id: SetParameter(System.String,System.Data.Common.DbParameter)
+  parent: System.Data.Common.DbParameterCollection
+  name: SetParameter(String, DbParameter)
+  fullName: System.Data.Common.DbParameterCollection.SetParameter(System.String, System.Data.Common.DbParameter)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameterCollection.cs
+    startLine: 115
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Sets the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object with the specified name to a new value.
+  syntax:
+    content: protected abstract void SetParameter(string parameterName, DbParameter value)
+    content.vb: Protected MustOverride Sub SetParameter(parameterName As String, value As DbParameter)
+    parameters:
+    - id: parameterName
+      type: System.String
+      description: The name of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> object in the collection.
+    - id: value
+      type: System.Data.Common.DbParameter
+      description: The new <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> value.
+references:
+- uid: System.Data.Common
+  isExternal: false
+  name: System.Data.Common
+  fullName: System.Data.Common
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Collections.IList
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IList
+  fullName: System.Collections.IList
+- uid: System.Collections.ICollection
+  parent: System.Collections
+  isExternal: false
+  name: Collections.ICollection
+  fullName: System.Collections.ICollection
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Collections
+  isExternal: false
+  name: System.Collections
+  fullName: System.Collections
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Data.Common.DbParameter
+  parent: System.Data.Common
+  isExternal: false
+  name: DbParameter
+  fullName: System.Data.Common.DbParameter
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Array
+  parent: System
+  isExternal: false
+  name: Array
+  fullName: System.Array
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.IndexOutOfRangeException
+  isExternal: false
+  name: IndexOutOfRangeException
+  fullName: System.IndexOutOfRangeException

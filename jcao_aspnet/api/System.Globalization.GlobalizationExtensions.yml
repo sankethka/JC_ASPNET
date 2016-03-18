@@ -1,0 +1,73 @@
+items:
+- uid: System.Globalization.GlobalizationExtensions
+  id: GlobalizationExtensions
+  parent: System.Globalization
+  children:
+  - System.Globalization.GlobalizationExtensions.GetStringComparer(CompareInfo,CompareOptions)
+  name: GlobalizationExtensions
+  fullName: System.Globalization.GlobalizationExtensions
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Globalization.Extensions/src/System/Globalization/Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Globalization.Extensions/src/System/Globalization/Extensions.cs
+    startLine: 10
+  assemblies:
+  - System.Globalization.Extensions
+  namespace: System.Globalization
+  syntax:
+    content: 'public class GlobalizationExtensions : object'
+    content.vb: Public Class GlobalizationExtensions Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Globalization.GlobalizationExtensions.GetStringComparer(CompareInfo,CompareOptions)
+  id: GetStringComparer(CompareInfo,CompareOptions)
+  parent: System.Globalization.GlobalizationExtensions
+  name: GetStringComparer(CompareInfo, CompareOptions)
+  fullName: System.Globalization.GlobalizationExtensions.GetStringComparer(CompareInfo, CompareOptions)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Globalization.Extensions/src/System/Globalization/Extensions.cs
+    startLine: 12
+  assemblies:
+  - System.Globalization.Extensions
+  namespace: System.Globalization
+  syntax:
+    content: public static StringComparer GetStringComparer(CompareInfo compareInfo, CompareOptions options)
+    content.vb: Public Shared Function GetStringComparer(compareInfo As CompareInfo, options As CompareOptions) As StringComparer
+    parameters:
+    - id: compareInfo
+      type: CompareInfo
+    - id: options
+      type: CompareOptions
+    return:
+      type: StringComparer
+references:
+- uid: System.Globalization
+  isExternal: false
+  name: System.Globalization
+  fullName: System.Globalization
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: CompareInfo
+  isExternal: true
+  name: CompareInfo
+  fullName: CompareInfo
+- uid: CompareOptions
+  isExternal: true
+  name: CompareOptions
+  fullName: CompareOptions
+- uid: StringComparer
+  isExternal: true
+  name: StringComparer
+  fullName: StringComparer

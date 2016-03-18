@@ -1,0 +1,178 @@
+items:
+- uid: System.Threading.AsyncLocal`1
+  id: AsyncLocal`1
+  parent: System.Threading
+  children:
+  - System.Threading.AsyncLocal`1.#ctor
+  - System.Threading.AsyncLocal`1.#ctor(System.Action{System.Threading.AsyncLocalValueChangedArgs{`0}})
+  - System.Threading.AsyncLocal`1.Value
+  name: AsyncLocal<T>
+  name.vb: AsyncLocal(Of T)
+  fullName: System.Threading.AsyncLocal<T>
+  fullName.vb: System.Threading.AsyncLocal(Of T)
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Threading/AsyncLocal.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Threading/AsyncLocal.cs
+    startLine: 40
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Represents ambient data that is local to a given asynchronous control flow, such as an asynchronous method.
+  syntax:
+    content: 'public sealed class AsyncLocal<T> : object'
+    content.vb: Public NotInheritable Class AsyncLocal(Of T) Inherits Object
+    typeParameters:
+    - id: T
+  inheritance:
+  - System.Object
+- uid: System.Threading.AsyncLocal`1.#ctor
+  id: '#ctor'
+  parent: System.Threading.AsyncLocal`1
+  name: AsyncLocal()
+  fullName: System.Threading.AsyncLocal<T>.AsyncLocal()
+  fullName.vb: System.Threading.AsyncLocal(Of T).AsyncLocal()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/AsyncLocal.cs
+    startLine: 48
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Instantiates an <xref href="System.Threading.AsyncLocal`1" data-throw-if-not-resolved="false"></xref> instance that does not receive change notifications.
+  syntax:
+    content: public AsyncLocal()
+    content.vb: Public Sub New
+- uid: System.Threading.AsyncLocal`1.#ctor(System.Action{System.Threading.AsyncLocalValueChangedArgs{`0}})
+  id: '#ctor(System.Action{System.Threading.AsyncLocalValueChangedArgs{`0}})'
+  parent: System.Threading.AsyncLocal`1
+  name: AsyncLocal(Action<AsyncLocalValueChangedArgs<T>>)
+  name.vb: AsyncLocal(Action(Of AsyncLocalValueChangedArgs(Of T)))
+  fullName: System.Threading.AsyncLocal<T>.AsyncLocal(System.Action<System.Threading.AsyncLocalValueChangedArgs<T>>)
+  fullName.vb: System.Threading.AsyncLocal(Of T).AsyncLocal(System.Action(Of System.Threading.AsyncLocalValueChangedArgs(Of T)))
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/AsyncLocal.cs
+    startLine: 56
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Instantiates an <xref href="System.Threading.AsyncLocal`1" data-throw-if-not-resolved="false"></xref> local instance that receives change notifications.
+  syntax:
+    content: public AsyncLocal(Action<AsyncLocalValueChangedArgs<T>> valueChangedHandler)
+    content.vb: Public Sub New(valueChangedHandler As Action(Of AsyncLocalValueChangedArgs(Of T)))
+    parameters:
+    - id: valueChangedHandler
+      type: System.Action{System.Threading.AsyncLocalValueChangedArgs{{T}}}
+      description: The delegate that is called whenever the current value changes on any thread.
+- uid: System.Threading.AsyncLocal`1.Value
+  id: Value
+  parent: System.Threading.AsyncLocal`1
+  name: Value
+  fullName: System.Threading.AsyncLocal<T>.Value
+  fullName.vb: System.Threading.AsyncLocal(Of T).Value
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/AsyncLocal.cs
+    startLine: 62
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Gets or sets the value of the ambient data.
+  syntax:
+    content: public T Value { get; set; }
+    content.vb: Public Property Value As T
+    parameters: []
+    return:
+      type: '{T}'
+      description: The value of the ambient data.
+references:
+- uid: System.Threading
+  isExternal: false
+  name: System.Threading
+  fullName: System.Threading
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Action{System.Threading.AsyncLocalValueChangedArgs{{T}}}
+  definition: System.Action`1
+  name: Action<AsyncLocalValueChangedArgs<T>>
+  name.vb: Action(Of AsyncLocalValueChangedArgs(Of T))
+  fullName: System.Action<System.Threading.AsyncLocalValueChangedArgs<T>>
+  fullName.vb: System.Action(Of System.Threading.AsyncLocalValueChangedArgs(Of T))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.Threading.AsyncLocalValueChangedArgs`1
+    name: AsyncLocalValueChangedArgs
+    fullName: System.Threading.AsyncLocalValueChangedArgs
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.AsyncLocalValueChangedArgs`1
+    name: AsyncLocalValueChangedArgs
+    fullName: System.Threading.AsyncLocalValueChangedArgs
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+  - name: )
+    fullName: )
+- uid: System.Action`1
+  isExternal: false
+  name: Action<>
+  name.vb: Action(Of )
+  fullName: System.Action<>
+  fullName.vb: System.Action(Of )
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    fullName: System.Action
+  - name: <
+    fullName: <
+  - {}
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    fullName: System.Action
+  - name: '(Of '
+    fullName: '(Of '
+  - {}
+  - name: )
+    fullName: )
+- uid: '{T}'
+  isExternal: false
+  name: T
+  fullName: T

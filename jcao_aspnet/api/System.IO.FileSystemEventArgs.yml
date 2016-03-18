@@ -1,0 +1,142 @@
+items:
+- uid: System.IO.FileSystemEventArgs
+  id: FileSystemEventArgs
+  parent: System.IO
+  children:
+  - System.IO.FileSystemEventArgs.#ctor(System.IO.WatcherChangeTypes,System.String,System.String)
+  - System.IO.FileSystemEventArgs.ChangeType
+  - System.IO.FileSystemEventArgs.FullPath
+  - System.IO.FileSystemEventArgs.Name
+  name: FileSystemEventArgs
+  fullName: System.IO.FileSystemEventArgs
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.IO.FileSystem.Watcher/src/System/IO/FileSystemEventArgs.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.IO.FileSystem.Watcher/src/System/IO/FileSystemEventArgs.cs
+    startLine: 9
+  assemblies:
+  - System.IO.FileSystem.Watcher
+  namespace: System.IO
+  summary: 'Provides data for the directory events: <xref href="System.IO.FileSystemWatcher.Changed" data-throw-if-not-resolved="false"></xref>, <xref href="System.IO.FileSystemWatcher.Created" data-throw-if-not-resolved="false"></xref>, <xref href="System.IO.FileSystemWatcher.Deleted" data-throw-if-not-resolved="false"></xref>.'
+  syntax:
+    content: 'public class FileSystemEventArgs : EventArgs'
+    content.vb: Public Class FileSystemEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+- uid: System.IO.FileSystemEventArgs.#ctor(System.IO.WatcherChangeTypes,System.String,System.String)
+  id: '#ctor(System.IO.WatcherChangeTypes,System.String,System.String)'
+  parent: System.IO.FileSystemEventArgs
+  name: FileSystemEventArgs(WatcherChangeTypes, String, String)
+  fullName: System.IO.FileSystemEventArgs.FileSystemEventArgs(System.IO.WatcherChangeTypes, System.String, System.String)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.IO.FileSystem.Watcher/src/System/IO/FileSystemEventArgs.cs
+    startLine: 18
+  assemblies:
+  - System.IO.FileSystem.Watcher
+  namespace: System.IO
+  summary: Initializes a new instance of the <xref href="System.IO.FileSystemEventArgs" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: public FileSystemEventArgs(WatcherChangeTypes changeType, string directory, string name)
+    content.vb: Public Sub New(changeType As WatcherChangeTypes, directory As String, name As String)
+    parameters:
+    - id: changeType
+      type: System.IO.WatcherChangeTypes
+      description: One of the <xref href="System.IO.WatcherChangeTypes" data-throw-if-not-resolved="false"></xref> values, which represents the kind of change detected in the file system.
+    - id: directory
+      type: System.String
+      description: The root directory of the affected file or directory.
+    - id: name
+      type: System.String
+      description: The name of the affected file or directory.
+- uid: System.IO.FileSystemEventArgs.ChangeType
+  id: ChangeType
+  parent: System.IO.FileSystemEventArgs
+  name: ChangeType
+  fullName: System.IO.FileSystemEventArgs.ChangeType
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.IO.FileSystem.Watcher/src/System/IO/FileSystemEventArgs.cs
+    startLine: 50
+  assemblies:
+  - System.IO.FileSystem.Watcher
+  namespace: System.IO
+  summary: Gets the type of directory event that occurred.
+  syntax:
+    content: public WatcherChangeTypes ChangeType { get; }
+    content.vb: Public ReadOnly Property ChangeType As WatcherChangeTypes
+    parameters: []
+    return:
+      type: System.IO.WatcherChangeTypes
+      description: One of the <xref href="System.IO.WatcherChangeTypes" data-throw-if-not-resolved="false"></xref> values that represents the kind of change detected in the file system.
+- uid: System.IO.FileSystemEventArgs.FullPath
+  id: FullPath
+  parent: System.IO.FileSystemEventArgs
+  name: FullPath
+  fullName: System.IO.FileSystemEventArgs.FullPath
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.IO.FileSystem.Watcher/src/System/IO/FileSystemEventArgs.cs
+    startLine: 61
+  assemblies:
+  - System.IO.FileSystem.Watcher
+  namespace: System.IO
+  summary: Gets the fully qualifed path of the affected file or directory.
+  syntax:
+    content: public string FullPath { get; }
+    content.vb: Public ReadOnly Property FullPath As String
+    parameters: []
+    return:
+      type: System.String
+      description: The path of the affected file or directory.
+- uid: System.IO.FileSystemEventArgs.Name
+  id: Name
+  parent: System.IO.FileSystemEventArgs
+  name: Name
+  fullName: System.IO.FileSystemEventArgs.Name
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.IO.FileSystem.Watcher/src/System/IO/FileSystemEventArgs.cs
+    startLine: 73
+  assemblies:
+  - System.IO.FileSystem.Watcher
+  namespace: System.IO
+  summary: Gets the name of the affected file or directory.
+  syntax:
+    content: public string Name { get; }
+    content.vb: Public ReadOnly Property Name As String
+    parameters: []
+    return:
+      type: System.String
+      description: The name of the affected file or directory.
+references:
+- uid: System.IO
+  isExternal: false
+  name: System.IO
+  fullName: System.IO
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.IO.WatcherChangeTypes
+  parent: System.IO
+  isExternal: false
+  name: WatcherChangeTypes
+  fullName: System.IO.WatcherChangeTypes
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String

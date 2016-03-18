@@ -1,0 +1,78 @@
+items:
+- uid: System.Runtime.InteropServices.CustomQueryInterfaceResult
+  id: CustomQueryInterfaceResult
+  parent: System.Runtime.InteropServices
+  children:
+  - System.Runtime.InteropServices.CustomQueryInterfaceResult.Failed
+  - System.Runtime.InteropServices.CustomQueryInterfaceResult.Handled
+  - System.Runtime.InteropServices.CustomQueryInterfaceResult.NotHandled
+  name: CustomQueryInterfaceResult
+  fullName: System.Runtime.InteropServices.CustomQueryInterfaceResult
+  type: Enum
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Runtime/InteropServices/ICustomQueryInterface.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Runtime/InteropServices/ICustomQueryInterface.cs
+    startLine: 20
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: Provides return values for the <xref href="System.Runtime.InteropServices.ICustomQueryInterface.GetInterface(System.Guid@,System.IntPtr@)" data-throw-if-not-resolved="false"></xref> method.
+  syntax:
+    content: public enum CustomQueryInterfaceResult
+    content.vb: Public Enum CustomQueryInterfaceResult
+- uid: System.Runtime.InteropServices.CustomQueryInterfaceResult.Failed
+  id: Failed
+  parent: System.Runtime.InteropServices.CustomQueryInterfaceResult
+  name: Failed
+  fullName: System.Runtime.InteropServices.CustomQueryInterfaceResult.Failed
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/ICustomQueryInterface.cs
+    startLine: 26
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: The interface for a specific interface ID is not available. In this case, the returned interface is null. E_NOINTERFACE is returned to the caller of IUnknown::QueryInterface.
+  syntax:
+    content: Failed = 2
+- uid: System.Runtime.InteropServices.CustomQueryInterfaceResult.Handled
+  id: Handled
+  parent: System.Runtime.InteropServices.CustomQueryInterfaceResult
+  name: Handled
+  fullName: System.Runtime.InteropServices.CustomQueryInterfaceResult.Handled
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/ICustomQueryInterface.cs
+    startLine: 24
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: The interface pointer that is returned from the <xref href="System.Runtime.InteropServices.ICustomQueryInterface.GetInterface(System.Guid@,System.IntPtr@)" data-throw-if-not-resolved="false"></xref> method can be used as the result of IUnknown::QueryInterface.
+  syntax:
+    content: Handled = 0
+- uid: System.Runtime.InteropServices.CustomQueryInterfaceResult.NotHandled
+  id: NotHandled
+  parent: System.Runtime.InteropServices.CustomQueryInterfaceResult
+  name: NotHandled
+  fullName: System.Runtime.InteropServices.CustomQueryInterfaceResult.NotHandled
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/ICustomQueryInterface.cs
+    startLine: 25
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: The custom QueryInterface was not used. Instead, the default implementation of IUnknown::QueryInterface should be used.
+  syntax:
+    content: NotHandled = 1
+references:
+- uid: System.Runtime.InteropServices
+  isExternal: false
+  name: System.Runtime.InteropServices
+  fullName: System.Runtime.InteropServices

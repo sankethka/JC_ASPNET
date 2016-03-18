@@ -1,0 +1,248 @@
+items:
+- uid: System.Xml.XmlBinaryReaderSession
+  id: XmlBinaryReaderSession
+  parent: System.Xml
+  children:
+  - System.Xml.XmlBinaryReaderSession.#ctor
+  - System.Xml.XmlBinaryReaderSession.Add(System.Int32,System.String)
+  - System.Xml.XmlBinaryReaderSession.Clear
+  - System.Xml.XmlBinaryReaderSession.TryLookup(System.Int32,System.Xml.XmlDictionaryString@)
+  - System.Xml.XmlBinaryReaderSession.TryLookup(System.String,System.Xml.XmlDictionaryString@)
+  - System.Xml.XmlBinaryReaderSession.TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString@)
+  name: XmlBinaryReaderSession
+  fullName: System.Xml.XmlBinaryReaderSession
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Private.DataContractSerialization/src/System/Xml/XmlBinaryReaderSession.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Private.DataContractSerialization/src/System/Xml/XmlBinaryReaderSession.cs
+    startLine: 11
+  assemblies:
+  - System.Runtime.Serialization.Xml
+  namespace: System.Xml
+  summary: Enables optimized strings to be managed in a dynamic way.
+  syntax:
+    content: 'public class XmlBinaryReaderSession : object, IXmlDictionary'
+    content.vb: Public Class XmlBinaryReaderSession Inherits Object Implements IXmlDictionary
+  inheritance:
+  - System.Object
+  implements:
+  - System.Xml.IXmlDictionary
+- uid: System.Xml.XmlBinaryReaderSession.#ctor
+  id: '#ctor'
+  parent: System.Xml.XmlBinaryReaderSession
+  name: XmlBinaryReaderSession()
+  fullName: System.Xml.XmlBinaryReaderSession.XmlBinaryReaderSession()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.Private.DataContractSerialization/src/System/Xml/XmlBinaryReaderSession.cs
+    startLine: 18
+  assemblies:
+  - System.Runtime.Serialization.Xml
+  namespace: System.Xml
+  summary: Initializes a new instance of the <xref href="System.Xml.XmlBinaryReaderSession" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: public XmlBinaryReaderSession()
+    content.vb: Public Sub New
+- uid: System.Xml.XmlBinaryReaderSession.Add(System.Int32,System.String)
+  id: Add(System.Int32,System.String)
+  parent: System.Xml.XmlBinaryReaderSession
+  name: Add(Int32, String)
+  fullName: System.Xml.XmlBinaryReaderSession.Add(System.Int32, System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Private.DataContractSerialization/src/System/Xml/XmlBinaryReaderSession.cs
+    startLine: 22
+  assemblies:
+  - System.Runtime.Serialization.Xml
+  namespace: System.Xml
+  summary: Creates an <xref href="System.Xml.XmlDictionaryString" data-throw-if-not-resolved="false"></xref> from the input parameters and adds it to an internal collection.
+  syntax:
+    content: public XmlDictionaryString Add(int id, string value)
+    content.vb: Public Function Add(id As Integer, value As String) As XmlDictionaryString
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The key value.
+    - id: value
+      type: System.String
+      description: The value.
+    return:
+      type: System.Xml.XmlDictionaryString
+      description: The newly created <xref href="System.Xml.XmlDictionaryString" data-throw-if-not-resolved="false"></xref> that is added to an internal collection.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*id* is less than zero.'
+  - type: System.ArgumentNullException
+    description: '*value* is null.'
+  - type: System.InvalidOperationException
+    description: An entry with key = *id* already exists.
+- uid: System.Xml.XmlBinaryReaderSession.Clear
+  id: Clear
+  parent: System.Xml.XmlBinaryReaderSession
+  name: Clear()
+  fullName: System.Xml.XmlBinaryReaderSession.Clear()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Private.DataContractSerialization/src/System/Xml/XmlBinaryReaderSession.cs
+    startLine: 120
+  assemblies:
+  - System.Runtime.Serialization.Xml
+  namespace: System.Xml
+  summary: Clears the internal collection of all contents.
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear
+- uid: System.Xml.XmlBinaryReaderSession.TryLookup(System.Int32,System.Xml.XmlDictionaryString@)
+  id: TryLookup(System.Int32,System.Xml.XmlDictionaryString@)
+  parent: System.Xml.XmlBinaryReaderSession
+  name: TryLookup(Int32, out XmlDictionaryString)
+  name.vb: TryLookup(Int32, ByRef XmlDictionaryString)
+  fullName: System.Xml.XmlBinaryReaderSession.TryLookup(System.Int32, out System.Xml.XmlDictionaryString)
+  fullName.vb: System.Xml.XmlBinaryReaderSession.TryLookup(System.Int32, ByRef System.Xml.XmlDictionaryString)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Private.DataContractSerialization/src/System/Xml/XmlBinaryReaderSession.cs
+    startLine: 57
+  assemblies:
+  - System.Runtime.Serialization.Xml
+  namespace: System.Xml
+  summary: Checks whether the internal collection contains an entry matching a key.
+  syntax:
+    content: public bool TryLookup(int key, out XmlDictionaryString result)
+    content.vb: Public Function TryLookup(key As Integer, ByRef result As XmlDictionaryString) As Boolean
+    parameters:
+    - id: key
+      type: System.Int32
+      description: The key to search on.
+    - id: result
+      type: System.Xml.XmlDictionaryString
+      description: When this method returns, contains a string if an entry is found; otherwise, null. This parameter is passed uninitialized.
+    return:
+      type: System.Boolean
+      description: true if an entry matching the *key* was found; otherwise, false.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*key* is null.'
+- uid: System.Xml.XmlBinaryReaderSession.TryLookup(System.String,System.Xml.XmlDictionaryString@)
+  id: TryLookup(System.String,System.Xml.XmlDictionaryString@)
+  parent: System.Xml.XmlBinaryReaderSession
+  name: TryLookup(String, out XmlDictionaryString)
+  name.vb: TryLookup(String, ByRef XmlDictionaryString)
+  fullName: System.Xml.XmlBinaryReaderSession.TryLookup(System.String, out System.Xml.XmlDictionaryString)
+  fullName.vb: System.Xml.XmlBinaryReaderSession.TryLookup(System.String, ByRef System.Xml.XmlDictionaryString)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Private.DataContractSerialization/src/System/Xml/XmlBinaryReaderSession.cs
+    startLine: 73
+  assemblies:
+  - System.Runtime.Serialization.Xml
+  namespace: System.Xml
+  summary: Checks whether the internal collection contains an entry matching a value.
+  syntax:
+    content: public bool TryLookup(string value, out XmlDictionaryString result)
+    content.vb: Public Function TryLookup(value As String, ByRef result As XmlDictionaryString) As Boolean
+    parameters:
+    - id: value
+      type: System.String
+      description: The value to search for.
+    - id: result
+      type: System.Xml.XmlDictionaryString
+      description: When this method returns, contains a string if an entry is found; otherwise, null. This parameter is passed uninitialized.
+    return:
+      type: System.Boolean
+      description: true if an entry matching the *value* was found; otherwise, false.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*value* is null.'
+- uid: System.Xml.XmlBinaryReaderSession.TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString@)
+  id: TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString@)
+  parent: System.Xml.XmlBinaryReaderSession
+  name: TryLookup(XmlDictionaryString, out XmlDictionaryString)
+  name.vb: TryLookup(XmlDictionaryString, ByRef XmlDictionaryString)
+  fullName: System.Xml.XmlBinaryReaderSession.TryLookup(System.Xml.XmlDictionaryString, out System.Xml.XmlDictionaryString)
+  fullName.vb: System.Xml.XmlBinaryReaderSession.TryLookup(System.Xml.XmlDictionaryString, ByRef System.Xml.XmlDictionaryString)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Private.DataContractSerialization/src/System/Xml/XmlBinaryReaderSession.cs
+    startLine: 107
+  assemblies:
+  - System.Runtime.Serialization.Xml
+  namespace: System.Xml
+  summary: Checks whether the internal collection contains an entry matching a value.
+  syntax:
+    content: public bool TryLookup(XmlDictionaryString value, out XmlDictionaryString result)
+    content.vb: Public Function TryLookup(value As XmlDictionaryString, ByRef result As XmlDictionaryString) As Boolean
+    parameters:
+    - id: value
+      type: System.Xml.XmlDictionaryString
+      description: The value to search for.
+    - id: result
+      type: System.Xml.XmlDictionaryString
+      description: When this method returns, contains a string if an entry is found; otherwise, null. This parameter is passed uninitialized.
+    return:
+      type: System.Boolean
+      description: true if an entry matching the *value* was found; otherwise, false.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*value* is null.'
+references:
+- uid: System.Xml
+  isExternal: false
+  name: System.Xml
+  fullName: System.Xml
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.Xml.IXmlDictionary
+  parent: System.Xml
+  isExternal: false
+  name: IXmlDictionary
+  fullName: System.Xml.IXmlDictionary
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Xml.XmlDictionaryString
+  parent: System.Xml
+  isExternal: false
+  name: XmlDictionaryString
+  fullName: System.Xml.XmlDictionaryString
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.ArgumentOutOfRangeException
+  isExternal: false
+  name: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.InvalidOperationException
+  parent: System
+  isExternal: false
+  name: InvalidOperationException
+  fullName: System.InvalidOperationException

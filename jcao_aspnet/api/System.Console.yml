@@ -1,0 +1,2108 @@
+items:
+- uid: System.Console
+  id: Console
+  parent: System
+  children:
+  - System.Console.BackgroundColor
+  - System.Console.Beep
+  - System.Console.BufferHeight
+  - System.Console.BufferWidth
+  - System.Console.CancelKeyPress
+  - System.Console.Clear
+  - System.Console.CursorLeft
+  - System.Console.CursorTop
+  - System.Console.CursorVisible
+  - System.Console.Error
+  - System.Console.ForegroundColor
+  - System.Console.In
+  - System.Console.IsErrorRedirected
+  - System.Console.IsInputRedirected
+  - System.Console.IsOutputRedirected
+  - System.Console.KeyAvailable
+  - System.Console.LargestWindowHeight
+  - System.Console.LargestWindowWidth
+  - System.Console.OpenStandardError
+  - System.Console.OpenStandardInput
+  - System.Console.OpenStandardOutput
+  - System.Console.Out
+  - System.Console.Read
+  - System.Console.ReadKey
+  - System.Console.ReadKey(System.Boolean)
+  - System.Console.ReadLine
+  - System.Console.ResetColor
+  - System.Console.SetBufferSize(System.Int32,System.Int32)
+  - System.Console.SetCursorPosition(System.Int32,System.Int32)
+  - System.Console.SetError(System.IO.TextWriter)
+  - System.Console.SetIn(System.IO.TextReader)
+  - System.Console.SetOut(System.IO.TextWriter)
+  - System.Console.Title
+  - System.Console.WindowHeight
+  - System.Console.WindowLeft
+  - System.Console.WindowTop
+  - System.Console.WindowWidth
+  - System.Console.Write(System.Boolean)
+  - System.Console.Write(System.Char)
+  - System.Console.Write(System.Char[])
+  - System.Console.Write(System.Char[],System.Int32,System.Int32)
+  - System.Console.Write(System.Decimal)
+  - System.Console.Write(System.Double)
+  - System.Console.Write(System.Int32)
+  - System.Console.Write(System.Int64)
+  - System.Console.Write(System.Object)
+  - System.Console.Write(System.Single)
+  - System.Console.Write(System.String)
+  - System.Console.Write(System.String,System.Object)
+  - System.Console.Write(System.String,System.Object,System.Object)
+  - System.Console.Write(System.String,System.Object,System.Object,System.Object)
+  - System.Console.Write(System.String,System.Object[])
+  - System.Console.Write(System.UInt32)
+  - System.Console.Write(System.UInt64)
+  - System.Console.WriteLine
+  - System.Console.WriteLine(System.Boolean)
+  - System.Console.WriteLine(System.Char)
+  - System.Console.WriteLine(System.Char[])
+  - System.Console.WriteLine(System.Char[],System.Int32,System.Int32)
+  - System.Console.WriteLine(System.Decimal)
+  - System.Console.WriteLine(System.Double)
+  - System.Console.WriteLine(System.Int32)
+  - System.Console.WriteLine(System.Int64)
+  - System.Console.WriteLine(System.Object)
+  - System.Console.WriteLine(System.Single)
+  - System.Console.WriteLine(System.String)
+  - System.Console.WriteLine(System.String,System.Object)
+  - System.Console.WriteLine(System.String,System.Object,System.Object)
+  - System.Console.WriteLine(System.String,System.Object,System.Object,System.Object)
+  - System.Console.WriteLine(System.String,System.Object[])
+  - System.Console.WriteLine(System.UInt32)
+  - System.Console.WriteLine(System.UInt64)
+  name: Console
+  fullName: System.Console
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Console/src/System/Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Console/src/System/Console.cs
+    startLine: 12
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Represents the standard input, output, and error streams for console applications. This class cannot be inherited.To browse the .NET Framework source code for this type, see the Reference Source.
+  syntax:
+    content: 'public class Console : object'
+    content.vb: Public Class Console Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Console.BackgroundColor
+  id: BackgroundColor
+  parent: System.Console
+  name: BackgroundColor
+  fullName: System.Console.BackgroundColor
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 125
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the background color of the console.
+  syntax:
+    content: public static ConsoleColor BackgroundColor { get; set; }
+    content.vb: Public Shared Property BackgroundColor As ConsoleColor
+    parameters: []
+    return:
+      type: System.ConsoleColor
+      description: A value that specifies the background color of the console; that is, the color that appears behind each character. The default is black.
+  exceptions:
+  - type: System.ArgumentException
+    description: The color specified in a set operation is not a valid member of <xref href="System.ConsoleColor" data-throw-if-not-resolved="false"></xref>.
+  - type: System.Security.SecurityException
+    description: The user does not have permission to perform this action.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Beep
+  id: Beep
+  parent: System.Console
+  name: Beep()
+  fullName: System.Console.Beep()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 252
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Plays the sound of a beep through the console speaker.
+  syntax:
+    content: public static void Beep()
+    content.vb: Public Shared Sub Beep
+  exceptions:
+  - type: System.Security.HostProtectionException
+    description: This method was executed on a server, such as SQL Server, that does not permit access to a user interface.
+- uid: System.Console.BufferHeight
+  id: BufferHeight
+  parent: System.Console
+  name: BufferHeight
+  fullName: System.Console.BufferHeight
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 148
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the height of the buffer area.
+  syntax:
+    content: public static int BufferHeight { get; set; }
+    content.vb: Public Shared Property BufferHeight As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The current height, in rows, of the buffer area.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: The value in a set operation is less than or equal to zero.-or- The value in a set operation is greater than or equal to <xref href="System.Int16.MaxValue" data-throw-if-not-resolved="false"></xref>.-or- The value in a set operation is less than <xref href="System.Console.WindowTop" data-throw-if-not-resolved="false"></xref> + <xref href="System.Console.WindowHeight" data-throw-if-not-resolved="false"></xref>.
+  - type: System.Security.SecurityException
+    description: The user does not have permission to perform this action.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.BufferWidth
+  id: BufferWidth
+  parent: System.Console
+  name: BufferWidth
+  fullName: System.Console.BufferWidth
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 142
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the width of the buffer area.
+  syntax:
+    content: public static int BufferWidth { get; set; }
+    content.vb: Public Shared Property BufferWidth As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The current width, in columns, of the buffer area.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: The value in a set operation is less than or equal to zero.-or- The value in a set operation is greater than or equal to <xref href="System.Int16.MaxValue" data-throw-if-not-resolved="false"></xref>.-or- The value in a set operation is less than <xref href="System.Console.WindowLeft" data-throw-if-not-resolved="false"></xref> + <xref href="System.Console.WindowWidth" data-throw-if-not-resolved="false"></xref>.
+  - type: System.Security.SecurityException
+    description: The user does not have permission to perform this action.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.CancelKeyPress
+  id: CancelKeyPress
+  parent: System.Console
+  name: CancelKeyPress
+  fullName: System.Console.CancelKeyPress
+  type: Event
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 273
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Occurs when the <xref href="System.ConsoleModifiers.Control" data-throw-if-not-resolved="false"></xref> modifier key (Ctrl) and either the <xref href="System.ConsoleKey.C" data-throw-if-not-resolved="false"></xref> console key (C) or the Break key are pressed simultaneously (Ctrl+C or Ctrl+Break).
+  syntax:
+    content: public static event ConsoleCancelEventHandler CancelKeyPress
+    content.vb: Public Shared Event CancelKeyPress As ConsoleCancelEventHandler
+- uid: System.Console.Clear
+  id: Clear
+  parent: System.Console
+  name: Clear()
+  fullName: System.Console.Clear()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 257
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Clears the console buffer and corresponding console window of display information.
+  syntax:
+    content: public static void Clear()
+    content.vb: Public Shared Sub Clear
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.CursorLeft
+  id: CursorLeft
+  parent: System.Console
+  name: CursorLeft
+  fullName: System.Console.CursorLeft
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 219
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the column position of the cursor within the buffer area.
+  syntax:
+    content: public static int CursorLeft { get; set; }
+    content.vb: Public Shared Property CursorLeft As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The current position, in columns, of the cursor.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: The value in a set operation is less than zero.-or- The value in a set operation is greater than or equal to <xref href="System.Console.BufferWidth" data-throw-if-not-resolved="false"></xref>.
+  - type: System.Security.SecurityException
+    description: The user does not have permission to perform this action.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.CursorTop
+  id: CursorTop
+  parent: System.Console
+  name: CursorTop
+  fullName: System.Console.CursorTop
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 225
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the row position of the cursor within the buffer area.
+  syntax:
+    content: public static int CursorTop { get; set; }
+    content.vb: Public Shared Property CursorTop As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The current position, in rows, of the cursor.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: The value in a set operation is less than zero.-or- The value in a set operation is greater than or equal to <xref href="System.Console.BufferHeight" data-throw-if-not-resolved="false"></xref>.
+  - type: System.Security.SecurityException
+    description: The user does not have permission to perform this action.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.CursorVisible
+  id: CursorVisible
+  parent: System.Console
+  name: CursorVisible
+  fullName: System.Console.CursorVisible
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 213
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets a value indicating whether the cursor is visible.
+  syntax:
+    content: public static bool CursorVisible { get; set; }
+    content.vb: Public Shared Property CursorVisible As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the cursor is visible; otherwise, false.
+  exceptions:
+  - type: System.Security.SecurityException
+    description: The user does not have permission to perform this action.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Error
+  id: Error
+  parent: System.Console
+  name: Error
+  fullName: System.Console.Error
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 75
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets the standard error output stream.
+  syntax:
+    content: public static IO.TextWriter Error { get; }
+    content.vb: Public Shared ReadOnly Property Error As IO.TextWriter
+    parameters: []
+    return:
+      type: System.IO.TextWriter
+      description: A <xref href="System.IO.TextWriter" data-throw-if-not-resolved="false"></xref> that represents the standard error output stream.
+- uid: System.Console.ForegroundColor
+  id: ForegroundColor
+  parent: System.Console
+  name: ForegroundColor
+  fullName: System.Console.ForegroundColor
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 131
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the foreground color of the console.
+  syntax:
+    content: public static ConsoleColor ForegroundColor { get; set; }
+    content.vb: Public Shared Property ForegroundColor As ConsoleColor
+    parameters: []
+    return:
+      type: System.ConsoleColor
+      description: A <xref href="System.ConsoleColor" data-throw-if-not-resolved="false"></xref> that specifies the foreground color of the console; that is, the color of each character that is displayed. The default is gray.
+  exceptions:
+  - type: System.ArgumentException
+    description: The color specified in a set operation is not a valid member of <xref href="System.ConsoleColor" data-throw-if-not-resolved="false"></xref>.
+  - type: System.Security.SecurityException
+    description: The user does not have permission to perform this action.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.IsErrorRedirected
+  id: IsErrorRedirected
+  parent: System.Console
+  name: IsErrorRedirected
+  fullName: System.Console.IsErrorRedirected
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 115
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets a value that indicates whether the error output stream has been redirected from the standard error stream.
+  syntax:
+    content: public static bool IsErrorRedirected { get; }
+    content.vb: Public Shared ReadOnly Property IsErrorRedirected As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if error output is redirected; otherwise, false.
+- uid: System.Console.IsInputRedirected
+  id: IsInputRedirected
+  parent: System.Console
+  name: IsInputRedirected
+  fullName: System.Console.IsInputRedirected
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 95
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets a value that indicates whether input has been redirected from the standard input stream.
+  syntax:
+    content: public static bool IsInputRedirected { get; }
+    content.vb: Public Shared ReadOnly Property IsInputRedirected As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if input is redirected; otherwise, false.
+- uid: System.Console.IsOutputRedirected
+  id: IsOutputRedirected
+  parent: System.Console
+  name: IsOutputRedirected
+  fullName: System.Console.IsOutputRedirected
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 105
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets a value that indicates whether output has been redirected from the standard output stream.
+  syntax:
+    content: public static bool IsOutputRedirected { get; }
+    content.vb: Public Shared ReadOnly Property IsOutputRedirected As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if output is redirected; otherwise, false.
+- uid: System.Console.In
+  id: In
+  parent: System.Console
+  name: In
+  fullName: System.Console.In
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 36
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets the standard input stream.
+  syntax:
+    content: public static IO.TextReader In { get; }
+    content.vb: Public Shared ReadOnly Property In As IO.TextReader
+    parameters: []
+    return:
+      type: System.IO.TextReader
+      description: A <xref href="System.IO.TextReader" data-throw-if-not-resolved="false"></xref> that represents the standard input stream.
+- uid: System.Console.KeyAvailable
+  id: KeyAvailable
+  parent: System.Console
+  name: KeyAvailable
+  fullName: System.Console.KeyAvailable
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 47
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets a value indicating whether a key press is available in the input stream.
+  syntax:
+    content: public static bool KeyAvailable { get; }
+    content.vb: Public Shared ReadOnly Property KeyAvailable As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if a key press is available; otherwise, false.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+  - type: System.InvalidOperationException
+    description: Standard input is redirected to a file instead of the keyboard.
+- uid: System.Console.LargestWindowWidth
+  id: LargestWindowWidth
+  parent: System.Console
+  name: LargestWindowWidth
+  fullName: System.Console.LargestWindowWidth
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 203
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets the largest possible number of console window columns, based on the current font and screen resolution.
+  syntax:
+    content: public static int LargestWindowWidth { get; }
+    content.vb: Public Shared ReadOnly Property LargestWindowWidth As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The width of the largest possible console window measured in columns.
+- uid: System.Console.LargestWindowHeight
+  id: LargestWindowHeight
+  parent: System.Console
+  name: LargestWindowHeight
+  fullName: System.Console.LargestWindowHeight
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 208
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets the largest possible number of console window rows, based on the current font and screen resolution.
+  syntax:
+    content: public static int LargestWindowHeight { get; }
+    content.vb: Public Shared ReadOnly Property LargestWindowHeight As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The height of the largest possible console window measured in rows.
+- uid: System.Console.OpenStandardError
+  id: OpenStandardError
+  parent: System.Console
+  name: OpenStandardError()
+  fullName: System.Console.OpenStandardError()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 313
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Acquires the standard error stream.
+  syntax:
+    content: public static IO.Stream OpenStandardError()
+    content.vb: Public Shared Function OpenStandardError As IO.Stream
+    return:
+      type: System.IO.Stream
+      description: The standard error stream.
+- uid: System.Console.OpenStandardInput
+  id: OpenStandardInput
+  parent: System.Console
+  name: OpenStandardInput()
+  fullName: System.Console.OpenStandardInput()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 303
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Acquires the standard input stream.
+  syntax:
+    content: public static IO.Stream OpenStandardInput()
+    content.vb: Public Shared Function OpenStandardInput As IO.Stream
+    return:
+      type: System.IO.Stream
+      description: The standard input stream.
+- uid: System.Console.OpenStandardOutput
+  id: OpenStandardOutput
+  parent: System.Console
+  name: OpenStandardOutput()
+  fullName: System.Console.OpenStandardOutput()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 308
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Acquires the standard output stream.
+  syntax:
+    content: public static IO.Stream OpenStandardOutput()
+    content.vb: Public Shared Function OpenStandardOutput As IO.Stream
+    return:
+      type: System.IO.Stream
+      description: The standard output stream.
+- uid: System.Console.Out
+  id: Out
+  parent: System.Console
+  name: Out
+  fullName: System.Console.Out
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 70
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets the standard output stream.
+  syntax:
+    content: public static IO.TextWriter Out { get; }
+    content.vb: Public Shared ReadOnly Property Out As IO.TextWriter
+    parameters: []
+    return:
+      type: System.IO.TextWriter
+      description: A <xref href="System.IO.TextWriter" data-throw-if-not-resolved="false"></xref> that represents the standard output stream.
+- uid: System.Console.Read
+  id: Read
+  parent: System.Console
+  name: Read()
+  fullName: System.Console.Read()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 352
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Reads the next character from the standard input stream.
+  syntax:
+    content: public static int Read()
+    content.vb: Public Shared Function Read As Integer
+    return:
+      type: System.Int32
+      description: The next character from the input stream, or negative one (-1) if there are currently no more characters to be read.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.ReadKey
+  id: ReadKey
+  parent: System.Console
+  name: ReadKey()
+  fullName: System.Console.ReadKey()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 60
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Obtains the next character or function key pressed by the user. The pressed key is displayed in the console window.
+  syntax:
+    content: public static ConsoleKeyInfo ReadKey()
+    content.vb: Public Shared Function ReadKey As ConsoleKeyInfo
+    return:
+      type: System.ConsoleKeyInfo
+      description: A <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> object that describes the <xref href="System.ConsoleKey" data-throw-if-not-resolved="false"></xref> constant and Unicode character, if any, that correspond to the pressed console key. The <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> object also describes, in a bitwise combination of <xref href="System.ConsoleModifiers" data-throw-if-not-resolved="false"></xref> values, whether one or more Shift, Alt, or Ctrl modifier keys was pressed simultaneously with the console key.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The <xref href="System.Console.In" data-throw-if-not-resolved="false"></xref> property is redirected from some stream other than the console.
+- uid: System.Console.ReadKey(System.Boolean)
+  id: ReadKey(System.Boolean)
+  parent: System.Console
+  name: ReadKey(Boolean)
+  fullName: System.Console.ReadKey(System.Boolean)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 65
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Obtains the next character or function key pressed by the user. The pressed key is optionally displayed in the console window.
+  syntax:
+    content: public static ConsoleKeyInfo ReadKey(bool intercept)
+    content.vb: Public Shared Function ReadKey(intercept As Boolean) As ConsoleKeyInfo
+    parameters:
+    - id: intercept
+      type: System.Boolean
+      description: Determines whether to display the pressed key in the console window. true to not display the pressed key; otherwise, false.
+    return:
+      type: System.ConsoleKeyInfo
+      description: A <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> object that describes the <xref href="System.ConsoleKey" data-throw-if-not-resolved="false"></xref> constant and Unicode character, if any, that correspond to the pressed console key. The <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> object also describes, in a bitwise combination of <xref href="System.ConsoleModifiers" data-throw-if-not-resolved="false"></xref> values, whether one or more Shift, Alt, or Ctrl modifier keys was pressed simultaneously with the console key.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The <xref href="System.Console.In" data-throw-if-not-resolved="false"></xref> property is redirected from some stream other than the console.
+- uid: System.Console.ReadLine
+  id: ReadLine
+  parent: System.Console
+  name: ReadLine()
+  fullName: System.Console.ReadLine()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 358
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Reads the next line of characters from the standard input stream.
+  syntax:
+    content: public static string ReadLine()
+    content.vb: Public Shared Function ReadLine As String
+    return:
+      type: System.String
+      description: The next line of characters from the input stream, or null if no more lines are available.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+  - type: System.OutOfMemoryException
+    description: There is insufficient memory to allocate a buffer for the returned string.
+  - type: System.ArgumentOutOfRangeException
+    description: The number of characters in the next line of characters is greater than <xref href="System.Int32.MaxValue" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Console.ResetColor
+  id: ResetColor
+  parent: System.Console
+  name: ResetColor()
+  fullName: System.Console.ResetColor()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 137
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Sets the foreground and background console colors to their defaults.
+  syntax:
+    content: public static void ResetColor()
+    content.vb: Public Shared Sub ResetColor
+  exceptions:
+  - type: System.Security.SecurityException
+    description: The user does not have permission to perform this action.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.SetBufferSize(System.Int32,System.Int32)
+  id: SetBufferSize(System.Int32,System.Int32)
+  parent: System.Console
+  name: SetBufferSize(Int32, Int32)
+  fullName: System.Console.SetBufferSize(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 154
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Sets the height and width of the screen buffer area to the specified values.
+  syntax:
+    content: public static void SetBufferSize(int width, int height)
+    content.vb: Public Shared Sub SetBufferSize(width As Integer, height As Integer)
+    parameters:
+    - id: width
+      type: System.Int32
+      description: The width of the buffer area measured in columns.
+    - id: height
+      type: System.Int32
+      description: The height of the buffer area measured in rows.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*height* or *width* is less than or equal to zero.-or- *height* or *width* is greater than or equal to <xref href="System.Int16.MaxValue" data-throw-if-not-resolved="false"></xref>.-or- *width* is less than <xref href="System.Console.WindowLeft" data-throw-if-not-resolved="false"></xref> + <xref href="System.Console.WindowWidth" data-throw-if-not-resolved="false"></xref>.-or- *height* is less than <xref href="System.Console.WindowTop" data-throw-if-not-resolved="false"></xref> + <xref href="System.Console.WindowHeight" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.Security.SecurityException
+    description: The user does not have permission to perform this action.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.SetCursorPosition(System.Int32,System.Int32)
+  id: SetCursorPosition(System.Int32,System.Int32)
+  parent: System.Console
+  name: SetCursorPosition(Int32, Int32)
+  fullName: System.Console.SetCursorPosition(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 262
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Sets the position of the cursor.
+  syntax:
+    content: public static void SetCursorPosition(int left, int top)
+    content.vb: Public Shared Sub SetCursorPosition(left As Integer, top As Integer)
+    parameters:
+    - id: left
+      type: System.Int32
+      description: The column position of the cursor. Columns are numbered from left to right starting at 0.
+    - id: top
+      type: System.Int32
+      description: The row position of the cursor. Rows are numbered from top to bottom starting at 0.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*left* or *top* is less than zero.-or- *left* is greater than or equal to <xref href="System.Console.BufferWidth" data-throw-if-not-resolved="false"></xref>.-or- *top* is greater than or equal to <xref href="System.Console.BufferHeight" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.Security.SecurityException
+    description: The user does not have permission to perform this action.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.SetError(System.IO.TextWriter)
+  id: SetError(System.IO.TextWriter)
+  parent: System.Console
+  name: SetError(IO.TextWriter)
+  fullName: System.Console.SetError(System.IO.TextWriter)
+  type: Method
+  source:
+    remote: &o1
+      path: src/System.Console/ref/System.Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 38
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Sets the <xref href="System.Console.Error" data-throw-if-not-resolved="false"></xref> property to the specified <xref href="System.IO.TextWriter" data-throw-if-not-resolved="false"></xref> object.
+  syntax:
+    content: public static void SetError(IO.TextWriter newError)
+    content.vb: Public Shared Sub SetError(newError As IO.TextWriter)
+    parameters:
+    - id: newError
+      type: System.IO.TextWriter
+      description: A stream that is the new standard error output.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*newError* is null.'
+  - type: System.Security.SecurityException
+    description: The caller does not have the required permission.
+- uid: System.Console.SetIn(System.IO.TextReader)
+  id: SetIn(System.IO.TextReader)
+  parent: System.Console
+  name: SetIn(IO.TextReader)
+  fullName: System.Console.SetIn(System.IO.TextReader)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 39
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Sets the <xref href="System.Console.In" data-throw-if-not-resolved="false"></xref> property to the specified <xref href="System.IO.TextReader" data-throw-if-not-resolved="false"></xref> object.
+  syntax:
+    content: public static void SetIn(IO.TextReader newIn)
+    content.vb: Public Shared Sub SetIn(newIn As IO.TextReader)
+    parameters:
+    - id: newIn
+      type: System.IO.TextReader
+      description: A stream that is the new standard input.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*newIn* is null.'
+  - type: System.Security.SecurityException
+    description: The caller does not have the required permission.
+- uid: System.Console.SetOut(System.IO.TextWriter)
+  id: SetOut(System.IO.TextWriter)
+  parent: System.Console
+  name: SetOut(IO.TextWriter)
+  fullName: System.Console.SetOut(System.IO.TextWriter)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 40
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Sets the <xref href="System.Console.Out" data-throw-if-not-resolved="false"></xref> property to the specified <xref href="System.IO.TextWriter" data-throw-if-not-resolved="false"></xref> object.
+  syntax:
+    content: public static void SetOut(IO.TextWriter newOut)
+    content.vb: Public Shared Sub SetOut(newOut As IO.TextWriter)
+    parameters:
+    - id: newOut
+      type: System.IO.TextWriter
+      description: A stream that is the new standard output.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*newOut* is null.'
+  - type: System.Security.SecurityException
+    description: The caller does not have the required permission.
+- uid: System.Console.Title
+  id: Title
+  parent: System.Console
+  name: Title
+  fullName: System.Console.Title
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 233
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the title to display in the console title bar.
+  syntax:
+    content: public static string Title { get; set; }
+    content.vb: Public Shared Property Title As String
+    parameters: []
+    return:
+      type: System.String
+      description: The string to be displayed in the title bar of the console. The maximum length of the title string is 24500 characters.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: In a get operation, the retrieved title is longer than 24500 characters.
+  - type: System.ArgumentOutOfRangeException
+    description: In a set operation, the specified title is longer than 24500 characters.
+  - type: System.ArgumentNullException
+    description: In a set operation, the specified title is null.
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WindowHeight
+  id: WindowHeight
+  parent: System.Console
+  name: WindowHeight
+  fullName: System.Console.WindowHeight
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 187
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the height of the console window area.
+  syntax:
+    content: public static int WindowHeight { get; set; }
+    content.vb: Public Shared Property WindowHeight As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The height of the console window measured in rows.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: The value of the <xref href="System.Console.WindowWidth" data-throw-if-not-resolved="false"></xref> property or the value of the <xref href="System.Console.WindowHeight" data-throw-if-not-resolved="false"></xref> property is less than or equal to 0.-or-The value of the <xref href="System.Console.WindowHeight" data-throw-if-not-resolved="false"></xref> property plus the value of the <xref href="System.Console.WindowTop" data-throw-if-not-resolved="false"></xref> property is greater than or equal to <xref href="System.Int16.MaxValue" data-throw-if-not-resolved="false"></xref>.-or-The value of the <xref href="System.Console.WindowWidth" data-throw-if-not-resolved="false"></xref> property or the value of the <xref href="System.Console.WindowHeight" data-throw-if-not-resolved="false"></xref> property is greater than the largest possible window width or height for the current screen resolution and console font.
+  - type: System.IO.IOException
+    description: Error reading or writing information.
+- uid: System.Console.WindowWidth
+  id: WindowWidth
+  parent: System.Console
+  name: WindowWidth
+  fullName: System.Console.WindowWidth
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 171
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the width of the console window.
+  syntax:
+    content: public static int WindowWidth { get; set; }
+    content.vb: Public Shared Property WindowWidth As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The width of the console window measured in columns.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: The value of the <xref href="System.Console.WindowWidth" data-throw-if-not-resolved="false"></xref> property or the value of the <xref href="System.Console.WindowHeight" data-throw-if-not-resolved="false"></xref> property is less than or equal to 0.-or-The value of the <xref href="System.Console.WindowHeight" data-throw-if-not-resolved="false"></xref> property plus the value of the <xref href="System.Console.WindowTop" data-throw-if-not-resolved="false"></xref> property is greater than or equal to <xref href="System.Int16.MaxValue" data-throw-if-not-resolved="false"></xref>.-or-The value of the <xref href="System.Console.WindowWidth" data-throw-if-not-resolved="false"></xref> property or the value of the <xref href="System.Console.WindowHeight" data-throw-if-not-resolved="false"></xref> property is greater than the largest possible window width or height for the current screen resolution and console font.
+  - type: System.IO.IOException
+    description: Error reading or writing information.
+- uid: System.Console.WindowLeft
+  id: WindowLeft
+  parent: System.Console
+  name: WindowLeft
+  fullName: System.Console.WindowLeft
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 159
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the leftmost position of the console window area relative to the screen buffer.
+  syntax:
+    content: public static int WindowLeft { get; set; }
+    content.vb: Public Shared Property WindowLeft As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The leftmost console window position measured in columns.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: In a set operation, the value to be assigned is less than zero.-or-As a result of the assignment, <xref href="System.Console.WindowLeft" data-throw-if-not-resolved="false"></xref> plus <xref href="System.Console.WindowWidth" data-throw-if-not-resolved="false"></xref> would exceed <xref href="System.Console.BufferWidth" data-throw-if-not-resolved="false"></xref>.
+  - type: System.IO.IOException
+    description: Error reading or writing information.
+- uid: System.Console.WindowTop
+  id: WindowTop
+  parent: System.Console
+  name: WindowTop
+  fullName: System.Console.WindowTop
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 165
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets or sets the top position of the console window area relative to the screen buffer.
+  syntax:
+    content: public static int WindowTop { get; set; }
+    content.vb: Public Shared Property WindowTop As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The uppermost console window position measured in rows.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: In a set operation, the value to be assigned is less than zero.-or-As a result of the assignment, <xref href="System.Console.WindowTop" data-throw-if-not-resolved="false"></xref> plus <xref href="System.Console.WindowHeight" data-throw-if-not-resolved="false"></xref> would exceed <xref href="System.Console.BufferHeight" data-throw-if-not-resolved="false"></xref>.
+  - type: System.IO.IOException
+    description: Error reading or writing information.
+- uid: System.Console.Write(System.Boolean)
+  id: Write(System.Boolean)
+  parent: System.Console
+  name: Write(Boolean)
+  fullName: System.Console.Write(System.Boolean)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 504
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified Boolean value to the standard output stream.
+  syntax:
+    content: public static void Write(bool value)
+    content.vb: Public Shared Sub Write(value As Boolean)
+    parameters:
+    - id: value
+      type: System.Boolean
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.Char)
+  id: Write(System.Char)
+  parent: System.Console
+  name: Write(Char)
+  fullName: System.Console.Write(System.Char)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 510
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the specified Unicode character value to the standard output stream.
+  syntax:
+    content: public static void Write(char value)
+    content.vb: Public Shared Sub Write(value As Char)
+    parameters:
+    - id: value
+      type: System.Char
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.Char[])
+  id: Write(System.Char[])
+  parent: System.Console
+  name: Write(Char[])
+  name.vb: Write(Char())
+  fullName: System.Console.Write(System.Char[])
+  fullName.vb: System.Console.Write(System.Char())
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 516
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the specified array of Unicode characters to the standard output stream.
+  syntax:
+    content: public static void Write(char[] buffer)
+    content.vb: Public Shared Sub Write(buffer As Char())
+    parameters:
+    - id: buffer
+      type: System.Char[]
+      description: A Unicode character array.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.Char[],System.Int32,System.Int32)
+  id: Write(System.Char[],System.Int32,System.Int32)
+  parent: System.Console
+  name: Write(Char[], Int32, Int32)
+  name.vb: Write(Char(), Int32, Int32)
+  fullName: System.Console.Write(System.Char[], System.Int32, System.Int32)
+  fullName.vb: System.Console.Write(System.Char(), System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 522
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the specified subarray of Unicode characters to the standard output stream.
+  syntax:
+    content: public static void Write(char[] buffer, int index, int count)
+    content.vb: Public Shared Sub Write(buffer As Char(), index As Integer, count As Integer)
+    parameters:
+    - id: buffer
+      type: System.Char[]
+      description: An array of Unicode characters.
+    - id: index
+      type: System.Int32
+      description: The starting position in *buffer*.
+    - id: count
+      type: System.Int32
+      description: The number of characters to write.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*buffer* is null.'
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* or *count* is less than zero.'
+  - type: System.ArgumentException
+    description: '*index* plus *count* specify a position that is not within *buffer*.'
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.Decimal)
+  id: Write(System.Decimal)
+  parent: System.Console
+  name: Write(Decimal)
+  fullName: System.Console.Write(System.Decimal)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 534
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> value to the standard output stream.
+  syntax:
+    content: public static void Write(decimal value)
+    content.vb: Public Shared Sub Write(value As Decimal)
+    parameters:
+    - id: value
+      type: System.Decimal
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.Double)
+  id: Write(System.Double)
+  parent: System.Console
+  name: Write(Double)
+  fullName: System.Console.Write(System.Double)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 528
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified double-precision floating-point value to the standard output stream.
+  syntax:
+    content: public static void Write(double value)
+    content.vb: Public Shared Sub Write(value As Double)
+    parameters:
+    - id: value
+      type: System.Double
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.Int32)
+  id: Write(System.Int32)
+  parent: System.Console
+  name: Write(Int32)
+  fullName: System.Console.Write(System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 546
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified 32-bit signed integer value to the standard output stream.
+  syntax:
+    content: public static void Write(int value)
+    content.vb: Public Shared Sub Write(value As Integer)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.Int64)
+  id: Write(System.Int64)
+  parent: System.Console
+  name: Write(Int64)
+  fullName: System.Console.Write(System.Int64)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 559
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified 64-bit signed integer value to the standard output stream.
+  syntax:
+    content: public static void Write(long value)
+    content.vb: Public Shared Sub Write(value As Long)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.Object)
+  id: Write(System.Object)
+  parent: System.Console
+  name: Write(Object)
+  fullName: System.Console.Write(System.Object)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 54
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified object to the standard output stream.
+  syntax:
+    content: public static void Write(object value)
+    content.vb: Public Shared Sub Write(value As Object)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The value to write, or null.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.Single)
+  id: Write(System.Single)
+  parent: System.Console
+  name: Write(Single)
+  fullName: System.Console.Write(System.Single)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 540
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified single-precision floating-point value to the standard output stream.
+  syntax:
+    content: public static void Write(float value)
+    content.vb: Public Shared Sub Write(value As Single)
+    parameters:
+    - id: value
+      type: System.Single
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.String)
+  id: Write(System.String)
+  parent: System.Console
+  name: Write(String)
+  fullName: System.Console.Write(System.String)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 56
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the specified string value to the standard output stream.
+  syntax:
+    content: public static void Write(string value)
+    content.vb: Public Shared Sub Write(value As String)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.String,System.Object)
+  id: Write(System.String,System.Object)
+  parent: System.Console
+  name: Write(String, Object)
+  fullName: System.Console.Write(System.String, System.Object)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 57
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified object to the standard output stream using the specified format information.
+  syntax:
+    content: public static void Write(string format, object arg0)
+    content.vb: Public Shared Sub Write(format As String, arg0 As Object)
+    parameters:
+    - id: format
+      type: System.String
+      description: A composite format string (see Remarks).
+    - id: arg0
+      type: System.Object
+      description: An object to write using *format*.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+  - type: System.ArgumentNullException
+    description: '*format* is null.'
+  - type: System.FormatException
+    description: The format specification in *format* is invalid.
+- uid: System.Console.Write(System.String,System.Object,System.Object)
+  id: Write(System.String,System.Object,System.Object)
+  parent: System.Console
+  name: Write(String, Object, Object)
+  fullName: System.Console.Write(System.String, System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 58
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified objects to the standard output stream using the specified format information.
+  syntax:
+    content: public static void Write(string format, object arg0, object arg1)
+    content.vb: Public Shared Sub Write(format As String, arg0 As Object, arg1 As Object)
+    parameters:
+    - id: format
+      type: System.String
+      description: A composite format string (see Remarks).
+    - id: arg0
+      type: System.Object
+      description: The first object to write using *format*.
+    - id: arg1
+      type: System.Object
+      description: The second object to write using *format*.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+  - type: System.ArgumentNullException
+    description: '*format* is null.'
+  - type: System.FormatException
+    description: The format specification in *format* is invalid.
+- uid: System.Console.Write(System.String,System.Object,System.Object,System.Object)
+  id: Write(System.String,System.Object,System.Object,System.Object)
+  parent: System.Console
+  name: Write(String, Object, Object, Object)
+  fullName: System.Console.Write(System.String, System.Object, System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 59
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified objects to the standard output stream using the specified format information.
+  syntax:
+    content: public static void Write(string format, object arg0, object arg1, object arg2)
+    content.vb: Public Shared Sub Write(format As String, arg0 As Object, arg1 As Object, arg2 As Object)
+    parameters:
+    - id: format
+      type: System.String
+      description: A composite format string (see Remarks).
+    - id: arg0
+      type: System.Object
+      description: The first object to write using *format*.
+    - id: arg1
+      type: System.Object
+      description: The second object to write using *format*.
+    - id: arg2
+      type: System.Object
+      description: The third object to write using *format*.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+  - type: System.ArgumentNullException
+    description: '*format* is null.'
+  - type: System.FormatException
+    description: The format specification in *format* is invalid.
+- uid: System.Console.Write(System.String,System.Object[])
+  id: Write(System.String,System.Object[])
+  parent: System.Console
+  name: Write(String, Object[])
+  name.vb: Write(String, Object())
+  fullName: System.Console.Write(System.String, System.Object[])
+  fullName.vb: System.Console.Write(System.String, System.Object())
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 60
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified array of objects to the standard output stream using the specified format information.
+  syntax:
+    content: public static void Write(string format, params object[] arg)
+    content.vb: Public Shared Sub Write(format As String, ParamArray arg As Object())
+    parameters:
+    - id: format
+      type: System.String
+      description: A composite format string (see Remarks).
+    - id: arg
+      type: System.Object[]
+      description: An array of objects to write using *format*.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+  - type: System.ArgumentNullException
+    description: '*format* or *arg* is null.'
+  - type: System.FormatException
+    description: The format specification in *format* is invalid.
+- uid: System.Console.Write(System.UInt32)
+  id: Write(System.UInt32)
+  parent: System.Console
+  name: Write(UInt32)
+  fullName: System.Console.Write(System.UInt32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 552
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified 32-bit unsigned integer value to the standard output stream.
+  syntax:
+    content: public static void Write(uint value)
+    content.vb: Public Shared Sub Write(value As UInteger)
+    parameters:
+    - id: value
+      type: System.UInt32
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.Write(System.UInt64)
+  id: Write(System.UInt64)
+  parent: System.Console
+  name: Write(UInt64)
+  fullName: System.Console.Write(System.UInt64)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 565
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified 64-bit unsigned integer value to the standard output stream.
+  syntax:
+    content: public static void Write(ulong value)
+    content.vb: Public Shared Sub Write(value As ULong)
+    parameters:
+    - id: value
+      type: System.UInt64
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine
+  id: WriteLine
+  parent: System.Console
+  name: WriteLine()
+  fullName: System.Console.WriteLine()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 364
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the current line terminator to the standard output stream.
+  syntax:
+    content: public static void WriteLine()
+    content.vb: Public Shared Sub WriteLine
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.Boolean)
+  id: WriteLine(System.Boolean)
+  parent: System.Console
+  name: WriteLine(Boolean)
+  fullName: System.Console.WriteLine(System.Boolean)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 370
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified Boolean value, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(bool value)
+    content.vb: Public Shared Sub WriteLine(value As Boolean)
+    parameters:
+    - id: value
+      type: System.Boolean
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.Char)
+  id: WriteLine(System.Char)
+  parent: System.Console
+  name: WriteLine(Char)
+  fullName: System.Console.WriteLine(System.Char)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 376
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the specified Unicode character, followed by the current line terminator, value to the standard output stream.
+  syntax:
+    content: public static void WriteLine(char value)
+    content.vb: Public Shared Sub WriteLine(value As Char)
+    parameters:
+    - id: value
+      type: System.Char
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.Char[])
+  id: WriteLine(System.Char[])
+  parent: System.Console
+  name: WriteLine(Char[])
+  name.vb: WriteLine(Char())
+  fullName: System.Console.WriteLine(System.Char[])
+  fullName.vb: System.Console.WriteLine(System.Char())
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 382
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the specified array of Unicode characters, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(char[] buffer)
+    content.vb: Public Shared Sub WriteLine(buffer As Char())
+    parameters:
+    - id: buffer
+      type: System.Char[]
+      description: A Unicode character array.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.Char[],System.Int32,System.Int32)
+  id: WriteLine(System.Char[],System.Int32,System.Int32)
+  parent: System.Console
+  name: WriteLine(Char[], Int32, Int32)
+  name.vb: WriteLine(Char(), Int32, Int32)
+  fullName: System.Console.WriteLine(System.Char[], System.Int32, System.Int32)
+  fullName.vb: System.Console.WriteLine(System.Char(), System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 388
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the specified subarray of Unicode characters, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(char[] buffer, int index, int count)
+    content.vb: Public Shared Sub WriteLine(buffer As Char(), index As Integer, count As Integer)
+    parameters:
+    - id: buffer
+      type: System.Char[]
+      description: An array of Unicode characters.
+    - id: index
+      type: System.Int32
+      description: The starting position in *buffer*.
+    - id: count
+      type: System.Int32
+      description: The number of characters to write.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*buffer* is null.'
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* or *count* is less than zero.'
+  - type: System.ArgumentException
+    description: '*index* plus *count* specify a position that is not within *buffer*.'
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.Decimal)
+  id: WriteLine(System.Decimal)
+  parent: System.Console
+  name: WriteLine(Decimal)
+  fullName: System.Console.WriteLine(System.Decimal)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 394
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> value, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(decimal value)
+    content.vb: Public Shared Sub WriteLine(value As Decimal)
+    parameters:
+    - id: value
+      type: System.Decimal
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.Double)
+  id: WriteLine(System.Double)
+  parent: System.Console
+  name: WriteLine(Double)
+  fullName: System.Console.WriteLine(System.Double)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 400
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified double-precision floating-point value, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(double value)
+    content.vb: Public Shared Sub WriteLine(value As Double)
+    parameters:
+    - id: value
+      type: System.Double
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.Int32)
+  id: WriteLine(System.Int32)
+  parent: System.Console
+  name: WriteLine(Int32)
+  fullName: System.Console.WriteLine(System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 412
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified 32-bit signed integer value, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(int value)
+    content.vb: Public Shared Sub WriteLine(value As Integer)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.Int64)
+  id: WriteLine(System.Int64)
+  parent: System.Console
+  name: WriteLine(Int64)
+  fullName: System.Console.WriteLine(System.Int64)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 425
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified 64-bit signed integer value, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(long value)
+    content.vb: Public Shared Sub WriteLine(value As Long)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.Object)
+  id: WriteLine(System.Object)
+  parent: System.Console
+  name: WriteLine(Object)
+  fullName: System.Console.WriteLine(System.Object)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 74
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified object, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(object value)
+    content.vb: Public Shared Sub WriteLine(value As Object)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.Single)
+  id: WriteLine(System.Single)
+  parent: System.Console
+  name: WriteLine(Single)
+  fullName: System.Console.WriteLine(System.Single)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 406
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified single-precision floating-point value, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(float value)
+    content.vb: Public Shared Sub WriteLine(value As Single)
+    parameters:
+    - id: value
+      type: System.Single
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.String)
+  id: WriteLine(System.String)
+  parent: System.Console
+  name: WriteLine(String)
+  fullName: System.Console.WriteLine(System.String)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 76
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the specified string value, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(string value)
+    content.vb: Public Shared Sub WriteLine(value As String)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.String,System.Object)
+  id: WriteLine(System.String,System.Object)
+  parent: System.Console
+  name: WriteLine(String, Object)
+  fullName: System.Console.WriteLine(System.String, System.Object)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 77
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified object, followed by the current line terminator, to the standard output stream using the specified format information.
+  syntax:
+    content: public static void WriteLine(string format, object arg0)
+    content.vb: Public Shared Sub WriteLine(format As String, arg0 As Object)
+    parameters:
+    - id: format
+      type: System.String
+      description: A composite format string (see Remarks).
+    - id: arg0
+      type: System.Object
+      description: An object to write using *format*.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+  - type: System.ArgumentNullException
+    description: '*format* is null.'
+  - type: System.FormatException
+    description: The format specification in *format* is invalid.
+- uid: System.Console.WriteLine(System.String,System.Object,System.Object)
+  id: WriteLine(System.String,System.Object,System.Object)
+  parent: System.Console
+  name: WriteLine(String, Object, Object)
+  fullName: System.Console.WriteLine(System.String, System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 78
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified objects, followed by the current line terminator, to the standard output stream using the specified format information.
+  syntax:
+    content: public static void WriteLine(string format, object arg0, object arg1)
+    content.vb: Public Shared Sub WriteLine(format As String, arg0 As Object, arg1 As Object)
+    parameters:
+    - id: format
+      type: System.String
+      description: A composite format string (see Remarks).
+    - id: arg0
+      type: System.Object
+      description: The first object to write using *format*.
+    - id: arg1
+      type: System.Object
+      description: The second object to write using *format*.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+  - type: System.ArgumentNullException
+    description: '*format* is null.'
+  - type: System.FormatException
+    description: The format specification in *format* is invalid.
+- uid: System.Console.WriteLine(System.String,System.Object,System.Object,System.Object)
+  id: WriteLine(System.String,System.Object,System.Object,System.Object)
+  parent: System.Console
+  name: WriteLine(String, Object, Object, Object)
+  fullName: System.Console.WriteLine(System.String, System.Object, System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 79
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified objects, followed by the current line terminator, to the standard output stream using the specified format information.
+  syntax:
+    content: public static void WriteLine(string format, object arg0, object arg1, object arg2)
+    content.vb: Public Shared Sub WriteLine(format As String, arg0 As Object, arg1 As Object, arg2 As Object)
+    parameters:
+    - id: format
+      type: System.String
+      description: A composite format string (see Remarks).
+    - id: arg0
+      type: System.Object
+      description: The first object to write using *format*.
+    - id: arg1
+      type: System.Object
+      description: The second object to write using *format*.
+    - id: arg2
+      type: System.Object
+      description: The third object to write using *format*.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+  - type: System.ArgumentNullException
+    description: '*format* is null.'
+  - type: System.FormatException
+    description: The format specification in *format* is invalid.
+- uid: System.Console.WriteLine(System.String,System.Object[])
+  id: WriteLine(System.String,System.Object[])
+  parent: System.Console
+  name: WriteLine(String, Object[])
+  name.vb: WriteLine(String, Object())
+  fullName: System.Console.WriteLine(System.String, System.Object[])
+  fullName.vb: System.Console.WriteLine(System.String, System.Object())
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 80
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified array of objects, followed by the current line terminator, to the standard output stream using the specified format information.
+  syntax:
+    content: public static void WriteLine(string format, params object[] arg)
+    content.vb: Public Shared Sub WriteLine(format As String, ParamArray arg As Object())
+    parameters:
+    - id: format
+      type: System.String
+      description: A composite format string (see Remarks).
+    - id: arg
+      type: System.Object[]
+      description: An array of objects to write using *format*.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+  - type: System.ArgumentNullException
+    description: '*format* or *arg* is null.'
+  - type: System.FormatException
+    description: The format specification in *format* is invalid.
+- uid: System.Console.WriteLine(System.UInt32)
+  id: WriteLine(System.UInt32)
+  parent: System.Console
+  name: WriteLine(UInt32)
+  fullName: System.Console.WriteLine(System.UInt32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 418
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified 32-bit unsigned integer value, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(uint value)
+    content.vb: Public Shared Sub WriteLine(value As UInteger)
+    parameters:
+    - id: value
+      type: System.UInt32
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+- uid: System.Console.WriteLine(System.UInt64)
+  id: WriteLine(System.UInt64)
+  parent: System.Console
+  name: WriteLine(UInt64)
+  fullName: System.Console.WriteLine(System.UInt64)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/Console.cs
+    startLine: 431
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Writes the text representation of the specified 64-bit unsigned integer value, followed by the current line terminator, to the standard output stream.
+  syntax:
+    content: public static void WriteLine(ulong value)
+    content.vb: Public Shared Sub WriteLine(value As ULong)
+    parameters:
+    - id: value
+      type: System.UInt64
+      description: The value to write.
+  exceptions:
+  - type: System.IO.IOException
+    description: An I/O error occurred.
+references:
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.ConsoleColor
+  parent: System
+  isExternal: false
+  name: ConsoleColor
+  fullName: System.ConsoleColor
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.IO.TextWriter
+  parent: System.IO
+  isExternal: false
+  name: TextWriter
+  fullName: System.IO.TextWriter
+- uid: System.IO
+  isExternal: false
+  name: System.IO
+  fullName: System.IO
+- uid: System.IO.TextReader
+  parent: System.IO
+  isExternal: false
+  name: TextReader
+  fullName: System.IO.TextReader
+- uid: System.IO.Stream
+  parent: System.IO
+  isExternal: false
+  name: IO.Stream
+  fullName: System.IO.Stream
+- uid: System.ConsoleKeyInfo
+  parent: System
+  isExternal: false
+  name: ConsoleKeyInfo
+  fullName: System.ConsoleKeyInfo
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Char
+  parent: System
+  isExternal: false
+  name: Char
+  fullName: System.Char
+- uid: System.Char[]
+  isExternal: false
+  name: Char[]
+  name.vb: Char()
+  fullName: System.Char[]
+  fullName.vb: System.Char()
+  spec.csharp:
+  - uid: System.Char
+    name: Char
+    fullName: System.Char
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Char
+    name: Char
+    fullName: System.Char
+  - name: ()
+    fullName: ()
+- uid: System.Decimal
+  parent: System
+  isExternal: false
+  name: Decimal
+  fullName: System.Decimal
+- uid: System.Double
+  parent: System
+  isExternal: false
+  name: Double
+  fullName: System.Double
+- uid: System.Int64
+  parent: System
+  isExternal: false
+  name: Int64
+  fullName: System.Int64
+- uid: System.Single
+  parent: System
+  isExternal: false
+  name: Single
+  fullName: System.Single
+- uid: System.Object[]
+  isExternal: false
+  name: Object[]
+  name.vb: Object()
+  fullName: System.Object[]
+  fullName.vb: System.Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ()
+    fullName: ()
+- uid: System.UInt32
+  parent: System
+  isExternal: false
+  name: UInt32
+  fullName: System.UInt32
+- uid: System.UInt64
+  parent: System
+  isExternal: false
+  name: UInt64
+  fullName: System.UInt64
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.Security.SecurityException
+  isExternal: false
+  name: SecurityException
+  fullName: System.Security.SecurityException
+- uid: System.IO.IOException
+  parent: System.IO
+  isExternal: false
+  name: IOException
+  fullName: System.IO.IOException
+- uid: System.Security.HostProtectionException
+- uid: System.ArgumentOutOfRangeException
+  isExternal: false
+  name: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.InvalidOperationException
+  parent: System
+  isExternal: false
+  name: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: System.OutOfMemoryException
+  isExternal: false
+  name: OutOfMemoryException
+  fullName: System.OutOfMemoryException
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.FormatException
+  parent: System
+  isExternal: false
+  name: FormatException
+  fullName: System.FormatException
