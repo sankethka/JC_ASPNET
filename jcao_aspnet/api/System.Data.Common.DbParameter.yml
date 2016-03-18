@@ -1,0 +1,339 @@
+items:
+- uid: System.Data.Common.DbParameter
+  id: DbParameter
+  parent: System.Data.Common
+  children:
+  - System.Data.Common.DbParameter.#ctor
+  - System.Data.Common.DbParameter.DbType
+  - System.Data.Common.DbParameter.Direction
+  - System.Data.Common.DbParameter.IsNullable
+  - System.Data.Common.DbParameter.ParameterName
+  - System.Data.Common.DbParameter.Precision
+  - System.Data.Common.DbParameter.ResetDbType
+  - System.Data.Common.DbParameter.Scale
+  - System.Data.Common.DbParameter.Size
+  - System.Data.Common.DbParameter.SourceColumn
+  - System.Data.Common.DbParameter.SourceColumnNullMapping
+  - System.Data.Common.DbParameter.Value
+  name: DbParameter
+  fullName: System.Data.Common.DbParameter
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 13
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Represents a parameter to a <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref> and optionally, its mapping to a <xref href="System.Data.DataSet" data-throw-if-not-resolved="false"></xref> column. For more information on parameters, see Configuring Parameters and Parameter Data Types.
+  syntax:
+    content: 'public abstract class DbParameter : object'
+    content.vb: Public MustInherit Class DbParameter Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Data.Common.DbParameter.#ctor
+  id: '#ctor'
+  parent: System.Data.Common.DbParameter
+  name: DbParameter()
+  fullName: System.Data.Common.DbParameter.DbParameter()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 15
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Initializes a new instance of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: protected DbParameter()
+    content.vb: Protected Sub New
+- uid: System.Data.Common.DbParameter.DbType
+  id: DbType
+  parent: System.Data.Common.DbParameter
+  name: DbType
+  fullName: System.Data.Common.DbParameter.DbType
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 19
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Gets or sets the <xref href="System.Data.DbType" data-throw-if-not-resolved="false"></xref> of the parameter.
+  syntax:
+    content: public abstract DbType DbType { get; set; }
+    content.vb: Public MustOverride Property DbType As DbType
+    parameters: []
+    return:
+      type: System.Data.DbType
+      description: One of the <xref href="System.Data.DbType" data-throw-if-not-resolved="false"></xref> values. The default is <xref href="System.Data.DbType.String" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ArgumentException
+    description: The property is not set to a valid <xref href="System.Data.DbType" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Data.Common.DbParameter.Direction
+  id: Direction
+  parent: System.Data.Common.DbParameter
+  name: Direction
+  fullName: System.Data.Common.DbParameter.Direction
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 27
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Gets or sets a value that indicates whether the parameter is input-only, output-only, bidirectional, or a stored procedure return value parameter.
+  syntax:
+    content: public abstract ParameterDirection Direction { get; set; }
+    content.vb: Public MustOverride Property Direction As ParameterDirection
+    parameters: []
+    return:
+      type: System.Data.ParameterDirection
+      description: One of the <xref href="System.Data.ParameterDirection" data-throw-if-not-resolved="false"></xref> values. The default is Input.
+  exceptions:
+  - type: System.ArgumentException
+    description: The property is not set to one of the valid <xref href="System.Data.ParameterDirection" data-throw-if-not-resolved="false"></xref> values.
+- uid: System.Data.Common.DbParameter.IsNullable
+  id: IsNullable
+  parent: System.Data.Common.DbParameter
+  name: IsNullable
+  fullName: System.Data.Common.DbParameter.IsNullable
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 33
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Gets or sets a value that indicates whether the parameter accepts null values.
+  syntax:
+    content: public abstract bool IsNullable { get; set; }
+    content.vb: Public MustOverride Property IsNullable As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if null values are accepted; otherwise false. The default is false.
+- uid: System.Data.Common.DbParameter.ParameterName
+  id: ParameterName
+  parent: System.Data.Common.DbParameter
+  name: ParameterName
+  fullName: System.Data.Common.DbParameter.ParameterName
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 39
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Gets or sets the name of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public abstract string ParameterName { get; set; }
+    content.vb: Public MustOverride Property ParameterName As String
+    parameters: []
+    return:
+      type: System.String
+      description: The name of the <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref>. The default is an empty string ("").
+- uid: System.Data.Common.DbParameter.Precision
+  id: Precision
+  parent: System.Data.Common.DbParameter
+  name: Precision
+  fullName: System.Data.Common.DbParameter.Precision
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 45
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: '[Supported in the .NET Framework 4.5.1 and later versions] Gets or sets the maximum number of digits used to represent the <xref href="System.Data.Common.DbParameter.Value" data-throw-if-not-resolved="false"></xref> property.'
+  syntax:
+    content: public virtual byte Precision { get; set; }
+    content.vb: Public Overridable Property Precision As Byte
+    parameters: []
+    return:
+      type: System.Byte
+      description: The maximum number of digits used to represent the <xref href="System.Data.Common.DbParameter.Value" data-throw-if-not-resolved="false"></xref> property.
+- uid: System.Data.Common.DbParameter.Scale
+  id: Scale
+  parent: System.Data.Common.DbParameter
+  name: Scale
+  fullName: System.Data.Common.DbParameter.Scale
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 56
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: '[Supported in the .NET Framework 4.5.1 and later versions] Gets or sets the number of decimal places to which <xref href="System.Data.Common.DbParameter.Value" data-throw-if-not-resolved="false"></xref> is resolved.'
+  syntax:
+    content: public virtual byte Scale { get; set; }
+    content.vb: Public Overridable Property Scale As Byte
+    parameters: []
+    return:
+      type: System.Byte
+      description: The number of decimal places to which <xref href="System.Data.Common.DbParameter.Value" data-throw-if-not-resolved="false"></xref> is resolved.
+- uid: System.Data.Common.DbParameter.Size
+  id: Size
+  parent: System.Data.Common.DbParameter
+  name: Size
+  fullName: System.Data.Common.DbParameter.Size
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 67
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Gets or sets the maximum size, in bytes, of the data within the column.
+  syntax:
+    content: public abstract int Size { get; set; }
+    content.vb: Public MustOverride Property Size As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The maximum size, in bytes, of the data within the column. The default value is inferred from the parameter value.
+- uid: System.Data.Common.DbParameter.SourceColumn
+  id: SourceColumn
+  parent: System.Data.Common.DbParameter
+  name: SourceColumn
+  fullName: System.Data.Common.DbParameter.SourceColumn
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 73
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Gets or sets the name of the source column mapped to the <xref href="System.Data.DataSet" data-throw-if-not-resolved="false"></xref> and used for loading or returning the <xref href="System.Data.Common.DbParameter.Value" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public abstract string SourceColumn { get; set; }
+    content.vb: Public MustOverride Property SourceColumn As String
+    parameters: []
+    return:
+      type: System.String
+      description: The name of the source column mapped to the <xref href="System.Data.DataSet" data-throw-if-not-resolved="false"></xref>. The default is an empty string.
+- uid: System.Data.Common.DbParameter.SourceColumnNullMapping
+  id: SourceColumnNullMapping
+  parent: System.Data.Common.DbParameter
+  name: SourceColumnNullMapping
+  fullName: System.Data.Common.DbParameter.SourceColumnNullMapping
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 79
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Sets or gets a value which indicates whether the source column is nullable. This allows <xref href="System.Data.Common.DbCommandBuilder" data-throw-if-not-resolved="false"></xref> to correctly generate Update statements for nullable columns.
+  syntax:
+    content: public abstract bool SourceColumnNullMapping { get; set; }
+    content.vb: Public MustOverride Property SourceColumnNullMapping As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the source column is nullable; false if it is not.
+- uid: System.Data.Common.DbParameter.Value
+  id: Value
+  parent: System.Data.Common.DbParameter
+  name: Value
+  fullName: System.Data.Common.DbParameter.Value
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 85
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Gets or sets the value of the parameter.
+  syntax:
+    content: public abstract object Value { get; set; }
+    content.vb: Public MustOverride Property Value As Object
+    parameters: []
+    return:
+      type: System.Object
+      description: An <xref href="System.Object" data-throw-if-not-resolved="false"></xref> that is the value of the parameter. The default value is null.
+- uid: System.Data.Common.DbParameter.ResetDbType
+  id: ResetDbType
+  parent: System.Data.Common.DbParameter
+  name: ResetDbType()
+  fullName: System.Data.Common.DbParameter.ResetDbType()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.Common/src/System/Data/Common/DbParameter.cs
+    startLine: 25
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  summary: Resets the DbType property to its original settings.
+  syntax:
+    content: public abstract void ResetDbType()
+    content.vb: Public MustOverride Sub ResetDbType
+references:
+- uid: System.Data.Common
+  isExternal: false
+  name: System.Data.Common
+  fullName: System.Data.Common
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Data.DbType
+  parent: System.Data
+  isExternal: false
+  name: DbType
+  fullName: System.Data.DbType
+- uid: System.Data
+  isExternal: false
+  name: System.Data
+  fullName: System.Data
+- uid: System.Data.ParameterDirection
+  parent: System.Data
+  isExternal: false
+  name: ParameterDirection
+  fullName: System.Data.ParameterDirection
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Byte
+  parent: System
+  isExternal: false
+  name: Byte
+  fullName: System.Byte
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException

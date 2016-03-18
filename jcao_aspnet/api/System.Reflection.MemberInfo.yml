@@ -1,0 +1,263 @@
+items:
+- uid: System.Reflection.MemberInfo
+  id: MemberInfo
+  parent: System.Reflection
+  children:
+  - System.Reflection.MemberInfo.CustomAttributes
+  - System.Reflection.MemberInfo.DeclaringType
+  - System.Reflection.MemberInfo.Equals(System.Object)
+  - System.Reflection.MemberInfo.GetHashCode
+  - System.Reflection.MemberInfo.Module
+  - System.Reflection.MemberInfo.Name
+  name: MemberInfo
+  fullName: System.Reflection.MemberInfo
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Reflection/MemberInfo.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Reflection/MemberInfo.cs
+    startLine: 15
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Obtains information about the attributes of a member and provides access to member metadata.
+  syntax:
+    content: 'public abstract class MemberInfo : object'
+    content.vb: Public MustInherit Class MemberInfo Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Reflection.MemberInfo.CustomAttributes
+  id: CustomAttributes
+  parent: System.Reflection.MemberInfo
+  name: CustomAttributes
+  fullName: System.Reflection.MemberInfo.CustomAttributes
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MemberInfo.cs
+    startLine: 44
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets a collection that contains this member's custom attributes.
+  syntax:
+    content: public virtual Collections.Generic.IEnumerable<CustomAttributeData> CustomAttributes { get; }
+    content.vb: Public Overridable ReadOnly Property CustomAttributes As Collections.Generic.IEnumerable(Of CustomAttributeData)
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Reflection.CustomAttributeData}
+      description: A collection that contains this member's custom attributes.
+- uid: System.Reflection.MemberInfo.DeclaringType
+  id: DeclaringType
+  parent: System.Reflection.MemberInfo
+  name: DeclaringType
+  fullName: System.Reflection.MemberInfo.DeclaringType
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MemberInfo.cs
+    startLine: 40
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets the class that declares this member.
+  syntax:
+    content: public abstract Type DeclaringType { get; }
+    content.vb: Public MustOverride ReadOnly Property DeclaringType As Type
+    parameters: []
+    return:
+      type: System.Type
+      description: The Type object for the class that declares this member.
+- uid: System.Reflection.MemberInfo.Module
+  id: Module
+  parent: System.Reflection.MemberInfo
+  name: Module
+  fullName: System.Reflection.MemberInfo.Module
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MemberInfo.cs
+    startLine: 64
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets the module in which the type that declares the member represented by the current <xref href="System.Reflection.MemberInfo" data-throw-if-not-resolved="false"></xref> is defined.
+  syntax:
+    content: public virtual Module Module { get; }
+    content.vb: Public Overridable ReadOnly Property Module As
+    parameters: []
+    return:
+      type: System.Reflection.Module
+      description: The <xref href="System.Reflection.Module" data-throw-if-not-resolved="false"></xref> in which the type that declares the member represented by the current <xref href="System.Reflection.MemberInfo" data-throw-if-not-resolved="false"></xref> is defined.
+  exceptions:
+  - type: System.NotImplementedException
+    description: This method is not implemented.
+- uid: System.Reflection.MemberInfo.Name
+  id: Name
+  parent: System.Reflection.MemberInfo
+  name: Name
+  fullName: System.Reflection.MemberInfo.Name
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MemberInfo.cs
+    startLine: 38
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets the name of the current member.
+  syntax:
+    content: public abstract string Name { get; }
+    content.vb: Public MustOverride ReadOnly Property Name As String
+    parameters: []
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> containing the name of this member.
+- uid: System.Reflection.MemberInfo.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: System.Reflection.MemberInfo
+  name: Equals(Object)
+  fullName: System.Reflection.MemberInfo.Equals(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MemberInfo.cs
+    startLine: 114
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Returns a value that indicates whether this instance is equal to a specified object.
+  syntax:
+    content: public override bool Equals(object obj)
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+    parameters:
+    - id: obj
+      type: System.Object
+      description: An object to compare with this instance, or null.
+    return:
+      type: System.Boolean
+      description: true if *obj* equals the type and value of this instance; otherwise, false.
+- uid: System.Reflection.MemberInfo.GetHashCode
+  id: GetHashCode
+  parent: System.Reflection.MemberInfo
+  name: GetHashCode()
+  fullName: System.Reflection.MemberInfo.GetHashCode()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MemberInfo.cs
+    startLine: 119
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Returns the hash code for this instance.
+  syntax:
+    content: public override int GetHashCode()
+    content.vb: Public Overrides Function GetHashCode As Integer
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer hash code.
+references:
+- uid: System.Reflection
+  isExternal: false
+  name: System.Reflection
+  fullName: System.Reflection
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable{System.Reflection.CustomAttributeData}
+  definition: System.Collections.Generic.IEnumerable`1
+  name: Collections.Generic.IEnumerable<CustomAttributeData>
+  name.vb: Collections.Generic.IEnumerable(Of CustomAttributeData)
+  fullName: System.Collections.Generic.IEnumerable<System.Reflection.CustomAttributeData>
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Reflection.CustomAttributeData)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.Reflection.CustomAttributeData
+    name: CustomAttributeData
+    fullName: System.Reflection.CustomAttributeData
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Reflection.CustomAttributeData
+    name: CustomAttributeData
+    fullName: System.Reflection.CustomAttributeData
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  parent: System.Collections.Generic
+  isExternal: false
+  name: Collections.Generic.IEnumerable<>
+  name.vb: Collections.Generic.IEnumerable(Of )
+  fullName: System.Collections.Generic.IEnumerable<>
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+  - name: <
+    fullName: <
+  - {}
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+  - name: '(Of '
+    fullName: '(Of '
+  - {}
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Type
+  parent: System
+  isExternal: false
+  name: Type
+  fullName: System.Type
+- uid: System.Reflection.Module
+  parent: System.Reflection
+  isExternal: false
+  name: Module
+  fullName: System.Reflection.Module
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.NotImplementedException
+  isExternal: false
+  name: NotImplementedException
+  fullName: System.NotImplementedException

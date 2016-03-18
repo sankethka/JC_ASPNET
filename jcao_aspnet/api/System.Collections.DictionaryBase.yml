@@ -1,0 +1,493 @@
+items:
+- uid: System.Collections.DictionaryBase
+  id: DictionaryBase
+  parent: System.Collections
+  children:
+  - System.Collections.DictionaryBase.#ctor
+  - System.Collections.DictionaryBase.Clear
+  - System.Collections.DictionaryBase.CopyTo(System.Array,System.Int32)
+  - System.Collections.DictionaryBase.Count
+  - System.Collections.DictionaryBase.Dictionary
+  - System.Collections.DictionaryBase.GetEnumerator
+  - System.Collections.DictionaryBase.InnerHashtable
+  - System.Collections.DictionaryBase.OnClear
+  - System.Collections.DictionaryBase.OnClearComplete
+  - System.Collections.DictionaryBase.OnGet(System.Object,System.Object)
+  - System.Collections.DictionaryBase.OnInsert(System.Object,System.Object)
+  - System.Collections.DictionaryBase.OnInsertComplete(System.Object,System.Object)
+  - System.Collections.DictionaryBase.OnRemove(System.Object,System.Object)
+  - System.Collections.DictionaryBase.OnRemoveComplete(System.Object,System.Object)
+  - System.Collections.DictionaryBase.OnSet(System.Object,System.Object,System.Object)
+  - System.Collections.DictionaryBase.OnSetComplete(System.Object,System.Object,System.Object)
+  - System.Collections.DictionaryBase.OnValidate(System.Object,System.Object)
+  name: DictionaryBase
+  fullName: System.Collections.DictionaryBase
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 18
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Provides the abstract base class for a strongly typed collection of key/value pairs.
+  syntax:
+    content: 'public abstract class DictionaryBase : ICollection, IDictionary, IEnumerable'
+    content.vb: Public MustInherit Class DictionaryBase Inherits ICollection Implements IDictionary, IEnumerable
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.IDictionary
+  - System.Collections.IEnumerable
+- uid: System.Collections.DictionaryBase.#ctor
+  id: '#ctor'
+  parent: System.Collections.DictionaryBase
+  name: DictionaryBase()
+  fullName: System.Collections.DictionaryBase.DictionaryBase()
+  type: Constructor
+  source:
+    remote: &o1
+      path: src/System.Collections.NonGeneric/ref/System.Collections.NonGeneric.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Collections.NonGeneric/ref/System.Collections.NonGeneric.cs
+    startLine: 111
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Initializes a new instance of the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: protected DictionaryBase()
+    content.vb: Protected Sub New
+- uid: System.Collections.DictionaryBase.Count
+  id: Count
+  parent: System.Collections.DictionaryBase
+  name: Count
+  fullName: System.Collections.DictionaryBase.Count
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 37
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets the number of elements contained in the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public int Count { get; }
+    content.vb: Public ReadOnly Property Count As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of elements contained in the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+- uid: System.Collections.DictionaryBase.Dictionary
+  id: Dictionary
+  parent: System.Collections.DictionaryBase
+  name: Dictionary
+  fullName: System.Collections.DictionaryBase.Dictionary
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 32
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets the list of elements contained in the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected IDictionary Dictionary { get; }
+    content.vb: Protected ReadOnly Property Dictionary As IDictionary
+    parameters: []
+    return:
+      type: System.Collections.IDictionary
+      description: An <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="false"></xref> representing the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance itself.
+- uid: System.Collections.DictionaryBase.InnerHashtable
+  id: InnerHashtable
+  parent: System.Collections.DictionaryBase
+  name: InnerHashtable
+  fullName: System.Collections.DictionaryBase.InnerHashtable
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 22
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets the list of elements contained in the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected Hashtable InnerHashtable { get; }
+    content.vb: Protected ReadOnly Property InnerHashtable As Hashtable
+    parameters: []
+    return:
+      type: System.Collections.Hashtable
+      description: A <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="false"></xref> representing the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance itself.
+- uid: System.Collections.DictionaryBase.Clear
+  id: Clear
+  parent: System.Collections.DictionaryBase
+  name: Clear()
+  fullName: System.Collections.DictionaryBase.Clear()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 138
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Clears the contents of the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear
+- uid: System.Collections.DictionaryBase.CopyTo(System.Array,System.Int32)
+  id: CopyTo(System.Array,System.Int32)
+  parent: System.Collections.DictionaryBase
+  name: CopyTo(Array, Int32)
+  fullName: System.Collections.DictionaryBase.CopyTo(System.Array, System.Int32)
+  type: Method
+  source:
+    remote: *o1
+    path: src/System.Collections.NonGeneric/ref/System.Collections.NonGeneric.cs
+    startLine: 123
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Copies the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> elements to a one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref> at the specified index.
+  syntax:
+    content: public void CopyTo(Array array, int index)
+    content.vb: Public Sub CopyTo(array As Array, index As Integer)
+    parameters:
+    - id: array
+      type: System.Array
+      description: The one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref> that is the destination of the <xref href="System.Collections.DictionaryEntry" data-throw-if-not-resolved="false"></xref> objects copied from the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance. The <xref href="System.Array" data-throw-if-not-resolved="false"></xref> must have zero-based indexing.
+    - id: index
+      type: System.Int32
+      description: The zero-based index in *array* at which copying begins.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*array* is null.'
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.'
+  - type: System.ArgumentException
+    description: '*array* is multidimensional.-or- The number of elements in the source <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> is greater than the available space from *index* to the end of the destination *array*.'
+  - type: System.InvalidCastException
+    description: The type of the source <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> cannot be cast automatically to the type of the destination *array*.
+- uid: System.Collections.DictionaryBase.GetEnumerator
+  id: GetEnumerator
+  parent: System.Collections.DictionaryBase
+  name: GetEnumerator()
+  fullName: System.Collections.DictionaryBase.GetEnumerator()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 166
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns an <xref href="System.Collections.IDictionaryEnumerator" data-throw-if-not-resolved="false"></xref> that iterates through the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public IDictionaryEnumerator GetEnumerator()
+    content.vb: Public Function GetEnumerator As IDictionaryEnumerator
+    return:
+      type: System.Collections.IDictionaryEnumerator
+      description: An <xref href="System.Collections.IDictionaryEnumerator" data-throw-if-not-resolved="false"></xref> for the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+- uid: System.Collections.DictionaryBase.OnClear
+  id: OnClear
+  parent: System.Collections.DictionaryBase
+  name: OnClear()
+  fullName: System.Collections.DictionaryBase.OnClear()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 189
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes before clearing the contents of the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnClear()
+    content.vb: Protected Overridable Sub OnClear
+- uid: System.Collections.DictionaryBase.OnClearComplete
+  id: OnClearComplete
+  parent: System.Collections.DictionaryBase
+  name: OnClearComplete()
+  fullName: System.Collections.DictionaryBase.OnClearComplete()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 209
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes after clearing the contents of the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnClearComplete()
+    content.vb: Protected Overridable Sub OnClearComplete
+- uid: System.Collections.DictionaryBase.OnGet(System.Object,System.Object)
+  id: OnGet(System.Object,System.Object)
+  parent: System.Collections.DictionaryBase
+  name: OnGet(Object, Object)
+  fullName: System.Collections.DictionaryBase.OnGet(System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 176
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets the element with the specified key and value in the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual object OnGet(object key, object currentValue)
+    content.vb: Protected Overridable Function OnGet(key As Object, currentValue As Object) As Object
+    parameters:
+    - id: key
+      type: System.Object
+      description: The key of the element to get.
+    - id: currentValue
+      type: System.Object
+      description: The current value of the element associated with *key*.
+    return:
+      type: System.Object
+      description: An <xref href="System.Object" data-throw-if-not-resolved="false"></xref> containing the element with the specified key and value.
+- uid: System.Collections.DictionaryBase.OnInsert(System.Object,System.Object)
+  id: OnInsert(System.Object,System.Object)
+  parent: System.Collections.DictionaryBase
+  name: OnInsert(Object, Object)
+  fullName: System.Collections.DictionaryBase.OnInsert(System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 185
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes before inserting a new element into the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnInsert(object key, object value)
+    content.vb: Protected Overridable Sub OnInsert(key As Object, value As Object)
+    parameters:
+    - id: key
+      type: System.Object
+      description: The key of the element to insert.
+    - id: value
+      type: System.Object
+      description: The value of the element to insert.
+- uid: System.Collections.DictionaryBase.OnInsertComplete(System.Object,System.Object)
+  id: OnInsertComplete(System.Object,System.Object)
+  parent: System.Collections.DictionaryBase
+  name: OnInsertComplete(Object, Object)
+  fullName: System.Collections.DictionaryBase.OnInsertComplete(System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 205
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes after inserting a new element into the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnInsertComplete(object key, object value)
+    content.vb: Protected Overridable Sub OnInsertComplete(key As Object, value As Object)
+    parameters:
+    - id: key
+      type: System.Object
+      description: The key of the element to insert.
+    - id: value
+      type: System.Object
+      description: The value of the element to insert.
+- uid: System.Collections.DictionaryBase.OnRemove(System.Object,System.Object)
+  id: OnRemove(System.Object,System.Object)
+  parent: System.Collections.DictionaryBase
+  name: OnRemove(Object, Object)
+  fullName: System.Collections.DictionaryBase.OnRemove(System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 193
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes before removing an element from the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnRemove(object key, object value)
+    content.vb: Protected Overridable Sub OnRemove(key As Object, value As Object)
+    parameters:
+    - id: key
+      type: System.Object
+      description: The key of the element to remove.
+    - id: value
+      type: System.Object
+      description: The value of the element to remove.
+- uid: System.Collections.DictionaryBase.OnRemoveComplete(System.Object,System.Object)
+  id: OnRemoveComplete(System.Object,System.Object)
+  parent: System.Collections.DictionaryBase
+  name: OnRemoveComplete(Object, Object)
+  fullName: System.Collections.DictionaryBase.OnRemoveComplete(System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 213
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes after removing an element from the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnRemoveComplete(object key, object value)
+    content.vb: Protected Overridable Sub OnRemoveComplete(key As Object, value As Object)
+    parameters:
+    - id: key
+      type: System.Object
+      description: The key of the element to remove.
+    - id: value
+      type: System.Object
+      description: The value of the element to remove.
+- uid: System.Collections.DictionaryBase.OnSet(System.Object,System.Object,System.Object)
+  id: OnSet(System.Object,System.Object,System.Object)
+  parent: System.Collections.DictionaryBase
+  name: OnSet(Object, Object, Object)
+  fullName: System.Collections.DictionaryBase.OnSet(System.Object, System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 181
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes before setting a value in the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnSet(object key, object oldValue, object newValue)
+    content.vb: Protected Overridable Sub OnSet(key As Object, oldValue As Object, newValue As Object)
+    parameters:
+    - id: key
+      type: System.Object
+      description: The key of the element to locate.
+    - id: oldValue
+      type: System.Object
+      description: The old value of the element associated with *key*.
+    - id: newValue
+      type: System.Object
+      description: The new value of the element associated with *key*.
+- uid: System.Collections.DictionaryBase.OnSetComplete(System.Object,System.Object,System.Object)
+  id: OnSetComplete(System.Object,System.Object,System.Object)
+  parent: System.Collections.DictionaryBase
+  name: OnSetComplete(Object, Object, Object)
+  fullName: System.Collections.DictionaryBase.OnSetComplete(System.Object, System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 201
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes after setting a value in the <xref href="System.Collections.DictionaryBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnSetComplete(object key, object oldValue, object newValue)
+    content.vb: Protected Overridable Sub OnSetComplete(key As Object, oldValue As Object, newValue As Object)
+    parameters:
+    - id: key
+      type: System.Object
+      description: The key of the element to locate.
+    - id: oldValue
+      type: System.Object
+      description: The old value of the element associated with *key*.
+    - id: newValue
+      type: System.Object
+      description: The new value of the element associated with *key*.
+- uid: System.Collections.DictionaryBase.OnValidate(System.Object,System.Object)
+  id: OnValidate(System.Object,System.Object)
+  parent: System.Collections.DictionaryBase
+  name: OnValidate(Object, Object)
+  fullName: System.Collections.DictionaryBase.OnValidate(System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Collections.NonGeneric/src/System/Collections/DictionaryBase.cs
+    startLine: 197
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes when validating the element with the specified key and value.
+  syntax:
+    content: protected virtual void OnValidate(object key, object value)
+    content.vb: Protected Overridable Sub OnValidate(key As Object, value As Object)
+    parameters:
+    - id: key
+      type: System.Object
+      description: The key of the element to validate.
+    - id: value
+      type: System.Object
+      description: The value of the element to validate.
+references:
+- uid: System.Collections
+  isExternal: false
+  name: System.Collections
+  fullName: System.Collections
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.Collections.IDictionary
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IDictionary
+  fullName: System.Collections.IDictionary
+- uid: System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Collections.Hashtable
+  parent: System.Collections
+  isExternal: false
+  name: Hashtable
+  fullName: System.Collections.Hashtable
+- uid: System.Array
+  parent: System
+  isExternal: false
+  name: Array
+  fullName: System.Array
+- uid: System.Collections.IDictionaryEnumerator
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IDictionaryEnumerator
+  fullName: System.Collections.IDictionaryEnumerator
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentOutOfRangeException
+  isExternal: false
+  name: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.InvalidCastException
+  isExternal: false
+  name: InvalidCastException
+  fullName: System.InvalidCastException

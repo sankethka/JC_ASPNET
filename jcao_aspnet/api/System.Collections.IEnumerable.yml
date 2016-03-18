@@ -1,0 +1,53 @@
+items:
+- uid: System.Collections.IEnumerable
+  id: IEnumerable
+  parent: System.Collections
+  children:
+  - System.Collections.IEnumerable.GetEnumerator
+  name: IEnumerable
+  fullName: System.Collections.IEnumerable
+  type: Interface
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Collections/IEnumerable.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Collections/IEnumerable.cs
+    startLine: 25
+  assemblies:
+  - System.Runtime
+  namespace: System.Collections
+  summary: Exposes an enumerator, which supports a simple iteration over a non-generic collection.To browse the .NET Framework source code for this type, see the Reference Source.
+  syntax:
+    content: public interface IEnumerable
+    content.vb: Public Interface IEnumerable
+- uid: System.Collections.IEnumerable.GetEnumerator
+  id: GetEnumerator
+  parent: System.Collections.IEnumerable
+  name: GetEnumerator()
+  fullName: System.Collections.IEnumerable.GetEnumerator()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/IEnumerable.cs
+    startLine: 32
+  assemblies:
+  - System.Runtime
+  namespace: System.Collections
+  summary: Returns an enumerator that iterates through a collection.
+  syntax:
+    content: IEnumerator GetEnumerator()
+    content.vb: Function GetEnumerator As IEnumerator
+    return:
+      type: System.Collections.IEnumerator
+      description: An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> object that can be used to iterate through the collection.
+references:
+- uid: System.Collections
+  isExternal: false
+  name: System.Collections
+  fullName: System.Collections
+- uid: System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IEnumerator
+  fullName: System.Collections.IEnumerator

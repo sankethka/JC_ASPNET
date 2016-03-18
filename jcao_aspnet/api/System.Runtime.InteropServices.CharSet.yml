@@ -1,0 +1,61 @@
+items:
+- uid: System.Runtime.InteropServices.CharSet
+  id: CharSet
+  parent: System.Runtime.InteropServices
+  children:
+  - System.Runtime.InteropServices.CharSet.Ansi
+  - System.Runtime.InteropServices.CharSet.Unicode
+  name: CharSet
+  fullName: System.Runtime.InteropServices.CharSet
+  type: Enum
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Runtime/InteropServices/CharSet.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Runtime/InteropServices/CharSet.cs
+    startLine: 14
+  assemblies:
+  - System.Runtime
+  namespace: System.Runtime.InteropServices
+  summary: Dictates which character set marshaled strings should use.
+  syntax:
+    content: public enum CharSet
+    content.vb: Public Enum CharSet
+- uid: System.Runtime.InteropServices.CharSet.Ansi
+  id: Ansi
+  parent: System.Runtime.InteropServices.CharSet
+  name: Ansi
+  fullName: System.Runtime.InteropServices.CharSet.Ansi
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/CharSet.cs
+    startLine: 19
+  assemblies:
+  - System.Runtime
+  namespace: System.Runtime.InteropServices
+  summary: Marshal strings as multiple-byte character strings.
+  syntax:
+    content: Ansi = 2
+- uid: System.Runtime.InteropServices.CharSet.Unicode
+  id: Unicode
+  parent: System.Runtime.InteropServices.CharSet
+  name: Unicode
+  fullName: System.Runtime.InteropServices.CharSet.Unicode
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/CharSet.cs
+    startLine: 20
+  assemblies:
+  - System.Runtime
+  namespace: System.Runtime.InteropServices
+  summary: Marshal strings as Unicode 2-byte characters.
+  syntax:
+    content: Unicode = 3
+references:
+- uid: System.Runtime.InteropServices
+  isExternal: false
+  name: System.Runtime.InteropServices
+  fullName: System.Runtime.InteropServices

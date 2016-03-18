@@ -1,0 +1,78 @@
+items:
+- uid: System.GCCollectionMode
+  id: GCCollectionMode
+  parent: System
+  children:
+  - System.GCCollectionMode.Default
+  - System.GCCollectionMode.Forced
+  - System.GCCollectionMode.Optimized
+  name: GCCollectionMode
+  fullName: System.GCCollectionMode
+  type: Enum
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/GC.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/GC.cs
+    startLine: 30
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Specifies the behavior for a forced garbage collection.
+  syntax:
+    content: public enum GCCollectionMode
+    content.vb: Public Enum GCCollectionMode
+- uid: System.GCCollectionMode.Default
+  id: Default
+  parent: System.GCCollectionMode
+  name: Default
+  fullName: System.GCCollectionMode.Default
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/GC.cs
+    startLine: 33
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: The default setting for this enumeration, which is currently <xref href="System.GCCollectionMode.Forced" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: Default = 0
+- uid: System.GCCollectionMode.Forced
+  id: Forced
+  parent: System.GCCollectionMode
+  name: Forced
+  fullName: System.GCCollectionMode.Forced
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/GC.cs
+    startLine: 34
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Forces the garbage collection to occur immediately.
+  syntax:
+    content: Forced = 1
+- uid: System.GCCollectionMode.Optimized
+  id: Optimized
+  parent: System.GCCollectionMode
+  name: Optimized
+  fullName: System.GCCollectionMode.Optimized
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/GC.cs
+    startLine: 35
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Allows the garbage collector to determine whether the current time is optimal to reclaim objects.
+  syntax:
+    content: Optimized = 2
+references:
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System

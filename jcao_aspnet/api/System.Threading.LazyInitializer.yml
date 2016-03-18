@@ -1,0 +1,268 @@
+items:
+- uid: System.Threading.LazyInitializer
+  id: LazyInitializer
+  parent: System.Threading
+  children:
+  - System.Threading.LazyInitializer.EnsureInitialized``1(``0@)
+  - System.Threading.LazyInitializer.EnsureInitialized``1(``0@,System.Boolean@,System.Object@)
+  - System.Threading.LazyInitializer.EnsureInitialized``1(``0@,System.Boolean@,System.Object@,System.Func{``0})
+  - System.Threading.LazyInitializer.EnsureInitialized``1(``0@,System.Func{``0})
+  name: LazyInitializer
+  fullName: System.Threading.LazyInitializer
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Threading/LazyInitializer.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Threading/LazyInitializer.cs
+    startLine: 56
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Provides lazy initialization routines.
+  syntax:
+    content: 'public class LazyInitializer : object'
+    content.vb: Public Class LazyInitializer Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Threading.LazyInitializer.EnsureInitialized``1(``0@)
+  id: EnsureInitialized``1(``0@)
+  parent: System.Threading.LazyInitializer
+  name: EnsureInitialized<T>(ref T)
+  name.vb: EnsureInitialized(Of T)(ByRef T)
+  fullName: System.Threading.LazyInitializer.EnsureInitialized<T>(ref T)
+  fullName.vb: System.Threading.LazyInitializer.EnsureInitialized(Of T)(ByRef T)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/LazyInitializer.cs
+    startLine: 85
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Initializes a target reference type with the type's default constructor if it hasn't already been initialized.
+  syntax:
+    content: 'public static T EnsureInitialized<T>(ref T target)where T : class'
+    content.vb: Public Shared Function EnsureInitialized(Of T As Class)(ByRef target As T) As T
+    parameters:
+    - id: target
+      type: '{T}'
+      description: A reference of type *T* to initialize if it has not already been initialized.
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+      description: The initialized reference of type *T*.
+  exceptions:
+  - type: System.MemberAccessException
+    description: Permissions to access the constructor of type *T* were missing.
+  - type: System.MissingMemberException
+    description: Type *T* does not have a default constructor.
+- uid: System.Threading.LazyInitializer.EnsureInitialized``1(``0@,System.Boolean@,System.Object@)
+  id: EnsureInitialized``1(``0@,System.Boolean@,System.Object@)
+  parent: System.Threading.LazyInitializer
+  name: EnsureInitialized<T>(ref T, ref Boolean, ref Object)
+  name.vb: EnsureInitialized(Of T)(ByRef T, ByRef Boolean, ByRef Object)
+  fullName: System.Threading.LazyInitializer.EnsureInitialized<T>(ref T, ref System.Boolean, ref System.Object)
+  fullName.vb: System.Threading.LazyInitializer.EnsureInitialized(Of T)(ByRef T, ByRef System.Boolean, ByRef System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/LazyInitializer.cs
+    startLine: 168
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Initializes a target reference or value type with its default constructor if it hasn't already been initialized.
+  syntax:
+    content: public static T EnsureInitialized<T>(ref T target, ref bool initialized, ref object syncLock)
+    content.vb: Public Shared Function EnsureInitialized(Of T)(ByRef target As T, ByRef initialized As Boolean, ByRef syncLock As Object) As T
+    parameters:
+    - id: target
+      type: '{T}'
+      description: A reference or value of type *T* to initialize if it hasn't already been initialized.
+    - id: initialized
+      type: System.Boolean
+      description: A reference to a Boolean value that determines whether the target has already been initialized.
+    - id: syncLock
+      type: System.Object
+      description: A reference to an object used as the mutually exclusive lock for initializing *target*. If *syncLock* is null, a new object will be instantiated.
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+      description: The initialized value of type *T*.
+  exceptions:
+  - type: System.MemberAccessException
+    description: Permissions to access the constructor of type *T* were missing.
+  - type: System.MissingMemberException
+    description: Type *T* does not have a default constructor.
+- uid: System.Threading.LazyInitializer.EnsureInitialized``1(``0@,System.Boolean@,System.Object@,System.Func{``0})
+  id: EnsureInitialized``1(``0@,System.Boolean@,System.Object@,System.Func{``0})
+  parent: System.Threading.LazyInitializer
+  name: EnsureInitialized<T>(ref T, ref Boolean, ref Object, Func<T>)
+  name.vb: EnsureInitialized(Of T)(ByRef T, ByRef Boolean, ByRef Object, Func(Of T))
+  fullName: System.Threading.LazyInitializer.EnsureInitialized<T>(ref T, ref System.Boolean, ref System.Object, System.Func<T>)
+  fullName.vb: System.Threading.LazyInitializer.EnsureInitialized(Of T)(ByRef T, ByRef System.Boolean, ByRef System.Object, System.Func(Of T))
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/LazyInitializer.cs
+    startLine: 193
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Initializes a target reference or value type by using a specified function if it hasn't already been initialized.
+  syntax:
+    content: public static T EnsureInitialized<T>(ref T target, ref bool initialized, ref object syncLock, Func<T> valueFactory)
+    content.vb: Public Shared Function EnsureInitialized(Of T)(ByRef target As T, ByRef initialized As Boolean, ByRef syncLock As Object, valueFactory As Func(Of T)) As T
+    parameters:
+    - id: target
+      type: '{T}'
+      description: A reference or value of type *T* to initialize if it hasn't already been initialized.
+    - id: initialized
+      type: System.Boolean
+      description: A reference to a Boolean value that determines whether the target has already been initialized.
+    - id: syncLock
+      type: System.Object
+      description: A reference to an object used as the mutually exclusive lock for initializing *target*. If *syncLock* is null, a new object will be instantiated.
+    - id: valueFactory
+      type: System.Func{{T}}
+      description: The function that is called to initialize the reference or value.
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+      description: The initialized value of type *T*.
+  exceptions:
+  - type: System.MemberAccessException
+    description: Permissions to access the constructor of type *T* were missing.
+  - type: System.MissingMemberException
+    description: Type *T* does not have a default constructor.
+- uid: System.Threading.LazyInitializer.EnsureInitialized``1(``0@,System.Func{``0})
+  id: EnsureInitialized``1(``0@,System.Func{``0})
+  parent: System.Threading.LazyInitializer
+  name: EnsureInitialized<T>(ref T, Func<T>)
+  name.vb: EnsureInitialized(Of T)(ByRef T, Func(Of T))
+  fullName: System.Threading.LazyInitializer.EnsureInitialized<T>(ref T, System.Func<T>)
+  fullName.vb: System.Threading.LazyInitializer.EnsureInitialized(Of T)(ByRef T, System.Func(Of T))
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/LazyInitializer.cs
+    startLine: 124
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Initializes a target reference type by using a specified function if it hasn't already been initialized.
+  syntax:
+    content: 'public static T EnsureInitialized<T>(ref T target, Func<T> valueFactory)where T : class'
+    content.vb: Public Shared Function EnsureInitialized(Of T As Class)(ByRef target As T, valueFactory As Func(Of T)) As T
+    parameters:
+    - id: target
+      type: '{T}'
+      description: The reference of type *T* to initialize if it hasn't already been initialized.
+    - id: valueFactory
+      type: System.Func{{T}}
+      description: The function that is called to initialize the reference.
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+      description: The initialized value of type *T*.
+  exceptions:
+  - type: System.MissingMemberException
+    description: Type *T* does not have a default constructor.
+  - type: System.InvalidOperationException
+    description: '*valueFactory* returned null (Nothing in Visual Basic).'
+references:
+- uid: System.Threading
+  isExternal: false
+  name: System.Threading
+  fullName: System.Threading
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: '{T}'
+  isExternal: false
+  name: T
+  fullName: T
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.Func{{T}}
+  parent: System
+  definition: System.Func`1
+  name: Func<T>
+  name.vb: Func(Of T)
+  fullName: System.Func<T>
+  fullName.vb: System.Func(Of T)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    fullName: System.Func
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    fullName: System.Func
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Func`1
+  parent: System
+  isExternal: false
+  name: Func<>
+  name.vb: Func(Of )
+  fullName: System.Func<>
+  fullName.vb: System.Func(Of )
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    fullName: System.Func
+  - name: <
+    fullName: <
+  - {}
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    fullName: System.Func
+  - name: '(Of '
+    fullName: '(Of '
+  - {}
+  - name: )
+    fullName: )
+- uid: System.MemberAccessException
+  parent: System
+  isExternal: false
+  name: MemberAccessException
+  fullName: System.MemberAccessException
+- uid: System.MissingMemberException
+  parent: System
+  isExternal: false
+  name: MissingMemberException
+  fullName: System.MissingMemberException
+- uid: System.InvalidOperationException
+  parent: System
+  isExternal: false
+  name: InvalidOperationException
+  fullName: System.InvalidOperationException

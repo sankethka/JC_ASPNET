@@ -1,0 +1,105 @@
+items:
+- uid: System.Runtime.InteropServices.BestFitMappingAttribute
+  id: BestFitMappingAttribute
+  parent: System.Runtime.InteropServices
+  children:
+  - System.Runtime.InteropServices.BestFitMappingAttribute.#ctor(System.Boolean)
+  - System.Runtime.InteropServices.BestFitMappingAttribute.BestFitMapping
+  - System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar
+  name: BestFitMappingAttribute
+  fullName: System.Runtime.InteropServices.BestFitMappingAttribute
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+    startLine: 1077
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Controls whether Unicode characters are converted to the closest matching ANSI characters.
+  syntax:
+    content: 'public sealed class BestFitMappingAttribute : Attribute'
+    content.vb: Public NotInheritable Class BestFitMappingAttribute Inherits Attribute
+  inheritance:
+  - System.Object
+- uid: System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar
+  id: ThrowOnUnmappableChar
+  parent: System.Runtime.InteropServices.BestFitMappingAttribute
+  name: ThrowOnUnmappableChar
+  fullName: System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+    startLine: 1089
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Enables or disables the throwing of an exception on an unmappable Unicode character that is converted to an ANSI '?' character.
+  syntax:
+    content: public bool ThrowOnUnmappableChar
+    content.vb: Public ThrowOnUnmappableChar As Boolean
+- uid: System.Runtime.InteropServices.BestFitMappingAttribute.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: System.Runtime.InteropServices.BestFitMappingAttribute
+  name: BestFitMappingAttribute(Boolean)
+  fullName: System.Runtime.InteropServices.BestFitMappingAttribute.BestFitMappingAttribute(System.Boolean)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+    startLine: 1083
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Initializes a new instance of the <xref href="System.Runtime.InteropServices.BestFitMappingAttribute" data-throw-if-not-resolved="false"></xref> class set to the value of the <xref href="System.Runtime.InteropServices.BestFitMappingAttribute.BestFitMapping" data-throw-if-not-resolved="false"></xref> property.
+  syntax:
+    content: public BestFitMappingAttribute(bool BestFitMapping)
+    content.vb: Public Sub New(BestFitMapping As Boolean)
+    parameters:
+    - id: BestFitMapping
+      type: System.Boolean
+      description: true to indicate that best-fit mapping is enabled; otherwise, false. The default is true.
+- uid: System.Runtime.InteropServices.BestFitMappingAttribute.BestFitMapping
+  id: BestFitMapping
+  parent: System.Runtime.InteropServices.BestFitMappingAttribute
+  name: BestFitMapping
+  fullName: System.Runtime.InteropServices.BestFitMappingAttribute.BestFitMapping
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+    startLine: 1088
+  assemblies:
+  - System.Runtime.InteropServices.PInvoke
+  namespace: System.Runtime.InteropServices
+  summary: Gets the best-fit mapping behavior when converting Unicode characters to ANSI characters.
+  syntax:
+    content: public bool BestFitMapping { get; }
+    content.vb: Public ReadOnly Property BestFitMapping As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if best-fit mapping is enabled; otherwise, false. The default is true.
+references:
+- uid: System.Runtime.InteropServices
+  isExternal: false
+  name: System.Runtime.InteropServices
+  fullName: System.Runtime.InteropServices
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean

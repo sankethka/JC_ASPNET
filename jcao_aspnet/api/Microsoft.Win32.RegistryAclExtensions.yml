@@ -1,0 +1,127 @@
+items:
+- uid: Microsoft.Win32.RegistryAclExtensions
+  id: RegistryAclExtensions
+  parent: Microsoft.Win32
+  children:
+  - Microsoft.Win32.RegistryAclExtensions.GetAccessControl(Microsoft.Win32.RegistryKey)
+  - Microsoft.Win32.RegistryAclExtensions.GetAccessControl(Microsoft.Win32.RegistryKey,System.Security.AccessControl.AccessControlSections)
+  - Microsoft.Win32.RegistryAclExtensions.SetAccessControl(Microsoft.Win32.RegistryKey,System.Security.AccessControl.RegistrySecurity)
+  name: RegistryAclExtensions
+  fullName: Microsoft.Win32.RegistryAclExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Microsoft.Win32.Registry.AccessControl/src/Microsoft/Win32/RegistryAclExtensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/Microsoft.Win32.Registry.AccessControl/src/Microsoft/Win32/RegistryAclExtensions.cs
+    startLine: 10
+  assemblies:
+  - Microsoft.Win32.Registry.AccessControl
+  namespace: Microsoft.Win32
+  syntax:
+    content: 'public class RegistryAclExtensions : object'
+    content.vb: Public Class RegistryAclExtensions Inherits Object
+  inheritance:
+  - System.Object
+- uid: Microsoft.Win32.RegistryAclExtensions.GetAccessControl(Microsoft.Win32.RegistryKey)
+  id: GetAccessControl(Microsoft.Win32.RegistryKey)
+  parent: Microsoft.Win32.RegistryAclExtensions
+  name: GetAccessControl(RegistryKey)
+  fullName: Microsoft.Win32.RegistryAclExtensions.GetAccessControl(Microsoft.Win32.RegistryKey)
+  type: Method
+  source:
+    remote: &o0
+      path: src/Microsoft.Win32.Registry.AccessControl/ref/Microsoft.Win32.Registry.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/Microsoft.Win32.Registry.AccessControl/ref/Microsoft.Win32.Registry.AccessControl.cs
+    startLine: 10
+  assemblies:
+  - Microsoft.Win32.Registry.AccessControl
+  namespace: Microsoft.Win32
+  syntax:
+    content: public static RegistrySecurity GetAccessControl(RegistryKey key)
+    content.vb: Public Shared Function GetAccessControl(key As RegistryKey) As RegistrySecurity
+    parameters:
+    - id: key
+      type: Microsoft.Win32.RegistryKey
+    return:
+      type: System.Security.AccessControl.RegistrySecurity
+- uid: Microsoft.Win32.RegistryAclExtensions.GetAccessControl(Microsoft.Win32.RegistryKey,System.Security.AccessControl.AccessControlSections)
+  id: GetAccessControl(Microsoft.Win32.RegistryKey,System.Security.AccessControl.AccessControlSections)
+  parent: Microsoft.Win32.RegistryAclExtensions
+  name: GetAccessControl(RegistryKey, AccessControlSections)
+  fullName: Microsoft.Win32.RegistryAclExtensions.GetAccessControl(Microsoft.Win32.RegistryKey, System.Security.AccessControl.AccessControlSections)
+  type: Method
+  source:
+    remote: *o0
+    path: src/Microsoft.Win32.Registry.AccessControl/ref/Microsoft.Win32.Registry.AccessControl.cs
+    startLine: 11
+  assemblies:
+  - Microsoft.Win32.Registry.AccessControl
+  namespace: Microsoft.Win32
+  syntax:
+    content: public static RegistrySecurity GetAccessControl(RegistryKey key, AccessControlSections includeSections)
+    content.vb: Public Shared Function GetAccessControl(key As RegistryKey, includeSections As AccessControlSections) As RegistrySecurity
+    parameters:
+    - id: key
+      type: Microsoft.Win32.RegistryKey
+    - id: includeSections
+      type: System.Security.AccessControl.AccessControlSections
+    return:
+      type: System.Security.AccessControl.RegistrySecurity
+- uid: Microsoft.Win32.RegistryAclExtensions.SetAccessControl(Microsoft.Win32.RegistryKey,System.Security.AccessControl.RegistrySecurity)
+  id: SetAccessControl(Microsoft.Win32.RegistryKey,System.Security.AccessControl.RegistrySecurity)
+  parent: Microsoft.Win32.RegistryAclExtensions
+  name: SetAccessControl(RegistryKey, RegistrySecurity)
+  fullName: Microsoft.Win32.RegistryAclExtensions.SetAccessControl(Microsoft.Win32.RegistryKey, System.Security.AccessControl.RegistrySecurity)
+  type: Method
+  source:
+    remote: *o0
+    path: src/Microsoft.Win32.Registry.AccessControl/ref/Microsoft.Win32.Registry.AccessControl.cs
+    startLine: 12
+  assemblies:
+  - Microsoft.Win32.Registry.AccessControl
+  namespace: Microsoft.Win32
+  syntax:
+    content: public static void SetAccessControl(RegistryKey key, RegistrySecurity registrySecurity)
+    content.vb: Public Shared Sub SetAccessControl(key As RegistryKey, registrySecurity As RegistrySecurity)
+    parameters:
+    - id: key
+      type: Microsoft.Win32.RegistryKey
+    - id: registrySecurity
+      type: System.Security.AccessControl.RegistrySecurity
+references:
+- uid: Microsoft.Win32
+  isExternal: false
+  name: Microsoft.Win32
+  fullName: Microsoft.Win32
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: Microsoft.Win32.RegistryKey
+  parent: Microsoft.Win32
+  isExternal: false
+  name: RegistryKey
+  fullName: Microsoft.Win32.RegistryKey
+- uid: System.Security.AccessControl.RegistrySecurity
+  parent: System.Security.AccessControl
+  isExternal: false
+  name: RegistrySecurity
+  fullName: System.Security.AccessControl.RegistrySecurity
+- uid: System.Security.AccessControl
+  isExternal: false
+  name: System.Security.AccessControl
+  fullName: System.Security.AccessControl
+- uid: System.Security.AccessControl.AccessControlSections
+  parent: System.Security.AccessControl
+  isExternal: false
+  name: AccessControlSections
+  fullName: System.Security.AccessControl.AccessControlSections

@@ -1,0 +1,1582 @@
+items:
+- uid: System.Collections.ArrayList
+  id: ArrayList
+  parent: System.Collections
+  children:
+  - System.Collections.ArrayList.#ctor
+  - System.Collections.ArrayList.#ctor(System.Collections.ICollection)
+  - System.Collections.ArrayList.#ctor(System.Int32)
+  - System.Collections.ArrayList.Adapter(System.Collections.IList)
+  - System.Collections.ArrayList.Add(System.Object)
+  - System.Collections.ArrayList.AddRange(System.Collections.ICollection)
+  - System.Collections.ArrayList.BinarySearch(System.Int32,System.Int32,System.Object,System.Collections.IComparer)
+  - System.Collections.ArrayList.BinarySearch(System.Object)
+  - System.Collections.ArrayList.BinarySearch(System.Object,System.Collections.IComparer)
+  - System.Collections.ArrayList.Capacity
+  - System.Collections.ArrayList.Clear
+  - System.Collections.ArrayList.Clone
+  - System.Collections.ArrayList.Contains(System.Object)
+  - System.Collections.ArrayList.CopyTo(System.Array)
+  - System.Collections.ArrayList.CopyTo(System.Array,System.Int32)
+  - System.Collections.ArrayList.CopyTo(System.Int32,System.Array,System.Int32,System.Int32)
+  - System.Collections.ArrayList.Count
+  - System.Collections.ArrayList.FixedSize(System.Collections.ArrayList)
+  - System.Collections.ArrayList.FixedSize(System.Collections.IList)
+  - System.Collections.ArrayList.GetEnumerator
+  - System.Collections.ArrayList.GetEnumerator(System.Int32,System.Int32)
+  - System.Collections.ArrayList.GetRange(System.Int32,System.Int32)
+  - System.Collections.ArrayList.IndexOf(System.Object)
+  - System.Collections.ArrayList.IndexOf(System.Object,System.Int32)
+  - System.Collections.ArrayList.IndexOf(System.Object,System.Int32,System.Int32)
+  - System.Collections.ArrayList.Insert(System.Int32,System.Object)
+  - System.Collections.ArrayList.InsertRange(System.Int32,System.Collections.ICollection)
+  - System.Collections.ArrayList.IsFixedSize
+  - System.Collections.ArrayList.IsReadOnly
+  - System.Collections.ArrayList.IsSynchronized
+  - System.Collections.ArrayList.Item(System.Int32)
+  - System.Collections.ArrayList.LastIndexOf(System.Object)
+  - System.Collections.ArrayList.LastIndexOf(System.Object,System.Int32)
+  - System.Collections.ArrayList.LastIndexOf(System.Object,System.Int32,System.Int32)
+  - System.Collections.ArrayList.ReadOnly(System.Collections.ArrayList)
+  - System.Collections.ArrayList.ReadOnly(System.Collections.IList)
+  - System.Collections.ArrayList.Remove(System.Object)
+  - System.Collections.ArrayList.RemoveAt(System.Int32)
+  - System.Collections.ArrayList.RemoveRange(System.Int32,System.Int32)
+  - System.Collections.ArrayList.Repeat(System.Object,System.Int32)
+  - System.Collections.ArrayList.Reverse
+  - System.Collections.ArrayList.Reverse(System.Int32,System.Int32)
+  - System.Collections.ArrayList.SetRange(System.Int32,System.Collections.ICollection)
+  - System.Collections.ArrayList.Sort
+  - System.Collections.ArrayList.Sort(System.Collections.IComparer)
+  - System.Collections.ArrayList.Sort(System.Int32,System.Int32,System.Collections.IComparer)
+  - System.Collections.ArrayList.Synchronized(System.Collections.ArrayList)
+  - System.Collections.ArrayList.Synchronized(System.Collections.IList)
+  - System.Collections.ArrayList.SyncRoot
+  - System.Collections.ArrayList.ToArray
+  - System.Collections.ArrayList.ToArray(System.Type)
+  - System.Collections.ArrayList.TrimToSize
+  name: ArrayList
+  fullName: System.Collections.ArrayList
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Collections/ArrayList.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 34
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Implements the <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> interface using an array whose size is dynamically increased as required.To browse the .NET Framework source code for this type, see the Reference Source.
+  syntax:
+    content: 'public class ArrayList : IEnumerable, IList'
+    content.vb: Public Class ArrayList Inherits IEnumerable Implements IList
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.IList
+- uid: System.Collections.ArrayList.#ctor
+  id: '#ctor'
+  parent: System.Collections.ArrayList
+  name: ArrayList()
+  fullName: System.Collections.ArrayList.ArrayList()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 61
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Initializes a new instance of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> class that is empty and has the default initial capacity.
+  syntax:
+    content: public ArrayList()
+    content.vb: Public Sub New
+- uid: System.Collections.ArrayList.#ctor(System.Collections.ICollection)
+  id: '#ctor(System.Collections.ICollection)'
+  parent: System.Collections.ArrayList
+  name: ArrayList(ICollection)
+  fullName: System.Collections.ArrayList.ArrayList(System.Collections.ICollection)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 83
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Initializes a new instance of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> class that contains elements copied from the specified collection and that has the same initial capacity as the number of elements copied.
+  syntax:
+    content: public ArrayList(ICollection c)
+    content.vb: Public Sub New(c As ICollection)
+    parameters:
+    - id: c
+      type: System.Collections.ICollection
+      description: The <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> whose elements are copied to the new list.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*c* is null.'
+- uid: System.Collections.ArrayList.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: System.Collections.ArrayList
+  name: ArrayList(Int32)
+  fullName: System.Collections.ArrayList.ArrayList(System.Int32)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 69
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Initializes a new instance of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> class that is empty and has the specified initial capacity.
+  syntax:
+    content: public ArrayList(int capacity)
+    content.vb: Public Sub New(capacity As Integer)
+    parameters:
+    - id: capacity
+      type: System.Int32
+      description: The number of elements that the new list can initially store.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*capacity* is less than zero.'
+- uid: System.Collections.ArrayList.Capacity
+  id: Capacity
+  parent: System.Collections.ArrayList
+  name: Capacity
+  fullName: System.Collections.ArrayList.Capacity
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 103
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets or sets the number of elements that the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> can contain.
+  syntax:
+    content: public virtual int Capacity { get; set; }
+    content.vb: Public Overridable Property Capacity As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of elements that the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> can contain.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: <xref href="System.Collections.ArrayList.Capacity" data-throw-if-not-resolved="false"></xref> is set to a value that is less than <xref href="System.Collections.ArrayList.Count" data-throw-if-not-resolved="false"></xref>.
+  - type: System.OutOfMemoryException
+    description: There is not enough memory available on the system.
+- uid: System.Collections.ArrayList.Count
+  id: Count
+  parent: System.Collections.ArrayList
+  name: Count
+  fullName: System.Collections.ArrayList.Count
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 132
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets the number of elements actually contained in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual int Count { get; }
+    content.vb: Public Overridable ReadOnly Property Count As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of elements actually contained in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Collections.ArrayList.IsFixedSize
+  id: IsFixedSize
+  parent: System.Collections.ArrayList
+  name: IsFixedSize
+  fullName: System.Collections.ArrayList.IsFixedSize
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 139
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets a value indicating whether the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size.
+  syntax:
+    content: public virtual bool IsFixedSize { get; }
+    content.vb: Public Overridable ReadOnly Property IsFixedSize As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size; otherwise, false. The default is false.
+- uid: System.Collections.ArrayList.IsReadOnly
+  id: IsReadOnly
+  parent: System.Collections.ArrayList
+  name: IsReadOnly
+  fullName: System.Collections.ArrayList.IsReadOnly
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 145
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets a value indicating whether the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.
+  syntax:
+    content: public virtual bool IsReadOnly { get; }
+    content.vb: Public Overridable ReadOnly Property IsReadOnly As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only; otherwise, false. The default is false.
+- uid: System.Collections.ArrayList.IsSynchronized
+  id: IsSynchronized
+  parent: System.Collections.ArrayList
+  name: IsSynchronized
+  fullName: System.Collections.ArrayList.IsSynchronized
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 150
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets a value indicating whether access to the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is synchronized (thread safe).
+  syntax:
+    content: public virtual bool IsSynchronized { get; }
+    content.vb: Public Overridable ReadOnly Property IsSynchronized As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if access to the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is synchronized (thread safe); otherwise, false. The default is false.
+- uid: System.Collections.ArrayList.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: System.Collections.ArrayList
+  name: Item[Int32]
+  name.vb: Item(Int32)
+  fullName: System.Collections.ArrayList.Item[System.Int32]
+  fullName.vb: System.Collections.ArrayList.Item(System.Int32)
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 166
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets or sets the element at the specified index.
+  syntax:
+    content: public virtual object this[int index] { get; set; }
+    content.vb: Public Overridable Property Item(index As Integer) As Object
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the element to get or set.
+    return:
+      type: System.Object
+      description: The element at the specified index.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *index* is equal to or greater than <xref href="System.Collections.ArrayList.Count" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.Collections.ArrayList.SyncRoot
+  id: SyncRoot
+  parent: System.Collections.ArrayList
+  name: SyncRoot
+  fullName: System.Collections.ArrayList.SyncRoot
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 155
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets an object that can be used to synchronize access to the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual object SyncRoot { get; }
+    content.vb: Public Overridable ReadOnly Property SyncRoot As Object
+    parameters: []
+    return:
+      type: System.Object
+      description: An object that can be used to synchronize access to the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Collections.ArrayList.Adapter(System.Collections.IList)
+  id: Adapter(System.Collections.IList)
+  parent: System.Collections.ArrayList
+  name: Adapter(IList)
+  fullName: System.Collections.ArrayList.Adapter(System.Collections.IList)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 188
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Creates an <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> wrapper for a specific <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public static ArrayList Adapter(IList list)
+    content.vb: Public Shared Function Adapter(list As IList) As ArrayList
+    parameters:
+    - id: list
+      type: System.Collections.IList
+      description: The <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> to wrap.
+    return:
+      type: System.Collections.ArrayList
+      description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> wrapper around the <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*list* is null.'
+- uid: System.Collections.ArrayList.Add(System.Object)
+  id: Add(System.Object)
+  parent: System.Collections.ArrayList
+  name: Add(Object)
+  fullName: System.Collections.ArrayList.Add(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 200
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Adds an object to the end of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual int Add(object value)
+    content.vb: Public Overridable Function Add(value As Object) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to be added to the end of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The value can be null.
+    return:
+      type: System.Int32
+      description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> index at which the *value* has been added.
+  exceptions:
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.-or- The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size.
+- uid: System.Collections.ArrayList.AddRange(System.Collections.ICollection)
+  id: AddRange(System.Collections.ICollection)
+  parent: System.Collections.ArrayList
+  name: AddRange(ICollection)
+  fullName: System.Collections.ArrayList.AddRange(System.Collections.ICollection)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 212
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Adds the elements of an <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> to the end of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual void AddRange(ICollection c)
+    content.vb: Public Overridable Sub AddRange(c As ICollection)
+    parameters:
+    - id: c
+      type: System.Collections.ICollection
+      description: The <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> whose elements should be added to the end of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The collection itself cannot be null, but it can contain elements that are null.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*c* is null.'
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.-or- The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size.
+- uid: System.Collections.ArrayList.BinarySearch(System.Int32,System.Int32,System.Object,System.Collections.IComparer)
+  id: BinarySearch(System.Int32,System.Int32,System.Object,System.Collections.IComparer)
+  parent: System.Collections.ArrayList
+  name: BinarySearch(Int32, Int32, Object, IComparer)
+  fullName: System.Collections.ArrayList.BinarySearch(System.Int32, System.Int32, System.Object, System.Collections.IComparer)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 236
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Searches a range of elements in the sorted <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> for an element using the specified comparer and returns the zero-based index of the element.
+  syntax:
+    content: public virtual int BinarySearch(int index, int count, object value, IComparer comparer)
+    content.vb: Public Overridable Function BinarySearch(index As Integer, count As Integer, value As Object, comparer As IComparer) As Integer
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based starting index of the range to search.
+    - id: count
+      type: System.Int32
+      description: The length of the range to search.
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to locate. The value can be null.
+    - id: comparer
+      type: System.Collections.IComparer
+      description: The <xref href="System.Collections.IComparer" data-throw-if-not-resolved="false"></xref> implementation to use when comparing elements.-or- null to use the default comparer that is the <xref href="System.IComparable" data-throw-if-not-resolved="false"></xref> implementation of each element.
+    return:
+      type: System.Int32
+      description: The zero-based index of *value* in the sorted <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>, if *value* is found; otherwise, a negative number, which is the bitwise complement of the index of the next element that is larger than *value* or, if there is no larger element, the bitwise complement of <xref href="System.Collections.ArrayList.Count" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ArgumentException
+    description: '*index* and *count* do not denote a valid range in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.-or- *comparer* is null and neither *value* nor the elements of <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> implement the <xref href="System.IComparable" data-throw-if-not-resolved="false"></xref> interface.'
+  - type: System.InvalidOperationException
+    description: '*comparer* is null and *value* is not of the same type as the elements of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *count* is less than zero.'
+- uid: System.Collections.ArrayList.BinarySearch(System.Object)
+  id: BinarySearch(System.Object)
+  parent: System.Collections.ArrayList
+  name: BinarySearch(Object)
+  fullName: System.Collections.ArrayList.BinarySearch(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 250
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Searches the entire sorted <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> for an element using the default comparer and returns the zero-based index of the element.
+  syntax:
+    content: public virtual int BinarySearch(object value)
+    content.vb: Public Overridable Function BinarySearch(value As Object) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to locate. The value can be null.
+    return:
+      type: System.Int32
+      description: The zero-based index of *value* in the sorted <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>, if *value* is found; otherwise, a negative number, which is the bitwise complement of the index of the next element that is larger than *value* or, if there is no larger element, the bitwise complement of <xref href="System.Collections.ArrayList.Count" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ArgumentException
+    description: Neither *value* nor the elements of <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> implement the <xref href="System.IComparable" data-throw-if-not-resolved="false"></xref> interface.
+  - type: System.InvalidOperationException
+    description: '*value* is not of the same type as the elements of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.Collections.ArrayList.BinarySearch(System.Object,System.Collections.IComparer)
+  id: BinarySearch(System.Object,System.Collections.IComparer)
+  parent: System.Collections.ArrayList
+  name: BinarySearch(Object, IComparer)
+  fullName: System.Collections.ArrayList.BinarySearch(System.Object, System.Collections.IComparer)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 256
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Searches the entire sorted <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> for an element using the specified comparer and returns the zero-based index of the element.
+  syntax:
+    content: public virtual int BinarySearch(object value, IComparer comparer)
+    content.vb: Public Overridable Function BinarySearch(value As Object, comparer As IComparer) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to locate. The value can be null.
+    - id: comparer
+      type: System.Collections.IComparer
+      description: The <xref href="System.Collections.IComparer" data-throw-if-not-resolved="false"></xref> implementation to use when comparing elements.-or- null to use the default comparer that is the <xref href="System.IComparable" data-throw-if-not-resolved="false"></xref> implementation of each element.
+    return:
+      type: System.Int32
+      description: The zero-based index of *value* in the sorted <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>, if *value* is found; otherwise, a negative number, which is the bitwise complement of the index of the next element that is larger than *value* or, if there is no larger element, the bitwise complement of <xref href="System.Collections.ArrayList.Count" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ArgumentException
+    description: '*comparer* is null and neither *value* nor the elements of <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> implement the <xref href="System.IComparable" data-throw-if-not-resolved="false"></xref> interface.'
+  - type: System.InvalidOperationException
+    description: '*comparer* is null and *value* is not of the same type as the elements of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.Collections.ArrayList.Clear
+  id: Clear
+  parent: System.Collections.ArrayList
+  name: Clear()
+  fullName: System.Collections.ArrayList.Clear()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 264
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Removes all elements from the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual void Clear()
+    content.vb: Public Overridable Sub Clear
+  exceptions:
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.-or- The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size.
+- uid: System.Collections.ArrayList.Clone
+  id: Clone
+  parent: System.Collections.ArrayList
+  name: Clone()
+  fullName: System.Collections.ArrayList.Clone()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 276
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Creates a shallow copy of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual object Clone()
+    content.vb: Public Overridable Function Clone As Object
+    return:
+      type: System.Object
+      description: A shallow copy of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Collections.ArrayList.Contains(System.Object)
+  id: Contains(System.Object)
+  parent: System.Collections.ArrayList
+  name: Contains(Object)
+  fullName: System.Collections.ArrayList.Contains(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 291
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Determines whether an element is in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual bool Contains(object item)
+    content.vb: Public Overridable Function Contains(item As Object) As Boolean
+    parameters:
+    - id: item
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to locate in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The value can be null.
+    return:
+      type: System.Boolean
+      description: true if *item* is found in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>; otherwise, false.
+- uid: System.Collections.ArrayList.CopyTo(System.Array)
+  id: CopyTo(System.Array)
+  parent: System.Collections.ArrayList
+  name: CopyTo(Array)
+  fullName: System.Collections.ArrayList.CopyTo(System.Array)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 309
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Copies the entire <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> to a compatible one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref>, starting at the beginning of the target array.
+  syntax:
+    content: public virtual void CopyTo(Array array)
+    content.vb: Public Overridable Sub CopyTo(array As Array)
+    parameters:
+    - id: array
+      type: System.Array
+      description: The one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref> that is the destination of the elements copied from <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The <xref href="System.Array" data-throw-if-not-resolved="false"></xref> must have zero-based indexing.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*array* is null.'
+  - type: System.ArgumentException
+    description: '*array* is multidimensional.-or- The number of elements in the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is greater than the number of elements that the destination *array* can contain.'
+  - type: System.InvalidCastException
+    description: The type of the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> cannot be cast automatically to the type of the destination *array*.
+- uid: System.Collections.ArrayList.CopyTo(System.Array,System.Int32)
+  id: CopyTo(System.Array,System.Int32)
+  parent: System.Collections.ArrayList
+  name: CopyTo(Array, Int32)
+  fullName: System.Collections.ArrayList.CopyTo(System.Array, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 316
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Copies the entire <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> to a compatible one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref>, starting at the specified index of the target array.
+  syntax:
+    content: public virtual void CopyTo(Array array, int arrayIndex)
+    content.vb: Public Overridable Sub CopyTo(array As Array, arrayIndex As Integer)
+    parameters:
+    - id: array
+      type: System.Array
+      description: The one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref> that is the destination of the elements copied from <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The <xref href="System.Array" data-throw-if-not-resolved="false"></xref> must have zero-based indexing.
+    - id: arrayIndex
+      type: System.Int32
+      description: The zero-based index in *array* at which copying begins.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*array* is null.'
+  - type: System.ArgumentOutOfRangeException
+    description: '*arrayIndex* is less than zero.'
+  - type: System.ArgumentException
+    description: '*array* is multidimensional.-or- The number of elements in the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is greater than the available space from *arrayIndex* to the end of the destination *array*.'
+  - type: System.InvalidCastException
+    description: The type of the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> cannot be cast automatically to the type of the destination *array*.
+- uid: System.Collections.ArrayList.CopyTo(System.Int32,System.Array,System.Int32,System.Int32)
+  id: CopyTo(System.Int32,System.Array,System.Int32,System.Int32)
+  parent: System.Collections.ArrayList
+  name: CopyTo(Int32, Array, Int32, Int32)
+  fullName: System.Collections.ArrayList.CopyTo(System.Int32, System.Array, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 328
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Copies a range of elements from the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> to a compatible one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref>, starting at the specified index of the target array.
+  syntax:
+    content: public virtual void CopyTo(int index, Array array, int arrayIndex, int count)
+    content.vb: Public Overridable Sub CopyTo(index As Integer, array As Array, arrayIndex As Integer, count As Integer)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index in the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> at which copying begins.
+    - id: array
+      type: System.Array
+      description: The one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref> that is the destination of the elements copied from <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The <xref href="System.Array" data-throw-if-not-resolved="false"></xref> must have zero-based indexing.
+    - id: arrayIndex
+      type: System.Int32
+      description: The zero-based index in *array* at which copying begins.
+    - id: count
+      type: System.Int32
+      description: The number of elements to copy.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*array* is null.'
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *arrayIndex* is less than zero.-or- *count* is less than zero.'
+  - type: System.ArgumentException
+    description: '*array* is multidimensional.-or- *index* is equal to or greater than the <xref href="System.Collections.ArrayList.Count" data-throw-if-not-resolved="false"></xref> of the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.-or- The number of elements from *index* to the end of the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is greater than the available space from *arrayIndex* to the end of the destination *array*.'
+  - type: System.InvalidCastException
+    description: The type of the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> cannot be cast automatically to the type of the destination *array*.
+- uid: System.Collections.ArrayList.FixedSize(System.Collections.ArrayList)
+  id: FixedSize(System.Collections.ArrayList)
+  parent: System.Collections.ArrayList
+  name: FixedSize(ArrayList)
+  fullName: System.Collections.ArrayList.FixedSize(System.Collections.ArrayList)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 367
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns an <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> wrapper with a fixed size.
+  syntax:
+    content: public static ArrayList FixedSize(ArrayList list)
+    content.vb: Public Shared Function FixedSize(list As ArrayList) As ArrayList
+    parameters:
+    - id: list
+      type: System.Collections.ArrayList
+      description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> to wrap.
+    return:
+      type: System.Collections.ArrayList
+      description: An <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> wrapper with a fixed size.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*list* is null.'
+- uid: System.Collections.ArrayList.FixedSize(System.Collections.IList)
+  id: FixedSize(System.Collections.IList)
+  parent: System.Collections.ArrayList
+  name: FixedSize(IList)
+  fullName: System.Collections.ArrayList.FixedSize(System.Collections.IList)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 356
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns an <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> wrapper with a fixed size.
+  syntax:
+    content: public static IList FixedSize(IList list)
+    content.vb: Public Shared Function FixedSize(list As IList) As IList
+    parameters:
+    - id: list
+      type: System.Collections.IList
+      description: The <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> to wrap.
+    return:
+      type: System.Collections.IList
+      description: An <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> wrapper with a fixed size.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*list* is null.'
+- uid: System.Collections.ArrayList.GetEnumerator
+  id: GetEnumerator
+  parent: System.Collections.ArrayList
+  name: GetEnumerator()
+  fullName: System.Collections.ArrayList.GetEnumerator()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 380
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns an enumerator for the entire <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual IEnumerator GetEnumerator()
+    content.vb: Public Overridable Function GetEnumerator As IEnumerator
+    return:
+      type: System.Collections.IEnumerator
+      description: An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> for the entire <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Collections.ArrayList.GetEnumerator(System.Int32,System.Int32)
+  id: GetEnumerator(System.Int32,System.Int32)
+  parent: System.Collections.ArrayList
+  name: GetEnumerator(Int32, Int32)
+  fullName: System.Collections.ArrayList.GetEnumerator(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 390
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns an enumerator for a range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual IEnumerator GetEnumerator(int index, int count)
+    content.vb: Public Overridable Function GetEnumerator(index As Integer, count As Integer) As IEnumerator
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based starting index of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> section that the enumerator should refer to.
+    - id: count
+      type: System.Int32
+      description: The number of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> section that the enumerator should refer to.
+    return:
+      type: System.Collections.IEnumerator
+      description: An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> for the specified range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *count* is less than zero.'
+  - type: System.ArgumentException
+    description: '*index* and *count* do not specify a valid range in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.Collections.ArrayList.GetRange(System.Int32,System.Int32)
+  id: GetRange(System.Int32,System.Int32)
+  parent: System.Collections.ArrayList
+  name: GetRange(Int32, Int32)
+  fullName: System.Collections.ArrayList.GetRange(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 684
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns an <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> which represents a subset of the elements in the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual ArrayList GetRange(int index, int count)
+    content.vb: Public Overridable Function GetRange(index As Integer, count As Integer) As ArrayList
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> index at which the range starts.
+    - id: count
+      type: System.Int32
+      description: The number of elements in the range.
+    return:
+      type: System.Collections.ArrayList
+      description: An <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> which represents a subset of the elements in the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *count* is less than zero.'
+  - type: System.ArgumentException
+    description: '*index* and *count* do not denote a valid range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.Collections.ArrayList.IndexOf(System.Object)
+  id: IndexOf(System.Object)
+  parent: System.Collections.ArrayList
+  name: IndexOf(Object)
+  fullName: System.Collections.ArrayList.IndexOf(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 411
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Searches for the specified <xref href="System.Object" data-throw-if-not-resolved="false"></xref> and returns the zero-based index of the first occurrence within the entire <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual int IndexOf(object value)
+    content.vb: Public Overridable Function IndexOf(value As Object) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to locate in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The value can be null.
+    return:
+      type: System.Int32
+      description: The zero-based index of the first occurrence of *value* within the entire <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>, if found; otherwise, -1.
+- uid: System.Collections.ArrayList.IndexOf(System.Object,System.Int32)
+  id: IndexOf(System.Object,System.Int32)
+  parent: System.Collections.ArrayList
+  name: IndexOf(Object, Int32)
+  fullName: System.Collections.ArrayList.IndexOf(System.Object, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 425
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Searches for the specified <xref href="System.Object" data-throw-if-not-resolved="false"></xref> and returns the zero-based index of the first occurrence within the range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> that extends from the specified index to the last element.
+  syntax:
+    content: public virtual int IndexOf(object value, int startIndex)
+    content.vb: Public Overridable Function IndexOf(value As Object, startIndex As Integer) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to locate in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The value can be null.
+    - id: startIndex
+      type: System.Int32
+      description: The zero-based starting index of the search. 0 (zero) is valid in an empty list.
+    return:
+      type: System.Int32
+      description: The zero-based index of the first occurrence of *value* within the range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> that extends from *startIndex* to the last element, if found; otherwise, -1.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*startIndex* is outside the range of valid indexes for the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.Collections.ArrayList.IndexOf(System.Object,System.Int32,System.Int32)
+  id: IndexOf(System.Object,System.Int32,System.Int32)
+  parent: System.Collections.ArrayList
+  name: IndexOf(Object, Int32, Int32)
+  fullName: System.Collections.ArrayList.IndexOf(System.Object, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 442
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Searches for the specified <xref href="System.Object" data-throw-if-not-resolved="false"></xref> and returns the zero-based index of the first occurrence within the range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> that starts at the specified index and contains the specified number of elements.
+  syntax:
+    content: public virtual int IndexOf(object value, int startIndex, int count)
+    content.vb: Public Overridable Function IndexOf(value As Object, startIndex As Integer, count As Integer) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to locate in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The value can be null.
+    - id: startIndex
+      type: System.Int32
+      description: The zero-based starting index of the search. 0 (zero) is valid in an empty list.
+    - id: count
+      type: System.Int32
+      description: The number of elements in the section to search.
+    return:
+      type: System.Int32
+      description: The zero-based index of the first occurrence of *value* within the range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> that starts at *startIndex* and contains *count* number of elements, if found; otherwise, -1.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*startIndex* is outside the range of valid indexes for the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.-or- *count* is less than zero.-or- *startIndex* and *count* do not specify a valid section in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.Collections.ArrayList.Insert(System.Int32,System.Object)
+  id: Insert(System.Int32,System.Object)
+  parent: System.Collections.ArrayList
+  name: Insert(Int32, Object)
+  fullName: System.Collections.ArrayList.Insert(System.Int32, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 455
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Inserts an element into the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> at the specified index.
+  syntax:
+    content: public virtual void Insert(int index, object value)
+    content.vb: Public Overridable Sub Insert(index As Integer, value As Object)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which *value* should be inserted.
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to insert. The value can be null.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *index* is greater than <xref href="System.Collections.ArrayList.Count" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.-or- The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size.
+- uid: System.Collections.ArrayList.InsertRange(System.Int32,System.Collections.ICollection)
+  id: InsertRange(System.Int32,System.Collections.ICollection)
+  parent: System.Collections.ArrayList
+  name: InsertRange(Int32, ICollection)
+  fullName: System.Collections.ArrayList.InsertRange(System.Int32, System.Collections.ICollection)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 475
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Inserts the elements of a collection into the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> at the specified index.
+  syntax:
+    content: public virtual void InsertRange(int index, ICollection c)
+    content.vb: Public Overridable Sub InsertRange(index As Integer, c As ICollection)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which the new elements should be inserted.
+    - id: c
+      type: System.Collections.ICollection
+      description: The <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> whose elements should be inserted into the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The collection itself cannot be null, but it can contain elements that are null.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*c* is null.'
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *index* is greater than <xref href="System.Collections.ArrayList.Count" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.-or- The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size.
+- uid: System.Collections.ArrayList.LastIndexOf(System.Object)
+  id: LastIndexOf(System.Object)
+  parent: System.Collections.ArrayList
+  name: LastIndexOf(Object)
+  fullName: System.Collections.ArrayList.LastIndexOf(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 506
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Searches for the specified <xref href="System.Object" data-throw-if-not-resolved="false"></xref> and returns the zero-based index of the last occurrence within the entire <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual int LastIndexOf(object value)
+    content.vb: Public Overridable Function LastIndexOf(value As Object) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to locate in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The value can be null.
+    return:
+      type: System.Int32
+      description: The zero-based index of the last occurrence of *value* within the entire the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>, if found; otherwise, -1.
+- uid: System.Collections.ArrayList.LastIndexOf(System.Object,System.Int32)
+  id: LastIndexOf(System.Object,System.Int32)
+  parent: System.Collections.ArrayList
+  name: LastIndexOf(Object, Int32)
+  fullName: System.Collections.ArrayList.LastIndexOf(System.Object, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 521
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Searches for the specified <xref href="System.Object" data-throw-if-not-resolved="false"></xref> and returns the zero-based index of the last occurrence within the range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> that extends from the first element to the specified index.
+  syntax:
+    content: public virtual int LastIndexOf(object value, int startIndex)
+    content.vb: Public Overridable Function LastIndexOf(value As Object, startIndex As Integer) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to locate in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The value can be null.
+    - id: startIndex
+      type: System.Int32
+      description: The zero-based starting index of the backward search.
+    return:
+      type: System.Int32
+      description: The zero-based index of the last occurrence of *value* within the range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> that extends from the first element to *startIndex*, if found; otherwise, -1.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*startIndex* is outside the range of valid indexes for the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.Collections.ArrayList.LastIndexOf(System.Object,System.Int32,System.Int32)
+  id: LastIndexOf(System.Object,System.Int32,System.Int32)
+  parent: System.Collections.ArrayList
+  name: LastIndexOf(Object, Int32, Int32)
+  fullName: System.Collections.ArrayList.LastIndexOf(System.Object, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 539
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Searches for the specified <xref href="System.Object" data-throw-if-not-resolved="false"></xref> and returns the zero-based index of the last occurrence within the range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> that contains the specified number of elements and ends at the specified index.
+  syntax:
+    content: public virtual int LastIndexOf(object value, int startIndex, int count)
+    content.vb: Public Overridable Function LastIndexOf(value As Object, startIndex As Integer, count As Integer) As Integer
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to locate in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The value can be null.
+    - id: startIndex
+      type: System.Int32
+      description: The zero-based starting index of the backward search.
+    - id: count
+      type: System.Int32
+      description: The number of elements in the section to search.
+    return:
+      type: System.Int32
+      description: The zero-based index of the last occurrence of *value* within the range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> that contains *count* number of elements and ends at *startIndex*, if found; otherwise, -1.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*startIndex* is outside the range of valid indexes for the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.-or- *count* is less than zero.-or- *startIndex* and *count* do not specify a valid section in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+- uid: System.Collections.ArrayList.ReadOnly(System.Collections.ArrayList)
+  id: ReadOnly(System.Collections.ArrayList)
+  parent: System.Collections.ArrayList
+  name: ReadOnly(ArrayList)
+  fullName: System.Collections.ArrayList.ReadOnly(System.Collections.ArrayList)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 569
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns a read-only <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> wrapper.
+  syntax:
+    content: public static ArrayList ReadOnly(ArrayList list)
+    content.vb: Public Shared Function ReadOnly(list As ArrayList) As ArrayList
+    parameters:
+    - id: list
+      type: System.Collections.ArrayList
+      description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> to wrap.
+    return:
+      type: System.Collections.ArrayList
+      description: A read-only <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> wrapper around *list*.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*list* is null.'
+- uid: System.Collections.ArrayList.ReadOnly(System.Collections.IList)
+  id: ReadOnly(System.Collections.IList)
+  parent: System.Collections.ArrayList
+  name: ReadOnly(IList)
+  fullName: System.Collections.ArrayList.ReadOnly(System.Collections.IList)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 557
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns a read-only <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> wrapper.
+  syntax:
+    content: public static IList ReadOnly(IList list)
+    content.vb: Public Shared Function ReadOnly(list As IList) As IList
+    parameters:
+    - id: list
+      type: System.Collections.IList
+      description: The <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> to wrap.
+    return:
+      type: System.Collections.IList
+      description: A read-only <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> wrapper around *list*.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*list* is null.'
+- uid: System.Collections.ArrayList.Remove(System.Object)
+  id: Remove(System.Object)
+  parent: System.Collections.ArrayList
+  name: Remove(Object)
+  fullName: System.Collections.ArrayList.Remove(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 580
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Removes the first occurrence of a specific object from the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual void Remove(object obj)
+    content.vb: Public Overridable Sub Remove(obj As Object)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to remove from the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The value can be null.
+  exceptions:
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.-or- The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size.
+- uid: System.Collections.ArrayList.RemoveAt(System.Int32)
+  id: RemoveAt(System.Int32)
+  parent: System.Collections.ArrayList
+  name: RemoveAt(Int32)
+  fullName: System.Collections.ArrayList.RemoveAt(System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 592
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Removes the element at the specified index of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual void RemoveAt(int index)
+    content.vb: Public Overridable Sub RemoveAt(index As Integer)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the element to remove.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *index* is equal to or greater than <xref href="System.Collections.ArrayList.Count" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.-or- The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size.
+- uid: System.Collections.ArrayList.RemoveRange(System.Int32,System.Int32)
+  id: RemoveRange(System.Int32,System.Int32)
+  parent: System.Collections.ArrayList
+  name: RemoveRange(Int32, Int32)
+  fullName: System.Collections.ArrayList.RemoveRange(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 608
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Removes a range of elements from the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual void RemoveRange(int index, int count)
+    content.vb: Public Overridable Sub RemoveRange(index As Integer, count As Integer)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based starting index of the range of elements to remove.
+    - id: count
+      type: System.Int32
+      description: The number of elements to remove.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *count* is less than zero.'
+  - type: System.ArgumentException
+    description: '*index* and *count* do not denote a valid range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.-or- The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size.
+- uid: System.Collections.ArrayList.Repeat(System.Object,System.Int32)
+  id: Repeat(System.Object,System.Int32)
+  parent: System.Collections.ArrayList
+  name: Repeat(Object, Int32)
+  fullName: System.Collections.ArrayList.Repeat(System.Object, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 632
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns an <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> whose elements are copies of the specified value.
+  syntax:
+    content: public static ArrayList Repeat(object value, int count)
+    content.vb: Public Shared Function Repeat(value As Object, count As Integer) As ArrayList
+    parameters:
+    - id: value
+      type: System.Object
+      description: The <xref href="System.Object" data-throw-if-not-resolved="false"></xref> to copy multiple times in the new <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The value can be null.
+    - id: count
+      type: System.Int32
+      description: The number of times *value* should be copied.
+    return:
+      type: System.Collections.ArrayList
+      description: An <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> with *count* number of elements, all of which are copies of *value*.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*count* is less than zero.'
+- uid: System.Collections.ArrayList.Reverse
+  id: Reverse
+  parent: System.Collections.ArrayList
+  name: Reverse()
+  fullName: System.Collections.ArrayList.Reverse()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 645
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Reverses the order of the elements in the entire <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual void Reverse()
+    content.vb: Public Overridable Sub Reverse
+  exceptions:
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.
+- uid: System.Collections.ArrayList.Reverse(System.Int32,System.Int32)
+  id: Reverse(System.Int32,System.Int32)
+  parent: System.Collections.ArrayList
+  name: Reverse(Int32, Int32)
+  fullName: System.Collections.ArrayList.Reverse(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 657
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Reverses the order of the elements in the specified range.
+  syntax:
+    content: public virtual void Reverse(int index, int count)
+    content.vb: Public Overridable Sub Reverse(index As Integer, count As Integer)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based starting index of the range to reverse.
+    - id: count
+      type: System.Int32
+      description: The number of elements in the range to reverse.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *count* is less than zero.'
+  - type: System.ArgumentException
+    description: '*index* and *count* do not denote a valid range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.
+- uid: System.Collections.ArrayList.SetRange(System.Int32,System.Collections.ICollection)
+  id: SetRange(System.Int32,System.Collections.ICollection)
+  parent: System.Collections.ArrayList
+  name: SetRange(Int32, ICollection)
+  fullName: System.Collections.ArrayList.SetRange(System.Int32, System.Collections.ICollection)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 672
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Copies the elements of a collection over a range of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual void SetRange(int index, ICollection c)
+    content.vb: Public Overridable Sub SetRange(index As Integer, c As ICollection)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> index at which to start copying the elements of *c*.
+    - id: c
+      type: System.Collections.ICollection
+      description: The <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> whose elements to copy to the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>. The collection itself cannot be null, but it can contain elements that are null.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *index* plus the number of elements in *c* is greater than <xref href="System.Collections.ArrayList.Count" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.ArgumentNullException
+    description: '*c* is null.'
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.
+- uid: System.Collections.ArrayList.Sort
+  id: Sort
+  parent: System.Collections.ArrayList
+  name: Sort()
+  fullName: System.Collections.ArrayList.Sort()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 696
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Sorts the elements in the entire <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual void Sort()
+    content.vb: Public Overridable Sub Sort
+  exceptions:
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.
+- uid: System.Collections.ArrayList.Sort(System.Collections.IComparer)
+  id: Sort(System.Collections.IComparer)
+  parent: System.Collections.ArrayList
+  name: Sort(IComparer)
+  fullName: System.Collections.ArrayList.Sort(System.Collections.IComparer)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 703
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Sorts the elements in the entire <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> using the specified comparer.
+  syntax:
+    content: public virtual void Sort(IComparer comparer)
+    content.vb: Public Overridable Sub Sort(comparer As IComparer)
+    parameters:
+    - id: comparer
+      type: System.Collections.IComparer
+      description: The <xref href="System.Collections.IComparer" data-throw-if-not-resolved="false"></xref> implementation to use when comparing elements.-or- A null reference (Nothing in Visual Basic) to use the <xref href="System.IComparable" data-throw-if-not-resolved="false"></xref> implementation of each element.
+  exceptions:
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.
+  - type: System.InvalidOperationException
+    description: An error occurred while comparing two elements.
+  - type: System.ArgumentException
+    description: null is passed for *comparer*, and the elements in the list do not implement <xref href="System.IComparable" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Collections.ArrayList.Sort(System.Int32,System.Int32,System.Collections.IComparer)
+  id: Sort(System.Int32,System.Int32,System.Collections.IComparer)
+  parent: System.Collections.ArrayList
+  name: Sort(Int32, Int32, IComparer)
+  fullName: System.Collections.ArrayList.Sort(System.Int32, System.Int32, System.Collections.IComparer)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 716
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Sorts the elements in a range of elements in <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> using the specified comparer.
+  syntax:
+    content: public virtual void Sort(int index, int count, IComparer comparer)
+    content.vb: Public Overridable Sub Sort(index As Integer, count As Integer, comparer As IComparer)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based starting index of the range to sort.
+    - id: count
+      type: System.Int32
+      description: The length of the range to sort.
+    - id: comparer
+      type: System.Collections.IComparer
+      description: The <xref href="System.Collections.IComparer" data-throw-if-not-resolved="false"></xref> implementation to use when comparing elements.-or- A null reference (Nothing in Visual Basic) to use the <xref href="System.IComparable" data-throw-if-not-resolved="false"></xref> implementation of each element.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or- *count* is less than zero.'
+  - type: System.ArgumentException
+    description: '*index* and *count* do not specify a valid range in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.
+  - type: System.InvalidOperationException
+    description: An error occurred while comparing two elements.
+- uid: System.Collections.ArrayList.Synchronized(System.Collections.ArrayList)
+  id: Synchronized(System.Collections.ArrayList)
+  parent: System.Collections.ArrayList
+  name: Synchronized(ArrayList)
+  fullName: System.Collections.ArrayList.Synchronized(System.Collections.ArrayList)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 742
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns an <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> wrapper that is synchronized (thread safe).
+  syntax:
+    content: public static ArrayList Synchronized(ArrayList list)
+    content.vb: Public Shared Function Synchronized(list As ArrayList) As ArrayList
+    parameters:
+    - id: list
+      type: System.Collections.ArrayList
+      description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> to synchronize.
+    return:
+      type: System.Collections.ArrayList
+      description: An <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> wrapper that is synchronized (thread safe).
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*list* is null.'
+- uid: System.Collections.ArrayList.Synchronized(System.Collections.IList)
+  id: Synchronized(System.Collections.IList)
+  parent: System.Collections.ArrayList
+  name: Synchronized(IList)
+  fullName: System.Collections.ArrayList.Synchronized(System.Collections.IList)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 731
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns an <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> wrapper that is synchronized (thread safe).
+  syntax:
+    content: public static IList Synchronized(IList list)
+    content.vb: Public Shared Function Synchronized(list As IList) As IList
+    parameters:
+    - id: list
+      type: System.Collections.IList
+      description: The <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> to synchronize.
+    return:
+      type: System.Collections.IList
+      description: An <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> wrapper that is synchronized (thread safe).
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*list* is null.'
+- uid: System.Collections.ArrayList.ToArray
+  id: ToArray
+  parent: System.Collections.ArrayList
+  name: ToArray()
+  fullName: System.Collections.ArrayList.ToArray()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 753
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Copies the elements of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> to a new <xref href="System.Object" data-throw-if-not-resolved="false"></xref> array.
+  syntax:
+    content: public virtual object[] ToArray()
+    content.vb: Public Overridable Function ToArray As Object()
+    return:
+      type: System.Object[]
+      description: An <xref href="System.Object" data-throw-if-not-resolved="false"></xref> array containing copies of the elements of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Collections.ArrayList.ToArray(System.Type)
+  id: ToArray(System.Type)
+  parent: System.Collections.ArrayList
+  name: ToArray(Type)
+  fullName: System.Collections.ArrayList.ToArray(System.Type)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 766
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Copies the elements of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> to a new array of the specified element type.
+  syntax:
+    content: public virtual Array ToArray(Type type)
+    content.vb: Public Overridable Function ToArray(type As Type) As Array
+    parameters:
+    - id: type
+      type: System.Type
+      description: The element <xref href="System.Type" data-throw-if-not-resolved="false"></xref> of the destination array to create and copy elements to.
+    return:
+      type: System.Array
+      description: An array of the specified element type containing copies of the elements of the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*type* is null.'
+  - type: System.InvalidCastException
+    description: The type of the source <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> cannot be cast automatically to the specified type.
+- uid: System.Collections.ArrayList.TrimToSize
+  id: TrimToSize
+  parent: System.Collections.ArrayList
+  name: TrimToSize()
+  fullName: System.Collections.ArrayList.TrimToSize()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/ArrayList.cs
+    startLine: 786
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Sets the capacity to the actual number of elements in the <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual void TrimToSize()
+    content.vb: Public Overridable Sub TrimToSize
+  exceptions:
+  - type: System.NotSupportedException
+    description: The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> is read-only.-or- The <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> has a fixed size.
+references:
+- uid: System.Collections
+  isExternal: false
+  name: System.Collections
+  fullName: System.Collections
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.Collections.IList
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IList
+  fullName: System.Collections.IList
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Collections.ICollection
+  parent: System.Collections
+  isExternal: false
+  name: Collections.ICollection
+  fullName: System.Collections.ICollection
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.ArrayList
+  parent: System.Collections
+  isExternal: false
+  name: ArrayList
+  fullName: System.Collections.ArrayList
+- uid: System.Collections.IComparer
+  parent: System.Collections
+  isExternal: false
+  name: IComparer
+  fullName: System.Collections.IComparer
+- uid: System.Array
+  parent: System
+  isExternal: false
+  name: Array
+  fullName: System.Array
+- uid: System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Object[]
+  isExternal: false
+  name: Object[]
+  name.vb: Object()
+  fullName: System.Object[]
+  fullName.vb: System.Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ()
+    fullName: ()
+- uid: System.Type
+  parent: System
+  isExternal: false
+  name: Type
+  fullName: System.Type
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentOutOfRangeException
+  isExternal: false
+  name: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.OutOfMemoryException
+  isExternal: false
+  name: OutOfMemoryException
+  fullName: System.OutOfMemoryException
+- uid: System.NotSupportedException
+  parent: System
+  isExternal: false
+  name: NotSupportedException
+  fullName: System.NotSupportedException
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.InvalidOperationException
+  parent: System
+  isExternal: false
+  name: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: System.InvalidCastException
+  isExternal: false
+  name: InvalidCastException
+  fullName: System.InvalidCastException

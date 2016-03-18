@@ -1,0 +1,413 @@
+items:
+- uid: System.Reflection.AssemblyName
+  id: AssemblyName
+  parent: System.Reflection
+  children:
+  - System.Reflection.AssemblyName.#ctor
+  - System.Reflection.AssemblyName.#ctor(System.String)
+  - System.Reflection.AssemblyName.ContentType
+  - System.Reflection.AssemblyName.CultureName
+  - System.Reflection.AssemblyName.Flags
+  - System.Reflection.AssemblyName.FullName
+  - System.Reflection.AssemblyName.GetPublicKey
+  - System.Reflection.AssemblyName.GetPublicKeyToken
+  - System.Reflection.AssemblyName.Name
+  - System.Reflection.AssemblyName.ProcessorArchitecture
+  - System.Reflection.AssemblyName.SetPublicKey(System.Byte[])
+  - System.Reflection.AssemblyName.SetPublicKeyToken(System.Byte[])
+  - System.Reflection.AssemblyName.ToString
+  - System.Reflection.AssemblyName.Version
+  name: AssemblyName
+  fullName: System.Reflection.AssemblyName
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 27
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Describes an assembly's unique identity in full.
+  syntax:
+    content: 'public sealed class AssemblyName : object'
+    content.vb: Public NotInheritable Class AssemblyName Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Reflection.AssemblyName.#ctor
+  id: '#ctor'
+  parent: System.Reflection.AssemblyName
+  name: AssemblyName()
+  fullName: System.Reflection.AssemblyName.AssemblyName()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 58
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Initializes a new instance of the <xref href="System.Reflection.AssemblyName" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: public AssemblyName()
+    content.vb: Public Sub New
+- uid: System.Reflection.AssemblyName.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: System.Reflection.AssemblyName
+  name: AssemblyName(String)
+  fullName: System.Reflection.AssemblyName.AssemblyName(System.String)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 375
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Initializes a new instance of the <xref href="System.Reflection.AssemblyName" data-throw-if-not-resolved="false"></xref> class with the specified display name.
+  syntax:
+    content: public AssemblyName(string assemblyName)
+    content.vb: Public Sub New(assemblyName As String)
+    parameters:
+    - id: assemblyName
+      type: System.String
+      description: The display name of the assembly, as returned by the <xref href="System.Reflection.AssemblyName.FullName" data-throw-if-not-resolved="false"></xref> property.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*assemblyName* is null.'
+  - type: System.ArgumentException
+    description: '*assemblyName* is a zero length string.'
+  - type: System.IO.FileLoadException
+    description: In the .NET for Windows Store apps or the Portable Class Library, catch the base class exception, <xref href="System.IO.IOException" data-throw-if-not-resolved="false"></xref>, instead.The referenced assembly could not be found, or could not be loaded.
+- uid: System.Reflection.AssemblyName.ContentType
+  id: ContentType
+  parent: System.Reflection.AssemblyName
+  name: ContentType
+  fullName: System.Reflection.AssemblyName.ContentType
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 146
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets or sets a value that indicates what type of content the assembly contains.
+  syntax:
+    content: public AssemblyContentType ContentType { get; set; }
+    content.vb: Public Property ContentType As AssemblyContentType
+    parameters: []
+    return:
+      type: System.Reflection.AssemblyContentType
+      description: A value that indicates what type of content the assembly contains.
+- uid: System.Reflection.AssemblyName.CultureName
+  id: CultureName
+  parent: System.Reflection.AssemblyName
+  name: CultureName
+  fullName: System.Reflection.AssemblyName.CultureName
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 95
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets or sets the name of the culture associated with the assembly.
+  syntax:
+    content: public string CultureName { get; set; }
+    content.vb: Public Property CultureName As String
+    parameters: []
+    return:
+      type: System.String
+      description: The culture name.
+- uid: System.Reflection.AssemblyName.Flags
+  id: Flags
+  parent: System.Reflection.AssemblyName
+  name: Flags
+  fullName: System.Reflection.AssemblyName.Flags
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 259
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets or sets the attributes of the assembly.
+  syntax:
+    content: public AssemblyNameFlags Flags { get; set; }
+    content.vb: Public Property Flags As AssemblyNameFlags
+    parameters: []
+    return:
+      type: System.Reflection.AssemblyNameFlags
+      description: A value that represents the attributes of the assembly.
+- uid: System.Reflection.AssemblyName.FullName
+  id: FullName
+  parent: System.Reflection.AssemblyName
+  name: FullName
+  fullName: System.Reflection.AssemblyName.FullName
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 286
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets the full name of the assembly, also known as the display name.
+  syntax:
+    content: public string FullName { get; }
+    content.vb: Public ReadOnly Property FullName As String
+    parameters: []
+    return:
+      type: System.String
+      description: A string that is the full name of the assembly, also known as the display name.
+- uid: System.Reflection.AssemblyName.Name
+  id: Name
+  parent: System.Reflection.AssemblyName
+  name: Name
+  fullName: System.Reflection.AssemblyName.Name
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 68
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets or sets the simple name of the assembly. This is usually, but not necessarily, the file name of the manifest file of the assembly, minus its extension.
+  syntax:
+    content: public string Name { get; set; }
+    content.vb: Public Property Name As String
+    parameters: []
+    return:
+      type: System.String
+      description: The simple name of the assembly.
+- uid: System.Reflection.AssemblyName.ProcessorArchitecture
+  id: ProcessorArchitecture
+  parent: System.Reflection.AssemblyName
+  name: ProcessorArchitecture
+  fullName: System.Reflection.AssemblyName.ProcessorArchitecture
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 129
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets or sets a value that identifies the processor and bits-per-word of the platform targeted by an executable.
+  syntax:
+    content: public ProcessorArchitecture ProcessorArchitecture { get; set; }
+    content.vb: Public Property ProcessorArchitecture As ProcessorArchitecture
+    parameters: []
+    return:
+      type: System.Reflection.ProcessorArchitecture
+      description: One of the enumeration values that identifies the processor and bits-per-word of the platform targeted by an executable.
+- uid: System.Reflection.AssemblyName.Version
+  id: Version
+  parent: System.Reflection.AssemblyName
+  name: Version
+  fullName: System.Reflection.AssemblyName.Version
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 74
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets or sets the major, minor, build, and revision numbers of the assembly.
+  syntax:
+    content: public Version Version { get; set; }
+    content.vb: Public Property Version As Version
+    parameters: []
+    return:
+      type: System.Version
+      description: An object that represents the major, minor, build, and revision numbers of the assembly.
+- uid: System.Reflection.AssemblyName.GetPublicKey
+  id: GetPublicKey
+  parent: System.Reflection.AssemblyName
+  name: GetPublicKey()
+  fullName: System.Reflection.AssemblyName.GetPublicKey()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 217
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets the public key of the assembly.
+  syntax:
+    content: public byte[] GetPublicKey()
+    content.vb: Public Function GetPublicKey As Byte()
+    return:
+      type: System.Byte[]
+      description: A byte array that contains the public key of the assembly.
+  exceptions:
+  - type: System.Security.SecurityException
+    description: A public key was provided (for example, by using the <xref href="System.Reflection.AssemblyName.SetPublicKey(System.Byte[])" data-throw-if-not-resolved="false"></xref> method), but no public key token was provided.
+- uid: System.Reflection.AssemblyName.GetPublicKeyToken
+  id: GetPublicKeyToken
+  parent: System.Reflection.AssemblyName
+  name: GetPublicKeyToken()
+  fullName: System.Reflection.AssemblyName.GetPublicKeyToken()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 239
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets the public key token, which is the last 8 bytes of the SHA-1 hash of the public key under which the application or assembly is signed.
+  syntax:
+    content: public byte[] GetPublicKeyToken()
+    content.vb: Public Function GetPublicKeyToken As Byte()
+    return:
+      type: System.Byte[]
+      description: A byte array that contains the public key token.
+- uid: System.Reflection.AssemblyName.SetPublicKey(System.Byte[])
+  id: SetPublicKey(System.Byte[])
+  parent: System.Reflection.AssemblyName
+  name: SetPublicKey(Byte[])
+  name.vb: SetPublicKey(Byte())
+  fullName: System.Reflection.AssemblyName.SetPublicKey(System.Byte[])
+  fullName.vb: System.Reflection.AssemblyName.SetPublicKey(System.Byte())
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 227
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Sets the public key identifying the assembly.
+  syntax:
+    content: public void SetPublicKey(byte[] publicKey)
+    content.vb: Public Sub SetPublicKey(publicKey As Byte())
+    parameters:
+    - id: publicKey
+      type: System.Byte[]
+      description: A byte array containing the public key of the assembly.
+- uid: System.Reflection.AssemblyName.SetPublicKeyToken(System.Byte[])
+  id: SetPublicKeyToken(System.Byte[])
+  parent: System.Reflection.AssemblyName
+  name: SetPublicKeyToken(Byte[])
+  name.vb: SetPublicKeyToken(Byte())
+  fullName: System.Reflection.AssemblyName.SetPublicKeyToken(System.Byte[])
+  fullName.vb: System.Reflection.AssemblyName.SetPublicKeyToken(System.Byte())
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 247
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Sets the public key token, which is the last 8 bytes of the SHA-1 hash of the public key under which the application or assembly is signed.
+  syntax:
+    content: public void SetPublicKeyToken(byte[] publicKeyToken)
+    content.vb: Public Sub SetPublicKeyToken(publicKeyToken As Byte())
+    parameters:
+    - id: publicKeyToken
+      type: System.Byte[]
+      description: A byte array containing the public key token of the assembly.
+- uid: System.Reflection.AssemblyName.ToString
+  id: ToString
+  parent: System.Reflection.AssemblyName
+  name: ToString()
+  fullName: System.Reflection.AssemblyName.ToString()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/AssemblyName.cs
+    startLine: 299
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Returns the full name of the assembly, also known as the display name.
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+      description: The full name of the assembly, or the class name if the full name cannot be determined.
+references:
+- uid: System.Reflection
+  isExternal: false
+  name: System.Reflection
+  fullName: System.Reflection
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Reflection.AssemblyContentType
+  parent: System.Reflection
+  isExternal: false
+  name: AssemblyContentType
+  fullName: System.Reflection.AssemblyContentType
+- uid: System.Reflection.AssemblyNameFlags
+  parent: System.Reflection
+  isExternal: false
+  name: AssemblyNameFlags
+  fullName: System.Reflection.AssemblyNameFlags
+- uid: System.Reflection.ProcessorArchitecture
+  parent: System.Reflection
+  isExternal: false
+  name: ProcessorArchitecture
+  fullName: System.Reflection.ProcessorArchitecture
+- uid: System.Version
+  parent: System
+  isExternal: false
+  name: Version
+  fullName: System.Version
+- uid: System.Byte[]
+  isExternal: false
+  name: Byte[]
+  name.vb: Byte()
+  fullName: System.Byte[]
+  fullName.vb: System.Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+  - name: ()
+    fullName: ()
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.IO.FileLoadException
+  isExternal: false
+  name: FileLoadException
+  fullName: System.IO.FileLoadException
+- uid: System.Security.SecurityException
+  isExternal: false
+  name: SecurityException
+  fullName: System.Security.SecurityException

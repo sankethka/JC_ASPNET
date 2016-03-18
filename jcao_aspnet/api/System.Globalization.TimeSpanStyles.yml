@@ -1,0 +1,61 @@
+items:
+- uid: System.Globalization.TimeSpanStyles
+  id: TimeSpanStyles
+  parent: System.Globalization
+  children:
+  - System.Globalization.TimeSpanStyles.AssumeNegative
+  - System.Globalization.TimeSpanStyles.None
+  name: TimeSpanStyles
+  fullName: System.Globalization.TimeSpanStyles
+  type: Enum
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Globalization/TimeSpanStyles.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Globalization/TimeSpanStyles.cs
+    startLine: 6
+  assemblies:
+  - System.Runtime
+  namespace: System.Globalization
+  summary: Defines the formatting options that customize string parsing for the <see cref="Overload:System.TimeSpan.ParseExact" /> and <see cref="Overload:System.TimeSpan.TryParseExact" /> methods.
+  syntax:
+    content: public enum TimeSpanStyles
+    content.vb: Public Enum TimeSpanStyles
+- uid: System.Globalization.TimeSpanStyles.AssumeNegative
+  id: AssumeNegative
+  parent: System.Globalization.TimeSpanStyles
+  name: AssumeNegative
+  fullName: System.Globalization.TimeSpanStyles.AssumeNegative
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Globalization/TimeSpanStyles.cs
+    startLine: 9
+  assemblies:
+  - System.Runtime
+  namespace: System.Globalization
+  summary: Indicates that input is always interpreted as a negative time interval.
+  syntax:
+    content: AssumeNegative = 1
+- uid: System.Globalization.TimeSpanStyles.None
+  id: None
+  parent: System.Globalization.TimeSpanStyles
+  name: None
+  fullName: System.Globalization.TimeSpanStyles.None
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Globalization/TimeSpanStyles.cs
+    startLine: 8
+  assemblies:
+  - System.Runtime
+  namespace: System.Globalization
+  summary: Indicates that input is interpreted as a negative time interval only if a negative sign is present.
+  syntax:
+    content: None = 0
+references:
+- uid: System.Globalization
+  isExternal: false
+  name: System.Globalization
+  fullName: System.Globalization

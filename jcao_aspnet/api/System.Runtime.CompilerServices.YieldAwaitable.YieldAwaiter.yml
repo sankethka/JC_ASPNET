@@ -1,0 +1,147 @@
+items:
+- uid: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter
+  id: YieldAwaitable.YieldAwaiter
+  parent: System.Runtime.CompilerServices
+  children:
+  - System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.GetResult
+  - System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.IsCompleted
+  - System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.OnCompleted(System.Action)
+  - System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.UnsafeOnCompleted(System.Action)
+  name: YieldAwaitable.YieldAwaiter
+  fullName: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter
+  type: Struct
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Runtime/CompilerServices/YieldAwaitable.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Runtime/CompilerServices/YieldAwaitable.cs
+    startLine: 50
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Runtime.CompilerServices
+  summary: Provides an awaiter for switching into a target environment.
+  syntax:
+    content: 'public struct YieldAwaiter : ICriticalNotifyCompletion, INotifyCompletion'
+    content.vb: Public Structure YieldAwaiter Implements ICriticalNotifyCompletion, INotifyCompletion
+  implements:
+  - System.Runtime.CompilerServices.ICriticalNotifyCompletion
+  - System.Runtime.CompilerServices.INotifyCompletion
+- uid: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.IsCompleted
+  id: IsCompleted
+  parent: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter
+  name: IsCompleted
+  fullName: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.IsCompleted
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/CompilerServices/YieldAwaitable.cs
+    startLine: 55
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Runtime.CompilerServices
+  summary: Gets a value that indicates whether a yield is not required.
+  syntax:
+    content: public bool IsCompleted { get; }
+    content.vb: Public ReadOnly Property IsCompleted As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: Always false, which indicates that a yield is always required for <xref href="System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.GetResult
+  id: GetResult
+  parent: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter
+  name: GetResult()
+  fullName: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.GetResult()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/CompilerServices/YieldAwaitable.cs
+    startLine: 164
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Runtime.CompilerServices
+  summary: Ends the await operation.
+  syntax:
+    content: public void GetResult()
+    content.vb: Public Sub GetResult
+- uid: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.OnCompleted(System.Action)
+  id: OnCompleted(System.Action)
+  parent: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter
+  name: OnCompleted(Action)
+  fullName: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.OnCompleted(System.Action)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/CompilerServices/YieldAwaitable.cs
+    startLine: 60
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Runtime.CompilerServices
+  summary: Sets the continuation to invoke.
+  syntax:
+    content: public void OnCompleted(Action continuation)
+    content.vb: Public Sub OnCompleted(continuation As Action)
+    parameters:
+    - id: continuation
+      type: System.Action
+      description: The action to invoke asynchronously.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*continuation* is null.'
+- uid: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.UnsafeOnCompleted(System.Action)
+  id: UnsafeOnCompleted(System.Action)
+  parent: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter
+  name: UnsafeOnCompleted(Action)
+  fullName: System.Runtime.CompilerServices.YieldAwaitable.YieldAwaiter.UnsafeOnCompleted(System.Action)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/CompilerServices/YieldAwaitable.cs
+    startLine: 69
+  assemblies:
+  - System.Threading.Tasks
+  namespace: System.Runtime.CompilerServices
+  summary: Posts the *continuation* back to the current context.
+  syntax:
+    content: public void UnsafeOnCompleted(Action continuation)
+    content.vb: Public Sub UnsafeOnCompleted(continuation As Action)
+    parameters:
+    - id: continuation
+      type: System.Action
+      description: The action to invoke asynchronously.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: The *continuation* argument is null.
+references:
+- uid: System.Runtime.CompilerServices
+  isExternal: false
+  name: System.Runtime.CompilerServices
+  fullName: System.Runtime.CompilerServices
+- uid: System.Runtime.CompilerServices.ICriticalNotifyCompletion
+  parent: System.Runtime.CompilerServices
+  isExternal: false
+  name: ICriticalNotifyCompletion
+  fullName: System.Runtime.CompilerServices.ICriticalNotifyCompletion
+- uid: System.Runtime.CompilerServices.INotifyCompletion
+  parent: System.Runtime.CompilerServices
+  isExternal: false
+  name: INotifyCompletion
+  fullName: System.Runtime.CompilerServices.INotifyCompletion
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Action
+  isExternal: false
+  name: Action
+  fullName: System.Action
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException

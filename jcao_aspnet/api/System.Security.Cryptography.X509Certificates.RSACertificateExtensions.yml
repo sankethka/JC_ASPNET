@@ -1,0 +1,118 @@
+items:
+- uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  id: RSACertificateExtensions
+  parent: System.Security.Cryptography.X509Certificates
+  children:
+  - System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  - System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  name: RSACertificateExtensions
+  fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/RSACertificateExtensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/RSACertificateExtensions.cs
+    startLine: 13
+  assemblies:
+  - System.Security.Cryptography.X509Certificates
+  namespace: System.Security.Cryptography.X509Certificates
+  summary: Provides extension methods for retrieving <xref href="System.Security.Cryptography.RSA" data-throw-if-not-resolved="false"></xref> implementations for the public and private keys of an <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: 'public class RSACertificateExtensions : object'
+    content.vb: Public Class RSACertificateExtensions Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  id: GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  parent: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  name: GetRSAPrivateKey(X509Certificate2)
+  fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/RSACertificateExtensions.cs
+    startLine: 27
+  assemblies:
+  - System.Security.Cryptography.X509Certificates
+  namespace: System.Security.Cryptography.X509Certificates
+  summary: Gets the <xref href="System.Security.Cryptography.RSA" data-throw-if-not-resolved="false"></xref> private key from the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public static RSA GetRSAPrivateKey(X509Certificate2 certificate)
+    content.vb: Public Shared Function GetRSAPrivateKey(certificate As X509Certificate2) As RSA
+    parameters:
+    - id: certificate
+      type: System.Security.Cryptography.X509Certificates.X509Certificate2
+      description: The certificate.
+    return:
+      type: System.Security.Cryptography.RSA
+      description: The private key, or null if the certificate does not have an RSA public key.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*certificate* is null.'
+- uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  id: GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  parent: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  name: GetRSAPublicKey(X509Certificate2)
+  fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/RSACertificateExtensions.cs
+    startLine: 18
+  assemblies:
+  - System.Security.Cryptography.X509Certificates
+  namespace: System.Security.Cryptography.X509Certificates
+  summary: Gets the <xref href="System.Security.Cryptography.RSA" data-throw-if-not-resolved="false"></xref> public key from the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public static RSA GetRSAPublicKey(X509Certificate2 certificate)
+    content.vb: Public Shared Function GetRSAPublicKey(certificate As X509Certificate2) As RSA
+    parameters:
+    - id: certificate
+      type: System.Security.Cryptography.X509Certificates.X509Certificate2
+      description: The certificate.
+    return:
+      type: System.Security.Cryptography.RSA
+      description: The public key, or null if the certificate does not have an RSA public key.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*certificate* is null.'
+  - type: System.Security.Cryptography.CryptographicException
+    description: Windows reports an error. See the <xref href="System.Exception.Message" data-throw-if-not-resolved="false"></xref> property for more information.
+references:
+- uid: System.Security.Cryptography.X509Certificates
+  isExternal: false
+  name: System.Security.Cryptography.X509Certificates
+  fullName: System.Security.Cryptography.X509Certificates
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+  parent: System.Security.Cryptography.X509Certificates
+  isExternal: false
+  name: X509Certificate2
+  fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
+- uid: System.Security.Cryptography.RSA
+  parent: System.Security.Cryptography
+  isExternal: false
+  name: RSA
+  fullName: System.Security.Cryptography.RSA
+- uid: System.Security.Cryptography
+  isExternal: false
+  name: System.Security.Cryptography
+  fullName: System.Security.Cryptography
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.Security.Cryptography.CryptographicException
+  isExternal: false
+  name: CryptographicException
+  fullName: System.Security.Cryptography.CryptographicException

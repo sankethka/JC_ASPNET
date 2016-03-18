@@ -1,0 +1,164 @@
+items:
+- uid: System.Data.SqlClient.SqlClientFactory
+  id: SqlClientFactory
+  parent: System.Data.SqlClient
+  children:
+  - System.Data.SqlClient.SqlClientFactory.CreateCommand
+  - System.Data.SqlClient.SqlClientFactory.CreateConnection
+  - System.Data.SqlClient.SqlClientFactory.CreateConnectionStringBuilder
+  - System.Data.SqlClient.SqlClientFactory.CreateParameter
+  - System.Data.SqlClient.SqlClientFactory.Instance
+  name: SqlClientFactory
+  fullName: System.Data.SqlClient.SqlClientFactory
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Data.SqlClient/src/System/Data/SqlClient/SqlClientFactory.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Data.SqlClient/src/System/Data/SqlClient/SqlClientFactory.cs
+    startLine: 13
+  assemblies:
+  - System.Data.SqlClient
+  namespace: System.Data.SqlClient
+  summary: Represents a set of methods for creating instances of the <xref href="System.Data.SqlClient" data-throw-if-not-resolved="false"></xref> provider's implementation of the data source classes.
+  syntax:
+    content: 'public sealed class SqlClientFactory : Common.DbProviderFactory'
+    content.vb: Public NotInheritable Class SqlClientFactory Inherits Common.DbProviderFactory
+  inheritance:
+  - System.Object
+- uid: System.Data.SqlClient.SqlClientFactory.Instance
+  id: Instance
+  parent: System.Data.SqlClient.SqlClientFactory
+  name: Instance
+  fullName: System.Data.SqlClient.SqlClientFactory.Instance
+  type: Field
+  source:
+    remote: *o0
+    path: src/System.Data.SqlClient/src/System/Data/SqlClient/SqlClientFactory.cs
+    startLine: 15
+  assemblies:
+  - System.Data.SqlClient
+  namespace: System.Data.SqlClient
+  summary: Gets an instance of the <xref href="System.Data.SqlClient.SqlClientFactory" data-throw-if-not-resolved="false"></xref>. This can be used to retrieve strongly typed data objects.
+  syntax:
+    content: public static readonly SqlClientFactory Instance
+    content.vb: Public Shared ReadOnly Instance As SqlClientFactory
+- uid: System.Data.SqlClient.SqlClientFactory.CreateCommand
+  id: CreateCommand
+  parent: System.Data.SqlClient.SqlClientFactory
+  name: CreateCommand()
+  fullName: System.Data.SqlClient.SqlClientFactory.CreateCommand()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.SqlClient/src/System/Data/SqlClient/SqlClientFactory.cs
+    startLine: 22
+  assemblies:
+  - System.Data.SqlClient
+  namespace: System.Data.SqlClient
+  summary: Returns a strongly typed <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public override Common.DbCommand CreateCommand()
+    content.vb: Public Overrides Function CreateCommand As Common.DbCommand
+    return:
+      type: System.Data.Common.DbCommand
+      description: A new strongly typed instance of <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Data.SqlClient.SqlClientFactory.CreateConnection
+  id: CreateConnection
+  parent: System.Data.SqlClient.SqlClientFactory
+  name: CreateConnection()
+  fullName: System.Data.SqlClient.SqlClientFactory.CreateConnection()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.SqlClient/src/System/Data/SqlClient/SqlClientFactory.cs
+    startLine: 28
+  assemblies:
+  - System.Data.SqlClient
+  namespace: System.Data.SqlClient
+  summary: Returns a strongly typed <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public override Common.DbConnection CreateConnection()
+    content.vb: Public Overrides Function CreateConnection As Common.DbConnection
+    return:
+      type: System.Data.Common.DbConnection
+      description: A new strongly typed instance of <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Data.SqlClient.SqlClientFactory.CreateConnectionStringBuilder
+  id: CreateConnectionStringBuilder
+  parent: System.Data.SqlClient.SqlClientFactory
+  name: CreateConnectionStringBuilder()
+  fullName: System.Data.SqlClient.SqlClientFactory.CreateConnectionStringBuilder()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.SqlClient/src/System/Data/SqlClient/SqlClientFactory.cs
+    startLine: 33
+  assemblies:
+  - System.Data.SqlClient
+  namespace: System.Data.SqlClient
+  summary: Returns a strongly typed <xref href="System.Data.Common.DbConnectionStringBuilder" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public override Common.DbConnectionStringBuilder CreateConnectionStringBuilder()
+    content.vb: Public Overrides Function CreateConnectionStringBuilder As Common.DbConnectionStringBuilder
+    return:
+      type: System.Data.Common.DbConnectionStringBuilder
+      description: A new strongly typed instance of <xref href="System.Data.Common.DbConnectionStringBuilder" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Data.SqlClient.SqlClientFactory.CreateParameter
+  id: CreateParameter
+  parent: System.Data.SqlClient.SqlClientFactory
+  name: CreateParameter()
+  fullName: System.Data.SqlClient.SqlClientFactory.CreateParameter()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Data.SqlClient/src/System/Data/SqlClient/SqlClientFactory.cs
+    startLine: 39
+  assemblies:
+  - System.Data.SqlClient
+  namespace: System.Data.SqlClient
+  summary: Returns a strongly typed <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public override Common.DbParameter CreateParameter()
+    content.vb: Public Overrides Function CreateParameter As Common.DbParameter
+    return:
+      type: System.Data.Common.DbParameter
+      description: A new strongly typed instance of <xref href="System.Data.Common.DbParameter" data-throw-if-not-resolved="false"></xref>.
+references:
+- uid: System.Data.SqlClient
+  isExternal: false
+  name: System.Data.SqlClient
+  fullName: System.Data.SqlClient
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Data.Common.DbCommand
+  parent: System.Data.Common
+  isExternal: false
+  name: DbCommand
+  fullName: System.Data.Common.DbCommand
+- uid: System.Data.Common
+  isExternal: false
+  name: System.Data.Common
+  fullName: System.Data.Common
+- uid: System.Data.Common.DbConnection
+  parent: System.Data.Common
+  isExternal: false
+  name: DbConnection
+  fullName: System.Data.Common.DbConnection
+- uid: System.Data.Common.DbConnectionStringBuilder
+  parent: System.Data.Common
+  isExternal: false
+  name: DbConnectionStringBuilder
+  fullName: System.Data.Common.DbConnectionStringBuilder
+- uid: System.Data.Common.DbParameter
+  parent: System.Data.Common
+  isExternal: false
+  name: DbParameter
+  fullName: System.Data.Common.DbParameter

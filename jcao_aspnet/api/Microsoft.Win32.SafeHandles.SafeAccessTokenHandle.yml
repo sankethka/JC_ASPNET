@@ -1,0 +1,141 @@
+items:
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  id: SafeAccessTokenHandle
+  parent: Microsoft.Win32.SafeHandles
+  children:
+  - Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor(System.IntPtr)
+  - Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.InvalidHandle
+  - Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.IsInvalid
+  - Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
+  name: SafeAccessTokenHandle
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  type: Class
+  source:
+    remote: &o0
+      path: src/System.Security.Principal.Windows/src/Microsoft/Win32/SafeHandles/SafeAccessTokenHandle.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Security.Principal.Windows/src/Microsoft/Win32/SafeHandles/SafeAccessTokenHandle.cs
+    startLine: 10
+  assemblies:
+  - System.Security.Principal.Windows
+  namespace: Microsoft.Win32.SafeHandles
+  summary: Provides a safe handle to a Windows thread or process access token. For more information see Access Tokens
+  syntax:
+    content: 'public sealed class SafeAccessTokenHandle : Runtime.InteropServices.SafeHandle'
+    content.vb: Public NotInheritable Class SafeAccessTokenHandle Inherits Runtime.InteropServices.SafeHandle
+  inheritance:
+  - System.Object
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor(System.IntPtr)
+  id: '#ctor(System.IntPtr)'
+  parent: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  name: SafeAccessTokenHandle(IntPtr)
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.SafeAccessTokenHandle(System.IntPtr)
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
+    startLine: 10
+  assemblies:
+  - System.Security.Principal.Windows
+  namespace: Microsoft.Win32.SafeHandles
+  summary: Initializes a new instance of the <xref href="Microsoft.Win32.SafeHandles.SafeAccessTokenHandle" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: public SafeAccessTokenHandle(IntPtr handle)
+    content.vb: Public Sub New(handle As IntPtr)
+    parameters:
+    - id: handle
+      type: System.IntPtr
+      description: An <xref href="System.IntPtr" data-throw-if-not-resolved="false"></xref> object that represents the pre-existing handle to use. Using <xref href="System.IntPtr.Zero" data-throw-if-not-resolved="false"></xref> returns an invalid handle.
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.InvalidHandle
+  id: InvalidHandle
+  parent: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  name: InvalidHandle
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.InvalidHandle
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Security.Principal.Windows/src/Microsoft/Win32/SafeHandles/SafeAccessTokenHandle.cs
+    startLine: 17
+  assemblies:
+  - System.Security.Principal.Windows
+  namespace: Microsoft.Win32.SafeHandles
+  summary: Returns an invalid handle by instantiating a <xref href="Microsoft.Win32.SafeHandles.SafeAccessTokenHandle" data-throw-if-not-resolved="false"></xref> object with <xref href="System.IntPtr.Zero" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public static SafeAccessTokenHandle InvalidHandle { get; }
+    content.vb: Public Shared ReadOnly Property InvalidHandle As SafeAccessTokenHandle
+    parameters: []
+    return:
+      type: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+      description: Returns a<xref href="Microsoft.Win32.SafeHandles.SafeAccessTokenHandle" data-throw-if-not-resolved="false"></xref> object.
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.IsInvalid
+  id: IsInvalid
+  parent: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  name: IsInvalid
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.IsInvalid
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Security.Principal.Windows/src/Microsoft/Win32/SafeHandles/SafeAccessTokenHandle.cs
+    startLine: 25
+  assemblies:
+  - System.Security.Principal.Windows
+  namespace: Microsoft.Win32.SafeHandles
+  summary: Gets a value that indicates whether the handle is invalid.
+  syntax:
+    content: public override bool IsInvalid { get; }
+    content.vb: Public Overrides ReadOnly Property IsInvalid As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the handle is not valid; otherwise, false.
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
+  id: ReleaseHandle
+  parent: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  name: ReleaseHandle()
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle()
+  type: Method
+  source:
+    remote: *o0
+    path: src/System.Security.Principal.Windows/src/Microsoft/Win32/SafeHandles/SafeAccessTokenHandle.cs
+    startLine: 33
+  assemblies:
+  - System.Security.Principal.Windows
+  namespace: Microsoft.Win32.SafeHandles
+  syntax:
+    content: protected override bool ReleaseHandle()
+    content.vb: Protected Overrides Function ReleaseHandle As Boolean
+    return:
+      type: System.Boolean
+references:
+- uid: Microsoft.Win32.SafeHandles
+  isExternal: false
+  name: Microsoft.Win32.SafeHandles
+  fullName: Microsoft.Win32.SafeHandles
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.IntPtr
+  parent: System
+  isExternal: false
+  name: IntPtr
+  fullName: System.IntPtr
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  parent: Microsoft.Win32.SafeHandles
+  isExternal: false
+  name: SafeAccessTokenHandle
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean

@@ -1,0 +1,311 @@
+items:
+- uid: System.Runtime.InteropServices.ComEventInterfaceAttribute
+  id: ComEventInterfaceAttribute
+  parent: System.Runtime.InteropServices
+  children:
+  - System.Runtime.InteropServices.ComEventInterfaceAttribute.#ctor(System.Type,System.Type)
+  - System.Runtime.InteropServices.ComEventInterfaceAttribute.EventProvider
+  - System.Runtime.InteropServices.ComEventInterfaceAttribute.SourceInterface
+  name: ComEventInterfaceAttribute
+  fullName: System.Runtime.InteropServices.ComEventInterfaceAttribute
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+    startLine: 1020
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: Identifies the source interface and the class that implements the methods of the event interface that is generated when a coclass is imported from a COM type library.
+  syntax:
+    content: 'public sealed class ComEventInterfaceAttribute : Attribute'
+    content.vb: Public NotInheritable Class ComEventInterfaceAttribute Inherits Attribute
+  inheritance:
+  - System.Object
+  - System.Attribute
+  inheritedMembers:
+  - System.Attribute.Equals(System.Object)
+  - System.Attribute.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: System.Runtime.InteropServices.ComEventInterfaceAttribute.#ctor(System.Type,System.Type)
+  id: '#ctor(System.Type,System.Type)'
+  parent: System.Runtime.InteropServices.ComEventInterfaceAttribute
+  name: ComEventInterfaceAttribute(Type, Type)
+  fullName: System.Runtime.InteropServices.ComEventInterfaceAttribute.ComEventInterfaceAttribute(System.Type, System.Type)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+    startLine: 1027
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: Initializes a new instance of the <xref href="System.Runtime.InteropServices.ComEventInterfaceAttribute" data-throw-if-not-resolved="false"></xref> class with the source interface and event provider class.
+  syntax:
+    content: public ComEventInterfaceAttribute(Type SourceInterface, Type EventProvider)
+    content.vb: Public Sub New(SourceInterface As Type, EventProvider As Type)
+    parameters:
+    - id: SourceInterface
+      type: System.Type
+      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that contains the original source interface from the type library. COM uses this interface to call back to the managed class.
+    - id: EventProvider
+      type: System.Type
+      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that contains the class that implements the methods of the event interface.
+- uid: System.Runtime.InteropServices.ComEventInterfaceAttribute.EventProvider
+  id: EventProvider
+  parent: System.Runtime.InteropServices.ComEventInterfaceAttribute
+  name: EventProvider
+  fullName: System.Runtime.InteropServices.ComEventInterfaceAttribute.EventProvider
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+    startLine: 1034
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: Gets the class that implements the methods of the event interface.
+  syntax:
+    content: public Type EventProvider { get; }
+    content.vb: Public ReadOnly Property EventProvider As Type
+    parameters: []
+    return:
+      type: System.Type
+      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that contains the class that implements the methods of the event interface.
+- uid: System.Runtime.InteropServices.ComEventInterfaceAttribute.SourceInterface
+  id: SourceInterface
+  parent: System.Runtime.InteropServices.ComEventInterfaceAttribute
+  name: SourceInterface
+  fullName: System.Runtime.InteropServices.ComEventInterfaceAttribute.SourceInterface
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+    startLine: 1033
+  assemblies:
+  - System.Runtime.InteropServices
+  namespace: System.Runtime.InteropServices
+  summary: Gets the original source interface from the type library.
+  syntax:
+    content: public Type SourceInterface { get; }
+    content.vb: Public ReadOnly Property SourceInterface As Type
+    parameters: []
+    return:
+      type: System.Type
+      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> containing the source interface.
+references:
+- uid: System.Runtime.InteropServices
+  isExternal: false
+  name: System.Runtime.InteropServices
+  fullName: System.Runtime.InteropServices
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.Attribute
+  parent: System
+  isExternal: false
+  name: Attribute
+  fullName: System.Attribute
+- uid: System.Attribute.Equals(System.Object)
+  parent: System.Attribute
+  isExternal: false
+  name: Equals(Object)
+  fullName: System.Attribute.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Attribute.Equals(System.Object)
+    name: Equals
+    fullName: System.Attribute.Equals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Attribute.Equals(System.Object)
+    name: Equals
+    fullName: System.Attribute.Equals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+- uid: System.Attribute.GetHashCode
+  parent: System.Attribute
+  isExternal: false
+  name: GetHashCode()
+  fullName: System.Attribute.GetHashCode()
+  spec.csharp:
+  - uid: System.Attribute.GetHashCode
+    name: GetHashCode
+    fullName: System.Attribute.GetHashCode
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Attribute.GetHashCode
+    name: GetHashCode
+    fullName: System.Attribute.GetHashCode
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: false
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: false
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: false
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: false
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: false
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Type
+  parent: System
+  isExternal: false
+  name: Type
+  fullName: System.Type

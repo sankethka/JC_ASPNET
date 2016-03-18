@@ -1,0 +1,459 @@
+items:
+- uid: System.Threading.ThreadLocal`1
+  id: ThreadLocal`1
+  parent: System.Threading
+  children:
+  - System.Threading.ThreadLocal`1.#ctor
+  - System.Threading.ThreadLocal`1.#ctor(System.Boolean)
+  - System.Threading.ThreadLocal`1.#ctor(System.Func{`0})
+  - System.Threading.ThreadLocal`1.#ctor(System.Func{`0},System.Boolean)
+  - System.Threading.ThreadLocal`1.Dispose
+  - System.Threading.ThreadLocal`1.Dispose(System.Boolean)
+  - System.Threading.ThreadLocal`1.Finalize
+  - System.Threading.ThreadLocal`1.IsValueCreated
+  - System.Threading.ThreadLocal`1.ToString
+  - System.Threading.ThreadLocal`1.Value
+  - System.Threading.ThreadLocal`1.Values
+  name: ThreadLocal<T>
+  name.vb: ThreadLocal(Of T)
+  fullName: System.Threading.ThreadLocal<T>
+  fullName.vb: System.Threading.ThreadLocal(Of T)
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 35
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Provides thread-local storage of data.
+  syntax:
+    content: 'public class ThreadLocal<T> : IDisposable'
+    content.vb: Public Class ThreadLocal(Of T) Inherits IDisposable
+    typeParameters:
+    - id: T
+  inheritance:
+  - System.Object
+- uid: System.Threading.ThreadLocal`1.#ctor
+  id: '#ctor'
+  parent: System.Threading.ThreadLocal`1
+  name: ThreadLocal()
+  fullName: System.Threading.ThreadLocal<T>.ThreadLocal()
+  fullName.vb: System.Threading.ThreadLocal(Of T).ThreadLocal()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 80
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Initializes the <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public ThreadLocal()
+    content.vb: Public Sub New
+- uid: System.Threading.ThreadLocal`1.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: System.Threading.ThreadLocal`1
+  name: ThreadLocal(Boolean)
+  fullName: System.Threading.ThreadLocal<T>.ThreadLocal(System.Boolean)
+  fullName.vb: System.Threading.ThreadLocal(Of T).ThreadLocal(System.Boolean)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 89
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Initializes the <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public ThreadLocal(bool trackAllValues)
+    content.vb: Public Sub New(trackAllValues As Boolean)
+    parameters:
+    - id: trackAllValues
+      type: System.Boolean
+      description: Whether to track all values set on the instance and expose them through the <xref href="System.Threading.ThreadLocal`1.Values" data-throw-if-not-resolved="false"></xref> property.
+- uid: System.Threading.ThreadLocal`1.#ctor(System.Func{`0})
+  id: '#ctor(System.Func{`0})'
+  parent: System.Threading.ThreadLocal`1
+  name: ThreadLocal(Func<T>)
+  name.vb: ThreadLocal(Func(Of T))
+  fullName: System.Threading.ThreadLocal<T>.ThreadLocal(System.Func<T>)
+  fullName.vb: System.Threading.ThreadLocal(Of T).ThreadLocal(System.Func(Of T))
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 106
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Initializes the <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> instance with the specified *valueFactory* function.
+  syntax:
+    content: public ThreadLocal(Func<T> valueFactory)
+    content.vb: Public Sub New(valueFactory As Func(Of T))
+    parameters:
+    - id: valueFactory
+      type: System.Func{{T}}
+      description: The  <xref href="System.Func`1" data-throw-if-not-resolved="false"></xref> invoked to produce a lazily-initialized value when an attempt is made to retrieve <xref href="System.Threading.ThreadLocal`1.Value" data-throw-if-not-resolved="false"></xref> without it having been previously initialized.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*valueFactory* is a null reference (Nothing in Visual Basic).'
+- uid: System.Threading.ThreadLocal`1.#ctor(System.Func{`0},System.Boolean)
+  id: '#ctor(System.Func{`0},System.Boolean)'
+  parent: System.Threading.ThreadLocal`1
+  name: ThreadLocal(Func<T>, Boolean)
+  name.vb: ThreadLocal(Func(Of T), Boolean)
+  fullName: System.Threading.ThreadLocal<T>.ThreadLocal(System.Func<T>, System.Boolean)
+  fullName.vb: System.Threading.ThreadLocal(Of T).ThreadLocal(System.Func(Of T), System.Boolean)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 126
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Initializes the <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> instance with the specified *valueFactory* function.
+  syntax:
+    content: public ThreadLocal(Func<T> valueFactory, bool trackAllValues)
+    content.vb: Public Sub New(valueFactory As Func(Of T), trackAllValues As Boolean)
+    parameters:
+    - id: valueFactory
+      type: System.Func{{T}}
+      description: The <xref href="System.Func`1" data-throw-if-not-resolved="false"></xref> invoked to produce a lazily-initialized value when an attempt is made to retrieve <xref href="System.Threading.ThreadLocal`1.Value" data-throw-if-not-resolved="false"></xref> without it having been previously initialized.
+    - id: trackAllValues
+      type: System.Boolean
+      description: Whether to track all values set on the instance and expose them via the <xref href="System.Threading.ThreadLocal`1.Values" data-throw-if-not-resolved="false"></xref> property.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*valueFactory* is a null reference (Nothing in Visual Basic).'
+- uid: System.Threading.ThreadLocal`1.IsValueCreated
+  id: IsValueCreated
+  parent: System.Threading.ThreadLocal`1
+  name: IsValueCreated
+  fullName: System.Threading.ThreadLocal<T>.IsValueCreated
+  fullName.vb: System.Threading.ThreadLocal(Of T).IsValueCreated
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 509
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Gets whether <xref href="System.Threading.ThreadLocal`1.Value" data-throw-if-not-resolved="false"></xref> is initialized on the current thread.
+  syntax:
+    content: public bool IsValueCreated { get; }
+    content.vb: Public ReadOnly Property IsValueCreated As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if <xref href="System.Threading.ThreadLocal`1.Value" data-throw-if-not-resolved="false"></xref> is initialized on the current thread; otherwise false.
+  exceptions:
+  - type: System.ObjectDisposedException
+    description: The <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> instance has been disposed.
+- uid: System.Threading.ThreadLocal`1.Value
+  id: Value
+  parent: System.Threading.ThreadLocal`1
+  name: Value
+  fullName: System.Threading.ThreadLocal<T>.Value
+  fullName.vb: System.Threading.ThreadLocal(Of T).Value
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 263
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Gets or sets the value of this instance for the current thread.
+  syntax:
+    content: public T Value { get; set; }
+    content.vb: Public Property Value As T
+    parameters: []
+    return:
+      type: '{T}'
+      description: Returns an instance of the object that this ThreadLocal is responsible for initializing.
+  exceptions:
+  - type: System.ObjectDisposedException
+    description: The <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> instance has been disposed.
+  - type: System.InvalidOperationException
+    description: The initialization function attempted to reference <xref href="System.Threading.ThreadLocal`1.Value" data-throw-if-not-resolved="false"></xref> recursively.
+  - type: System.MissingMemberException
+    description: No default constructor is provided and no value factory is supplied.
+- uid: System.Threading.ThreadLocal`1.Values
+  id: Values
+  parent: System.Threading.ThreadLocal`1
+  name: Values
+  fullName: System.Threading.ThreadLocal<T>.Values
+  fullName.vb: System.Threading.ThreadLocal(Of T).Values
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 453
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Gets a list for all of the values currently stored by all of the threads that have accessed this instance.
+  syntax:
+    content: public Collections.Generic.IList<T> Values { get; }
+    content.vb: Public ReadOnly Property Values As Collections.Generic.IList(Of T)
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{{T}}
+      description: A list for all of the values currently stored by all of the threads that have accessed this instance.
+  exceptions:
+  - type: System.ObjectDisposedException
+    description: The <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> instance has been disposed.
+- uid: System.Threading.ThreadLocal`1.Dispose
+  id: Dispose
+  parent: System.Threading.ThreadLocal`1
+  name: Dispose()
+  fullName: System.Threading.ThreadLocal<T>.Dispose()
+  fullName.vb: System.Threading.ThreadLocal(Of T).Dispose()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 169
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Releases all resources used by the current instance of the <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+- uid: System.Threading.ThreadLocal`1.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: System.Threading.ThreadLocal`1
+  name: Dispose(Boolean)
+  fullName: System.Threading.ThreadLocal<T>.Dispose(System.Boolean)
+  fullName.vb: System.Threading.ThreadLocal(Of T).Dispose(System.Boolean)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 184
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Releases the resources used by this <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+      description: A Boolean value that indicates whether this method is being called due to a call to <xref href="System.Threading.ThreadLocal`1.Dispose" data-throw-if-not-resolved="false"></xref>.
+- uid: System.Threading.ThreadLocal`1.Finalize
+  id: Finalize
+  parent: System.Threading.ThreadLocal`1
+  name: Finalize()
+  fullName: System.Threading.ThreadLocal<T>.Finalize()
+  fullName.vb: System.Threading.ThreadLocal(Of T).Finalize()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 155
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Releases the resources used by this <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected void Finalize()
+    content.vb: Protected Sub Finalize
+- uid: System.Threading.ThreadLocal`1.ToString
+  id: ToString
+  parent: System.Threading.ThreadLocal`1
+  name: ToString()
+  fullName: System.Threading.ThreadLocal<T>.ToString()
+  fullName.vb: System.Threading.ThreadLocal(Of T).ToString()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Threading/ThreadLocal.cs
+    startLine: 242
+  assemblies:
+  - System.Threading
+  namespace: System.Threading
+  summary: Creates and returns a string representation of this instance for the current thread.
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+      description: The result of calling <xref href="System.Object.ToString" data-throw-if-not-resolved="false"></xref> on the <xref href="System.Threading.ThreadLocal`1.Value" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.ObjectDisposedException
+    description: The <xref href="System.Threading.ThreadLocal`1" data-throw-if-not-resolved="false"></xref> instance has been disposed.
+  - type: System.NullReferenceException
+    description: The <xref href="System.Threading.ThreadLocal`1.Value" data-throw-if-not-resolved="false"></xref> for the current thread is a null reference (Nothing in Visual Basic).
+  - type: System.InvalidOperationException
+    description: The initialization function attempted to reference <xref href="System.Threading.ThreadLocal`1.Value" data-throw-if-not-resolved="false"></xref> recursively.
+  - type: System.MissingMemberException
+    description: No default constructor is provided and no value factory is supplied.
+references:
+- uid: System.Threading
+  isExternal: false
+  name: System.Threading
+  fullName: System.Threading
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.Func{{T}}
+  parent: System
+  definition: System.Func`1
+  name: Func<T>
+  name.vb: Func(Of T)
+  fullName: System.Func<T>
+  fullName.vb: System.Func(Of T)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    fullName: System.Func
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    fullName: System.Func
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Func`1
+  parent: System
+  isExternal: false
+  name: Func<>
+  name.vb: Func(Of )
+  fullName: System.Func<>
+  fullName.vb: System.Func(Of )
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    fullName: System.Func
+  - name: <
+    fullName: <
+  - {}
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    fullName: System.Func
+  - name: '(Of '
+    fullName: '(Of '
+  - {}
+  - name: )
+    fullName: )
+- uid: '{T}'
+  isExternal: false
+  name: T
+  fullName: T
+- uid: System.Collections.Generic.IList{{T}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<T>
+  name.vb: IList(Of T)
+  fullName: System.Collections.Generic.IList<T>
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    fullName: System.Collections.Generic.IList
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    fullName: System.Collections.Generic.IList
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  parent: System.Collections.Generic
+  isExternal: false
+  name: Collections.Generic.IList<>
+  name.vb: Collections.Generic.IList(Of )
+  fullName: System.Collections.Generic.IList<>
+  fullName.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+  - name: <
+    fullName: <
+  - {}
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+  - name: '(Of '
+    fullName: '(Of '
+  - {}
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ObjectDisposedException
+  isExternal: false
+  name: ObjectDisposedException
+  fullName: System.ObjectDisposedException
+- uid: System.InvalidOperationException
+  parent: System
+  isExternal: false
+  name: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: System.MissingMemberException
+  parent: System
+  isExternal: false
+  name: MissingMemberException
+  fullName: System.MissingMemberException
+- uid: System.NullReferenceException
+  isExternal: false
+  name: NullReferenceException
+  fullName: System.NullReferenceException

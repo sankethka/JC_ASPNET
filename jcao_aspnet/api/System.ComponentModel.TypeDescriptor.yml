@@ -1,0 +1,83 @@
+items:
+- uid: System.ComponentModel.TypeDescriptor
+  id: TypeDescriptor
+  parent: System.ComponentModel
+  children:
+  - System.ComponentModel.TypeDescriptor.GetConverter(System.Type)
+  name: TypeDescriptor
+  fullName: System.ComponentModel.TypeDescriptor
+  type: Class
+  source:
+    remote:
+      path: src/System.ComponentModel.TypeConverter/src/System/ComponentModel/TypeDescriptor.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.ComponentModel.TypeConverter/src/System/ComponentModel/TypeDescriptor.cs
+    startLine: 13
+  assemblies:
+  - System.ComponentModel.TypeConverter
+  namespace: System.ComponentModel
+  summary: Provides information about the characteristics for a component, such as its attributes, properties, and events. This class cannot be inherited.
+  syntax:
+    content: 'public sealed class TypeDescriptor : object'
+    content.vb: Public NotInheritable Class TypeDescriptor Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.ComponentModel.TypeDescriptor.GetConverter(System.Type)
+  id: GetConverter(System.Type)
+  parent: System.ComponentModel.TypeDescriptor
+  name: GetConverter(Type)
+  fullName: System.ComponentModel.TypeDescriptor.GetConverter(System.Type)
+  type: Method
+  source:
+    remote:
+      path: src/System.ComponentModel.TypeConverter/ref/System.ComponentModel.TypeConverter.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.ComponentModel.TypeConverter/ref/System.ComponentModel.TypeConverter.cs
+    startLine: 179
+  assemblies:
+  - System.ComponentModel.TypeConverter
+  namespace: System.ComponentModel
+  summary: Returns a type converter for the specified type.
+  syntax:
+    content: public static TypeConverter GetConverter(Type type)
+    content.vb: Public Shared Function GetConverter(type As Type) As TypeConverter
+    parameters:
+    - id: type
+      type: System.Type
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> of the target component.
+    return:
+      type: System.ComponentModel.TypeConverter
+      description: A <xref href="System.ComponentModel.TypeConverter" data-throw-if-not-resolved="false"></xref> for the specified type.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*component* is null.'
+references:
+- uid: System.ComponentModel
+  isExternal: false
+  name: System.ComponentModel
+  fullName: System.ComponentModel
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Type
+  parent: System
+  isExternal: false
+  name: Type
+  fullName: System.Type
+- uid: System.ComponentModel.TypeConverter
+  parent: System.ComponentModel
+  isExternal: false
+  name: TypeConverter
+  fullName: System.ComponentModel.TypeConverter
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException

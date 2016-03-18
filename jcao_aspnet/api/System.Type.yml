@@ -1,0 +1,1152 @@
+items:
+- uid: System.Type
+  id: Type
+  parent: System
+  children:
+  - System.Type.AssemblyQualifiedName
+  - System.Type.DeclaringType
+  - System.Type.EmptyTypes
+  - System.Type.Equals(System.Object)
+  - System.Type.Equals(System.Type)
+  - System.Type.FullName
+  - System.Type.GenericParameterPosition
+  - System.Type.GenericTypeArguments
+  - System.Type.GetArrayRank
+  - System.Type.GetElementType
+  - System.Type.GetGenericTypeDefinition
+  - System.Type.GetHashCode
+  - System.Type.GetType(System.String)
+  - System.Type.GetType(System.String,System.Boolean)
+  - System.Type.GetType(System.String,System.Boolean,System.Boolean)
+  - System.Type.GetTypeFromHandle(System.RuntimeTypeHandle)
+  - System.Type.HasElementType
+  - System.Type.IsArray
+  - System.Type.IsByRef
+  - System.Type.IsConstructedGenericType
+  - System.Type.IsGenericParameter
+  - System.Type.IsNested
+  - System.Type.IsPointer
+  - System.Type.MakeArrayType
+  - System.Type.MakeArrayType(System.Int32)
+  - System.Type.MakeByRefType
+  - System.Type.MakeGenericType(System.Type[])
+  - System.Type.MakePointerType
+  - System.Type.Missing
+  - System.Type.Name
+  - System.Type.Namespace
+  - System.Type.ToString
+  - System.Type.TypeHandle
+  name: Type
+  fullName: System.Type
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Type.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 30
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: 'Represents type declarations: class types, interface types, array types, value types, enumeration types, type parameters, generic type definitions, and open or closed constructed generic types.To browse the .NET Framework source code for this type, see the Reference Source.'
+  syntax:
+    content: public abstract class Type
+    content.vb: Public MustInherit Class Type
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: System.Type.EmptyTypes
+  id: EmptyTypes
+  parent: System.Type
+  name: EmptyTypes
+  fullName: System.Type.EmptyTypes
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 52
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Represents an empty array of type <xref href="System.Type" data-throw-if-not-resolved="false"></xref>. This field is read-only.
+  syntax:
+    content: public static readonly Type[] EmptyTypes
+    content.vb: Public Shared ReadOnly EmptyTypes As Type()
+- uid: System.Type.Missing
+  id: Missing
+  parent: System.Type
+  name: Missing
+  fullName: System.Type.Missing
+  type: Field
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 47
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Represents a missing value in the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> information. This field is read-only.
+  syntax:
+    content: public static readonly object Missing
+    content.vb: Public Shared ReadOnly Missing As Object
+- uid: System.Type.AssemblyQualifiedName
+  id: AssemblyQualifiedName
+  parent: System.Type
+  name: AssemblyQualifiedName
+  fullName: System.Type.AssemblyQualifiedName
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 370
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the assembly-qualified name of the type, which includes the name of the assembly from which this <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object was loaded.
+  syntax:
+    content: public abstract string AssemblyQualifiedName { get; }
+    content.vb: Public MustOverride ReadOnly Property AssemblyQualifiedName As String
+    parameters: []
+    return:
+      type: System.String
+      description: The assembly-qualified name of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref>, which includes the name of the assembly from which the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> was loaded, or null if the current instance represents a generic type parameter.
+- uid: System.Type.FullName
+  id: FullName
+  parent: System.Type
+  name: FullName
+  fullName: System.Type.FullName
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 358
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the fully qualified name of the type, including its namespace but not its assembly.
+  syntax:
+    content: public abstract string FullName { get; }
+    content.vb: Public MustOverride ReadOnly Property FullName As String
+    parameters: []
+    return:
+      type: System.String
+      description: The fully qualified name of the type, including its namespace but not its assembly; or null if the current instance represents a generic type parameter, an array type, pointer type, or byref type based on a type parameter, or a generic type that is not a generic type definition but contains unresolved type parameters.
+- uid: System.Type.GenericParameterPosition
+  id: GenericParameterPosition
+  parent: System.Type
+  name: GenericParameterPosition
+  fullName: System.Type.GenericParameterPosition
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1174
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the position of the type parameter in the type parameter list of the generic type or method that declared the parameter, when the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object represents a type parameter of a generic type or a generic method.
+  syntax:
+    content: public abstract int GenericParameterPosition { get; }
+    content.vb: Public MustOverride ReadOnly Property GenericParameterPosition As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The position of a type parameter in the type parameter list of the generic type or method that defines the parameter. Position numbers begin at 0.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The current type does not represent a type parameter. That is, <xref href="System.Type.IsGenericParameter" data-throw-if-not-resolved="false"></xref> returns false.
+- uid: System.Type.GenericTypeArguments
+  id: GenericTypeArguments
+  parent: System.Type
+  name: GenericTypeArguments
+  fullName: System.Type.GenericTypeArguments
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1339
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets an array of the generic type arguments for this type.
+  syntax:
+    content: public abstract Type[] GenericTypeArguments { get; }
+    content.vb: Public MustOverride ReadOnly Property GenericTypeArguments As Type()
+    parameters: []
+    return:
+      type: System.Type[]
+      description: An array of the generic type arguments for this type.
+- uid: System.Type.HasElementType
+  id: HasElementType
+  parent: System.Type
+  name: HasElementType
+  fullName: System.Type.HasElementType
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1243
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets a value indicating whether the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref> encompasses or refers to another type; that is, whether the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref> is an array, a pointer, or is passed by reference.
+  syntax:
+    content: public bool HasElementType { get; }
+    content.vb: Public ReadOnly Property HasElementType As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> is an array, a pointer, or is passed by reference; otherwise, false.
+- uid: System.Type.IsArray
+  id: IsArray
+  parent: System.Type
+  name: IsArray
+  fullName: System.Type.IsArray
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1142
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets a value that indicates whether the type is an array.
+  syntax:
+    content: public virtual bool IsArray { get; }
+    content.vb: Public Overridable ReadOnly Property IsArray As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the current type is an array; otherwise, false.
+- uid: System.Type.IsByRef
+  id: IsByRef
+  parent: System.Type
+  name: IsByRef
+  fullName: System.Type.IsByRef
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1214
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets a value indicating whether the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> is passed by reference.
+  syntax:
+    content: public virtual bool IsByRef { get; }
+    content.vb: Public Overridable ReadOnly Property IsByRef As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> is passed by reference; otherwise, false.
+- uid: System.Type.IsConstructedGenericType
+  id: IsConstructedGenericType
+  parent: System.Type
+  name: IsConstructedGenericType
+  fullName: System.Type.IsConstructedGenericType
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1162
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets a value that indicates whether this object represents a constructed generic type. You can create instances of a constructed generic type.
+  syntax:
+    content: public abstract bool IsConstructedGenericType { get; }
+    content.vb: Public MustOverride ReadOnly Property IsConstructedGenericType As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if this object represents a constructed generic type; otherwise, false.
+- uid: System.Type.IsGenericParameter
+  id: IsGenericParameter
+  parent: System.Type
+  name: IsGenericParameter
+  fullName: System.Type.IsGenericParameter
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1168
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets a value indicating whether the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref> represents a type parameter in the definition of a generic type or method.
+  syntax:
+    content: public abstract bool IsGenericParameter { get; }
+    content.vb: Public MustOverride ReadOnly Property IsGenericParameter As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object represents a type parameter of a generic type definition or generic method definition; otherwise, false.
+- uid: System.Type.IsNested
+  id: IsNested
+  parent: System.Type
+  name: IsNested
+  fullName: System.Type.IsNested
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 940
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets a value indicating whether the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object represents a type whose definition is nested inside the definition of another type.
+  syntax:
+    content: public bool IsNested { get; }
+    content.vb: Public ReadOnly Property IsNested As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> is nested inside another type; otherwise, false.
+- uid: System.Type.IsPointer
+  id: IsPointer
+  parent: System.Type
+  name: IsPointer
+  fullName: System.Type.IsPointer
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1218
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets a value indicating whether the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> is a pointer.
+  syntax:
+    content: public virtual bool IsPointer { get; }
+    content.vb: Public Overridable ReadOnly Property IsPointer As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> is a pointer; otherwise, false.
+- uid: System.Type.Namespace
+  id: Namespace
+  parent: System.Type
+  name: Namespace
+  fullName: System.Type.Namespace
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 364
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the namespace of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public abstract string Namespace { get; }
+    content.vb: Public MustOverride ReadOnly Property Namespace As String
+    parameters: []
+    return:
+      type: System.String
+      description: The namespace of the <xref href="System.Type" data-throw-if-not-resolved="false"></xref>; null if the current instance has no namespace or represents a generic parameter.
+- uid: System.Type.TypeHandle
+  id: TypeHandle
+  parent: System.Type
+  name: TypeHandle
+  fullName: System.Type.TypeHandle
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 326
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the handle for the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public virtual RuntimeTypeHandle TypeHandle { get; }
+    content.vb: Public Overridable ReadOnly Property TypeHandle As RuntimeTypeHandle
+    parameters: []
+    return:
+      type: System.RuntimeTypeHandle
+      description: The handle for the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  exceptions:
+  - type: System.NotSupportedException
+    description: The .NET Compact Framework does not currently support this property.
+- uid: System.Type.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: System.Type
+  name: Equals(Object)
+  fullName: System.Type.Equals(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1770
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Determines if the underlying system type of the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref> is the same as the underlying system type of the specified <xref href="System.Object" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public override bool Equals(object o)
+    content.vb: Public Overrides Function Equals(o As Object) As Boolean
+    parameters:
+    - id: o
+      type: System.Object
+      description: The object whose underlying system type is to be compared with the underlying system type of the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: true if the underlying system type of *o* is the same as the underlying system type of the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref>; otherwise, false. This method also returns false if the object specified by the *o* parameter is not a Type.
+  overridden: System.Object.Equals(System.Object)
+- uid: System.Type.Equals(System.Type)
+  id: Equals(System.Type)
+  parent: System.Type
+  name: Equals(Type)
+  fullName: System.Type.Equals(System.Type)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1780
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Determines if the underlying system type of the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref> is the same as the underlying system type of the specified <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  syntax:
+    content: public bool Equals(Type o)
+    content.vb: Public Function Equals(o As Type) As Boolean
+    parameters:
+    - id: o
+      type: System.Type
+      description: The object whose underlying system type is to be compared with the underlying system type of the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: true if the underlying system type of *o* is the same as the underlying system type of the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref>; otherwise, false.
+- uid: System.Type.GetArrayRank
+  id: GetArrayRank
+  parent: System.Type
+  name: GetArrayRank()
+  fullName: System.Type.GetArrayRank()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 376
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the number of dimensions in an array.
+  syntax:
+    content: public abstract int GetArrayRank()
+    content.vb: Public MustOverride Function GetArrayRank As Integer
+    return:
+      type: System.Int32
+      description: An integer that contains the number of dimensions in the current type.
+  exceptions:
+  - type: System.NotSupportedException
+    description: The functionality of this method is unsupported in the base class and must be implemented in a derived class instead.
+  - type: System.ArgumentException
+    description: The current type is not an array.
+- uid: System.Type.GetElementType
+  id: GetElementType
+  parent: System.Type
+  name: GetElementType()
+  fullName: System.Type.GetElementType()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1330
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: When overridden in a derived class, returns the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> of the object encompassed or referred to by the current array, pointer or reference type.
+  syntax:
+    content: public abstract Type GetElementType()
+    content.vb: Public MustOverride Function GetElementType As Type
+    return:
+      type: System.Type
+      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> of the object encompassed or referred to by the current array, pointer, or reference type, or null if the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref> is not an array or a pointer, or is not passed by reference, or represents a generic type or a type parameter in the definition of a generic type or generic method.
+- uid: System.Type.GetGenericTypeDefinition
+  id: GetGenericTypeDefinition
+  parent: System.Type
+  name: GetGenericTypeDefinition()
+  fullName: System.Type.GetGenericTypeDefinition()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1351
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Returns a <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that represents a generic type definition from which the current generic type can be constructed.
+  syntax:
+    content: public abstract Type GetGenericTypeDefinition()
+    content.vb: Public MustOverride Function GetGenericTypeDefinition As Type
+    return:
+      type: System.Type
+      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object representing a generic type from which the current type can be constructed.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The current type is not a generic type.  That is, <xref href="System.Type.IsGenericType" data-throw-if-not-resolved="false"></xref> returns false.
+  - type: System.NotSupportedException
+    description: The invoked method is not supported in the base class. Derived classes must provide an implementation.
+- uid: System.Type.GetHashCode
+  id: GetHashCode
+  parent: System.Type
+  name: GetHashCode()
+  fullName: System.Type.GetHashCode()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1805
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Returns the hash code for this instance.
+  syntax:
+    content: public override int GetHashCode()
+    content.vb: Public Overrides Function GetHashCode As Integer
+    return:
+      type: System.Int32
+      description: The hash code for this instance.
+  overridden: System.Object.GetHashCode
+- uid: System.Type.GetType(System.String)
+  id: GetType(System.String)
+  parent: System.Type
+  name: GetType(String)
+  fullName: System.Type.GetType(System.String)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 98
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> with the specified name, performing a case-sensitive search.
+  syntax:
+    content: public static Type GetType(string typeName)
+    content.vb: Public Shared Function GetType(typeName As String) As Type
+    parameters:
+    - id: typeName
+      type: System.String
+      description: The assembly-qualified name of the type to get. See <xref href="System.Type.AssemblyQualifiedName" data-throw-if-not-resolved="false"></xref>. If the type is in the currently executing assembly or in Mscorlib.dll, it is sufficient to supply the type name qualified by its namespace.
+    return:
+      type: System.Type
+      description: The type with the specified name, if found; otherwise, null.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*typeName* is null.'
+  - type: System.Reflection.TargetInvocationException
+    description: A class initializer is invoked and throws an exception.
+  - type: System.ArgumentException
+    description: '*typeName* represents a generic type that has a pointer type, a ByRef type, or <xref href="System.Void" data-throw-if-not-resolved="false"></xref> as one of its type arguments.-or-*typeName* represents a generic type that has an incorrect number of type arguments.-or-*typeName* represents a generic type, and one of its type arguments does not satisfy the constraints for the corresponding type parameter.'
+  - type: System.TypeLoadException
+    description: '*typeName* represents an array of <xref href="System.TypedReference" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.IO.FileLoadException
+    description: In the .NET for Windows Store apps or the Portable Class Library, catch the base class exception, <xref href="System.IO.IOException" data-throw-if-not-resolved="false"></xref>, instead.The assembly or one of its dependencies was found, but could not be loaded.
+  - type: System.BadImageFormatException
+    description: The assembly or one of its dependencies is not valid. -or-Version 2.0 or later of the common language runtime is currently loaded, and the assembly was compiled with a later version.
+- uid: System.Type.GetType(System.String,System.Boolean)
+  id: GetType(System.String,System.Boolean)
+  parent: System.Type
+  name: GetType(String, Boolean)
+  fullName: System.Type.GetType(System.String, System.Boolean)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 92
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> with the specified name, performing a case-sensitive search and specifying whether to throw an exception if the type is not found.
+  syntax:
+    content: public static Type GetType(string typeName, bool throwOnError)
+    content.vb: Public Shared Function GetType(typeName As String, throwOnError As Boolean) As Type
+    parameters:
+    - id: typeName
+      type: System.String
+      description: The assembly-qualified name of the type to get. See <xref href="System.Type.AssemblyQualifiedName" data-throw-if-not-resolved="false"></xref>. If the type is in the currently executing assembly or in Mscorlib.dll, it is sufficient to supply the type name qualified by its namespace.
+    - id: throwOnError
+      type: System.Boolean
+      description: true to throw an exception if the type cannot be found; false to return null. Specifying false also suppresses some other exception conditions, but not all of them. See the Exceptions section.
+    return:
+      type: System.Type
+      description: The type with the specified name. If the type is not found, the *throwOnError* parameter specifies whether null is returned or an exception is thrown. In some cases, an exception is thrown regardless of the value of *throwOnError*. See the Exceptions section.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*typeName* is null.'
+  - type: System.Reflection.TargetInvocationException
+    description: A class initializer is invoked and throws an exception.
+  - type: System.TypeLoadException
+    description: '*throwOnError* is true and the type is not found. -or-*throwOnError* is true and *typeName* contains invalid characters, such as an embedded tab.-or-*throwOnError* is true and *typeName* is an empty string.-or-*throwOnError* is true and *typeName* represents an array type with an invalid size. -or-*typeName* represents an array of <xref href="System.TypedReference" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.ArgumentException
+    description: '*throwOnError* is true and *typeName* contains invalid syntax. For example, "MyType[,*,]".-or- *typeName* represents a generic type that has a pointer type, a ByRef type, or <xref href="System.Void" data-throw-if-not-resolved="false"></xref> as one of its type arguments.-or-*typeName* represents a generic type that has an incorrect number of type arguments.-or-*typeName* represents a generic type, and one of its type arguments does not satisfy the constraints for the corresponding type parameter.'
+  - type: System.IO.FileNotFoundException
+    description: '*throwOnError* is true and the assembly or one of its dependencies was not found.'
+  - type: System.IO.FileLoadException
+    description: In the .NET for Windows Store apps or the Portable Class Library, catch the base class exception, <xref href="System.IO.IOException" data-throw-if-not-resolved="false"></xref>, instead.The assembly or one of its dependencies was found, but could not be loaded.
+  - type: System.BadImageFormatException
+    description: The assembly or one of its dependencies is not valid. -or-Version 2.0 or later of the common language runtime is currently loaded, and the assembly was compiled with a later version.
+- uid: System.Type.GetType(System.String,System.Boolean,System.Boolean)
+  id: GetType(System.String,System.Boolean,System.Boolean)
+  parent: System.Type
+  name: GetType(String, Boolean, Boolean)
+  fullName: System.Type.GetType(System.String, System.Boolean, System.Boolean)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 86
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> with the specified name, specifying whether to throw an exception if the type is not found and whether to perform a case-sensitive search.
+  syntax:
+    content: public static Type GetType(string typeName, bool throwOnError, bool ignoreCase)
+    content.vb: Public Shared Function GetType(typeName As String, throwOnError As Boolean, ignoreCase As Boolean) As Type
+    parameters:
+    - id: typeName
+      type: System.String
+      description: The assembly-qualified name of the type to get. See <xref href="System.Type.AssemblyQualifiedName" data-throw-if-not-resolved="false"></xref>. If the type is in the currently executing assembly or in Mscorlib.dll, it is sufficient to supply the type name qualified by its namespace.
+    - id: throwOnError
+      type: System.Boolean
+      description: true to throw an exception if the type cannot be found; false to return null.Specifying false also suppresses some other exception conditions, but not all of them. See the Exceptions section.
+    - id: ignoreCase
+      type: System.Boolean
+      description: true to perform a case-insensitive search for *typeName*, false to perform a case-sensitive search for *typeName*.
+    return:
+      type: System.Type
+      description: The type with the specified name. If the type is not found, the *throwOnError* parameter specifies whether null is returned or an exception is thrown. In some cases, an exception is thrown regardless of the value of *throwOnError*. See the Exceptions section.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*typeName* is null.'
+  - type: System.Reflection.TargetInvocationException
+    description: A class initializer is invoked and throws an exception.
+  - type: System.TypeLoadException
+    description: '*throwOnError* is true and the type is not found. -or-*throwOnError* is true and *typeName* contains invalid characters, such as an embedded tab.-or-*throwOnError* is true and *typeName* is an empty string.-or-*throwOnError* is true and *typeName* represents an array type with an invalid size. -or-*typeName* represents an array of <xref href="System.TypedReference" data-throw-if-not-resolved="false"></xref>.'
+  - type: System.ArgumentException
+    description: '*throwOnError* is true and *typeName* contains invalid syntax. For example, "MyType[,*,]".-or- *typeName* represents a generic type that has a pointer type, a ByRef type, or <xref href="System.Void" data-throw-if-not-resolved="false"></xref> as one of its type arguments.-or-*typeName* represents a generic type that has an incorrect number of type arguments.-or-*typeName* represents a generic type, and one of its type arguments does not satisfy the constraints for the corresponding type parameter.'
+  - type: System.IO.FileNotFoundException
+    description: '*throwOnError* is true and the assembly or one of its dependencies was not found.'
+  - type: System.IO.FileLoadException
+    description: The assembly or one of its dependencies was found, but could not be loaded.
+  - type: System.BadImageFormatException
+    description: The assembly or one of its dependencies is not valid. -or-Version 2.0 or later of the common language runtime is currently loaded, and the assembly was compiled with a later version.
+- uid: System.Type.GetTypeFromHandle(System.RuntimeTypeHandle)
+  id: GetTypeFromHandle(System.RuntimeTypeHandle)
+  parent: System.Type
+  name: GetTypeFromHandle(RuntimeTypeHandle)
+  fullName: System.Type.GetTypeFromHandle(System.RuntimeTypeHandle)
+  type: Method
+  source:
+    path: mscorlib
+    isExternal: true
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the type referenced by the specified type handle.
+  syntax:
+    content: public static Type GetTypeFromHandle(RuntimeTypeHandle handle)
+    content.vb: Public Shared Function GetTypeFromHandle(handle As RuntimeTypeHandle) As Type
+    parameters:
+    - id: handle
+      type: System.RuntimeTypeHandle
+      description: The object that refers to the type.
+    return:
+      type: System.Type
+      description: The type referenced by the specified <xref href="System.RuntimeTypeHandle" data-throw-if-not-resolved="false"></xref>, or null if the <xref href="System.RuntimeTypeHandle.Value" data-throw-if-not-resolved="false"></xref> property of *handle* is null.
+  exceptions:
+  - type: System.Reflection.TargetInvocationException
+    description: A class initializer is invoked and throws an exception.
+- uid: System.Type.MakeArrayType
+  id: MakeArrayType
+  parent: System.Type
+  name: MakeArrayType()
+  fullName: System.Type.MakeArrayType()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 149
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Returns a <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object representing a one-dimensional array of the current type, with a lower bound of zero.
+  syntax:
+    content: public abstract Type MakeArrayType()
+    content.vb: Public MustOverride Function MakeArrayType As Type
+    return:
+      type: System.Type
+      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object representing a one-dimensional array of the current type, with a lower bound of zero.
+  exceptions:
+  - type: System.NotSupportedException
+    description: The invoked method is not supported in the base class. Derived classes must provide an implementation.
+  - type: System.TypeLoadException
+    description: The current type is <xref href="System.TypedReference" data-throw-if-not-resolved="false"></xref>.-or-The current type is a ByRef type. That is, <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.
+- uid: System.Type.MakeArrayType(System.Int32)
+  id: MakeArrayType(System.Int32)
+  parent: System.Type
+  name: MakeArrayType(Int32)
+  fullName: System.Type.MakeArrayType(System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 150
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Returns a <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object representing an array of the current type, with the specified number of dimensions.
+  syntax:
+    content: public abstract Type MakeArrayType(int rank)
+    content.vb: Public MustOverride Function MakeArrayType(rank As Integer) As Type
+    parameters:
+    - id: rank
+      type: System.Int32
+      description: The number of dimensions for the array. This number must be less than or equal to 32.
+    return:
+      type: System.Type
+      description: An object representing an array of the current type, with the specified number of dimensions.
+  exceptions:
+  - type: System.IndexOutOfRangeException
+    description: '*rank* is invalid. For example, 0 or negative.'
+  - type: System.NotSupportedException
+    description: The invoked method is not supported in the base class.
+  - type: System.TypeLoadException
+    description: The current type is <xref href="System.TypedReference" data-throw-if-not-resolved="false"></xref>.-or-The current type is a ByRef type. That is, <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true. -or-*rank* is greater than 32.
+- uid: System.Type.MakeByRefType
+  id: MakeByRefType
+  parent: System.Type
+  name: MakeByRefType()
+  fullName: System.Type.MakeByRefType()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 148
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Returns a <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that represents the current type when passed as a ref parameter (ByRef parameter in Visual Basic).
+  syntax:
+    content: public abstract Type MakeByRefType()
+    content.vb: Public MustOverride Function MakeByRefType As Type
+    return:
+      type: System.Type
+      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that represents the current type when passed as a ref parameter (ByRef parameter in Visual Basic).
+  exceptions:
+  - type: System.NotSupportedException
+    description: The invoked method is not supported in the base class.
+  - type: System.TypeLoadException
+    description: The current type is <xref href="System.TypedReference" data-throw-if-not-resolved="false"></xref>.-or-The current type is a ByRef type. That is, <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.
+- uid: System.Type.MakeGenericType(System.Type[])
+  id: MakeGenericType(System.Type[])
+  parent: System.Type
+  name: MakeGenericType(Type[])
+  name.vb: MakeGenericType(Type())
+  fullName: System.Type.MakeGenericType(System.Type[])
+  fullName.vb: System.Type.MakeGenericType(System.Type())
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1307
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Substitutes the elements of an array of types for the type parameters of the current generic type definition and returns a <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object representing the resulting constructed type.
+  syntax:
+    content: public abstract Type MakeGenericType(params Type[] typeArguments)
+    content.vb: Public MustOverride Function MakeGenericType(ParamArray typeArguments As Type()) As Type
+    parameters:
+    - id: typeArguments
+      type: System.Type[]
+      description: An array of types to be substituted for the type parameters of the current generic type.
+    return:
+      type: System.Type
+      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> representing the constructed type formed by substituting the elements of *typeArguments* for the type parameters of the current generic type.
+  exceptions:
+  - type: System.InvalidOperationException
+    description: The current type does not represent a generic type definition. That is, <xref href="System.Type.IsGenericTypeDefinition" data-throw-if-not-resolved="false"></xref> returns false.
+  - type: System.ArgumentNullException
+    description: '*typeArguments* is null.-or- Any element of *typeArguments* is null.'
+  - type: System.ArgumentException
+    description: The number of elements in *typeArguments* is not the same as the number of type parameters in the current generic type definition.-or- Any element of *typeArguments* does not satisfy the constraints specified for the corresponding type parameter of the current generic type. -or- *typeArguments* contains an element that is a pointer type (<xref href="System.Type.IsPointer" data-throw-if-not-resolved="false"></xref> returns true), a by-ref type (<xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true), or <xref href="System.Void" data-throw-if-not-resolved="false"></xref>.
+  - type: System.NotSupportedException
+    description: The invoked method is not supported in the base class. Derived classes must provide an implementation.
+- uid: System.Type.MakePointerType
+  id: MakePointerType
+  parent: System.Type
+  name: MakePointerType()
+  fullName: System.Type.MakePointerType()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 146
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Returns a <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that represents a pointer to the current type.
+  syntax:
+    content: public abstract Type MakePointerType()
+    content.vb: Public MustOverride Function MakePointerType As Type
+    return:
+      type: System.Type
+      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that represents a pointer to the current type.
+  exceptions:
+  - type: System.NotSupportedException
+    description: The invoked method is not supported in the base class.
+  - type: System.TypeLoadException
+    description: The current type is <xref href="System.TypedReference" data-throw-if-not-resolved="false"></xref>.-or-The current type is a ByRef type. That is, <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.
+- uid: System.Type.ToString
+  id: ToString
+  parent: System.Type
+  name: ToString()
+  fullName: System.Type.ToString()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 1748
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Returns a String representing the name of the current Type.
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> representing the name of the current <xref href="System.Type" data-throw-if-not-resolved="false"></xref>.
+  overridden: System.Object.ToString
+- uid: System.Type.DeclaringType
+  id: DeclaringType
+  parent: System.Type
+  name: DeclaringType
+  fullName: System.Type.DeclaringType
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Type.cs
+    startLine: 68
+  assemblies:
+  - System.Runtime
+  namespace: System
+  summary: Gets the type that declares the current nested type or generic type parameter.
+  syntax:
+    content: public abstract Type DeclaringType { get; }
+    content.vb: Public MustOverride ReadOnly Property DeclaringType As Type
+    parameters: []
+    return:
+      type: System.Type
+      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object representing the enclosing type, if the current type is a nested type; or the generic type definition, if the current type is a type parameter of a generic type; or the type that declares the generic method, if the current type is a type parameter of a generic method; otherwise, null.
+- uid: System.Type.Name
+  id: Name
+  parent: System.Type
+  name: Name
+  fullName: System.Type.Name
+  type: Property
+  source:
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Runtime/ref/System.Runtime.Manual.cs
+    startLine: 40
+  assemblies:
+  - System.Runtime
+  namespace: System
+  syntax:
+    content: public abstract string Name { get; }
+    content.vb: Public MustOverride ReadOnly Property Name As String
+    parameters: []
+    return:
+      type: System.String
+references:
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: false
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: false
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: false
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: false
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Type[]
+  isExternal: false
+  name: Type[]
+  name.vb: Type()
+  fullName: System.Type[]
+  fullName.vb: System.Type()
+  spec.csharp:
+  - uid: System.Type
+    name: Type
+    fullName: System.Type
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Type
+    name: Type
+    fullName: System.Type
+  - name: ()
+    fullName: ()
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.RuntimeTypeHandle
+  parent: System
+  isExternal: false
+  name: RuntimeTypeHandle
+  fullName: System.RuntimeTypeHandle
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: false
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+  - name: )
+    fullName: )
+- uid: System.Type
+  parent: System
+  isExternal: false
+  name: Type
+  fullName: System.Type
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: false
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: false
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.InvalidOperationException
+  parent: System
+  isExternal: false
+  name: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: System.NotSupportedException
+  parent: System
+  isExternal: false
+  name: NotSupportedException
+  fullName: System.NotSupportedException
+- uid: System.ArgumentException
+  parent: System
+  isExternal: false
+  name: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.Reflection.TargetInvocationException
+  isExternal: false
+  name: TargetInvocationException
+  fullName: System.Reflection.TargetInvocationException
+- uid: System.TypeLoadException
+  parent: System
+  isExternal: false
+  name: TypeLoadException
+  fullName: System.TypeLoadException
+- uid: System.IO.FileLoadException
+  isExternal: false
+  name: FileLoadException
+  fullName: System.IO.FileLoadException
+- uid: System.BadImageFormatException
+  isExternal: false
+  name: BadImageFormatException
+  fullName: System.BadImageFormatException
+- uid: System.IO.FileNotFoundException
+  isExternal: false
+  name: FileNotFoundException
+  fullName: System.IO.FileNotFoundException
+- uid: System.IndexOutOfRangeException
+  isExternal: false
+  name: IndexOutOfRangeException
+  fullName: System.IndexOutOfRangeException

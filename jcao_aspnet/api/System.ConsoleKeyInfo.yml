@@ -1,0 +1,154 @@
+items:
+- uid: System.ConsoleKeyInfo
+  id: ConsoleKeyInfo
+  parent: System
+  children:
+  - System.ConsoleKeyInfo.#ctor(System.Char,System.ConsoleKey,System.Boolean,System.Boolean,System.Boolean)
+  - System.ConsoleKeyInfo.Key
+  - System.ConsoleKeyInfo.KeyChar
+  - System.ConsoleKeyInfo.Modifiers
+  name: ConsoleKeyInfo
+  fullName: System.ConsoleKeyInfo
+  type: Struct
+  source:
+    remote: &o0
+      path: src/System.Console/src/System/ConsoleKeyInfo.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    path: src/System.Console/src/System/ConsoleKeyInfo.cs
+    startLine: 6
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Describes the console key that was pressed, including the character represented by the console key and the state of the SHIFT, ALT, and CTRL modifier keys.
+  syntax:
+    content: public struct ConsoleKeyInfo
+    content.vb: Public Structure ConsoleKeyInfo
+- uid: System.ConsoleKeyInfo.#ctor(System.Char,System.ConsoleKey,System.Boolean,System.Boolean,System.Boolean)
+  id: '#ctor(System.Char,System.ConsoleKey,System.Boolean,System.Boolean,System.Boolean)'
+  parent: System.ConsoleKeyInfo
+  name: ConsoleKeyInfo(Char, ConsoleKey, Boolean, Boolean, Boolean)
+  fullName: System.ConsoleKeyInfo.ConsoleKeyInfo(System.Char, System.ConsoleKey, System.Boolean, System.Boolean, System.Boolean)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/ConsoleKeyInfo.cs
+    startLine: 12
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Initializes a new instance of the <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> structure using the specified character, console key, and modifier keys.
+  syntax:
+    content: public ConsoleKeyInfo(char keyChar, ConsoleKey key, bool shift, bool alt, bool control)
+    content.vb: Public Sub New(keyChar As Char, key As ConsoleKey, shift As Boolean, alt As Boolean, control As Boolean)
+    parameters:
+    - id: keyChar
+      type: System.Char
+      description: The Unicode character that corresponds to the *key* parameter.
+    - id: key
+      type: System.ConsoleKey
+      description: The console key that corresponds to the *keyChar* parameter.
+    - id: shift
+      type: System.Boolean
+      description: true to indicate that a SHIFT key was pressed; otherwise, false.
+    - id: alt
+      type: System.Boolean
+      description: true to indicate that an ALT key was pressed; otherwise, false.
+    - id: control
+      type: System.Boolean
+      description: true to indicate that a CTRL key was pressed; otherwise, false.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: The numeric value of the *key* parameter is less than 0 or greater than 255.
+- uid: System.ConsoleKeyInfo.KeyChar
+  id: KeyChar
+  parent: System.ConsoleKeyInfo
+  name: KeyChar
+  fullName: System.ConsoleKeyInfo.KeyChar
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/ConsoleKeyInfo.cs
+    startLine: 34
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets the Unicode character represented by the current <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> object.
+  syntax:
+    content: public char KeyChar { get; }
+    content.vb: Public ReadOnly Property KeyChar As Char
+    parameters: []
+    return:
+      type: System.Char
+      description: An object that corresponds to the console key represented by the current <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> object.
+- uid: System.ConsoleKeyInfo.Key
+  id: Key
+  parent: System.ConsoleKeyInfo
+  name: Key
+  fullName: System.ConsoleKeyInfo.Key
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/ConsoleKeyInfo.cs
+    startLine: 39
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets the console key represented by the current <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> object.
+  syntax:
+    content: public ConsoleKey Key { get; }
+    content.vb: Public ReadOnly Property Key As ConsoleKey
+    parameters: []
+    return:
+      type: System.ConsoleKey
+      description: A value that identifies the console key that was pressed.
+- uid: System.ConsoleKeyInfo.Modifiers
+  id: Modifiers
+  parent: System.ConsoleKeyInfo
+  name: Modifiers
+  fullName: System.ConsoleKeyInfo.Modifiers
+  type: Property
+  source:
+    remote: *o0
+    path: src/System.Console/src/System/ConsoleKeyInfo.cs
+    startLine: 44
+  assemblies:
+  - System.Console
+  namespace: System
+  summary: Gets a bitwise combination of <xref href="System.ConsoleModifiers" data-throw-if-not-resolved="false"></xref> values that specifies one or more modifier keys pressed simultaneously with the console key.
+  syntax:
+    content: public ConsoleModifiers Modifiers { get; }
+    content.vb: Public ReadOnly Property Modifiers As ConsoleModifiers
+    parameters: []
+    return:
+      type: System.ConsoleModifiers
+      description: A bitwise combination of the enumeration values. There is no default value.
+references:
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Char
+  parent: System
+  isExternal: false
+  name: Char
+  fullName: System.Char
+- uid: System.ConsoleKey
+  parent: System
+  isExternal: false
+  name: ConsoleKey
+  fullName: System.ConsoleKey
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.ConsoleModifiers
+  parent: System
+  isExternal: false
+  name: ConsoleModifiers
+  fullName: System.ConsoleModifiers
+- uid: System.ArgumentOutOfRangeException
+  isExternal: false
+  name: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException

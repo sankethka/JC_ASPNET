@@ -1,0 +1,492 @@
+items:
+- uid: System.Collections.CollectionBase
+  id: CollectionBase
+  parent: System.Collections
+  children:
+  - System.Collections.CollectionBase.#ctor
+  - System.Collections.CollectionBase.#ctor(System.Int32)
+  - System.Collections.CollectionBase.Capacity
+  - System.Collections.CollectionBase.Clear
+  - System.Collections.CollectionBase.Count
+  - System.Collections.CollectionBase.GetEnumerator
+  - System.Collections.CollectionBase.InnerList
+  - System.Collections.CollectionBase.List
+  - System.Collections.CollectionBase.OnClear
+  - System.Collections.CollectionBase.OnClearComplete
+  - System.Collections.CollectionBase.OnInsert(System.Int32,System.Object)
+  - System.Collections.CollectionBase.OnInsertComplete(System.Int32,System.Object)
+  - System.Collections.CollectionBase.OnRemove(System.Int32,System.Object)
+  - System.Collections.CollectionBase.OnRemoveComplete(System.Int32,System.Object)
+  - System.Collections.CollectionBase.OnSet(System.Int32,System.Object,System.Object)
+  - System.Collections.CollectionBase.OnSetComplete(System.Int32,System.Object,System.Object)
+  - System.Collections.CollectionBase.OnValidate(System.Object)
+  - System.Collections.CollectionBase.RemoveAt(System.Int32)
+  name: CollectionBase
+  fullName: System.Collections.CollectionBase
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Collections/CollectionBase.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 13
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Provides the abstract base class for a strongly typed collection.
+  syntax:
+    content: 'public abstract class CollectionBase : ICollection, IEnumerable, IList'
+    content.vb: Public MustInherit Class CollectionBase Inherits ICollection Implements IEnumerable, IList
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.IEnumerable
+  - System.Collections.IList
+- uid: System.Collections.CollectionBase.#ctor
+  id: '#ctor'
+  parent: System.Collections.CollectionBase
+  name: CollectionBase()
+  fullName: System.Collections.CollectionBase.CollectionBase()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 18
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Initializes a new instance of the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> class with the default initial capacity.
+  syntax:
+    content: protected CollectionBase()
+    content.vb: Protected Sub New
+- uid: System.Collections.CollectionBase.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: System.Collections.CollectionBase
+  name: CollectionBase(Int32)
+  fullName: System.Collections.CollectionBase.CollectionBase(System.Int32)
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 22
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Initializes a new instance of the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> class with the specified capacity.
+  syntax:
+    content: protected CollectionBase(int capacity)
+    content.vb: Protected Sub New(capacity As Integer)
+    parameters:
+    - id: capacity
+      type: System.Int32
+      description: The number of elements that the new list can initially store.
+- uid: System.Collections.CollectionBase.Capacity
+  id: Capacity
+  parent: System.Collections.CollectionBase
+  name: Capacity
+  fullName: System.Collections.CollectionBase.Capacity
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 39
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets or sets the number of elements that the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> can contain.
+  syntax:
+    content: public int Capacity { get; set; }
+    content.vb: Public Property Capacity As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of elements that the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> can contain.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: <xref href="System.Collections.CollectionBase.Capacity" data-throw-if-not-resolved="false"></xref> is set to a value that is less than <xref href="System.Collections.CollectionBase.Count" data-throw-if-not-resolved="false"></xref>.
+  - type: System.OutOfMemoryException
+    description: There is not enough memory available on the system.
+- uid: System.Collections.CollectionBase.Count
+  id: Count
+  parent: System.Collections.CollectionBase
+  name: Count
+  fullName: System.Collections.CollectionBase.Count
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 50
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets the number of elements contained in the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance. This property cannot be overridden.
+  syntax:
+    content: public int Count { get; }
+    content.vb: Public ReadOnly Property Count As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of elements contained in the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.Retrieving the value of this property is an O(1) operation.
+- uid: System.Collections.CollectionBase.InnerList
+  id: InnerList
+  parent: System.Collections.CollectionBase
+  name: InnerList
+  fullName: System.Collections.CollectionBase.InnerList
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 27
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets an <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> containing the list of elements in the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected ArrayList InnerList { get; }
+    content.vb: Protected ReadOnly Property InnerList As ArrayList
+    parameters: []
+    return:
+      type: System.Collections.ArrayList
+      description: An <xref href="System.Collections.ArrayList" data-throw-if-not-resolved="false"></xref> representing the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance itself.Retrieving the value of this property is an O(1) operation.
+- uid: System.Collections.CollectionBase.List
+  id: List
+  parent: System.Collections.CollectionBase
+  name: List
+  fullName: System.Collections.CollectionBase.List
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 35
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Gets an <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> containing the list of elements in the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected IList List { get; }
+    content.vb: Protected ReadOnly Property List As IList
+    parameters: []
+    return:
+      type: System.Collections.IList
+      description: An <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> representing the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance itself.
+- uid: System.Collections.CollectionBase.Clear
+  id: Clear
+  parent: System.Collections.CollectionBase
+  name: Clear()
+  fullName: System.Collections.CollectionBase.Clear()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 56
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Removes all objects from the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance. This method cannot be overridden.
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear
+- uid: System.Collections.CollectionBase.GetEnumerator
+  id: GetEnumerator
+  parent: System.Collections.CollectionBase
+  name: GetEnumerator()
+  fullName: System.Collections.CollectionBase.GetEnumerator()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 179
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Returns an enumerator that iterates through the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: public IEnumerator GetEnumerator()
+    content.vb: Public Function GetEnumerator As IEnumerator
+    return:
+      type: System.Collections.IEnumerator
+      description: An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> for the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+- uid: System.Collections.CollectionBase.OnClear
+  id: OnClear
+  parent: System.Collections.CollectionBase
+  name: OnClear()
+  fullName: System.Collections.CollectionBase.OnClear()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 189
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes when clearing the contents of the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnClear()
+    content.vb: Protected Overridable Sub OnClear
+- uid: System.Collections.CollectionBase.OnClearComplete
+  id: OnClearComplete
+  parent: System.Collections.CollectionBase
+  name: OnClearComplete()
+  fullName: System.Collections.CollectionBase.OnClearComplete()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 206
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes after clearing the contents of the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnClearComplete()
+    content.vb: Protected Overridable Sub OnClearComplete
+- uid: System.Collections.CollectionBase.OnInsert(System.Int32,System.Object)
+  id: OnInsert(System.Int32,System.Object)
+  parent: System.Collections.CollectionBase
+  name: OnInsert(Int32, Object)
+  fullName: System.Collections.CollectionBase.OnInsert(System.Int32, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 186
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes before inserting a new element into the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnInsert(int index, object value)
+    content.vb: Protected Overridable Sub OnInsert(index As Integer, value As Object)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which to insert *value*.
+    - id: value
+      type: System.Object
+      description: The new value of the element at *index*.
+- uid: System.Collections.CollectionBase.OnInsertComplete(System.Int32,System.Object)
+  id: OnInsertComplete(System.Int32,System.Object)
+  parent: System.Collections.CollectionBase
+  name: OnInsertComplete(Int32, Object)
+  fullName: System.Collections.CollectionBase.OnInsertComplete(System.Int32, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 203
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes after inserting a new element into the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnInsertComplete(int index, object value)
+    content.vb: Protected Overridable Sub OnInsertComplete(index As Integer, value As Object)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which to insert *value*.
+    - id: value
+      type: System.Object
+      description: The new value of the element at *index*.
+- uid: System.Collections.CollectionBase.OnRemove(System.Int32,System.Object)
+  id: OnRemove(System.Int32,System.Object)
+  parent: System.Collections.CollectionBase
+  name: OnRemove(Int32, Object)
+  fullName: System.Collections.CollectionBase.OnRemove(System.Int32, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 192
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes when removing an element from the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnRemove(int index, object value)
+    content.vb: Protected Overridable Sub OnRemove(index As Integer, value As Object)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which *value* can be found.
+    - id: value
+      type: System.Object
+      description: The value of the element to remove from *index*.
+- uid: System.Collections.CollectionBase.OnRemoveComplete(System.Int32,System.Object)
+  id: OnRemoveComplete(System.Int32,System.Object)
+  parent: System.Collections.CollectionBase
+  name: OnRemoveComplete(Int32, Object)
+  fullName: System.Collections.CollectionBase.OnRemoveComplete(System.Int32, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 209
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes after removing an element from the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnRemoveComplete(int index, object value)
+    content.vb: Protected Overridable Sub OnRemoveComplete(index As Integer, value As Object)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which *value* can be found.
+    - id: value
+      type: System.Object
+      description: The value of the element to remove from *index*.
+- uid: System.Collections.CollectionBase.OnSet(System.Int32,System.Object,System.Object)
+  id: OnSet(System.Int32,System.Object,System.Object)
+  parent: System.Collections.CollectionBase
+  name: OnSet(Int32, Object, Object)
+  fullName: System.Collections.CollectionBase.OnSet(System.Int32, System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 183
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes before setting a value in the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnSet(int index, object oldValue, object newValue)
+    content.vb: Protected Overridable Sub OnSet(index As Integer, oldValue As Object, newValue As Object)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which *oldValue* can be found.
+    - id: oldValue
+      type: System.Object
+      description: The value to replace with *newValue*.
+    - id: newValue
+      type: System.Object
+      description: The new value of the element at *index*.
+- uid: System.Collections.CollectionBase.OnSetComplete(System.Int32,System.Object,System.Object)
+  id: OnSetComplete(System.Int32,System.Object,System.Object)
+  parent: System.Collections.CollectionBase
+  name: OnSetComplete(Int32, Object, Object)
+  fullName: System.Collections.CollectionBase.OnSetComplete(System.Int32, System.Object, System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 200
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes after setting a value in the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance.
+  syntax:
+    content: protected virtual void OnSetComplete(int index, object oldValue, object newValue)
+    content.vb: Protected Overridable Sub OnSetComplete(index As Integer, oldValue As Object, newValue As Object)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which *oldValue* can be found.
+    - id: oldValue
+      type: System.Object
+      description: The value to replace with *newValue*.
+    - id: newValue
+      type: System.Object
+      description: The new value of the element at *index*.
+- uid: System.Collections.CollectionBase.OnValidate(System.Object)
+  id: OnValidate(System.Object)
+  parent: System.Collections.CollectionBase
+  name: OnValidate(Object)
+  fullName: System.Collections.CollectionBase.OnValidate(System.Object)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 195
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Performs additional custom processes when validating a value.
+  syntax:
+    content: protected virtual void OnValidate(object value)
+    content.vb: Protected Overridable Sub OnValidate(value As Object)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The object to validate.
+  exceptions:
+  - type: System.ArgumentNullException
+    description: '*value* is null.'
+- uid: System.Collections.CollectionBase.RemoveAt(System.Int32)
+  id: RemoveAt(System.Int32)
+  parent: System.Collections.CollectionBase
+  name: RemoveAt(Int32)
+  fullName: System.Collections.CollectionBase.RemoveAt(System.Int32)
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Collections/CollectionBase.cs
+    startLine: 62
+  assemblies:
+  - System.Collections.NonGeneric
+  namespace: System.Collections
+  summary: Removes the element at the specified index of the <xref href="System.Collections.CollectionBase" data-throw-if-not-resolved="false"></xref> instance. This method is not overridable.
+  syntax:
+    content: public void RemoveAt(int index)
+    content.vb: Public Sub RemoveAt(index As Integer)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the element to remove.
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    description: '*index* is less than zero.-or-*index* is equal to or greater than <xref href="System.Collections.CollectionBase.Count" data-throw-if-not-resolved="false"></xref>.'
+references:
+- uid: System.Collections
+  isExternal: false
+  name: System.Collections
+  fullName: System.Collections
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Collections.IList
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IList
+  fullName: System.Collections.IList
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Collections.ArrayList
+  parent: System.Collections
+  isExternal: false
+  name: ArrayList
+  fullName: System.Collections.ArrayList
+- uid: System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: false
+  name: Collections.IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.ArgumentOutOfRangeException
+  isExternal: false
+  name: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.OutOfMemoryException
+  isExternal: false
+  name: OutOfMemoryException
+  fullName: System.OutOfMemoryException
+- uid: System.ArgumentNullException
+  isExternal: false
+  name: ArgumentNullException
+  fullName: System.ArgumentNullException

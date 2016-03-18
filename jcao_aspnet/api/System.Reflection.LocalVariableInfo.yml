@@ -1,0 +1,163 @@
+items:
+- uid: System.Reflection.LocalVariableInfo
+  id: LocalVariableInfo
+  parent: System.Reflection
+  children:
+  - System.Reflection.LocalVariableInfo.#ctor
+  - System.Reflection.LocalVariableInfo.IsPinned
+  - System.Reflection.LocalVariableInfo.LocalIndex
+  - System.Reflection.LocalVariableInfo.LocalType
+  - System.Reflection.LocalVariableInfo.ToString
+  name: LocalVariableInfo
+  fullName: System.Reflection.LocalVariableInfo
+  type: Class
+  source:
+    remote: &o0
+      path: src/mscorlib/src/System/Reflection/MethodBody.cs
+      branch: master
+      repo: https://github.com/dotnet/coreclr.git
+    path: src/mscorlib/src/System/Reflection/MethodBody.cs
+    startLine: 136
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Discovers the attributes of a local variable and provides access to local variable metadata.
+  syntax:
+    content: 'public class LocalVariableInfo : object'
+    content.vb: Public Class LocalVariableInfo Inherits Object
+  inheritance:
+  - System.Object
+- uid: System.Reflection.LocalVariableInfo.#ctor
+  id: '#ctor'
+  parent: System.Reflection.LocalVariableInfo
+  name: LocalVariableInfo()
+  fullName: System.Reflection.LocalVariableInfo.LocalVariableInfo()
+  type: Constructor
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MethodBody.cs
+    startLine: 146
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Initializes a new instance of the <xref href="System.Reflection.LocalVariableInfo" data-throw-if-not-resolved="false"></xref> class.
+  syntax:
+    content: protected LocalVariableInfo()
+    content.vb: Protected Sub New
+- uid: System.Reflection.LocalVariableInfo.IsPinned
+  id: IsPinned
+  parent: System.Reflection.LocalVariableInfo
+  name: IsPinned
+  fullName: System.Reflection.LocalVariableInfo.IsPinned
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MethodBody.cs
+    startLine: 163
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets a <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref> value that indicates whether the object referred to by the local variable is pinned in memory.
+  syntax:
+    content: public virtual bool IsPinned { get; }
+    content.vb: Public Overridable ReadOnly Property IsPinned As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the object referred to by the variable is pinned in memory; otherwise, false.
+- uid: System.Reflection.LocalVariableInfo.LocalIndex
+  id: LocalIndex
+  parent: System.Reflection.LocalVariableInfo
+  name: LocalIndex
+  fullName: System.Reflection.LocalVariableInfo.LocalIndex
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MethodBody.cs
+    startLine: 164
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets the index of the local variable within the method body.
+  syntax:
+    content: public virtual int LocalIndex { get; }
+    content.vb: Public Overridable ReadOnly Property LocalIndex As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: An integer value that represents the order of declaration of the local variable within the method body.
+- uid: System.Reflection.LocalVariableInfo.LocalType
+  id: LocalType
+  parent: System.Reflection.LocalVariableInfo
+  name: LocalType
+  fullName: System.Reflection.LocalVariableInfo.LocalType
+  type: Property
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MethodBody.cs
+    startLine: 162
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Gets the type of the local variable.
+  syntax:
+    content: public virtual Type LocalType { get; }
+    content.vb: Public Overridable ReadOnly Property LocalType As Type
+    parameters: []
+    return:
+      type: System.Type
+      description: The type of the local variable.
+- uid: System.Reflection.LocalVariableInfo.ToString
+  id: ToString
+  parent: System.Reflection.LocalVariableInfo
+  name: ToString()
+  fullName: System.Reflection.LocalVariableInfo.ToString()
+  type: Method
+  source:
+    remote: *o0
+    path: src/mscorlib/src/System/Reflection/MethodBody.cs
+    startLine: 150
+  assemblies:
+  - System.Reflection
+  namespace: System.Reflection
+  summary: Returns a user-readable string that describes the local variable.
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+      description: A string that displays information about the local variable, including the type name, index, and pinned status.
+references:
+- uid: System.Reflection
+  isExternal: false
+  name: System.Reflection
+  fullName: System.Reflection
+- uid: System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  fullName: System.Object
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Boolean
+  parent: System
+  isExternal: false
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  fullName: System.Int32
+- uid: System.Type
+  parent: System
+  isExternal: false
+  name: Type
+  fullName: System.Type
+- uid: System.String
+  parent: System
+  isExternal: false
+  name: String
+  fullName: System.String
