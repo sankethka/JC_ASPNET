@@ -2,7 +2,7 @@
 uid: System.Runtime.GCSettings.IsServerGC
 example:
 - |
-    <pre><code class="csharp" lang="lang-csharp">using System;
+    <pre><code class="csharp lang-csharp">using System;
     using System.Runtime;
 
     class Sample
@@ -19,7 +19,7 @@ example:
         }
     }
     // The example displays output like the following:
-    //      The workstation garbage collector is running.</code><code class="vb" lang="lang-vb">Imports System
+    //      The workstation garbage collector is running.</code><code class="vb lang-vb">Imports System
     Imports System.Runtime
 
     Class Sample
