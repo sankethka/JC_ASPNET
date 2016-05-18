@@ -1,8 +1,6 @@
 ---
-_tocPath: api/toc.html
-_tocRel: toc.html
-_navPath: toc.html
-_navRel: ../toc.html
+toc_asset_id: api/toc.json
+toc_rel: toc.json
 ---
 
 # 🔧 .NET Core API Reference
