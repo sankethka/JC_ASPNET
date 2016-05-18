@@ -2,10 +2,9 @@
 layout: HubPage
 ---
 
-# Index test file for Open Publishing
 <article id="main">
     <section id="hero-content" class="graph">
-        <h1>>.NET Core</h1>
+        <h1>.NET Core</h1>
         <h2>Welcome to .NET Core documentation!</h2>
     </section>
 
