@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.InteropServices.ErrorWrapper
+  commentId: T:System.Runtime.InteropServices.ErrorWrapper
   id: ErrorWrapper
   parent: System.Runtime.InteropServices
   children:
@@ -7,331 +8,200 @@ items:
   - System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Int32)
   - System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Object)
   - System.Runtime.InteropServices.ErrorWrapper.ErrorCode
+  langs:
+  - csharp
+  - vb
   name: ErrorWrapper
+  nameWithType: ErrorWrapper
   fullName: System.Runtime.InteropServices.ErrorWrapper
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/InteropServices/ErrorWrapper.cs
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/InteropServices/ErrorWrapper.cs
-    startLine: 18
+      repo: https://github.com/dotnet/corefx.git
+    id: ErrorWrapper
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 248
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: Wraps objects the marshaler should marshal as a VT_ERROR.
   syntax:
-    content: public sealed class ErrorWrapper
-    content.vb: Public NotInheritable Class ErrorWrapper
+    content: 'public sealed class ErrorWrapper : object'
+    content.vb: >-
+      Public NotInheritable Class ErrorWrapper
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Exception)
+  commentId: M:System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Exception)
   id: '#ctor(System.Exception)'
   parent: System.Runtime.InteropServices.ErrorWrapper
+  langs:
+  - csharp
+  - vb
   name: ErrorWrapper(Exception)
+  nameWithType: ErrorWrapper.ErrorWrapper(Exception)
   fullName: System.Runtime.InteropServices.ErrorWrapper.ErrorWrapper(System.Exception)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/ErrorWrapper.cs
-    startLine: 34
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 252
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: Initializes a new instance of the <xref href="System.Runtime.InteropServices.ErrorWrapper" data-throw-if-not-resolved="false"></xref> class with the HRESULT that corresponds to the exception supplied.
   syntax:
     content: public ErrorWrapper(Exception e)
     content.vb: Public Sub New(e As Exception)
     parameters:
     - id: e
       type: System.Exception
-      description: The exception to be converted to an error code.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Int32)
+  commentId: M:System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Int32)
   id: '#ctor(System.Int32)'
   parent: System.Runtime.InteropServices.ErrorWrapper
+  langs:
+  - csharp
+  - vb
   name: ErrorWrapper(Int32)
+  nameWithType: ErrorWrapper.ErrorWrapper(Int32)
   fullName: System.Runtime.InteropServices.ErrorWrapper.ErrorWrapper(System.Int32)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/ErrorWrapper.cs
-    startLine: 22
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 253
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: Initializes a new instance of the <xref href="System.Runtime.InteropServices.ErrorWrapper" data-throw-if-not-resolved="false"></xref> class with the HRESULT of the error.
   syntax:
     content: public ErrorWrapper(int errorCode)
     content.vb: Public Sub New(errorCode As Integer)
     parameters:
     - id: errorCode
       type: System.Int32
-      description: The HRESULT of the error.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Object)
+  commentId: M:System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Object)
   id: '#ctor(System.Object)'
   parent: System.Runtime.InteropServices.ErrorWrapper
+  langs:
+  - csharp
+  - vb
   name: ErrorWrapper(Object)
+  nameWithType: ErrorWrapper.ErrorWrapper(Object)
   fullName: System.Runtime.InteropServices.ErrorWrapper.ErrorWrapper(System.Object)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/ErrorWrapper.cs
-    startLine: 27
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 254
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: Initializes a new instance of the <xref href="System.Runtime.InteropServices.ErrorWrapper" data-throw-if-not-resolved="false"></xref> class with an object containing the HRESULT of the error.
   syntax:
     content: public ErrorWrapper(object errorCode)
     content.vb: Public Sub New(errorCode As Object)
     parameters:
     - id: errorCode
       type: System.Object
-      description: The object containing the HRESULT of the error.
-  exceptions:
-  - type: System.ArgumentException
-    description: The *errorCode* parameter is not an <xref href="System.Int32" data-throw-if-not-resolved="false"></xref> type.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.InteropServices.ErrorWrapper.ErrorCode
+  commentId: P:System.Runtime.InteropServices.ErrorWrapper.ErrorCode
   id: ErrorCode
   parent: System.Runtime.InteropServices.ErrorWrapper
+  langs:
+  - csharp
+  - vb
   name: ErrorCode
+  nameWithType: ErrorWrapper.ErrorCode
   fullName: System.Runtime.InteropServices.ErrorWrapper.ErrorCode
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/ErrorWrapper.cs
-    startLine: 43
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ErrorCode
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 255
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: Gets the error code of the wrapper.
   syntax:
     content: public int ErrorCode { get; }
     content.vb: Public ReadOnly Property ErrorCode As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The HRESULT of the error.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
   isExternal: false
   name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: false
-  name: Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    fullName: System.Object.Equals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    fullName: System.Object.Equals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: false
-  name: Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    fullName: System.Object.Equals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    fullName: System.Object.Equals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  parent: System.Object
-  isExternal: false
-  name: GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    fullName: System.Object.GetHashCode
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    fullName: System.Object.GetHashCode
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-- uid: System.Object.GetType
-  parent: System.Object
-  isExternal: false
-  name: GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    fullName: System.Object.GetType
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    fullName: System.Object.GetType
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: false
-  name: MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: false
-  name: ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-- uid: System.Object.ToString
-  parent: System.Object
-  isExternal: false
-  name: ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    fullName: System.Object.ToString
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    fullName: System.Object.ToString
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: false
   name: Exception
+  nameWithType: Exception
   fullName: System.Exception
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

@@ -1,26 +1,38 @@
 items:
 - uid: System.Runtime.CompilerServices.AsyncStateMachineAttribute
+  commentId: T:System.Runtime.CompilerServices.AsyncStateMachineAttribute
   id: AsyncStateMachineAttribute
   parent: System.Runtime.CompilerServices
   children:
   - System.Runtime.CompilerServices.AsyncStateMachineAttribute.#ctor(System.Type)
+  langs:
+  - csharp
+  - vb
   name: AsyncStateMachineAttribute
+  nameWithType: AsyncStateMachineAttribute
   fullName: System.Runtime.CompilerServices.AsyncStateMachineAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/CompilerServices/AsyncStateMachineAttribute.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/CompilerServices/AsyncStateMachineAttribute.cs
-    startLine: 9
+      repo: https://github.com/dotnet/corefx.git
+    id: AsyncStateMachineAttribute
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2830
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Indicates whether a method is marked with either the Async (Visual Basic) or async (C# Reference) modifier.
   syntax:
-    content: 'public sealed class AsyncStateMachineAttribute : StateMachineAttribute'
-    content.vb: Public NotInheritable Class AsyncStateMachineAttribute Inherits StateMachineAttribute
+    content: >-
+      [AttributeUsage(AttributeTargets.Method, Inherited = false, AllowMultiple = false)]
+
+      public sealed class AsyncStateMachineAttribute : StateMachineAttribute
+    content.vb: >-
+      <AttributeUsage(AttributeTargets.Method, Inherited:=False, AllowMultiple:=False)>
+
+      Public NotInheritable Class AsyncStateMachineAttribute
+          Inherits StateMachineAttribute
   inheritance:
   - System.Object
   - System.Attribute
@@ -34,243 +46,359 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  attributes:
+  - type: System.AttributeUsageAttribute
+    ctor: System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
+    arguments:
+    - type: System.AttributeTargets
+      value: 64
+    namedArguments:
+    - name: Inherited
+      type: System.Boolean
+      value: false
+    - name: AllowMultiple
+      type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Runtime.CompilerServices.AsyncStateMachineAttribute.#ctor(System.Type)
+  commentId: M:System.Runtime.CompilerServices.AsyncStateMachineAttribute.#ctor(System.Type)
   id: '#ctor(System.Type)'
   parent: System.Runtime.CompilerServices.AsyncStateMachineAttribute
+  langs:
+  - csharp
+  - vb
   name: AsyncStateMachineAttribute(Type)
+  nameWithType: AsyncStateMachineAttribute.AsyncStateMachineAttribute(Type)
   fullName: System.Runtime.CompilerServices.AsyncStateMachineAttribute.AsyncStateMachineAttribute(System.Type)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/AsyncStateMachineAttribute.cs
-    startLine: 12
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2833
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Initializes a new instance of the <xref href="System.Runtime.CompilerServices.AsyncStateMachineAttribute" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public AsyncStateMachineAttribute(Type stateMachineType)
     content.vb: Public Sub New(stateMachineType As Type)
     parameters:
     - id: stateMachineType
       type: System.Type
-      description: The type object for the underlying state machine type that's used to implement a state machine method.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
   isExternal: false
   name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
   fullName: System.Runtime.CompilerServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Attribute
+  commentId: T:System.Attribute
   parent: System
   isExternal: false
   name: Attribute
+  nameWithType: Attribute
   fullName: System.Attribute
 - uid: System.Runtime.CompilerServices.StateMachineAttribute
+  commentId: T:System.Runtime.CompilerServices.StateMachineAttribute
   parent: System.Runtime.CompilerServices
   isExternal: false
   name: StateMachineAttribute
+  nameWithType: StateMachineAttribute
   fullName: System.Runtime.CompilerServices.StateMachineAttribute
 - uid: System.Runtime.CompilerServices.StateMachineAttribute.StateMachineType
+  commentId: P:System.Runtime.CompilerServices.StateMachineAttribute.StateMachineType
   parent: System.Runtime.CompilerServices.StateMachineAttribute
   isExternal: false
   name: StateMachineType
+  nameWithType: StateMachineAttribute.StateMachineType
   fullName: System.Runtime.CompilerServices.StateMachineAttribute.StateMachineType
 - uid: System.Attribute.Equals(System.Object)
+  commentId: M:System.Attribute.Equals(System.Object)
   parent: System.Attribute
   isExternal: false
   name: Equals(Object)
+  nameWithType: Attribute.Equals(Object)
   fullName: System.Attribute.Equals(System.Object)
   spec.csharp:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Attribute.GetHashCode
+  commentId: M:System.Attribute.GetHashCode
   parent: System.Attribute
   isExternal: false
   name: GetHashCode()
+  nameWithType: Attribute.GetHashCode()
   fullName: System.Attribute.GetHashCode()
   spec.csharp:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type

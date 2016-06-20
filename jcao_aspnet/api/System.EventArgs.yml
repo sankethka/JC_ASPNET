@@ -1,24 +1,29 @@
 items:
 - uid: System.EventArgs
+  commentId: T:System.EventArgs
   id: EventArgs
   parent: System
   children:
   - System.EventArgs.#ctor
   - System.EventArgs.Empty
+  langs:
+  - csharp
+  - vb
   name: EventArgs
+  nameWithType: EventArgs
   fullName: System.EventArgs
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/EventArgs.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/EventArgs.cs
-    startLine: 8
+      repo: https://github.com/dotnet/corefx.git
+    id: EventArgs
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 829
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Represents the base class for classes that contain event data, and provides a value to use for events that do not include event data.
   syntax:
     content: public class EventArgs
     content.vb: Public Class EventArgs
@@ -32,232 +37,349 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
   id: Empty
   parent: System.EventArgs
+  langs:
+  - csharp
+  - vb
   name: Empty
+  nameWithType: EventArgs.Empty
   fullName: System.EventArgs.Empty
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/EventArgs.cs
-    startLine: 11
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Empty
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 831
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Provides a value to use with events that do not have event data.
   syntax:
     content: public static readonly EventArgs Empty
     content.vb: Public Shared ReadOnly Empty As EventArgs
+    return:
+      type: System.EventArgs
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.EventArgs.#ctor
+  commentId: M:System.EventArgs.#ctor
   id: '#ctor'
   parent: System.EventArgs
+  langs:
+  - csharp
+  - vb
   name: EventArgs()
+  nameWithType: EventArgs.EventArgs()
   fullName: System.EventArgs.EventArgs()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/EventArgs.cs
-    startLine: 13
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 832
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.EventArgs" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public EventArgs()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object)
+  nameWithType: Object.Equals(Object)
   fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
   parent: System.Object
   isExternal: false
   name: GetHashCode()
+  nameWithType: Object.GetHashCode()
   fullName: System.Object.GetHashCode()
   spec.csharp:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: false
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs

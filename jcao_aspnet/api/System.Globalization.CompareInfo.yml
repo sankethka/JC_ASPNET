@@ -1,5 +1,6 @@
 items:
 - uid: System.Globalization.CompareInfo
+  commentId: T:System.Globalization.CompareInfo
   id: CompareInfo
   parent: System.Globalization
   children:
@@ -39,1323 +40,1546 @@ items:
   - System.Globalization.CompareInfo.LastIndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
   - System.Globalization.CompareInfo.Name
   - System.Globalization.CompareInfo.ToString
+  langs:
+  - csharp
+  - vb
   name: CompareInfo
+  nameWithType: CompareInfo
   fullName: System.Globalization.CompareInfo
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Globalization/CompareInfo.cs
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 67
+      repo: https://github.com/dotnet/corefx.git
+    id: CompareInfo
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 68
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Implements a set of methods for culture-sensitive string comparisons.
   syntax:
     content: 'public class CompareInfo : object'
-    content.vb: Public Class CompareInfo Inherits Object
+    content.vb: >-
+      Public Class CompareInfo
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Globalization.CompareInfo.Name
+  commentId: P:System.Globalization.CompareInfo.Name
   id: Name
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: Name
+  nameWithType: CompareInfo.Name
   fullName: System.Globalization.CompareInfo.Name
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 320
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Name
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 71
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the name of the culture used for sorting operations by this <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public virtual string Name { get; }
     content.vb: Public Overridable ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-      description: The name of a culture.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CompareInfo.Compare(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32)
+  commentId: M:System.Globalization.CompareInfo.Compare(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32)
   id: Compare(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: Compare(String, Int32, Int32, String, Int32, Int32)
+  nameWithType: CompareInfo.Compare(String, Int32, Int32, String, Int32, Int32)
   fullName: System.Globalization.CompareInfo.Compare(System.String, System.Int32, System.Int32, System.String, System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 454
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Compare
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 72
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Compares a section of one string with a section of another string.
   syntax:
     content: public virtual int Compare(string string1, int offset1, int length1, string string2, int offset2, int length2)
     content.vb: Public Overridable Function Compare(string1 As String, offset1 As Integer, length1 As Integer, string2 As String, offset2 As Integer, length2 As Integer) As Integer
     parameters:
     - id: string1
       type: System.String
-      description: The first string to compare.
     - id: offset1
       type: System.Int32
-      description: The zero-based index of the character in *string1* at which to start comparing.
     - id: length1
       type: System.Int32
-      description: The number of consecutive characters in *string1* to compare.
     - id: string2
       type: System.String
-      description: The second string to compare.
     - id: offset2
       type: System.Int32
-      description: The zero-based index of the character in *string2* at which to start comparing.
     - id: length2
       type: System.Int32
-      description: The number of consecutive characters in *string2* to compare.
     return:
       type: System.Int32
-      description: A 32-bit signed integer indicating the lexical relationship between the two comparands.Value Condition zero The two strings are equal. less than zero The specified section of *string1* is less than the specified section of *string2*. greater than zero The specified section of *string1* is greater than the specified section of *string2*.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*offset1* or *length1* or *offset2* or *length2* is less than zero.-or- *offset1* is greater than or equal to the number of characters in *string1*.-or- *offset2* is greater than or equal to the number of characters in *string2*.-or- *length1* is greater than the number of characters from *offset1* to the end of *string1*.-or- *length2* is greater than the number of characters from *offset2* to the end of *string2*.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.Compare(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.Compare(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
   id: Compare(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: Compare(String, Int32, Int32, String, Int32, Int32, CompareOptions)
+  nameWithType: CompareInfo.Compare(String, Int32, Int32, String, Int32, Int32, CompareOptions)
   fullName: System.Globalization.CompareInfo.Compare(System.String, System.Int32, System.Int32, System.String, System.Int32, System.Int32, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 473
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Compare
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 73
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Compares a section of one string with a section of another string using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int Compare(string string1, int offset1, int length1, string string2, int offset2, int length2, CompareOptions options)
     content.vb: Public Overridable Function Compare(string1 As String, offset1 As Integer, length1 As Integer, string2 As String, offset2 As Integer, length2 As Integer, options As CompareOptions) As Integer
     parameters:
     - id: string1
       type: System.String
-      description: The first string to compare.
     - id: offset1
       type: System.Int32
-      description: The zero-based index of the character in *string1* at which to start comparing.
     - id: length1
       type: System.Int32
-      description: The number of consecutive characters in *string1* to compare.
     - id: string2
       type: System.String
-      description: The second string to compare.
     - id: offset2
       type: System.Int32
-      description: The zero-based index of the character in *string2* at which to start comparing.
     - id: length2
       type: System.Int32
-      description: The number of consecutive characters in *string2* to compare.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *string1* and *string2* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.StringSort" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: A 32-bit signed integer indicating the lexical relationship between the two comparands.Value Condition zero The two strings are equal. less than zero The specified section of *string1* is less than the specified section of *string2*. greater than zero The specified section of *string1* is greater than the specified section of *string2*.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*offset1* or *length1* or *offset2* or *length2* is less than zero.-or- *offset1* is greater than or equal to the number of characters in *string1*.-or- *offset2* is greater than or equal to the number of characters in *string2*.-or- *length1* is greater than the number of characters from *offset1* to the end of *string1*.-or- *length2* is greater than the number of characters from *offset2* to the end of *string2*.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.Compare(System.String,System.Int32,System.String,System.Int32)
+  commentId: M:System.Globalization.CompareInfo.Compare(System.String,System.Int32,System.String,System.Int32)
   id: Compare(System.String,System.Int32,System.String,System.Int32)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: Compare(String, Int32, String, Int32)
+  nameWithType: CompareInfo.Compare(String, Int32, String, Int32)
   fullName: System.Globalization.CompareInfo.Compare(System.String, System.Int32, System.String, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 467
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Compare
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 74
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Compares the end section of a string with the end section of another string.
   syntax:
     content: public virtual int Compare(string string1, int offset1, string string2, int offset2)
     content.vb: Public Overridable Function Compare(string1 As String, offset1 As Integer, string2 As String, offset2 As Integer) As Integer
     parameters:
     - id: string1
       type: System.String
-      description: The first string to compare.
     - id: offset1
       type: System.Int32
-      description: The zero-based index of the character in *string1* at which to start comparing.
     - id: string2
       type: System.String
-      description: The second string to compare.
     - id: offset2
       type: System.Int32
-      description: The zero-based index of the character in *string2* at which to start comparing.
     return:
       type: System.Int32
-      description: A 32-bit signed integer indicating the lexical relationship between the two comparands.Value Condition zero The two strings are equal. less than zero The specified section of *string1* is less than the specified section of *string2*. greater than zero The specified section of *string1* is greater than the specified section of *string2*.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*offset1* or *offset2* is less than zero.-or- *offset1* is greater than or equal to the number of characters in *string1*.-or- *offset2* is greater than or equal to the number of characters in *string2*.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.Compare(System.String,System.Int32,System.String,System.Int32,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.Compare(System.String,System.Int32,System.String,System.Int32,System.Globalization.CompareOptions)
   id: Compare(System.String,System.Int32,System.String,System.Int32,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: Compare(String, Int32, String, Int32, CompareOptions)
+  nameWithType: CompareInfo.Compare(String, Int32, String, Int32, CompareOptions)
   fullName: System.Globalization.CompareInfo.Compare(System.String, System.Int32, System.String, System.Int32, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 460
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Compare
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 75
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Compares the end section of a string with the end section of another string using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int Compare(string string1, int offset1, string string2, int offset2, CompareOptions options)
     content.vb: Public Overridable Function Compare(string1 As String, offset1 As Integer, string2 As String, offset2 As Integer, options As CompareOptions) As Integer
     parameters:
     - id: string1
       type: System.String
-      description: The first string to compare.
     - id: offset1
       type: System.Int32
-      description: The zero-based index of the character in *string1* at which to start comparing.
     - id: string2
       type: System.String
-      description: The second string to compare.
     - id: offset2
       type: System.Int32
-      description: The zero-based index of the character in *string2* at which to start comparing.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *string1* and *string2* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.StringSort" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: A 32-bit signed integer indicating the lexical relationship between the two comparands.Value Condition zero The two strings are equal. less than zero The specified section of *string1* is less than the specified section of *string2*. greater than zero The specified section of *string1* is greater than the specified section of *string2*.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*offset1* or *offset2* is less than zero.-or- *offset1* is greater than or equal to the number of characters in *string1*.-or- *offset2* is greater than or equal to the number of characters in *string2*.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.Compare(System.String,System.String)
+  commentId: M:System.Globalization.CompareInfo.Compare(System.String,System.String)
   id: Compare(System.String,System.String)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: Compare(String, String)
+  nameWithType: CompareInfo.Compare(String, String)
   fullName: System.Globalization.CompareInfo.Compare(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 397
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Compare
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 76
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Compares two strings.
   syntax:
     content: public virtual int Compare(string string1, string string2)
     content.vb: Public Overridable Function Compare(string1 As String, string2 As String) As Integer
     parameters:
     - id: string1
       type: System.String
-      description: The first string to compare.
     - id: string2
       type: System.String
-      description: The second string to compare.
     return:
       type: System.Int32
-      description: A 32-bit signed integer indicating the lexical relationship between the two comparands.Value Condition zero The two strings are equal. less than zero *string1* is less than *string2*. greater than zero *string1* is greater than *string2*.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.Compare(System.String,System.String,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.Compare(System.String,System.String,System.Globalization.CompareOptions)
   id: Compare(System.String,System.String,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: Compare(String, String, CompareOptions)
+  nameWithType: CompareInfo.Compare(String, String, CompareOptions)
   fullName: System.Globalization.CompareInfo.Compare(System.String, System.String, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 402
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Compare
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 77
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Compares two strings using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int Compare(string string1, string string2, CompareOptions options)
     content.vb: Public Overridable Function Compare(string1 As String, string2 As String, options As CompareOptions) As Integer
     parameters:
     - id: string1
       type: System.String
-      description: The first string to compare.
     - id: string2
       type: System.String
-      description: The second string to compare.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *string1* and *string2* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.StringSort" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: A 32-bit signed integer indicating the lexical relationship between the two comparands.Value Condition zero The two strings are equal. less than zero *string1* is less than *string2*. greater than zero *string1* is greater than *string2*.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.Equals(System.Object)
+  commentId: M:System.Globalization.CompareInfo.Equals(System.Object)
   id: Equals(System.Object)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: Equals(Object)
+  nameWithType: CompareInfo.Equals(Object)
   fullName: System.Globalization.CompareInfo.Equals(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 1137
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 78
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Determines whether the specified object is equal to the current <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public override bool Equals(object value)
     content.vb: Public Overrides Function Equals(value As Object) As Boolean
     parameters:
     - id: value
       type: System.Object
-      description: The object to compare with the current <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Boolean
-      description: true if the specified object is equal to the current <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref>; otherwise, false.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Globalization.CompareInfo.GetCompareInfo(System.String)
+  commentId: M:System.Globalization.CompareInfo.GetCompareInfo(System.String)
   id: GetCompareInfo(System.String)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: GetCompareInfo(String)
+  nameWithType: CompareInfo.GetCompareInfo(String)
   fullName: System.Globalization.CompareInfo.GetCompareInfo(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 212
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetCompareInfo
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 79
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Initializes a new <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref> object that is associated with the culture with the specified name.
   syntax:
     content: public static CompareInfo GetCompareInfo(string name)
     content.vb: Public Shared Function GetCompareInfo(name As String) As CompareInfo
     parameters:
     - id: name
       type: System.String
-      description: A string representing the culture name.
     return:
       type: System.Globalization.CompareInfo
-      description: A new <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref> object associated with the culture with the specified identifier and using string comparison methods in the current <xref href="System.Reflection.Assembly" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*name* is null.'
-  - type: System.ArgumentException
-    description: '*name* is an invalid culture name.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Globalization.CompareInfo.GetHashCode
+  commentId: M:System.Globalization.CompareInfo.GetHashCode
   id: GetHashCode
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: GetHashCode()
+  nameWithType: CompareInfo.GetHashCode()
   fullName: System.Globalization.CompareInfo.GetHashCode()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 1161
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 80
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Serves as a hash function for the current <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref> for hashing algorithms and data structures, such as a hash table.
   syntax:
     content: public override int GetHashCode()
     content.vb: Public Overrides Function GetHashCode As Integer
     return:
       type: System.Int32
-      description: A hash code for the current <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Globalization.CompareInfo.GetHashCode(System.String,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.GetHashCode(System.String,System.Globalization.CompareOptions)
   id: GetHashCode(System.String,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: GetHashCode(String, CompareOptions)
+  nameWithType: CompareInfo.GetHashCode(String, CompareOptions)
   fullName: System.Globalization.CompareInfo.GetHashCode(System.String, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 1170
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 81
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the hash code for a string based on specified comparison options.
   syntax:
     content: public virtual int GetHashCode(string source, CompareOptions options)
     content.vb: Public Overridable Function GetHashCode(source As String, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string whose hash code is to be returned.
     - id: options
       type: System.Globalization.CompareOptions
-      description: A value that determines how strings are compared.
     return:
       type: System.Int32
-      description: A 32-bit signed integer hash code.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IndexOf(System.String,System.Char)
+  commentId: M:System.Globalization.CompareInfo.IndexOf(System.String,System.Char)
   id: IndexOf(System.String,System.Char)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IndexOf(String, Char)
+  nameWithType: CompareInfo.IndexOf(String, Char)
   fullName: System.Globalization.CompareInfo.IndexOf(System.String, System.Char)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 673
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 82
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified character and returns the zero-based index of the first occurrence within the entire source string.
   syntax:
     content: public virtual int IndexOf(string source, char value)
     content.vb: Public Overridable Function IndexOf(source As String, value As Char) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.Char
-      description: The character to locate within *source*.
     return:
       type: System.Int32
-      description: The zero-based index of the first occurrence of *value*, if found, within *source*; otherwise, -1. Returns 0 (zero) if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IndexOf(System.String,System.Char,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.IndexOf(System.String,System.Char,System.Globalization.CompareOptions)
   id: IndexOf(System.String,System.Char,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IndexOf(String, Char, CompareOptions)
+  nameWithType: CompareInfo.IndexOf(String, Char, CompareOptions)
   fullName: System.Globalization.CompareInfo.IndexOf(System.String, System.Char, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 693
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 83
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified character and returns the zero-based index of the first occurrence within the entire source string using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int IndexOf(string source, char value, CompareOptions options)
     content.vb: Public Overridable Function IndexOf(source As String, value As Char, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.Char
-      description: The character to locate within *source*.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how the strings should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the first occurrence of *value*, if found, within *source*, using the specified comparison options; otherwise, -1. Returns 0 (zero) if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IndexOf(System.String,System.Char,System.Int32,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.IndexOf(System.String,System.Char,System.Int32,System.Globalization.CompareOptions)
   id: IndexOf(System.String,System.Char,System.Int32,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IndexOf(String, Char, Int32, CompareOptions)
+  nameWithType: CompareInfo.IndexOf(String, Char, Int32, CompareOptions)
   fullName: System.Globalization.CompareInfo.IndexOf(System.String, System.Char, System.Int32, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 733
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 84
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified character and returns the zero-based index of the first occurrence within the section of the source string that extends from the specified index to the end of the string using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int IndexOf(string source, char value, int startIndex, CompareOptions options)
     content.vb: Public Overridable Function IndexOf(source As String, value As Char, startIndex As Integer, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.Char
-      description: The character to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the search.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the first occurrence of *value*, if found, within the section of *source* that extends from *startIndex* to the end of *source*, using the specified comparison options; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IndexOf(System.String,System.Char,System.Int32,System.Int32)
+  commentId: M:System.Globalization.CompareInfo.IndexOf(System.String,System.Char,System.Int32,System.Int32)
   id: IndexOf(System.String,System.Char,System.Int32,System.Int32)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IndexOf(String, Char, Int32, Int32)
+  nameWithType: CompareInfo.IndexOf(String, Char, Int32, Int32)
   fullName: System.Globalization.CompareInfo.IndexOf(System.String, System.Char, System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 753
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 85
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified character and returns the zero-based index of the first occurrence within the section of the source string that starts at the specified index and contains the specified number of elements.
   syntax:
     content: public virtual int IndexOf(string source, char value, int startIndex, int count)
     content.vb: Public Overridable Function IndexOf(source As String, value As Char, startIndex As Integer, count As Integer) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.Char
-      description: The character to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the search.
     - id: count
       type: System.Int32
-      description: The number of elements in the section to search.
     return:
       type: System.Int32
-      description: The zero-based index of the first occurrence of *value*, if found, within the section of *source* that starts at *startIndex* and contains the number of elements specified by *count*; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.-or- *count* is less than zero.-or- *startIndex* and *count* do not specify a valid section in *source*.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IndexOf(System.String,System.Char,System.Int32,System.Int32,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.IndexOf(System.String,System.Char,System.Int32,System.Int32,System.Globalization.CompareOptions)
   id: IndexOf(System.String,System.Char,System.Int32,System.Int32,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IndexOf(String, Char, Int32, Int32, CompareOptions)
+  nameWithType: CompareInfo.IndexOf(String, Char, Int32, Int32, CompareOptions)
   fullName: System.Globalization.CompareInfo.IndexOf(System.String, System.Char, System.Int32, System.Int32, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 764
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 86
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified character and returns the zero-based index of the first occurrence within the section of the source string that starts at the specified index and contains the specified number of elements using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int IndexOf(string source, char value, int startIndex, int count, CompareOptions options)
     content.vb: Public Overridable Function IndexOf(source As String, value As Char, startIndex As Integer, count As Integer, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.Char
-      description: The character to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the search.
     - id: count
       type: System.Int32
-      description: The number of elements in the section to search.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the first occurrence of *value*, if found, within the section of *source* that starts at *startIndex* and contains the number of elements specified by *count*, using the specified comparison options; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.-or- *count* is less than zero.-or- *startIndex* and *count* do not specify a valid section in *source*.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IndexOf(System.String,System.String)
+  commentId: M:System.Globalization.CompareInfo.IndexOf(System.String,System.String)
   id: IndexOf(System.String,System.String)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IndexOf(String, String)
+  nameWithType: CompareInfo.IndexOf(String, String)
   fullName: System.Globalization.CompareInfo.IndexOf(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 683
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 87
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified substring and returns the zero-based index of the first occurrence within the entire source string.
   syntax:
     content: public virtual int IndexOf(string source, string value)
     content.vb: Public Overridable Function IndexOf(source As String, value As String) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.String
-      description: The string to locate within *source*.
     return:
       type: System.Int32
-      description: The zero-based index of the first occurrence of *value*, if found, within *source*; otherwise, -1. Returns 0 (zero) if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *value* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IndexOf(System.String,System.String,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.IndexOf(System.String,System.String,System.Globalization.CompareOptions)
   id: IndexOf(System.String,System.String,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IndexOf(String, String, CompareOptions)
+  nameWithType: CompareInfo.IndexOf(String, String, CompareOptions)
   fullName: System.Globalization.CompareInfo.IndexOf(System.String, System.String, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 703
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 88
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified substring and returns the zero-based index of the first occurrence within the entire source string using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int IndexOf(string source, string value, CompareOptions options)
     content.vb: Public Overridable Function IndexOf(source As String, value As String, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.String
-      description: The string to locate within *source*.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the first occurrence of *value*, if found, within *source*, using the specified comparison options; otherwise, -1. Returns 0 (zero) if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *value* is null.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IndexOf(System.String,System.String,System.Int32,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.IndexOf(System.String,System.String,System.Int32,System.Globalization.CompareOptions)
   id: IndexOf(System.String,System.String,System.Int32,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IndexOf(String, String, Int32, CompareOptions)
+  nameWithType: CompareInfo.IndexOf(String, String, Int32, CompareOptions)
   fullName: System.Globalization.CompareInfo.IndexOf(System.String, System.String, System.Int32, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 743
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 89
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified substring and returns the zero-based index of the first occurrence within the section of the source string that extends from the specified index to the end of the string using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int IndexOf(string source, string value, int startIndex, CompareOptions options)
     content.vb: Public Overridable Function IndexOf(source As String, value As String, startIndex As Integer, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.String
-      description: The string to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the search.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the first occurrence of *value*, if found, within the section of *source* that extends from *startIndex* to the end of *source*, using the specified comparison options; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *value* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IndexOf(System.String,System.String,System.Int32,System.Int32)
+  commentId: M:System.Globalization.CompareInfo.IndexOf(System.String,System.String,System.Int32,System.Int32)
   id: IndexOf(System.String,System.String,System.Int32,System.Int32)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IndexOf(String, String, Int32, Int32)
+  nameWithType: CompareInfo.IndexOf(String, String, Int32, Int32)
   fullName: System.Globalization.CompareInfo.IndexOf(System.String, System.String, System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 759
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 90
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified substring and returns the zero-based index of the first occurrence within the section of the source string that starts at the specified index and contains the specified number of elements.
   syntax:
     content: public virtual int IndexOf(string source, string value, int startIndex, int count)
     content.vb: Public Overridable Function IndexOf(source As String, value As String, startIndex As Integer, count As Integer) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.String
-      description: The string to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the search.
     - id: count
       type: System.Int32
-      description: The number of elements in the section to search.
     return:
       type: System.Int32
-      description: The zero-based index of the first occurrence of *value*, if found, within the section of *source* that starts at *startIndex* and contains the number of elements specified by *count*; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *value* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.-or- *count* is less than zero.-or- *startIndex* and *count* do not specify a valid section in *source*.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.IndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
   id: IndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IndexOf(String, String, Int32, Int32, CompareOptions)
+  nameWithType: CompareInfo.IndexOf(String, String, Int32, Int32, CompareOptions)
   fullName: System.Globalization.CompareInfo.IndexOf(System.String, System.String, System.Int32, System.Int32, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 797
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 91
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified substring and returns the zero-based index of the first occurrence within the section of the source string that starts at the specified index and contains the specified number of elements using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int IndexOf(string source, string value, int startIndex, int count, CompareOptions options)
     content.vb: Public Overridable Function IndexOf(source As String, value As String, startIndex As Integer, count As Integer, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.String
-      description: The string to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the search.
     - id: count
       type: System.Int32
-      description: The number of elements in the section to search.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the first occurrence of *value*, if found, within the section of *source* that starts at *startIndex* and contains the number of elements specified by *count*, using the specified comparison options; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *value* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.-or- *count* is less than zero.-or- *startIndex* and *count* do not specify a valid section in *source*.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IsPrefix(System.String,System.String)
+  commentId: M:System.Globalization.CompareInfo.IsPrefix(System.String,System.String)
   id: IsPrefix(System.String,System.String)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IsPrefix(String, String)
+  nameWithType: CompareInfo.IsPrefix(String, String)
   fullName: System.Globalization.CompareInfo.IsPrefix(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 602
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsPrefix
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 92
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Determines whether the specified source string starts with the specified prefix.
   syntax:
     content: public virtual bool IsPrefix(string source, string prefix)
     content.vb: Public Overridable Function IsPrefix(source As String, prefix As String) As Boolean
     parameters:
     - id: source
       type: System.String
-      description: The string to search in.
     - id: prefix
       type: System.String
-      description: The string to compare with the beginning of *source*.
     return:
       type: System.Boolean
-      description: true if the length of *prefix* is less than or equal to the length of *source* and *source* starts with *prefix*; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *prefix* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IsPrefix(System.String,System.String,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.IsPrefix(System.String,System.String,System.Globalization.CompareOptions)
   id: IsPrefix(System.String,System.String,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IsPrefix(String, String, CompareOptions)
+  nameWithType: CompareInfo.IsPrefix(String, String, CompareOptions)
   fullName: System.Globalization.CompareInfo.IsPrefix(System.String, System.String, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 563
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsPrefix
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 93
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Determines whether the specified source string starts with the specified prefix using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual bool IsPrefix(string source, string prefix, CompareOptions options)
     content.vb: Public Overridable Function IsPrefix(source As String, prefix As String, options As CompareOptions) As Boolean
     parameters:
     - id: source
       type: System.String
-      description: The string to search in.
     - id: prefix
       type: System.String
-      description: The string to compare with the beginning of *source*.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *prefix* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Boolean
-      description: true if the length of *prefix* is less than or equal to the length of *source* and *source* starts with *prefix*; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *prefix* is null.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IsSuffix(System.String,System.String)
+  commentId: M:System.Globalization.CompareInfo.IsSuffix(System.String,System.String)
   id: IsSuffix(System.String,System.String)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IsSuffix(String, String)
+  nameWithType: CompareInfo.IsSuffix(String, String)
   fullName: System.Globalization.CompareInfo.IsSuffix(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 654
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsSuffix
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 94
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Determines whether the specified source string ends with the specified suffix.
   syntax:
     content: public virtual bool IsSuffix(string source, string suffix)
     content.vb: Public Overridable Function IsSuffix(source As String, suffix As String) As Boolean
     parameters:
     - id: source
       type: System.String
-      description: The string to search in.
     - id: suffix
       type: System.String
-      description: The string to compare with the end of *source*.
     return:
       type: System.Boolean
-      description: true if the length of *suffix* is less than or equal to the length of *source* and *source* ends with *suffix*; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *suffix* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.IsSuffix(System.String,System.String,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.IsSuffix(System.String,System.String,System.Globalization.CompareOptions)
   id: IsSuffix(System.String,System.String,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: IsSuffix(String, String, CompareOptions)
+  nameWithType: CompareInfo.IsSuffix(String, String, CompareOptions)
   fullName: System.Globalization.CompareInfo.IsSuffix(System.String, System.String, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 618
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsSuffix
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 95
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Determines whether the specified source string ends with the specified suffix using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual bool IsSuffix(string source, string suffix, CompareOptions options)
     content.vb: Public Overridable Function IsSuffix(source As String, suffix As String, options As CompareOptions) As Boolean
     parameters:
     - id: source
       type: System.String
-      description: The string to search in.
     - id: suffix
       type: System.String
-      description: The string to compare with the end of *source*.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *suffix* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref> used by itself, or the bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Boolean
-      description: true if the length of *suffix* is less than or equal to the length of *source* and *source* ends with *suffix*; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *suffix* is null.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.LastIndexOf(System.String,System.Char)
+  commentId: M:System.Globalization.CompareInfo.LastIndexOf(System.String,System.Char)
   id: LastIndexOf(System.String,System.Char)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: LastIndexOf(String, Char)
+  nameWithType: CompareInfo.LastIndexOf(String, Char)
   fullName: System.Globalization.CompareInfo.LastIndexOf(System.String, System.Char)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 863
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LastIndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 96
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified character and returns the zero-based index of the last occurrence within the entire source string.
   syntax:
     content: public virtual int LastIndexOf(string source, char value)
     content.vb: Public Overridable Function LastIndexOf(source As String, value As Char) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.Char
-      description: The character to locate within *source*.
     return:
       type: System.Int32
-      description: The zero-based index of the last occurrence of *value*, if found, within *source*; otherwise, -1.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.LastIndexOf(System.String,System.Char,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.LastIndexOf(System.String,System.Char,System.Globalization.CompareOptions)
   id: LastIndexOf(System.String,System.Char,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: LastIndexOf(String, Char, CompareOptions)
+  nameWithType: CompareInfo.LastIndexOf(String, Char, CompareOptions)
   fullName: System.Globalization.CompareInfo.LastIndexOf(System.String, System.Char, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 887
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LastIndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 97
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified character and returns the zero-based index of the last occurrence within the entire source string using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int LastIndexOf(string source, char value, CompareOptions options)
     content.vb: Public Overridable Function LastIndexOf(source As String, value As Char, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.Char
-      description: The character to locate within *source*.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the last occurrence of *value*, if found, within *source*, using the specified comparison options; otherwise, -1.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.LastIndexOf(System.String,System.Char,System.Int32,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.LastIndexOf(System.String,System.Char,System.Int32,System.Globalization.CompareOptions)
   id: LastIndexOf(System.String,System.Char,System.Int32,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: LastIndexOf(String, Char, Int32, CompareOptions)
+  nameWithType: CompareInfo.LastIndexOf(String, Char, Int32, CompareOptions)
   fullName: System.Globalization.CompareInfo.LastIndexOf(System.String, System.Char, System.Int32, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 922
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LastIndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 98
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified character and returns the zero-based index of the last occurrence within the section of the source string that extends from the beginning of the string to the specified index using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int LastIndexOf(string source, char value, int startIndex, CompareOptions options)
     content.vb: Public Overridable Function LastIndexOf(source As String, value As Char, startIndex As Integer, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.Char
-      description: The character to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the backward search.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the last occurrence of *value*, if found, within the section of *source* that extends from the beginning of *source* to *startIndex*, using the specified comparison options; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.LastIndexOf(System.String,System.Char,System.Int32,System.Int32)
+  commentId: M:System.Globalization.CompareInfo.LastIndexOf(System.String,System.Char,System.Int32,System.Int32)
   id: LastIndexOf(System.String,System.Char,System.Int32,System.Int32)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: LastIndexOf(String, Char, Int32, Int32)
+  nameWithType: CompareInfo.LastIndexOf(String, Char, Int32, Int32)
   fullName: System.Globalization.CompareInfo.LastIndexOf(System.String, System.Char, System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 934
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LastIndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 99
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified character and returns the zero-based index of the last occurrence within the section of the source string that contains the specified number of elements and ends at the specified index.
   syntax:
     content: public virtual int LastIndexOf(string source, char value, int startIndex, int count)
     content.vb: Public Overridable Function LastIndexOf(source As String, value As Char, startIndex As Integer, count As Integer) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.Char
-      description: The character to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the backward search.
     - id: count
       type: System.Int32
-      description: The number of elements in the section to search.
     return:
       type: System.Int32
-      description: The zero-based index of the last occurrence of *value*, if found, within the section of *source* that contains the number of elements specified by *count* and that ends at *startIndex*; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.-or- *count* is less than zero.-or- *startIndex* and *count* do not specify a valid section in *source*.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.LastIndexOf(System.String,System.Char,System.Int32,System.Int32,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.LastIndexOf(System.String,System.Char,System.Int32,System.Int32,System.Globalization.CompareOptions)
   id: LastIndexOf(System.String,System.Char,System.Int32,System.Int32,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: LastIndexOf(String, Char, Int32, Int32, CompareOptions)
+  nameWithType: CompareInfo.LastIndexOf(String, Char, Int32, Int32, CompareOptions)
   fullName: System.Globalization.CompareInfo.LastIndexOf(System.String, System.Char, System.Int32, System.Int32, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 946
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LastIndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 100
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified character and returns the zero-based index of the last occurrence within the section of the source string that contains the specified number of elements and ends at the specified index using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int LastIndexOf(string source, char value, int startIndex, int count, CompareOptions options)
     content.vb: Public Overridable Function LastIndexOf(source As String, value As Char, startIndex As Integer, count As Integer, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.Char
-      description: The character to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the backward search.
     - id: count
       type: System.Int32
-      description: The number of elements in the section to search.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the last occurrence of *value*, if found, within the section of *source* that contains the number of elements specified by *count* and that ends at *startIndex*, using the specified comparison options; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.-or- *count* is less than zero.-or- *startIndex* and *count* do not specify a valid section in *source*.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.LastIndexOf(System.String,System.String)
+  commentId: M:System.Globalization.CompareInfo.LastIndexOf(System.String,System.String)
   id: LastIndexOf(System.String,System.String)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: LastIndexOf(String, String)
+  nameWithType: CompareInfo.LastIndexOf(String, String)
   fullName: System.Globalization.CompareInfo.LastIndexOf(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 875
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LastIndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 101
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified substring and returns the zero-based index of the last occurrence within the entire source string.
   syntax:
     content: public virtual int LastIndexOf(string source, string value)
     content.vb: Public Overridable Function LastIndexOf(source As String, value As String) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.String
-      description: The string to locate within *source*.
     return:
       type: System.Int32
-      description: The zero-based index of the last occurrence of *value*, if found, within *source*; otherwise, -1.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *value* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.LastIndexOf(System.String,System.String,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.LastIndexOf(System.String,System.String,System.Globalization.CompareOptions)
   id: LastIndexOf(System.String,System.String,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: LastIndexOf(String, String, CompareOptions)
+  nameWithType: CompareInfo.LastIndexOf(String, String, CompareOptions)
   fullName: System.Globalization.CompareInfo.LastIndexOf(System.String, System.String, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 898
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LastIndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 102
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified substring and returns the zero-based index of the last occurrence within the entire source string using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int LastIndexOf(string source, string value, CompareOptions options)
     content.vb: Public Overridable Function LastIndexOf(source As String, value As String, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.String
-      description: The string to locate within *source*.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the last occurrence of *value*, if found, within *source*, using the specified comparison options; otherwise, -1.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *value* is null.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.LastIndexOf(System.String,System.String,System.Int32,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.LastIndexOf(System.String,System.String,System.Int32,System.Globalization.CompareOptions)
   id: LastIndexOf(System.String,System.String,System.Int32,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: LastIndexOf(String, String, Int32, CompareOptions)
+  nameWithType: CompareInfo.LastIndexOf(String, String, Int32, CompareOptions)
   fullName: System.Globalization.CompareInfo.LastIndexOf(System.String, System.String, System.Int32, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 928
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LastIndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 103
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified substring and returns the zero-based index of the last occurrence within the section of the source string that extends from the beginning of the string to the specified index using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int LastIndexOf(string source, string value, int startIndex, CompareOptions options)
     content.vb: Public Overridable Function LastIndexOf(source As String, value As String, startIndex As Integer, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.String
-      description: The string to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the backward search.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the last occurrence of *value*, if found, within the section of *source* that extends from the beginning of *source* to *startIndex*, using the specified comparison options; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *value* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.LastIndexOf(System.String,System.String,System.Int32,System.Int32)
+  commentId: M:System.Globalization.CompareInfo.LastIndexOf(System.String,System.String,System.Int32,System.Int32)
   id: LastIndexOf(System.String,System.String,System.Int32,System.Int32)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: LastIndexOf(String, String, Int32, Int32)
+  nameWithType: CompareInfo.LastIndexOf(String, String, Int32, Int32)
   fullName: System.Globalization.CompareInfo.LastIndexOf(System.String, System.String, System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 940
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LastIndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 104
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified substring and returns the zero-based index of the last occurrence within the section of the source string that contains the specified number of elements and ends at the specified index.
   syntax:
     content: public virtual int LastIndexOf(string source, string value, int startIndex, int count)
     content.vb: Public Overridable Function LastIndexOf(source As String, value As String, startIndex As Integer, count As Integer) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.String
-      description: The string to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the backward search.
     - id: count
       type: System.Int32
-      description: The number of elements in the section to search.
     return:
       type: System.Int32
-      description: The zero-based index of the last occurrence of *value*, if found, within the section of *source* that contains the number of elements specified by *count* and that ends at *startIndex*; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *value* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.-or- *count* is less than zero.-or- *startIndex* and *count* do not specify a valid section in *source*.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.LastIndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
+  commentId: M:System.Globalization.CompareInfo.LastIndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
   id: LastIndexOf(System.String,System.String,System.Int32,System.Int32,System.Globalization.CompareOptions)
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: LastIndexOf(String, String, Int32, Int32, CompareOptions)
+  nameWithType: CompareInfo.LastIndexOf(String, String, Int32, Int32, CompareOptions)
   fullName: System.Globalization.CompareInfo.LastIndexOf(System.String, System.String, System.Int32, System.Int32, System.Globalization.CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 995
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LastIndexOf
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 105
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Searches for the specified substring and returns the zero-based index of the last occurrence within the section of the source string that contains the specified number of elements and ends at the specified index using the specified <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public virtual int LastIndexOf(string source, string value, int startIndex, int count, CompareOptions options)
     content.vb: Public Overridable Function LastIndexOf(source As String, value As String, startIndex As Integer, count As Integer, options As CompareOptions) As Integer
     parameters:
     - id: source
       type: System.String
-      description: The string to search.
     - id: value
       type: System.String
-      description: The string to locate within *source*.
     - id: startIndex
       type: System.Int32
-      description: The zero-based starting index of the backward search.
     - id: count
       type: System.Int32
-      description: The number of elements in the section to search.
     - id: options
       type: System.Globalization.CompareOptions
-      description: 'A value that defines how *source* and *value* should be compared. *options* is either the enumeration value <xref href="System.Globalization.CompareOptions.Ordinal" data-throw-if-not-resolved="false"></xref>, or a bitwise combination of one or more of the following values: <xref href="System.Globalization.CompareOptions.IgnoreCase" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreSymbols" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreNonSpace" data-throw-if-not-resolved="false"></xref>, <xref href="System.Globalization.CompareOptions.IgnoreWidth" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Globalization.CompareOptions.IgnoreKanaType" data-throw-if-not-resolved="false"></xref>.'
     return:
       type: System.Int32
-      description: The zero-based index of the last occurrence of *value*, if found, within the section of *source* that contains the number of elements specified by *count* and that ends at *startIndex*, using the specified comparison options; otherwise, -1. Returns *startIndex* if *value* is an ignorable character.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*source* is null.-or- *value* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*startIndex* is outside the range of valid indexes for *source*.-or- *count* is less than zero.-or- *startIndex* and *count* do not specify a valid section in *source*.'
-  - type: System.ArgumentException
-    description: '*options* contains an invalid <xref href="System.Globalization.CompareOptions" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CompareInfo.ToString
+  commentId: M:System.Globalization.CompareInfo.ToString
   id: ToString
   parent: System.Globalization.CompareInfo
+  langs:
+  - csharp
+  - vb
   name: ToString()
+  nameWithType: CompareInfo.ToString()
   fullName: System.Globalization.CompareInfo.ToString()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CompareInfo.cs
-    startLine: 1261
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 106
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Returns a string that represents the current <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: A string that represents the current <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.Globalization
+  commentId: N:System.Globalization
   isExternal: false
   name: System.Globalization
+  nameWithType: System.Globalization
   fullName: System.Globalization
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Globalization.CompareOptions
+  commentId: T:System.Globalization.CompareOptions
   parent: System.Globalization
   isExternal: false
   name: Globalization.CompareOptions
+  nameWithType: Globalization.CompareOptions
   fullName: System.Globalization.CompareOptions
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Globalization.CompareInfo
+  commentId: T:System.Globalization.CompareInfo
   parent: System.Globalization
   isExternal: false
   name: Globalization.CompareInfo
+  nameWithType: Globalization.CompareInfo
   fullName: System.Globalization.CompareInfo
 - uid: System.Char
+  commentId: T:System.Char
   parent: System
   isExternal: false
   name: Char
+  nameWithType: Char
   fullName: System.Char
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException

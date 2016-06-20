@@ -1,59 +1,94 @@
 items:
 - uid: System.Linq.IGrouping`2
+  commentId: T:System.Linq.IGrouping`2
   id: IGrouping`2
   parent: System.Linq
   children:
   - System.Linq.IGrouping`2.Key
+  langs:
+  - csharp
+  - vb
   name: IGrouping<TKey, TElement>
-  name.vb: IGrouping(Of TKey, TElement)
+  nameWithType: IGrouping<TKey, TElement>
   fullName: System.Linq.IGrouping<TKey, TElement>
-  fullName.vb: System.Linq.IGrouping(Of TKey, TElement)
   type: Interface
   source:
-    remote: &o0
-      path: src/System.Linq/src/System/Linq/Enumerable.cs
+    remote:
+      path: src/System.Linq/ref/System.Linq.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Linq/src/System/Linq/Enumerable.cs
-    startLine: 3384
+    id: IGrouping
+    path: src/System.Linq/ref/System.Linq.cs
+    startLine: 190
   assemblies:
   - System.Linq
   namespace: System.Linq
-  summary: Represents a collection of objects that have a common key.
   syntax:
     content: 'public interface IGrouping<out TKey, out TElement> : Collections.Generic.IEnumerable<TElement>, Collections.IEnumerable'
-    content.vb: Public Interface IGrouping(Of Out TKey, Out TElement) Inherits Collections.Generic.IEnumerable(Of TElement), Collections.IEnumerable
+    content.vb: >-
+      Public Interface IGrouping(Of Out TKey, Out TElement)
+          Inherits Collections.Generic.IEnumerable(Of TElement), Collections.IEnumerable
     typeParameters:
     - id: TKey
     - id: TElement
+  nameWithType.vb: IGrouping(Of TKey, TElement)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: System.Linq.IGrouping(Of TKey, TElement)
+  name.vb: IGrouping(Of TKey, TElement)
 - uid: System.Linq.IGrouping`2.Key
+  commentId: P:System.Linq.IGrouping`2.Key
   id: Key
   parent: System.Linq.IGrouping`2
+  langs:
+  - csharp
+  - vb
   name: Key
+  nameWithType: IGrouping<TKey, TElement>.Key
   fullName: System.Linq.IGrouping<TKey, TElement>.Key
-  fullName.vb: System.Linq.IGrouping(Of TKey, TElement).Key
   type: Property
   source:
-    remote: *o0
-    path: src/System.Linq/src/System/Linq/Enumerable.cs
-    startLine: 3386
+    remote:
+      path: src/System.Linq/ref/System.Linq.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Key
+    path: src/System.Linq/ref/System.Linq.cs
+    startLine: 192
   assemblies:
   - System.Linq
   namespace: System.Linq
-  summary: Gets the key of the <xref href="System.Linq.IGrouping`2" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: TKey Key { get; }
     content.vb: ReadOnly Property Key As TKey
     parameters: []
     return:
       type: '{TKey}'
-      description: The key of the <xref href="System.Linq.IGrouping`2" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: IGrouping(Of TKey, TElement).Key
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: System.Linq.IGrouping(Of TKey, TElement).Key
 references:
 - uid: System.Linq
+  commentId: N:System.Linq
   isExternal: false
   name: System.Linq
+  nameWithType: System.Linq
   fullName: System.Linq
 - uid: '{TKey}'
+  commentId: '!:TKey'
+  definition: TKey
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: TKey
   isExternal: false
   name: TKey
+  nameWithType: TKey
   fullName: TKey

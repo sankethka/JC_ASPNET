@@ -1,5 +1,6 @@
 items:
 - uid: System.Lazy`2
+  commentId: T:System.Lazy`2
   id: Lazy`2
   parent: System
   children:
@@ -10,25 +11,29 @@ items:
   - System.Lazy`2.#ctor(System.Func{`0},`1,System.Boolean)
   - System.Lazy`2.#ctor(System.Func{`0},`1,System.Threading.LazyThreadSafetyMode)
   - System.Lazy`2.Metadata
+  langs:
+  - csharp
+  - vb
   name: Lazy<T, TMetadata>
-  name.vb: Lazy(Of T, TMetadata)
+  nameWithType: Lazy<T, TMetadata>
   fullName: System.Lazy<T, TMetadata>
-  fullName.vb: System.Lazy(Of T, TMetadata)
   type: Class
   source:
-    remote: &o0
-      path: src/System.Runtime/src/System/LazyOfTTMetadata.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Runtime/src/System/LazyOfTTMetadata.cs
-    startLine: 10
+    id: Lazy
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1213
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Provides a lazy indirect reference to an object and its associated metadata for use by the Managed Extensibility Framework.
   syntax:
     content: 'public class Lazy<T, TMetadata> : Lazy<T>'
-    content.vb: Public Class Lazy(Of T, TMetadata) Inherits Lazy(Of T)
+    content.vb: >-
+      Public Class Lazy(Of T, TMetadata)
+          Inherits Lazy(Of T)
     typeParameters:
     - id: T
     - id: TMetadata
@@ -45,550 +50,785 @@ items:
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  nameWithType.vb: Lazy(Of T, TMetadata)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: System.Lazy(Of T, TMetadata)
+  name.vb: Lazy(Of T, TMetadata)
 - uid: System.Lazy`2.#ctor(`1)
+  commentId: M:System.Lazy`2.#ctor(`1)
   id: '#ctor(`1)'
   parent: System.Lazy`2
+  langs:
+  - csharp
+  - vb
   name: Lazy(TMetadata)
+  nameWithType: Lazy<T, TMetadata>.Lazy(TMetadata)
   fullName: System.Lazy<T, TMetadata>.Lazy(TMetadata)
-  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(TMetadata)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/LazyOfTTMetadata.cs
-    startLine: 20
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1215
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`2" data-throw-if-not-resolved="false"></xref> class with the specified metadata.
   syntax:
     content: public Lazy(TMetadata metadata)
     content.vb: Public Sub New(metadata As TMetadata)
     parameters:
     - id: metadata
       type: '{TMetadata}'
-      description: The metadata associated with the referenced object.
+  nameWithType.vb: Lazy(Of T, TMetadata).Lazy(TMetadata)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(TMetadata)
 - uid: System.Lazy`2.#ctor(`1,System.Boolean)
+  commentId: M:System.Lazy`2.#ctor(`1,System.Boolean)
   id: '#ctor(`1,System.Boolean)'
   parent: System.Lazy`2
+  langs:
+  - csharp
+  - vb
   name: Lazy(TMetadata, Boolean)
+  nameWithType: Lazy<T, TMetadata>.Lazy(TMetadata, Boolean)
   fullName: System.Lazy<T, TMetadata>.Lazy(TMetadata, System.Boolean)
-  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(TMetadata, System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/LazyOfTTMetadata.cs
-    startLine: 27
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1216
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`2" data-throw-if-not-resolved="false"></xref> class with the specified metadata and thread safety value.
   syntax:
     content: public Lazy(TMetadata metadata, bool isThreadSafe)
     content.vb: Public Sub New(metadata As TMetadata, isThreadSafe As Boolean)
     parameters:
     - id: metadata
       type: '{TMetadata}'
-      description: The metadata associated with the referenced object.
     - id: isThreadSafe
       type: System.Boolean
-      description: Indicates whether the <xref href="System.Lazy`2" data-throw-if-not-resolved="false"></xref> object that is created will be thread-safe.
+  nameWithType.vb: Lazy(Of T, TMetadata).Lazy(TMetadata, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(TMetadata, System.Boolean)
 - uid: System.Lazy`2.#ctor(`1,System.Threading.LazyThreadSafetyMode)
+  commentId: M:System.Lazy`2.#ctor(`1,System.Threading.LazyThreadSafetyMode)
   id: '#ctor(`1,System.Threading.LazyThreadSafetyMode)'
   parent: System.Lazy`2
+  langs:
+  - csharp
+  - vb
   name: Lazy(TMetadata, LazyThreadSafetyMode)
+  nameWithType: Lazy<T, TMetadata>.Lazy(TMetadata, LazyThreadSafetyMode)
   fullName: System.Lazy<T, TMetadata>.Lazy(TMetadata, System.Threading.LazyThreadSafetyMode)
-  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(TMetadata, System.Threading.LazyThreadSafetyMode)
   type: Constructor
   source:
-    remote: &o1
+    remote:
       path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Runtime/ref/System.Runtime.cs
-    startLine: 1213
+    startLine: 1217
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`2" data-throw-if-not-resolved="false"></xref> class with the specified metadata and thread synchronization mode.
   syntax:
     content: public Lazy(TMetadata metadata, LazyThreadSafetyMode mode)
     content.vb: Public Sub New(metadata As TMetadata, mode As LazyThreadSafetyMode)
     parameters:
     - id: metadata
       type: '{TMetadata}'
-      description: The metadata associated with the referenced object.
     - id: mode
       type: System.Threading.LazyThreadSafetyMode
-      description: The thread synchronization mode.
+  nameWithType.vb: Lazy(Of T, TMetadata).Lazy(TMetadata, LazyThreadSafetyMode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(TMetadata, System.Threading.LazyThreadSafetyMode)
 - uid: System.Lazy`2.#ctor(System.Func{`0},`1)
+  commentId: M:System.Lazy`2.#ctor(System.Func{`0},`1)
   id: '#ctor(System.Func{`0},`1)'
   parent: System.Lazy`2
+  langs:
+  - csharp
+  - vb
   name: Lazy(Func<T>, TMetadata)
-  name.vb: Lazy(Func(Of T), TMetadata)
+  nameWithType: Lazy<T, TMetadata>.Lazy(Func<T>, TMetadata)
   fullName: System.Lazy<T, TMetadata>.Lazy(System.Func<T>, TMetadata)
-  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(System.Func(Of T), TMetadata)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/LazyOfTTMetadata.cs
-    startLine: 14
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1218
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`2" data-throw-if-not-resolved="false"></xref> class with the specified metadata that uses the specified function to get the referenced object.
   syntax:
     content: public Lazy(Func<T> valueFactory, TMetadata metadata)
     content.vb: Public Sub New(valueFactory As Func(Of T), metadata As TMetadata)
     parameters:
     - id: valueFactory
       type: System.Func{{T}}
-      description: A function that returns the referenced object.
     - id: metadata
       type: '{TMetadata}'
-      description: The metadata associated with the referenced object.
+  nameWithType.vb: Lazy(Of T, TMetadata).Lazy(Func(Of T), TMetadata)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(System.Func(Of T), TMetadata)
+  name.vb: Lazy(Func(Of T), TMetadata)
 - uid: System.Lazy`2.#ctor(System.Func{`0},`1,System.Boolean)
+  commentId: M:System.Lazy`2.#ctor(System.Func{`0},`1,System.Boolean)
   id: '#ctor(System.Func{`0},`1,System.Boolean)'
   parent: System.Lazy`2
+  langs:
+  - csharp
+  - vb
   name: Lazy(Func<T>, TMetadata, Boolean)
-  name.vb: Lazy(Func(Of T), TMetadata, Boolean)
+  nameWithType: Lazy<T, TMetadata>.Lazy(Func<T>, TMetadata, Boolean)
   fullName: System.Lazy<T, TMetadata>.Lazy(System.Func<T>, TMetadata, System.Boolean)
-  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(System.Func(Of T), TMetadata, System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/LazyOfTTMetadata.cs
-    startLine: 33
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1219
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`2" data-throw-if-not-resolved="false"></xref> class with the specified metadata and thread safety value that uses the specified function to get the referenced object.
   syntax:
     content: public Lazy(Func<T> valueFactory, TMetadata metadata, bool isThreadSafe)
     content.vb: Public Sub New(valueFactory As Func(Of T), metadata As TMetadata, isThreadSafe As Boolean)
     parameters:
     - id: valueFactory
       type: System.Func{{T}}
-      description: A function that returns the referenced object.
     - id: metadata
       type: '{TMetadata}'
-      description: The metadata associated with the referenced object.
     - id: isThreadSafe
       type: System.Boolean
-      description: Indicates whether the <xref href="System.Lazy`2" data-throw-if-not-resolved="false"></xref> object that is created will be thread-safe.
+  nameWithType.vb: Lazy(Of T, TMetadata).Lazy(Func(Of T), TMetadata, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(System.Func(Of T), TMetadata, System.Boolean)
+  name.vb: Lazy(Func(Of T), TMetadata, Boolean)
 - uid: System.Lazy`2.#ctor(System.Func{`0},`1,System.Threading.LazyThreadSafetyMode)
+  commentId: M:System.Lazy`2.#ctor(System.Func{`0},`1,System.Threading.LazyThreadSafetyMode)
   id: '#ctor(System.Func{`0},`1,System.Threading.LazyThreadSafetyMode)'
   parent: System.Lazy`2
+  langs:
+  - csharp
+  - vb
   name: Lazy(Func<T>, TMetadata, LazyThreadSafetyMode)
-  name.vb: Lazy(Func(Of T), TMetadata, LazyThreadSafetyMode)
+  nameWithType: Lazy<T, TMetadata>.Lazy(Func<T>, TMetadata, LazyThreadSafetyMode)
   fullName: System.Lazy<T, TMetadata>.Lazy(System.Func<T>, TMetadata, System.Threading.LazyThreadSafetyMode)
-  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(System.Func(Of T), TMetadata, System.Threading.LazyThreadSafetyMode)
   type: Constructor
   source:
-    remote: *o1
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Runtime/ref/System.Runtime.cs
-    startLine: 1216
+    startLine: 1220
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`2" data-throw-if-not-resolved="false"></xref> class with the specified metadata and thread synchronization mode that uses the specified function to get the referenced object.
   syntax:
     content: public Lazy(Func<T> valueFactory, TMetadata metadata, LazyThreadSafetyMode mode)
     content.vb: Public Sub New(valueFactory As Func(Of T), metadata As TMetadata, mode As LazyThreadSafetyMode)
     parameters:
     - id: valueFactory
       type: System.Func{{T}}
-      description: A function that returns the referenced object
     - id: metadata
       type: '{TMetadata}'
-      description: The metadata associated with the referenced object.
     - id: mode
       type: System.Threading.LazyThreadSafetyMode
-      description: The thread synchronization mode
+  nameWithType.vb: Lazy(Of T, TMetadata).Lazy(Func(Of T), TMetadata, LazyThreadSafetyMode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T, TMetadata).Lazy(System.Func(Of T), TMetadata, System.Threading.LazyThreadSafetyMode)
+  name.vb: Lazy(Func(Of T), TMetadata, LazyThreadSafetyMode)
 - uid: System.Lazy`2.Metadata
+  commentId: P:System.Lazy`2.Metadata
   id: Metadata
   parent: System.Lazy`2
+  langs:
+  - csharp
+  - vb
   name: Metadata
+  nameWithType: Lazy<T, TMetadata>.Metadata
   fullName: System.Lazy<T, TMetadata>.Metadata
-  fullName.vb: System.Lazy(Of T, TMetadata).Metadata
   type: Property
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/LazyOfTTMetadata.cs
-    startLine: 51
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Metadata
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1221
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Gets the metadata associated with the referenced object.
   syntax:
     content: public TMetadata Metadata { get; }
     content.vb: Public ReadOnly Property Metadata As TMetadata
     parameters: []
     return:
       type: '{TMetadata}'
-      description: The metadata associated with the referenced object.
+  nameWithType.vb: Lazy(Of T, TMetadata).Metadata
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Lazy(Of T, TMetadata).Metadata
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Lazy{{T}}
+  commentId: T:System.Lazy{`0}
   parent: System
   definition: System.Lazy`1
   name: Lazy<T>
-  name.vb: Lazy(Of T)
+  nameWithType: Lazy<T>
   fullName: System.Lazy<T>
-  fullName.vb: System.Lazy(Of T)
+  nameWithType.vb: Lazy(Of T)
+  fullname.vb: System.Lazy(Of T)
+  name.vb: Lazy(Of T)
   spec.csharp:
   - uid: System.Lazy`1
     name: Lazy
+    nameWithType: Lazy
     fullName: System.Lazy
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Lazy`1
     name: Lazy
+    nameWithType: Lazy
     fullName: System.Lazy
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Lazy{{T}}.IsValueCreated
+  commentId: P:System.Lazy{`0}.IsValueCreated
   parent: System.Lazy{{T}}
   definition: System.Lazy`1.IsValueCreated
   name: IsValueCreated
+  nameWithType: Lazy<T>.IsValueCreated
   fullName: System.Lazy<T>.IsValueCreated
-  fullName.vb: System.Lazy(Of T).IsValueCreated
+  nameWithType.vb: Lazy(Of T).IsValueCreated
+  fullname.vb: System.Lazy(Of T).IsValueCreated
 - uid: System.Lazy{{T}}.Value
+  commentId: P:System.Lazy{`0}.Value
   parent: System.Lazy{{T}}
   definition: System.Lazy`1.Value
   name: Value
+  nameWithType: Lazy<T>.Value
   fullName: System.Lazy<T>.Value
-  fullName.vb: System.Lazy(Of T).Value
+  nameWithType.vb: Lazy(Of T).Value
+  fullname.vb: System.Lazy(Of T).Value
 - uid: System.Lazy{{T}}.ToString
+  commentId: M:System.Lazy{`0}.ToString
   parent: System.Lazy{{T}}
   definition: System.Lazy`1.ToString
   name: ToString()
+  nameWithType: Lazy<T>.ToString()
   fullName: System.Lazy<T>.ToString()
-  fullName.vb: System.Lazy(Of T).ToString()
+  nameWithType.vb: Lazy(Of T).ToString()
+  fullname.vb: System.Lazy(Of T).ToString()
   spec.csharp:
   - uid: System.Lazy`1.ToString
     name: ToString
+    nameWithType: Lazy<T>.ToString
     fullName: System.Lazy<T>.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Lazy`1.ToString
     name: ToString
+    nameWithType: Lazy(Of T).ToString
     fullName: System.Lazy(Of T).ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object)
+  nameWithType: Object.Equals(Object)
   fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
   parent: System.Object
   isExternal: false
   name: GetHashCode()
+  nameWithType: Object.GetHashCode()
   fullName: System.Object.GetHashCode()
   spec.csharp:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Lazy`1
-  parent: System
+  commentId: T:System.Lazy`1
   isExternal: false
   name: Lazy<T>
-  name.vb: Lazy(Of T)
+  nameWithType: Lazy<T>
   fullName: System.Lazy<T>
-  fullName.vb: System.Lazy(Of T)
+  nameWithType.vb: Lazy(Of T)
+  fullname.vb: System.Lazy(Of T)
+  name.vb: Lazy(Of T)
   spec.csharp:
   - uid: System.Lazy`1
     name: Lazy
+    nameWithType: Lazy
     fullName: System.Lazy
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Lazy`1
     name: Lazy
+    nameWithType: Lazy
     fullName: System.Lazy
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Lazy`1.IsValueCreated
-  parent: System.Lazy`1
+  commentId: P:System.Lazy`1.IsValueCreated
   isExternal: false
   name: IsValueCreated
+  nameWithType: Lazy<T>.IsValueCreated
   fullName: System.Lazy<T>.IsValueCreated
-  fullName.vb: System.Lazy(Of T).IsValueCreated
+  nameWithType.vb: Lazy(Of T).IsValueCreated
+  fullname.vb: System.Lazy(Of T).IsValueCreated
 - uid: System.Lazy`1.Value
-  parent: System.Lazy`1
+  commentId: P:System.Lazy`1.Value
   isExternal: false
   name: Value
+  nameWithType: Lazy<T>.Value
   fullName: System.Lazy<T>.Value
-  fullName.vb: System.Lazy(Of T).Value
+  nameWithType.vb: Lazy(Of T).Value
+  fullname.vb: System.Lazy(Of T).Value
 - uid: System.Lazy`1.ToString
-  parent: System.Lazy`1
+  commentId: M:System.Lazy`1.ToString
   isExternal: false
   name: ToString()
+  nameWithType: Lazy<T>.ToString()
   fullName: System.Lazy<T>.ToString()
-  fullName.vb: System.Lazy(Of T).ToString()
+  nameWithType.vb: Lazy(Of T).ToString()
+  fullname.vb: System.Lazy(Of T).ToString()
   spec.csharp:
   - uid: System.Lazy`1.ToString
     name: ToString
+    nameWithType: Lazy<T>.ToString
     fullName: System.Lazy<T>.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Lazy`1.ToString
     name: ToString
+    nameWithType: Lazy(Of T).ToString
     fullName: System.Lazy(Of T).ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{TMetadata}'
+  commentId: '!:TMetadata'
+  definition: TMetadata
+  name: TMetadata
+  nameWithType: TMetadata
+  fullName: TMetadata
+- uid: TMetadata
   isExternal: false
   name: TMetadata
+  nameWithType: TMetadata
   fullName: TMetadata
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Threading.LazyThreadSafetyMode
+  commentId: T:System.Threading.LazyThreadSafetyMode
   parent: System.Threading
   isExternal: false
   name: LazyThreadSafetyMode
+  nameWithType: LazyThreadSafetyMode
   fullName: System.Threading.LazyThreadSafetyMode
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: System.Func{{T}}
+  commentId: '!:System.Func{``0}'
   parent: System
   definition: System.Func`1
   name: Func<T>
-  name.vb: Func(Of T)
+  nameWithType: Func<T>
   fullName: System.Func<T>
-  fullName.vb: System.Func(Of T)
+  nameWithType.vb: Func(Of T)
+  fullname.vb: System.Func(Of T)
+  name.vb: Func(Of T)
   spec.csharp:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func`1
-  parent: System
+  commentId: T:System.Func`1
   isExternal: false
   name: Func<>
-  name.vb: Func(Of )
+  nameWithType: Func<>
   fullName: System.Func<>
-  fullName.vb: System.Func(Of )
+  nameWithType.vb: Func(Of )
+  fullname.vb: System.Func(Of )
+  name.vb: Func(Of )
   spec.csharp:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )

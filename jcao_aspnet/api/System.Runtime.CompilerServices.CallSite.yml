@@ -1,54 +1,85 @@
 items:
 - uid: System.Runtime.CompilerServices.CallSite
+  commentId: T:System.Runtime.CompilerServices.CallSite
   id: CallSite
   parent: System.Runtime.CompilerServices
   children:
   - System.Runtime.CompilerServices.CallSite.Binder
   - System.Runtime.CompilerServices.CallSite.Create(System.Type,System.Runtime.CompilerServices.CallSiteBinder)
+  langs:
+  - csharp
+  - vb
   name: CallSite
+  nameWithType: CallSite
   fullName: System.Runtime.CompilerServices.CallSite
   type: Class
   source:
-    remote: &o0
-      path: src/System.Dynamic.Runtime/src/System/Runtime/CompilerServices/CallSite.cs
+    remote:
+      path: src/System.Dynamic.Runtime/ref/System.Dynamic.Runtime.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Dynamic.Runtime/src/System/Runtime/CompilerServices/CallSite.cs
-    startLine: 44
+    id: CallSite
+    path: src/System.Dynamic.Runtime/ref/System.Dynamic.Runtime.cs
+    startLine: 266
   assemblies:
   - System.Dynamic.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: A dynamic call site base class. This type is used as a parameter type to the dynamic site targets.
   syntax:
     content: 'public class CallSite : object'
-    content.vb: Public Class CallSite Inherits Object
+    content.vb: >-
+      Public Class CallSite
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Runtime.CompilerServices.CallSite.Binder
+  commentId: P:System.Runtime.CompilerServices.CallSite.Binder
   id: Binder
   parent: System.Runtime.CompilerServices.CallSite
+  langs:
+  - csharp
+  - vb
   name: Binder
+  nameWithType: CallSite.Binder
   fullName: System.Runtime.CompilerServices.CallSite.Binder
   type: Property
   source:
-    remote: *o0
-    path: src/System.Dynamic.Runtime/src/System/Runtime/CompilerServices/CallSite.cs
-    startLine: 70
+    remote:
+      path: src/System.Dynamic.Runtime/ref/System.Dynamic.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Binder
+    path: src/System.Dynamic.Runtime/ref/System.Dynamic.Runtime.cs
+    startLine: 269
   assemblies:
   - System.Dynamic.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Class responsible for binding dynamic operations on the dynamic site.
   syntax:
     content: public CallSiteBinder Binder { get; }
     content.vb: Public ReadOnly Property Binder As CallSiteBinder
     parameters: []
     return:
       type: System.Runtime.CompilerServices.CallSiteBinder
-      description: The <xref href="System.Runtime.CompilerServices.CallSiteBinder" data-throw-if-not-resolved="false"></xref> object responsible for binding dynamic operations.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Runtime.CompilerServices.CallSite.Create(System.Type,System.Runtime.CompilerServices.CallSiteBinder)
+  commentId: M:System.Runtime.CompilerServices.CallSite.Create(System.Type,System.Runtime.CompilerServices.CallSiteBinder)
   id: Create(System.Type,System.Runtime.CompilerServices.CallSiteBinder)
   parent: System.Runtime.CompilerServices.CallSite
+  langs:
+  - csharp
+  - vb
   name: Create(Type, CallSiteBinder)
+  nameWithType: CallSite.Create(Type, CallSiteBinder)
   fullName: System.Runtime.CompilerServices.CallSite.Create(System.Type, System.Runtime.CompilerServices.CallSiteBinder)
   type: Method
   source:
@@ -56,51 +87,66 @@ items:
       path: src/System.Dynamic.Runtime/ref/System.Dynamic.Runtime.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Create
     path: src/System.Dynamic.Runtime/ref/System.Dynamic.Runtime.cs
-    startLine: 267
+    startLine: 270
   assemblies:
   - System.Dynamic.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Creates a call site with the given delegate type and binder.
   syntax:
     content: public static CallSite Create(Type delegateType, CallSiteBinder binder)
     content.vb: Public Shared Function Create(delegateType As Type, binder As CallSiteBinder) As CallSite
     parameters:
     - id: delegateType
       type: System.Type
-      description: The call site delegate type.
     - id: binder
       type: System.Runtime.CompilerServices.CallSiteBinder
-      description: The call site binder.
     return:
       type: System.Runtime.CompilerServices.CallSite
-      description: The new call site.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
   isExternal: false
   name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
   fullName: System.Runtime.CompilerServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Runtime.CompilerServices.CallSiteBinder
+  commentId: T:System.Runtime.CompilerServices.CallSiteBinder
   parent: System.Runtime.CompilerServices
   isExternal: false
-  name: CallSiteBinder
+  name: System.Runtime.CompilerServices.CallSiteBinder
+  nameWithType: System.Runtime.CompilerServices.CallSiteBinder
   fullName: System.Runtime.CompilerServices.CallSiteBinder
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type
 - uid: System.Runtime.CompilerServices.CallSite
+  commentId: T:System.Runtime.CompilerServices.CallSite
   parent: System.Runtime.CompilerServices
   isExternal: false
   name: CallSite
+  nameWithType: CallSite
   fullName: System.Runtime.CompilerServices.CallSite

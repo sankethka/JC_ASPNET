@@ -1,99 +1,151 @@
 items:
 - uid: System.ComponentModel.AsyncOperationManager
+  commentId: T:System.ComponentModel.AsyncOperationManager
   id: AsyncOperationManager
   parent: System.ComponentModel
   children:
   - System.ComponentModel.AsyncOperationManager.CreateOperation(System.Object)
   - System.ComponentModel.AsyncOperationManager.SynchronizationContext
+  langs:
+  - csharp
+  - vb
   name: AsyncOperationManager
+  nameWithType: AsyncOperationManager
   fullName: System.ComponentModel.AsyncOperationManager
   type: Class
   source:
-    remote: &o0
-      path: src/System.ComponentModel.EventBasedAsync/src/System/ComponentModel/AsyncOperationManager.cs
+    remote:
+      path: src/System.ComponentModel.EventBasedAsync/ref/System.ComponentModel.EventBasedAsync.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.ComponentModel.EventBasedAsync/src/System/ComponentModel/AsyncOperationManager.cs
-    startLine: 10
+    id: AsyncOperationManager
+    path: src/System.ComponentModel.EventBasedAsync/ref/System.ComponentModel.EventBasedAsync.cs
+    startLine: 29
   assemblies:
   - System.ComponentModel.EventBasedAsync
   namespace: System.ComponentModel
-  summary: Provides concurrency management for classes that support asynchronous method calls. This class cannot be inherited.
   syntax:
     content: 'public class AsyncOperationManager : object'
-    content.vb: Public Class AsyncOperationManager Inherits Object
+    content.vb: >-
+      Public Class AsyncOperationManager
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.ComponentModel.AsyncOperationManager.SynchronizationContext
+  commentId: P:System.ComponentModel.AsyncOperationManager.SynchronizationContext
   id: SynchronizationContext
   parent: System.ComponentModel.AsyncOperationManager
+  langs:
+  - csharp
+  - vb
   name: SynchronizationContext
+  nameWithType: AsyncOperationManager.SynchronizationContext
   fullName: System.ComponentModel.AsyncOperationManager.SynchronizationContext
   type: Property
   source:
-    remote: *o0
-    path: src/System.ComponentModel.EventBasedAsync/src/System/ComponentModel/AsyncOperationManager.cs
-    startLine: 17
+    remote:
+      path: src/System.ComponentModel.EventBasedAsync/ref/System.ComponentModel.EventBasedAsync.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SynchronizationContext
+    path: src/System.ComponentModel.EventBasedAsync/ref/System.ComponentModel.EventBasedAsync.cs
+    startLine: 31
   assemblies:
   - System.ComponentModel.EventBasedAsync
   namespace: System.ComponentModel
-  summary: Gets or sets the synchronization context for the asynchronous operation.
   syntax:
     content: public static Threading.SynchronizationContext SynchronizationContext { get; set; }
     content.vb: Public Shared Property SynchronizationContext As Threading.SynchronizationContext
     parameters: []
     return:
       type: System.Threading.SynchronizationContext
-      description: The synchronization context for the asynchronous operation.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.ComponentModel.AsyncOperationManager.CreateOperation(System.Object)
+  commentId: M:System.ComponentModel.AsyncOperationManager.CreateOperation(System.Object)
   id: CreateOperation(System.Object)
   parent: System.ComponentModel.AsyncOperationManager
+  langs:
+  - csharp
+  - vb
   name: CreateOperation(Object)
+  nameWithType: AsyncOperationManager.CreateOperation(Object)
   fullName: System.ComponentModel.AsyncOperationManager.CreateOperation(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/System.ComponentModel.EventBasedAsync/src/System/ComponentModel/AsyncOperationManager.cs
-    startLine: 12
+    remote:
+      path: src/System.ComponentModel.EventBasedAsync/ref/System.ComponentModel.EventBasedAsync.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateOperation
+    path: src/System.ComponentModel.EventBasedAsync/ref/System.ComponentModel.EventBasedAsync.cs
+    startLine: 33
   assemblies:
   - System.ComponentModel.EventBasedAsync
   namespace: System.ComponentModel
-  summary: Returns an <xref href="System.ComponentModel.AsyncOperation" data-throw-if-not-resolved="false"></xref> for tracking the duration of a particular asynchronous operation.
   syntax:
     content: public static AsyncOperation CreateOperation(object userSuppliedState)
     content.vb: Public Shared Function CreateOperation(userSuppliedState As Object) As AsyncOperation
     parameters:
     - id: userSuppliedState
       type: System.Object
-      description: An object used to associate a piece of client state, such as a task ID, with a particular asynchronous operation.
     return:
       type: System.ComponentModel.AsyncOperation
-      description: An <xref href="System.ComponentModel.AsyncOperation" data-throw-if-not-resolved="false"></xref> that you can use to track the duration of an asynchronous method invocation.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.ComponentModel
+  commentId: N:System.ComponentModel
   isExternal: false
   name: System.ComponentModel
+  nameWithType: System.ComponentModel
   fullName: System.ComponentModel
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Threading.SynchronizationContext
+  commentId: T:System.Threading.SynchronizationContext
   parent: System.Threading
   isExternal: false
   name: SynchronizationContext
+  nameWithType: SynchronizationContext
   fullName: System.Threading.SynchronizationContext
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: System.ComponentModel.AsyncOperation
+  commentId: T:System.ComponentModel.AsyncOperation
   parent: System.ComponentModel
   isExternal: false
   name: AsyncOperation
+  nameWithType: AsyncOperation
   fullName: System.ComponentModel.AsyncOperation

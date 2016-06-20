@@ -1,5 +1,6 @@
 items:
 - uid: System.Enum
+  commentId: T:System.Enum
   id: Enum
   parent: System
   children:
@@ -39,23 +40,30 @@ items:
   - System.Enum.ToString(System.String)
   - System.Enum.TryParse``1(System.String,``0@)
   - System.Enum.TryParse``1(System.String,System.Boolean,``0@)
+  langs:
+  - csharp
+  - vb
   name: Enum
+  nameWithType: Enum
   fullName: System.Enum
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Enum.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 15
+      repo: https://github.com/dotnet/corefx.git
+    id: Enum
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 788
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Provides the base class for enumerations.
   syntax:
     content: 'public abstract class Enum : ValueType, IComparable, IConvertible, IFormattable'
-    content.vb: Public MustInherit Class Enum Inherits ValueType Implements IComparable, IConvertible, IFormattable
+    content.vb: >-
+      Public MustInherit Class Enum
+          Inherits ValueType
+          Implements IComparable, IConvertible, IFormattable
   inheritance:
   - System.Object
   - System.ValueType
@@ -68,403 +76,506 @@ items:
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Enum.#ctor
+  commentId: M:System.Enum.#ctor
   id: '#ctor'
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: Enum()
+  nameWithType: Enum.Enum()
   fullName: System.Enum.Enum()
   type: Constructor
   source:
-    remote: &o1
+    remote:
       path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Runtime/ref/System.Runtime.cs
-    startLine: 786
+    startLine: 790
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Enum" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: protected Enum()
     content.vb: Protected Sub New
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Enum.CompareTo(System.Object)
+  commentId: M:System.Enum.CompareTo(System.Object)
   id: CompareTo(System.Object)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: CompareTo(Object)
+  nameWithType: Enum.CompareTo(Object)
   fullName: System.Enum.CompareTo(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 817
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CompareTo
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 791
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Compares this instance to a specified object and returns an indication of their relative values.
   syntax:
     content: public int CompareTo(object target)
     content.vb: Public Function CompareTo(target As Object) As Integer
     parameters:
     - id: target
       type: System.Object
-      description: An object to compare, or null.
     return:
       type: System.Int32
-      description: A signed number that indicates the relative values of this instance and *target*.Value Meaning Less than zero The value of this instance is less than the value of *target*. Zero The value of this instance is equal to the value of *target*. Greater than zero The value of this instance is greater than the value of *target*.-or- *target* is null.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*target* and this instance are not the same type.'
-  - type: System.InvalidOperationException
-    description: This instance is not type <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>, <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>, or <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>.
+  implements:
+  - System.IComparable.CompareTo(System.Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Enum.Equals(System.Object)
+  commentId: M:System.Enum.Equals(System.Object)
   id: Equals(System.Object)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: Equals(Object)
+  nameWithType: Enum.Equals(Object)
   fullName: System.Enum.Equals(System.Object)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 792
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Returns a value indicating whether this instance is equal to a specified object.
   syntax:
     content: public override bool Equals(object obj)
     content.vb: Public Overrides Function Equals(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: An object to compare with this instance, or null.
     return:
       type: System.Boolean
-      description: true if *obj* is an enumeration value of the same type and with the same underlying value as this instance; otherwise, false.
   overridden: System.ValueType.Equals(System.Object)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Enum.Format(System.Type,System.Object,System.String)
+  commentId: M:System.Enum.Format(System.Type,System.Object,System.String)
   id: Format(System.Type,System.Object,System.String)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: Format(Type, Object, String)
+  nameWithType: Enum.Format(Type, Object, String)
   fullName: System.Enum.Format(System.Type, System.Object, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 610
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Format
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 793
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the specified value of a specified enumerated type to its equivalent string representation according to the specified format.
   syntax:
     content: public static string Format(Type enumType, object value, string format)
     content.vb: Public Shared Function Format(enumType As Type, value As Object, format As String) As String
     parameters:
     - id: enumType
       type: System.Type
-      description: The enumeration type of the value to convert.
     - id: value
       type: System.Object
-      description: The value to convert.
     - id: format
       type: System.String
-      description: The output format to use.
     return:
       type: System.String
-      description: A string representation of *value*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *enumType*, *value*, or *format* parameter is null.
-  - type: System.ArgumentException
-    description: The *enumType* parameter is not an <xref href="System.Enum" data-throw-if-not-resolved="false"></xref> type.-or- The *value* is from an enumeration that differs in type from *enumType*.-or- The type of *value* is not an underlying type of *enumType*.
-  - type: System.FormatException
-    description: The *format* parameter contains an invalid value.
-  - type: System.InvalidOperationException
-    description: '*format* equals "X", but the enumeration type is unknown.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Enum.GetHashCode
+  commentId: M:System.Enum.GetHashCode
   id: GetHashCode
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: GetHashCode()
+  nameWithType: Enum.GetHashCode()
   fullName: System.Enum.GetHashCode()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 752
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 794
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Returns the hash code for the value of this instance.
   syntax:
     content: public override int GetHashCode()
     content.vb: Public Overrides Function GetHashCode As Integer
     return:
       type: System.Int32
-      description: A 32-bit signed integer hash code.
   overridden: System.ValueType.GetHashCode
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Enum.GetName(System.Type,System.Object)
+  commentId: M:System.Enum.GetName(System.Type,System.Object)
   id: GetName(System.Type,System.Object)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: GetName(Type, Object)
+  nameWithType: Enum.GetName(Type, Object)
   fullName: System.Enum.GetName(System.Type, System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 516
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetName
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 795
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Retrieves the name of the constant in the specified enumeration that has the specified value.
   syntax:
     content: public static string GetName(Type enumType, object value)
     content.vb: Public Shared Function GetName(enumType As Type, value As Object) As String
     parameters:
     - id: enumType
       type: System.Type
-      description: An enumeration type.
     - id: value
       type: System.Object
-      description: The value of a particular enumerated constant in terms of its underlying type.
     return:
       type: System.String
-      description: A string containing the name of the enumerated constant in *enumType* whose value is *value*; or null if no such constant is found.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*enumType* or *value* is null.'
-  - type: System.ArgumentException
-    description: '*enumType* is not an <xref href="System.Enum" data-throw-if-not-resolved="false"></xref>.-or- *value* is neither of type *enumType* nor does it have the same underlying type as *enumType*.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Enum.GetNames(System.Type)
+  commentId: M:System.Enum.GetNames(System.Type)
   id: GetNames(System.Type)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: GetNames(Type)
+  nameWithType: Enum.GetNames(Type)
   fullName: System.Enum.GetNames(System.Type)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 526
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetNames
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 796
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Retrieves an array of the names of the constants in a specified enumeration.
   syntax:
     content: public static string[] GetNames(Type enumType)
     content.vb: Public Shared Function GetNames(enumType As Type) As String()
     parameters:
     - id: enumType
       type: System.Type
-      description: An enumeration type.
     return:
       type: System.String[]
-      description: A string array of the names of the constants in *enumType*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*enumType* is null.'
-  - type: System.ArgumentException
-    description: '*enumType* parameter is not an <xref href="System.Enum" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Enum.GetUnderlyingType(System.Type)
+  commentId: M:System.Enum.GetUnderlyingType(System.Type)
   id: GetUnderlyingType(System.Type)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: GetUnderlyingType(Type)
+  nameWithType: Enum.GetUnderlyingType(Type)
   fullName: System.Enum.GetUnderlyingType(System.Type)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 488
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetUnderlyingType
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 797
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Returns the underlying type of the specified enumeration.
   syntax:
     content: public static Type GetUnderlyingType(Type enumType)
     content.vb: Public Shared Function GetUnderlyingType(enumType As Type) As Type
     parameters:
     - id: enumType
       type: System.Type
-      description: The enumeration whose underlying type will be retrieved.
     return:
       type: System.Type
-      description: The underlying type of *enumType*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*enumType* is null.'
-  - type: System.ArgumentException
-    description: '*enumType* is not an <xref href="System.Enum" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Enum.GetValues(System.Type)
+  commentId: M:System.Enum.GetValues(System.Type)
   id: GetValues(System.Type)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: GetValues(Type)
+  nameWithType: Enum.GetValues(Type)
   fullName: System.Enum.GetValues(System.Type)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 499
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetValues
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 798
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Retrieves an array of the values of the constants in a specified enumeration.
   syntax:
     content: public static Array GetValues(Type enumType)
     content.vb: Public Shared Function GetValues(enumType As Type) As Array
     parameters:
     - id: enumType
       type: System.Type
-      description: An enumeration type.
     return:
       type: System.Array
-      description: An array that contains the values of the constants in *enumType*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*enumType* is null.'
-  - type: System.ArgumentException
-    description: '*enumType* is not an <xref href="System.Enum" data-throw-if-not-resolved="false"></xref>.'
-  - type: System.InvalidOperationException
-    description: The method is invoked by reflection in a reflection-only context, -or-*enumType* is a type from an assembly loaded in a reflection-only context.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Enum.HasFlag(System.Enum)
+  commentId: M:System.Enum.HasFlag(System.Enum)
   id: HasFlag(System.Enum)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: HasFlag(Enum)
+  nameWithType: Enum.HasFlag(Enum)
   fullName: System.Enum.HasFlag(System.Enum)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 878
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HasFlag
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 799
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Determines whether one or more bit fields are set in the current instance.
   syntax:
     content: public bool HasFlag(Enum flag)
-    content.vb: Public Function HasFlag(flag As Enum) As Boolean
+    content.vb: Public Function HasFlag(flag As  Enum) As Boolean
     parameters:
     - id: flag
       type: System.Enum
-      description: An enumeration value.
     return:
       type: System.Boolean
-      description: true if the bit field or bit fields that are set in *flag* are also set in the current instance; otherwise, false.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*flag* is a different type than the current instance.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Enum.IsDefined(System.Type,System.Object)
+  commentId: M:System.Enum.IsDefined(System.Type,System.Object)
   id: IsDefined(System.Type,System.Object)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IsDefined(Type, Object)
+  nameWithType: Enum.IsDefined(Type, Object)
   fullName: System.Enum.IsDefined(System.Type, System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 599
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsDefined
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 800
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Returns an indication whether a constant with a specified value exists in a specified enumeration.
   syntax:
     content: public static bool IsDefined(Type enumType, object value)
     content.vb: Public Shared Function IsDefined(enumType As Type, value As Object) As Boolean
     parameters:
     - id: enumType
       type: System.Type
-      description: An enumeration type.
     - id: value
       type: System.Object
-      description: The value or name of a constant in *enumType*.
     return:
       type: System.Boolean
-      description: true if a constant in *enumType* has a value equal to *value*; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*enumType* or *value* is null.'
-  - type: System.ArgumentException
-    description: '*enumType* is not an Enum.-or- The type of *value* is an enumeration, but it is not an enumeration of type *enumType*.-or- The type of *value* is not an underlying type of *enumType*.'
-  - type: System.InvalidOperationException
-    description: '*value* is not type <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>, <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>, or <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>, or <xref href="System.String" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Enum.Parse(System.Type,System.String)
+  commentId: M:System.Enum.Parse(System.Type,System.String)
   id: Parse(System.Type,System.String)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: Parse(Type, String)
+  nameWithType: Enum.Parse(Type, String)
   fullName: System.Enum.Parse(System.Type, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 338
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Parse
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 801
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the string representation of the name or numeric value of one or more enumerated constants to an equivalent enumerated object.
   syntax:
     content: public static object Parse(Type enumType, string value)
     content.vb: Public Shared Function Parse(enumType As Type, value As String) As Object
     parameters:
     - id: enumType
       type: System.Type
-      description: An enumeration type.
     - id: value
       type: System.String
-      description: A string containing the name or value to convert.
     return:
       type: System.Object
-      description: An object of type *enumType* whose value is represented by *value*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*enumType* or *value* is null.'
-  - type: System.ArgumentException
-    description: '*enumType* is not an <xref href="System.Enum" data-throw-if-not-resolved="false"></xref>.-or- *value* is either an empty string or only contains white space.-or- *value* is a name, but not one of the named constants defined for the enumeration.'
-  - type: System.OverflowException
-    description: '*value* is outside the range of the underlying type of *enumType*.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Enum.Parse(System.Type,System.String,System.Boolean)
+  commentId: M:System.Enum.Parse(System.Type,System.String,System.Boolean)
   id: Parse(System.Type,System.String,System.Boolean)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: Parse(Type, String, Boolean)
+  nameWithType: Enum.Parse(Type, String, Boolean)
   fullName: System.Enum.Parse(System.Type, System.String, System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 344
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Parse
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 802
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the string representation of the name or numeric value of one or more enumerated constants to an equivalent enumerated object. A parameter specifies whether the operation is case-insensitive.
   syntax:
     content: public static object Parse(Type enumType, string value, bool ignoreCase)
     content.vb: Public Shared Function Parse(enumType As Type, value As String, ignoreCase As Boolean) As Object
     parameters:
     - id: enumType
       type: System.Type
-      description: An enumeration type.
     - id: value
       type: System.String
-      description: A string containing the name or value to convert.
     - id: ignoreCase
       type: System.Boolean
-      description: true to ignore case; false to regard case.
     return:
       type: System.Object
-      description: An object of type *enumType* whose value is represented by *value*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*enumType* or *value* is null.'
-  - type: System.ArgumentException
-    description: '*enumType* is not an <xref href="System.Enum" data-throw-if-not-resolved="false"></xref>.-or- *value* is either an empty string ("") or only contains white space.-or- *value* is a name, but not one of the named constants defined for the enumeration.'
-  - type: System.OverflowException
-    description: '*value* is outside the range of the underlying type of *enumType*.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Enum.System#IConvertible#GetTypeCode
+  commentId: M:System.Enum.System#IConvertible#GetTypeCode
   id: System#IConvertible#GetTypeCode
+  isEii: true
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IConvertible.GetTypeCode()
-  name.vb: System.IConvertible.GetTypeCode()
+  nameWithType: Enum.IConvertible.GetTypeCode()
   fullName: System.Enum.System.IConvertible.GetTypeCode()
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.GetTypeCode
     path: src/System.Runtime/ref/System.Runtime.cs
-    startLine: 799
+    startLine: 803
   assemblies:
   - System.Runtime
   namespace: System
@@ -473,441 +584,616 @@ items:
     content.vb: Function System.IConvertible.GetTypeCode As TypeCode Implements IConvertible.GetTypeCode
     return:
       type: System.TypeCode
+  implements:
+  - System.IConvertible.GetTypeCode
+  nameWithType.vb: Enum.System.IConvertible.GetTypeCode()
+  name.vb: System.IConvertible.GetTypeCode()
 - uid: System.Enum.System#IConvertible#ToBoolean(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToBoolean(System.IFormatProvider)
   id: System#IConvertible#ToBoolean(System.IFormatProvider)
+  isEii: true
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IConvertible.ToBoolean(IFormatProvider)
-  name.vb: System.IConvertible.ToBoolean(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToBoolean(IFormatProvider)
   fullName: System.Enum.System.IConvertible.ToBoolean(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 954
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToBoolean
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 804
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the current value to a Boolean value based on the underlying type.
   syntax:
     content: bool IConvertible.ToBoolean(IFormatProvider provider)
     content.vb: Function System.IConvertible.ToBoolean(provider As IFormatProvider) As Boolean Implements IConvertible.ToBoolean
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
     return:
       type: System.Boolean
-      description: This member always throws an exception.
-  exceptions:
-  - type: System.InvalidCastException
-    description: In all cases.
+  implements:
+  - System.IConvertible.ToBoolean(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToBoolean(IFormatProvider)
+  name.vb: System.IConvertible.ToBoolean(IFormatProvider)
 - uid: System.Enum.System#IConvertible#ToByte(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToByte(System.IFormatProvider)
   id: System#IConvertible#ToByte(System.IFormatProvider)
+  isEii: true
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IConvertible.ToByte(IFormatProvider)
-  name.vb: System.IConvertible.ToByte(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToByte(IFormatProvider)
   fullName: System.Enum.System.IConvertible.ToByte(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 972
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToByte
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 805
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the current value to an 8-bit unsigned integer based on the underlying type.
   syntax:
     content: byte IConvertible.ToByte(IFormatProvider provider)
     content.vb: Function System.IConvertible.ToByte(provider As IFormatProvider) As Byte Implements IConvertible.ToByte
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
     return:
       type: System.Byte
-      description: The converted value.
+  implements:
+  - System.IConvertible.ToByte(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToByte(IFormatProvider)
+  name.vb: System.IConvertible.ToByte(IFormatProvider)
 - uid: System.Enum.System#IConvertible#ToChar(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToChar(System.IFormatProvider)
   id: System#IConvertible#ToChar(System.IFormatProvider)
+  isEii: true
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IConvertible.ToChar(IFormatProvider)
-  name.vb: System.IConvertible.ToChar(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToChar(IFormatProvider)
   fullName: System.Enum.System.IConvertible.ToChar(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 960
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToChar
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 806
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the current value to a Unicode character based on the underlying type.
   syntax:
     content: char IConvertible.ToChar(IFormatProvider provider)
     content.vb: Function System.IConvertible.ToChar(provider As IFormatProvider) As Char Implements IConvertible.ToChar
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
     return:
       type: System.Char
-      description: This member always throws an exception.
-  exceptions:
-  - type: System.InvalidCastException
-    description: In all cases.
+  implements:
+  - System.IConvertible.ToChar(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToChar(IFormatProvider)
+  name.vb: System.IConvertible.ToChar(IFormatProvider)
 - uid: System.Enum.System#IConvertible#ToDateTime(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToDateTime(System.IFormatProvider)
   id: System#IConvertible#ToDateTime(System.IFormatProvider)
+  isEii: true
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IConvertible.ToDateTime(IFormatProvider)
-  name.vb: System.IConvertible.ToDateTime(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToDateTime(IFormatProvider)
   fullName: System.Enum.System.IConvertible.ToDateTime(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 1032
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToDateTime
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 807
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the current value to a <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> based on the underlying type.
   syntax:
     content: DateTime IConvertible.ToDateTime(IFormatProvider provider)
     content.vb: Function System.IConvertible.ToDateTime(provider As IFormatProvider) As Date Implements IConvertible.ToDateTime
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
     return:
       type: System.DateTime
-      description: This member always throws an exception.
-  exceptions:
-  - type: System.InvalidCastException
-    description: In all cases.
+  implements:
+  - System.IConvertible.ToDateTime(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToDateTime(IFormatProvider)
+  name.vb: System.IConvertible.ToDateTime(IFormatProvider)
 - uid: System.Enum.System#IConvertible#ToDecimal(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToDecimal(System.IFormatProvider)
   id: System#IConvertible#ToDecimal(System.IFormatProvider)
+  isEii: true
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IConvertible.ToDecimal(IFormatProvider)
-  name.vb: System.IConvertible.ToDecimal(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToDecimal(IFormatProvider)
   fullName: System.Enum.System.IConvertible.ToDecimal(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 1026
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToDecimal
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 808
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the current value to a <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> based on the underlying type.
   syntax:
     content: decimal IConvertible.ToDecimal(IFormatProvider provider)
     content.vb: Function System.IConvertible.ToDecimal(provider As IFormatProvider) As Decimal Implements IConvertible.ToDecimal
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
     return:
       type: System.Decimal
-      description: This member always throws an exception.
-  exceptions:
-  - type: System.InvalidCastException
-    description: In all cases.
+  implements:
+  - System.IConvertible.ToDecimal(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToDecimal(IFormatProvider)
+  name.vb: System.IConvertible.ToDecimal(IFormatProvider)
 - uid: System.Enum.System#IConvertible#ToDouble(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToDouble(System.IFormatProvider)
   id: System#IConvertible#ToDouble(System.IFormatProvider)
+  isEii: true
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IConvertible.ToDouble(IFormatProvider)
-  name.vb: System.IConvertible.ToDouble(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToDouble(IFormatProvider)
   fullName: System.Enum.System.IConvertible.ToDouble(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 1020
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToDouble
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 809
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the current value to a double-precision floating point number based on the underlying type.
   syntax:
     content: double IConvertible.ToDouble(IFormatProvider provider)
     content.vb: Function System.IConvertible.ToDouble(provider As IFormatProvider) As Double Implements IConvertible.ToDouble
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
     return:
       type: System.Double
-      description: This member always throws an exception.
-  exceptions:
-  - type: System.InvalidCastException
-    description: In all cases.
+  implements:
+  - System.IConvertible.ToDouble(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToDouble(IFormatProvider)
+  name.vb: System.IConvertible.ToDouble(IFormatProvider)
 - uid: System.Enum.System#IConvertible#ToInt16(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToInt16(System.IFormatProvider)
   id: System#IConvertible#ToInt16(System.IFormatProvider)
+  isEii: true
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IConvertible.ToInt16(IFormatProvider)
-  name.vb: System.IConvertible.ToInt16(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToInt16(IFormatProvider)
   fullName: System.Enum.System.IConvertible.ToInt16(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 978
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToInt16
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 810
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the current value to a 16-bit signed integer based on the underlying type.
   syntax:
     content: short IConvertible.ToInt16(IFormatProvider provider)
     content.vb: Function System.IConvertible.ToInt16(provider As IFormatProvider) As Short Implements IConvertible.ToInt16
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
     return:
       type: System.Int16
-      description: The converted value.
+  implements:
+  - System.IConvertible.ToInt16(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToInt16(IFormatProvider)
+  name.vb: System.IConvertible.ToInt16(IFormatProvider)
 - uid: System.Enum.System#IConvertible#ToInt32(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToInt32(System.IFormatProvider)
   id: System#IConvertible#ToInt32(System.IFormatProvider)
+  isEii: true
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IConvertible.ToInt32(IFormatProvider)
-  name.vb: System.IConvertible.ToInt32(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToInt32(IFormatProvider)
   fullName: System.Enum.System.IConvertible.ToInt32(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 990
-  assemblies:
-  - System.Runtime
-  namespace: System
-  summary: Converts the current value to a 32-bit signed integer based on the underlying type.
-  syntax:
-    content: int IConvertible.ToInt32(IFormatProvider provider)
-    content.vb: Function System.IConvertible.ToInt32(provider As IFormatProvider) As Integer Implements IConvertible.ToInt32
-    parameters:
-    - id: provider
-      type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
-    return:
-      type: System.Int32
-      description: The converted value.
-- uid: System.Enum.System#IConvertible#ToInt64(System.IFormatProvider)
-  id: System#IConvertible#ToInt64(System.IFormatProvider)
-  parent: System.Enum
-  name: IConvertible.ToInt64(IFormatProvider)
-  name.vb: System.IConvertible.ToInt64(IFormatProvider)
-  fullName: System.Enum.System.IConvertible.ToInt64(System.IFormatProvider)
-  type: Method
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 1002
-  assemblies:
-  - System.Runtime
-  namespace: System
-  summary: Converts the current value to a 64-bit signed integer based on the underlying type.
-  syntax:
-    content: long IConvertible.ToInt64(IFormatProvider provider)
-    content.vb: Function System.IConvertible.ToInt64(provider As IFormatProvider) As Long Implements IConvertible.ToInt64
-    parameters:
-    - id: provider
-      type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
-    return:
-      type: System.Int64
-      description: The converted value.
-- uid: System.Enum.System#IConvertible#ToSByte(System.IFormatProvider)
-  id: System#IConvertible#ToSByte(System.IFormatProvider)
-  parent: System.Enum
-  name: IConvertible.ToSByte(IFormatProvider)
-  name.vb: System.IConvertible.ToSByte(IFormatProvider)
-  fullName: System.Enum.System.IConvertible.ToSByte(System.IFormatProvider)
-  type: Method
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 966
-  assemblies:
-  - System.Runtime
-  namespace: System
-  summary: Converts the current value to an 8-bit signed integer based on the underlying type.
-  syntax:
-    content: sbyte IConvertible.ToSByte(IFormatProvider provider)
-    content.vb: Function System.IConvertible.ToSByte(provider As IFormatProvider) As SByte Implements IConvertible.ToSByte
-    parameters:
-    - id: provider
-      type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
-    return:
-      type: System.SByte
-      description: The converted value.
-- uid: System.Enum.System#IConvertible#ToSingle(System.IFormatProvider)
-  id: System#IConvertible#ToSingle(System.IFormatProvider)
-  parent: System.Enum
-  name: IConvertible.ToSingle(IFormatProvider)
-  name.vb: System.IConvertible.ToSingle(IFormatProvider)
-  fullName: System.Enum.System.IConvertible.ToSingle(System.IFormatProvider)
-  type: Method
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 1014
-  assemblies:
-  - System.Runtime
-  namespace: System
-  summary: Converts the current value to a single-precision floating-point number based on the underlying type.
-  syntax:
-    content: float IConvertible.ToSingle(IFormatProvider provider)
-    content.vb: Function System.IConvertible.ToSingle(provider As IFormatProvider) As Single Implements IConvertible.ToSingle
-    parameters:
-    - id: provider
-      type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
-    return:
-      type: System.Single
-      description: This member always throws an exception.
-  exceptions:
-  - type: System.InvalidCastException
-    description: In all cases.
-- uid: System.Enum.System#IConvertible#ToString(System.IFormatProvider)
-  id: System#IConvertible#ToString(System.IFormatProvider)
-  parent: System.Enum
-  name: IConvertible.ToString(IFormatProvider)
-  name.vb: System.IConvertible.ToString(IFormatProvider)
-  fullName: System.Enum.System.IConvertible.ToString(System.IFormatProvider)
-  type: Method
-  source:
-    remote: *o1
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToInt32
     path: src/System.Runtime/ref/System.Runtime.cs
     startLine: 811
   assemblies:
   - System.Runtime
   namespace: System
   syntax:
-    content: string IConvertible.ToString(IFormatProvider provider)
-    content.vb: Function System.IConvertible.ToString(provider As IFormatProvider) As String Implements IConvertible.ToString
+    content: int IConvertible.ToInt32(IFormatProvider provider)
+    content.vb: Function System.IConvertible.ToInt32(provider As IFormatProvider) As Integer Implements IConvertible.ToInt32
+    parameters:
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.Int32
+  implements:
+  - System.IConvertible.ToInt32(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToInt32(IFormatProvider)
+  name.vb: System.IConvertible.ToInt32(IFormatProvider)
+- uid: System.Enum.System#IConvertible#ToInt64(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToInt64(System.IFormatProvider)
+  id: System#IConvertible#ToInt64(System.IFormatProvider)
+  isEii: true
+  parent: System.Enum
+  langs:
+  - csharp
+  - vb
+  name: IConvertible.ToInt64(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToInt64(IFormatProvider)
+  fullName: System.Enum.System.IConvertible.ToInt64(System.IFormatProvider)
+  type: Method
+  source:
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToInt64
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 812
+  assemblies:
+  - System.Runtime
+  namespace: System
+  syntax:
+    content: long IConvertible.ToInt64(IFormatProvider provider)
+    content.vb: Function System.IConvertible.ToInt64(provider As IFormatProvider) As Long Implements IConvertible.ToInt64
+    parameters:
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.Int64
+  implements:
+  - System.IConvertible.ToInt64(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToInt64(IFormatProvider)
+  name.vb: System.IConvertible.ToInt64(IFormatProvider)
+- uid: System.Enum.System#IConvertible#ToSByte(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToSByte(System.IFormatProvider)
+  id: System#IConvertible#ToSByte(System.IFormatProvider)
+  isEii: true
+  parent: System.Enum
+  langs:
+  - csharp
+  - vb
+  name: IConvertible.ToSByte(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToSByte(IFormatProvider)
+  fullName: System.Enum.System.IConvertible.ToSByte(System.IFormatProvider)
+  type: Method
+  source:
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToSByte
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 813
+  assemblies:
+  - System.Runtime
+  namespace: System
+  syntax:
+    content: sbyte IConvertible.ToSByte(IFormatProvider provider)
+    content.vb: Function System.IConvertible.ToSByte(provider As IFormatProvider) As SByte Implements IConvertible.ToSByte
+    parameters:
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.SByte
+  implements:
+  - System.IConvertible.ToSByte(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToSByte(IFormatProvider)
+  name.vb: System.IConvertible.ToSByte(IFormatProvider)
+- uid: System.Enum.System#IConvertible#ToSingle(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToSingle(System.IFormatProvider)
+  id: System#IConvertible#ToSingle(System.IFormatProvider)
+  isEii: true
+  parent: System.Enum
+  langs:
+  - csharp
+  - vb
+  name: IConvertible.ToSingle(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToSingle(IFormatProvider)
+  fullName: System.Enum.System.IConvertible.ToSingle(System.IFormatProvider)
+  type: Method
+  source:
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToSingle
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 814
+  assemblies:
+  - System.Runtime
+  namespace: System
+  syntax:
+    content: float IConvertible.ToSingle(IFormatProvider provider)
+    content.vb: Function System.IConvertible.ToSingle(provider As IFormatProvider) As Single Implements IConvertible.ToSingle
+    parameters:
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.Single
+  implements:
+  - System.IConvertible.ToSingle(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToSingle(IFormatProvider)
+  name.vb: System.IConvertible.ToSingle(IFormatProvider)
+- uid: System.Enum.System#IConvertible#ToString(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToString(System.IFormatProvider)
+  id: System#IConvertible#ToString(System.IFormatProvider)
+  isEii: true
+  parent: System.Enum
+  langs:
+  - csharp
+  - vb
+  name: IConvertible.ToString(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToString(IFormatProvider)
+  fullName: System.Enum.System.IConvertible.ToString(System.IFormatProvider)
+  type: Method
+  source:
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToString
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 815
+  assemblies:
+  - System.Runtime
+  namespace: System
+  syntax:
+    content: >-
+      [Obsolete("The provider argument is not used. Please use ToString().")]
+
+      string IConvertible.ToString(IFormatProvider provider)
+    content.vb: >-
+      <Obsolete("The provider argument is not used. Please use ToString().")>
+
+      Function System.IConvertible.ToString(provider As IFormatProvider) As String Implements IConvertible.ToString
     parameters:
     - id: provider
       type: System.IFormatProvider
     return:
       type: System.String
+  implements:
+  - System.IConvertible.ToString(System.IFormatProvider)
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: The provider argument is not used. Please use ToString().
+  nameWithType.vb: Enum.System.IConvertible.ToString(IFormatProvider)
+  name.vb: System.IConvertible.ToString(IFormatProvider)
 - uid: System.Enum.System#IConvertible#ToType(System.Type,System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToType(System.Type,System.IFormatProvider)
   id: System#IConvertible#ToType(System.Type,System.IFormatProvider)
+  isEii: true
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: IConvertible.ToType(Type, IFormatProvider)
-  name.vb: System.IConvertible.ToType(Type, IFormatProvider)
+  nameWithType: Enum.IConvertible.ToType(Type, IFormatProvider)
   fullName: System.Enum.System.IConvertible.ToType(System.Type, System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 1038
-  assemblies:
-  - System.Runtime
-  namespace: System
-  summary: Converts the current value to a specified type based on the underlying type.
-  syntax:
-    content: object IConvertible.ToType(Type type, IFormatProvider provider)
-    content.vb: Function System.IConvertible.ToType(type As Type, provider As IFormatProvider) As Object Implements IConvertible.ToType
-    parameters:
-    - id: type
-      type: System.Type
-      description: The type to convert to.
-    - id: provider
-      type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
-    return:
-      type: System.Object
-      description: The converted value.
-- uid: System.Enum.System#IConvertible#ToUInt16(System.IFormatProvider)
-  id: System#IConvertible#ToUInt16(System.IFormatProvider)
-  parent: System.Enum
-  name: IConvertible.ToUInt16(IFormatProvider)
-  name.vb: System.IConvertible.ToUInt16(IFormatProvider)
-  fullName: System.Enum.System.IConvertible.ToUInt16(System.IFormatProvider)
-  type: Method
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 984
-  assemblies:
-  - System.Runtime
-  namespace: System
-  summary: Converts the current value to a 16-bit unsigned integer based on the underlying type.
-  syntax:
-    content: ushort IConvertible.ToUInt16(IFormatProvider provider)
-    content.vb: Function System.IConvertible.ToUInt16(provider As IFormatProvider) As UShort Implements IConvertible.ToUInt16
-    parameters:
-    - id: provider
-      type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
-    return:
-      type: System.UInt16
-      description: The converted value.
-- uid: System.Enum.System#IConvertible#ToUInt32(System.IFormatProvider)
-  id: System#IConvertible#ToUInt32(System.IFormatProvider)
-  parent: System.Enum
-  name: IConvertible.ToUInt32(IFormatProvider)
-  name.vb: System.IConvertible.ToUInt32(IFormatProvider)
-  fullName: System.Enum.System.IConvertible.ToUInt32(System.IFormatProvider)
-  type: Method
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 996
-  assemblies:
-  - System.Runtime
-  namespace: System
-  summary: Converts the current value to a 32-bit unsigned integer based on the underlying type.
-  syntax:
-    content: uint IConvertible.ToUInt32(IFormatProvider provider)
-    content.vb: Function System.IConvertible.ToUInt32(provider As IFormatProvider) As UInteger Implements IConvertible.ToUInt32
-    parameters:
-    - id: provider
-      type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
-    return:
-      type: System.UInt32
-      description: The converted value.
-- uid: System.Enum.System#IConvertible#ToUInt64(System.IFormatProvider)
-  id: System#IConvertible#ToUInt64(System.IFormatProvider)
-  parent: System.Enum
-  name: IConvertible.ToUInt64(IFormatProvider)
-  name.vb: System.IConvertible.ToUInt64(IFormatProvider)
-  fullName: System.Enum.System.IConvertible.ToUInt64(System.IFormatProvider)
-  type: Method
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 1008
-  assemblies:
-  - System.Runtime
-  namespace: System
-  summary: Converts the current value to a 64-bit unsigned integer based on the underlying type.
-  syntax:
-    content: ulong IConvertible.ToUInt64(IFormatProvider provider)
-    content.vb: Function System.IConvertible.ToUInt64(provider As IFormatProvider) As ULong Implements IConvertible.ToUInt64
-    parameters:
-    - id: provider
-      type: System.IFormatProvider
-      description: An object that supplies culture-specific formatting information.
-    return:
-      type: System.UInt64
-      description: The converted value.
-- uid: System.Enum.System#IFormattable#ToString(System.String,System.IFormatProvider)
-  id: System#IFormattable#ToString(System.String,System.IFormatProvider)
-  parent: System.Enum
-  name: IFormattable.ToString(String, IFormatProvider)
-  name.vb: System.IFormattable.ToString(String, IFormatProvider)
-  fullName: System.Enum.System.IFormattable.ToString(System.String, System.IFormatProvider)
-  type: Method
-  source:
-    remote: *o1
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToType
     path: src/System.Runtime/ref/System.Runtime.cs
     startLine: 817
   assemblies:
   - System.Runtime
   namespace: System
   syntax:
-    content: string IFormattable.ToString(string format, IFormatProvider provider)
-    content.vb: Function System.IFormattable.ToString(format As String, provider As IFormatProvider) As String Implements IFormattable.ToString
+    content: object IConvertible.ToType(Type type, IFormatProvider provider)
+    content.vb: Function System.IConvertible.ToType(type As Type, provider As IFormatProvider) As Object Implements IConvertible.ToType
+    parameters:
+    - id: type
+      type: System.Type
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.Object
+  implements:
+  - System.IConvertible.ToType(System.Type,System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToType(Type, IFormatProvider)
+  name.vb: System.IConvertible.ToType(Type, IFormatProvider)
+- uid: System.Enum.System#IConvertible#ToUInt16(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToUInt16(System.IFormatProvider)
+  id: System#IConvertible#ToUInt16(System.IFormatProvider)
+  isEii: true
+  parent: System.Enum
+  langs:
+  - csharp
+  - vb
+  name: IConvertible.ToUInt16(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToUInt16(IFormatProvider)
+  fullName: System.Enum.System.IConvertible.ToUInt16(System.IFormatProvider)
+  type: Method
+  source:
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToUInt16
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 818
+  assemblies:
+  - System.Runtime
+  namespace: System
+  syntax:
+    content: ushort IConvertible.ToUInt16(IFormatProvider provider)
+    content.vb: Function System.IConvertible.ToUInt16(provider As IFormatProvider) As UShort Implements IConvertible.ToUInt16
+    parameters:
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.UInt16
+  implements:
+  - System.IConvertible.ToUInt16(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToUInt16(IFormatProvider)
+  name.vb: System.IConvertible.ToUInt16(IFormatProvider)
+- uid: System.Enum.System#IConvertible#ToUInt32(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToUInt32(System.IFormatProvider)
+  id: System#IConvertible#ToUInt32(System.IFormatProvider)
+  isEii: true
+  parent: System.Enum
+  langs:
+  - csharp
+  - vb
+  name: IConvertible.ToUInt32(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToUInt32(IFormatProvider)
+  fullName: System.Enum.System.IConvertible.ToUInt32(System.IFormatProvider)
+  type: Method
+  source:
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToUInt32
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 819
+  assemblies:
+  - System.Runtime
+  namespace: System
+  syntax:
+    content: uint IConvertible.ToUInt32(IFormatProvider provider)
+    content.vb: Function System.IConvertible.ToUInt32(provider As IFormatProvider) As UInteger Implements IConvertible.ToUInt32
+    parameters:
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.UInt32
+  implements:
+  - System.IConvertible.ToUInt32(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToUInt32(IFormatProvider)
+  name.vb: System.IConvertible.ToUInt32(IFormatProvider)
+- uid: System.Enum.System#IConvertible#ToUInt64(System.IFormatProvider)
+  commentId: M:System.Enum.System#IConvertible#ToUInt64(System.IFormatProvider)
+  id: System#IConvertible#ToUInt64(System.IFormatProvider)
+  isEii: true
+  parent: System.Enum
+  langs:
+  - csharp
+  - vb
+  name: IConvertible.ToUInt64(IFormatProvider)
+  nameWithType: Enum.IConvertible.ToUInt64(IFormatProvider)
+  fullName: System.Enum.System.IConvertible.ToUInt64(System.IFormatProvider)
+  type: Method
+  source:
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IConvertible.ToUInt64
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 820
+  assemblies:
+  - System.Runtime
+  namespace: System
+  syntax:
+    content: ulong IConvertible.ToUInt64(IFormatProvider provider)
+    content.vb: Function System.IConvertible.ToUInt64(provider As IFormatProvider) As ULong Implements IConvertible.ToUInt64
+    parameters:
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.UInt64
+  implements:
+  - System.IConvertible.ToUInt64(System.IFormatProvider)
+  nameWithType.vb: Enum.System.IConvertible.ToUInt64(IFormatProvider)
+  name.vb: System.IConvertible.ToUInt64(IFormatProvider)
+- uid: System.Enum.System#IFormattable#ToString(System.String,System.IFormatProvider)
+  commentId: M:System.Enum.System#IFormattable#ToString(System.String,System.IFormatProvider)
+  id: System#IFormattable#ToString(System.String,System.IFormatProvider)
+  isEii: true
+  parent: System.Enum
+  langs:
+  - csharp
+  - vb
+  name: IFormattable.ToString(String, IFormatProvider)
+  nameWithType: Enum.IFormattable.ToString(String, IFormatProvider)
+  fullName: System.Enum.System.IFormattable.ToString(System.String, System.IFormatProvider)
+  type: Method
+  source:
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.IFormattable.ToString
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 821
+  assemblies:
+  - System.Runtime
+  namespace: System
+  syntax:
+    content: >-
+      [Obsolete("The provider argument is not used. Please use ToString(String).")]
+
+      string IFormattable.ToString(string format, IFormatProvider provider)
+    content.vb: >-
+      <Obsolete("The provider argument is not used. Please use ToString(String).")>
+
+      Function System.IFormattable.ToString(format As String, provider As IFormatProvider) As String Implements IFormattable.ToString
     parameters:
     - id: format
       type: System.String
@@ -915,520 +1201,1401 @@ items:
       type: System.IFormatProvider
     return:
       type: System.String
+  implements:
+  - System.IFormattable.ToString(System.String,System.IFormatProvider)
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: The provider argument is not used. Please use ToString(String).
+  nameWithType.vb: Enum.System.IFormattable.ToString(String, IFormatProvider)
+  name.vb: System.IFormattable.ToString(String, IFormatProvider)
 - uid: System.Enum.ToObject(System.Type,System.Object)
+  commentId: M:System.Enum.ToObject(System.Type,System.Object)
   id: ToObject(System.Type,System.Object)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: ToObject(Type, Object)
+  nameWithType: Enum.ToObject(Type, Object)
   fullName: System.Enum.ToObject(System.Type, System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 543
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToObject
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 823
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the specified object with an integer value to an enumeration member.
   syntax:
     content: public static object ToObject(Type enumType, object value)
     content.vb: Public Shared Function ToObject(enumType As Type, value As Object) As Object
     parameters:
     - id: enumType
       type: System.Type
-      description: The enumeration type to return.
     - id: value
       type: System.Object
-      description: The value convert to an enumeration member.
     return:
       type: System.Object
-      description: An enumeration object whose value is *value*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*enumType* or *value* is null.'
-  - type: System.ArgumentException
-    description: '*enumType* is not an <xref href="System.Enum" data-throw-if-not-resolved="false"></xref>.-or- *value* is not type <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>, <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>, or <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Enum.ToString
+  commentId: M:System.Enum.ToString
   id: ToString
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: ToString()
+  nameWithType: Enum.ToString()
   fullName: System.Enum.ToString()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 797
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 824
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to its equivalent string representation.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: The string representation of the value of this instance.
   overridden: System.ValueType.ToString
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Enum.ToString(System.String)
+  commentId: M:System.Enum.ToString(System.String)
   id: ToString(System.String)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: ToString(String)
+  nameWithType: Enum.ToString(String)
   fullName: System.Enum.ToString(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 853
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 825
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to its equivalent string representation using the specified format.
   syntax:
     content: public string ToString(string format)
     content.vb: Public Function ToString(format As String) As String
     parameters:
     - id: format
       type: System.String
-      description: A format string.
     return:
       type: System.String
-      description: The string representation of the value of this instance as specified by *format*.
-  exceptions:
-  - type: System.FormatException
-    description: '*format* contains an invalid specification.'
-  - type: System.InvalidOperationException
-    description: '*format* equals "X", but the enumeration type is unknown.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Enum.TryParse``1(System.String,``0@)
+  commentId: M:System.Enum.TryParse``1(System.String,``0@)
   id: TryParse``1(System.String,``0@)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: TryParse<TEnum>(String, out TEnum)
-  name.vb: TryParse(Of TEnum)(String, ByRef TEnum)
+  nameWithType: Enum.TryParse<TEnum>(String, out TEnum)
   fullName: System.Enum.TryParse<TEnum>(System.String, out TEnum)
-  fullName.vb: System.Enum.TryParse(Of TEnum)(System.String, ByRef TEnum)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 322
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryParse
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 826
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the string representation of the name or numeric value of one or more enumerated constants to an equivalent enumerated object. The return value indicates whether the conversion succeeded.
   syntax:
     content: 'public static bool TryParse<TEnum>(string value, out TEnum result)where TEnum : struct'
     content.vb: Public Shared Function TryParse(Of TEnum As Structure)(value As String, ByRef result As TEnum) As Boolean
     parameters:
     - id: value
       type: System.String
-      description: The string representation of the enumeration name or underlying value to convert.
     - id: result
       type: '{TEnum}'
-      description: When this method returns, *result* contains an object of type *TEnum* whose value is represented by *value* if the parse operation succeeds. If the parse operation fails, *result* contains the default value of the underlying type of *TEnum*. Note that this value need not be a member of the *TEnum* enumeration. This parameter is passed uninitialized.
     typeParameters:
     - id: TEnum
     return:
       type: System.Boolean
-      description: true if the *value* parameter was converted successfully; otherwise, false.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*TEnum* is not an enumeration type.'
+  nameWithType.vb: Enum.TryParse(Of TEnum)(String, ByRef TEnum)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Enum.TryParse(Of TEnum)(System.String, ByRef TEnum)
+  name.vb: TryParse(Of TEnum)(String, ByRef TEnum)
 - uid: System.Enum.TryParse``1(System.String,System.Boolean,``0@)
+  commentId: M:System.Enum.TryParse``1(System.String,System.Boolean,``0@)
   id: TryParse``1(System.String,System.Boolean,``0@)
   parent: System.Enum
+  langs:
+  - csharp
+  - vb
   name: TryParse<TEnum>(String, Boolean, out TEnum)
-  name.vb: TryParse(Of TEnum)(String, Boolean, ByRef TEnum)
+  nameWithType: Enum.TryParse<TEnum>(String, Boolean, out TEnum)
   fullName: System.Enum.TryParse<TEnum>(System.String, System.Boolean, out TEnum)
-  fullName.vb: System.Enum.TryParse(Of TEnum)(System.String, System.Boolean, ByRef TEnum)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Enum.cs
-    startLine: 327
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryParse
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 827
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the string representation of the name or numeric value of one or more enumerated constants to an equivalent enumerated object. A parameter specifies whether the operation is case-sensitive. The return value indicates whether the conversion succeeded.
   syntax:
     content: 'public static bool TryParse<TEnum>(string value, bool ignoreCase, out TEnum result)where TEnum : struct'
     content.vb: Public Shared Function TryParse(Of TEnum As Structure)(value As String, ignoreCase As Boolean, ByRef result As TEnum) As Boolean
     parameters:
     - id: value
       type: System.String
-      description: The string representation of the enumeration name or underlying value to convert.
     - id: ignoreCase
       type: System.Boolean
-      description: true to ignore case; false to consider case.
     - id: result
       type: '{TEnum}'
-      description: When this method returns, *result* contains an object of type *TEnum* whose value is represented by *value* if the parse operation succeeds. If the parse operation fails, *result* contains the default value of the underlying type of *TEnum*. Note that this value need not be a member of the *TEnum* enumeration. This parameter is passed uninitialized.
     typeParameters:
     - id: TEnum
     return:
       type: System.Boolean
-      description: true if the *value* parameter was converted successfully; otherwise, false.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*TEnum* is not an enumeration type.'
+  nameWithType.vb: Enum.TryParse(Of TEnum)(String, Boolean, ByRef TEnum)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Enum.TryParse(Of TEnum)(System.String, System.Boolean, ByRef TEnum)
+  name.vb: TryParse(Of TEnum)(String, Boolean, ByRef TEnum)
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.ValueType
+  commentId: T:System.ValueType
   parent: System
   isExternal: false
   name: ValueType
+  nameWithType: ValueType
   fullName: System.ValueType
 - uid: System.IComparable
+  commentId: T:System.IComparable
   parent: System
   isExternal: false
   name: IComparable
+  nameWithType: IComparable
   fullName: System.IComparable
 - uid: System.IConvertible
+  commentId: T:System.IConvertible
   parent: System
   isExternal: false
   name: IConvertible
+  nameWithType: IConvertible
   fullName: System.IConvertible
 - uid: System.IFormattable
+  commentId: T:System.IFormattable
   parent: System
   isExternal: false
   name: IFormattable
+  nameWithType: IFormattable
   fullName: System.IFormattable
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IComparable.CompareTo(System.Object)
+  commentId: M:System.IComparable.CompareTo(System.Object)
+  parent: System.IComparable
+  isExternal: false
+  name: CompareTo(Object)
+  nameWithType: IComparable.CompareTo(Object)
+  fullName: System.IComparable.CompareTo(System.Object)
+  spec.csharp:
+  - uid: System.IComparable.CompareTo(System.Object)
+    name: CompareTo
+    nameWithType: IComparable.CompareTo
+    fullName: System.IComparable.CompareTo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IComparable.CompareTo(System.Object)
+    name: CompareTo
+    nameWithType: IComparable.CompareTo
+    fullName: System.IComparable.CompareTo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+  - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType
   isExternal: false
   name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
   fullName: System.ValueType.Equals(System.Object)
   spec.csharp:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
     fullName: System.ValueType.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
     fullName: System.ValueType.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
   parent: System.ValueType
   isExternal: false
   name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
   fullName: System.ValueType.GetHashCode()
   spec.csharp:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
     fullName: System.ValueType.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
     fullName: System.ValueType.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.String[]
-  isExternal: false
   name: String[]
-  name.vb: String()
+  nameWithType: String[]
   fullName: System.String[]
-  fullName.vb: System.String()
+  nameWithType.vb: String()
+  fullname.vb: System.String()
+  name.vb: String()
   spec.csharp:
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Array
+  commentId: T:System.Array
   parent: System
   isExternal: false
   name: Array
+  nameWithType: Array
   fullName: System.Array
 - uid: System.Enum
+  commentId: T:System.Enum
   parent: System
   isExternal: false
   name: Enum
+  nameWithType: Enum
   fullName: System.Enum
+- uid: System.IConvertible.GetTypeCode
+  commentId: M:System.IConvertible.GetTypeCode
+  parent: System.IConvertible
+  isExternal: false
+  name: GetTypeCode()
+  nameWithType: IConvertible.GetTypeCode()
+  fullName: System.IConvertible.GetTypeCode()
+  spec.csharp:
+  - uid: System.IConvertible.GetTypeCode
+    name: GetTypeCode
+    nameWithType: IConvertible.GetTypeCode
+    fullName: System.IConvertible.GetTypeCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.GetTypeCode
+    name: GetTypeCode
+    nameWithType: IConvertible.GetTypeCode
+    fullName: System.IConvertible.GetTypeCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.TypeCode
+  commentId: T:System.TypeCode
   parent: System
   isExternal: false
   name: TypeCode
+  nameWithType: TypeCode
   fullName: System.TypeCode
+- uid: System.IConvertible.ToBoolean(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToBoolean(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToBoolean(IFormatProvider)
+  nameWithType: IConvertible.ToBoolean(IFormatProvider)
+  fullName: System.IConvertible.ToBoolean(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToBoolean(System.IFormatProvider)
+    name: ToBoolean
+    nameWithType: IConvertible.ToBoolean
+    fullName: System.IConvertible.ToBoolean
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToBoolean(System.IFormatProvider)
+    name: ToBoolean
+    nameWithType: IConvertible.ToBoolean
+    fullName: System.IConvertible.ToBoolean
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
   parent: System
   isExternal: false
   name: IFormatProvider
+  nameWithType: IFormatProvider
   fullName: System.IFormatProvider
+- uid: System.IConvertible.ToByte(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToByte(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToByte(IFormatProvider)
+  nameWithType: IConvertible.ToByte(IFormatProvider)
+  fullName: System.IConvertible.ToByte(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToByte(System.IFormatProvider)
+    name: ToByte
+    nameWithType: IConvertible.ToByte
+    fullName: System.IConvertible.ToByte
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToByte(System.IFormatProvider)
+    name: ToByte
+    nameWithType: IConvertible.ToByte
+    fullName: System.IConvertible.ToByte
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Byte
+  commentId: T:System.Byte
   parent: System
   isExternal: false
   name: Byte
+  nameWithType: Byte
   fullName: System.Byte
+- uid: System.IConvertible.ToChar(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToChar(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToChar(IFormatProvider)
+  nameWithType: IConvertible.ToChar(IFormatProvider)
+  fullName: System.IConvertible.ToChar(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToChar(System.IFormatProvider)
+    name: ToChar
+    nameWithType: IConvertible.ToChar
+    fullName: System.IConvertible.ToChar
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToChar(System.IFormatProvider)
+    name: ToChar
+    nameWithType: IConvertible.ToChar
+    fullName: System.IConvertible.ToChar
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Char
+  commentId: T:System.Char
   parent: System
   isExternal: false
   name: Char
+  nameWithType: Char
   fullName: System.Char
+- uid: System.IConvertible.ToDateTime(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToDateTime(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToDateTime(IFormatProvider)
+  nameWithType: IConvertible.ToDateTime(IFormatProvider)
+  fullName: System.IConvertible.ToDateTime(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToDateTime(System.IFormatProvider)
+    name: ToDateTime
+    nameWithType: IConvertible.ToDateTime
+    fullName: System.IConvertible.ToDateTime
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToDateTime(System.IFormatProvider)
+    name: ToDateTime
+    nameWithType: IConvertible.ToDateTime
+    fullName: System.IConvertible.ToDateTime
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.DateTime
+  commentId: T:System.DateTime
   parent: System
   isExternal: false
   name: DateTime
+  nameWithType: DateTime
   fullName: System.DateTime
+- uid: System.IConvertible.ToDecimal(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToDecimal(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToDecimal(IFormatProvider)
+  nameWithType: IConvertible.ToDecimal(IFormatProvider)
+  fullName: System.IConvertible.ToDecimal(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToDecimal(System.IFormatProvider)
+    name: ToDecimal
+    nameWithType: IConvertible.ToDecimal
+    fullName: System.IConvertible.ToDecimal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToDecimal(System.IFormatProvider)
+    name: ToDecimal
+    nameWithType: IConvertible.ToDecimal
+    fullName: System.IConvertible.ToDecimal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Decimal
+  commentId: T:System.Decimal
   parent: System
   isExternal: false
   name: Decimal
+  nameWithType: Decimal
   fullName: System.Decimal
+- uid: System.IConvertible.ToDouble(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToDouble(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToDouble(IFormatProvider)
+  nameWithType: IConvertible.ToDouble(IFormatProvider)
+  fullName: System.IConvertible.ToDouble(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToDouble(System.IFormatProvider)
+    name: ToDouble
+    nameWithType: IConvertible.ToDouble
+    fullName: System.IConvertible.ToDouble
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToDouble(System.IFormatProvider)
+    name: ToDouble
+    nameWithType: IConvertible.ToDouble
+    fullName: System.IConvertible.ToDouble
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Double
+  commentId: T:System.Double
   parent: System
   isExternal: false
   name: Double
+  nameWithType: Double
   fullName: System.Double
+- uid: System.IConvertible.ToInt16(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToInt16(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToInt16(IFormatProvider)
+  nameWithType: IConvertible.ToInt16(IFormatProvider)
+  fullName: System.IConvertible.ToInt16(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToInt16(System.IFormatProvider)
+    name: ToInt16
+    nameWithType: IConvertible.ToInt16
+    fullName: System.IConvertible.ToInt16
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToInt16(System.IFormatProvider)
+    name: ToInt16
+    nameWithType: IConvertible.ToInt16
+    fullName: System.IConvertible.ToInt16
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Int16
+  commentId: T:System.Int16
   parent: System
   isExternal: false
   name: Int16
+  nameWithType: Int16
   fullName: System.Int16
+- uid: System.IConvertible.ToInt32(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToInt32(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToInt32(IFormatProvider)
+  nameWithType: IConvertible.ToInt32(IFormatProvider)
+  fullName: System.IConvertible.ToInt32(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToInt32(System.IFormatProvider)
+    name: ToInt32
+    nameWithType: IConvertible.ToInt32
+    fullName: System.IConvertible.ToInt32
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToInt32(System.IFormatProvider)
+    name: ToInt32
+    nameWithType: IConvertible.ToInt32
+    fullName: System.IConvertible.ToInt32
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IConvertible.ToInt64(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToInt64(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToInt64(IFormatProvider)
+  nameWithType: IConvertible.ToInt64(IFormatProvider)
+  fullName: System.IConvertible.ToInt64(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToInt64(System.IFormatProvider)
+    name: ToInt64
+    nameWithType: IConvertible.ToInt64
+    fullName: System.IConvertible.ToInt64
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToInt64(System.IFormatProvider)
+    name: ToInt64
+    nameWithType: IConvertible.ToInt64
+    fullName: System.IConvertible.ToInt64
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Int64
+  commentId: T:System.Int64
   parent: System
   isExternal: false
   name: Int64
+  nameWithType: Int64
   fullName: System.Int64
+- uid: System.IConvertible.ToSByte(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToSByte(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToSByte(IFormatProvider)
+  nameWithType: IConvertible.ToSByte(IFormatProvider)
+  fullName: System.IConvertible.ToSByte(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToSByte(System.IFormatProvider)
+    name: ToSByte
+    nameWithType: IConvertible.ToSByte
+    fullName: System.IConvertible.ToSByte
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToSByte(System.IFormatProvider)
+    name: ToSByte
+    nameWithType: IConvertible.ToSByte
+    fullName: System.IConvertible.ToSByte
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.SByte
+  commentId: T:System.SByte
   parent: System
   isExternal: false
   name: SByte
+  nameWithType: SByte
   fullName: System.SByte
+- uid: System.IConvertible.ToSingle(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToSingle(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToSingle(IFormatProvider)
+  nameWithType: IConvertible.ToSingle(IFormatProvider)
+  fullName: System.IConvertible.ToSingle(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToSingle(System.IFormatProvider)
+    name: ToSingle
+    nameWithType: IConvertible.ToSingle
+    fullName: System.IConvertible.ToSingle
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToSingle(System.IFormatProvider)
+    name: ToSingle
+    nameWithType: IConvertible.ToSingle
+    fullName: System.IConvertible.ToSingle
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Single
+  commentId: T:System.Single
   parent: System
   isExternal: false
   name: Single
+  nameWithType: Single
   fullName: System.Single
+- uid: System.IConvertible.ToString(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToString(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToString(IFormatProvider)
+  nameWithType: IConvertible.ToString(IFormatProvider)
+  fullName: System.IConvertible.ToString(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToString(System.IFormatProvider)
+    name: ToString
+    nameWithType: IConvertible.ToString
+    fullName: System.IConvertible.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToString(System.IFormatProvider)
+    name: ToString
+    nameWithType: IConvertible.ToString
+    fullName: System.IConvertible.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IConvertible.ToType(System.Type,System.IFormatProvider)
+  commentId: M:System.IConvertible.ToType(System.Type,System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToType(Type, IFormatProvider)
+  nameWithType: IConvertible.ToType(Type, IFormatProvider)
+  fullName: System.IConvertible.ToType(System.Type, System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToType(System.Type,System.IFormatProvider)
+    name: ToType
+    nameWithType: IConvertible.ToType
+    fullName: System.IConvertible.ToType
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToType(System.Type,System.IFormatProvider)
+    name: ToType
+    nameWithType: IConvertible.ToType
+    fullName: System.IConvertible.ToType
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IConvertible.ToUInt16(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToUInt16(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToUInt16(IFormatProvider)
+  nameWithType: IConvertible.ToUInt16(IFormatProvider)
+  fullName: System.IConvertible.ToUInt16(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToUInt16(System.IFormatProvider)
+    name: ToUInt16
+    nameWithType: IConvertible.ToUInt16
+    fullName: System.IConvertible.ToUInt16
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToUInt16(System.IFormatProvider)
+    name: ToUInt16
+    nameWithType: IConvertible.ToUInt16
+    fullName: System.IConvertible.ToUInt16
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.UInt16
+  commentId: T:System.UInt16
   parent: System
   isExternal: false
   name: UInt16
+  nameWithType: UInt16
   fullName: System.UInt16
+- uid: System.IConvertible.ToUInt32(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToUInt32(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToUInt32(IFormatProvider)
+  nameWithType: IConvertible.ToUInt32(IFormatProvider)
+  fullName: System.IConvertible.ToUInt32(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToUInt32(System.IFormatProvider)
+    name: ToUInt32
+    nameWithType: IConvertible.ToUInt32
+    fullName: System.IConvertible.ToUInt32
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToUInt32(System.IFormatProvider)
+    name: ToUInt32
+    nameWithType: IConvertible.ToUInt32
+    fullName: System.IConvertible.ToUInt32
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.UInt32
+  commentId: T:System.UInt32
   parent: System
   isExternal: false
   name: UInt32
+  nameWithType: UInt32
   fullName: System.UInt32
+- uid: System.IConvertible.ToUInt64(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToUInt64(System.IFormatProvider)
+  parent: System.IConvertible
+  isExternal: false
+  name: ToUInt64(IFormatProvider)
+  nameWithType: IConvertible.ToUInt64(IFormatProvider)
+  fullName: System.IConvertible.ToUInt64(System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IConvertible.ToUInt64(System.IFormatProvider)
+    name: ToUInt64
+    nameWithType: IConvertible.ToUInt64
+    fullName: System.IConvertible.ToUInt64
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IConvertible.ToUInt64(System.IFormatProvider)
+    name: ToUInt64
+    nameWithType: IConvertible.ToUInt64
+    fullName: System.IConvertible.ToUInt64
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.UInt64
+  commentId: T:System.UInt64
   parent: System
   isExternal: false
   name: UInt64
+  nameWithType: UInt64
   fullName: System.UInt64
+- uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+  commentId: M:System.IFormattable.ToString(System.String,System.IFormatProvider)
+  parent: System.IFormattable
+  isExternal: false
+  name: ToString(String, IFormatProvider)
+  nameWithType: IFormattable.ToString(String, IFormatProvider)
+  fullName: System.IFormattable.ToString(System.String, System.IFormatProvider)
+  spec.csharp:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    nameWithType: IFormattable.ToString
+    fullName: System.IFormattable.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    nameWithType: IFormattable.ToString
+    fullName: System.IFormattable.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
   parent: System.ValueType
   isExternal: false
   name: ToString()
+  nameWithType: ValueType.ToString()
   fullName: System.ValueType.ToString()
   spec.csharp:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
     fullName: System.ValueType.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
     fullName: System.ValueType.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{TEnum}'
+  commentId: '!:TEnum'
+  definition: TEnum
+  name: TEnum
+  nameWithType: TEnum
+  fullName: TEnum
+- uid: TEnum
   isExternal: false
   name: TEnum
+  nameWithType: TEnum
   fullName: TEnum
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.FormatException
-  parent: System
-  isExternal: false
-  name: FormatException
-  fullName: System.FormatException
-- uid: System.OverflowException
-  isExternal: false
-  name: OverflowException
-  fullName: System.OverflowException
-- uid: System.InvalidCastException
-  isExternal: false
-  name: InvalidCastException
-  fullName: System.InvalidCastException

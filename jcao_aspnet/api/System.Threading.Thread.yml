@@ -1,5 +1,6 @@
 items:
 - uid: System.Threading.Thread
+  commentId: T:System.Threading.Thread
   id: Thread
   parent: System.Threading
   children:
@@ -17,425 +18,574 @@ items:
   - System.Threading.Thread.Start
   - System.Threading.Thread.Start(System.Object)
   - System.Threading.Thread.ThreadState
+  langs:
+  - csharp
+  - vb
   name: Thread
+  nameWithType: Thread
   fullName: System.Threading.Thread
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Threading/Thread.cs
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 121
+      repo: https://github.com/dotnet/corefx.git
+    id: Thread
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 11
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Creates and controls a thread, sets its priority, and gets its status. To browse the .NET Framework source code for this type, see the Reference Source.
   syntax:
     content: 'public sealed class Thread : object'
-    content.vb: Public NotInheritable Class Thread Inherits Object
+    content.vb: >-
+      Public NotInheritable Class Thread
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Threading.Thread.#ctor(System.Threading.ParameterizedThreadStart)
+  commentId: M:System.Threading.Thread.#ctor(System.Threading.ParameterizedThreadStart)
   id: '#ctor(System.Threading.ParameterizedThreadStart)'
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: Thread(ParameterizedThreadStart)
+  nameWithType: Thread.Thread(ParameterizedThreadStart)
   fullName: System.Threading.Thread.Thread(System.Threading.ParameterizedThreadStart)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 244
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 14
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Initializes a new instance of the <xref href="System.Threading.Thread" data-throw-if-not-resolved="false"></xref> class, specifying a delegate that allows an object to be passed to the thread when the thread is started.
   syntax:
     content: public Thread(ParameterizedThreadStart start)
     content.vb: Public Sub New(start As ParameterizedThreadStart)
     parameters:
     - id: start
       type: System.Threading.ParameterizedThreadStart
-      description: A delegate that represents the methods to be invoked when this thread begins executing.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*start* is null.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Threading.Thread.#ctor(System.Threading.ThreadStart)
+  commentId: M:System.Threading.Thread.#ctor(System.Threading.ThreadStart)
   id: '#ctor(System.Threading.ThreadStart)'
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: Thread(ThreadStart)
+  nameWithType: Thread.Thread(ThreadStart)
   fullName: System.Threading.Thread.Thread(System.Threading.ThreadStart)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 225
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 15
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Initializes a new instance of the <xref href="System.Threading.Thread" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public Thread(ThreadStart start)
     content.vb: Public Sub New(start As ThreadStart)
     parameters:
     - id: start
       type: System.Threading.ThreadStart
-      description: A <xref href="System.Threading.ThreadStart" data-throw-if-not-resolved="false"></xref> delegate that represents the methods to be invoked when this thread begins executing.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *start* parameter is null.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Threading.Thread.CurrentThread
+  commentId: P:System.Threading.Thread.CurrentThread
   id: CurrentThread
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: CurrentThread
+  nameWithType: Thread.CurrentThread
   fullName: System.Threading.Thread.CurrentThread
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 753
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CurrentThread
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 16
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Gets the currently running thread.
   syntax:
     content: public static Thread CurrentThread { get; }
     content.vb: Public Shared ReadOnly Property CurrentThread As Thread
     parameters: []
     return:
       type: System.Threading.Thread
-      description: A <xref href="System.Threading.Thread" data-throw-if-not-resolved="false"></xref> that is the representation of the currently running thread.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Threading.Thread.IsAlive
+  commentId: P:System.Threading.Thread.IsAlive
   id: IsAlive
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: IsAlive
+  nameWithType: Thread.IsAlive
   fullName: System.Threading.Thread.IsAlive
   type: Property
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsAlive
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 17
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Gets a value indicating the execution status of the current thread.
   syntax:
     content: public bool IsAlive { get; }
     content.vb: Public ReadOnly Property IsAlive As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if this thread has been started and has not terminated normally or aborted; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Threading.Thread.IsBackground
+  commentId: P:System.Threading.Thread.IsBackground
   id: IsBackground
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: IsBackground
+  nameWithType: Thread.IsBackground
   fullName: System.Threading.Thread.IsBackground
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 841
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsBackground
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 18
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Gets or sets a value indicating whether or not a thread is a background thread.
   syntax:
     content: public bool IsBackground { get; set; }
     content.vb: Public Property IsBackground As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if this thread is or is to become a background thread; otherwise, false.
-  exceptions:
-  - type: System.Threading.ThreadStateException
-    description: The thread is dead.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Threading.Thread.ManagedThreadId
+  commentId: P:System.Threading.Thread.ManagedThreadId
   id: ManagedThreadId
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: ManagedThreadId
+  nameWithType: Thread.ManagedThreadId
   fullName: System.Threading.Thread.ManagedThreadId
   type: Property
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ManagedThreadId
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 19
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Gets a unique identifier for the current managed thread.
   syntax:
     content: public int ManagedThreadId { get; }
     content.vb: Public ReadOnly Property ManagedThreadId As Integer
     parameters: []
     return:
       type: System.Int32
-      description: An integer that represents a unique identifier for this managed thread.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Threading.Thread.Name
+  commentId: P:System.Threading.Thread.Name
   id: Name
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: Name
+  nameWithType: Thread.Name
   fullName: System.Threading.Thread.Name
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 1412
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Name
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 20
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Gets or sets the name of the thread.
   syntax:
     content: public string Name { get; set; }
     content.vb: Public Property Name As String
     parameters: []
     return:
       type: System.String
-      description: A string containing the name of the thread, or null if no name was set.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: A set operation was requested, but the Name property has already been set.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Threading.Thread.ThreadState
+  commentId: P:System.Threading.Thread.ThreadState
   id: ThreadState
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: ThreadState
+  nameWithType: Thread.ThreadState
   fullName: System.Threading.Thread.ThreadState
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 860
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ThreadState
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 21
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Gets a value containing the states of the current thread.
   syntax:
     content: public ThreadState ThreadState { get; }
     content.vb: Public ReadOnly Property ThreadState As ThreadState
     parameters: []
     return:
       type: System.Threading.ThreadState
-      description: One of the <xref href="System.Threading.ThreadState" data-throw-if-not-resolved="false"></xref> values indicating the state of the current thread. The initial value is Unstarted.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Threading.Thread.Join
+  commentId: M:System.Threading.Thread.Join
   id: Join
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: Join()
+  nameWithType: Thread.Join()
   fullName: System.Threading.Thread.Join()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 666
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Join
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 22
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Blocks the calling thread until a thread terminates, while continuing to perform standard COM and SendMessage pumping.
   syntax:
     content: public void Join()
     content.vb: Public Sub Join
-  exceptions:
-  - type: System.Threading.ThreadStateException
-    description: The caller attempted to join a thread that is in the <xref href="System.Threading.ThreadState.Unstarted" data-throw-if-not-resolved="false"></xref> state.
-  - type: System.Threading.ThreadInterruptedException
-    description: The thread is interrupted while waiting.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Threading.Thread.Join(System.Int32)
+  commentId: M:System.Threading.Thread.Join(System.Int32)
   id: Join(System.Int32)
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: Join(Int32)
+  nameWithType: Thread.Join(Int32)
   fullName: System.Threading.Thread.Join(System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 673
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Join
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 23
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Blocks the calling thread until a thread terminates or the specified time elapses, while continuing to perform standard COM and SendMessage pumping.
   syntax:
     content: public bool Join(int millisecondsTimeout)
     content.vb: Public Function Join(millisecondsTimeout As Integer) As Boolean
     parameters:
     - id: millisecondsTimeout
       type: System.Int32
-      description: The number of milliseconds to wait for the thread to terminate.
     return:
       type: System.Boolean
-      description: true if the thread has terminated; false if the thread has not terminated after the amount of time specified by the *millisecondsTimeout* parameter has elapsed.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The value of *millisecondsTimeout* is negative and is not equal to <xref href="System.Threading.Timeout.Infinite" data-throw-if-not-resolved="false"></xref> in milliseconds.
-  - type: System.Threading.ThreadStateException
-    description: The thread has not been started.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Threading.Thread.Sleep(System.Int32)
+  commentId: M:System.Threading.Thread.Sleep(System.Int32)
   id: Sleep(System.Int32)
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: Sleep(Int32)
+  nameWithType: Thread.Sleep(Int32)
   fullName: System.Threading.Thread.Sleep(System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 702
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sleep
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 24
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Suspends the current thread for the specified number of milliseconds.
   syntax:
     content: public static void Sleep(int millisecondsTimeout)
     content.vb: Public Shared Sub Sleep(millisecondsTimeout As Integer)
     parameters:
     - id: millisecondsTimeout
       type: System.Int32
-      description: The number of milliseconds for which the thread is suspended. If the value of the *millisecondsTimeout* argument is zero, the thread relinquishes the remainder of its time slice to any thread of equal priority that is ready to run. If there are no other threads of equal priority that are ready to run, execution of the current thread is not suspended.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The time-out value is negative and is not equal to <xref href="System.Threading.Timeout.Infinite" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Thread.Sleep(System.TimeSpan)
+  commentId: M:System.Threading.Thread.Sleep(System.TimeSpan)
   id: Sleep(System.TimeSpan)
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: Sleep(TimeSpan)
+  nameWithType: Thread.Sleep(TimeSpan)
   fullName: System.Threading.Thread.Sleep(System.TimeSpan)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 711
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sleep
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 25
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Suspends the current thread for the specified amount of time.
   syntax:
     content: public static void Sleep(TimeSpan timeout)
     content.vb: Public Shared Sub Sleep(timeout As TimeSpan)
     parameters:
     - id: timeout
       type: System.TimeSpan
-      description: The amount of time for which the thread is suspended. If the value of the *millisecondsTimeout* argument is <xref href="System.TimeSpan.Zero" data-throw-if-not-resolved="false"></xref>, the thread relinquishes the remainder of its time slice to any thread of equal priority that is ready to run. If there are no other threads of equal priority that are ready to run, execution of the current thread is not suspended.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The value of *timeout* is negative and is not equal to <xref href="System.Threading.Timeout.Infinite" data-throw-if-not-resolved="false"></xref> in milliseconds, or is greater than <xref href="System.Int32.MaxValue" data-throw-if-not-resolved="false"></xref> milliseconds.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Thread.Start
+  commentId: M:System.Threading.Thread.Start
   id: Start
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: Start()
+  nameWithType: Thread.Start()
   fullName: System.Threading.Thread.Start()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 300
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Start
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 26
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Causes the operating system to change the state of the current instance to <xref href="System.Threading.ThreadState.Running" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void Start()
     content.vb: Public Sub Start
-  exceptions:
-  - type: System.Threading.ThreadStateException
-    description: The thread has already been started.
-  - type: System.OutOfMemoryException
-    description: There is not enough memory available to start this thread.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Threading.Thread.Start(System.Object)
+  commentId: M:System.Threading.Thread.Start(System.Object)
   id: Start(System.Object)
   parent: System.Threading.Thread
+  langs:
+  - csharp
+  - vb
   name: Start(Object)
+  nameWithType: Thread.Start(Object)
   fullName: System.Threading.Thread.Start(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Thread.cs
-    startLine: 308
+    remote:
+      path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Start
+    path: src/System.Threading.Thread/ref/System.Threading.Thread.cs
+    startLine: 27
   assemblies:
   - System.Threading.Thread
   namespace: System.Threading
-  summary: Causes the operating system to change the state of the current instance to <xref href="System.Threading.ThreadState.Running" data-throw-if-not-resolved="false"></xref>, and optionally supplies an object containing data to be used by the method the thread executes.
   syntax:
     content: public void Start(object parameter)
     content.vb: Public Sub Start(parameter As Object)
     parameters:
     - id: parameter
       type: System.Object
-      description: An object that contains data to be used by the method the thread executes.
-  exceptions:
-  - type: System.Threading.ThreadStateException
-    description: The thread has already been started.
-  - type: System.OutOfMemoryException
-    description: There is not enough memory available to start this thread.
-  - type: System.InvalidOperationException
-    description: This thread was created using a <xref href="System.Threading.ThreadStart" data-throw-if-not-resolved="false"></xref> delegate instead of a <xref href="System.Threading.ParameterizedThreadStart" data-throw-if-not-resolved="false"></xref> delegate.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Threading.ParameterizedThreadStart
+  commentId: T:System.Threading.ParameterizedThreadStart
   parent: System.Threading
   isExternal: false
   name: ParameterizedThreadStart
+  nameWithType: ParameterizedThreadStart
   fullName: System.Threading.ParameterizedThreadStart
 - uid: System.Threading.ThreadStart
+  commentId: T:System.Threading.ThreadStart
   parent: System.Threading
   isExternal: false
   name: ThreadStart
+  nameWithType: ThreadStart
   fullName: System.Threading.ThreadStart
 - uid: System.Threading.Thread
+  commentId: T:System.Threading.Thread
   parent: System.Threading
   isExternal: false
   name: Thread
+  nameWithType: Thread
   fullName: System.Threading.Thread
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Threading.ThreadState
+  commentId: T:System.Threading.ThreadState
   parent: System.Threading
   isExternal: false
   name: ThreadState
+  nameWithType: ThreadState
   fullName: System.Threading.ThreadState
 - uid: System.TimeSpan
+  commentId: T:System.TimeSpan
   parent: System
   isExternal: false
   name: TimeSpan
+  nameWithType: TimeSpan
   fullName: System.TimeSpan
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.Threading.ThreadStateException
-  isExternal: false
-  name: ThreadStateException
-  fullName: System.Threading.ThreadStateException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: System.Threading.ThreadInterruptedException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.OutOfMemoryException
-  isExternal: false
-  name: OutOfMemoryException
-  fullName: System.OutOfMemoryException

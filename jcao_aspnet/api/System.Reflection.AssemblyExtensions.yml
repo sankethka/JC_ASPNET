@@ -1,149 +1,232 @@
 items:
 - uid: System.Reflection.AssemblyExtensions
+  commentId: T:System.Reflection.AssemblyExtensions
   id: AssemblyExtensions
   parent: System.Reflection
   children:
   - System.Reflection.AssemblyExtensions.GetExportedTypes(System.Reflection.Assembly)
   - System.Reflection.AssemblyExtensions.GetModules(System.Reflection.Assembly)
   - System.Reflection.AssemblyExtensions.GetTypes(System.Reflection.Assembly)
+  langs:
+  - csharp
+  - vb
   name: AssemblyExtensions
+  nameWithType: AssemblyExtensions
   fullName: System.Reflection.AssemblyExtensions
   type: Class
   source:
     remote:
-      path: src/System.Reflection.TypeExtensions/src/System/Reflection/TypeExtensions.CoreCLR.cs
-      branch: master
-      repo: https://github.com/dotnet/corefx.git
-    path: src/System.Reflection.TypeExtensions/src/System/Reflection/TypeExtensions.CoreCLR.cs
-    startLine: 216
-  assemblies:
-  - System.Reflection.TypeExtensions
-  namespace: System.Reflection
-  syntax:
-    content: 'public class AssemblyExtensions : object'
-    content.vb: Public Class AssemblyExtensions Inherits Object
-  inheritance:
-  - System.Object
-- uid: System.Reflection.AssemblyExtensions.GetExportedTypes(System.Reflection.Assembly)
-  id: GetExportedTypes(System.Reflection.Assembly)
-  parent: System.Reflection.AssemblyExtensions
-  name: GetExportedTypes(Assembly)
-  fullName: System.Reflection.AssemblyExtensions.GetExportedTypes(System.Reflection.Assembly)
-  type: Method
-  source:
-    remote: &o0
       path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
-    startLine: 9
-  assemblies:
-  - System.Reflection.TypeExtensions
-  namespace: System.Reflection
-  syntax:
-    content: public static Type[] GetExportedTypes(Assembly assembly)
-    content.vb: Public Shared Function GetExportedTypes(assembly As Assembly) As Type()
-    parameters:
-    - id: assembly
-      type: System.Reflection.Assembly
-    return:
-      type: System.Type[]
-- uid: System.Reflection.AssemblyExtensions.GetModules(System.Reflection.Assembly)
-  id: GetModules(System.Reflection.Assembly)
-  parent: System.Reflection.AssemblyExtensions
-  name: GetModules(Assembly)
-  fullName: System.Reflection.AssemblyExtensions.GetModules(System.Reflection.Assembly)
-  type: Method
-  source:
-    remote: *o0
-    path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
-    startLine: 10
-  assemblies:
-  - System.Reflection.TypeExtensions
-  namespace: System.Reflection
-  syntax:
-    content: public static Module[] GetModules(Assembly assembly)
-    content.vb: Public Shared Function GetModules(assembly As Assembly) As
-    parameters:
-    - id: assembly
-      type: System.Reflection.Assembly
-    return:
-      type: System.Reflection.Module[]
-- uid: System.Reflection.AssemblyExtensions.GetTypes(System.Reflection.Assembly)
-  id: GetTypes(System.Reflection.Assembly)
-  parent: System.Reflection.AssemblyExtensions
-  name: GetTypes(Assembly)
-  fullName: System.Reflection.AssemblyExtensions.GetTypes(System.Reflection.Assembly)
-  type: Method
-  source:
-    remote: *o0
+    id: AssemblyExtensions
     path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
     startLine: 11
   assemblies:
   - System.Reflection.TypeExtensions
   namespace: System.Reflection
   syntax:
-    content: public static Type[] GetTypes(Assembly assembly)
-    content.vb: Public Shared Function GetTypes(assembly As Assembly) As Type()
+    content: 'public class AssemblyExtensions : object'
+    content.vb: >-
+      Public Class AssemblyExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: System.Reflection.AssemblyExtensions.GetExportedTypes(System.Reflection.Assembly)
+  commentId: M:System.Reflection.AssemblyExtensions.GetExportedTypes(System.Reflection.Assembly)
+  id: GetExportedTypes(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: System.Reflection.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetExportedTypes(Assembly)
+  nameWithType: AssemblyExtensions.GetExportedTypes(Assembly)
+  fullName: System.Reflection.AssemblyExtensions.GetExportedTypes(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetExportedTypes
+    path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+    startLine: 13
+  assemblies:
+  - System.Reflection.TypeExtensions
+  namespace: System.Reflection
+  syntax:
+    content: public static Type[] GetExportedTypes(this Assembly assembly)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetExportedTypes(assembly As Assembly) As Type()
     parameters:
     - id: assembly
       type: System.Reflection.Assembly
     return:
       type: System.Type[]
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: System.Reflection.AssemblyExtensions.GetModules(System.Reflection.Assembly)
+  commentId: M:System.Reflection.AssemblyExtensions.GetModules(System.Reflection.Assembly)
+  id: GetModules(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: System.Reflection.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetModules(Assembly)
+  nameWithType: AssemblyExtensions.GetModules(Assembly)
+  fullName: System.Reflection.AssemblyExtensions.GetModules(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetModules
+    path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+    startLine: 14
+  assemblies:
+  - System.Reflection.TypeExtensions
+  namespace: System.Reflection
+  syntax:
+    content: public static Module[] GetModules(this Assembly assembly)
+    content.vb: "<ExtensionAttribute>\nPublic Shared Function GetModules(assembly As Assembly) As "
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+    return:
+      type: System.Reflection.Module[]
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: System.Reflection.AssemblyExtensions.GetTypes(System.Reflection.Assembly)
+  commentId: M:System.Reflection.AssemblyExtensions.GetTypes(System.Reflection.Assembly)
+  id: GetTypes(System.Reflection.Assembly)
+  isExtensionMethod: true
+  parent: System.Reflection.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetTypes(Assembly)
+  nameWithType: AssemblyExtensions.GetTypes(Assembly)
+  fullName: System.Reflection.AssemblyExtensions.GetTypes(System.Reflection.Assembly)
+  type: Method
+  source:
+    remote:
+      path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetTypes
+    path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+    startLine: 15
+  assemblies:
+  - System.Reflection.TypeExtensions
+  namespace: System.Reflection
+  syntax:
+    content: public static Type[] GetTypes(this Assembly assembly)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetTypes(assembly As Assembly) As Type()
+    parameters:
+    - id: assembly
+      type: System.Reflection.Assembly
+    return:
+      type: System.Type[]
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
   parent: System.Reflection
   isExternal: false
-  name: Reflection.Assembly
+  name: Assembly
+  nameWithType: Assembly
   fullName: System.Reflection.Assembly
 - uid: System.Type[]
-  isExternal: false
   name: Type[]
-  name.vb: Type()
+  nameWithType: Type[]
   fullName: System.Type[]
-  fullName.vb: System.Type()
+  nameWithType.vb: Type()
+  fullname.vb: System.Type()
+  name.vb: Type()
   spec.csharp:
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Reflection.Module[]
-  isExternal: true
   name: Module[]
-  name.vb: Module()
+  nameWithType: Module[]
   fullName: System.Reflection.Module[]
-  fullName.vb: System.Reflection.Module()
+  nameWithType.vb: Module()
+  fullname.vb: System.Reflection.Module()
+  name.vb: Module()
   spec.csharp:
   - uid: System.Reflection.Module
     name: Module
+    nameWithType: Module
     fullName: System.Reflection.Module
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Reflection.Module
     name: Module
+    nameWithType: Module
     fullName: System.Reflection.Module
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()

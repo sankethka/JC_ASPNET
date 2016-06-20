@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.CompilerServices.TaskAwaiter
+  commentId: T:System.Runtime.CompilerServices.TaskAwaiter
   id: TaskAwaiter
   parent: System.Runtime.CompilerServices
   children:
@@ -7,173 +8,284 @@ items:
   - System.Runtime.CompilerServices.TaskAwaiter.IsCompleted
   - System.Runtime.CompilerServices.TaskAwaiter.OnCompleted(System.Action)
   - System.Runtime.CompilerServices.TaskAwaiter.UnsafeOnCompleted(System.Action)
+  langs:
+  - csharp
+  - vb
   name: TaskAwaiter
+  nameWithType: TaskAwaiter
   fullName: System.Runtime.CompilerServices.TaskAwaiter
   type: Struct
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
-    startLine: 59
+      repo: https://github.com/dotnet/corefx.git
+    id: TaskAwaiter
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 115
   assemblies:
   - System.Threading.Tasks
   namespace: System.Runtime.CompilerServices
-  summary: Provides an object that waits for the completion of an asynchronous task.
   syntax:
     content: 'public struct TaskAwaiter : ICriticalNotifyCompletion, INotifyCompletion'
-    content.vb: Public Structure TaskAwaiter Implements ICriticalNotifyCompletion, INotifyCompletion
+    content.vb: >-
+      Public Structure TaskAwaiter
+          Implements ICriticalNotifyCompletion, INotifyCompletion
   implements:
   - System.Runtime.CompilerServices.ICriticalNotifyCompletion
   - System.Runtime.CompilerServices.INotifyCompletion
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
 - uid: System.Runtime.CompilerServices.TaskAwaiter.IsCompleted
+  commentId: P:System.Runtime.CompilerServices.TaskAwaiter.IsCompleted
   id: IsCompleted
   parent: System.Runtime.CompilerServices.TaskAwaiter
+  langs:
+  - csharp
+  - vb
   name: IsCompleted
+  nameWithType: TaskAwaiter.IsCompleted
   fullName: System.Runtime.CompilerServices.TaskAwaiter.IsCompleted
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
-    startLine: 76
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsCompleted
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 118
   assemblies:
   - System.Threading.Tasks
   namespace: System.Runtime.CompilerServices
-  summary: Gets a value that indicates whether the asynchronous task has completed.
   syntax:
     content: public bool IsCompleted { get; }
     content.vb: Public ReadOnly Property IsCompleted As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the task has completed; otherwise, false.
-  exceptions:
-  - type: System.NullReferenceException
-    description: The <xref href="System.Runtime.CompilerServices.TaskAwaiter" data-throw-if-not-resolved="false"></xref> object was not properly initialized.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Runtime.CompilerServices.TaskAwaiter.GetResult
+  commentId: M:System.Runtime.CompilerServices.TaskAwaiter.GetResult
   id: GetResult
   parent: System.Runtime.CompilerServices.TaskAwaiter
+  langs:
+  - csharp
+  - vb
   name: GetResult()
+  nameWithType: TaskAwaiter.GetResult()
   fullName: System.Runtime.CompilerServices.TaskAwaiter.GetResult()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
-    startLine: 107
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetResult
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 119
   assemblies:
   - System.Threading.Tasks
   namespace: System.Runtime.CompilerServices
-  summary: Ends the wait for the completion of the asynchronous task.
   syntax:
     content: public void GetResult()
     content.vb: Public Sub GetResult
-  exceptions:
-  - type: System.NullReferenceException
-    description: The <xref href="System.Runtime.CompilerServices.TaskAwaiter" data-throw-if-not-resolved="false"></xref> object was not properly initialized.
-  - type: System.Threading.Tasks.TaskCanceledException
-    description: The task was canceled.
-  - type: System.Exception
-    description: The task completed in a <xref href="System.Threading.Tasks.TaskStatus.Faulted" data-throw-if-not-resolved="false"></xref> state.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.CompilerServices.TaskAwaiter.OnCompleted(System.Action)
+  commentId: M:System.Runtime.CompilerServices.TaskAwaiter.OnCompleted(System.Action)
   id: OnCompleted(System.Action)
   parent: System.Runtime.CompilerServices.TaskAwaiter
+  langs:
+  - csharp
+  - vb
   name: OnCompleted(Action)
+  nameWithType: TaskAwaiter.OnCompleted(Action)
   fullName: System.Runtime.CompilerServices.TaskAwaiter.OnCompleted(System.Action)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
-    startLine: 86
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OnCompleted
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 120
   assemblies:
   - System.Threading.Tasks
   namespace: System.Runtime.CompilerServices
-  summary: Sets the action to perform when the <xref href="System.Runtime.CompilerServices.TaskAwaiter" data-throw-if-not-resolved="false"></xref> object stops waiting for the asynchronous task to complete.
   syntax:
     content: public void OnCompleted(Action continuation)
     content.vb: Public Sub OnCompleted(continuation As Action)
     parameters:
     - id: continuation
       type: System.Action
-      description: The action to perform when the wait operation completes.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*continuation* is null.'
-  - type: System.NullReferenceException
-    description: The <xref href="System.Runtime.CompilerServices.TaskAwaiter" data-throw-if-not-resolved="false"></xref> object was not properly initialized.
+  implements:
+  - System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.CompilerServices.TaskAwaiter.UnsafeOnCompleted(System.Action)
+  commentId: M:System.Runtime.CompilerServices.TaskAwaiter.UnsafeOnCompleted(System.Action)
   id: UnsafeOnCompleted(System.Action)
   parent: System.Runtime.CompilerServices.TaskAwaiter
+  langs:
+  - csharp
+  - vb
   name: UnsafeOnCompleted(Action)
+  nameWithType: TaskAwaiter.UnsafeOnCompleted(Action)
   fullName: System.Runtime.CompilerServices.TaskAwaiter.UnsafeOnCompleted(System.Action)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
-    startLine: 97
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: UnsafeOnCompleted
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 121
   assemblies:
   - System.Threading.Tasks
   namespace: System.Runtime.CompilerServices
-  summary: Schedules the continuation action for the asynchronous task that is associated with this awaiter.
   syntax:
     content: public void UnsafeOnCompleted(Action continuation)
     content.vb: Public Sub UnsafeOnCompleted(continuation As Action)
     parameters:
     - id: continuation
       type: System.Action
-      description: The action to invoke when the await operation completes.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*continuation* is null.'
-  - type: System.InvalidOperationException
-    description: The awaiter was not properly initialized.
+  implements:
+  - System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
   isExternal: false
   name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
   fullName: System.Runtime.CompilerServices
 - uid: System.Runtime.CompilerServices.ICriticalNotifyCompletion
+  commentId: T:System.Runtime.CompilerServices.ICriticalNotifyCompletion
   parent: System.Runtime.CompilerServices
   isExternal: false
   name: ICriticalNotifyCompletion
+  nameWithType: ICriticalNotifyCompletion
   fullName: System.Runtime.CompilerServices.ICriticalNotifyCompletion
 - uid: System.Runtime.CompilerServices.INotifyCompletion
+  commentId: T:System.Runtime.CompilerServices.INotifyCompletion
   parent: System.Runtime.CompilerServices
   isExternal: false
   name: INotifyCompletion
+  nameWithType: INotifyCompletion
   fullName: System.Runtime.CompilerServices.INotifyCompletion
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
+- uid: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+  commentId: M:System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+  parent: System.Runtime.CompilerServices.INotifyCompletion
+  isExternal: true
+  name: OnCompleted(Action)
+  nameWithType: INotifyCompletion.OnCompleted(Action)
+  fullName: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+  spec.csharp:
+  - uid: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+    name: OnCompleted
+    nameWithType: INotifyCompletion.OnCompleted
+    fullName: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+    name: OnCompleted
+    nameWithType: INotifyCompletion.OnCompleted
+    fullName: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Action
+  commentId: T:System.Action
   isExternal: false
   name: Action
+  nameWithType: Action
   fullName: System.Action
-- uid: System.NullReferenceException
-  isExternal: false
-  name: NullReferenceException
-  fullName: System.NullReferenceException
-- uid: System.Threading.Tasks.TaskCanceledException
-  isExternal: false
-  name: TaskCanceledException
-  fullName: System.Threading.Tasks.TaskCanceledException
-- uid: System.Exception
-  parent: System
-  isExternal: false
-  name: Exception
-  fullName: System.Exception
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
+- uid: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+  commentId: M:System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+  parent: System.Runtime.CompilerServices.ICriticalNotifyCompletion
+  isExternal: true
+  name: UnsafeOnCompleted(Action)
+  nameWithType: ICriticalNotifyCompletion.UnsafeOnCompleted(Action)
+  fullName: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+  spec.csharp:
+  - uid: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+    name: UnsafeOnCompleted
+    nameWithType: ICriticalNotifyCompletion.UnsafeOnCompleted
+    fullName: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+    name: UnsafeOnCompleted
+    nameWithType: ICriticalNotifyCompletion.UnsafeOnCompleted
+    fullName: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

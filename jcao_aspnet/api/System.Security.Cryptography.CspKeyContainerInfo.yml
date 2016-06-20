@@ -1,5 +1,6 @@
 items:
 - uid: System.Security.Cryptography.CspKeyContainerInfo
+  commentId: T:System.Security.Cryptography.CspKeyContainerInfo
   id: CspKeyContainerInfo
   parent: System.Security.Cryptography
   children:
@@ -16,367 +17,531 @@ items:
   - System.Security.Cryptography.CspKeyContainerInfo.RandomlyGenerated
   - System.Security.Cryptography.CspKeyContainerInfo.Removable
   - System.Security.Cryptography.CspKeyContainerInfo.UniqueKeyContainerName
+  langs:
+  - csharp
+  - vb
   name: CspKeyContainerInfo
+  nameWithType: CspKeyContainerInfo
   fullName: System.Security.Cryptography.CspKeyContainerInfo
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
+    id: CspKeyContainerInfo
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 10
+  assemblies:
+  - System.Security.Cryptography.Csp
+  namespace: System.Security.Cryptography
+  syntax:
+    content: 'public sealed class CspKeyContainerInfo : object'
+    content.vb: >-
+      Public NotInheritable Class CspKeyContainerInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: System.Security.Cryptography.CspKeyContainerInfo.#ctor(System.Security.Cryptography.CspParameters)
+  commentId: M:System.Security.Cryptography.CspKeyContainerInfo.#ctor(System.Security.Cryptography.CspParameters)
+  id: '#ctor(System.Security.Cryptography.CspParameters)'
+  parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
+  name: CspKeyContainerInfo(CspParameters)
+  nameWithType: CspKeyContainerInfo.CspKeyContainerInfo(CspParameters)
+  fullName: System.Security.Cryptography.CspKeyContainerInfo.CspKeyContainerInfo(System.Security.Cryptography.CspParameters)
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
     startLine: 12
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Provides additional information about a cryptographic key pair. This class cannot be inherited.
-  syntax:
-    content: 'public sealed class CspKeyContainerInfo : object'
-    content.vb: Public NotInheritable Class CspKeyContainerInfo Inherits Object
-  inheritance:
-  - System.Object
-- uid: System.Security.Cryptography.CspKeyContainerInfo.#ctor(System.Security.Cryptography.CspParameters)
-  id: '#ctor(System.Security.Cryptography.CspParameters)'
-  parent: System.Security.Cryptography.CspKeyContainerInfo
-  name: CspKeyContainerInfo(CspParameters)
-  fullName: System.Security.Cryptography.CspKeyContainerInfo.CspKeyContainerInfo(System.Security.Cryptography.CspParameters)
-  type: Constructor
-  source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 18
-  assemblies:
-  - System.Security.Cryptography.Csp
-  namespace: System.Security.Cryptography
-  summary: Initializes a new instance of the <xref href="System.Security.Cryptography.CspKeyContainerInfo" data-throw-if-not-resolved="false"></xref> class using the specified parameters.
   syntax:
     content: public CspKeyContainerInfo(CspParameters parameters)
     content.vb: Public Sub New(parameters As CspParameters)
     parameters:
     - id: parameters
       type: System.Security.Cryptography.CspParameters
-      description: A <xref href="System.Security.Cryptography.CspParameters" data-throw-if-not-resolved="false"></xref> object that provides information about the key.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.CspKeyContainerInfo.Accessible
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.Accessible
   id: Accessible
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: Accessible
+  nameWithType: CspKeyContainerInfo.Accessible
   fullName: System.Security.Cryptography.CspKeyContainerInfo.Accessible
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 49
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Accessible
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 13
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets a value indicating whether a key in a key container is accessible.
   syntax:
     content: public bool Accessible { get; }
     content.vb: Public ReadOnly Property Accessible As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the key is accessible; otherwise, false.
-  exceptions:
-  - type: System.NotSupportedException
-    description: The key type is not supported.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.Exportable
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.Exportable
   id: Exportable
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: Exportable
+  nameWithType: CspKeyContainerInfo.Exportable
   fullName: System.Security.Cryptography.CspKeyContainerInfo.Exportable
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 69
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Exportable
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 14
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets a value indicating whether a key can be exported from a key container.
   syntax:
     content: public bool Exportable { get; }
     content.vb: Public ReadOnly Property Exportable As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the key can be exported; otherwise, false.
-  exceptions:
-  - type: System.NotSupportedException
-    description: The key type is not supported.
-  - type: System.Security.Cryptography.CryptographicException
-    description: The cryptographic service provider cannot be found.-or-The key container was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.HardwareDevice
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.HardwareDevice
   id: HardwareDevice
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: HardwareDevice
+  nameWithType: CspKeyContainerInfo.HardwareDevice
   fullName: System.Security.Cryptography.CspKeyContainerInfo.HardwareDevice
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 94
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HardwareDevice
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 15
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets a value indicating whether a key is a hardware key.
   syntax:
     content: public bool HardwareDevice { get; }
     content.vb: Public ReadOnly Property HardwareDevice As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the key is a hardware key; otherwise, false.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The cryptographic service provider cannot be found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.KeyContainerName
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.KeyContainerName
   id: KeyContainerName
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: KeyContainerName
+  nameWithType: CspKeyContainerInfo.KeyContainerName
   fullName: System.Security.Cryptography.CspKeyContainerInfo.KeyContainerName
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 120
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: KeyContainerName
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 16
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets a key container name.
   syntax:
     content: public string KeyContainerName { get; }
     content.vb: Public ReadOnly Property KeyContainerName As String
     parameters: []
     return:
       type: System.String
-      description: The key container name.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.KeyNumber
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.KeyNumber
   id: KeyNumber
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: KeyNumber
+  nameWithType: CspKeyContainerInfo.KeyNumber
   fullName: System.Security.Cryptography.CspKeyContainerInfo.KeyNumber
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 131
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: KeyNumber
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 17
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets a value that describes whether an asymmetric key was created as a signature key or an exchange key.
   syntax:
     content: public KeyNumber KeyNumber { get; }
     content.vb: Public ReadOnly Property KeyNumber As KeyNumber
     parameters: []
     return:
       type: System.Security.Cryptography.KeyNumber
-      description: One of the <xref href="System.Security.Cryptography.KeyNumber" data-throw-if-not-resolved="false"></xref> values that describes whether an asymmetric key was created as a signature key or an exchange key.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.MachineKeyStore
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.MachineKeyStore
   id: MachineKeyStore
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: MachineKeyStore
+  nameWithType: CspKeyContainerInfo.MachineKeyStore
   fullName: System.Security.Cryptography.CspKeyContainerInfo.MachineKeyStore
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 142
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MachineKeyStore
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 18
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets a value indicating whether a key is from a machine key set.
   syntax:
     content: public bool MachineKeyStore { get; }
     content.vb: Public ReadOnly Property MachineKeyStore As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the key is from the machine key set; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.Protected
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.Protected
   id: Protected
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: Protected
+  nameWithType: CspKeyContainerInfo.Protected
   fullName: System.Security.Cryptography.CspKeyContainerInfo.Protected
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 153
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Protected
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 19
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets a value indicating whether a key pair is protected.
   syntax:
     content: public bool Protected { get; }
     content.vb: Public ReadOnly Property Protected As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the key pair is protected; otherwise, false.
-  exceptions:
-  - type: System.NotSupportedException
-    description: The key type is not supported.
-  - type: System.Security.Cryptography.CryptographicException
-    description: The cryptographic service provider cannot be found.-or-The key container was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.ProviderName
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.ProviderName
   id: ProviderName
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: ProviderName
+  nameWithType: CspKeyContainerInfo.ProviderName
   fullName: System.Security.Cryptography.CspKeyContainerInfo.ProviderName
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 177
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ProviderName
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 20
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets the provider name of a key.
   syntax:
     content: public string ProviderName { get; }
     content.vb: Public ReadOnly Property ProviderName As String
     parameters: []
     return:
       type: System.String
-      description: The provider name.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.ProviderType
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.ProviderType
   id: ProviderType
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: ProviderType
+  nameWithType: CspKeyContainerInfo.ProviderType
   fullName: System.Security.Cryptography.CspKeyContainerInfo.ProviderType
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 188
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ProviderType
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 21
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets the provider type of a key.
   syntax:
     content: public int ProviderType { get; }
     content.vb: Public ReadOnly Property ProviderType As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The provider type. The default is 1.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.RandomlyGenerated
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.RandomlyGenerated
   id: RandomlyGenerated
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: RandomlyGenerated
+  nameWithType: CspKeyContainerInfo.RandomlyGenerated
   fullName: System.Security.Cryptography.CspKeyContainerInfo.RandomlyGenerated
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 199
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RandomlyGenerated
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 22
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets a value indicating whether a key container was randomly generated by a managed cryptography class.
   syntax:
     content: public bool RandomlyGenerated { get; }
     content.vb: Public ReadOnly Property RandomlyGenerated As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the key container was randomly generated; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.Removable
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.Removable
   id: Removable
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: Removable
+  nameWithType: CspKeyContainerInfo.Removable
   fullName: System.Security.Cryptography.CspKeyContainerInfo.Removable
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 210
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Removable
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 23
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets a value indicating whether a key can be removed from a key container.
   syntax:
     content: public bool Removable { get; }
     content.vb: Public ReadOnly Property Removable As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the key is removable; otherwise, false.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The cryptographic service provider (CSP) was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.CspKeyContainerInfo.UniqueKeyContainerName
+  commentId: P:System.Security.Cryptography.CspKeyContainerInfo.UniqueKeyContainerName
   id: UniqueKeyContainerName
   parent: System.Security.Cryptography.CspKeyContainerInfo
+  langs:
+  - csharp
+  - vb
   name: UniqueKeyContainerName
+  nameWithType: CspKeyContainerInfo.UniqueKeyContainerName
   fullName: System.Security.Cryptography.CspKeyContainerInfo.UniqueKeyContainerName
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Csp/src/System/Security/Cryptography/CspKeyContainerInfo.cs
-    startLine: 236
+    remote:
+      path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: UniqueKeyContainerName
+    path: src/System.Security.Cryptography.Csp/ref/System.Security.Cryptography.Csp.cs
+    startLine: 24
   assemblies:
   - System.Security.Cryptography.Csp
   namespace: System.Security.Cryptography
-  summary: Gets a unique key container name.
   syntax:
     content: public string UniqueKeyContainerName { get; }
     content.vb: Public ReadOnly Property UniqueKeyContainerName As String
     parameters: []
     return:
       type: System.String
-      description: The unique key container name.
-  exceptions:
-  - type: System.NotSupportedException
-    description: The key type is not supported.
-  - type: System.Security.Cryptography.CryptographicException
-    description: The cryptographic service provider cannot be found.-or-The key container was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Security.Cryptography
+  commentId: N:System.Security.Cryptography
   isExternal: false
   name: System.Security.Cryptography
+  nameWithType: System.Security.Cryptography
   fullName: System.Security.Cryptography
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Security.Cryptography.CspParameters
+  commentId: T:System.Security.Cryptography.CspParameters
   parent: System.Security.Cryptography
   isExternal: false
   name: CspParameters
+  nameWithType: CspParameters
   fullName: System.Security.Cryptography.CspParameters
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Security.Cryptography.KeyNumber
+  commentId: T:System.Security.Cryptography.KeyNumber
   parent: System.Security.Cryptography
   isExternal: false
   name: KeyNumber
+  nameWithType: KeyNumber
   fullName: System.Security.Cryptography.KeyNumber
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
-- uid: System.NotSupportedException
-  parent: System
-  isExternal: false
-  name: NotSupportedException
-  fullName: System.NotSupportedException
-- uid: System.Security.Cryptography.CryptographicException
-  isExternal: false
-  name: CryptographicException
-  fullName: System.Security.Cryptography.CryptographicException

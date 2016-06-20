@@ -1,5 +1,6 @@
 items:
 - uid: System.Security.AccessControl.AuditRule`1
+  commentId: T:System.Security.AccessControl.AuditRule`1
   id: AuditRule`1
   parent: System.Security.AccessControl
   children:
@@ -8,25 +9,29 @@ items:
   - System.Security.AccessControl.AuditRule`1.#ctor(System.String,`0,System.Security.AccessControl.AuditFlags)
   - System.Security.AccessControl.AuditRule`1.#ctor(System.String,`0,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)
   - System.Security.AccessControl.AuditRule`1.Rights
+  langs:
+  - csharp
+  - vb
   name: AuditRule<T>
-  name.vb: AuditRule(Of T)
+  nameWithType: AuditRule<T>
   fullName: System.Security.AccessControl.AuditRule<T>
-  fullName.vb: System.Security.AccessControl.AuditRule(Of T)
   type: Class
   source:
-    remote: &o1
-      path: src/System.Security.AccessControl/src/System/Security/AccessControl/ObjectSecurityT.cs
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ObjectSecurityT.cs
-    startLine: 122
+    id: AuditRule
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 116
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: "Represents a combination of a user’s identity and an access mask."
   syntax:
     content: 'public class AuditRule<T> : AuditRule where T : struct'
-    content.vb: Public Class AuditRule(Of T As Structure) Inherits AuditRule
+    content.vb: >-
+      Public Class AuditRule(Of T As Structure)
+          Inherits AuditRule
     typeParameters:
     - id: T
   inheritance:
@@ -40,239 +45,336 @@ items:
   - System.Security.AccessControl.AuthorizationRule.InheritanceFlags
   - System.Security.AccessControl.AuthorizationRule.IsInherited
   - System.Security.AccessControl.AuthorizationRule.PropagationFlags
+  nameWithType.vb: AuditRule(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: System.Security.AccessControl.AuditRule(Of T)
+  name.vb: AuditRule(Of T)
 - uid: System.Security.AccessControl.AuditRule`1.#ctor(System.Security.Principal.IdentityReference,`0,System.Security.AccessControl.AuditFlags)
+  commentId: M:System.Security.AccessControl.AuditRule`1.#ctor(System.Security.Principal.IdentityReference,`0,System.Security.AccessControl.AuditFlags)
   id: '#ctor(System.Security.Principal.IdentityReference,`0,System.Security.AccessControl.AuditFlags)'
   parent: System.Security.AccessControl.AuditRule`1
+  langs:
+  - csharp
+  - vb
   name: AuditRule(Principal.IdentityReference, T, AuditFlags)
+  nameWithType: AuditRule<T>.AuditRule(Principal.IdentityReference, T, AuditFlags)
   fullName: System.Security.AccessControl.AuditRule<T>.AuditRule(System.Security.Principal.IdentityReference, T, System.Security.AccessControl.AuditFlags)
-  fullName.vb: System.Security.AccessControl.AuditRule(Of T).AuditRule(System.Security.Principal.IdentityReference, T, System.Security.AccessControl.AuditFlags)
   type: Constructor
   source:
-    remote: &o0
+    remote:
       path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 115
+    startLine: 118
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.AuditRule`1" data-throw-if-not-resolved="false"></xref> class by using the specified values.
   syntax:
     content: public AuditRule(Principal.IdentityReference identity, T rights, AuditFlags flags)
     content.vb: Public Sub New(identity As Principal.IdentityReference, rights As T, flags As AuditFlags)
     parameters:
     - id: identity
       type: System.Security.Principal.IdentityReference
-      description: The identity to which this audit rule applies.
     - id: rights
       type: '{T}'
-      description: The rights of the audit rule.
     - id: flags
       type: System.Security.AccessControl.AuditFlags
-      description: The conditions for which the rule is audited.
+  nameWithType.vb: AuditRule(Of T).AuditRule(Principal.IdentityReference, T, AuditFlags)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.AccessControl.AuditRule(Of T).AuditRule(System.Security.Principal.IdentityReference, T, System.Security.AccessControl.AuditFlags)
 - uid: System.Security.AccessControl.AuditRule`1.#ctor(System.Security.Principal.IdentityReference,`0,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)
+  commentId: M:System.Security.AccessControl.AuditRule`1.#ctor(System.Security.Principal.IdentityReference,`0,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)
   id: '#ctor(System.Security.Principal.IdentityReference,`0,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)'
   parent: System.Security.AccessControl.AuditRule`1
+  langs:
+  - csharp
+  - vb
   name: AuditRule(Principal.IdentityReference, T, InheritanceFlags, PropagationFlags, AuditFlags)
+  nameWithType: AuditRule<T>.AuditRule(Principal.IdentityReference, T, InheritanceFlags, PropagationFlags, AuditFlags)
   fullName: System.Security.AccessControl.AuditRule<T>.AuditRule(System.Security.Principal.IdentityReference, T, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.AuditFlags)
-  fullName.vb: System.Security.AccessControl.AuditRule(Of T).AuditRule(System.Security.Principal.IdentityReference, T, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.AuditFlags)
   type: Constructor
   source:
-    remote: *o0
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 116
+    startLine: 119
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.AuditRule`1" data-throw-if-not-resolved="false"></xref> class by using the specified values.
   syntax:
     content: public AuditRule(Principal.IdentityReference identity, T rights, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags)
     content.vb: Public Sub New(identity As Principal.IdentityReference, rights As T, inheritanceFlags As InheritanceFlags, propagationFlags As PropagationFlags, flags As AuditFlags)
     parameters:
     - id: identity
       type: System.Security.Principal.IdentityReference
-      description: The identity to which the audit rule applies.
     - id: rights
       type: '{T}'
-      description: The rights of the audit rule.
     - id: inheritanceFlags
       type: System.Security.AccessControl.InheritanceFlags
-      description: The inheritance properties of the audit rule.
     - id: propagationFlags
       type: System.Security.AccessControl.PropagationFlags
-      description: Whether inherited audit rules are automatically propagated.
     - id: flags
       type: System.Security.AccessControl.AuditFlags
-      description: The conditions for which the rule is audited.
+  nameWithType.vb: AuditRule(Of T).AuditRule(Principal.IdentityReference, T, InheritanceFlags, PropagationFlags, AuditFlags)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.AccessControl.AuditRule(Of T).AuditRule(System.Security.Principal.IdentityReference, T, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.AuditFlags)
 - uid: System.Security.AccessControl.AuditRule`1.#ctor(System.String,`0,System.Security.AccessControl.AuditFlags)
+  commentId: M:System.Security.AccessControl.AuditRule`1.#ctor(System.String,`0,System.Security.AccessControl.AuditFlags)
   id: '#ctor(System.String,`0,System.Security.AccessControl.AuditFlags)'
   parent: System.Security.AccessControl.AuditRule`1
+  langs:
+  - csharp
+  - vb
   name: AuditRule(String, T, AuditFlags)
+  nameWithType: AuditRule<T>.AuditRule(String, T, AuditFlags)
   fullName: System.Security.AccessControl.AuditRule<T>.AuditRule(System.String, T, System.Security.AccessControl.AuditFlags)
-  fullName.vb: System.Security.AccessControl.AuditRule(Of T).AuditRule(System.String, T, System.Security.AccessControl.AuditFlags)
   type: Constructor
   source:
-    remote: *o0
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 117
+    startLine: 120
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.AuditRule`1" data-throw-if-not-resolved="false"></xref> class by using the specified values.
   syntax:
     content: public AuditRule(string identity, T rights, AuditFlags flags)
     content.vb: Public Sub New(identity As String, rights As T, flags As AuditFlags)
     parameters:
     - id: identity
       type: System.String
-      description: The identity to which the audit rule applies.
     - id: rights
       type: '{T}'
-      description: The rights of the audit rule.
     - id: flags
       type: System.Security.AccessControl.AuditFlags
-      description: The properties of the audit rule.
+  nameWithType.vb: AuditRule(Of T).AuditRule(String, T, AuditFlags)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.AccessControl.AuditRule(Of T).AuditRule(System.String, T, System.Security.AccessControl.AuditFlags)
 - uid: System.Security.AccessControl.AuditRule`1.#ctor(System.String,`0,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)
+  commentId: M:System.Security.AccessControl.AuditRule`1.#ctor(System.String,`0,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)
   id: '#ctor(System.String,`0,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)'
   parent: System.Security.AccessControl.AuditRule`1
+  langs:
+  - csharp
+  - vb
   name: AuditRule(String, T, InheritanceFlags, PropagationFlags, AuditFlags)
+  nameWithType: AuditRule<T>.AuditRule(String, T, InheritanceFlags, PropagationFlags, AuditFlags)
   fullName: System.Security.AccessControl.AuditRule<T>.AuditRule(System.String, T, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.AuditFlags)
-  fullName.vb: System.Security.AccessControl.AuditRule(Of T).AuditRule(System.String, T, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.AuditFlags)
   type: Constructor
   source:
-    remote: *o0
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 118
+    startLine: 121
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.AuditRule`1" data-throw-if-not-resolved="false"></xref>class by using the specified values.
   syntax:
     content: public AuditRule(string identity, T rights, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags)
     content.vb: Public Sub New(identity As String, rights As T, inheritanceFlags As InheritanceFlags, propagationFlags As PropagationFlags, flags As AuditFlags)
     parameters:
     - id: identity
       type: System.String
-      description: The identity to which the audit rule applies.
     - id: rights
       type: '{T}'
-      description: The rights of the audit rule.
     - id: inheritanceFlags
       type: System.Security.AccessControl.InheritanceFlags
-      description: The inheritance properties of the audit rule.
     - id: propagationFlags
       type: System.Security.AccessControl.PropagationFlags
-      description: Whether inherited audit rules are automatically propagated.
     - id: flags
       type: System.Security.AccessControl.AuditFlags
-      description: The conditions for which the rule is audited.
+  nameWithType.vb: AuditRule(Of T).AuditRule(String, T, InheritanceFlags, PropagationFlags, AuditFlags)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.AccessControl.AuditRule(Of T).AuditRule(System.String, T, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.AuditFlags)
 - uid: System.Security.AccessControl.AuditRule`1.Rights
+  commentId: P:System.Security.AccessControl.AuditRule`1.Rights
   id: Rights
   parent: System.Security.AccessControl.AuditRule`1
+  langs:
+  - csharp
+  - vb
   name: Rights
+  nameWithType: AuditRule<T>.Rights
   fullName: System.Security.AccessControl.AuditRule<T>.Rights
-  fullName.vb: System.Security.AccessControl.AuditRule(Of T).Rights
   type: Property
   source:
-    remote: *o1
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ObjectSecurityT.cs
-    startLine: 205
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Rights
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 122
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets the rights of the audit rule.
   syntax:
     content: public T Rights { get; }
     content.vb: Public ReadOnly Property Rights As T
     parameters: []
     return:
       type: '{T}'
-      description: The rights of the audit rule.
+  nameWithType.vb: AuditRule(Of T).Rights
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Security.AccessControl.AuditRule(Of T).Rights
 references:
 - uid: System.Security.AccessControl
+  commentId: N:System.Security.AccessControl
   isExternal: false
   name: System.Security.AccessControl
+  nameWithType: System.Security.AccessControl
   fullName: System.Security.AccessControl
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Security.AccessControl.AuthorizationRule
+  commentId: T:System.Security.AccessControl.AuthorizationRule
   parent: System.Security.AccessControl
   isExternal: false
   name: AuthorizationRule
+  nameWithType: AuthorizationRule
   fullName: System.Security.AccessControl.AuthorizationRule
 - uid: System.Security.AccessControl.AuditRule
+  commentId: T:System.Security.AccessControl.AuditRule
   parent: System.Security.AccessControl
   isExternal: false
   name: AuditRule
+  nameWithType: AuditRule
   fullName: System.Security.AccessControl.AuditRule
 - uid: System.Security.AccessControl.AuditRule.AuditFlags
+  commentId: P:System.Security.AccessControl.AuditRule.AuditFlags
   parent: System.Security.AccessControl.AuditRule
   isExternal: false
   name: AuditFlags
+  nameWithType: AuditRule.AuditFlags
   fullName: System.Security.AccessControl.AuditRule.AuditFlags
 - uid: System.Security.AccessControl.AuthorizationRule.AccessMask
+  commentId: P:System.Security.AccessControl.AuthorizationRule.AccessMask
   parent: System.Security.AccessControl.AuthorizationRule
   isExternal: false
   name: AccessMask
+  nameWithType: AuthorizationRule.AccessMask
   fullName: System.Security.AccessControl.AuthorizationRule.AccessMask
 - uid: System.Security.AccessControl.AuthorizationRule.IdentityReference
+  commentId: P:System.Security.AccessControl.AuthorizationRule.IdentityReference
   parent: System.Security.AccessControl.AuthorizationRule
   isExternal: false
   name: IdentityReference
+  nameWithType: AuthorizationRule.IdentityReference
   fullName: System.Security.AccessControl.AuthorizationRule.IdentityReference
 - uid: System.Security.AccessControl.AuthorizationRule.InheritanceFlags
+  commentId: P:System.Security.AccessControl.AuthorizationRule.InheritanceFlags
   parent: System.Security.AccessControl.AuthorizationRule
   isExternal: false
   name: InheritanceFlags
+  nameWithType: AuthorizationRule.InheritanceFlags
   fullName: System.Security.AccessControl.AuthorizationRule.InheritanceFlags
 - uid: System.Security.AccessControl.AuthorizationRule.IsInherited
+  commentId: P:System.Security.AccessControl.AuthorizationRule.IsInherited
   parent: System.Security.AccessControl.AuthorizationRule
   isExternal: false
   name: IsInherited
+  nameWithType: AuthorizationRule.IsInherited
   fullName: System.Security.AccessControl.AuthorizationRule.IsInherited
 - uid: System.Security.AccessControl.AuthorizationRule.PropagationFlags
+  commentId: P:System.Security.AccessControl.AuthorizationRule.PropagationFlags
   parent: System.Security.AccessControl.AuthorizationRule
   isExternal: false
   name: PropagationFlags
+  nameWithType: AuthorizationRule.PropagationFlags
   fullName: System.Security.AccessControl.AuthorizationRule.PropagationFlags
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Security.Principal.IdentityReference
+  commentId: T:System.Security.Principal.IdentityReference
   parent: System.Security.Principal
   isExternal: false
-  name: Principal.IdentityReference
+  name: IdentityReference
+  nameWithType: IdentityReference
   fullName: System.Security.Principal.IdentityReference
 - uid: '{T}'
-  isExternal: false
+  commentId: '!:T'
+  definition: T
   name: T
+  nameWithType: T
   fullName: T
 - uid: System.Security.AccessControl.AuditFlags
+  commentId: T:System.Security.AccessControl.AuditFlags
   parent: System.Security.AccessControl
   isExternal: false
   name: AuditFlags
+  nameWithType: AuditFlags
   fullName: System.Security.AccessControl.AuditFlags
 - uid: System.Security.Principal
+  commentId: N:System.Security.Principal
   isExternal: false
   name: System.Security.Principal
+  nameWithType: System.Security.Principal
   fullName: System.Security.Principal
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
 - uid: System.Security.AccessControl.InheritanceFlags
+  commentId: T:System.Security.AccessControl.InheritanceFlags
   parent: System.Security.AccessControl
   isExternal: false
   name: InheritanceFlags
+  nameWithType: InheritanceFlags
   fullName: System.Security.AccessControl.InheritanceFlags
 - uid: System.Security.AccessControl.PropagationFlags
+  commentId: T:System.Security.AccessControl.PropagationFlags
   parent: System.Security.AccessControl
   isExternal: false
   name: PropagationFlags
+  nameWithType: PropagationFlags
   fullName: System.Security.AccessControl.PropagationFlags
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String

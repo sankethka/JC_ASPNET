@@ -1,5 +1,6 @@
 items:
 - uid: System.Net.Http.WinHttpHandler
+  commentId: T:System.Net.Http.WinHttpHandler
   id: WinHttpHandler
   parent: System.Net.Http
   children:
@@ -9,7 +10,6 @@ items:
   - System.Net.Http.WinHttpHandler.CheckCertificateRevocationList
   - System.Net.Http.WinHttpHandler.ClientCertificateOption
   - System.Net.Http.WinHttpHandler.ClientCertificates
-  - System.Net.Http.WinHttpHandler.ConnectTimeout
   - System.Net.Http.WinHttpHandler.CookieContainer
   - System.Net.Http.WinHttpHandler.CookieUsePolicy
   - System.Net.Http.WinHttpHandler.DefaultProxyCredentials
@@ -19,6 +19,7 @@ items:
   - System.Net.Http.WinHttpHandler.MaxResponseDrainSize
   - System.Net.Http.WinHttpHandler.MaxResponseHeadersLength
   - System.Net.Http.WinHttpHandler.PreAuthenticate
+  - System.Net.Http.WinHttpHandler.Properties
   - System.Net.Http.WinHttpHandler.Proxy
   - System.Net.Http.WinHttpHandler.ReceiveDataTimeout
   - System.Net.Http.WinHttpHandler.ReceiveHeadersTimeout
@@ -28,50 +29,85 @@ items:
   - System.Net.Http.WinHttpHandler.ServerCredentials
   - System.Net.Http.WinHttpHandler.SslProtocols
   - System.Net.Http.WinHttpHandler.WindowsProxyUsePolicy
+  langs:
+  - csharp
+  - vb
   name: WinHttpHandler
+  nameWithType: WinHttpHandler
   fullName: System.Net.Http.WinHttpHandler
   type: Class
   source:
-    remote: &o0
-      path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 45
+    id: WinHttpHandler
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 23
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
   syntax:
     content: 'public class WinHttpHandler : HttpMessageHandler'
-    content.vb: Public Class WinHttpHandler Inherits HttpMessageHandler
+    content.vb: >-
+      Public Class WinHttpHandler
+          Inherits HttpMessageHandler
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Net.Http.WinHttpHandler.#ctor
+  commentId: M:System.Net.Http.WinHttpHandler.#ctor
   id: '#ctor'
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: WinHttpHandler()
+  nameWithType: WinHttpHandler.WinHttpHandler()
   fullName: System.Net.Http.WinHttpHandler.WinHttpHandler()
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 86
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 25
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
   syntax:
     content: public WinHttpHandler()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.AutomaticDecompression
+  commentId: P:System.Net.Http.WinHttpHandler.AutomaticDecompression
   id: AutomaticDecompression
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: AutomaticDecompression
+  nameWithType: WinHttpHandler.AutomaticDecompression
   fullName: System.Net.Http.WinHttpHandler.AutomaticDecompression
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 127
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AutomaticDecompression
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 26
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -81,16 +117,31 @@ items:
     parameters: []
     return:
       type: System.Net.DecompressionMethods
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.AutomaticRedirection
+  commentId: P:System.Net.Http.WinHttpHandler.AutomaticRedirection
   id: AutomaticRedirection
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: AutomaticRedirection
+  nameWithType: WinHttpHandler.AutomaticRedirection
   fullName: System.Net.Http.WinHttpHandler.AutomaticRedirection
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 91
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AutomaticRedirection
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 27
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -100,16 +151,31 @@ items:
     parameters: []
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.CheckCertificateRevocationList
+  commentId: P:System.Net.Http.WinHttpHandler.CheckCertificateRevocationList
   id: CheckCertificateRevocationList
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: CheckCertificateRevocationList
+  nameWithType: WinHttpHandler.CheckCertificateRevocationList
   fullName: System.Net.Http.WinHttpHandler.CheckCertificateRevocationList
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 212
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CheckCertificateRevocationList
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 28
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -119,16 +185,31 @@ items:
     parameters: []
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.ClientCertificateOption
+  commentId: P:System.Net.Http.WinHttpHandler.ClientCertificateOption
   id: ClientCertificateOption
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: ClientCertificateOption
+  nameWithType: WinHttpHandler.ClientCertificateOption
   fullName: System.Net.Http.WinHttpHandler.ClientCertificateOption
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 225
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ClientCertificateOption
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 29
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -138,16 +219,31 @@ items:
     parameters: []
     return:
       type: System.Net.Http.ClientCertificateOption
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.ClientCertificates
+  commentId: P:System.Net.Http.WinHttpHandler.ClientCertificates
   id: ClientCertificates
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: ClientCertificates
+  nameWithType: WinHttpHandler.ClientCertificates
   fullName: System.Net.Http.WinHttpHandler.ClientCertificates
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 245
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ClientCertificates
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 30
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -157,35 +253,31 @@ items:
     parameters: []
     return:
       type: System.Security.Cryptography.X509Certificates.X509Certificate2Collection
-- uid: System.Net.Http.WinHttpHandler.ConnectTimeout
-  id: ConnectTimeout
-  parent: System.Net.Http.WinHttpHandler
-  name: ConnectTimeout
-  fullName: System.Net.Http.WinHttpHandler.ConnectTimeout
-  type: Property
-  source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 358
-  assemblies:
-  - System.Net.Http.WinHttpHandler
-  namespace: System.Net.Http
-  syntax:
-    content: public TimeSpan ConnectTimeout { get; set; }
-    content.vb: Public Property ConnectTimeout As TimeSpan
-    parameters: []
-    return:
-      type: System.TimeSpan
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.WinHttpHandler.CookieContainer
+  commentId: P:System.Net.Http.WinHttpHandler.CookieContainer
   id: CookieContainer
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: CookieContainer
+  nameWithType: WinHttpHandler.CookieContainer
   fullName: System.Net.Http.WinHttpHandler.CookieContainer
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 162
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CookieContainer
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 31
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -195,16 +287,31 @@ items:
     parameters: []
     return:
       type: System.Net.CookieContainer
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.CookieUsePolicy
+  commentId: P:System.Net.Http.WinHttpHandler.CookieUsePolicy
   id: CookieUsePolicy
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: CookieUsePolicy
+  nameWithType: WinHttpHandler.CookieUsePolicy
   fullName: System.Net.Http.WinHttpHandler.CookieUsePolicy
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 141
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CookieUsePolicy
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 32
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -214,16 +321,31 @@ items:
     parameters: []
     return:
       type: System.Net.Http.CookieUsePolicy
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.DefaultProxyCredentials
+  commentId: P:System.Net.Http.WinHttpHandler.DefaultProxyCredentials
   id: DefaultProxyCredentials
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: DefaultProxyCredentials
+  nameWithType: WinHttpHandler.DefaultProxyCredentials
   fullName: System.Net.Http.WinHttpHandler.DefaultProxyCredentials
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 306
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DefaultProxyCredentials
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 33
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -233,16 +355,31 @@ items:
     parameters: []
     return:
       type: System.Net.ICredentials
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.MaxAutomaticRedirections
+  commentId: P:System.Net.Http.WinHttpHandler.MaxAutomaticRedirections
   id: MaxAutomaticRedirections
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: MaxAutomaticRedirections
+  nameWithType: WinHttpHandler.MaxAutomaticRedirections
   fullName: System.Net.Http.WinHttpHandler.MaxAutomaticRedirections
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 105
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MaxAutomaticRedirections
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 34
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -252,16 +389,31 @@ items:
     parameters: []
     return:
       type: System.Int32
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.MaxConnectionsPerServer
+  commentId: P:System.Net.Http.WinHttpHandler.MaxConnectionsPerServer
   id: MaxConnectionsPerServer
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: MaxConnectionsPerServer
+  nameWithType: WinHttpHandler.MaxConnectionsPerServer
   fullName: System.Net.Http.WinHttpHandler.MaxConnectionsPerServer
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 334
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MaxConnectionsPerServer
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 35
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -271,16 +423,31 @@ items:
     parameters: []
     return:
       type: System.Int32
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.MaxResponseDrainSize
+  commentId: P:System.Net.Http.WinHttpHandler.MaxResponseDrainSize
   id: MaxResponseDrainSize
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: MaxResponseDrainSize
+  nameWithType: WinHttpHandler.MaxResponseDrainSize
   fullName: System.Net.Http.WinHttpHandler.MaxResponseDrainSize
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 456
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MaxResponseDrainSize
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 36
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -290,16 +457,31 @@ items:
     parameters: []
     return:
       type: System.Int32
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.MaxResponseHeadersLength
+  commentId: P:System.Net.Http.WinHttpHandler.MaxResponseHeadersLength
   id: MaxResponseHeadersLength
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: MaxResponseHeadersLength
+  nameWithType: WinHttpHandler.MaxResponseHeadersLength
   fullName: System.Net.Http.WinHttpHandler.MaxResponseHeadersLength
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 434
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MaxResponseHeadersLength
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 37
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -309,16 +491,31 @@ items:
     parameters: []
     return:
       type: System.Int32
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.PreAuthenticate
+  commentId: P:System.Net.Http.WinHttpHandler.PreAuthenticate
   id: PreAuthenticate
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: PreAuthenticate
+  nameWithType: WinHttpHandler.PreAuthenticate
   fullName: System.Net.Http.WinHttpHandler.PreAuthenticate
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 258
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PreAuthenticate
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 38
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -328,16 +525,65 @@ items:
     parameters: []
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: System.Net.Http.WinHttpHandler.Properties
+  commentId: P:System.Net.Http.WinHttpHandler.Properties
+  id: Properties
+  parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: Properties
+  nameWithType: WinHttpHandler.Properties
+  fullName: System.Net.Http.WinHttpHandler.Properties
+  type: Property
+  source:
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Properties
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 39
+  assemblies:
+  - System.Net.Http.WinHttpHandler
+  namespace: System.Net.Http
+  syntax:
+    content: public Collections.Generic.IDictionary<string, object> Properties { get; }
+    content.vb: Public ReadOnly Property Properties As Collections.Generic.IDictionary(Of String, Object)
+    parameters: []
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,System.Object}
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.WinHttpHandler.Proxy
+  commentId: P:System.Net.Http.WinHttpHandler.Proxy
   id: Proxy
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: Proxy
+  nameWithType: WinHttpHandler.Proxy
   fullName: System.Net.Http.WinHttpHandler.Proxy
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 320
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Proxy
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 40
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -347,16 +593,31 @@ items:
     parameters: []
     return:
       type: System.Net.IWebProxy
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.ReceiveDataTimeout
+  commentId: P:System.Net.Http.WinHttpHandler.ReceiveDataTimeout
   id: ReceiveDataTimeout
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: ReceiveDataTimeout
+  nameWithType: WinHttpHandler.ReceiveDataTimeout
   fullName: System.Net.Http.WinHttpHandler.ReceiveDataTimeout
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 415
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReceiveDataTimeout
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 41
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -366,16 +627,31 @@ items:
     parameters: []
     return:
       type: System.TimeSpan
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.ReceiveHeadersTimeout
+  commentId: P:System.Net.Http.WinHttpHandler.ReceiveHeadersTimeout
   id: ReceiveHeadersTimeout
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: ReceiveHeadersTimeout
+  nameWithType: WinHttpHandler.ReceiveHeadersTimeout
   fullName: System.Net.Http.WinHttpHandler.ReceiveHeadersTimeout
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 396
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReceiveHeadersTimeout
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 42
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -385,16 +661,31 @@ items:
     parameters: []
     return:
       type: System.TimeSpan
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.SendTimeout
+  commentId: P:System.Net.Http.WinHttpHandler.SendTimeout
   id: SendTimeout
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: SendTimeout
+  nameWithType: WinHttpHandler.SendTimeout
   fullName: System.Net.Http.WinHttpHandler.SendTimeout
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 377
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SendTimeout
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 43
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -404,16 +695,31 @@ items:
     parameters: []
     return:
       type: System.TimeSpan
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.ServerCertificateValidationCallback
+  commentId: P:System.Net.Http.WinHttpHandler.ServerCertificateValidationCallback
   id: ServerCertificateValidationCallback
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: ServerCertificateValidationCallback
+  nameWithType: WinHttpHandler.ServerCertificateValidationCallback
   fullName: System.Net.Http.WinHttpHandler.ServerCertificateValidationCallback
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 192
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ServerCertificateValidationCallback
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 44
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -423,16 +729,31 @@ items:
     parameters: []
     return:
       type: System.Func{System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean}
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.ServerCredentials
+  commentId: P:System.Net.Http.WinHttpHandler.ServerCredentials
   id: ServerCredentials
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: ServerCredentials
+  nameWithType: WinHttpHandler.ServerCredentials
   fullName: System.Net.Http.WinHttpHandler.ServerCredentials
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 271
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ServerCredentials
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 45
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -442,16 +763,31 @@ items:
     parameters: []
     return:
       type: System.Net.ICredentials
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.SslProtocols
+  commentId: P:System.Net.Http.WinHttpHandler.SslProtocols
   id: SslProtocols
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: SslProtocols
+  nameWithType: WinHttpHandler.SslProtocols
   fullName: System.Net.Http.WinHttpHandler.SslProtocols
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 176
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SslProtocols
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 46
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -461,16 +797,31 @@ items:
     parameters: []
     return:
       type: System.Security.Authentication.SslProtocols
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.WindowsProxyUsePolicy
+  commentId: P:System.Net.Http.WinHttpHandler.WindowsProxyUsePolicy
   id: WindowsProxyUsePolicy
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: WindowsProxyUsePolicy
+  nameWithType: WinHttpHandler.WindowsProxyUsePolicy
   fullName: System.Net.Http.WinHttpHandler.WindowsProxyUsePolicy
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 284
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: WindowsProxyUsePolicy
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 47
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -480,16 +831,31 @@ items:
     parameters: []
     return:
       type: System.Net.Http.WindowsProxyUsePolicy
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.WinHttpHandler.Dispose(System.Boolean)
+  commentId: M:System.Net.Http.WinHttpHandler.Dispose(System.Boolean)
   id: Dispose(System.Boolean)
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: Dispose(Boolean)
+  nameWithType: WinHttpHandler.Dispose(Boolean)
   fullName: System.Net.Http.WinHttpHandler.Dispose(System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Net.Http.WinHttpHandler/src/System/Net/Http/WinHttpHandler.cs
-    startLine: 479
+    remote:
+      path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Dispose
+    path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
+    startLine: 48
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -499,10 +865,21 @@ items:
     parameters:
     - id: disposing
       type: System.Boolean
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: System.Net.Http.WinHttpHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)
+  commentId: M:System.Net.Http.WinHttpHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)
   id: SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)
   parent: System.Net.Http.WinHttpHandler
+  langs:
+  - csharp
+  - vb
   name: SendAsync(HttpRequestMessage, Threading.CancellationToken)
+  nameWithType: WinHttpHandler.SendAsync(HttpRequestMessage, Threading.CancellationToken)
   fullName: System.Net.Http.WinHttpHandler.SendAsync(System.Net.Http.HttpRequestMessage, System.Threading.CancellationToken)
   type: Method
   source:
@@ -510,8 +887,9 @@ items:
       path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: SendAsync
     path: src/System.Net.Http.WinHttpHandler/ref/System.Net.Http.WinHttpHandler.cs
-    startLine: 46
+    startLine: 49
   assemblies:
   - System.Net.Http.WinHttpHandler
   namespace: System.Net.Http
@@ -525,288 +903,525 @@ items:
       type: System.Threading.CancellationToken
     return:
       type: System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 references:
 - uid: System.Net.Http
+  commentId: N:System.Net.Http
   isExternal: false
   name: System.Net.Http
+  nameWithType: System.Net.Http
   fullName: System.Net.Http
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Net.DecompressionMethods
+  commentId: T:System.Net.DecompressionMethods
   parent: System.Net
   isExternal: false
   name: DecompressionMethods
+  nameWithType: DecompressionMethods
   fullName: System.Net.DecompressionMethods
 - uid: System.Net
+  commentId: N:System.Net
   isExternal: false
   name: System.Net
+  nameWithType: System.Net
   fullName: System.Net
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Net.Http.ClientCertificateOption
+  commentId: T:System.Net.Http.ClientCertificateOption
   parent: System.Net.Http
   isExternal: false
   name: ClientCertificateOption
+  nameWithType: ClientCertificateOption
   fullName: System.Net.Http.ClientCertificateOption
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2Collection
+  commentId: T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection
   parent: System.Security.Cryptography.X509Certificates
   isExternal: false
-  name: Security.Cryptography.X509Certificates.X509Certificate2Collection
+  name: X509Certificate2Collection
+  nameWithType: X509Certificate2Collection
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2Collection
 - uid: System.Security.Cryptography.X509Certificates
+  commentId: N:System.Security.Cryptography.X509Certificates
   isExternal: false
   name: System.Security.Cryptography.X509Certificates
+  nameWithType: System.Security.Cryptography.X509Certificates
   fullName: System.Security.Cryptography.X509Certificates
-- uid: System.TimeSpan
-  parent: System
-  isExternal: false
-  name: TimeSpan
-  fullName: System.TimeSpan
 - uid: System.Net.CookieContainer
+  commentId: T:System.Net.CookieContainer
   isExternal: false
   name: CookieContainer
+  nameWithType: CookieContainer
   fullName: System.Net.CookieContainer
 - uid: System.Net.Http.CookieUsePolicy
+  commentId: T:System.Net.Http.CookieUsePolicy
   parent: System.Net.Http
   isExternal: false
   name: CookieUsePolicy
+  nameWithType: CookieUsePolicy
   fullName: System.Net.Http.CookieUsePolicy
 - uid: System.Net.ICredentials
+  commentId: T:System.Net.ICredentials
   parent: System.Net
   isExternal: false
   name: ICredentials
+  nameWithType: ICredentials
   fullName: System.Net.ICredentials
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
+- uid: System.Collections.Generic.IDictionary{System.String,System.Object}
+  commentId: '!:System.Collections.Generic.IDictionary{System.String,System.Object}'
+  definition: System.Collections.Generic.IDictionary`2
+  name: Collections.Generic.IDictionary<String, Object>
+  nameWithType: Collections.Generic.IDictionary<String, Object>
+  fullName: System.Collections.Generic.IDictionary<System.String, System.Object>
+  nameWithType.vb: Collections.Generic.IDictionary(Of String, Object)
+  fullname.vb: System.Collections.Generic.IDictionary(Of System.String, System.Object)
+  name.vb: Collections.Generic.IDictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: Collections.Generic.IDictionary
+    nameWithType: Collections.Generic.IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: Collections.Generic.IDictionary
+    nameWithType: Collections.Generic.IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: false
+  name: Generic.IDictionary<, >
+  nameWithType: Generic.IDictionary<, >
+  fullName: System.Collections.Generic.IDictionary<, >
+  nameWithType.vb: Generic.IDictionary(Of , )
+  fullname.vb: System.Collections.Generic.IDictionary(Of , )
+  name.vb: Generic.IDictionary(Of , )
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: Generic.IDictionary
+    nameWithType: Generic.IDictionary
+    fullName: System.Collections.Generic.IDictionary
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: Generic.IDictionary
+    nameWithType: Generic.IDictionary
+    fullName: System.Collections.Generic.IDictionary
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Net.IWebProxy
+  commentId: T:System.Net.IWebProxy
   isExternal: false
   name: IWebProxy
+  nameWithType: IWebProxy
   fullName: System.Net.IWebProxy
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: false
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
 - uid: System.Func{System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean}
+  commentId: '!:System.Func{System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean}'
   definition: System.Func`5
   name: Func<HttpRequestMessage, Security.Cryptography.X509Certificates.X509Certificate2, Security.Cryptography.X509Certificates.X509Chain, Security.SslPolicyErrors, Boolean>
-  name.vb: Func(Of HttpRequestMessage, Security.Cryptography.X509Certificates.X509Certificate2, Security.Cryptography.X509Certificates.X509Chain, Security.SslPolicyErrors, Boolean)
+  nameWithType: Func<HttpRequestMessage, Security.Cryptography.X509Certificates.X509Certificate2, Security.Cryptography.X509Certificates.X509Chain, Security.SslPolicyErrors, Boolean>
   fullName: System.Func<System.Net.Http.HttpRequestMessage, System.Security.Cryptography.X509Certificates.X509Certificate2, System.Security.Cryptography.X509Certificates.X509Chain, System.Net.Security.SslPolicyErrors, System.Boolean>
-  fullName.vb: System.Func(Of System.Net.Http.HttpRequestMessage, System.Security.Cryptography.X509Certificates.X509Certificate2, System.Security.Cryptography.X509Certificates.X509Chain, System.Net.Security.SslPolicyErrors, System.Boolean)
+  nameWithType.vb: Func(Of HttpRequestMessage, Security.Cryptography.X509Certificates.X509Certificate2, Security.Cryptography.X509Certificates.X509Chain, Security.SslPolicyErrors, Boolean)
+  fullname.vb: System.Func(Of System.Net.Http.HttpRequestMessage, System.Security.Cryptography.X509Certificates.X509Certificate2, System.Security.Cryptography.X509Certificates.X509Chain, System.Net.Security.SslPolicyErrors, System.Boolean)
+  name.vb: Func(Of HttpRequestMessage, Security.Cryptography.X509Certificates.X509Certificate2, Security.Cryptography.X509Certificates.X509Chain, Security.SslPolicyErrors, Boolean)
   spec.csharp:
   - uid: System.Func`5
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.HttpRequestMessage
     name: HttpRequestMessage
+    nameWithType: HttpRequestMessage
     fullName: System.Net.Http.HttpRequestMessage
-    isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
     name: Security.Cryptography.X509Certificates.X509Certificate2
+    nameWithType: Security.Cryptography.X509Certificates.X509Certificate2
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Security.Cryptography.X509Certificates.X509Chain
     name: Security.Cryptography.X509Certificates.X509Chain
+    nameWithType: Security.Cryptography.X509Certificates.X509Chain
     fullName: System.Security.Cryptography.X509Certificates.X509Chain
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Net.Security.SslPolicyErrors
     name: Security.SslPolicyErrors
+    nameWithType: Security.SslPolicyErrors
     fullName: System.Net.Security.SslPolicyErrors
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`5
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.HttpRequestMessage
     name: HttpRequestMessage
+    nameWithType: HttpRequestMessage
     fullName: System.Net.Http.HttpRequestMessage
-    isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
     name: Security.Cryptography.X509Certificates.X509Certificate2
+    nameWithType: Security.Cryptography.X509Certificates.X509Certificate2
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Security.Cryptography.X509Certificates.X509Chain
     name: Security.Cryptography.X509Certificates.X509Chain
+    nameWithType: Security.Cryptography.X509Certificates.X509Chain
     fullName: System.Security.Cryptography.X509Certificates.X509Chain
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Net.Security.SslPolicyErrors
     name: Security.SslPolicyErrors
+    nameWithType: Security.SslPolicyErrors
     fullName: System.Net.Security.SslPolicyErrors
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func`5
+  commentId: T:System.Func`5
   isExternal: false
   name: Func<, , , , >
-  name.vb: Func(Of , , , , )
+  nameWithType: Func<, , , , >
   fullName: System.Func<, , , , >
-  fullName.vb: System.Func(Of , , , , )
+  nameWithType.vb: Func(Of , , , , )
+  fullname.vb: System.Func(Of , , , , )
+  name.vb: Func(Of , , , , )
   spec.csharp:
   - uid: System.Func`5
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`5
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Authentication.SslProtocols
+  commentId: T:System.Security.Authentication.SslProtocols
   parent: System.Security.Authentication
   isExternal: false
   name: SslProtocols
+  nameWithType: SslProtocols
   fullName: System.Security.Authentication.SslProtocols
 - uid: System.Security.Authentication
+  commentId: N:System.Security.Authentication
   isExternal: false
   name: System.Security.Authentication
+  nameWithType: System.Security.Authentication
   fullName: System.Security.Authentication
 - uid: System.Net.Http.WindowsProxyUsePolicy
+  commentId: T:System.Net.Http.WindowsProxyUsePolicy
   parent: System.Net.Http
   isExternal: false
   name: WindowsProxyUsePolicy
+  nameWithType: WindowsProxyUsePolicy
   fullName: System.Net.Http.WindowsProxyUsePolicy
 - uid: System.Net.Http.HttpRequestMessage
+  commentId: T:System.Net.Http.HttpRequestMessage
   parent: System.Net.Http
   isExternal: false
   name: HttpRequestMessage
+  nameWithType: HttpRequestMessage
   fullName: System.Net.Http.HttpRequestMessage
 - uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
   parent: System.Threading
   isExternal: false
   name: Threading.CancellationToken
+  nameWithType: Threading.CancellationToken
   fullName: System.Threading.CancellationToken
 - uid: System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}
+  commentId: '!:System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}'
   definition: System.Threading.Tasks.Task`1
   name: Threading.Tasks.Task<HttpResponseMessage>
-  name.vb: Threading.Tasks.Task(Of HttpResponseMessage)
+  nameWithType: Threading.Tasks.Task<HttpResponseMessage>
   fullName: System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage>
-  fullName.vb: System.Threading.Tasks.Task(Of System.Net.Http.HttpResponseMessage)
+  nameWithType.vb: Threading.Tasks.Task(Of HttpResponseMessage)
+  fullname.vb: System.Threading.Tasks.Task(Of System.Net.Http.HttpResponseMessage)
+  name.vb: Threading.Tasks.Task(Of HttpResponseMessage)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Threading.Tasks.Task
+    nameWithType: Threading.Tasks.Task
     fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.HttpResponseMessage
     name: HttpResponseMessage
+    nameWithType: HttpResponseMessage
     fullName: System.Net.Http.HttpResponseMessage
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
     name: Threading.Tasks.Task
+    nameWithType: Threading.Tasks.Task
     fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.HttpResponseMessage
     name: HttpResponseMessage
+    nameWithType: HttpResponseMessage
     fullName: System.Net.Http.HttpResponseMessage
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: System.Threading.Tasks.Task`1
-  parent: System.Threading.Tasks
+  commentId: T:System.Threading.Tasks.Task`1
   isExternal: false
   name: Threading.Tasks.Task<>
-  name.vb: Threading.Tasks.Task(Of )
+  nameWithType: Threading.Tasks.Task<>
   fullName: System.Threading.Tasks.Task<>
-  fullName.vb: System.Threading.Tasks.Task(Of )
+  nameWithType.vb: Threading.Tasks.Task(Of )
+  fullname.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Threading.Tasks.Task(Of )
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Threading.Tasks.Task
+    nameWithType: Threading.Tasks.Task
     fullName: System.Threading.Tasks.Task
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
     name: Threading.Tasks.Task
+    nameWithType: Threading.Tasks.Task
     fullName: System.Threading.Tasks.Task
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Threading.Tasks
-  isExternal: false
-  name: System.Threading.Tasks
-  fullName: System.Threading.Tasks

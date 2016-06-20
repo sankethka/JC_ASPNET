@@ -1,28 +1,40 @@
 items:
 - uid: System.Runtime.CompilerServices.ReferenceAssemblyAttribute
+  commentId: T:System.Runtime.CompilerServices.ReferenceAssemblyAttribute
   id: ReferenceAssemblyAttribute
   parent: System.Runtime.CompilerServices
   children:
   - System.Runtime.CompilerServices.ReferenceAssemblyAttribute.#ctor
   - System.Runtime.CompilerServices.ReferenceAssemblyAttribute.#ctor(System.String)
   - System.Runtime.CompilerServices.ReferenceAssemblyAttribute.Description
+  langs:
+  - csharp
+  - vb
   name: ReferenceAssemblyAttribute
+  nameWithType: ReferenceAssemblyAttribute
   fullName: System.Runtime.CompilerServices.ReferenceAssemblyAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/CompilerServices/ReferenceAssemblyAttribute.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/CompilerServices/ReferenceAssemblyAttribute.cs
-    startLine: 18
+      repo: https://github.com/dotnet/corefx.git
+    id: ReferenceAssemblyAttribute
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2953
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Identifies an assembly as a reference assembly, which contains metadata but no executable code.
   syntax:
-    content: 'public sealed class ReferenceAssemblyAttribute : Attribute'
-    content.vb: Public NotInheritable Class ReferenceAssemblyAttribute Inherits Attribute
+    content: >-
+      [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
+
+      public sealed class ReferenceAssemblyAttribute : Attribute
+    content.vb: >-
+      <AttributeUsage(AttributeTargets.Assembly, AllowMultiple:=False)>
+
+      Public NotInheritable Class ReferenceAssemblyAttribute
+          Inherits Attribute
   inheritance:
   - System.Object
   - System.Attribute
@@ -34,271 +46,405 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  attributes:
+  - type: System.AttributeUsageAttribute
+    ctor: System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
+    arguments:
+    - type: System.AttributeTargets
+      value: 1
+    namedArguments:
+    - name: AllowMultiple
+      type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Runtime.CompilerServices.ReferenceAssemblyAttribute.#ctor
+  commentId: M:System.Runtime.CompilerServices.ReferenceAssemblyAttribute.#ctor
   id: '#ctor'
   parent: System.Runtime.CompilerServices.ReferenceAssemblyAttribute
+  langs:
+  - csharp
+  - vb
   name: ReferenceAssemblyAttribute()
+  nameWithType: ReferenceAssemblyAttribute.ReferenceAssemblyAttribute()
   fullName: System.Runtime.CompilerServices.ReferenceAssemblyAttribute.ReferenceAssemblyAttribute()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/ReferenceAssemblyAttribute.cs
-    startLine: 24
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2956
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Initializes a new instance of the <xref href="System.Runtime.CompilerServices.ReferenceAssemblyAttribute" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public ReferenceAssemblyAttribute()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.CompilerServices.ReferenceAssemblyAttribute.#ctor(System.String)
+  commentId: M:System.Runtime.CompilerServices.ReferenceAssemblyAttribute.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.Runtime.CompilerServices.ReferenceAssemblyAttribute
+  langs:
+  - csharp
+  - vb
   name: ReferenceAssemblyAttribute(String)
+  nameWithType: ReferenceAssemblyAttribute.ReferenceAssemblyAttribute(String)
   fullName: System.Runtime.CompilerServices.ReferenceAssemblyAttribute.ReferenceAssemblyAttribute(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/ReferenceAssemblyAttribute.cs
-    startLine: 28
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2957
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Initializes a new instance of the <xref href="System.Runtime.CompilerServices.ReferenceAssemblyAttribute" data-throw-if-not-resolved="false"></xref> class by using the specified description.
   syntax:
     content: public ReferenceAssemblyAttribute(string description)
     content.vb: Public Sub New(description As String)
     parameters:
     - id: description
       type: System.String
-      description: The description of the reference assembly.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.CompilerServices.ReferenceAssemblyAttribute.Description
+  commentId: P:System.Runtime.CompilerServices.ReferenceAssemblyAttribute.Description
   id: Description
   parent: System.Runtime.CompilerServices.ReferenceAssemblyAttribute
+  langs:
+  - csharp
+  - vb
   name: Description
+  nameWithType: ReferenceAssemblyAttribute.Description
   fullName: System.Runtime.CompilerServices.ReferenceAssemblyAttribute.Description
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/ReferenceAssemblyAttribute.cs
-    startLine: 33
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Description
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2958
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Gets the description of the reference assembly.
   syntax:
     content: public string Description { get; }
     content.vb: Public ReadOnly Property Description As String
     parameters: []
     return:
       type: System.String
-      description: The description of the reference assembly.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
   isExternal: false
   name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
   fullName: System.Runtime.CompilerServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Attribute
+  commentId: T:System.Attribute
   parent: System
   isExternal: false
   name: Attribute
+  nameWithType: Attribute
   fullName: System.Attribute
 - uid: System.Attribute.Equals(System.Object)
+  commentId: M:System.Attribute.Equals(System.Object)
   parent: System.Attribute
   isExternal: false
   name: Equals(Object)
+  nameWithType: Attribute.Equals(Object)
   fullName: System.Attribute.Equals(System.Object)
   spec.csharp:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Attribute.GetHashCode
+  commentId: M:System.Attribute.GetHashCode
   parent: System.Attribute
   isExternal: false
   name: GetHashCode()
+  nameWithType: Attribute.GetHashCode()
   fullName: System.Attribute.GetHashCode()
   spec.csharp:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String

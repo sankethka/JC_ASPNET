@@ -1,5 +1,6 @@
 items:
 - uid: System.IO.StreamWriter
+  commentId: T:System.IO.StreamWriter
   id: StreamWriter
   parent: System.IO
   children:
@@ -25,23 +26,29 @@ items:
   - System.IO.StreamWriter.WriteLineAsync(System.Char)
   - System.IO.StreamWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
   - System.IO.StreamWriter.WriteLineAsync(System.String)
+  langs:
+  - csharp
+  - vb
   name: StreamWriter
+  nameWithType: StreamWriter
   fullName: System.IO.StreamWriter
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/IO/StreamWriter.cs
+    remote:
+      path: src/System.IO/ref/System.IO.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 33
+      repo: https://github.com/dotnet/corefx.git
+    id: StreamWriter
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 210
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Implements a <xref href="System.IO.TextWriter" data-throw-if-not-resolved="false"></xref> for writing characters to a stream in a particular encoding.To browse the .NET Framework source code for this type, see the Reference Source.
   syntax:
     content: 'public class StreamWriter : TextWriter'
-    content.vb: Public Class StreamWriter Inherits TextWriter
+    content.vb: >-
+      Public Class StreamWriter
+          Inherits TextWriter
   inheritance:
   - System.Object
   - System.IO.TextWriter
@@ -83,2460 +90,3224 @@ items:
   - System.IO.TextWriter.WriteLine(System.UInt32)
   - System.IO.TextWriter.WriteLine(System.UInt64)
   - System.IO.TextWriter.WriteLineAsync(System.Char[])
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.IO.StreamWriter.Null
+  commentId: F:System.IO.StreamWriter.Null
+  id: Null
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
+  name: Null
+  nameWithType: StreamWriter.Null
   fullName: System.IO.StreamWriter.Null
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 50
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Null
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 212
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Provides a StreamWriter with no backing store that can be written to, but not read from.
   syntax:
     content: public static readonly StreamWriter Null
     content.vb: Public Shared ReadOnly Null As StreamWriter
+    return:
+      type: System.IO.StreamWriter
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.IO.StreamWriter.#ctor(System.IO.Stream)
+  commentId: M:System.IO.StreamWriter.#ctor(System.IO.Stream)
   id: '#ctor(System.IO.Stream)'
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: StreamWriter(Stream)
+  nameWithType: StreamWriter.StreamWriter(Stream)
   fullName: System.IO.StreamWriter.StreamWriter(System.IO.Stream)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 115
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 213
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Initializes a new instance of the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> class for the specified stream by using UTF-8 encoding and the default buffer size.
   syntax:
     content: public StreamWriter(Stream stream)
     content.vb: Public Sub New(stream As Stream)
     parameters:
     - id: stream
       type: System.IO.Stream
-      description: The stream to write to.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*stream* is not writable.'
-  - type: System.ArgumentNullException
-    description: '*stream* is null.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding)
+  commentId: M:System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding)
   id: '#ctor(System.IO.Stream,System.Text.Encoding)'
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: StreamWriter(Stream, Text.Encoding)
+  nameWithType: StreamWriter.StreamWriter(Stream, Text.Encoding)
   fullName: System.IO.StreamWriter.StreamWriter(System.IO.Stream, System.Text.Encoding)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 119
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 214
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Initializes a new instance of the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> class for the specified stream by using the specified encoding and the default buffer size.
   syntax:
     content: public StreamWriter(Stream stream, Text.Encoding encoding)
     content.vb: Public Sub New(stream As Stream, encoding As Text.Encoding)
     parameters:
     - id: stream
       type: System.IO.Stream
-      description: The stream to write to.
     - id: encoding
       type: System.Text.Encoding
-      description: The character encoding to use.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*stream* or *encoding* is null.'
-  - type: System.ArgumentException
-    description: '*stream* is not writable.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding,System.Int32)
+  commentId: M:System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding,System.Int32)
   id: '#ctor(System.IO.Stream,System.Text.Encoding,System.Int32)'
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: StreamWriter(Stream, Text.Encoding, Int32)
+  nameWithType: StreamWriter.StreamWriter(Stream, Text.Encoding, Int32)
   fullName: System.IO.StreamWriter.StreamWriter(System.IO.Stream, System.Text.Encoding, System.Int32)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 127
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 215
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Initializes a new instance of the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> class for the specified stream by using the specified encoding and buffer size.
   syntax:
     content: public StreamWriter(Stream stream, Text.Encoding encoding, int bufferSize)
     content.vb: Public Sub New(stream As Stream, encoding As Text.Encoding, bufferSize As Integer)
     parameters:
     - id: stream
       type: System.IO.Stream
-      description: The stream to write to.
     - id: encoding
       type: System.Text.Encoding
-      description: The character encoding to use.
     - id: bufferSize
       type: System.Int32
-      description: The buffer size, in bytes.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*stream* or *encoding* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*bufferSize* is negative.'
-  - type: System.ArgumentException
-    description: '*stream* is not writable.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding,System.Int32,System.Boolean)
+  commentId: M:System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding,System.Int32,System.Boolean)
   id: '#ctor(System.IO.Stream,System.Text.Encoding,System.Int32,System.Boolean)'
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: StreamWriter(Stream, Text.Encoding, Int32, Boolean)
+  nameWithType: StreamWriter.StreamWriter(Stream, Text.Encoding, Int32, Boolean)
   fullName: System.IO.StreamWriter.StreamWriter(System.IO.Stream, System.Text.Encoding, System.Int32, System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 131
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 216
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Initializes a new instance of the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> class for the specified stream by using the specified encoding and buffer size, and optionally leaves the stream open.
   syntax:
     content: public StreamWriter(Stream stream, Text.Encoding encoding, int bufferSize, bool leaveOpen)
     content.vb: Public Sub New(stream As Stream, encoding As Text.Encoding, bufferSize As Integer, leaveOpen As Boolean)
     parameters:
     - id: stream
       type: System.IO.Stream
-      description: The stream to write to.
     - id: encoding
       type: System.Text.Encoding
-      description: The character encoding to use.
     - id: bufferSize
       type: System.Int32
-      description: The buffer size, in bytes.
     - id: leaveOpen
       type: System.Boolean
-      description: true to leave the stream open after the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> object is disposed; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*stream* or *encoding* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*bufferSize* is negative.'
-  - type: System.ArgumentException
-    description: '*stream* is not writable.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.IO.StreamWriter.AutoFlush
+  commentId: P:System.IO.StreamWriter.AutoFlush
   id: AutoFlush
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: AutoFlush
+  nameWithType: StreamWriter.AutoFlush
   fullName: System.IO.StreamWriter.AutoFlush
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 299
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AutoFlush
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 217
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Gets or sets a value indicating whether the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> will flush its buffer to the underlying stream after every call to <xref href="System.IO.StreamWriter.Write(System.Char)" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public virtual bool AutoFlush { get; set; }
     content.vb: Public Overridable Property AutoFlush As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true to force <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> to flush its buffer; otherwise, false.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.IO.StreamWriter.BaseStream
+  commentId: P:System.IO.StreamWriter.BaseStream
   id: BaseStream
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: BaseStream
+  nameWithType: StreamWriter.BaseStream
   fullName: System.IO.StreamWriter.BaseStream
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 311
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: BaseStream
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 218
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Gets the underlying stream that interfaces with a backing store.
   syntax:
     content: public virtual Stream BaseStream { get; }
     content.vb: Public Overridable ReadOnly Property BaseStream As Stream
     parameters: []
     return:
       type: System.IO.Stream
-      description: The stream this StreamWriter is writing to.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.IO.StreamWriter.Encoding
+  commentId: P:System.IO.StreamWriter.Encoding
   id: Encoding
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: Encoding
+  nameWithType: StreamWriter.Encoding
   fullName: System.IO.StreamWriter.Encoding
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 323
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Encoding
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 219
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Gets the <xref href="System.Text.Encoding" data-throw-if-not-resolved="false"></xref> in which the output is written.
   syntax:
     content: public override Text.Encoding Encoding { get; }
     content.vb: Public Overrides ReadOnly Property Encoding As Text.Encoding
     parameters: []
     return:
       type: System.Text.Encoding
-      description: The <xref href="System.Text.Encoding" data-throw-if-not-resolved="false"></xref> specified in the constructor for the current instance, or <xref href="System.Text.UTF8Encoding" data-throw-if-not-resolved="false"></xref> if an encoding was not specified.
   overridden: System.IO.TextWriter.Encoding
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.IO.StreamWriter.Dispose(System.Boolean)
+  commentId: M:System.IO.StreamWriter.Dispose(System.Boolean)
   id: Dispose(System.Boolean)
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: Dispose(Boolean)
+  nameWithType: StreamWriter.Dispose(Boolean)
   fullName: System.IO.StreamWriter.Dispose(System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 215
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Dispose
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 220
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Releases the unmanaged resources used by the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> and optionally releases the managed resources.
   syntax:
     content: protected override void Dispose(bool disposing)
     content.vb: Protected Overrides Sub Dispose(disposing As Boolean)
     parameters:
     - id: disposing
       type: System.Boolean
-      description: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   overridden: System.IO.TextWriter.Dispose(System.Boolean)
-  exceptions:
-  - type: System.Text.EncoderFallbackException
-    description: The current encoding does not support displaying half of a Unicode surrogate pair.
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: System.IO.StreamWriter.Flush
+  commentId: M:System.IO.StreamWriter.Flush
   id: Flush
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: Flush()
+  nameWithType: StreamWriter.Flush()
   fullName: System.IO.StreamWriter.Flush()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 261
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Flush
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 221
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Clears all buffers for the current writer and causes any buffered data to be written to the underlying stream.
   syntax:
     content: public override void Flush()
     content.vb: Public Overrides Sub Flush
   overridden: System.IO.TextWriter.Flush
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The current writer is closed.
-  - type: System.IO.IOException
-    description: An I/O error has occurred.
-  - type: System.Text.EncoderFallbackException
-    description: The current encoding does not support displaying half of a Unicode surrogate pair.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.IO.StreamWriter.FlushAsync
+  commentId: M:System.IO.StreamWriter.FlushAsync
   id: FlushAsync
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: FlushAsync()
+  nameWithType: StreamWriter.FlushAsync()
   fullName: System.IO.StreamWriter.FlushAsync()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 749
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FlushAsync
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 222
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Clears all buffers for this stream asynchronously and causes any buffered data to be written to the underlying device.
   syntax:
     content: public override Threading.Tasks.Task FlushAsync()
     content.vb: Public Overrides Function FlushAsync As Threading.Tasks.Task
     return:
       type: System.Threading.Tasks.Task
-      description: A task that represents the asynchronous flush operation.
   overridden: System.IO.TextWriter.FlushAsync
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The stream has been disposed.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.IO.StreamWriter.Write(System.Char)
+  commentId: M:System.IO.StreamWriter.Write(System.Char)
   id: Write(System.Char)
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: Write(Char)
+  nameWithType: StreamWriter.Write(Char)
   fullName: System.IO.StreamWriter.Write(System.Char)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 327
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Write
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 223
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a character to the stream.
   syntax:
     content: public override void Write(char value)
     content.vb: Public Overrides Sub Write(value As Char)
     parameters:
     - id: value
       type: System.Char
-      description: The character to write to the stream.
   overridden: System.IO.TextWriter.Write(System.Char)
-  exceptions:
-  - type: System.IO.IOException
-    description: An I/O error occurs.
-  - type: System.ObjectDisposedException
-    description: <xref href="System.IO.StreamWriter.AutoFlush" data-throw-if-not-resolved="false"></xref> is true or the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> buffer is full, and current writer is closed.
-  - type: System.NotSupportedException
-    description: <xref href="System.IO.StreamWriter.AutoFlush" data-throw-if-not-resolved="false"></xref> is true or the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> buffer is full, and the contents of the buffer cannot be written to the underlying fixed size stream because the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> is at the end the stream.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.IO.StreamWriter.Write(System.Char[])
+  commentId: M:System.IO.StreamWriter.Write(System.Char[])
   id: Write(System.Char[])
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: Write(Char[])
-  name.vb: Write(Char())
+  nameWithType: StreamWriter.Write(Char[])
   fullName: System.IO.StreamWriter.Write(System.Char[])
-  fullName.vb: System.IO.StreamWriter.Write(System.Char())
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 337
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Write
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 224
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a character array to the stream.
   syntax:
     content: public override void Write(char[] buffer)
     content.vb: Public Overrides Sub Write(buffer As Char())
     parameters:
     - id: buffer
       type: System.Char[]
-      description: A character array containing the data to write. If *buffer* is null, nothing is written.
   overridden: System.IO.TextWriter.Write(System.Char[])
-  exceptions:
-  - type: System.IO.IOException
-    description: An I/O error occurs.
-  - type: System.ObjectDisposedException
-    description: <xref href="System.IO.StreamWriter.AutoFlush" data-throw-if-not-resolved="false"></xref> is true or the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> buffer is full, and current writer is closed.
-  - type: System.NotSupportedException
-    description: <xref href="System.IO.StreamWriter.AutoFlush" data-throw-if-not-resolved="false"></xref> is true or the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> buffer is full, and the contents of the buffer cannot be written to the underlying fixed size stream because the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> is at the end the stream.
+  nameWithType.vb: StreamWriter.Write(Char())
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.IO.StreamWriter.Write(System.Char())
+  name.vb: Write(Char())
 - uid: System.IO.StreamWriter.Write(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.StreamWriter.Write(System.Char[],System.Int32,System.Int32)
   id: Write(System.Char[],System.Int32,System.Int32)
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: Write(Char[], Int32, Int32)
-  name.vb: Write(Char(), Int32, Int32)
+  nameWithType: StreamWriter.Write(Char[], Int32, Int32)
   fullName: System.IO.StreamWriter.Write(System.Char[], System.Int32, System.Int32)
-  fullName.vb: System.IO.StreamWriter.Write(System.Char(), System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 361
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Write
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 225
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a subarray of characters to the stream.
   syntax:
     content: public override void Write(char[] buffer, int index, int count)
     content.vb: Public Overrides Sub Write(buffer As Char(), index As Integer, count As Integer)
     parameters:
     - id: buffer
       type: System.Char[]
-      description: A character array that contains the data to write.
     - id: index
       type: System.Int32
-      description: The character position in the buffer at which to start reading data.
     - id: count
       type: System.Int32
-      description: The maximum number of characters to write.
   overridden: System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*buffer* is null.'
-  - type: System.ArgumentException
-    description: The buffer length minus *index* is less than *count*.
-  - type: System.ArgumentOutOfRangeException
-    description: '*index* or *count* is negative.'
-  - type: System.IO.IOException
-    description: An I/O error occurs.
-  - type: System.ObjectDisposedException
-    description: <xref href="System.IO.StreamWriter.AutoFlush" data-throw-if-not-resolved="false"></xref> is true or the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> buffer is full, and current writer is closed.
-  - type: System.NotSupportedException
-    description: <xref href="System.IO.StreamWriter.AutoFlush" data-throw-if-not-resolved="false"></xref> is true or the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> buffer is full, and the contents of the buffer cannot be written to the underlying fixed size stream because the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> is at the end the stream.
+  nameWithType.vb: StreamWriter.Write(Char(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.IO.StreamWriter.Write(System.Char(), System.Int32, System.Int32)
+  name.vb: Write(Char(), Int32, Int32)
 - uid: System.IO.StreamWriter.Write(System.String)
+  commentId: M:System.IO.StreamWriter.Write(System.String)
   id: Write(System.String)
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: Write(String)
+  nameWithType: StreamWriter.Write(String)
   fullName: System.IO.StreamWriter.Write(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 387
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Write
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 226
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a string to the stream.
   syntax:
     content: public override void Write(string value)
     content.vb: Public Overrides Sub Write(value As String)
     parameters:
     - id: value
       type: System.String
-      description: The string to write to the stream. If *value* is null, nothing is written.
   overridden: System.IO.TextWriter.Write(System.String)
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: <xref href="System.IO.StreamWriter.AutoFlush" data-throw-if-not-resolved="false"></xref> is true or the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> buffer is full, and current writer is closed.
-  - type: System.NotSupportedException
-    description: <xref href="System.IO.StreamWriter.AutoFlush" data-throw-if-not-resolved="false"></xref> is true or the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> buffer is full, and the contents of the buffer cannot be written to the underlying fixed size stream because the <xref href="System.IO.StreamWriter" data-throw-if-not-resolved="false"></xref> is at the end the stream.
-  - type: System.IO.IOException
-    description: An I/O error occurs.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.IO.StreamWriter.WriteAsync(System.Char)
+  commentId: M:System.IO.StreamWriter.WriteAsync(System.Char)
   id: WriteAsync(System.Char)
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: WriteAsync(Char)
+  nameWithType: StreamWriter.WriteAsync(Char)
   fullName: System.IO.StreamWriter.WriteAsync(System.Char)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 411
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: WriteAsync
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 227
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a character to the stream asynchronously.
   syntax:
     content: public override Threading.Tasks.Task WriteAsync(char value)
     content.vb: Public Overrides Function WriteAsync(value As Char) As Threading.Tasks.Task
     parameters:
     - id: value
       type: System.Char
-      description: The character to write to the stream.
     return:
       type: System.Threading.Tasks.Task
-      description: A task that represents the asynchronous write operation.
   overridden: System.IO.TextWriter.WriteAsync(System.Char)
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The stream writer is disposed.
-  - type: System.InvalidOperationException
-    description: The stream writer is currently in use by a previous write operation.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.IO.StreamWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.StreamWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
   id: WriteAsync(System.Char[],System.Int32,System.Int32)
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: WriteAsync(Char[], Int32, Int32)
-  name.vb: WriteAsync(Char(), Int32, Int32)
+  nameWithType: StreamWriter.WriteAsync(Char[], Int32, Int32)
   fullName: System.IO.StreamWriter.WriteAsync(System.Char[], System.Int32, System.Int32)
-  fullName.vb: System.IO.StreamWriter.WriteAsync(System.Char(), System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 559
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: WriteAsync
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 228
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a subarray of characters to the stream asynchronously.
   syntax:
     content: public override Threading.Tasks.Task WriteAsync(char[] buffer, int index, int count)
     content.vb: Public Overrides Function WriteAsync(buffer As Char(), index As Integer, count As Integer) As Threading.Tasks.Task
     parameters:
     - id: buffer
       type: System.Char[]
-      description: A character array that contains the data to write.
     - id: index
       type: System.Int32
-      description: The character position in the buffer at which to begin reading data.
     - id: count
       type: System.Int32
-      description: The maximum number of characters to write.
     return:
       type: System.Threading.Tasks.Task
-      description: A task that represents the asynchronous write operation.
   overridden: System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*buffer* is null.'
-  - type: System.ArgumentException
-    description: The *index* plus *count* is greater than the buffer length.
-  - type: System.ArgumentOutOfRangeException
-    description: '*index* or *count* is negative.'
-  - type: System.ObjectDisposedException
-    description: The stream writer is disposed.
-  - type: System.InvalidOperationException
-    description: The stream writer is currently in use by a previous write operation.
+  nameWithType.vb: StreamWriter.WriteAsync(Char(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.IO.StreamWriter.WriteAsync(System.Char(), System.Int32, System.Int32)
+  name.vb: WriteAsync(Char(), Int32, Int32)
 - uid: System.IO.StreamWriter.WriteAsync(System.String)
+  commentId: M:System.IO.StreamWriter.WriteAsync(System.String)
   id: WriteAsync(System.String)
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: WriteAsync(String)
+  nameWithType: StreamWriter.WriteAsync(String)
   fullName: System.IO.StreamWriter.WriteAsync(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 473
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: WriteAsync
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 229
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a string to the stream asynchronously.
   syntax:
     content: public override Threading.Tasks.Task WriteAsync(string value)
     content.vb: Public Overrides Function WriteAsync(value As String) As Threading.Tasks.Task
     parameters:
     - id: value
       type: System.String
-      description: The string to write to the stream. If *value* is null, nothing is written.
     return:
       type: System.Threading.Tasks.Task
-      description: A task that represents the asynchronous write operation.
   overridden: System.IO.TextWriter.WriteAsync(System.String)
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The stream writer is disposed.
-  - type: System.InvalidOperationException
-    description: The stream writer is currently in use by a previous write operation.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.IO.StreamWriter.WriteLineAsync
+  commentId: M:System.IO.StreamWriter.WriteLineAsync
   id: WriteLineAsync
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: WriteLineAsync()
+  nameWithType: StreamWriter.WriteLineAsync()
   fullName: System.IO.StreamWriter.WriteLineAsync()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 647
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: WriteLineAsync
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 230
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a line terminator asynchronously to the stream.
   syntax:
     content: public override Threading.Tasks.Task WriteLineAsync()
     content.vb: Public Overrides Function WriteLineAsync As Threading.Tasks.Task
     return:
       type: System.Threading.Tasks.Task
-      description: A task that represents the asynchronous write operation.
   overridden: System.IO.TextWriter.WriteLineAsync
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The stream writer is disposed.
-  - type: System.InvalidOperationException
-    description: The stream writer is currently in use by a previous write operation.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.IO.StreamWriter.WriteLineAsync(System.Char)
+  commentId: M:System.IO.StreamWriter.WriteLineAsync(System.Char)
   id: WriteLineAsync(System.Char)
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: WriteLineAsync(Char)
+  nameWithType: StreamWriter.WriteLineAsync(Char)
   fullName: System.IO.StreamWriter.WriteLineAsync(System.Char)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 670
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: WriteLineAsync
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 231
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a character followed by a line terminator asynchronously to the stream.
   syntax:
     content: public override Threading.Tasks.Task WriteLineAsync(char value)
     content.vb: Public Overrides Function WriteLineAsync(value As Char) As Threading.Tasks.Task
     parameters:
     - id: value
       type: System.Char
-      description: The character to write to the stream.
     return:
       type: System.Threading.Tasks.Task
-      description: A task that represents the asynchronous write operation.
   overridden: System.IO.TextWriter.WriteLineAsync(System.Char)
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The stream writer is disposed.
-  - type: System.InvalidOperationException
-    description: The stream writer is currently in use by a previous write operation.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.IO.StreamWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.StreamWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
   id: WriteLineAsync(System.Char[],System.Int32,System.Int32)
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: WriteLineAsync(Char[], Int32, Int32)
-  name.vb: WriteLineAsync(Char(), Int32, Int32)
+  nameWithType: StreamWriter.WriteLineAsync(Char[], Int32, Int32)
   fullName: System.IO.StreamWriter.WriteLineAsync(System.Char[], System.Int32, System.Int32)
-  fullName.vb: System.IO.StreamWriter.WriteLineAsync(System.Char(), System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 716
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: WriteLineAsync
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 232
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a subarray of characters followed by a line terminator asynchronously to the stream.
   syntax:
     content: public override Threading.Tasks.Task WriteLineAsync(char[] buffer, int index, int count)
     content.vb: Public Overrides Function WriteLineAsync(buffer As Char(), index As Integer, count As Integer) As Threading.Tasks.Task
     parameters:
     - id: buffer
       type: System.Char[]
-      description: The character array to write data from.
     - id: index
       type: System.Int32
-      description: The character position in the buffer at which to start reading data.
     - id: count
       type: System.Int32
-      description: The maximum number of characters to write.
     return:
       type: System.Threading.Tasks.Task
-      description: A task that represents the asynchronous write operation.
   overridden: System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*buffer* is null.'
-  - type: System.ArgumentException
-    description: The *index* plus *count* is greater than the buffer length.
-  - type: System.ArgumentOutOfRangeException
-    description: '*index* or *count* is negative.'
-  - type: System.ObjectDisposedException
-    description: The stream writer is disposed.
-  - type: System.InvalidOperationException
-    description: The stream writer is currently in use by a previous write operation.
+  nameWithType.vb: StreamWriter.WriteLineAsync(Char(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.IO.StreamWriter.WriteLineAsync(System.Char(), System.Int32, System.Int32)
+  name.vb: WriteLineAsync(Char(), Int32, Int32)
 - uid: System.IO.StreamWriter.WriteLineAsync(System.String)
+  commentId: M:System.IO.StreamWriter.WriteLineAsync(System.String)
   id: WriteLineAsync(System.String)
   parent: System.IO.StreamWriter
+  langs:
+  - csharp
+  - vb
   name: WriteLineAsync(String)
+  nameWithType: StreamWriter.WriteLineAsync(String)
   fullName: System.IO.StreamWriter.WriteLineAsync(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/StreamWriter.cs
-    startLine: 693
+    remote:
+      path: src/System.IO/ref/System.IO.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: WriteLineAsync
+    path: src/System.IO/ref/System.IO.cs
+    startLine: 233
   assemblies:
   - System.IO
   namespace: System.IO
-  summary: Writes a string followed by a line terminator asynchronously to the stream.
   syntax:
     content: public override Threading.Tasks.Task WriteLineAsync(string value)
     content.vb: Public Overrides Function WriteLineAsync(value As String) As Threading.Tasks.Task
     parameters:
     - id: value
       type: System.String
-      description: The string to write. If the value is null, only a line terminator is written.
     return:
       type: System.Threading.Tasks.Task
-      description: A task that represents the asynchronous write operation.
   overridden: System.IO.TextWriter.WriteLineAsync(System.String)
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The stream writer is disposed.
-  - type: System.InvalidOperationException
-    description: The stream writer is currently in use by a previous write operation.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.IO
+  commentId: N:System.IO
   isExternal: false
   name: System.IO
+  nameWithType: System.IO
   fullName: System.IO
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
   parent: System.IO
   isExternal: false
   name: TextWriter
+  nameWithType: TextWriter
   fullName: System.IO.TextWriter
 - uid: System.IO.TextWriter.CoreNewLine
+  commentId: F:System.IO.TextWriter.CoreNewLine
   parent: System.IO.TextWriter
   isExternal: false
   name: CoreNewLine
+  nameWithType: TextWriter.CoreNewLine
   fullName: System.IO.TextWriter.CoreNewLine
 - uid: System.IO.TextWriter.FormatProvider
+  commentId: P:System.IO.TextWriter.FormatProvider
   parent: System.IO.TextWriter
   isExternal: false
   name: FormatProvider
+  nameWithType: TextWriter.FormatProvider
   fullName: System.IO.TextWriter.FormatProvider
 - uid: System.IO.TextWriter.NewLine
+  commentId: P:System.IO.TextWriter.NewLine
   parent: System.IO.TextWriter
   isExternal: false
   name: NewLine
+  nameWithType: TextWriter.NewLine
   fullName: System.IO.TextWriter.NewLine
 - uid: System.IO.TextWriter.Dispose
+  commentId: M:System.IO.TextWriter.Dispose
   parent: System.IO.TextWriter
   isExternal: false
   name: Dispose()
+  nameWithType: TextWriter.Dispose()
   fullName: System.IO.TextWriter.Dispose()
   spec.csharp:
   - uid: System.IO.TextWriter.Dispose
     name: Dispose
+    nameWithType: TextWriter.Dispose
     fullName: System.IO.TextWriter.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Dispose
     name: Dispose
+    nameWithType: TextWriter.Dispose
     fullName: System.IO.TextWriter.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.Boolean)
+  commentId: M:System.IO.TextWriter.Write(System.Boolean)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(Boolean)
+  nameWithType: TextWriter.Write(Boolean)
   fullName: System.IO.TextWriter.Write(System.Boolean)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Boolean)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Boolean)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.Decimal)
+  commentId: M:System.IO.TextWriter.Write(System.Decimal)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(Decimal)
+  nameWithType: TextWriter.Write(Decimal)
   fullName: System.IO.TextWriter.Write(System.Decimal)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Decimal)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Decimal
     name: Decimal
+    nameWithType: Decimal
     fullName: System.Decimal
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Decimal)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Decimal
     name: Decimal
+    nameWithType: Decimal
     fullName: System.Decimal
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.Double)
+  commentId: M:System.IO.TextWriter.Write(System.Double)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(Double)
+  nameWithType: TextWriter.Write(Double)
   fullName: System.IO.TextWriter.Write(System.Double)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Double)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Double
     name: Double
+    nameWithType: Double
     fullName: System.Double
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Double)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Double
     name: Double
+    nameWithType: Double
     fullName: System.Double
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.Int32)
+  commentId: M:System.IO.TextWriter.Write(System.Int32)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(Int32)
+  nameWithType: TextWriter.Write(Int32)
   fullName: System.IO.TextWriter.Write(System.Int32)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Int32)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Int32)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.Int64)
+  commentId: M:System.IO.TextWriter.Write(System.Int64)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(Int64)
+  nameWithType: TextWriter.Write(Int64)
   fullName: System.IO.TextWriter.Write(System.Int64)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Int64)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Int64)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.Object)
+  commentId: M:System.IO.TextWriter.Write(System.Object)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(Object)
+  nameWithType: TextWriter.Write(Object)
   fullName: System.IO.TextWriter.Write(System.Object)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Object)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Object)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.Single)
+  commentId: M:System.IO.TextWriter.Write(System.Single)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(Single)
+  nameWithType: TextWriter.Write(Single)
   fullName: System.IO.TextWriter.Write(System.Single)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Single)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Single
     name: Single
+    nameWithType: Single
     fullName: System.Single
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Single)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Single
     name: Single
+    nameWithType: Single
     fullName: System.Single
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.String,System.Object)
+  commentId: M:System.IO.TextWriter.Write(System.String,System.Object)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(String, Object)
+  nameWithType: TextWriter.Write(String, Object)
   fullName: System.IO.TextWriter.Write(System.String, System.Object)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.String,System.Object)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.String,System.Object)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object)
+  commentId: M:System.IO.TextWriter.Write(System.String,System.Object,System.Object)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(String, Object, Object)
+  nameWithType: TextWriter.Write(String, Object, Object)
   fullName: System.IO.TextWriter.Write(System.String, System.Object, System.Object)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
+  commentId: M:System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(String, Object, Object, Object)
+  nameWithType: TextWriter.Write(String, Object, Object, Object)
   fullName: System.IO.TextWriter.Write(System.String, System.Object, System.Object, System.Object)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.String,System.Object[])
+  commentId: M:System.IO.TextWriter.Write(System.String,System.Object[])
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(String, Object[])
-  name.vb: Write(String, Object())
+  nameWithType: TextWriter.Write(String, Object[])
   fullName: System.IO.TextWriter.Write(System.String, System.Object[])
-  fullName.vb: System.IO.TextWriter.Write(System.String, System.Object())
+  nameWithType.vb: TextWriter.Write(String, Object())
+  fullname.vb: System.IO.TextWriter.Write(System.String, System.Object())
+  name.vb: Write(String, Object())
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.String,System.Object[])
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.String,System.Object[])
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.UInt32)
+  commentId: M:System.IO.TextWriter.Write(System.UInt32)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(UInt32)
+  nameWithType: TextWriter.Write(UInt32)
   fullName: System.IO.TextWriter.Write(System.UInt32)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.UInt32)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.UInt32
     name: UInt32
+    nameWithType: UInt32
     fullName: System.UInt32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.UInt32)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.UInt32
     name: UInt32
+    nameWithType: UInt32
     fullName: System.UInt32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.UInt64)
+  commentId: M:System.IO.TextWriter.Write(System.UInt64)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(UInt64)
+  nameWithType: TextWriter.Write(UInt64)
   fullName: System.IO.TextWriter.Write(System.UInt64)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.UInt64)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.UInt64
     name: UInt64
+    nameWithType: UInt64
     fullName: System.UInt64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.UInt64)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.UInt64
     name: UInt64
+    nameWithType: UInt64
     fullName: System.UInt64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteAsync(System.Char[])
+  commentId: M:System.IO.TextWriter.WriteAsync(System.Char[])
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteAsync(Char[])
-  name.vb: WriteAsync(Char())
+  nameWithType: TextWriter.WriteAsync(Char[])
   fullName: System.IO.TextWriter.WriteAsync(System.Char[])
-  fullName.vb: System.IO.TextWriter.WriteAsync(System.Char())
+  nameWithType.vb: TextWriter.WriteAsync(Char())
+  fullname.vb: System.IO.TextWriter.WriteAsync(System.Char())
+  name.vb: WriteAsync(Char())
   spec.csharp:
   - uid: System.IO.TextWriter.WriteAsync(System.Char[])
     name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
     fullName: System.IO.TextWriter.WriteAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteAsync(System.Char[])
     name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
     fullName: System.IO.TextWriter.WriteAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine
+  commentId: M:System.IO.TextWriter.WriteLine
   parent: System.IO.TextWriter
   isExternal: false
   name: WriteLine()
+  nameWithType: TextWriter.WriteLine()
   fullName: System.IO.TextWriter.WriteLine()
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Boolean)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Boolean)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(Boolean)
+  nameWithType: TextWriter.WriteLine(Boolean)
   fullName: System.IO.TextWriter.WriteLine(System.Boolean)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Boolean)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Boolean)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Char)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Char)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(Char)
+  nameWithType: TextWriter.WriteLine(Char)
   fullName: System.IO.TextWriter.WriteLine(System.Char)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Char)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Char)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Char[])
+  commentId: M:System.IO.TextWriter.WriteLine(System.Char[])
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(Char[])
-  name.vb: WriteLine(Char())
+  nameWithType: TextWriter.WriteLine(Char[])
   fullName: System.IO.TextWriter.WriteLine(System.Char[])
-  fullName.vb: System.IO.TextWriter.WriteLine(System.Char())
+  nameWithType.vb: TextWriter.WriteLine(Char())
+  fullname.vb: System.IO.TextWriter.WriteLine(System.Char())
+  name.vb: WriteLine(Char())
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Char[])
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Char[])
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(Char[], Int32, Int32)
-  name.vb: WriteLine(Char(), Int32, Int32)
+  nameWithType: TextWriter.WriteLine(Char[], Int32, Int32)
   fullName: System.IO.TextWriter.WriteLine(System.Char[], System.Int32, System.Int32)
-  fullName.vb: System.IO.TextWriter.WriteLine(System.Char(), System.Int32, System.Int32)
+  nameWithType.vb: TextWriter.WriteLine(Char(), Int32, Int32)
+  fullname.vb: System.IO.TextWriter.WriteLine(System.Char(), System.Int32, System.Int32)
+  name.vb: WriteLine(Char(), Int32, Int32)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Decimal)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Decimal)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(Decimal)
+  nameWithType: TextWriter.WriteLine(Decimal)
   fullName: System.IO.TextWriter.WriteLine(System.Decimal)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Decimal)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Decimal
     name: Decimal
+    nameWithType: Decimal
     fullName: System.Decimal
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Decimal)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Decimal
     name: Decimal
+    nameWithType: Decimal
     fullName: System.Decimal
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Double)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Double)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(Double)
+  nameWithType: TextWriter.WriteLine(Double)
   fullName: System.IO.TextWriter.WriteLine(System.Double)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Double)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Double
     name: Double
+    nameWithType: Double
     fullName: System.Double
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Double)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Double
     name: Double
+    nameWithType: Double
     fullName: System.Double
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Int32)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Int32)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(Int32)
+  nameWithType: TextWriter.WriteLine(Int32)
   fullName: System.IO.TextWriter.WriteLine(System.Int32)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Int32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Int32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Int64)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Int64)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(Int64)
+  nameWithType: TextWriter.WriteLine(Int64)
   fullName: System.IO.TextWriter.WriteLine(System.Int64)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Int64)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Int64)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Object)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Object)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(Object)
+  nameWithType: TextWriter.WriteLine(Object)
   fullName: System.IO.TextWriter.WriteLine(System.Object)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Object)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Object)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.Single)
+  commentId: M:System.IO.TextWriter.WriteLine(System.Single)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(Single)
+  nameWithType: TextWriter.WriteLine(Single)
   fullName: System.IO.TextWriter.WriteLine(System.Single)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.Single)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Single
     name: Single
+    nameWithType: Single
     fullName: System.Single
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.Single)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Single
     name: Single
+    nameWithType: Single
     fullName: System.Single
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.String)
+  commentId: M:System.IO.TextWriter.WriteLine(System.String)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(String)
+  nameWithType: TextWriter.WriteLine(String)
   fullName: System.IO.TextWriter.WriteLine(System.String)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.String)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.String)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.String,System.Object)
+  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(String, Object)
+  nameWithType: TextWriter.WriteLine(String, Object)
   fullName: System.IO.TextWriter.WriteLine(System.String, System.Object)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.String,System.Object)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.String,System.Object)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
+  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(String, Object, Object)
+  nameWithType: TextWriter.WriteLine(String, Object, Object)
   fullName: System.IO.TextWriter.WriteLine(System.String, System.Object, System.Object)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
+  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(String, Object, Object, Object)
+  nameWithType: TextWriter.WriteLine(String, Object, Object, Object)
   fullName: System.IO.TextWriter.WriteLine(System.String, System.Object, System.Object, System.Object)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.String,System.Object[])
+  commentId: M:System.IO.TextWriter.WriteLine(System.String,System.Object[])
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(String, Object[])
-  name.vb: WriteLine(String, Object())
+  nameWithType: TextWriter.WriteLine(String, Object[])
   fullName: System.IO.TextWriter.WriteLine(System.String, System.Object[])
-  fullName.vb: System.IO.TextWriter.WriteLine(System.String, System.Object())
+  nameWithType.vb: TextWriter.WriteLine(String, Object())
+  fullname.vb: System.IO.TextWriter.WriteLine(System.String, System.Object())
+  name.vb: WriteLine(String, Object())
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.String,System.Object[])
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.String,System.Object[])
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.UInt32)
+  commentId: M:System.IO.TextWriter.WriteLine(System.UInt32)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(UInt32)
+  nameWithType: TextWriter.WriteLine(UInt32)
   fullName: System.IO.TextWriter.WriteLine(System.UInt32)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.UInt32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.UInt32
     name: UInt32
+    nameWithType: UInt32
     fullName: System.UInt32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.UInt32)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.UInt32
     name: UInt32
+    nameWithType: UInt32
     fullName: System.UInt32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLine(System.UInt64)
+  commentId: M:System.IO.TextWriter.WriteLine(System.UInt64)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLine(UInt64)
+  nameWithType: TextWriter.WriteLine(UInt64)
   fullName: System.IO.TextWriter.WriteLine(System.UInt64)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLine(System.UInt64)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.UInt64
     name: UInt64
+    nameWithType: UInt64
     fullName: System.UInt64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLine(System.UInt64)
     name: WriteLine
+    nameWithType: TextWriter.WriteLine
     fullName: System.IO.TextWriter.WriteLine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.UInt64
     name: UInt64
+    nameWithType: UInt64
     fullName: System.UInt64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLineAsync(System.Char[])
+  commentId: M:System.IO.TextWriter.WriteLineAsync(System.Char[])
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLineAsync(Char[])
-  name.vb: WriteLineAsync(Char())
+  nameWithType: TextWriter.WriteLineAsync(Char[])
   fullName: System.IO.TextWriter.WriteLineAsync(System.Char[])
-  fullName.vb: System.IO.TextWriter.WriteLineAsync(System.Char())
+  nameWithType.vb: TextWriter.WriteLineAsync(Char())
+  fullname.vb: System.IO.TextWriter.WriteLineAsync(System.Char())
+  name.vb: WriteLineAsync(Char())
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLineAsync(System.Char[])
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
     fullName: System.IO.TextWriter.WriteLineAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLineAsync(System.Char[])
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
     fullName: System.IO.TextWriter.WriteLineAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
+- uid: System.IO.StreamWriter
+  commentId: T:System.IO.StreamWriter
+  parent: System.IO
+  isExternal: false
+  name: StreamWriter
+  nameWithType: StreamWriter
+  fullName: System.IO.StreamWriter
 - uid: System.IO.Stream
+  commentId: T:System.IO.Stream
   parent: System.IO
   isExternal: false
   name: IO.Stream
+  nameWithType: IO.Stream
   fullName: System.IO.Stream
 - uid: System.Text.Encoding
+  commentId: T:System.Text.Encoding
   parent: System.Text
   isExternal: false
-  name: Text.Encoding
+  name: Encoding
+  nameWithType: Encoding
   fullName: System.Text.Encoding
 - uid: System.Text
+  commentId: N:System.Text
   isExternal: false
   name: System.Text
+  nameWithType: System.Text
   fullName: System.Text
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.IO.TextWriter.Encoding
+  commentId: P:System.IO.TextWriter.Encoding
   parent: System.IO.TextWriter
   isExternal: false
   name: Encoding
+  nameWithType: TextWriter.Encoding
   fullName: System.IO.TextWriter.Encoding
 - uid: System.IO.TextWriter.Dispose(System.Boolean)
+  commentId: M:System.IO.TextWriter.Dispose(System.Boolean)
   parent: System.IO.TextWriter
   isExternal: true
   name: Dispose(Boolean)
+  nameWithType: TextWriter.Dispose(Boolean)
   fullName: System.IO.TextWriter.Dispose(System.Boolean)
   spec.csharp:
   - uid: System.IO.TextWriter.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: TextWriter.Dispose
     fullName: System.IO.TextWriter.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: TextWriter.Dispose
     fullName: System.IO.TextWriter.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Flush
+  commentId: M:System.IO.TextWriter.Flush
   parent: System.IO.TextWriter
   isExternal: false
   name: Flush()
+  nameWithType: TextWriter.Flush()
   fullName: System.IO.TextWriter.Flush()
   spec.csharp:
   - uid: System.IO.TextWriter.Flush
     name: Flush
+    nameWithType: TextWriter.Flush
     fullName: System.IO.TextWriter.Flush
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Flush
     name: Flush
+    nameWithType: TextWriter.Flush
     fullName: System.IO.TextWriter.Flush
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.FlushAsync
+  commentId: M:System.IO.TextWriter.FlushAsync
   parent: System.IO.TextWriter
   isExternal: false
   name: FlushAsync()
+  nameWithType: TextWriter.FlushAsync()
   fullName: System.IO.TextWriter.FlushAsync()
   spec.csharp:
   - uid: System.IO.TextWriter.FlushAsync
     name: FlushAsync
+    nameWithType: TextWriter.FlushAsync
     fullName: System.IO.TextWriter.FlushAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.FlushAsync
     name: FlushAsync
+    nameWithType: TextWriter.FlushAsync
     fullName: System.IO.TextWriter.FlushAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks
   isExternal: false
   name: Threading.Tasks.Task
+  nameWithType: Threading.Tasks.Task
   fullName: System.Threading.Tasks.Task
 - uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
   isExternal: false
   name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
   fullName: System.Threading.Tasks
 - uid: System.IO.TextWriter.Write(System.Char)
+  commentId: M:System.IO.TextWriter.Write(System.Char)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(Char)
+  nameWithType: TextWriter.Write(Char)
   fullName: System.IO.TextWriter.Write(System.Char)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Char)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Char)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Char
+  commentId: T:System.Char
   parent: System
   isExternal: false
   name: Char
+  nameWithType: Char
   fullName: System.Char
 - uid: System.IO.TextWriter.Write(System.Char[])
+  commentId: M:System.IO.TextWriter.Write(System.Char[])
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(Char[])
-  name.vb: Write(Char())
+  nameWithType: TextWriter.Write(Char[])
   fullName: System.IO.TextWriter.Write(System.Char[])
-  fullName.vb: System.IO.TextWriter.Write(System.Char())
+  nameWithType.vb: TextWriter.Write(Char())
+  fullname.vb: System.IO.TextWriter.Write(System.Char())
+  name.vb: Write(Char())
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Char[])
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Char[])
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Char[]
-  isExternal: false
   name: Char[]
-  name.vb: Char()
+  nameWithType: Char[]
   fullName: System.Char[]
-  fullName.vb: System.Char()
+  nameWithType.vb: Char()
+  fullname.vb: System.Char()
+  name.vb: Char()
   spec.csharp:
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(Char[], Int32, Int32)
-  name.vb: Write(Char(), Int32, Int32)
+  nameWithType: TextWriter.Write(Char[], Int32, Int32)
   fullName: System.IO.TextWriter.Write(System.Char[], System.Int32, System.Int32)
-  fullName.vb: System.IO.TextWriter.Write(System.Char(), System.Int32, System.Int32)
+  nameWithType.vb: TextWriter.Write(Char(), Int32, Int32)
+  fullname.vb: System.IO.TextWriter.Write(System.Char(), System.Int32, System.Int32)
+  name.vb: Write(Char(), Int32, Int32)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.Write(System.String)
+  commentId: M:System.IO.TextWriter.Write(System.String)
   parent: System.IO.TextWriter
   isExternal: true
   name: Write(String)
+  nameWithType: TextWriter.Write(String)
   fullName: System.IO.TextWriter.Write(System.String)
   spec.csharp:
   - uid: System.IO.TextWriter.Write(System.String)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.Write(System.String)
     name: Write
+    nameWithType: TextWriter.Write
     fullName: System.IO.TextWriter.Write
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.IO.TextWriter.WriteAsync(System.Char)
+  commentId: M:System.IO.TextWriter.WriteAsync(System.Char)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteAsync(Char)
+  nameWithType: TextWriter.WriteAsync(Char)
   fullName: System.IO.TextWriter.WriteAsync(System.Char)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteAsync(System.Char)
     name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
     fullName: System.IO.TextWriter.WriteAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteAsync(System.Char)
     name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
     fullName: System.IO.TextWriter.WriteAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteAsync(Char[], Int32, Int32)
-  name.vb: WriteAsync(Char(), Int32, Int32)
+  nameWithType: TextWriter.WriteAsync(Char[], Int32, Int32)
   fullName: System.IO.TextWriter.WriteAsync(System.Char[], System.Int32, System.Int32)
-  fullName.vb: System.IO.TextWriter.WriteAsync(System.Char(), System.Int32, System.Int32)
+  nameWithType.vb: TextWriter.WriteAsync(Char(), Int32, Int32)
+  fullname.vb: System.IO.TextWriter.WriteAsync(System.Char(), System.Int32, System.Int32)
+  name.vb: WriteAsync(Char(), Int32, Int32)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
     name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
     fullName: System.IO.TextWriter.WriteAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)
     name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
     fullName: System.IO.TextWriter.WriteAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteAsync(System.String)
+  commentId: M:System.IO.TextWriter.WriteAsync(System.String)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteAsync(String)
+  nameWithType: TextWriter.WriteAsync(String)
   fullName: System.IO.TextWriter.WriteAsync(System.String)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteAsync(System.String)
     name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
     fullName: System.IO.TextWriter.WriteAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteAsync(System.String)
     name: WriteAsync
+    nameWithType: TextWriter.WriteAsync
     fullName: System.IO.TextWriter.WriteAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLineAsync
+  commentId: M:System.IO.TextWriter.WriteLineAsync
   parent: System.IO.TextWriter
   isExternal: false
   name: WriteLineAsync()
+  nameWithType: TextWriter.WriteLineAsync()
   fullName: System.IO.TextWriter.WriteLineAsync()
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLineAsync
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
     fullName: System.IO.TextWriter.WriteLineAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLineAsync
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
     fullName: System.IO.TextWriter.WriteLineAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLineAsync(System.Char)
+  commentId: M:System.IO.TextWriter.WriteLineAsync(System.Char)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLineAsync(Char)
+  nameWithType: TextWriter.WriteLineAsync(Char)
   fullName: System.IO.TextWriter.WriteLineAsync(System.Char)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLineAsync(System.Char)
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
     fullName: System.IO.TextWriter.WriteLineAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLineAsync(System.Char)
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
     fullName: System.IO.TextWriter.WriteLineAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLineAsync(Char[], Int32, Int32)
-  name.vb: WriteLineAsync(Char(), Int32, Int32)
+  nameWithType: TextWriter.WriteLineAsync(Char[], Int32, Int32)
   fullName: System.IO.TextWriter.WriteLineAsync(System.Char[], System.Int32, System.Int32)
-  fullName.vb: System.IO.TextWriter.WriteLineAsync(System.Char(), System.Int32, System.Int32)
+  nameWithType.vb: TextWriter.WriteLineAsync(Char(), Int32, Int32)
+  fullname.vb: System.IO.TextWriter.WriteLineAsync(System.Char(), System.Int32, System.Int32)
+  name.vb: WriteLineAsync(Char(), Int32, Int32)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
     fullName: System.IO.TextWriter.WriteLineAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
     fullName: System.IO.TextWriter.WriteLineAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.TextWriter.WriteLineAsync(System.String)
+  commentId: M:System.IO.TextWriter.WriteLineAsync(System.String)
   parent: System.IO.TextWriter
   isExternal: true
   name: WriteLineAsync(String)
+  nameWithType: TextWriter.WriteLineAsync(String)
   fullName: System.IO.TextWriter.WriteLineAsync(System.String)
   spec.csharp:
   - uid: System.IO.TextWriter.WriteLineAsync(System.String)
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
     fullName: System.IO.TextWriter.WriteLineAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.TextWriter.WriteLineAsync(System.String)
     name: WriteLineAsync
+    nameWithType: TextWriter.WriteLineAsync
     fullName: System.IO.TextWriter.WriteLineAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.Text.EncoderFallbackException
-  isExternal: false
-  name: EncoderFallbackException
-  fullName: System.Text.EncoderFallbackException
-- uid: System.ObjectDisposedException
-  isExternal: false
-  name: ObjectDisposedException
-  fullName: System.ObjectDisposedException
-- uid: System.IO.IOException
-  parent: System.IO
-  isExternal: false
-  name: IOException
-  fullName: System.IO.IOException
-- uid: System.NotSupportedException
-  parent: System
-  isExternal: false
-  name: NotSupportedException
-  fullName: System.NotSupportedException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException

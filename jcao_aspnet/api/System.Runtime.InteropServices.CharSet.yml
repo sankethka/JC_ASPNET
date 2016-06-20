@@ -1,61 +1,113 @@
 items:
 - uid: System.Runtime.InteropServices.CharSet
+  commentId: T:System.Runtime.InteropServices.CharSet
   id: CharSet
   parent: System.Runtime.InteropServices
   children:
   - System.Runtime.InteropServices.CharSet.Ansi
   - System.Runtime.InteropServices.CharSet.Unicode
+  langs:
+  - csharp
+  - vb
   name: CharSet
+  nameWithType: CharSet
   fullName: System.Runtime.InteropServices.CharSet
   type: Enum
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/InteropServices/CharSet.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/InteropServices/CharSet.cs
-    startLine: 14
+      repo: https://github.com/dotnet/corefx.git
+    id: CharSet
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 3018
   assemblies:
   - System.Runtime
   namespace: System.Runtime.InteropServices
-  summary: Dictates which character set marshaled strings should use.
   syntax:
     content: public enum CharSet
     content.vb: Public Enum CharSet
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
 - uid: System.Runtime.InteropServices.CharSet.Ansi
+  commentId: F:System.Runtime.InteropServices.CharSet.Ansi
   id: Ansi
   parent: System.Runtime.InteropServices.CharSet
+  langs:
+  - csharp
+  - vb
   name: Ansi
+  nameWithType: CharSet.Ansi
   fullName: System.Runtime.InteropServices.CharSet.Ansi
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/CharSet.cs
-    startLine: 19
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Ansi
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 3020
   assemblies:
   - System.Runtime
   namespace: System.Runtime.InteropServices
-  summary: Marshal strings as multiple-byte character strings.
   syntax:
     content: Ansi = 2
+    return:
+      type: System.Runtime.InteropServices.CharSet
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Runtime.InteropServices.CharSet.Unicode
+  commentId: F:System.Runtime.InteropServices.CharSet.Unicode
   id: Unicode
   parent: System.Runtime.InteropServices.CharSet
+  langs:
+  - csharp
+  - vb
   name: Unicode
+  nameWithType: CharSet.Unicode
   fullName: System.Runtime.InteropServices.CharSet.Unicode
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/CharSet.cs
-    startLine: 20
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Unicode
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 3021
   assemblies:
   - System.Runtime
   namespace: System.Runtime.InteropServices
-  summary: Marshal strings as Unicode 2-byte characters.
   syntax:
     content: Unicode = 3
+    return:
+      type: System.Runtime.InteropServices.CharSet
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
   isExternal: false
   name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
+- uid: System.Runtime.InteropServices.CharSet
+  commentId: T:System.Runtime.InteropServices.CharSet
+  parent: System.Runtime.InteropServices
+  isExternal: false
+  name: CharSet
+  nameWithType: CharSet
+  fullName: System.Runtime.InteropServices.CharSet

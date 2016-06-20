@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.Loader.AssemblyLoadContext
+  commentId: T:System.Runtime.Loader.AssemblyLoadContext
   id: AssemblyLoadContext
   parent: System.Runtime.Loader
   children:
@@ -7,7 +8,6 @@ items:
   - System.Runtime.Loader.AssemblyLoadContext.Default
   - System.Runtime.Loader.AssemblyLoadContext.GetAssemblyName(System.String)
   - System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)
-  - System.Runtime.Loader.AssemblyLoadContext.InitializeDefaultContext(System.Runtime.Loader.AssemblyLoadContext)
   - System.Runtime.Loader.AssemblyLoadContext.Load(System.Reflection.AssemblyName)
   - System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName(System.Reflection.AssemblyName)
   - System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(System.String)
@@ -20,50 +20,87 @@ items:
   - System.Runtime.Loader.AssemblyLoadContext.SetProfileOptimizationRoot(System.String)
   - System.Runtime.Loader.AssemblyLoadContext.StartProfileOptimization(System.String)
   - System.Runtime.Loader.AssemblyLoadContext.Unloading
+  langs:
+  - csharp
+  - vb
   name: AssemblyLoadContext
+  nameWithType: AssemblyLoadContext
   fullName: System.Runtime.Loader.AssemblyLoadContext
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 19
+      repo: https://github.com/dotnet/corefx.git
+    id: AssemblyLoadContext
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 18
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
   syntax:
     content: 'public abstract class AssemblyLoadContext : object'
-    content.vb: Public MustInherit Class AssemblyLoadContext Inherits Object
+    content.vb: >-
+      Public MustInherit Class AssemblyLoadContext
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Runtime.Loader.AssemblyLoadContext.#ctor
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.#ctor
   id: '#ctor'
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: AssemblyLoadContext()
+  nameWithType: AssemblyLoadContext.AssemblyLoadContext()
   fullName: System.Runtime.Loader.AssemblyLoadContext.AssemblyLoadContext()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 48
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 20
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
   syntax:
     content: protected AssemblyLoadContext()
     content.vb: Protected Sub New
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Runtime.Loader.AssemblyLoadContext.Default
+  commentId: P:System.Runtime.Loader.AssemblyLoadContext.Default
   id: Default
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: Default
+  nameWithType: AssemblyLoadContext.Default
   fullName: System.Runtime.Loader.AssemblyLoadContext.Default
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 290
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Default
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 21
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -73,16 +110,33 @@ items:
     parameters: []
     return:
       type: System.Runtime.Loader.AssemblyLoadContext
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Runtime.Loader.AssemblyLoadContext.GetAssemblyName(System.String)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.GetAssemblyName(System.String)
   id: GetAssemblyName(System.String)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: GetAssemblyName(String)
+  nameWithType: AssemblyLoadContext.GetAssemblyName(String)
   fullName: System.Runtime.Loader.AssemblyLoadContext.GetAssemblyName(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 342
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetAssemblyName
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 22
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -94,16 +148,31 @@ items:
       type: System.String
     return:
       type: System.Reflection.AssemblyName
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)
   id: GetLoadContext(System.Reflection.Assembly)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: GetLoadContext(Assembly)
+  nameWithType: AssemblyLoadContext.GetLoadContext(Assembly)
   fullName: System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 358
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetLoadContext
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 23
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -115,35 +184,31 @@ items:
       type: System.Reflection.Assembly
     return:
       type: System.Runtime.Loader.AssemblyLoadContext
-- uid: System.Runtime.Loader.AssemblyLoadContext.InitializeDefaultContext(System.Runtime.Loader.AssemblyLoadContext)
-  id: InitializeDefaultContext(System.Runtime.Loader.AssemblyLoadContext)
-  parent: System.Runtime.Loader.AssemblyLoadContext
-  name: InitializeDefaultContext(AssemblyLoadContext)
-  fullName: System.Runtime.Loader.AssemblyLoadContext.InitializeDefaultContext(System.Runtime.Loader.AssemblyLoadContext)
-  type: Method
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 319
-  assemblies:
-  - System.Runtime.Loader
-  namespace: System.Runtime.Loader
-  syntax:
-    content: public static void InitializeDefaultContext(AssemblyLoadContext context)
-    content.vb: Public Shared Sub InitializeDefaultContext(context As AssemblyLoadContext)
-    parameters:
-    - id: context
-      type: System.Runtime.Loader.AssemblyLoadContext
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Runtime.Loader.AssemblyLoadContext.Load(System.Reflection.AssemblyName)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.Load(System.Reflection.AssemblyName)
   id: Load(System.Reflection.AssemblyName)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: Load(AssemblyName)
+  nameWithType: AssemblyLoadContext.Load(AssemblyName)
   fullName: System.Runtime.Loader.AssemblyLoadContext.Load(System.Reflection.AssemblyName)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 178
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Load
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 24
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -155,16 +220,31 @@ items:
       type: System.Reflection.AssemblyName
     return:
       type: System.Reflection.Assembly
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
 - uid: System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName(System.Reflection.AssemblyName)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName(System.Reflection.AssemblyName)
   id: LoadFromAssemblyName(System.Reflection.AssemblyName)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: LoadFromAssemblyName(AssemblyName)
+  nameWithType: AssemblyLoadContext.LoadFromAssemblyName(AssemblyName)
   fullName: System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName(System.Reflection.AssemblyName)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 212
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LoadFromAssemblyName
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 25
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -176,16 +256,29 @@ items:
       type: System.Reflection.AssemblyName
     return:
       type: System.Reflection.Assembly
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(System.String)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(System.String)
   id: LoadFromAssemblyPath(System.String)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: LoadFromAssemblyPath(String)
+  nameWithType: AssemblyLoadContext.LoadFromAssemblyPath(String)
   fullName: System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 84
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LoadFromAssemblyPath
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 26
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -197,16 +290,29 @@ items:
       type: System.String
     return:
       type: System.Reflection.Assembly
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath(System.String,System.String)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath(System.String,System.String)
   id: LoadFromNativeImagePath(System.String,System.String)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: LoadFromNativeImagePath(String, String)
+  nameWithType: AssemblyLoadContext.LoadFromNativeImagePath(String, String)
   fullName: System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 101
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LoadFromNativeImagePath
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 27
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -220,16 +326,29 @@ items:
       type: System.String
     return:
       type: System.Reflection.Assembly
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Loader.AssemblyLoadContext.LoadFromStream(System.IO.Stream)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.LoadFromStream(System.IO.Stream)
   id: LoadFromStream(System.IO.Stream)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: LoadFromStream(IO.Stream)
+  nameWithType: AssemblyLoadContext.LoadFromStream(IO.Stream)
   fullName: System.Runtime.Loader.AssemblyLoadContext.LoadFromStream(System.IO.Stream)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 132
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LoadFromStream
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 28
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -241,16 +360,29 @@ items:
       type: System.IO.Stream
     return:
       type: System.Reflection.Assembly
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Loader.AssemblyLoadContext.LoadFromStream(System.IO.Stream,System.IO.Stream)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.LoadFromStream(System.IO.Stream,System.IO.Stream)
   id: LoadFromStream(System.IO.Stream,System.IO.Stream)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: LoadFromStream(IO.Stream, IO.Stream)
+  nameWithType: AssemblyLoadContext.LoadFromStream(IO.Stream, IO.Stream)
   fullName: System.Runtime.Loader.AssemblyLoadContext.LoadFromStream(System.IO.Stream, System.IO.Stream)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 137
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LoadFromStream
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 29
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -264,16 +396,29 @@ items:
       type: System.IO.Stream
     return:
       type: System.Reflection.Assembly
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(System.String)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(System.String)
   id: LoadUnmanagedDllFromPath(System.String)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: LoadUnmanagedDllFromPath(String)
+  nameWithType: AssemblyLoadContext.LoadUnmanagedDllFromPath(String)
   fullName: System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 255
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LoadUnmanagedDllFromPath
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 30
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -285,16 +430,29 @@ items:
       type: System.String
     return:
       type: System.IntPtr
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDll(System.String)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDll(System.String)
   id: LoadUnmanagedDll(System.String)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: LoadUnmanagedDll(String)
+  nameWithType: AssemblyLoadContext.LoadUnmanagedDll(String)
   fullName: System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDll(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 276
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LoadUnmanagedDll
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 31
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -306,16 +464,31 @@ items:
       type: System.String
     return:
       type: System.IntPtr
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
 - uid: System.Runtime.Loader.AssemblyLoadContext.SetProfileOptimizationRoot(System.String)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.SetProfileOptimizationRoot(System.String)
   id: SetProfileOptimizationRoot(System.String)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: SetProfileOptimizationRoot(String)
+  nameWithType: AssemblyLoadContext.SetProfileOptimizationRoot(String)
   fullName: System.Runtime.Loader.AssemblyLoadContext.SetProfileOptimizationRoot(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 383
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetProfileOptimizationRoot
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 32
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -325,16 +498,29 @@ items:
     parameters:
     - id: directoryPath
       type: System.String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Loader.AssemblyLoadContext.StartProfileOptimization(System.String)
+  commentId: M:System.Runtime.Loader.AssemblyLoadContext.StartProfileOptimization(System.String)
   id: StartProfileOptimization(System.String)
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: StartProfileOptimization(String)
+  nameWithType: AssemblyLoadContext.StartProfileOptimization(String)
   fullName: System.Runtime.Loader.AssemblyLoadContext.StartProfileOptimization(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 391
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: StartProfileOptimization
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 33
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
@@ -344,87 +530,359 @@ items:
     parameters:
     - id: profile
       type: System.String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Loader.AssemblyLoadContext.Resolving
+  commentId: E:System.Runtime.Loader.AssemblyLoadContext.Resolving
   id: Resolving
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: Resolving
+  nameWithType: AssemblyLoadContext.Resolving
   fullName: System.Runtime.Loader.AssemblyLoadContext.Resolving
   type: Event
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 407
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Resolving
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 34
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
   syntax:
     content: public event Func<AssemblyLoadContext, AssemblyName, Assembly> Resolving
     content.vb: Public Event Resolving As Func(Of AssemblyLoadContext, AssemblyName, Assembly)
+    return:
+      type: Func{System.Runtime.Loader.AssemblyLoadContext,System.Reflection.AssemblyName,System.Reflection.Assembly}
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Loader.AssemblyLoadContext.Unloading
+  commentId: E:System.Runtime.Loader.AssemblyLoadContext.Unloading
   id: Unloading
   parent: System.Runtime.Loader.AssemblyLoadContext
+  langs:
+  - csharp
+  - vb
   name: Unloading
+  nameWithType: AssemblyLoadContext.Unloading
   fullName: System.Runtime.Loader.AssemblyLoadContext.Unloading
   type: Event
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/Loader/AssemblyLoadContext.cs
-    startLine: 408
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Unloading
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 35
   assemblies:
   - System.Runtime.Loader
   namespace: System.Runtime.Loader
   syntax:
     content: public event Action<AssemblyLoadContext> Unloading
     content.vb: Public Event Unloading As Action(Of AssemblyLoadContext)
+    return:
+      type: Action{System.Runtime.Loader.AssemblyLoadContext}
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Runtime.Loader
+  commentId: N:System.Runtime.Loader
   isExternal: false
   name: System.Runtime.Loader
+  nameWithType: System.Runtime.Loader
   fullName: System.Runtime.Loader
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Runtime.Loader.AssemblyLoadContext
+  commentId: T:System.Runtime.Loader.AssemblyLoadContext
   parent: System.Runtime.Loader
   isExternal: false
   name: AssemblyLoadContext
+  nameWithType: AssemblyLoadContext
   fullName: System.Runtime.Loader.AssemblyLoadContext
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Reflection.AssemblyName
+  commentId: T:System.Reflection.AssemblyName
   parent: System.Reflection
   isExternal: false
   name: AssemblyName
+  nameWithType: AssemblyName
   fullName: System.Reflection.AssemblyName
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection
 - uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
   parent: System.Reflection
   isExternal: false
-  name: Reflection.Assembly
+  name: Assembly
+  nameWithType: Assembly
   fullName: System.Reflection.Assembly
 - uid: System.IO.Stream
+  commentId: T:System.IO.Stream
   parent: System.IO
   isExternal: false
   name: IO.Stream
+  nameWithType: IO.Stream
   fullName: System.IO.Stream
 - uid: System.IO
+  commentId: N:System.IO
   isExternal: false
   name: System.IO
+  nameWithType: System.IO
   fullName: System.IO
 - uid: System.IntPtr
+  commentId: T:System.IntPtr
   parent: System
   isExternal: false
   name: IntPtr
+  nameWithType: IntPtr
   fullName: System.IntPtr
+- uid: Func{System.Runtime.Loader.AssemblyLoadContext,System.Reflection.AssemblyName,System.Reflection.Assembly}
+  commentId: '!:Func{System.Runtime.Loader.AssemblyLoadContext,System.Reflection.AssemblyName,System.Reflection.Assembly}'
+  definition: Func`3
+  name: Func<AssemblyLoadContext, AssemblyName, Assembly>
+  nameWithType: Func<AssemblyLoadContext, AssemblyName, Assembly>
+  fullName: Func<System.Runtime.Loader.AssemblyLoadContext, System.Reflection.AssemblyName, System.Reflection.Assembly>
+  nameWithType.vb: Func(Of AssemblyLoadContext, AssemblyName, Assembly)
+  fullname.vb: Func(Of System.Runtime.Loader.AssemblyLoadContext, System.Reflection.AssemblyName, System.Reflection.Assembly)
+  name.vb: Func(Of AssemblyLoadContext, AssemblyName, Assembly)
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Runtime.Loader.AssemblyLoadContext
+    name: AssemblyLoadContext
+    nameWithType: AssemblyLoadContext
+    fullName: System.Runtime.Loader.AssemblyLoadContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Reflection.AssemblyName
+    name: AssemblyName
+    nameWithType: AssemblyName
+    fullName: System.Reflection.AssemblyName
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: System.Reflection.Assembly
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Runtime.Loader.AssemblyLoadContext
+    name: AssemblyLoadContext
+    nameWithType: AssemblyLoadContext
+    fullName: System.Runtime.Loader.AssemblyLoadContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Reflection.AssemblyName
+    name: AssemblyName
+    nameWithType: AssemblyName
+    fullName: System.Reflection.AssemblyName
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Reflection.Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: System.Reflection.Assembly
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`3
+  commentId: '!:Func`3'
+  isExternal: true
+  name: Func<, , >
+  nameWithType: Func<, , >
+  fullName: Func<, , >
+  nameWithType.vb: Func(Of , , )
+  fullname.vb: Func(Of , , )
+  name.vb: Func(Of , , )
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Action{System.Runtime.Loader.AssemblyLoadContext}
+  commentId: '!:Action{System.Runtime.Loader.AssemblyLoadContext}'
+  definition: Action`1
+  name: Action<AssemblyLoadContext>
+  nameWithType: Action<AssemblyLoadContext>
+  fullName: Action<System.Runtime.Loader.AssemblyLoadContext>
+  nameWithType.vb: Action(Of AssemblyLoadContext)
+  fullname.vb: Action(Of System.Runtime.Loader.AssemblyLoadContext)
+  name.vb: Action(Of AssemblyLoadContext)
+  spec.csharp:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Runtime.Loader.AssemblyLoadContext
+    name: AssemblyLoadContext
+    nameWithType: AssemblyLoadContext
+    fullName: System.Runtime.Loader.AssemblyLoadContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Runtime.Loader.AssemblyLoadContext
+    name: AssemblyLoadContext
+    nameWithType: AssemblyLoadContext
+    fullName: System.Runtime.Loader.AssemblyLoadContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Action`1
+  commentId: '!:Action`1'
+  isExternal: true
+  name: Action<>
+  nameWithType: Action<>
+  fullName: Action<>
+  nameWithType.vb: Action(Of )
+  fullname.vb: Action(Of )
+  name.vb: Action(Of )
+  spec.csharp:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: )
+    nameWithType: )
+    fullName: )

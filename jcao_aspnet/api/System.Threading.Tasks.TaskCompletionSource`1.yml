@@ -1,5 +1,6 @@
 items:
 - uid: System.Threading.Tasks.TaskCompletionSource`1
+  commentId: T:System.Threading.Tasks.TaskCompletionSource`1
   id: TaskCompletionSource`1
   parent: System.Threading.Tasks
   children:
@@ -17,561 +18,742 @@ items:
   - System.Threading.Tasks.TaskCompletionSource`1.TrySetException(System.Collections.Generic.IEnumerable{System.Exception})
   - System.Threading.Tasks.TaskCompletionSource`1.TrySetException(System.Exception)
   - System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(`0)
+  langs:
+  - csharp
+  - vb
   name: TaskCompletionSource<TResult>
-  name.vb: TaskCompletionSource(Of TResult)
+  nameWithType: TaskCompletionSource<TResult>
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult)
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 49
+      repo: https://github.com/dotnet/corefx.git
+    id: TaskCompletionSource
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 343
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Represents the producer side of a <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> unbound to a delegate, providing access to the consumer side through the <xref href="System.Threading.Tasks.TaskCompletionSource`1.Task" data-throw-if-not-resolved="false"></xref> property.
   syntax:
     content: 'public class TaskCompletionSource<TResult> : object'
-    content.vb: Public Class TaskCompletionSource(Of TResult) Inherits Object
+    content.vb: >-
+      Public Class TaskCompletionSource(Of TResult)
+          Inherits Object
     typeParameters:
     - id: TResult
   inheritance:
   - System.Object
+  nameWithType.vb: TaskCompletionSource(Of TResult)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult)
+  name.vb: TaskCompletionSource(Of TResult)
 - uid: System.Threading.Tasks.TaskCompletionSource`1.#ctor
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.#ctor
   id: '#ctor'
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: TaskCompletionSource()
+  nameWithType: TaskCompletionSource<TResult>.TaskCompletionSource()
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.TaskCompletionSource()
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TaskCompletionSource()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 57
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 345
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Creates a <xref href="System.Threading.Tasks.TaskCompletionSource`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public TaskCompletionSource()
     content.vb: Public Sub New
+  nameWithType.vb: TaskCompletionSource(Of TResult).TaskCompletionSource()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TaskCompletionSource()
 - uid: System.Threading.Tasks.TaskCompletionSource`1.#ctor(System.Object)
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.#ctor(System.Object)
   id: '#ctor(System.Object)'
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: TaskCompletionSource(Object)
+  nameWithType: TaskCompletionSource<TResult>.TaskCompletionSource(Object)
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.TaskCompletionSource(System.Object)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TaskCompletionSource(System.Object)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 88
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 346
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Creates a <xref href="System.Threading.Tasks.TaskCompletionSource`1" data-throw-if-not-resolved="false"></xref> with the specified state.
   syntax:
     content: public TaskCompletionSource(object state)
     content.vb: Public Sub New(state As Object)
     parameters:
     - id: state
       type: System.Object
-      description: The state to use as the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref>'s AsyncState.
+  nameWithType.vb: TaskCompletionSource(Of TResult).TaskCompletionSource(Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TaskCompletionSource(System.Object)
 - uid: System.Threading.Tasks.TaskCompletionSource`1.#ctor(System.Object,System.Threading.Tasks.TaskCreationOptions)
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.#ctor(System.Object,System.Threading.Tasks.TaskCreationOptions)
   id: '#ctor(System.Object,System.Threading.Tasks.TaskCreationOptions)'
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: TaskCompletionSource(Object, TaskCreationOptions)
+  nameWithType: TaskCompletionSource<TResult>.TaskCompletionSource(Object, TaskCreationOptions)
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.TaskCompletionSource(System.Object, System.Threading.Tasks.TaskCreationOptions)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TaskCompletionSource(System.Object, System.Threading.Tasks.TaskCreationOptions)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 105
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 347
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Creates a <xref href="System.Threading.Tasks.TaskCompletionSource`1" data-throw-if-not-resolved="false"></xref> with the specified state and options.
   syntax:
     content: public TaskCompletionSource(object state, TaskCreationOptions creationOptions)
     content.vb: Public Sub New(state As Object, creationOptions As TaskCreationOptions)
     parameters:
     - id: state
       type: System.Object
-      description: The state to use as the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref>'s AsyncState.
     - id: creationOptions
       type: System.Threading.Tasks.TaskCreationOptions
-      description: The options to use when creating the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The *creationOptions* represent options invalid for use with a <xref href="System.Threading.Tasks.TaskCompletionSource`1" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: TaskCompletionSource(Of TResult).TaskCompletionSource(Object, TaskCreationOptions)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TaskCompletionSource(System.Object, System.Threading.Tasks.TaskCreationOptions)
 - uid: System.Threading.Tasks.TaskCompletionSource`1.#ctor(System.Threading.Tasks.TaskCreationOptions)
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.#ctor(System.Threading.Tasks.TaskCreationOptions)
   id: '#ctor(System.Threading.Tasks.TaskCreationOptions)'
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: TaskCompletionSource(TaskCreationOptions)
+  nameWithType: TaskCompletionSource<TResult>.TaskCompletionSource(TaskCreationOptions)
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.TaskCompletionSource(System.Threading.Tasks.TaskCreationOptions)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TaskCompletionSource(System.Threading.Tasks.TaskCreationOptions)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 77
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 348
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Creates a <xref href="System.Threading.Tasks.TaskCompletionSource`1" data-throw-if-not-resolved="false"></xref> with the specified options.
   syntax:
     content: public TaskCompletionSource(TaskCreationOptions creationOptions)
     content.vb: Public Sub New(creationOptions As TaskCreationOptions)
     parameters:
     - id: creationOptions
       type: System.Threading.Tasks.TaskCreationOptions
-      description: The options to use when creating the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The *creationOptions* represent options invalid for use with a <xref href="System.Threading.Tasks.TaskCompletionSource`1" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: TaskCompletionSource(Of TResult).TaskCompletionSource(TaskCreationOptions)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TaskCompletionSource(System.Threading.Tasks.TaskCreationOptions)
 - uid: System.Threading.Tasks.TaskCompletionSource`1.Task
+  commentId: P:System.Threading.Tasks.TaskCompletionSource`1.Task
   id: Task
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: Task
+  nameWithType: TaskCompletionSource<TResult>.Task
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.Task
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).Task
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 123
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Task
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 349
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Gets the <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> created by this <xref href="System.Threading.Tasks.TaskCompletionSource`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public Task<TResult> Task { get; }
     content.vb: Public ReadOnly Property Task As Task(Of TResult)
     parameters: []
     return:
       type: System.Threading.Tasks.Task{{TResult}}
-      description: Returns the <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> created by this <xref href="System.Threading.Tasks.TaskCompletionSource`1" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: TaskCompletionSource(Of TResult).Task
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).Task
 - uid: System.Threading.Tasks.TaskCompletionSource`1.SetCanceled
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.SetCanceled
   id: SetCanceled
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: SetCanceled()
+  nameWithType: TaskCompletionSource<TResult>.SetCanceled()
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.SetCanceled()
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).SetCanceled()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 363
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetCanceled
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 350
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Transitions the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Threading.Tasks.TaskStatus.Canceled" data-throw-if-not-resolved="false"></xref> state.
   syntax:
     content: public void SetCanceled()
     content.vb: Public Sub SetCanceled
-  exceptions:
-  - type: System.InvalidOperationException
-    description: 'The underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> is already in one of the three final states: <xref href="System.Threading.Tasks.TaskStatus.RanToCompletion" data-throw-if-not-resolved="false"></xref>, <xref href="System.Threading.Tasks.TaskStatus.Faulted" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Threading.Tasks.TaskStatus.Canceled" data-throw-if-not-resolved="false"></xref>, or if the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> has already been disposed.'
+  nameWithType.vb: TaskCompletionSource(Of TResult).SetCanceled()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).SetCanceled()
 - uid: System.Threading.Tasks.TaskCompletionSource`1.SetException(System.Collections.Generic.IEnumerable{System.Exception})
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.SetException(System.Collections.Generic.IEnumerable{System.Exception})
   id: SetException(System.Collections.Generic.IEnumerable{System.Exception})
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: SetException(Collections.Generic.IEnumerable<Exception>)
-  name.vb: SetException(Collections.Generic.IEnumerable(Of Exception))
+  nameWithType: TaskCompletionSource<TResult>.SetException(Collections.Generic.IEnumerable<Exception>)
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.SetException(System.Collections.Generic.IEnumerable<System.Exception>)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).SetException(System.Collections.Generic.IEnumerable(Of System.Exception))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 266
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetException
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 351
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Transitions the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Threading.Tasks.TaskStatus.Faulted" data-throw-if-not-resolved="false"></xref> state.
   syntax:
     content: public void SetException(Collections.Generic.IEnumerable<Exception> exceptions)
     content.vb: Public Sub SetException(exceptions As Collections.Generic.IEnumerable(Of Exception))
     parameters:
     - id: exceptions
       type: System.Collections.Generic.IEnumerable{System.Exception}
-      description: The collection of exceptions to bind to this <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.Tasks.TaskCompletionSource`1.Task" data-throw-if-not-resolved="false"></xref> was disposed.
-  - type: System.ArgumentNullException
-    description: The *exceptions* argument is null.
-  - type: System.ArgumentException
-    description: There are one or more null elements in *exceptions*.
-  - type: System.InvalidOperationException
-    description: 'The underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> is already in one of the three final states: <xref href="System.Threading.Tasks.TaskStatus.RanToCompletion" data-throw-if-not-resolved="false"></xref>, <xref href="System.Threading.Tasks.TaskStatus.Faulted" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Threading.Tasks.TaskStatus.Canceled" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: TaskCompletionSource(Of TResult).SetException(Collections.Generic.IEnumerable(Of Exception))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).SetException(System.Collections.Generic.IEnumerable(Of System.Exception))
+  name.vb: SetException(Collections.Generic.IEnumerable(Of Exception))
 - uid: System.Threading.Tasks.TaskCompletionSource`1.SetException(System.Exception)
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.SetException(System.Exception)
   id: SetException(System.Exception)
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: SetException(Exception)
+  nameWithType: TaskCompletionSource<TResult>.SetException(Exception)
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.SetException(System.Exception)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).SetException(System.Exception)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 238
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetException
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 352
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Transitions the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Threading.Tasks.TaskStatus.Faulted" data-throw-if-not-resolved="false"></xref> state.
   syntax:
     content: public void SetException(Exception exception)
     content.vb: Public Sub SetException(exception As Exception)
     parameters:
     - id: exception
       type: System.Exception
-      description: The exception to bind to this <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.Tasks.TaskCompletionSource`1.Task" data-throw-if-not-resolved="false"></xref> was disposed.
-  - type: System.ArgumentNullException
-    description: The *exception* argument is null.
-  - type: System.InvalidOperationException
-    description: 'The underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> is already in one of the three final states: <xref href="System.Threading.Tasks.TaskStatus.RanToCompletion" data-throw-if-not-resolved="false"></xref>, <xref href="System.Threading.Tasks.TaskStatus.Faulted" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Threading.Tasks.TaskStatus.Canceled" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: TaskCompletionSource(Of TResult).SetException(Exception)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).SetException(System.Exception)
 - uid: System.Threading.Tasks.TaskCompletionSource`1.SetResult(`0)
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.SetResult(`0)
   id: SetResult(`0)
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: SetResult(TResult)
+  nameWithType: TaskCompletionSource<TResult>.SetResult(TResult)
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.SetResult(TResult)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).SetResult(TResult)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 315
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetResult
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 353
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Transitions the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Threading.Tasks.TaskStatus.RanToCompletion" data-throw-if-not-resolved="false"></xref> state.
   syntax:
     content: public void SetResult(TResult result)
     content.vb: Public Sub SetResult(result As TResult)
     parameters:
     - id: result
       type: '{TResult}'
-      description: The result value to bind to this <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.Tasks.TaskCompletionSource`1.Task" data-throw-if-not-resolved="false"></xref> was disposed.
-  - type: System.InvalidOperationException
-    description: 'The underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> is already in one of the three final states: <xref href="System.Threading.Tasks.TaskStatus.RanToCompletion" data-throw-if-not-resolved="false"></xref>, <xref href="System.Threading.Tasks.TaskStatus.Faulted" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Threading.Tasks.TaskStatus.Canceled" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: TaskCompletionSource(Of TResult).SetResult(TResult)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).SetResult(TResult)
 - uid: System.Threading.Tasks.TaskCompletionSource`1.TrySetCanceled
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.TrySetCanceled
   id: TrySetCanceled
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: TrySetCanceled()
+  nameWithType: TaskCompletionSource<TResult>.TrySetCanceled()
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.TrySetCanceled()
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TrySetCanceled()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 336
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TrySetCanceled
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 354
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Attempts to transition the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Threading.Tasks.TaskStatus.Canceled" data-throw-if-not-resolved="false"></xref> state.
   syntax:
     content: public bool TrySetCanceled()
     content.vb: Public Function TrySetCanceled As Boolean
     return:
       type: System.Boolean
-      description: True if the operation was successful; false if the operation was unsuccessful or the object has already been disposed.
+  nameWithType.vb: TaskCompletionSource(Of TResult).TrySetCanceled()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TrySetCanceled()
 - uid: System.Threading.Tasks.TaskCompletionSource`1.TrySetCanceled(System.Threading.CancellationToken)
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.TrySetCanceled(System.Threading.CancellationToken)
   id: TrySetCanceled(System.Threading.CancellationToken)
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: TrySetCanceled(CancellationToken)
+  nameWithType: TaskCompletionSource<TResult>.TrySetCanceled(CancellationToken)
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.TrySetCanceled(System.Threading.CancellationToken)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TrySetCanceled(System.Threading.CancellationToken)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 342
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TrySetCanceled
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 355
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Attempts to transition the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Threading.Tasks.TaskStatus.Canceled" data-throw-if-not-resolved="false"></xref> state and enables a cancellation token to be stored in the canceled task.
   syntax:
     content: public bool TrySetCanceled(CancellationToken cancellationToken)
     content.vb: Public Function TrySetCanceled(cancellationToken As CancellationToken) As Boolean
     parameters:
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: A cancellation token.
     return:
       type: System.Boolean
-      description: true if the operation is successful; otherwise, false.
+  nameWithType.vb: TaskCompletionSource(Of TResult).TrySetCanceled(CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TrySetCanceled(System.Threading.CancellationToken)
 - uid: System.Threading.Tasks.TaskCompletionSource`1.TrySetException(System.Collections.Generic.IEnumerable{System.Exception})
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.TrySetException(System.Collections.Generic.IEnumerable{System.Exception})
   id: TrySetException(System.Collections.Generic.IEnumerable{System.Exception})
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: TrySetException(Collections.Generic.IEnumerable<Exception>)
-  name.vb: TrySetException(Collections.Generic.IEnumerable(Of Exception))
+  nameWithType: TaskCompletionSource<TResult>.TrySetException(Collections.Generic.IEnumerable<Exception>)
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.TrySetException(System.Collections.Generic.IEnumerable<System.Exception>)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TrySetException(System.Collections.Generic.IEnumerable(Of System.Exception))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 185
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TrySetException
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 356
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Attempts to transition the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Threading.Tasks.TaskStatus.Faulted" data-throw-if-not-resolved="false"></xref> state.
   syntax:
     content: public bool TrySetException(Collections.Generic.IEnumerable<Exception> exceptions)
     content.vb: Public Function TrySetException(exceptions As Collections.Generic.IEnumerable(Of Exception)) As Boolean
     parameters:
     - id: exceptions
       type: System.Collections.Generic.IEnumerable{System.Exception}
-      description: The collection of exceptions to bind to this <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Boolean
-      description: True if the operation was successful; otherwise, false.
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.Tasks.TaskCompletionSource`1.Task" data-throw-if-not-resolved="false"></xref> was disposed.
-  - type: System.ArgumentNullException
-    description: The *exceptions* argument is null.
-  - type: System.ArgumentException
-    description: There are one or more null elements in *exceptions*.-or-The *exceptions* collection is empty.
+  nameWithType.vb: TaskCompletionSource(Of TResult).TrySetException(Collections.Generic.IEnumerable(Of Exception))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TrySetException(System.Collections.Generic.IEnumerable(Of System.Exception))
+  name.vb: TrySetException(Collections.Generic.IEnumerable(Of Exception))
 - uid: System.Threading.Tasks.TaskCompletionSource`1.TrySetException(System.Exception)
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.TrySetException(System.Exception)
   id: TrySetException(System.Exception)
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: TrySetException(Exception)
+  nameWithType: TaskCompletionSource<TResult>.TrySetException(Exception)
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.TrySetException(System.Exception)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TrySetException(System.Exception)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 156
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TrySetException
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 357
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Attempts to transition the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Threading.Tasks.TaskStatus.Faulted" data-throw-if-not-resolved="false"></xref> state.
   syntax:
     content: public bool TrySetException(Exception exception)
     content.vb: Public Function TrySetException(exception As Exception) As Boolean
     parameters:
     - id: exception
       type: System.Exception
-      description: The exception to bind to this <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Boolean
-      description: True if the operation was successful; otherwise, false.
-  exceptions:
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.Tasks.TaskCompletionSource`1.Task" data-throw-if-not-resolved="false"></xref> was disposed.
-  - type: System.ArgumentNullException
-    description: The *exception* argument is null.
+  nameWithType.vb: TaskCompletionSource(Of TResult).TrySetException(Exception)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TrySetException(System.Exception)
 - uid: System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(`0)
+  commentId: M:System.Threading.Tasks.TaskCompletionSource`1.TrySetResult(`0)
   id: TrySetResult(`0)
   parent: System.Threading.Tasks.TaskCompletionSource`1
+  langs:
+  - csharp
+  - vb
   name: TrySetResult(TResult)
+  nameWithType: TaskCompletionSource<TResult>.TrySetResult(TResult)
   fullName: System.Threading.Tasks.TaskCompletionSource<TResult>.TrySetResult(TResult)
-  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TrySetResult(TResult)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/TaskCompletionSource.cs
-    startLine: 292
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TrySetResult
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 358
   assemblies:
   - System.Threading.Tasks
   namespace: System.Threading.Tasks
-  summary: Attempts to transition the underlying <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref> into the <xref href="System.Threading.Tasks.TaskStatus.RanToCompletion" data-throw-if-not-resolved="false"></xref> state.
   syntax:
     content: public bool TrySetResult(TResult result)
     content.vb: Public Function TrySetResult(result As TResult) As Boolean
     parameters:
     - id: result
       type: '{TResult}'
-      description: The result value to bind to this <xref href="System.Threading.Tasks.Task`1" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Boolean
-      description: True if the operation was successful; otherwise, false.
+  nameWithType.vb: TaskCompletionSource(Of TResult).TrySetResult(TResult)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Threading.Tasks.TaskCompletionSource(Of TResult).TrySetResult(TResult)
 references:
 - uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
   isExternal: false
   name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
   fullName: System.Threading.Tasks
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Threading.Tasks.TaskCreationOptions
+  commentId: T:System.Threading.Tasks.TaskCreationOptions
   parent: System.Threading.Tasks
   isExternal: false
   name: TaskCreationOptions
+  nameWithType: TaskCreationOptions
   fullName: System.Threading.Tasks.TaskCreationOptions
 - uid: System.Threading.Tasks.Task{{TResult}}
+  commentId: T:System.Threading.Tasks.Task{`0}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   name: Task<TResult>
-  name.vb: Task(Of TResult)
+  nameWithType: Task<TResult>
   fullName: System.Threading.Tasks.Task<TResult>
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  nameWithType.vb: Task(Of TResult)
+  fullname.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
     fullName: System.Threading.Tasks.Task
   - name: <
+    nameWithType: <
     fullName: <
   - name: TResult
+    nameWithType: TResult
     fullName: TResult
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
     name: Task
+    nameWithType: Task
     fullName: System.Threading.Tasks.Task
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TResult
+    nameWithType: TResult
     fullName: TResult
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Threading.Tasks.Task`1
-  parent: System.Threading.Tasks
+  commentId: T:System.Threading.Tasks.Task`1
   isExternal: false
   name: Threading.Tasks.Task<>
-  name.vb: Threading.Tasks.Task(Of )
+  nameWithType: Threading.Tasks.Task<>
   fullName: System.Threading.Tasks.Task<>
-  fullName.vb: System.Threading.Tasks.Task(Of )
+  nameWithType.vb: Threading.Tasks.Task(Of )
+  fullname.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Threading.Tasks.Task(Of )
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Threading.Tasks.Task
+    nameWithType: Threading.Tasks.Task
     fullName: System.Threading.Tasks.Task
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
     name: Threading.Tasks.Task
+    nameWithType: Threading.Tasks.Task
     fullName: System.Threading.Tasks.Task
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable{System.Exception}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Exception}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<Exception>
-  name.vb: Collections.Generic.IEnumerable(Of Exception)
+  nameWithType: Collections.Generic.IEnumerable<Exception>
   fullName: System.Collections.Generic.IEnumerable<System.Exception>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Exception)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of Exception)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Exception)
+  name.vb: Collections.Generic.IEnumerable(Of Exception)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Exception
     name: Exception
+    nameWithType: Exception
     fullName: System.Exception
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Exception
     name: Exception
+    nameWithType: Exception
     fullName: System.Exception
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: false
   name: Exception
+  nameWithType: Exception
   fullName: System.Exception
 - uid: '{TResult}'
+  commentId: '!:TResult'
+  definition: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: TResult
   isExternal: false
   name: TResult
+  nameWithType: TResult
   fullName: TResult
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
   parent: System.Threading
   isExternal: false
   name: Threading.CancellationToken
+  nameWithType: Threading.CancellationToken
   fullName: System.Threading.CancellationToken
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: System.ObjectDisposedException
-  isExternal: false
-  name: ObjectDisposedException
-  fullName: System.ObjectDisposedException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

@@ -1,137 +1,204 @@
 items:
 - uid: System.Threading.Tasks.ParallelLoopResult
+  commentId: T:System.Threading.Tasks.ParallelLoopResult
   id: ParallelLoopResult
   parent: System.Threading.Tasks
   children:
   - System.Threading.Tasks.ParallelLoopResult.IsCompleted
   - System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration
+  langs:
+  - csharp
+  - vb
   name: ParallelLoopResult
+  nameWithType: ParallelLoopResult
   fullName: System.Threading.Tasks.ParallelLoopResult
   type: Struct
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
-    startLine: 616
+      repo: https://github.com/dotnet/corefx.git
+    id: ParallelLoopResult
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 47
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Provides completion status on the execution of a <xref href="System.Threading.Tasks.Parallel" data-throw-if-not-resolved="false"></xref> loop.
   syntax:
     content: public struct ParallelLoopResult
     content.vb: Public Structure ParallelLoopResult
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
 - uid: System.Threading.Tasks.ParallelLoopResult.IsCompleted
+  commentId: P:System.Threading.Tasks.ParallelLoopResult.IsCompleted
   id: IsCompleted
   parent: System.Threading.Tasks.ParallelLoopResult
+  langs:
+  - csharp
+  - vb
   name: IsCompleted
+  nameWithType: ParallelLoopResult.IsCompleted
   fullName: System.Threading.Tasks.ParallelLoopResult.IsCompleted
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
-    startLine: 625
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsCompleted
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 50
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Gets whether the loop ran to completion, such that all iterations of the loop were executed and the loop didn't receive a request to end prematurely.
   syntax:
     content: public bool IsCompleted { get; }
     content.vb: Public ReadOnly Property IsCompleted As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the loop ran to completion; otherwise false;
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration
+  commentId: P:System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration
   id: LowestBreakIteration
   parent: System.Threading.Tasks.ParallelLoopResult
+  langs:
+  - csharp
+  - vb
   name: LowestBreakIteration
+  nameWithType: ParallelLoopResult.LowestBreakIteration
   fullName: System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
-    startLine: 636
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LowestBreakIteration
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 51
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Gets the index of the lowest iteration from which <xref href="System.Threading.Tasks.ParallelLoopState.Break" data-throw-if-not-resolved="false"></xref> was called.
   syntax:
     content: public Nullable<long> LowestBreakIteration { get; }
     content.vb: Public ReadOnly Property LowestBreakIteration As Nullable(Of Long)
     parameters: []
     return:
       type: System.Nullable{System.Int64}
-      description: Returns an integer that represents the lowest iteration from which the Break statement was called.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
   isExternal: false
   name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
   fullName: System.Threading.Tasks
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Nullable{System.Int64}
+  commentId: '!:System.Nullable{System.Int64}'
   definition: System.Nullable`1
   name: Nullable<Int64>
-  name.vb: Nullable(Of Int64)
+  nameWithType: Nullable<Int64>
   fullName: System.Nullable<System.Int64>
-  fullName.vb: System.Nullable(Of System.Int64)
+  nameWithType.vb: Nullable(Of Int64)
+  fullname.vb: System.Nullable(Of System.Int64)
+  name.vb: Nullable(Of Int64)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Nullable`1
+  commentId: T:System.Nullable`1
   parent: System
   isExternal: false
   name: Nullable<>
-  name.vb: Nullable(Of )
+  nameWithType: Nullable<>
   fullName: System.Nullable<>
-  fullName.vb: System.Nullable(Of )
+  nameWithType.vb: Nullable(Of )
+  fullname.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )

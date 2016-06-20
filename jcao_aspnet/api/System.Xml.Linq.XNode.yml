@@ -1,5 +1,6 @@
 items:
 - uid: System.Xml.Linq.XNode
+  commentId: T:System.Xml.Linq.XNode
   id: XNode
   parent: System.Xml.Linq
   children:
@@ -36,6 +37,7 @@ items:
   - csharp
   - vb
   name: XNode
+  nameWithType: XNode
   fullName: System.Xml.Linq.XNode
   type: Class
   source:
@@ -43,15 +45,17 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: XNode
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 338
+    startLine: 341
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Represents the abstract concept of a node (element, comment, document type, processing instruction, or text node) in the XML tree.
   syntax:
     content: 'public abstract class XNode : XObject'
-    content.vb: Public MustInherit Class XNode Inherits XObject
+    content.vb: >-
+      Public MustInherit Class XNode
+          Inherits XObject
   inheritance:
   - System.Object
   - System.Xml.Linq.XObject
@@ -69,13 +73,23 @@ items:
   - System.Xml.Linq.XObject.Annotations``1
   - System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
   - System.Xml.Linq.XObject.RemoveAnnotations``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Xml.Linq.XNode.DocumentOrderComparer
+  commentId: P:System.Xml.Linq.XNode.DocumentOrderComparer
   id: DocumentOrderComparer
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: DocumentOrderComparer
+  nameWithType: XNode.DocumentOrderComparer
   fullName: System.Xml.Linq.XNode.DocumentOrderComparer
   type: Property
   source:
@@ -83,26 +97,35 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: DocumentOrderComparer
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 341
+    startLine: 344
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Gets a comparer that can compare the relative position of two nodes.
   syntax:
     content: public static XNodeDocumentOrderComparer DocumentOrderComparer { get; }
     content.vb: Public Shared ReadOnly Property DocumentOrderComparer As XNodeDocumentOrderComparer
     parameters: []
     return:
       type: System.Xml.Linq.XNodeDocumentOrderComparer
-      description: An <xref href="System.Xml.Linq.XNodeDocumentOrderComparer" data-throw-if-not-resolved="false"></xref> that can compare the relative position of two nodes.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Xml.Linq.XNode.EqualityComparer
+  commentId: P:System.Xml.Linq.XNode.EqualityComparer
   id: EqualityComparer
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: EqualityComparer
+  nameWithType: XNode.EqualityComparer
   fullName: System.Xml.Linq.XNode.EqualityComparer
   type: Property
   source:
@@ -110,26 +133,35 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: EqualityComparer
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 342
+    startLine: 345
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Gets a comparer that can compare two nodes for value equality.
   syntax:
     content: public static XNodeEqualityComparer EqualityComparer { get; }
     content.vb: Public Shared ReadOnly Property EqualityComparer As XNodeEqualityComparer
     parameters: []
     return:
       type: System.Xml.Linq.XNodeEqualityComparer
-      description: A <xref href="System.Xml.Linq.XNodeEqualityComparer" data-throw-if-not-resolved="false"></xref> that can compare two nodes for value equality.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Xml.Linq.XNode.NextNode
+  commentId: P:System.Xml.Linq.XNode.NextNode
   id: NextNode
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: NextNode
+  nameWithType: XNode.NextNode
   fullName: System.Xml.Linq.XNode.NextNode
   type: Property
   source:
@@ -137,26 +169,33 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NextNode
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 343
+    startLine: 346
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Gets the next sibling node of this node.
   syntax:
     content: public XNode NextNode { get; }
     content.vb: Public ReadOnly Property NextNode As XNode
     parameters: []
     return:
       type: System.Xml.Linq.XNode
-      description: The <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> that contains the next sibling node.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Xml.Linq.XNode.PreviousNode
+  commentId: P:System.Xml.Linq.XNode.PreviousNode
   id: PreviousNode
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: PreviousNode
+  nameWithType: XNode.PreviousNode
   fullName: System.Xml.Linq.XNode.PreviousNode
   type: Property
   source:
@@ -164,26 +203,33 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: PreviousNode
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 344
+    startLine: 347
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Gets the previous sibling node of this node.
   syntax:
     content: public XNode PreviousNode { get; }
     content.vb: Public ReadOnly Property PreviousNode As XNode
     parameters: []
     return:
       type: System.Xml.Linq.XNode
-      description: The <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> that contains the previous sibling node.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Xml.Linq.XNode.AddAfterSelf(System.Object)
+  commentId: M:System.Xml.Linq.XNode.AddAfterSelf(System.Object)
   id: AddAfterSelf(System.Object)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: AddAfterSelf(Object)
+  nameWithType: XNode.AddAfterSelf(Object)
   fullName: System.Xml.Linq.XNode.AddAfterSelf(System.Object)
   type: Method
   source:
@@ -191,61 +237,66 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: AddAfterSelf
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 345
+    startLine: 348
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Adds the specified content immediately after this node.
   syntax:
     content: public void AddAfterSelf(object content)
     content.vb: Public Sub AddAfterSelf(content As Object)
     parameters:
     - id: content
       type: System.Object
-      description: A content object that contains simple content or a collection of content objects to be added after this node.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The parent is null.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.AddAfterSelf(System.Object[])
+  commentId: M:System.Xml.Linq.XNode.AddAfterSelf(System.Object[])
   id: AddAfterSelf(System.Object[])
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: AddAfterSelf(Object[])
-  name.vb: AddAfterSelf(Object())
+  nameWithType: XNode.AddAfterSelf(Object[])
   fullName: System.Xml.Linq.XNode.AddAfterSelf(System.Object[])
-  fullName.vb: System.Xml.Linq.XNode.AddAfterSelf(System.Object())
   type: Method
   source:
     remote:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: AddAfterSelf
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 346
+    startLine: 349
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Adds the specified content immediately after this node.
   syntax:
     content: public void AddAfterSelf(params object[] content)
     content.vb: Public Sub AddAfterSelf(ParamArray content As Object())
     parameters:
     - id: content
       type: System.Object[]
-      description: A parameter list of content objects.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The parent is null.
+  nameWithType.vb: XNode.AddAfterSelf(Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Xml.Linq.XNode.AddAfterSelf(System.Object())
+  name.vb: AddAfterSelf(Object())
 - uid: System.Xml.Linq.XNode.AddBeforeSelf(System.Object)
+  commentId: M:System.Xml.Linq.XNode.AddBeforeSelf(System.Object)
   id: AddBeforeSelf(System.Object)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: AddBeforeSelf(Object)
+  nameWithType: XNode.AddBeforeSelf(Object)
   fullName: System.Xml.Linq.XNode.AddBeforeSelf(System.Object)
   type: Method
   source:
@@ -253,61 +304,66 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: AddBeforeSelf
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 347
+    startLine: 350
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Adds the specified content immediately before this node.
   syntax:
     content: public void AddBeforeSelf(object content)
     content.vb: Public Sub AddBeforeSelf(content As Object)
     parameters:
     - id: content
       type: System.Object
-      description: A content object that contains simple content or a collection of content objects to be added before this node.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The parent is null.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.AddBeforeSelf(System.Object[])
+  commentId: M:System.Xml.Linq.XNode.AddBeforeSelf(System.Object[])
   id: AddBeforeSelf(System.Object[])
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: AddBeforeSelf(Object[])
-  name.vb: AddBeforeSelf(Object())
+  nameWithType: XNode.AddBeforeSelf(Object[])
   fullName: System.Xml.Linq.XNode.AddBeforeSelf(System.Object[])
-  fullName.vb: System.Xml.Linq.XNode.AddBeforeSelf(System.Object())
   type: Method
   source:
     remote:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: AddBeforeSelf
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 348
+    startLine: 351
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Adds the specified content immediately before this node.
   syntax:
     content: public void AddBeforeSelf(params object[] content)
     content.vb: Public Sub AddBeforeSelf(ParamArray content As Object())
     parameters:
     - id: content
       type: System.Object[]
-      description: A parameter list of content objects.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The parent is null.
+  nameWithType.vb: XNode.AddBeforeSelf(Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Xml.Linq.XNode.AddBeforeSelf(System.Object())
+  name.vb: AddBeforeSelf(Object())
 - uid: System.Xml.Linq.XNode.Ancestors
+  commentId: M:System.Xml.Linq.XNode.Ancestors
   id: Ancestors
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: Ancestors()
+  nameWithType: XNode.Ancestors()
   fullName: System.Xml.Linq.XNode.Ancestors()
   type: Method
   source:
@@ -315,25 +371,30 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Ancestors
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 349
+    startLine: 352
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Returns a collection of the ancestor elements of this node.
   syntax:
     content: public Collections.Generic.IEnumerable<XElement> Ancestors()
     content.vb: Public Function Ancestors As Collections.Generic.IEnumerable(Of XElement)
     return:
       type: System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement}
-      description: An <xref href="System.Collections.Generic.IEnumerable`1" data-throw-if-not-resolved="false"></xref> of <xref href="System.Xml.Linq.XElement" data-throw-if-not-resolved="false"></xref> of the ancestor elements of this node.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.Ancestors(System.Xml.Linq.XName)
+  commentId: M:System.Xml.Linq.XNode.Ancestors(System.Xml.Linq.XName)
   id: Ancestors(System.Xml.Linq.XName)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: Ancestors(XName)
+  nameWithType: XNode.Ancestors(XName)
   fullName: System.Xml.Linq.XNode.Ancestors(System.Xml.Linq.XName)
   type: Method
   source:
@@ -341,29 +402,33 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Ancestors
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 350
+    startLine: 353
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Returns a filtered collection of the ancestor elements of this node. Only elements that have a matching <xref href="System.Xml.Linq.XName" data-throw-if-not-resolved="false"></xref> are included in the collection.
   syntax:
     content: public Collections.Generic.IEnumerable<XElement> Ancestors(XName name)
     content.vb: Public Function Ancestors(name As XName) As Collections.Generic.IEnumerable(Of XElement)
     parameters:
     - id: name
       type: System.Xml.Linq.XName
-      description: The <xref href="System.Xml.Linq.XName" data-throw-if-not-resolved="false"></xref> to match.
     return:
       type: System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement}
-      description: An <xref href="System.Collections.Generic.IEnumerable`1" data-throw-if-not-resolved="false"></xref> of <xref href="System.Xml.Linq.XElement" data-throw-if-not-resolved="false"></xref> of the ancestor elements of this node. Only elements that have a matching <xref href="System.Xml.Linq.XName" data-throw-if-not-resolved="false"></xref> are included in the collection.The nodes in the returned collection are in reverse document order.This method uses deferred execution.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.CompareDocumentOrder(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
+  commentId: M:System.Xml.Linq.XNode.CompareDocumentOrder(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
   id: CompareDocumentOrder(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: CompareDocumentOrder(XNode, XNode)
+  nameWithType: XNode.CompareDocumentOrder(XNode, XNode)
   fullName: System.Xml.Linq.XNode.CompareDocumentOrder(System.Xml.Linq.XNode, System.Xml.Linq.XNode)
   type: Method
   source:
@@ -371,35 +436,37 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CompareDocumentOrder
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 351
+    startLine: 354
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Compares two nodes to determine their relative XML document order.
   syntax:
     content: public static int CompareDocumentOrder(XNode n1, XNode n2)
     content.vb: Public Shared Function CompareDocumentOrder(n1 As XNode, n2 As XNode) As Integer
     parameters:
     - id: n1
       type: System.Xml.Linq.XNode
-      description: First <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> to compare.
     - id: n2
       type: System.Xml.Linq.XNode
-      description: Second <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> to compare.
     return:
       type: System.Int32
-      description: An int containing 0 if the nodes are equal; -1 if *n1* is before *n2*; 1 if *n1* is after *n2*.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The two nodes do not share a common ancestor.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Xml.Linq.XNode.CreateReader
+  commentId: M:System.Xml.Linq.XNode.CreateReader
   id: CreateReader
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: CreateReader()
+  nameWithType: XNode.CreateReader()
   fullName: System.Xml.Linq.XNode.CreateReader()
   type: Method
   source:
@@ -407,25 +474,30 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CreateReader
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 352
+    startLine: 355
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Creates an <xref href="System.Xml.XmlReader" data-throw-if-not-resolved="false"></xref> for this node.
   syntax:
     content: public XmlReader CreateReader()
     content.vb: Public Function CreateReader As XmlReader
     return:
       type: System.Xml.XmlReader
-      description: An <xref href="System.Xml.XmlReader" data-throw-if-not-resolved="false"></xref> that can be used to read this node and its descendants.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.CreateReader(System.Xml.Linq.ReaderOptions)
+  commentId: M:System.Xml.Linq.XNode.CreateReader(System.Xml.Linq.ReaderOptions)
   id: CreateReader(System.Xml.Linq.ReaderOptions)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: CreateReader(ReaderOptions)
+  nameWithType: XNode.CreateReader(ReaderOptions)
   fullName: System.Xml.Linq.XNode.CreateReader(System.Xml.Linq.ReaderOptions)
   type: Method
   source:
@@ -433,29 +505,33 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CreateReader
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 353
+    startLine: 356
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Creates an <xref href="System.Xml.XmlReader" data-throw-if-not-resolved="false"></xref> with the options specified by the *readerOptions* parameter.
   syntax:
     content: public XmlReader CreateReader(ReaderOptions readerOptions)
     content.vb: Public Function CreateReader(readerOptions As ReaderOptions) As XmlReader
     parameters:
     - id: readerOptions
       type: System.Xml.Linq.ReaderOptions
-      description: A <xref href="System.Xml.Linq.ReaderOptions" data-throw-if-not-resolved="false"></xref> object that specifies whether to omit duplicate namespaces.
     return:
       type: System.Xml.XmlReader
-      description: An <xref href="System.Xml.XmlReader" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.DeepEquals(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
+  commentId: M:System.Xml.Linq.XNode.DeepEquals(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
   id: DeepEquals(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: DeepEquals(XNode, XNode)
+  nameWithType: XNode.DeepEquals(XNode, XNode)
   fullName: System.Xml.Linq.XNode.DeepEquals(System.Xml.Linq.XNode, System.Xml.Linq.XNode)
   type: Method
   source:
@@ -463,32 +539,37 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: DeepEquals
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 354
+    startLine: 357
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Compares the values of two nodes, including the values of all descendant nodes.
   syntax:
     content: public static bool DeepEquals(XNode n1, XNode n2)
     content.vb: Public Shared Function DeepEquals(n1 As XNode, n2 As XNode) As Boolean
     parameters:
     - id: n1
       type: System.Xml.Linq.XNode
-      description: The first <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> to compare.
     - id: n2
       type: System.Xml.Linq.XNode
-      description: The second <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> to compare.
     return:
       type: System.Boolean
-      description: true if the nodes are equal; otherwise false.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Xml.Linq.XNode.ElementsAfterSelf
+  commentId: M:System.Xml.Linq.XNode.ElementsAfterSelf
   id: ElementsAfterSelf
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: ElementsAfterSelf()
+  nameWithType: XNode.ElementsAfterSelf()
   fullName: System.Xml.Linq.XNode.ElementsAfterSelf()
   type: Method
   source:
@@ -496,25 +577,30 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ElementsAfterSelf
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 355
+    startLine: 358
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Returns a collection of the sibling elements after this node, in document order.
   syntax:
     content: public Collections.Generic.IEnumerable<XElement> ElementsAfterSelf()
     content.vb: Public Function ElementsAfterSelf As Collections.Generic.IEnumerable(Of XElement)
     return:
       type: System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement}
-      description: An <xref href="System.Collections.Generic.IEnumerable`1" data-throw-if-not-resolved="false"></xref> of <xref href="System.Xml.Linq.XElement" data-throw-if-not-resolved="false"></xref> of the sibling elements after this node, in document order.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.ElementsAfterSelf(System.Xml.Linq.XName)
+  commentId: M:System.Xml.Linq.XNode.ElementsAfterSelf(System.Xml.Linq.XName)
   id: ElementsAfterSelf(System.Xml.Linq.XName)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: ElementsAfterSelf(XName)
+  nameWithType: XNode.ElementsAfterSelf(XName)
   fullName: System.Xml.Linq.XNode.ElementsAfterSelf(System.Xml.Linq.XName)
   type: Method
   source:
@@ -522,29 +608,33 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ElementsAfterSelf
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 356
+    startLine: 359
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Returns a filtered collection of the sibling elements after this node, in document order. Only elements that have a matching <xref href="System.Xml.Linq.XName" data-throw-if-not-resolved="false"></xref> are included in the collection.
   syntax:
     content: public Collections.Generic.IEnumerable<XElement> ElementsAfterSelf(XName name)
     content.vb: Public Function ElementsAfterSelf(name As XName) As Collections.Generic.IEnumerable(Of XElement)
     parameters:
     - id: name
       type: System.Xml.Linq.XName
-      description: The <xref href="System.Xml.Linq.XName" data-throw-if-not-resolved="false"></xref> to match.
     return:
       type: System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement}
-      description: An <xref href="System.Collections.Generic.IEnumerable`1" data-throw-if-not-resolved="false"></xref> of <xref href="System.Xml.Linq.XElement" data-throw-if-not-resolved="false"></xref> of the sibling elements after this node, in document order. Only elements that have a matching <xref href="System.Xml.Linq.XName" data-throw-if-not-resolved="false"></xref> are included in the collection.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.ElementsBeforeSelf
+  commentId: M:System.Xml.Linq.XNode.ElementsBeforeSelf
   id: ElementsBeforeSelf
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: ElementsBeforeSelf()
+  nameWithType: XNode.ElementsBeforeSelf()
   fullName: System.Xml.Linq.XNode.ElementsBeforeSelf()
   type: Method
   source:
@@ -552,25 +642,30 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ElementsBeforeSelf
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 357
+    startLine: 360
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Returns a collection of the sibling elements before this node, in document order.
   syntax:
     content: public Collections.Generic.IEnumerable<XElement> ElementsBeforeSelf()
     content.vb: Public Function ElementsBeforeSelf As Collections.Generic.IEnumerable(Of XElement)
     return:
       type: System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement}
-      description: An <xref href="System.Collections.Generic.IEnumerable`1" data-throw-if-not-resolved="false"></xref> of <xref href="System.Xml.Linq.XElement" data-throw-if-not-resolved="false"></xref> of the sibling elements before this node, in document order.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.ElementsBeforeSelf(System.Xml.Linq.XName)
+  commentId: M:System.Xml.Linq.XNode.ElementsBeforeSelf(System.Xml.Linq.XName)
   id: ElementsBeforeSelf(System.Xml.Linq.XName)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: ElementsBeforeSelf(XName)
+  nameWithType: XNode.ElementsBeforeSelf(XName)
   fullName: System.Xml.Linq.XNode.ElementsBeforeSelf(System.Xml.Linq.XName)
   type: Method
   source:
@@ -578,29 +673,33 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ElementsBeforeSelf
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 358
+    startLine: 361
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Returns a filtered collection of the sibling elements before this node, in document order. Only elements that have a matching <xref href="System.Xml.Linq.XName" data-throw-if-not-resolved="false"></xref> are included in the collection.
   syntax:
     content: public Collections.Generic.IEnumerable<XElement> ElementsBeforeSelf(XName name)
     content.vb: Public Function ElementsBeforeSelf(name As XName) As Collections.Generic.IEnumerable(Of XElement)
     parameters:
     - id: name
       type: System.Xml.Linq.XName
-      description: The <xref href="System.Xml.Linq.XName" data-throw-if-not-resolved="false"></xref> to match.
     return:
       type: System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement}
-      description: An <xref href="System.Collections.Generic.IEnumerable`1" data-throw-if-not-resolved="false"></xref> of <xref href="System.Xml.Linq.XElement" data-throw-if-not-resolved="false"></xref> of the sibling elements before this node, in document order. Only elements that have a matching <xref href="System.Xml.Linq.XName" data-throw-if-not-resolved="false"></xref> are included in the collection.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.IsAfter(System.Xml.Linq.XNode)
+  commentId: M:System.Xml.Linq.XNode.IsAfter(System.Xml.Linq.XNode)
   id: IsAfter(System.Xml.Linq.XNode)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: IsAfter(XNode)
+  nameWithType: XNode.IsAfter(XNode)
   fullName: System.Xml.Linq.XNode.IsAfter(System.Xml.Linq.XNode)
   type: Method
   source:
@@ -608,29 +707,33 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: IsAfter
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 359
+    startLine: 362
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Determines if the current node appears after a specified node in terms of document order.
   syntax:
     content: public bool IsAfter(XNode node)
     content.vb: Public Function IsAfter(node As XNode) As Boolean
     parameters:
     - id: node
       type: System.Xml.Linq.XNode
-      description: The <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> to compare for document order.
     return:
       type: System.Boolean
-      description: true if this node appears after the specified node; otherwise false.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.IsBefore(System.Xml.Linq.XNode)
+  commentId: M:System.Xml.Linq.XNode.IsBefore(System.Xml.Linq.XNode)
   id: IsBefore(System.Xml.Linq.XNode)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: IsBefore(XNode)
+  nameWithType: XNode.IsBefore(XNode)
   fullName: System.Xml.Linq.XNode.IsBefore(System.Xml.Linq.XNode)
   type: Method
   source:
@@ -638,29 +741,33 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: IsBefore
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 360
+    startLine: 363
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Determines if the current node appears before a specified node in terms of document order.
   syntax:
     content: public bool IsBefore(XNode node)
     content.vb: Public Function IsBefore(node As XNode) As Boolean
     parameters:
     - id: node
       type: System.Xml.Linq.XNode
-      description: The <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> to compare for document order.
     return:
       type: System.Boolean
-      description: true if this node appears before the specified node; otherwise false.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.NodesAfterSelf
+  commentId: M:System.Xml.Linq.XNode.NodesAfterSelf
   id: NodesAfterSelf
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: NodesAfterSelf()
+  nameWithType: XNode.NodesAfterSelf()
   fullName: System.Xml.Linq.XNode.NodesAfterSelf()
   type: Method
   source:
@@ -668,25 +775,30 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NodesAfterSelf
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 361
+    startLine: 364
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Returns a collection of the sibling nodes after this node, in document order.
   syntax:
     content: public Collections.Generic.IEnumerable<XNode> NodesAfterSelf()
     content.vb: Public Function NodesAfterSelf As Collections.Generic.IEnumerable(Of XNode)
     return:
       type: System.Collections.Generic.IEnumerable{System.Xml.Linq.XNode}
-      description: An <xref href="System.Collections.Generic.IEnumerable`1" data-throw-if-not-resolved="false"></xref> of <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> of the sibling nodes after this node, in document order.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.NodesBeforeSelf
+  commentId: M:System.Xml.Linq.XNode.NodesBeforeSelf
   id: NodesBeforeSelf
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: NodesBeforeSelf()
+  nameWithType: XNode.NodesBeforeSelf()
   fullName: System.Xml.Linq.XNode.NodesBeforeSelf()
   type: Method
   source:
@@ -694,25 +806,30 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NodesBeforeSelf
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 362
+    startLine: 365
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Returns a collection of the sibling nodes before this node, in document order.
   syntax:
     content: public Collections.Generic.IEnumerable<XNode> NodesBeforeSelf()
     content.vb: Public Function NodesBeforeSelf As Collections.Generic.IEnumerable(Of XNode)
     return:
       type: System.Collections.Generic.IEnumerable{System.Xml.Linq.XNode}
-      description: An <xref href="System.Collections.Generic.IEnumerable`1" data-throw-if-not-resolved="false"></xref> of <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> of the sibling nodes before this node, in document order.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.ReadFrom(System.Xml.XmlReader)
+  commentId: M:System.Xml.Linq.XNode.ReadFrom(System.Xml.XmlReader)
   id: ReadFrom(System.Xml.XmlReader)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: ReadFrom(XmlReader)
+  nameWithType: XNode.ReadFrom(XmlReader)
   fullName: System.Xml.Linq.XNode.ReadFrom(System.Xml.XmlReader)
   type: Method
   source:
@@ -720,34 +837,35 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ReadFrom
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 363
+    startLine: 366
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Creates an <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> from an <xref href="System.Xml.XmlReader" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public static XNode ReadFrom(XmlReader reader)
     content.vb: Public Shared Function ReadFrom(reader As XmlReader) As XNode
     parameters:
     - id: reader
       type: System.Xml.XmlReader
-      description: An <xref href="System.Xml.XmlReader" data-throw-if-not-resolved="false"></xref> positioned at the node to read into this <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Xml.Linq.XNode
-      description: An <xref href="System.Xml.Linq.XNode" data-throw-if-not-resolved="false"></xref> that contains the node and its descendant nodes that were read from the reader. The runtime type of the node is determined by the node type (<xref href="System.Xml.Linq.XObject.NodeType" data-throw-if-not-resolved="false"></xref>) of the first node encountered in the reader.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Xml.XmlReader" data-throw-if-not-resolved="false"></xref> is not positioned on a recognized node type.
-  - type: System.Xml.XmlException
-    description: The underlying <xref href="System.Xml.XmlReader" data-throw-if-not-resolved="false"></xref> throws an exception.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Xml.Linq.XNode.Remove
+  commentId: M:System.Xml.Linq.XNode.Remove
   id: Remove
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: Remove()
+  nameWithType: XNode.Remove()
   fullName: System.Xml.Linq.XNode.Remove()
   type: Method
   source:
@@ -755,25 +873,28 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Remove
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 364
+    startLine: 367
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Removes this node from its parent.
   syntax:
     content: public void Remove()
     content.vb: Public Sub Remove
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The parent is null.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.ReplaceWith(System.Object)
+  commentId: M:System.Xml.Linq.XNode.ReplaceWith(System.Object)
   id: ReplaceWith(System.Object)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: ReplaceWith(Object)
+  nameWithType: XNode.ReplaceWith(Object)
   fullName: System.Xml.Linq.XNode.ReplaceWith(System.Object)
   type: Method
   source:
@@ -781,55 +902,66 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ReplaceWith
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 365
+    startLine: 368
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Replaces this node with the specified content.
   syntax:
     content: public void ReplaceWith(object content)
     content.vb: Public Sub ReplaceWith(content As Object)
     parameters:
     - id: content
       type: System.Object
-      description: Content that replaces this node.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.ReplaceWith(System.Object[])
+  commentId: M:System.Xml.Linq.XNode.ReplaceWith(System.Object[])
   id: ReplaceWith(System.Object[])
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: ReplaceWith(Object[])
-  name.vb: ReplaceWith(Object())
+  nameWithType: XNode.ReplaceWith(Object[])
   fullName: System.Xml.Linq.XNode.ReplaceWith(System.Object[])
-  fullName.vb: System.Xml.Linq.XNode.ReplaceWith(System.Object())
   type: Method
   source:
     remote:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ReplaceWith
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 366
+    startLine: 369
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Replaces this node with the specified content.
   syntax:
     content: public void ReplaceWith(params object[] content)
     content.vb: Public Sub ReplaceWith(ParamArray content As Object())
     parameters:
     - id: content
       type: System.Object[]
-      description: A parameter list of the new content.
+  nameWithType.vb: XNode.ReplaceWith(Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Xml.Linq.XNode.ReplaceWith(System.Object())
+  name.vb: ReplaceWith(Object())
 - uid: System.Xml.Linq.XNode.ToString
+  commentId: M:System.Xml.Linq.XNode.ToString
   id: ToString
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: ToString()
+  nameWithType: XNode.ToString()
   fullName: System.Xml.Linq.XNode.ToString()
   type: Method
   source:
@@ -837,25 +969,32 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ToString
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 367
+    startLine: 370
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Returns the indented XML for this node.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> containing the indented XML.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)
+  commentId: M:System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)
   id: ToString(System.Xml.Linq.SaveOptions)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: ToString(SaveOptions)
+  nameWithType: XNode.ToString(SaveOptions)
   fullName: System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)
   type: Method
   source:
@@ -863,29 +1002,33 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ToString
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 368
+    startLine: 371
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Returns the XML for this node, optionally disabling formatting.
   syntax:
     content: public string ToString(SaveOptions options)
     content.vb: Public Function ToString(options As SaveOptions) As String
     parameters:
     - id: options
       type: System.Xml.Linq.SaveOptions
-      description: A <xref href="System.Xml.Linq.SaveOptions" data-throw-if-not-resolved="false"></xref> that specifies formatting behavior.
     return:
       type: System.String
-      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> containing the XML.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XNode.WriteTo(System.Xml.XmlWriter)
+  commentId: M:System.Xml.Linq.XNode.WriteTo(System.Xml.XmlWriter)
   id: WriteTo(System.Xml.XmlWriter)
   parent: System.Xml.Linq.XNode
   langs:
   - csharp
   - vb
   name: WriteTo(XmlWriter)
+  nameWithType: XNode.WriteTo(XmlWriter)
   fullName: System.Xml.Linq.XNode.WriteTo(System.Xml.XmlWriter)
   type: Method
   source:
@@ -893,425 +1036,567 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: WriteTo
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 369
+    startLine: 372
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Writes this node to an <xref href="System.Xml.XmlWriter" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public abstract void WriteTo(XmlWriter writer)
     content.vb: Public MustOverride Sub WriteTo(writer As XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-      description: An <xref href="System.Xml.XmlWriter" data-throw-if-not-resolved="false"></xref> into which this method will write.
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
 references:
 - uid: System.Xml.Linq
+  commentId: N:System.Xml.Linq
   isExternal: false
   name: System.Xml.Linq
+  nameWithType: System.Xml.Linq
   fullName: System.Xml.Linq
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Xml.Linq.XObject
+  commentId: T:System.Xml.Linq.XObject
   parent: System.Xml.Linq
   isExternal: false
   name: XObject
+  nameWithType: XObject
   fullName: System.Xml.Linq.XObject
 - uid: System.Xml.Linq.XObject.BaseUri
+  commentId: P:System.Xml.Linq.XObject.BaseUri
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: BaseUri
+  nameWithType: XObject.BaseUri
   fullName: System.Xml.Linq.XObject.BaseUri
 - uid: System.Xml.Linq.XObject.Document
+  commentId: P:System.Xml.Linq.XObject.Document
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Document
+  nameWithType: XObject.Document
   fullName: System.Xml.Linq.XObject.Document
 - uid: System.Xml.Linq.XObject.NodeType
+  commentId: P:System.Xml.Linq.XObject.NodeType
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: NodeType
+  nameWithType: XObject.NodeType
   fullName: System.Xml.Linq.XObject.NodeType
 - uid: System.Xml.Linq.XObject.Parent
+  commentId: P:System.Xml.Linq.XObject.Parent
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Parent
+  nameWithType: XObject.Parent
   fullName: System.Xml.Linq.XObject.Parent
 - uid: System.Xml.Linq.XObject.Changed
+  commentId: E:System.Xml.Linq.XObject.Changed
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Changed
+  nameWithType: XObject.Changed
   fullName: System.Xml.Linq.XObject.Changed
 - uid: System.Xml.Linq.XObject.Changing
+  commentId: E:System.Xml.Linq.XObject.Changing
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Changing
+  nameWithType: XObject.Changing
   fullName: System.Xml.Linq.XObject.Changing
 - uid: System.Xml.Linq.XObject.AddAnnotation(System.Object)
+  commentId: M:System.Xml.Linq.XObject.AddAnnotation(System.Object)
   parent: System.Xml.Linq.XObject
   isExternal: true
   name: AddAnnotation(Object)
+  nameWithType: XObject.AddAnnotation(Object)
   fullName: System.Xml.Linq.XObject.AddAnnotation(System.Object)
   spec.csharp:
   - uid: System.Xml.Linq.XObject.AddAnnotation(System.Object)
     name: AddAnnotation
+    nameWithType: XObject.AddAnnotation
     fullName: System.Xml.Linq.XObject.AddAnnotation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.AddAnnotation(System.Object)
     name: AddAnnotation
+    nameWithType: XObject.AddAnnotation
     fullName: System.Xml.Linq.XObject.AddAnnotation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.Annotation(System.Type)
+  commentId: M:System.Xml.Linq.XObject.Annotation(System.Type)
   parent: System.Xml.Linq.XObject
   isExternal: true
   name: Annotation(Type)
+  nameWithType: XObject.Annotation(Type)
   fullName: System.Xml.Linq.XObject.Annotation(System.Type)
   spec.csharp:
   - uid: System.Xml.Linq.XObject.Annotation(System.Type)
     name: Annotation
+    nameWithType: XObject.Annotation
     fullName: System.Xml.Linq.XObject.Annotation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.Annotation(System.Type)
     name: Annotation
+    nameWithType: XObject.Annotation
     fullName: System.Xml.Linq.XObject.Annotation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.Annotation``1
+  commentId: M:System.Xml.Linq.XObject.Annotation``1
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Annotation<T>()
+  nameWithType: XObject.Annotation<T>()
   fullName: System.Xml.Linq.XObject.Annotation<T>()
+  nameWithType.vb: XObject.Annotation(Of T)()
   fullname.vb: System.Xml.Linq.XObject.Annotation(Of T)()
   name.vb: Annotation(Of T)()
   spec.csharp:
   - uid: System.Xml.Linq.XObject.Annotation``1
     name: Annotation<T>
+    nameWithType: XObject.Annotation<T>
     fullName: System.Xml.Linq.XObject.Annotation<T>
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.Annotation``1
     name: Annotation(Of T)
+    nameWithType: XObject.Annotation(Of T)
     fullName: System.Xml.Linq.XObject.Annotation(Of T)
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.Annotations(System.Type)
+  commentId: M:System.Xml.Linq.XObject.Annotations(System.Type)
   parent: System.Xml.Linq.XObject
   isExternal: true
   name: Annotations(Type)
+  nameWithType: XObject.Annotations(Type)
   fullName: System.Xml.Linq.XObject.Annotations(System.Type)
   spec.csharp:
   - uid: System.Xml.Linq.XObject.Annotations(System.Type)
     name: Annotations
+    nameWithType: XObject.Annotations
     fullName: System.Xml.Linq.XObject.Annotations
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.Annotations(System.Type)
     name: Annotations
+    nameWithType: XObject.Annotations
     fullName: System.Xml.Linq.XObject.Annotations
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.Annotations``1
+  commentId: M:System.Xml.Linq.XObject.Annotations``1
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Annotations<T>()
+  nameWithType: XObject.Annotations<T>()
   fullName: System.Xml.Linq.XObject.Annotations<T>()
+  nameWithType.vb: XObject.Annotations(Of T)()
   fullname.vb: System.Xml.Linq.XObject.Annotations(Of T)()
   name.vb: Annotations(Of T)()
   spec.csharp:
   - uid: System.Xml.Linq.XObject.Annotations``1
     name: Annotations<T>
+    nameWithType: XObject.Annotations<T>
     fullName: System.Xml.Linq.XObject.Annotations<T>
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.Annotations``1
     name: Annotations(Of T)
+    nameWithType: XObject.Annotations(Of T)
     fullName: System.Xml.Linq.XObject.Annotations(Of T)
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
+  commentId: M:System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
   parent: System.Xml.Linq.XObject
   isExternal: true
   name: RemoveAnnotations(Type)
+  nameWithType: XObject.RemoveAnnotations(Type)
   fullName: System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
   spec.csharp:
   - uid: System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
     name: RemoveAnnotations
+    nameWithType: XObject.RemoveAnnotations
     fullName: System.Xml.Linq.XObject.RemoveAnnotations
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
     name: RemoveAnnotations
+    nameWithType: XObject.RemoveAnnotations
     fullName: System.Xml.Linq.XObject.RemoveAnnotations
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.RemoveAnnotations``1
+  commentId: M:System.Xml.Linq.XObject.RemoveAnnotations``1
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: RemoveAnnotations<T>()
+  nameWithType: XObject.RemoveAnnotations<T>()
   fullName: System.Xml.Linq.XObject.RemoveAnnotations<T>()
+  nameWithType.vb: XObject.RemoveAnnotations(Of T)()
   fullname.vb: System.Xml.Linq.XObject.RemoveAnnotations(Of T)()
   name.vb: RemoveAnnotations(Of T)()
   spec.csharp:
   - uid: System.Xml.Linq.XObject.RemoveAnnotations``1
     name: RemoveAnnotations<T>
+    nameWithType: XObject.RemoveAnnotations<T>
     fullName: System.Xml.Linq.XObject.RemoveAnnotations<T>
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.RemoveAnnotations``1
     name: RemoveAnnotations(Of T)
+    nameWithType: XObject.RemoveAnnotations(Of T)
     fullName: System.Xml.Linq.XObject.RemoveAnnotations(Of T)
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Xml.Linq.XNodeDocumentOrderComparer
+  commentId: T:System.Xml.Linq.XNodeDocumentOrderComparer
   parent: System.Xml.Linq
   isExternal: false
   name: XNodeDocumentOrderComparer
+  nameWithType: XNodeDocumentOrderComparer
   fullName: System.Xml.Linq.XNodeDocumentOrderComparer
 - uid: System.Xml.Linq.XNodeEqualityComparer
+  commentId: T:System.Xml.Linq.XNodeEqualityComparer
   parent: System.Xml.Linq
   isExternal: false
   name: XNodeEqualityComparer
+  nameWithType: XNodeEqualityComparer
   fullName: System.Xml.Linq.XNodeEqualityComparer
 - uid: System.Xml.Linq.XNode
+  commentId: T:System.Xml.Linq.XNode
   parent: System.Xml.Linq
   isExternal: false
   name: Linq.XNode
+  nameWithType: Linq.XNode
   fullName: System.Xml.Linq.XNode
 - uid: System.Object[]
-  isExternal: false
   name: Object[]
+  nameWithType: Object[]
   fullName: System.Object[]
+  nameWithType.vb: Object()
   fullname.vb: System.Object()
   name.vb: Object()
   spec.csharp:
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<Linq.XElement>
+  nameWithType: Collections.Generic.IEnumerable<Linq.XElement>
   fullName: System.Collections.Generic.IEnumerable<System.Xml.Linq.XElement>
+  nameWithType.vb: Collections.Generic.IEnumerable(Of Linq.XElement)
   fullname.vb: System.Collections.Generic.IEnumerable(Of System.Xml.Linq.XElement)
   name.vb: Collections.Generic.IEnumerable(Of Linq.XElement)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Xml.Linq.XElement
     name: Linq.XElement
+    nameWithType: Linq.XElement
     fullName: System.Xml.Linq.XElement
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Xml.Linq.XElement
     name: Linq.XElement
+    nameWithType: Linq.XElement
     fullName: System.Xml.Linq.XElement
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
   fullname.vb: System.Collections.Generic.IEnumerable(Of )
   name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: System.Xml.Linq.XName
+  commentId: T:System.Xml.Linq.XName
   parent: System.Xml.Linq
   isExternal: false
   name: XName
+  nameWithType: XName
   fullName: System.Xml.Linq.XName
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Xml.XmlReader
+  commentId: T:System.Xml.XmlReader
   parent: System.Xml
   isExternal: false
   name: XmlReader
+  nameWithType: XmlReader
   fullName: System.Xml.XmlReader
 - uid: System.Xml
+  commentId: N:System.Xml
   isExternal: false
   name: System.Xml
+  nameWithType: System.Xml
   fullName: System.Xml
 - uid: System.Xml.Linq.ReaderOptions
+  commentId: T:System.Xml.Linq.ReaderOptions
   parent: System.Xml.Linq
   isExternal: false
   name: ReaderOptions
+  nameWithType: ReaderOptions
   fullName: System.Xml.Linq.ReaderOptions
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Collections.Generic.IEnumerable{System.Xml.Linq.XNode}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Xml.Linq.XNode}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<XNode>
+  nameWithType: Collections.Generic.IEnumerable<XNode>
   fullName: System.Collections.Generic.IEnumerable<System.Xml.Linq.XNode>
+  nameWithType.vb: Collections.Generic.IEnumerable(Of XNode)
   fullname.vb: System.Collections.Generic.IEnumerable(Of System.Xml.Linq.XNode)
   name.vb: Collections.Generic.IEnumerable(Of XNode)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Xml.Linq.SaveOptions
+  commentId: T:System.Xml.Linq.SaveOptions
   parent: System.Xml.Linq
   isExternal: false
   name: SaveOptions
+  nameWithType: SaveOptions
   fullName: System.Xml.Linq.SaveOptions
 - uid: System.Xml.XmlWriter
+  commentId: T:System.Xml.XmlWriter
   parent: System.Xml
   isExternal: false
   name: XmlWriter
+  nameWithType: XmlWriter
   fullName: System.Xml.XmlWriter
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: System.Xml.XmlException
-  isExternal: false
-  name: XmlException
-  fullName: System.Xml.XmlException

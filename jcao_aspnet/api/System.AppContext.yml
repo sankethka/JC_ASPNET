@@ -1,125 +1,177 @@
 items:
 - uid: System.AppContext
+  commentId: T:System.AppContext
   id: AppContext
   parent: System
   children:
   - System.AppContext.BaseDirectory
+  - System.AppContext.GetData(System.String)
   - System.AppContext.SetSwitch(System.String,System.Boolean)
   - System.AppContext.TargetFrameworkName
   - System.AppContext.TryGetSwitch(System.String,System.Boolean@)
+  langs:
+  - csharp
+  - vb
   name: AppContext
+  nameWithType: AppContext
   fullName: System.AppContext
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/AppContext/AppContext.cs
+    remote:
+      path: src/System.AppContext/ref/System.AppContext.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/AppContext/AppContext.cs
-    startLine: 9
+      repo: https://github.com/dotnet/corefx.git
+    id: AppContext
+    path: src/System.AppContext/ref/System.AppContext.cs
+    startLine: 10
   assemblies:
   - System.AppContext
   namespace: System
-  summary: Provides members for setting and retrieving data about an application's context.
   syntax:
     content: 'public class AppContext : object'
-    content.vb: Public Class AppContext Inherits Object
+    content.vb: >-
+      Public Class AppContext
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.AppContext.BaseDirectory
+  commentId: P:System.AppContext.BaseDirectory
   id: BaseDirectory
   parent: System.AppContext
+  langs:
+  - csharp
+  - vb
   name: BaseDirectory
+  nameWithType: AppContext.BaseDirectory
   fullName: System.AppContext.BaseDirectory
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AppContext/AppContext.cs
-    startLine: 21
+    remote:
+      path: src/System.AppContext/ref/System.AppContext.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: BaseDirectory
+    path: src/System.AppContext/ref/System.AppContext.cs
+    startLine: 12
   assemblies:
   - System.AppContext
   namespace: System
-  summary: Gets the pathname of the base directory that the assembly resolver uses to probe for assemblies.
   syntax:
     content: public static string BaseDirectory { get; }
     content.vb: Public Shared ReadOnly Property BaseDirectory As String
     parameters: []
     return:
       type: System.String
-      description: the pathname of the base directory that the assembly resolver uses to probe for assemblies.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.AppContext.SetSwitch(System.String,System.Boolean)
+  commentId: M:System.AppContext.SetSwitch(System.String,System.Boolean)
   id: SetSwitch(System.String,System.Boolean)
   parent: System.AppContext
+  langs:
+  - csharp
+  - vb
   name: SetSwitch(String, Boolean)
+  nameWithType: AppContext.SetSwitch(String, Boolean)
   fullName: System.AppContext.SetSwitch(System.String, System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AppContext/AppContext.cs
-    startLine: 152
+    remote:
+      path: src/System.AppContext/ref/System.AppContext.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetSwitch
+    path: src/System.AppContext/ref/System.AppContext.cs
+    startLine: 13
   assemblies:
   - System.AppContext
   namespace: System
-  summary: Sets the value of a switch.
   syntax:
     content: public static void SetSwitch(string switchName, bool isEnabled)
     content.vb: Public Shared Sub SetSwitch(switchName As String, isEnabled As Boolean)
     parameters:
     - id: switchName
       type: System.String
-      description: The name of the switch.
     - id: isEnabled
       type: System.Boolean
-      description: The value of the switch.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*switchName* is null.'
-  - type: System.ArgumentException
-    description: '*switchName* is <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.AppContext.TryGetSwitch(System.String,System.Boolean@)
+  commentId: M:System.AppContext.TryGetSwitch(System.String,System.Boolean@)
   id: TryGetSwitch(System.String,System.Boolean@)
   parent: System.AppContext
+  langs:
+  - csharp
+  - vb
   name: TryGetSwitch(String, out Boolean)
-  name.vb: TryGetSwitch(String, ByRef Boolean)
+  nameWithType: AppContext.TryGetSwitch(String, out Boolean)
   fullName: System.AppContext.TryGetSwitch(System.String, out System.Boolean)
-  fullName.vb: System.AppContext.TryGetSwitch(System.String, ByRef System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AppContext/AppContext.cs
-    startLine: 56
+    remote:
+      path: src/System.AppContext/ref/System.AppContext.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryGetSwitch
+    path: src/System.AppContext/ref/System.AppContext.cs
+    startLine: 14
   assemblies:
   - System.AppContext
   namespace: System
-  summary: Tries to get the value of a switch.
   syntax:
     content: public static bool TryGetSwitch(string switchName, out bool isEnabled)
     content.vb: Public Shared Function TryGetSwitch(switchName As String, ByRef isEnabled As Boolean) As Boolean
     parameters:
     - id: switchName
       type: System.String
-      description: The name of the switch.
     - id: isEnabled
       type: System.Boolean
-      description: When this method returns, contains the value of *switchName* if *switchName* was found, or false if *switchName* was not found. This parameter is passed uninitialized.
     return:
       type: System.Boolean
-      description: true if *switchName* was set and the *isEnabled* argument contains the value of the switch; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*switchName* is null.'
-  - type: System.ArgumentException
-    description: '*switchName* is <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: AppContext.TryGetSwitch(String, ByRef Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.AppContext.TryGetSwitch(System.String, ByRef System.Boolean)
+  name.vb: TryGetSwitch(String, ByRef Boolean)
 - uid: System.AppContext.TargetFrameworkName
+  commentId: P:System.AppContext.TargetFrameworkName
   id: TargetFrameworkName
   parent: System.AppContext
+  langs:
+  - csharp
+  - vb
   name: TargetFrameworkName
+  nameWithType: AppContext.TargetFrameworkName
   fullName: System.AppContext.TargetFrameworkName
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AppContext/AppContext.cs
-    startLine: 34
+    remote:
+      path: src/System.AppContext/ref/System.AppContext.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TargetFrameworkName
+    path: src/System.AppContext/ref/System.AppContext.cs
+    startLine: 15
   assemblies:
   - System.AppContext
   namespace: System
@@ -129,32 +181,75 @@ items:
     parameters: []
     return:
       type: System.String
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: System.AppContext.GetData(System.String)
+  commentId: M:System.AppContext.GetData(System.String)
+  id: GetData(System.String)
+  parent: System.AppContext
+  langs:
+  - csharp
+  - vb
+  name: GetData(String)
+  nameWithType: AppContext.GetData(String)
+  fullName: System.AppContext.GetData(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/System.AppContext/ref/System.AppContext.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetData
+    path: src/System.AppContext/ref/System.AppContext.cs
+    startLine: 16
+  assemblies:
+  - System.AppContext
+  namespace: System
+  syntax:
+    content: public static object GetData(string name)
+    content.vb: Public Shared Function GetData(name As String) As Object
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

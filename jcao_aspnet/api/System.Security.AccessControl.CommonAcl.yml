@@ -1,5 +1,6 @@
 items:
 - uid: System.Security.AccessControl.CommonAcl
+  commentId: T:System.Security.AccessControl.CommonAcl
   id: CommonAcl
   parent: System.Security.AccessControl
   children:
@@ -13,23 +14,30 @@ items:
   - System.Security.AccessControl.CommonAcl.Purge(System.Security.Principal.SecurityIdentifier)
   - System.Security.AccessControl.CommonAcl.RemoveInheritedAces
   - System.Security.AccessControl.CommonAcl.Revision
+  langs:
+  - csharp
+  - vb
   name: CommonAcl
+  nameWithType: CommonAcl
   fullName: System.Security.AccessControl.CommonAcl
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 615
+    id: CommonAcl
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 147
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Represents an access control list (ACL) and is the base class for the <xref href="System.Security.AccessControl.DiscretionaryAcl" data-throw-if-not-resolved="false"></xref> and <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> classes.
   syntax:
     content: 'public abstract class CommonAcl : GenericAcl, Collections.IEnumerable'
-    content.vb: Public MustInherit Class CommonAcl Inherits GenericAcl Implements Collections.IEnumerable
+    content.vb: >-
+      Public MustInherit Class CommonAcl
+          Inherits GenericAcl
+          Implements Collections.IEnumerable
   inheritance:
   - System.Object
   - System.Security.AccessControl.GenericAcl
@@ -43,193 +51,328 @@ items:
   - System.Security.AccessControl.GenericAcl.SyncRoot
   - System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[],System.Int32)
   - System.Security.AccessControl.GenericAcl.GetEnumerator
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Security.AccessControl.CommonAcl.BinaryLength
+  commentId: P:System.Security.AccessControl.CommonAcl.BinaryLength
   id: BinaryLength
   parent: System.Security.AccessControl.CommonAcl
+  langs:
+  - csharp
+  - vb
   name: BinaryLength
+  nameWithType: CommonAcl.BinaryLength
   fullName: System.Security.AccessControl.CommonAcl.BinaryLength
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2811
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: BinaryLength
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 150
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets the length, in bytes, of the binary representation of the current <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object. This length should be used before marshaling the access control list (ACL) into a binary array by using the <xref href="System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte[],System.Int32)" data-throw-if-not-resolved="false"></xref> method.
   syntax:
     content: public override sealed int BinaryLength { get; }
     content.vb: Public NotOverridable Overrides ReadOnly Property BinaryLength As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The length, in bytes, of the binary representation of the current <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object.
   overridden: System.Security.AccessControl.GenericAcl.BinaryLength
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonAcl.Count
+  commentId: P:System.Security.AccessControl.CommonAcl.Count
   id: Count
   parent: System.Security.AccessControl.CommonAcl
+  langs:
+  - csharp
+  - vb
   name: Count
+  nameWithType: CommonAcl.Count
   fullName: System.Security.AccessControl.CommonAcl.Count
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2798
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Count
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 151
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets the number of access control entries (ACEs) in the current <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public override sealed int Count { get; }
     content.vb: Public NotOverridable Overrides ReadOnly Property Count As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The number of ACEs in the current <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object.
   overridden: System.Security.AccessControl.GenericAcl.Count
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonAcl.IsCanonical
+  commentId: P:System.Security.AccessControl.CommonAcl.IsCanonical
   id: IsCanonical
   parent: System.Security.AccessControl.CommonAcl
+  langs:
+  - csharp
+  - vb
   name: IsCanonical
+  nameWithType: CommonAcl.IsCanonical
   fullName: System.Security.AccessControl.CommonAcl.IsCanonical
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2824
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsCanonical
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 152
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets a Boolean value that specifies whether the access control entries (ACEs) in the current <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object are in canonical order.
   syntax:
     content: public bool IsCanonical { get; }
     content.vb: Public ReadOnly Property IsCanonical As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the ACEs in the current <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object are in canonical order; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonAcl.IsContainer
+  commentId: P:System.Security.AccessControl.CommonAcl.IsContainer
   id: IsContainer
   parent: System.Security.AccessControl.CommonAcl
+  langs:
+  - csharp
+  - vb
   name: IsContainer
+  nameWithType: CommonAcl.IsContainer
   fullName: System.Security.AccessControl.CommonAcl.IsContainer
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2829
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsContainer
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 153
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Sets whether the <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object is a container.
   syntax:
     content: public bool IsContainer { get; }
     content.vb: Public ReadOnly Property IsContainer As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the current <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object is a container.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonAcl.IsDS
+  commentId: P:System.Security.AccessControl.CommonAcl.IsDS
   id: IsDS
   parent: System.Security.AccessControl.CommonAcl
+  langs:
+  - csharp
+  - vb
   name: IsDS
+  nameWithType: CommonAcl.IsDS
   fullName: System.Security.AccessControl.CommonAcl.IsDS
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2834
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsDS
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 154
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Sets whether the current <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object is a directory object access control list (ACL).
   syntax:
     content: public bool IsDS { get; }
     content.vb: Public ReadOnly Property IsDS As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the current <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object is a directory object ACL.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonAcl.Item(System.Int32)
+  commentId: P:System.Security.AccessControl.CommonAcl.Item(System.Int32)
   id: Item(System.Int32)
   parent: System.Security.AccessControl.CommonAcl
+  langs:
+  - csharp
+  - vb
   name: Item[Int32]
-  name.vb: Item(Int32)
+  nameWithType: CommonAcl.Item[Int32]
   fullName: System.Security.AccessControl.CommonAcl.Item[System.Int32]
-  fullName.vb: System.Security.AccessControl.CommonAcl.Item(System.Int32)
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2859
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: this[]
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 155
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets or sets the <xref href="System.Security.AccessControl.CommonAce" data-throw-if-not-resolved="false"></xref> at the specified index.
   syntax:
     content: public override sealed GenericAce this[int index] { get; set; }
     content.vb: Public NotOverridable Overrides Property Item(index As Integer) As GenericAce
     parameters:
     - id: index
       type: System.Int32
-      description: The zero-based index of the <xref href="System.Security.AccessControl.CommonAce" data-throw-if-not-resolved="false"></xref> to get or set.
     return:
       type: System.Security.AccessControl.GenericAce
-      description: The <xref href="System.Security.AccessControl.CommonAce" data-throw-if-not-resolved="false"></xref> at the specified index.
   overridden: System.Security.AccessControl.GenericAcl.Item(System.Int32)
+  nameWithType.vb: CommonAcl.Item(Int32)
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+  fullName.vb: System.Security.AccessControl.CommonAcl.Item(System.Int32)
+  name.vb: Item(Int32)
 - uid: System.Security.AccessControl.CommonAcl.Revision
+  commentId: P:System.Security.AccessControl.CommonAcl.Revision
   id: Revision
   parent: System.Security.AccessControl.CommonAcl
+  langs:
+  - csharp
+  - vb
   name: Revision
+  nameWithType: CommonAcl.Revision
   fullName: System.Security.AccessControl.CommonAcl.Revision
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2789
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Revision
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 156
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets the revision level of the <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public override sealed byte Revision { get; }
     content.vb: Public NotOverridable Overrides ReadOnly Property Revision As Byte
     parameters: []
     return:
       type: System.Byte
-      description: A byte value that specifies the revision level of the <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref>.
   overridden: System.Security.AccessControl.GenericAcl.Revision
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte[],System.Int32)
+  commentId: M:System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte[],System.Int32)
   id: GetBinaryForm(System.Byte[],System.Int32)
   parent: System.Security.AccessControl.CommonAcl
+  langs:
+  - csharp
+  - vb
   name: GetBinaryForm(Byte[], Int32)
-  name.vb: GetBinaryForm(Byte(), Int32)
+  nameWithType: CommonAcl.GetBinaryForm(Byte[], Int32)
   fullName: System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte[], System.Int32)
-  fullName.vb: System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte(), System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2847
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetBinaryForm
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 157
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Marshals the contents of the <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object into the specified byte array beginning at the specified offset.
   syntax:
     content: public override sealed void GetBinaryForm(byte[] binaryForm, int offset)
     content.vb: Public NotOverridable Overrides Sub GetBinaryForm(binaryForm As Byte(), offset As Integer)
     parameters:
     - id: binaryForm
       type: System.Byte[]
-      description: The byte array into which the contents of the <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> is marshaled.
     - id: offset
       type: System.Int32
-      description: The offset at which to start marshaling.
   overridden: System.Security.AccessControl.GenericAcl.GetBinaryForm(System.Byte[],System.Int32)
+  nameWithType.vb: CommonAcl.GetBinaryForm(Byte(), Int32)
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+  fullName.vb: System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte(), System.Int32)
+  name.vb: GetBinaryForm(Byte(), Int32)
 - uid: System.Security.AccessControl.CommonAcl.Purge(System.Security.Principal.SecurityIdentifier)
+  commentId: M:System.Security.AccessControl.CommonAcl.Purge(System.Security.Principal.SecurityIdentifier)
   id: Purge(System.Security.Principal.SecurityIdentifier)
   parent: System.Security.AccessControl.CommonAcl
+  langs:
+  - csharp
+  - vb
   name: Purge(Principal.SecurityIdentifier)
+  nameWithType: CommonAcl.Purge(Principal.SecurityIdentifier)
   fullName: System.Security.AccessControl.CommonAcl.Purge(System.Security.Principal.SecurityIdentifier)
   type: Method
   source:
@@ -237,292 +380,405 @@ items:
       path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Purge
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 155
+    startLine: 158
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Removes all access control entries (ACEs) contained by this <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object that are associated with the specified <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public void Purge(Principal.SecurityIdentifier sid)
     content.vb: Public Sub Purge(sid As Principal.SecurityIdentifier)
     parameters:
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> object to check for.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonAcl.RemoveInheritedAces
+  commentId: M:System.Security.AccessControl.CommonAcl.RemoveInheritedAces
   id: RemoveInheritedAces
   parent: System.Security.AccessControl.CommonAcl
+  langs:
+  - csharp
+  - vb
   name: RemoveInheritedAces()
+  nameWithType: CommonAcl.RemoveInheritedAces()
   fullName: System.Security.AccessControl.CommonAcl.RemoveInheritedAces()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2873
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveInheritedAces
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 159
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Removes all inherited access control entries (ACEs) from this <xref href="System.Security.AccessControl.CommonAcl" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public void RemoveInheritedAces()
     content.vb: Public Sub RemoveInheritedAces
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Security.AccessControl
+  commentId: N:System.Security.AccessControl
   isExternal: false
   name: System.Security.AccessControl
+  nameWithType: System.Security.AccessControl
   fullName: System.Security.AccessControl
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Security.AccessControl.GenericAcl
+  commentId: T:System.Security.AccessControl.GenericAcl
   parent: System.Security.AccessControl
   isExternal: false
   name: GenericAcl
+  nameWithType: GenericAcl
   fullName: System.Security.AccessControl.GenericAcl
 - uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
   parent: System.Collections
   isExternal: false
   name: Collections.IEnumerable
+  nameWithType: Collections.IEnumerable
   fullName: System.Collections.IEnumerable
 - uid: System.Security.AccessControl.GenericAcl.AclRevision
+  commentId: F:System.Security.AccessControl.GenericAcl.AclRevision
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: AclRevision
+  nameWithType: GenericAcl.AclRevision
   fullName: System.Security.AccessControl.GenericAcl.AclRevision
 - uid: System.Security.AccessControl.GenericAcl.AclRevisionDS
+  commentId: F:System.Security.AccessControl.GenericAcl.AclRevisionDS
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: AclRevisionDS
+  nameWithType: GenericAcl.AclRevisionDS
   fullName: System.Security.AccessControl.GenericAcl.AclRevisionDS
 - uid: System.Security.AccessControl.GenericAcl.MaxBinaryLength
+  commentId: F:System.Security.AccessControl.GenericAcl.MaxBinaryLength
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: MaxBinaryLength
+  nameWithType: GenericAcl.MaxBinaryLength
   fullName: System.Security.AccessControl.GenericAcl.MaxBinaryLength
 - uid: System.Security.AccessControl.GenericAcl.IsSynchronized
+  commentId: P:System.Security.AccessControl.GenericAcl.IsSynchronized
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: IsSynchronized
+  nameWithType: GenericAcl.IsSynchronized
   fullName: System.Security.AccessControl.GenericAcl.IsSynchronized
 - uid: System.Security.AccessControl.GenericAcl.SyncRoot
+  commentId: P:System.Security.AccessControl.GenericAcl.SyncRoot
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: SyncRoot
+  nameWithType: GenericAcl.SyncRoot
   fullName: System.Security.AccessControl.GenericAcl.SyncRoot
 - uid: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[],System.Int32)
+  commentId: M:System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[],System.Int32)
   parent: System.Security.AccessControl.GenericAcl
   isExternal: true
   name: CopyTo(GenericAce[], Int32)
-  name.vb: CopyTo(GenericAce(), Int32)
+  nameWithType: GenericAcl.CopyTo(GenericAce[], Int32)
   fullName: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[], System.Int32)
-  fullName.vb: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce(), System.Int32)
+  nameWithType.vb: GenericAcl.CopyTo(GenericAce(), Int32)
+  fullname.vb: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce(), System.Int32)
+  name.vb: CopyTo(GenericAce(), Int32)
   spec.csharp:
   - uid: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[],System.Int32)
     name: CopyTo
+    nameWithType: GenericAcl.CopyTo
     fullName: System.Security.AccessControl.GenericAcl.CopyTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.AccessControl.GenericAce
     name: GenericAce
+    nameWithType: GenericAce
     fullName: System.Security.AccessControl.GenericAce
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[],System.Int32)
     name: CopyTo
+    nameWithType: GenericAcl.CopyTo
     fullName: System.Security.AccessControl.GenericAcl.CopyTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.AccessControl.GenericAce
     name: GenericAce
+    nameWithType: GenericAce
     fullName: System.Security.AccessControl.GenericAce
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.AccessControl.GenericAcl.GetEnumerator
+  commentId: M:System.Security.AccessControl.GenericAcl.GetEnumerator
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: GetEnumerator()
+  nameWithType: GenericAcl.GetEnumerator()
   fullName: System.Security.AccessControl.GenericAcl.GetEnumerator()
   spec.csharp:
   - uid: System.Security.AccessControl.GenericAcl.GetEnumerator
     name: GetEnumerator
+    nameWithType: GenericAcl.GetEnumerator
     fullName: System.Security.AccessControl.GenericAcl.GetEnumerator
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.GenericAcl.GetEnumerator
     name: GetEnumerator
+    nameWithType: GenericAcl.GetEnumerator
     fullName: System.Security.AccessControl.GenericAcl.GetEnumerator
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
 - uid: System.Security.AccessControl.GenericAcl.BinaryLength
+  commentId: P:System.Security.AccessControl.GenericAcl.BinaryLength
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: BinaryLength
+  nameWithType: GenericAcl.BinaryLength
   fullName: System.Security.AccessControl.GenericAcl.BinaryLength
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Security.AccessControl.GenericAcl.Count
+  commentId: P:System.Security.AccessControl.GenericAcl.Count
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: Count
+  nameWithType: GenericAcl.Count
   fullName: System.Security.AccessControl.GenericAcl.Count
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Security.AccessControl.GenericAcl.Item(System.Int32)
+  commentId: P:System.Security.AccessControl.GenericAcl.Item(System.Int32)
   parent: System.Security.AccessControl.GenericAcl
   isExternal: true
   name: Item[Int32]
-  name.vb: Item(Int32)
+  nameWithType: GenericAcl.Item[Int32]
   fullName: System.Security.AccessControl.GenericAcl.Item[System.Int32]
-  fullName.vb: System.Security.AccessControl.GenericAcl.Item(System.Int32)
+  nameWithType.vb: GenericAcl.Item(Int32)
+  fullname.vb: System.Security.AccessControl.GenericAcl.Item(System.Int32)
+  name.vb: Item(Int32)
   spec.csharp:
   - uid: System.Security.AccessControl.GenericAcl.Item(System.Int32)
     name: Item
+    nameWithType: GenericAcl.Item
     fullName: System.Security.AccessControl.GenericAcl.Item
   - name: '['
+    nameWithType: '['
     fullName: '['
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ']'
+    nameWithType: ']'
     fullName: ']'
   spec.vb:
   - uid: System.Security.AccessControl.GenericAcl.Item(System.Int32)
     name: Item
+    nameWithType: GenericAcl.Item
     fullName: System.Security.AccessControl.GenericAcl.Item
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.AccessControl.GenericAce
+  commentId: T:System.Security.AccessControl.GenericAce
   parent: System.Security.AccessControl
   isExternal: false
   name: GenericAce
+  nameWithType: GenericAce
   fullName: System.Security.AccessControl.GenericAce
 - uid: System.Security.AccessControl.GenericAcl.Revision
+  commentId: P:System.Security.AccessControl.GenericAcl.Revision
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: Revision
+  nameWithType: GenericAcl.Revision
   fullName: System.Security.AccessControl.GenericAcl.Revision
 - uid: System.Byte
+  commentId: T:System.Byte
   parent: System
   isExternal: false
   name: Byte
+  nameWithType: Byte
   fullName: System.Byte
 - uid: System.Security.AccessControl.GenericAcl.GetBinaryForm(System.Byte[],System.Int32)
+  commentId: M:System.Security.AccessControl.GenericAcl.GetBinaryForm(System.Byte[],System.Int32)
   parent: System.Security.AccessControl.GenericAcl
   isExternal: true
   name: GetBinaryForm(Byte[], Int32)
-  name.vb: GetBinaryForm(Byte(), Int32)
+  nameWithType: GenericAcl.GetBinaryForm(Byte[], Int32)
   fullName: System.Security.AccessControl.GenericAcl.GetBinaryForm(System.Byte[], System.Int32)
-  fullName.vb: System.Security.AccessControl.GenericAcl.GetBinaryForm(System.Byte(), System.Int32)
+  nameWithType.vb: GenericAcl.GetBinaryForm(Byte(), Int32)
+  fullname.vb: System.Security.AccessControl.GenericAcl.GetBinaryForm(System.Byte(), System.Int32)
+  name.vb: GetBinaryForm(Byte(), Int32)
   spec.csharp:
   - uid: System.Security.AccessControl.GenericAcl.GetBinaryForm(System.Byte[],System.Int32)
     name: GetBinaryForm
+    nameWithType: GenericAcl.GetBinaryForm
     fullName: System.Security.AccessControl.GenericAcl.GetBinaryForm
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.GenericAcl.GetBinaryForm(System.Byte[],System.Int32)
     name: GetBinaryForm
+    nameWithType: GenericAcl.GetBinaryForm
     fullName: System.Security.AccessControl.GenericAcl.GetBinaryForm
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Byte[]
-  isExternal: false
   name: Byte[]
-  name.vb: Byte()
+  nameWithType: Byte[]
   fullName: System.Byte[]
-  fullName.vb: System.Byte()
+  nameWithType.vb: Byte()
+  fullname.vb: System.Byte()
+  name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Security.Principal.SecurityIdentifier
+  commentId: T:System.Security.Principal.SecurityIdentifier
   parent: System.Security.Principal
   isExternal: false
   name: SecurityIdentifier
+  nameWithType: SecurityIdentifier
   fullName: System.Security.Principal.SecurityIdentifier
 - uid: System.Security.Principal
+  commentId: N:System.Security.Principal
   isExternal: false
   name: System.Security.Principal
+  nameWithType: System.Security.Principal
   fullName: System.Security.Principal

@@ -1,5 +1,6 @@
 items:
 - uid: System.Text.EncoderFallbackException
+  commentId: T:System.Text.EncoderFallbackException
   id: EncoderFallbackException
   parent: System.Text
   children:
@@ -11,227 +12,353 @@ items:
   - System.Text.EncoderFallbackException.CharUnknownLow
   - System.Text.EncoderFallbackException.Index
   - System.Text.EncoderFallbackException.IsUnknownSurrogate
+  langs:
+  - csharp
+  - vb
   name: EncoderFallbackException
+  nameWithType: EncoderFallbackException
   fullName: System.Text.EncoderFallbackException
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Text/EncoderExceptionFallback.cs
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Text/EncoderExceptionFallback.cs
+      repo: https://github.com/dotnet/corefx.git
+    id: EncoderFallbackException
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 102
+  assemblies:
+  - System.Text.Encoding
+  namespace: System.Text
+  syntax:
+    content: 'public sealed class EncoderFallbackException : ArgumentException'
+    content.vb: >-
+      Public NotInheritable Class EncoderFallbackException
+          Inherits ArgumentException
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: System.Text.EncoderFallbackException.#ctor
+  commentId: M:System.Text.EncoderFallbackException.#ctor
+  id: '#ctor'
+  parent: System.Text.EncoderFallbackException
+  langs:
+  - csharp
+  - vb
+  name: EncoderFallbackException()
+  nameWithType: EncoderFallbackException.EncoderFallbackException()
+  fullName: System.Text.EncoderFallbackException.EncoderFallbackException()
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 104
+  assemblies:
+  - System.Text.Encoding
+  namespace: System.Text
+  syntax:
+    content: public EncoderFallbackException()
+    content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: System.Text.EncoderFallbackException.#ctor(System.String)
+  commentId: M:System.Text.EncoderFallbackException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: System.Text.EncoderFallbackException
+  langs:
+  - csharp
+  - vb
+  name: EncoderFallbackException(String)
+  nameWithType: EncoderFallbackException.EncoderFallbackException(String)
+  fullName: System.Text.EncoderFallbackException.EncoderFallbackException(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
     startLine: 105
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: The exception that is thrown when an encoder fallback operation fails. This class cannot be inherited.
-  syntax:
-    content: 'public sealed class EncoderFallbackException : ArgumentException'
-    content.vb: Public NotInheritable Class EncoderFallbackException Inherits ArgumentException
-  inheritance:
-  - System.Object
-- uid: System.Text.EncoderFallbackException.#ctor
-  id: '#ctor'
-  parent: System.Text.EncoderFallbackException
-  name: EncoderFallbackException()
-  fullName: System.Text.EncoderFallbackException.EncoderFallbackException()
-  type: Constructor
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/EncoderExceptionFallback.cs
-    startLine: 113
-  assemblies:
-  - System.Text.Encoding
-  namespace: System.Text
-  summary: Initializes a new instance of the <xref href="System.Text.EncoderFallbackException" data-throw-if-not-resolved="false"></xref> class.
-  syntax:
-    content: public EncoderFallbackException()
-    content.vb: Public Sub New
-- uid: System.Text.EncoderFallbackException.#ctor(System.String)
-  id: '#ctor(System.String)'
-  parent: System.Text.EncoderFallbackException
-  name: EncoderFallbackException(String)
-  fullName: System.Text.EncoderFallbackException.EncoderFallbackException(System.String)
-  type: Constructor
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/EncoderExceptionFallback.cs
-    startLine: 119
-  assemblies:
-  - System.Text.Encoding
-  namespace: System.Text
-  summary: Initializes a new instance of the <xref href="System.Text.EncoderFallbackException" data-throw-if-not-resolved="false"></xref> class. A parameter specifies the error message.
   syntax:
     content: public EncoderFallbackException(string message)
     content.vb: Public Sub New(message As String)
     parameters:
     - id: message
       type: System.String
-      description: An error message.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Text.EncoderFallbackException.#ctor(System.String,System.Exception)
+  commentId: M:System.Text.EncoderFallbackException.#ctor(System.String,System.Exception)
   id: '#ctor(System.String,System.Exception)'
   parent: System.Text.EncoderFallbackException
+  langs:
+  - csharp
+  - vb
   name: EncoderFallbackException(String, Exception)
+  nameWithType: EncoderFallbackException.EncoderFallbackException(String, Exception)
   fullName: System.Text.EncoderFallbackException.EncoderFallbackException(System.String, System.Exception)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/EncoderExceptionFallback.cs
-    startLine: 125
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 106
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: Initializes a new instance of the <xref href="System.Text.EncoderFallbackException" data-throw-if-not-resolved="false"></xref> class. Parameters specify the error message and the inner exception that is the cause of this exception.
   syntax:
     content: public EncoderFallbackException(string message, Exception innerException)
     content.vb: Public Sub New(message As String, innerException As Exception)
     parameters:
     - id: message
       type: System.String
-      description: An error message.
     - id: innerException
       type: System.Exception
-      description: The exception that caused this exception.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Text.EncoderFallbackException.CharUnknown
+  commentId: P:System.Text.EncoderFallbackException.CharUnknown
   id: CharUnknown
   parent: System.Text.EncoderFallbackException
+  langs:
+  - csharp
+  - vb
   name: CharUnknown
+  nameWithType: EncoderFallbackException.CharUnknown
   fullName: System.Text.EncoderFallbackException.CharUnknown
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/EncoderExceptionFallback.cs
-    startLine: 164
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CharUnknown
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 107
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: Gets the input character that caused the exception.
   syntax:
     content: public char CharUnknown { get; }
     content.vb: Public ReadOnly Property CharUnknown As Char
     parameters: []
     return:
       type: System.Char
-      description: The character that cannot be encoded.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Text.EncoderFallbackException.CharUnknownHigh
+  commentId: P:System.Text.EncoderFallbackException.CharUnknownHigh
   id: CharUnknownHigh
   parent: System.Text.EncoderFallbackException
+  langs:
+  - csharp
+  - vb
   name: CharUnknownHigh
+  nameWithType: EncoderFallbackException.CharUnknownHigh
   fullName: System.Text.EncoderFallbackException.CharUnknownHigh
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/EncoderExceptionFallback.cs
-    startLine: 172
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CharUnknownHigh
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 108
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: Gets the high component character of the surrogate pair that caused the exception.
   syntax:
     content: public char CharUnknownHigh { get; }
     content.vb: Public ReadOnly Property CharUnknownHigh As Char
     parameters: []
     return:
       type: System.Char
-      description: The high component character of the surrogate pair that cannot be encoded.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Text.EncoderFallbackException.CharUnknownLow
+  commentId: P:System.Text.EncoderFallbackException.CharUnknownLow
   id: CharUnknownLow
   parent: System.Text.EncoderFallbackException
+  langs:
+  - csharp
+  - vb
   name: CharUnknownLow
+  nameWithType: EncoderFallbackException.CharUnknownLow
   fullName: System.Text.EncoderFallbackException.CharUnknownLow
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/EncoderExceptionFallback.cs
-    startLine: 180
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CharUnknownLow
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 109
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: Gets the low component character of the surrogate pair that caused the exception.
   syntax:
     content: public char CharUnknownLow { get; }
     content.vb: Public ReadOnly Property CharUnknownLow As Char
     parameters: []
     return:
       type: System.Char
-      description: The low component character of the surrogate pair that cannot be encoded.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Text.EncoderFallbackException.Index
+  commentId: P:System.Text.EncoderFallbackException.Index
   id: Index
   parent: System.Text.EncoderFallbackException
+  langs:
+  - csharp
+  - vb
   name: Index
+  nameWithType: EncoderFallbackException.Index
   fullName: System.Text.EncoderFallbackException.Index
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/EncoderExceptionFallback.cs
-    startLine: 188
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Index
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 110
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: Gets the index position in the input buffer of the character that caused the exception.
   syntax:
     content: public int Index { get; }
     content.vb: Public ReadOnly Property Index As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The index position in the input buffer of the character that cannot be encoded.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Text.EncoderFallbackException.IsUnknownSurrogate
+  commentId: M:System.Text.EncoderFallbackException.IsUnknownSurrogate
   id: IsUnknownSurrogate
   parent: System.Text.EncoderFallbackException
+  langs:
+  - csharp
+  - vb
   name: IsUnknownSurrogate()
+  nameWithType: EncoderFallbackException.IsUnknownSurrogate()
   fullName: System.Text.EncoderFallbackException.IsUnknownSurrogate()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/EncoderExceptionFallback.cs
-    startLine: 197
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsUnknownSurrogate
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 111
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: Indicates whether the input that caused the exception is a surrogate pair.
   syntax:
     content: public bool IsUnknownSurrogate()
     content.vb: Public Function IsUnknownSurrogate As Boolean
     return:
       type: System.Boolean
-      description: true if the input was a surrogate pair; otherwise, false.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Text
+  commentId: N:System.Text
   isExternal: false
   name: System.Text
+  nameWithType: System.Text
   fullName: System.Text
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: false
   name: Exception
+  nameWithType: Exception
   fullName: System.Exception
 - uid: System.Char
+  commentId: T:System.Char
   parent: System
   isExternal: false
   name: Char
+  nameWithType: Char
   fullName: System.Char
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean

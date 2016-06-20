@@ -1,5 +1,6 @@
 items:
 - uid: System.Net.NetworkInformation.TcpStatistics
+  commentId: T:System.Net.NetworkInformation.TcpStatistics
   id: TcpStatistics
   parent: System.Net.NetworkInformation
   children:
@@ -18,29 +19,48 @@ items:
   - System.Net.NetworkInformation.TcpStatistics.SegmentsReceived
   - System.Net.NetworkInformation.TcpStatistics.SegmentsResent
   - System.Net.NetworkInformation.TcpStatistics.SegmentsSent
+  langs:
+  - csharp
+  - vb
   name: TcpStatistics
+  nameWithType: TcpStatistics
   fullName: System.Net.NetworkInformation.TcpStatistics
   type: Class
   source:
-    remote: &o0
-      path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 9
+    id: TcpStatistics
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 391
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Provides Transmission Control Protocol (TCP) statistical data.
   syntax:
     content: 'public abstract class TcpStatistics : object'
-    content.vb: Public MustInherit Class TcpStatistics Inherits Object
+    content.vb: >-
+      Public MustInherit Class TcpStatistics
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Net.NetworkInformation.TcpStatistics.#ctor
+  commentId: M:System.Net.NetworkInformation.TcpStatistics.#ctor
   id: '#ctor'
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: TcpStatistics()
+  nameWithType: TcpStatistics.TcpStatistics()
   fullName: System.Net.NetworkInformation.TcpStatistics.TcpStatistics()
   type: Constructor
   source:
@@ -48,325 +68,547 @@ items:
       path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
-    startLine: 390
+    startLine: 393
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Initializes a new instance of the <xref href="System.Net.NetworkInformation.TcpStatistics" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: protected TcpStatistics()
     content.vb: Protected Sub New
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Net.NetworkInformation.TcpStatistics.ConnectionsAccepted
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.ConnectionsAccepted
   id: ConnectionsAccepted
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: ConnectionsAccepted
+  nameWithType: TcpStatistics.ConnectionsAccepted
   fullName: System.Net.NetworkInformation.TcpStatistics.ConnectionsAccepted
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 14
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ConnectionsAccepted
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 394
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the number of accepted Transmission Control Protocol (TCP) connection requests.
   syntax:
     content: public abstract long ConnectionsAccepted { get; }
     content.vb: Public MustOverride ReadOnly Property ConnectionsAccepted As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of TCP connection requests accepted.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.ConnectionsInitiated
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.ConnectionsInitiated
   id: ConnectionsInitiated
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: ConnectionsInitiated
+  nameWithType: TcpStatistics.ConnectionsInitiated
   fullName: System.Net.NetworkInformation.TcpStatistics.ConnectionsInitiated
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 19
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ConnectionsInitiated
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 395
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the number of Transmission Control Protocol (TCP) connection requests made by clients.
   syntax:
     content: public abstract long ConnectionsInitiated { get; }
     content.vb: Public MustOverride ReadOnly Property ConnectionsInitiated As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of TCP connections initiated by clients.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.CumulativeConnections
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.CumulativeConnections
   id: CumulativeConnections
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: CumulativeConnections
+  nameWithType: TcpStatistics.CumulativeConnections
   fullName: System.Net.NetworkInformation.TcpStatistics.CumulativeConnections
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 24
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CumulativeConnections
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 396
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Specifies the total number of Transmission Control Protocol (TCP) connections established.
   syntax:
     content: public abstract long CumulativeConnections { get; }
     content.vb: Public MustOverride ReadOnly Property CumulativeConnections As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of connections established.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.CurrentConnections
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.CurrentConnections
   id: CurrentConnections
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: CurrentConnections
+  nameWithType: TcpStatistics.CurrentConnections
   fullName: System.Net.NetworkInformation.TcpStatistics.CurrentConnections
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 29
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CurrentConnections
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 397
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the number of current Transmission Control Protocol (TCP) connections.
   syntax:
     content: public abstract long CurrentConnections { get; }
     content.vb: Public MustOverride ReadOnly Property CurrentConnections As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of current TCP connections.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.ErrorsReceived
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.ErrorsReceived
   id: ErrorsReceived
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: ErrorsReceived
+  nameWithType: TcpStatistics.ErrorsReceived
   fullName: System.Net.NetworkInformation.TcpStatistics.ErrorsReceived
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 34
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ErrorsReceived
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 398
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the number of Transmission Control Protocol (TCP) errors received.
   syntax:
     content: public abstract long ErrorsReceived { get; }
     content.vb: Public MustOverride ReadOnly Property ErrorsReceived As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of TCP errors received.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.FailedConnectionAttempts
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.FailedConnectionAttempts
   id: FailedConnectionAttempts
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: FailedConnectionAttempts
+  nameWithType: TcpStatistics.FailedConnectionAttempts
   fullName: System.Net.NetworkInformation.TcpStatistics.FailedConnectionAttempts
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 39
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FailedConnectionAttempts
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 399
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the number of failed Transmission Control Protocol (TCP) connection attempts.
   syntax:
     content: public abstract long FailedConnectionAttempts { get; }
     content.vb: Public MustOverride ReadOnly Property FailedConnectionAttempts As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of failed TCP connection attempts.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.MaximumConnections
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.MaximumConnections
   id: MaximumConnections
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: MaximumConnections
+  nameWithType: TcpStatistics.MaximumConnections
   fullName: System.Net.NetworkInformation.TcpStatistics.MaximumConnections
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 44
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MaximumConnections
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 400
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the maximum number of supported Transmission Control Protocol (TCP) connections.
   syntax:
     content: public abstract long MaximumConnections { get; }
     content.vb: Public MustOverride ReadOnly Property MaximumConnections As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of TCP connections that can be supported.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.MaximumTransmissionTimeout
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.MaximumTransmissionTimeout
   id: MaximumTransmissionTimeout
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: MaximumTransmissionTimeout
+  nameWithType: TcpStatistics.MaximumTransmissionTimeout
   fullName: System.Net.NetworkInformation.TcpStatistics.MaximumTransmissionTimeout
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 49
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MaximumTransmissionTimeout
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 401
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the maximum retransmission time-out value for Transmission Control Protocol (TCP) segments.
   syntax:
     content: public abstract long MaximumTransmissionTimeout { get; }
     content.vb: Public MustOverride ReadOnly Property MaximumTransmissionTimeout As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the maximum number of milliseconds permitted by a TCP implementation for the retransmission time-out value.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.MinimumTransmissionTimeout
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.MinimumTransmissionTimeout
   id: MinimumTransmissionTimeout
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: MinimumTransmissionTimeout
+  nameWithType: TcpStatistics.MinimumTransmissionTimeout
   fullName: System.Net.NetworkInformation.TcpStatistics.MinimumTransmissionTimeout
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 54
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MinimumTransmissionTimeout
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 402
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the minimum retransmission time-out value for Transmission Control Protocol (TCP) segments.
   syntax:
     content: public abstract long MinimumTransmissionTimeout { get; }
     content.vb: Public MustOverride ReadOnly Property MinimumTransmissionTimeout As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the minimum number of milliseconds permitted by a TCP implementation for the retransmission time-out value.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.ResetConnections
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.ResetConnections
   id: ResetConnections
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: ResetConnections
+  nameWithType: TcpStatistics.ResetConnections
   fullName: System.Net.NetworkInformation.TcpStatistics.ResetConnections
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 59
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ResetConnections
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 403
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the number of RST packets received by Transmission Control Protocol (TCP) connections.
   syntax:
     content: public abstract long ResetConnections { get; }
     content.vb: Public MustOverride ReadOnly Property ResetConnections As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of reset TCP connections.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.ResetsSent
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.ResetsSent
   id: ResetsSent
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: ResetsSent
+  nameWithType: TcpStatistics.ResetsSent
   fullName: System.Net.NetworkInformation.TcpStatistics.ResetsSent
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 79
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ResetsSent
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 404
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the number of Transmission Control Protocol (TCP) segments sent with the reset flag set.
   syntax:
     content: public abstract long ResetsSent { get; }
     content.vb: Public MustOverride ReadOnly Property ResetsSent As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of TCP segments sent with the reset flag set.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.SegmentsReceived
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.SegmentsReceived
   id: SegmentsReceived
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: SegmentsReceived
+  nameWithType: TcpStatistics.SegmentsReceived
   fullName: System.Net.NetworkInformation.TcpStatistics.SegmentsReceived
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 64
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SegmentsReceived
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 405
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the number of Transmission Control Protocol (TCP) segments received.
   syntax:
     content: public abstract long SegmentsReceived { get; }
     content.vb: Public MustOverride ReadOnly Property SegmentsReceived As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of TCP segments received.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.SegmentsResent
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.SegmentsResent
   id: SegmentsResent
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: SegmentsResent
+  nameWithType: TcpStatistics.SegmentsResent
   fullName: System.Net.NetworkInformation.TcpStatistics.SegmentsResent
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 69
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SegmentsResent
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 406
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the number of Transmission Control Protocol (TCP) segments re-sent.
   syntax:
     content: public abstract long SegmentsResent { get; }
     content.vb: Public MustOverride ReadOnly Property SegmentsResent As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of TCP segments retransmitted.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Net.NetworkInformation.TcpStatistics.SegmentsSent
+  commentId: P:System.Net.NetworkInformation.TcpStatistics.SegmentsSent
   id: SegmentsSent
   parent: System.Net.NetworkInformation.TcpStatistics
+  langs:
+  - csharp
+  - vb
   name: SegmentsSent
+  nameWithType: TcpStatistics.SegmentsSent
   fullName: System.Net.NetworkInformation.TcpStatistics.SegmentsSent
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/TcpStatistics.cs
-    startLine: 74
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SegmentsSent
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 407
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Gets the number of Transmission Control Protocol (TCP) segments sent.
   syntax:
     content: public abstract long SegmentsSent { get; }
     content.vb: Public MustOverride ReadOnly Property SegmentsSent As Long
     parameters: []
     return:
       type: System.Int64
-      description: An <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> value that specifies the total number of TCP segments sent.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 references:
 - uid: System.Net.NetworkInformation
+  commentId: N:System.Net.NetworkInformation
   isExternal: false
   name: System.Net.NetworkInformation
+  nameWithType: System.Net.NetworkInformation
   fullName: System.Net.NetworkInformation
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Int64
+  commentId: T:System.Int64
   parent: System
   isExternal: false
   name: Int64
+  nameWithType: Int64
   fullName: System.Int64

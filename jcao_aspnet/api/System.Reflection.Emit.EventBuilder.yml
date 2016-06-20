@@ -1,5 +1,6 @@
 items:
 - uid: System.Reflection.Emit.EventBuilder
+  commentId: T:System.Reflection.Emit.EventBuilder
   id: EventBuilder
   parent: System.Reflection.Emit
   children:
@@ -9,238 +10,303 @@ items:
   - System.Reflection.Emit.EventBuilder.SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)
   - System.Reflection.Emit.EventBuilder.SetRaiseMethod(System.Reflection.Emit.MethodBuilder)
   - System.Reflection.Emit.EventBuilder.SetRemoveOnMethod(System.Reflection.Emit.MethodBuilder)
+  langs:
+  - csharp
+  - vb
   name: EventBuilder
+  nameWithType: EventBuilder
   fullName: System.Reflection.Emit.EventBuilder
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Reflection/Emit/EventBuilder.cs
+    remote:
+      path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Reflection/Emit/EventBuilder.cs
-    startLine: 26
+      repo: https://github.com/dotnet/corefx.git
+    id: EventBuilder
+    path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+    startLine: 68
   assemblies:
   - System.Reflection.Emit
   namespace: System.Reflection.Emit
-  summary: Defines events for a class.
   syntax:
     content: 'public sealed class EventBuilder : object'
-    content.vb: Public NotInheritable Class EventBuilder Inherits Object
+    content.vb: >-
+      Public NotInheritable Class EventBuilder
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Reflection.Emit.EventBuilder.AddOtherMethod(System.Reflection.Emit.MethodBuilder)
+  commentId: M:System.Reflection.Emit.EventBuilder.AddOtherMethod(System.Reflection.Emit.MethodBuilder)
   id: AddOtherMethod(System.Reflection.Emit.MethodBuilder)
   parent: System.Reflection.Emit.EventBuilder
+  langs:
+  - csharp
+  - vb
   name: AddOtherMethod(MethodBuilder)
+  nameWithType: EventBuilder.AddOtherMethod(MethodBuilder)
   fullName: System.Reflection.Emit.EventBuilder.AddOtherMethod(System.Reflection.Emit.MethodBuilder)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/EventBuilder.cs
-    startLine: 95
+    remote:
+      path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddOtherMethod
+    path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+    startLine: 71
   assemblies:
   - System.Reflection.Emit
   namespace: System.Reflection.Emit
-  summary: Adds one of the "other" methods associated with this event. "Other" methods are methods other than the "on" and "raise" methods associated with an event. This function can be called many times to add as many "other" methods.
   syntax:
     content: public void AddOtherMethod(MethodBuilder mdBuilder)
     content.vb: Public Sub AddOtherMethod(mdBuilder As MethodBuilder)
     parameters:
     - id: mdBuilder
       type: System.Reflection.Emit.MethodBuilder
-      description: A MethodBuilder object that represents the other method.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*mdBuilder* is null.'
-  - type: System.InvalidOperationException
-    description: <xref href="System.Reflection.Emit.TypeBuilder.CreateType" data-throw-if-not-resolved="false"></xref> has been called on the enclosing type.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Reflection.Emit.EventBuilder.SetAddOnMethod(System.Reflection.Emit.MethodBuilder)
+  commentId: M:System.Reflection.Emit.EventBuilder.SetAddOnMethod(System.Reflection.Emit.MethodBuilder)
   id: SetAddOnMethod(System.Reflection.Emit.MethodBuilder)
   parent: System.Reflection.Emit.EventBuilder
+  langs:
+  - csharp
+  - vb
   name: SetAddOnMethod(MethodBuilder)
+  nameWithType: EventBuilder.SetAddOnMethod(MethodBuilder)
   fullName: System.Reflection.Emit.EventBuilder.SetAddOnMethod(System.Reflection.Emit.MethodBuilder)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/EventBuilder.cs
-    startLine: 77
+    remote:
+      path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetAddOnMethod
+    path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+    startLine: 72
   assemblies:
   - System.Reflection.Emit
   namespace: System.Reflection.Emit
-  summary: Sets the method used to subscribe to this event.
   syntax:
     content: public void SetAddOnMethod(MethodBuilder mdBuilder)
     content.vb: Public Sub SetAddOnMethod(mdBuilder As MethodBuilder)
     parameters:
     - id: mdBuilder
       type: System.Reflection.Emit.MethodBuilder
-      description: A MethodBuilder object that represents the method used to subscribe to this event.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*mdBuilder* is null.'
-  - type: System.InvalidOperationException
-    description: <xref href="System.Reflection.Emit.TypeBuilder.CreateType" data-throw-if-not-resolved="false"></xref> has been called on the enclosing type.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Reflection.Emit.EventBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo,System.Byte[])
+  commentId: M:System.Reflection.Emit.EventBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo,System.Byte[])
   id: SetCustomAttribute(System.Reflection.ConstructorInfo,System.Byte[])
   parent: System.Reflection.Emit.EventBuilder
+  langs:
+  - csharp
+  - vb
   name: SetCustomAttribute(ConstructorInfo, Byte[])
-  name.vb: SetCustomAttribute(ConstructorInfo, Byte())
+  nameWithType: EventBuilder.SetCustomAttribute(ConstructorInfo, Byte[])
   fullName: System.Reflection.Emit.EventBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo, System.Byte[])
-  fullName.vb: System.Reflection.Emit.EventBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo, System.Byte())
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/EventBuilder.cs
-    startLine: 104
+    remote:
+      path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetCustomAttribute
+    path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+    startLine: 73
   assemblies:
   - System.Reflection.Emit
   namespace: System.Reflection.Emit
-  summary: Set a custom attribute using a specified custom attribute blob.
   syntax:
     content: public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute)
     content.vb: Public Sub SetCustomAttribute(con As ConstructorInfo, binaryAttribute As Byte())
     parameters:
     - id: con
       type: System.Reflection.ConstructorInfo
-      description: The constructor for the custom attribute.
     - id: binaryAttribute
       type: System.Byte[]
-      description: A byte blob representing the attributes.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*con* or *binaryAttribute* is null.'
-  - type: System.InvalidOperationException
-    description: <xref href="System.Reflection.Emit.TypeBuilder.CreateType" data-throw-if-not-resolved="false"></xref> has been called on the enclosing type.
+  nameWithType.vb: EventBuilder.SetCustomAttribute(ConstructorInfo, Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Reflection.Emit.EventBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo, System.Byte())
+  name.vb: SetCustomAttribute(ConstructorInfo, Byte())
 - uid: System.Reflection.Emit.EventBuilder.SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)
+  commentId: M:System.Reflection.Emit.EventBuilder.SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)
   id: SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)
   parent: System.Reflection.Emit.EventBuilder
+  langs:
+  - csharp
+  - vb
   name: SetCustomAttribute(CustomAttributeBuilder)
+  nameWithType: EventBuilder.SetCustomAttribute(CustomAttributeBuilder)
   fullName: System.Reflection.Emit.EventBuilder.SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/EventBuilder.cs
-    startLine: 127
+    remote:
+      path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetCustomAttribute
+    path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+    startLine: 74
   assemblies:
   - System.Reflection.Emit
   namespace: System.Reflection.Emit
-  summary: Sets a custom attribute using a custom attribute builder.
   syntax:
     content: public void SetCustomAttribute(CustomAttributeBuilder customBuilder)
     content.vb: Public Sub SetCustomAttribute(customBuilder As CustomAttributeBuilder)
     parameters:
     - id: customBuilder
       type: System.Reflection.Emit.CustomAttributeBuilder
-      description: An instance of a helper class to describe the custom attribute.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*con* is null.'
-  - type: System.InvalidOperationException
-    description: <xref href="System.Reflection.Emit.TypeBuilder.CreateType" data-throw-if-not-resolved="false"></xref> has been called on the enclosing type.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Reflection.Emit.EventBuilder.SetRaiseMethod(System.Reflection.Emit.MethodBuilder)
+  commentId: M:System.Reflection.Emit.EventBuilder.SetRaiseMethod(System.Reflection.Emit.MethodBuilder)
   id: SetRaiseMethod(System.Reflection.Emit.MethodBuilder)
   parent: System.Reflection.Emit.EventBuilder
+  langs:
+  - csharp
+  - vb
   name: SetRaiseMethod(MethodBuilder)
+  nameWithType: EventBuilder.SetRaiseMethod(MethodBuilder)
   fullName: System.Reflection.Emit.EventBuilder.SetRaiseMethod(System.Reflection.Emit.MethodBuilder)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/EventBuilder.cs
-    startLine: 89
+    remote:
+      path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetRaiseMethod
+    path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+    startLine: 75
   assemblies:
   - System.Reflection.Emit
   namespace: System.Reflection.Emit
-  summary: Sets the method used to raise this event.
   syntax:
     content: public void SetRaiseMethod(MethodBuilder mdBuilder)
     content.vb: Public Sub SetRaiseMethod(mdBuilder As MethodBuilder)
     parameters:
     - id: mdBuilder
       type: System.Reflection.Emit.MethodBuilder
-      description: A MethodBuilder object that represents the method used to raise this event.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*mdBuilder* is null.'
-  - type: System.InvalidOperationException
-    description: <xref href="System.Reflection.Emit.TypeBuilder.CreateType" data-throw-if-not-resolved="false"></xref> has been called on the enclosing type.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Reflection.Emit.EventBuilder.SetRemoveOnMethod(System.Reflection.Emit.MethodBuilder)
+  commentId: M:System.Reflection.Emit.EventBuilder.SetRemoveOnMethod(System.Reflection.Emit.MethodBuilder)
   id: SetRemoveOnMethod(System.Reflection.Emit.MethodBuilder)
   parent: System.Reflection.Emit.EventBuilder
+  langs:
+  - csharp
+  - vb
   name: SetRemoveOnMethod(MethodBuilder)
+  nameWithType: EventBuilder.SetRemoveOnMethod(MethodBuilder)
   fullName: System.Reflection.Emit.EventBuilder.SetRemoveOnMethod(System.Reflection.Emit.MethodBuilder)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/EventBuilder.cs
-    startLine: 83
+    remote:
+      path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetRemoveOnMethod
+    path: src/System.Reflection.Emit/ref/System.Reflection.Emit.cs
+    startLine: 76
   assemblies:
   - System.Reflection.Emit
   namespace: System.Reflection.Emit
-  summary: Sets the method used to unsubscribe to this event.
   syntax:
     content: public void SetRemoveOnMethod(MethodBuilder mdBuilder)
     content.vb: Public Sub SetRemoveOnMethod(mdBuilder As MethodBuilder)
     parameters:
     - id: mdBuilder
       type: System.Reflection.Emit.MethodBuilder
-      description: A MethodBuilder object that represents the method used to unsubscribe to this event.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*mdBuilder* is null.'
-  - type: System.InvalidOperationException
-    description: <xref href="System.Reflection.Emit.TypeBuilder.CreateType" data-throw-if-not-resolved="false"></xref> has been called on the enclosing type.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Reflection.Emit
+  commentId: N:System.Reflection.Emit
   isExternal: false
   name: System.Reflection.Emit
+  nameWithType: System.Reflection.Emit
   fullName: System.Reflection.Emit
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Reflection.Emit.MethodBuilder
+  commentId: T:System.Reflection.Emit.MethodBuilder
   parent: System.Reflection.Emit
   isExternal: false
   name: MethodBuilder
+  nameWithType: MethodBuilder
   fullName: System.Reflection.Emit.MethodBuilder
 - uid: System.Reflection.ConstructorInfo
+  commentId: T:System.Reflection.ConstructorInfo
+  parent: System.Reflection
   isExternal: false
   name: ConstructorInfo
+  nameWithType: ConstructorInfo
   fullName: System.Reflection.ConstructorInfo
 - uid: System.Byte[]
-  isExternal: false
   name: Byte[]
-  name.vb: Byte()
+  nameWithType: Byte[]
   fullName: System.Byte[]
-  fullName.vb: System.Byte()
+  nameWithType.vb: Byte()
+  fullname.vb: System.Byte()
+  name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: ()
+    nameWithType: ()
     fullName: ()
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: false
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
 - uid: System.Reflection.Emit.CustomAttributeBuilder
+  commentId: T:System.Reflection.Emit.CustomAttributeBuilder
   parent: System.Reflection.Emit
   isExternal: false
   name: CustomAttributeBuilder
+  nameWithType: CustomAttributeBuilder
   fullName: System.Reflection.Emit.CustomAttributeBuilder
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException

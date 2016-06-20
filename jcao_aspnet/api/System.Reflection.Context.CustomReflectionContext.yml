@@ -1,5 +1,6 @@
 items:
 - uid: System.Reflection.Context.CustomReflectionContext
+  commentId: T:System.Reflection.Context.CustomReflectionContext
   id: CustomReflectionContext
   parent: System.Reflection.Context
   children:
@@ -12,237 +13,329 @@ items:
   - System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})
   - System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)
   - System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)
+  langs:
+  - csharp
+  - vb
   name: CustomReflectionContext
+  nameWithType: CustomReflectionContext
   fullName: System.Reflection.Context.CustomReflectionContext
   type: Class
   source:
-    remote: &o0
-      path: src/System.Reflection.Context/src/System/Reflection/Context/CustomReflectionContext.cs
-      branch: master
-      repo: https://github.com/dotnet/corefx.git
-    path: src/System.Reflection.Context/src/System/Reflection/Context/CustomReflectionContext.cs
-    startLine: 8
-  assemblies:
-  - System.Reflection.Context
-  namespace: System.Reflection.Context
-  summary: Represents a customizable reflection context.
-  syntax:
-    content: 'public abstract class CustomReflectionContext : ReflectionContext'
-    content.vb: Public MustInherit Class CustomReflectionContext Inherits ReflectionContext
-  inheritance:
-  - System.Object
-- uid: System.Reflection.Context.CustomReflectionContext.#ctor
-  id: '#ctor'
-  parent: System.Reflection.Context.CustomReflectionContext
-  name: CustomReflectionContext()
-  fullName: System.Reflection.Context.CustomReflectionContext.CustomReflectionContext()
-  type: Constructor
-  source:
-    remote: *o0
-    path: src/System.Reflection.Context/src/System/Reflection/Context/CustomReflectionContext.cs
-    startLine: 10
-  assemblies:
-  - System.Reflection.Context
-  namespace: System.Reflection.Context
-  summary: Initializes a new instance of the <xref href="System.Reflection.Context.CustomReflectionContext" data-throw-if-not-resolved="false"></xref> class.
-  syntax:
-    content: protected CustomReflectionContext()
-    content.vb: Protected Sub New
-- uid: System.Reflection.Context.CustomReflectionContext.#ctor(System.Reflection.ReflectionContext)
-  id: '#ctor(System.Reflection.ReflectionContext)'
-  parent: System.Reflection.Context.CustomReflectionContext
-  name: CustomReflectionContext(ReflectionContext)
-  fullName: System.Reflection.Context.CustomReflectionContext.CustomReflectionContext(System.Reflection.ReflectionContext)
-  type: Constructor
-  source:
-    remote: &o1
+    remote:
       path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CustomReflectionContext
     path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
     startLine: 10
   assemblies:
   - System.Reflection.Context
   namespace: System.Reflection.Context
-  summary: Initializes a new instance of the <xref href="System.Reflection.Context.CustomReflectionContext" data-throw-if-not-resolved="false"></xref> class with the specified reflection context as a base.
+  syntax:
+    content: 'public abstract class CustomReflectionContext : ReflectionContext'
+    content.vb: >-
+      Public MustInherit Class CustomReflectionContext
+          Inherits ReflectionContext
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: System.Reflection.Context.CustomReflectionContext.#ctor
+  commentId: M:System.Reflection.Context.CustomReflectionContext.#ctor
+  id: '#ctor'
+  parent: System.Reflection.Context.CustomReflectionContext
+  langs:
+  - csharp
+  - vb
+  name: CustomReflectionContext()
+  nameWithType: CustomReflectionContext.CustomReflectionContext()
+  fullName: System.Reflection.Context.CustomReflectionContext.CustomReflectionContext()
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+    startLine: 12
+  assemblies:
+  - System.Reflection.Context
+  namespace: System.Reflection.Context
+  syntax:
+    content: protected CustomReflectionContext()
+    content.vb: Protected Sub New
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: System.Reflection.Context.CustomReflectionContext.#ctor(System.Reflection.ReflectionContext)
+  commentId: M:System.Reflection.Context.CustomReflectionContext.#ctor(System.Reflection.ReflectionContext)
+  id: '#ctor(System.Reflection.ReflectionContext)'
+  parent: System.Reflection.Context.CustomReflectionContext
+  langs:
+  - csharp
+  - vb
+  name: CustomReflectionContext(ReflectionContext)
+  nameWithType: CustomReflectionContext.CustomReflectionContext(ReflectionContext)
+  fullName: System.Reflection.Context.CustomReflectionContext.CustomReflectionContext(System.Reflection.ReflectionContext)
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+    startLine: 13
+  assemblies:
+  - System.Reflection.Context
+  namespace: System.Reflection.Context
   syntax:
     content: protected CustomReflectionContext(ReflectionContext source)
     content.vb: Protected Sub New(source As ReflectionContext)
     parameters:
     - id: source
       type: System.Reflection.ReflectionContext
-      description: The reflection context to use as a base.
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)
+  commentId: M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)
   id: AddProperties(System.Type)
   parent: System.Reflection.Context.CustomReflectionContext
+  langs:
+  - csharp
+  - vb
   name: AddProperties(Type)
+  nameWithType: CustomReflectionContext.AddProperties(Type)
   fullName: System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddProperties
     path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - System.Reflection.Context
   namespace: System.Reflection.Context
-  summary: When overridden in a derived class, provides a collection of additional properties for the specified type, as represented in this reflection context.
   syntax:
     content: protected virtual Collections.Generic.IEnumerable<PropertyInfo> AddProperties(Type type)
     content.vb: Protected Overridable Function AddProperties(type As Type) As Collections.Generic.IEnumerable(Of PropertyInfo)
     parameters:
     - id: type
       type: System.Type
-      description: The type to add properties to.
     return:
       type: System.Collections.Generic.IEnumerable{System.Reflection.PropertyInfo}
-      description: A collection of additional properties for the specified type.
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
 - uid: System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object})
+  commentId: M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object})
   id: CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object})
   parent: System.Reflection.Context.CustomReflectionContext
+  langs:
+  - csharp
+  - vb
   name: CreateProperty(Type, String, Func<Object, Object>, Action<Object, Object>)
-  name.vb: CreateProperty(Type, String, Func(Of Object, Object), Action(Of Object, Object))
+  nameWithType: CustomReflectionContext.CreateProperty(Type, String, Func<Object, Object>, Action<Object, Object>)
   fullName: System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type, System.String, System.Func<System.Object, System.Object>, System.Action<System.Object, System.Object>)
-  fullName.vb: System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type, System.String, System.Func(Of System.Object, System.Object), System.Action(Of System.Object, System.Object))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateProperty
     path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - System.Reflection.Context
   namespace: System.Reflection.Context
-  summary: Creates an object that represents a property to be added to a type, to be used with the <xref href="System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" data-throw-if-not-resolved="false"></xref> method.
   syntax:
     content: protected PropertyInfo CreateProperty(Type propertyType, string name, Func<object, object> getter, Action<object, object> setter)
     content.vb: Protected Function CreateProperty(propertyType As Type, name As String, getter As Func(Of Object, Object), setter As Action(Of Object, Object)) As PropertyInfo
     parameters:
     - id: propertyType
       type: System.Type
-      description: The type of the property to create.
     - id: name
       type: System.String
-      description: The name of the property to create.
     - id: getter
       type: System.Func{System.Object,System.Object}
-      description: An object that represents the property's get accessor.
     - id: setter
       type: System.Action{System.Object,System.Object}
-      description: An object that represents the property's set accessor.
     return:
       type: System.Reflection.PropertyInfo
-      description: An object that represents the property.
+  nameWithType.vb: CustomReflectionContext.CreateProperty(Type, String, Func(Of Object, Object), Action(Of Object, Object))
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type, System.String, System.Func(Of System.Object, System.Object), System.Action(Of System.Object, System.Object))
+  name.vb: CreateProperty(Type, String, Func(Of Object, Object), Action(Of Object, Object))
 - uid: System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute})
+  commentId: M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute})
   id: CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute})
   parent: System.Reflection.Context.CustomReflectionContext
+  langs:
+  - csharp
+  - vb
   name: CreateProperty(Type, String, Func<Object, Object>, Action<Object, Object>, Collections.Generic.IEnumerable<Attribute>, Collections.Generic.IEnumerable<Attribute>, Collections.Generic.IEnumerable<Attribute>)
-  name.vb: CreateProperty(Type, String, Func(Of Object, Object), Action(Of Object, Object), Collections.Generic.IEnumerable(Of Attribute), Collections.Generic.IEnumerable(Of Attribute), Collections.Generic.IEnumerable(Of Attribute))
+  nameWithType: CustomReflectionContext.CreateProperty(Type, String, Func<Object, Object>, Action<Object, Object>, Collections.Generic.IEnumerable<Attribute>, Collections.Generic.IEnumerable<Attribute>, Collections.Generic.IEnumerable<Attribute>)
   fullName: System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type, System.String, System.Func<System.Object, System.Object>, System.Action<System.Object, System.Object>, System.Collections.Generic.IEnumerable<System.Attribute>, System.Collections.Generic.IEnumerable<System.Attribute>, System.Collections.Generic.IEnumerable<System.Attribute>)
-  fullName.vb: System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type, System.String, System.Func(Of System.Object, System.Object), System.Action(Of System.Object, System.Object), System.Collections.Generic.IEnumerable(Of System.Attribute), System.Collections.Generic.IEnumerable(Of System.Attribute), System.Collections.Generic.IEnumerable(Of System.Attribute))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateProperty
     path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - System.Reflection.Context
   namespace: System.Reflection.Context
-  summary: Creates an object that represents a property to be added to a type, to be used with the <xref href="System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" data-throw-if-not-resolved="false"></xref> method and using the specified custom attributes.
   syntax:
     content: protected PropertyInfo CreateProperty(Type propertyType, string name, Func<object, object> getter, Action<object, object> setter, Collections.Generic.IEnumerable<Attribute> propertyCustomAttributes, Collections.Generic.IEnumerable<Attribute> getterCustomAttributes, Collections.Generic.IEnumerable<Attribute> setterCustomAttributes)
     content.vb: Protected Function CreateProperty(propertyType As Type, name As String, getter As Func(Of Object, Object), setter As Action(Of Object, Object), propertyCustomAttributes As Collections.Generic.IEnumerable(Of Attribute), getterCustomAttributes As Collections.Generic.IEnumerable(Of Attribute), setterCustomAttributes As Collections.Generic.IEnumerable(Of Attribute)) As PropertyInfo
     parameters:
     - id: propertyType
       type: System.Type
-      description: The type of the property to create.
     - id: name
       type: System.String
-      description: The name of the property to create.
     - id: getter
       type: System.Func{System.Object,System.Object}
-      description: An object that represents the property's get accessor.
     - id: setter
       type: System.Action{System.Object,System.Object}
-      description: An object that represents the property's set accessor.
     - id: propertyCustomAttributes
       type: System.Collections.Generic.IEnumerable{System.Attribute}
-      description: A collection of custom attributes to apply to the property.
     - id: getterCustomAttributes
       type: System.Collections.Generic.IEnumerable{System.Attribute}
-      description: A collection of custom attributes to apply to the property's get accessor.
     - id: setterCustomAttributes
       type: System.Collections.Generic.IEnumerable{System.Attribute}
-      description: A collection of custom attributes to apply to the property's set accessor.
     return:
       type: System.Reflection.PropertyInfo
-      description: An object that represents the property.
+  nameWithType.vb: CustomReflectionContext.CreateProperty(Type, String, Func(Of Object, Object), Action(Of Object, Object), Collections.Generic.IEnumerable(Of Attribute), Collections.Generic.IEnumerable(Of Attribute), Collections.Generic.IEnumerable(Of Attribute))
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type, System.String, System.Func(Of System.Object, System.Object), System.Action(Of System.Object, System.Object), System.Collections.Generic.IEnumerable(Of System.Attribute), System.Collections.Generic.IEnumerable(Of System.Attribute), System.Collections.Generic.IEnumerable(Of System.Attribute))
+  name.vb: CreateProperty(Type, String, Func(Of Object, Object), Action(Of Object, Object), Collections.Generic.IEnumerable(Of Attribute), Collections.Generic.IEnumerable(Of Attribute), Collections.Generic.IEnumerable(Of Attribute))
 - uid: System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})
   id: GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})
   parent: System.Reflection.Context.CustomReflectionContext
+  langs:
+  - csharp
+  - vb
   name: GetCustomAttributes(MemberInfo, Collections.Generic.IEnumerable<Object>)
-  name.vb: GetCustomAttributes(MemberInfo, Collections.Generic.IEnumerable(Of Object))
+  nameWithType: CustomReflectionContext.GetCustomAttributes(MemberInfo, Collections.Generic.IEnumerable<Object>)
   fullName: System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo, System.Collections.Generic.IEnumerable<System.Object>)
-  fullName.vb: System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo, System.Collections.Generic.IEnumerable(Of System.Object))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetCustomAttributes
     path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - System.Reflection.Context
   namespace: System.Reflection.Context
-  summary: When overridden in a derived class, provides a list of custom attributes for the specified member, as represented in this reflection context.
   syntax:
     content: protected virtual Collections.Generic.IEnumerable<object> GetCustomAttributes(MemberInfo member, Collections.Generic.IEnumerable<object> declaredAttributes)
     content.vb: Protected Overridable Function GetCustomAttributes(member As MemberInfo, declaredAttributes As Collections.Generic.IEnumerable(Of Object)) As Collections.Generic.IEnumerable(Of Object)
     parameters:
     - id: member
       type: System.Reflection.MemberInfo
-      description: The member whose custom attributes will be returned.
     - id: declaredAttributes
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: A collection of the member's attributes in its current context.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: A collection that represents the custom attributes of the specified member in this reflection context.
+  nameWithType.vb: CustomReflectionContext.GetCustomAttributes(MemberInfo, Collections.Generic.IEnumerable(Of Object))
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+  fullName.vb: System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo, System.Collections.Generic.IEnumerable(Of System.Object))
+  name.vb: GetCustomAttributes(MemberInfo, Collections.Generic.IEnumerable(Of Object))
 - uid: System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})
   id: GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})
   parent: System.Reflection.Context.CustomReflectionContext
+  langs:
+  - csharp
+  - vb
   name: GetCustomAttributes(ParameterInfo, Collections.Generic.IEnumerable<Object>)
-  name.vb: GetCustomAttributes(ParameterInfo, Collections.Generic.IEnumerable(Of Object))
+  nameWithType: CustomReflectionContext.GetCustomAttributes(ParameterInfo, Collections.Generic.IEnumerable<Object>)
   fullName: System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo, System.Collections.Generic.IEnumerable<System.Object>)
-  fullName.vb: System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo, System.Collections.Generic.IEnumerable(Of System.Object))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetCustomAttributes
     path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - System.Reflection.Context
   namespace: System.Reflection.Context
-  summary: When overridden in a derived class, provides a list of custom attributes for the specified parameter, as represented in this reflection context.
   syntax:
     content: protected virtual Collections.Generic.IEnumerable<object> GetCustomAttributes(ParameterInfo parameter, Collections.Generic.IEnumerable<object> declaredAttributes)
     content.vb: Protected Overridable Function GetCustomAttributes(parameter As ParameterInfo, declaredAttributes As Collections.Generic.IEnumerable(Of Object)) As Collections.Generic.IEnumerable(Of Object)
     parameters:
     - id: parameter
       type: System.Reflection.ParameterInfo
-      description: The parameter whose custom attributes will be returned.
     - id: declaredAttributes
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: A collection of the parameter's attributes in its current context.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: A collection that represents the custom attributes of the specified parameter in this reflection context.
+  nameWithType.vb: CustomReflectionContext.GetCustomAttributes(ParameterInfo, Collections.Generic.IEnumerable(Of Object))
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+  fullName.vb: System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo, System.Collections.Generic.IEnumerable(Of System.Object))
+  name.vb: GetCustomAttributes(ParameterInfo, Collections.Generic.IEnumerable(Of Object))
 - uid: System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)
+  commentId: M:System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)
   id: MapAssembly(System.Reflection.Assembly)
   parent: System.Reflection.Context.CustomReflectionContext
+  langs:
+  - csharp
+  - vb
   name: MapAssembly(Assembly)
+  nameWithType: CustomReflectionContext.MapAssembly(Assembly)
   fullName: System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MapAssembly
     path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - System.Reflection.Context
   namespace: System.Reflection.Context
@@ -254,16 +347,31 @@ items:
       type: System.Reflection.Assembly
     return:
       type: System.Reflection.Assembly
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)
+  commentId: M:System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)
   id: MapType(System.Reflection.TypeInfo)
   parent: System.Reflection.Context.CustomReflectionContext
+  langs:
+  - csharp
+  - vb
   name: MapType(TypeInfo)
+  nameWithType: CustomReflectionContext.MapType(TypeInfo)
   fullName: System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MapType
     path: src/System.Reflection.Context/ref/System.Reflection.Context.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - System.Reflection.Context
   namespace: System.Reflection.Context
@@ -275,335 +383,470 @@ items:
       type: System.Reflection.TypeInfo
     return:
       type: System.Reflection.TypeInfo
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.Reflection.Context
+  commentId: N:System.Reflection.Context
   isExternal: false
   name: System.Reflection.Context
+  nameWithType: System.Reflection.Context
   fullName: System.Reflection.Context
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Reflection.ReflectionContext
+  commentId: T:System.Reflection.ReflectionContext
   isExternal: false
   name: ReflectionContext
+  nameWithType: ReflectionContext
   fullName: System.Reflection.ReflectionContext
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type
 - uid: System.Collections.Generic.IEnumerable{System.Reflection.PropertyInfo}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Reflection.PropertyInfo}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<PropertyInfo>
-  name.vb: Collections.Generic.IEnumerable(Of PropertyInfo)
+  nameWithType: Collections.Generic.IEnumerable<PropertyInfo>
   fullName: System.Collections.Generic.IEnumerable<System.Reflection.PropertyInfo>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Reflection.PropertyInfo)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of PropertyInfo)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Reflection.PropertyInfo)
+  name.vb: Collections.Generic.IEnumerable(Of PropertyInfo)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Reflection.PropertyInfo
     name: PropertyInfo
+    nameWithType: PropertyInfo
     fullName: System.Reflection.PropertyInfo
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Reflection.PropertyInfo
     name: PropertyInfo
+    nameWithType: PropertyInfo
     fullName: System.Reflection.PropertyInfo
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Func{System.Object,System.Object}
+  commentId: '!:System.Func{System.Object,System.Object}'
   definition: System.Func`2
   name: Func<Object, Object>
-  name.vb: Func(Of Object, Object)
+  nameWithType: Func<Object, Object>
   fullName: System.Func<System.Object, System.Object>
-  fullName.vb: System.Func(Of System.Object, System.Object)
+  nameWithType.vb: Func(Of Object, Object)
+  fullname.vb: System.Func(Of System.Object, System.Object)
+  name.vb: Func(Of Object, Object)
   spec.csharp:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Action{System.Object,System.Object}
+  commentId: '!:System.Action{System.Object,System.Object}'
   definition: System.Action`2
   name: Action<Object, Object>
-  name.vb: Action(Of Object, Object)
+  nameWithType: Action<Object, Object>
   fullName: System.Action<System.Object, System.Object>
-  fullName.vb: System.Action(Of System.Object, System.Object)
+  nameWithType.vb: Action(Of Object, Object)
+  fullname.vb: System.Action(Of System.Object, System.Object)
+  name.vb: Action(Of Object, Object)
   spec.csharp:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Reflection.PropertyInfo
+  commentId: T:System.Reflection.PropertyInfo
   parent: System.Reflection
   isExternal: false
   name: PropertyInfo
+  nameWithType: PropertyInfo
   fullName: System.Reflection.PropertyInfo
 - uid: System.Func`2
+  commentId: T:System.Func`2
   isExternal: false
   name: Func<, >
-  name.vb: Func(Of , )
+  nameWithType: Func<, >
   fullName: System.Func<, >
-  fullName.vb: System.Func(Of , )
+  nameWithType.vb: Func(Of , )
+  fullname.vb: System.Func(Of , )
+  name.vb: Func(Of , )
   spec.csharp:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Action`2
+  commentId: T:System.Action`2
   isExternal: false
-  name: Action<T1, T2>
-  name.vb: Action(Of T1, T2)
-  fullName: System.Action<T1, T2>
-  fullName.vb: System.Action(Of T1, T2)
+  name: Action<, >
+  nameWithType: Action<, >
+  fullName: System.Action<, >
+  nameWithType.vb: Action(Of , )
+  fullname.vb: System.Action(Of , )
+  name.vb: Action(Of , )
   spec.csharp:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
   - name: <
+    nameWithType: <
     fullName: <
-  - name: T1
-    fullName: T1
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T2
-    fullName: T2
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - name: T1
-    fullName: T1
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T2
-    fullName: T2
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection
 - uid: System.Collections.Generic.IEnumerable{System.Attribute}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Attribute}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<Attribute>
-  name.vb: Collections.Generic.IEnumerable(Of Attribute)
+  nameWithType: Collections.Generic.IEnumerable<Attribute>
   fullName: System.Collections.Generic.IEnumerable<System.Attribute>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Attribute)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of Attribute)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Attribute)
+  name.vb: Collections.Generic.IEnumerable(Of Attribute)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Attribute
     name: Attribute
+    nameWithType: Attribute
     fullName: System.Attribute
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Attribute
     name: Attribute
+    nameWithType: Attribute
     fullName: System.Attribute
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Reflection.MemberInfo
+  commentId: T:System.Reflection.MemberInfo
   parent: System.Reflection
   isExternal: false
   name: MemberInfo
+  nameWithType: MemberInfo
   fullName: System.Reflection.MemberInfo
 - uid: System.Collections.Generic.IEnumerable{System.Object}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Object}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<Object>
-  name.vb: Collections.Generic.IEnumerable(Of Object)
+  nameWithType: Collections.Generic.IEnumerable<Object>
   fullName: System.Collections.Generic.IEnumerable<System.Object>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Object)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of Object)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Object)
+  name.vb: Collections.Generic.IEnumerable(Of Object)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Reflection.ParameterInfo
+  commentId: T:System.Reflection.ParameterInfo
   parent: System.Reflection
   isExternal: false
   name: ParameterInfo
+  nameWithType: ParameterInfo
   fullName: System.Reflection.ParameterInfo
 - uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
   parent: System.Reflection
   isExternal: false
-  name: Reflection.Assembly
+  name: Assembly
+  nameWithType: Assembly
   fullName: System.Reflection.Assembly
 - uid: System.Reflection.TypeInfo
+  commentId: T:System.Reflection.TypeInfo
   parent: System.Reflection
   isExternal: false
   name: TypeInfo
+  nameWithType: TypeInfo
   fullName: System.Reflection.TypeInfo

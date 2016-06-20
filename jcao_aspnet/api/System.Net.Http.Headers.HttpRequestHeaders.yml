@@ -1,5 +1,6 @@
 items:
 - uid: System.Net.Http.Headers.HttpRequestHeaders
+  commentId: T:System.Net.Http.Headers.HttpRequestHeaders
   id: HttpRequestHeaders
   parent: System.Net.Http.Headers
   children:
@@ -34,23 +35,30 @@ items:
   - System.Net.Http.Headers.HttpRequestHeaders.UserAgent
   - System.Net.Http.Headers.HttpRequestHeaders.Via
   - System.Net.Http.Headers.HttpRequestHeaders.Warning
+  langs:
+  - csharp
+  - vb
   name: HttpRequestHeaders
+  nameWithType: HttpRequestHeaders
   fullName: System.Net.Http.Headers.HttpRequestHeaders
   type: Class
   source:
-    remote: &o0
-      path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 11
+    id: HttpRequestHeaders
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 377
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Represents the collection of Request Headers as defined in RFC 2616.
   syntax:
     content: 'public sealed class HttpRequestHeaders : HttpHeaders, Collections.IEnumerable'
-    content.vb: Public NotInheritable Class HttpRequestHeaders Inherits HttpHeaders Implements Collections.IEnumerable
+    content.vb: >-
+      Public NotInheritable Class HttpRequestHeaders
+          Inherits HttpHeaders
+          Implements Collections.IEnumerable
   inheritance:
   - System.Object
   - System.Net.Http.Headers.HttpHeaders
@@ -68,1619 +76,2387 @@ items:
   - System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.Collections.Generic.IEnumerable{System.String})
   - System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.String)
   - System.Net.Http.Headers.HttpHeaders.TryGetValues(System.String,System.Collections.Generic.IEnumerable{System.String}@)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Accept
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Accept
   id: Accept
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Accept
+  nameWithType: HttpRequestHeaders.Accept
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Accept
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 32
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Accept
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 380
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Accept header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<MediaTypeWithQualityHeaderValue> Accept { get; }
     content.vb: Public ReadOnly Property Accept As HttpHeaderValueCollection(Of MediaTypeWithQualityHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.MediaTypeWithQualityHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Accept header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.AcceptCharset
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.AcceptCharset
   id: AcceptCharset
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: AcceptCharset
+  nameWithType: HttpRequestHeaders.AcceptCharset
   fullName: System.Net.Http.Headers.HttpRequestHeaders.AcceptCharset
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 45
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AcceptCharset
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 381
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Accept-Charset header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<StringWithQualityHeaderValue> AcceptCharset { get; }
     content.vb: Public ReadOnly Property AcceptCharset As HttpHeaderValueCollection(Of StringWithQualityHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.StringWithQualityHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Accept-Charset header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.AcceptEncoding
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.AcceptEncoding
   id: AcceptEncoding
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: AcceptEncoding
+  nameWithType: HttpRequestHeaders.AcceptEncoding
   fullName: System.Net.Http.Headers.HttpRequestHeaders.AcceptEncoding
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 60
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AcceptEncoding
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 382
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Accept-Encoding header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<StringWithQualityHeaderValue> AcceptEncoding { get; }
     content.vb: Public ReadOnly Property AcceptEncoding As HttpHeaderValueCollection(Of StringWithQualityHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.StringWithQualityHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Accept-Encoding header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.AcceptLanguage
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.AcceptLanguage
   id: AcceptLanguage
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: AcceptLanguage
+  nameWithType: HttpRequestHeaders.AcceptLanguage
   fullName: System.Net.Http.Headers.HttpRequestHeaders.AcceptLanguage
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 73
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AcceptLanguage
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 383
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Accept-Language header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<StringWithQualityHeaderValue> AcceptLanguage { get; }
     content.vb: Public ReadOnly Property AcceptLanguage As HttpHeaderValueCollection(Of StringWithQualityHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.StringWithQualityHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Accept-Language header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Authorization
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Authorization
   id: Authorization
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Authorization
+  nameWithType: HttpRequestHeaders.Authorization
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Authorization
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 86
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Authorization
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 384
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the Authorization header for an HTTP request.
   syntax:
     content: public AuthenticationHeaderValue Authorization { get; set; }
     content.vb: Public Property Authorization As AuthenticationHeaderValue
     parameters: []
     return:
       type: System.Net.Http.Headers.AuthenticationHeaderValue
-      description: Returns <xref href="System.Net.Http.Headers.AuthenticationHeaderValue" data-throw-if-not-resolved="false"></xref>.The value of the Authorization header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.CacheControl
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.CacheControl
   id: CacheControl
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: CacheControl
+  nameWithType: HttpRequestHeaders.CacheControl
   fullName: System.Net.Http.Headers.HttpRequestHeaders.CacheControl
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 285
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CacheControl
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 385
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the Cache-Control header for an HTTP request.
   syntax:
     content: public CacheControlHeaderValue CacheControl { get; set; }
     content.vb: Public Property CacheControl As CacheControlHeaderValue
     parameters: []
     return:
       type: System.Net.Http.Headers.CacheControlHeaderValue
-      description: Returns <xref href="System.Net.Http.Headers.CacheControlHeaderValue" data-throw-if-not-resolved="false"></xref>.The value of the Cache-Control header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Connection
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Connection
   id: Connection
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Connection
+  nameWithType: HttpRequestHeaders.Connection
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Connection
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 291
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Connection
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 386
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Connection header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<string> Connection { get; }
     content.vb: Public ReadOnly Property Connection As HttpHeaderValueCollection(Of String)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.String}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Connection header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.ConnectionClose
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.ConnectionClose
   id: ConnectionClose
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: ConnectionClose
+  nameWithType: HttpRequestHeaders.ConnectionClose
   fullName: System.Net.Http.Headers.HttpRequestHeaders.ConnectionClose
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 296
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ConnectionClose
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 387
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets a value that indicates if the Connection header for an HTTP request contains Close.
   syntax:
     content: public Nullable<bool> ConnectionClose { get; set; }
     content.vb: Public Property ConnectionClose As Nullable(Of Boolean)
     parameters: []
     return:
       type: System.Nullable{System.Boolean}
-      description: Returns <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref>.true if the Connection header contains Close, otherwise false.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Date
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Date
   id: Date
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Date
+  nameWithType: HttpRequestHeaders.Date
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Date
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 302
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Date
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 388
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the Date header for an HTTP request.
   syntax:
     content: public Nullable<DateTimeOffset> Date { get; set; }
     content.vb: Public Property Date As Nullable(Of DateTimeOffset)
     parameters: []
     return:
       type: System.Nullable{System.DateTimeOffset}
-      description: Returns <xref href="System.DateTimeOffset" data-throw-if-not-resolved="false"></xref>.The value of the Date header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Expect
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Expect
   id: Expect
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Expect
+  nameWithType: HttpRequestHeaders.Expect
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Expect
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 92
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Expect
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 389
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Expect header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<NameValueWithParametersHeaderValue> Expect { get; }
     content.vb: Public ReadOnly Property Expect As HttpHeaderValueCollection(Of NameValueWithParametersHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.NameValueWithParametersHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Expect header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.ExpectContinue
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.ExpectContinue
   id: ExpectContinue
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: ExpectContinue
+  nameWithType: HttpRequestHeaders.ExpectContinue
   fullName: System.Net.Http.Headers.HttpRequestHeaders.ExpectContinue
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 97
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ExpectContinue
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 390
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets a value that indicates if the Expect header for an HTTP request contains Continue.
   syntax:
     content: public Nullable<bool> ExpectContinue { get; set; }
     content.vb: Public Property ExpectContinue As Nullable(Of Boolean)
     parameters: []
     return:
       type: System.Nullable{System.Boolean}
-      description: Returns <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref>.true if the Expect header contains Continue, otherwise false.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.From
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.From
   id: From
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: From
+  nameWithType: HttpRequestHeaders.From
   fullName: System.Net.Http.Headers.HttpRequestHeaders.From
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 126
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: From
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 391
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the From header for an HTTP request.
   syntax:
     content: public string From { get; set; }
     content.vb: Public Property From As String
     parameters: []
     return:
       type: System.String
-      description: Returns <xref href="System.String" data-throw-if-not-resolved="false"></xref>.The value of the From header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Host
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Host
   id: Host
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Host
+  nameWithType: HttpRequestHeaders.Host
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Host
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 145
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Host
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 392
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the Host header for an HTTP request.
   syntax:
     content: public string Host { get; set; }
     content.vb: Public Property Host As String
     parameters: []
     return:
       type: System.String
-      description: Returns <xref href="System.String" data-throw-if-not-resolved="false"></xref>.The value of the Host header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.IfMatch
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.IfMatch
   id: IfMatch
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: IfMatch
+  nameWithType: HttpRequestHeaders.IfMatch
   fullName: System.Net.Http.Headers.HttpRequestHeaders.IfMatch
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 165
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IfMatch
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 393
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the If-Match header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<EntityTagHeaderValue> IfMatch { get; }
     content.vb: Public ReadOnly Property IfMatch As HttpHeaderValueCollection(Of EntityTagHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.EntityTagHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the If-Match header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.IfModifiedSince
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.IfModifiedSince
   id: IfModifiedSince
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: IfModifiedSince
+  nameWithType: HttpRequestHeaders.IfModifiedSince
   fullName: System.Net.Http.Headers.HttpRequestHeaders.IfModifiedSince
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 178
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IfModifiedSince
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 394
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the If-Modified-Since header for an HTTP request.
   syntax:
     content: public Nullable<DateTimeOffset> IfModifiedSince { get; set; }
     content.vb: Public Property IfModifiedSince As Nullable(Of DateTimeOffset)
     parameters: []
     return:
       type: System.Nullable{System.DateTimeOffset}
-      description: Returns <xref href="System.DateTimeOffset" data-throw-if-not-resolved="false"></xref>.The value of the If-Modified-Since header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.IfNoneMatch
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.IfNoneMatch
   id: IfNoneMatch
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: IfNoneMatch
+  nameWithType: HttpRequestHeaders.IfNoneMatch
   fullName: System.Net.Http.Headers.HttpRequestHeaders.IfNoneMatch
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 184
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IfNoneMatch
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 395
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the If-None-Match header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<EntityTagHeaderValue> IfNoneMatch { get; }
     content.vb: Public ReadOnly Property IfNoneMatch As HttpHeaderValueCollection(Of EntityTagHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.EntityTagHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.Gets the value of the If-None-Match header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.IfRange
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.IfRange
   id: IfRange
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: IfRange
+  nameWithType: HttpRequestHeaders.IfRange
   fullName: System.Net.Http.Headers.HttpRequestHeaders.IfRange
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 197
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IfRange
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 396
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the If-Range header for an HTTP request.
   syntax:
     content: public RangeConditionHeaderValue IfRange { get; set; }
     content.vb: Public Property IfRange As RangeConditionHeaderValue
     parameters: []
     return:
       type: System.Net.Http.Headers.RangeConditionHeaderValue
-      description: Returns <xref href="System.Net.Http.Headers.RangeConditionHeaderValue" data-throw-if-not-resolved="false"></xref>.The value of the If-Range header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.IfUnmodifiedSince
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.IfUnmodifiedSince
   id: IfUnmodifiedSince
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: IfUnmodifiedSince
+  nameWithType: HttpRequestHeaders.IfUnmodifiedSince
   fullName: System.Net.Http.Headers.HttpRequestHeaders.IfUnmodifiedSince
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 203
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IfUnmodifiedSince
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 397
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the If-Unmodified-Since header for an HTTP request.
   syntax:
     content: public Nullable<DateTimeOffset> IfUnmodifiedSince { get; set; }
     content.vb: Public Property IfUnmodifiedSince As Nullable(Of DateTimeOffset)
     parameters: []
     return:
       type: System.Nullable{System.DateTimeOffset}
-      description: Returns <xref href="System.DateTimeOffset" data-throw-if-not-resolved="false"></xref>.The value of the If-Unmodified-Since header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.MaxForwards
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.MaxForwards
   id: MaxForwards
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: MaxForwards
+  nameWithType: HttpRequestHeaders.MaxForwards
   fullName: System.Net.Http.Headers.HttpRequestHeaders.MaxForwards
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 209
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MaxForwards
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 398
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the Max-Forwards header for an HTTP request.
   syntax:
     content: public Nullable<int> MaxForwards { get; set; }
     content.vb: Public Property MaxForwards As Nullable(Of Integer)
     parameters: []
     return:
       type: System.Nullable{System.Int32}
-      description: Returns <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>.The value of the Max-Forwards header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Pragma
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Pragma
   id: Pragma
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Pragma
+  nameWithType: HttpRequestHeaders.Pragma
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Pragma
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 308
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Pragma
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 399
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Pragma header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<NameValueHeaderValue> Pragma { get; }
     content.vb: Public ReadOnly Property Pragma As HttpHeaderValueCollection(Of NameValueHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.NameValueHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Pragma header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.ProxyAuthorization
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.ProxyAuthorization
   id: ProxyAuthorization
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: ProxyAuthorization
+  nameWithType: HttpRequestHeaders.ProxyAuthorization
   fullName: System.Net.Http.Headers.HttpRequestHeaders.ProxyAuthorization
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 224
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ProxyAuthorization
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 400
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the Proxy-Authorization header for an HTTP request.
   syntax:
     content: public AuthenticationHeaderValue ProxyAuthorization { get; set; }
     content.vb: Public Property ProxyAuthorization As AuthenticationHeaderValue
     parameters: []
     return:
       type: System.Net.Http.Headers.AuthenticationHeaderValue
-      description: Returns <xref href="System.Net.Http.Headers.AuthenticationHeaderValue" data-throw-if-not-resolved="false"></xref>.The value of the Proxy-Authorization header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Range
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Range
   id: Range
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Range
+  nameWithType: HttpRequestHeaders.Range
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Range
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 230
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Range
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 401
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the Range header for an HTTP request.
   syntax:
     content: public RangeHeaderValue Range { get; set; }
     content.vb: Public Property Range As RangeHeaderValue
     parameters: []
     return:
       type: System.Net.Http.Headers.RangeHeaderValue
-      description: Returns <xref href="System.Net.Http.Headers.RangeHeaderValue" data-throw-if-not-resolved="false"></xref>.The value of the Range header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Referrer
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Referrer
   id: Referrer
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Referrer
+  nameWithType: HttpRequestHeaders.Referrer
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Referrer
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 236
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Referrer
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 402
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets the value of the Referer header for an HTTP request.
   syntax:
     content: public Uri Referrer { get; set; }
     content.vb: Public Property Referrer As Uri
     parameters: []
     return:
       type: System.Uri
-      description: Returns <xref href="System.Uri" data-throw-if-not-resolved="false"></xref>.The value of the Referer header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.TE
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.TE
   id: TE
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: TE
+  nameWithType: HttpRequestHeaders.TE
   fullName: System.Net.Http.Headers.HttpRequestHeaders.TE
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 242
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TE
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 403
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the TE header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<TransferCodingWithQualityHeaderValue> TE { get; }
     content.vb: Public ReadOnly Property TE As HttpHeaderValueCollection(Of TransferCodingWithQualityHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.TransferCodingWithQualityHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the TE header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Trailer
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Trailer
   id: Trailer
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Trailer
+  nameWithType: HttpRequestHeaders.Trailer
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Trailer
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 313
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Trailer
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 404
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Trailer header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<string> Trailer { get; }
     content.vb: Public ReadOnly Property Trailer As HttpHeaderValueCollection(Of String)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.String}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Trailer header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.TransferEncoding
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.TransferEncoding
   id: TransferEncoding
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: TransferEncoding
+  nameWithType: HttpRequestHeaders.TransferEncoding
   fullName: System.Net.Http.Headers.HttpRequestHeaders.TransferEncoding
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 318
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TransferEncoding
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 405
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Transfer-Encoding header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<TransferCodingHeaderValue> TransferEncoding { get; }
     content.vb: Public ReadOnly Property TransferEncoding As HttpHeaderValueCollection(Of TransferCodingHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.TransferCodingHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Transfer-Encoding header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.TransferEncodingChunked
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.TransferEncodingChunked
   id: TransferEncodingChunked
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: TransferEncodingChunked
+  nameWithType: HttpRequestHeaders.TransferEncodingChunked
   fullName: System.Net.Http.Headers.HttpRequestHeaders.TransferEncodingChunked
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 323
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TransferEncodingChunked
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 406
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets or sets a value that indicates if the Transfer-Encoding header for an HTTP request contains chunked.
   syntax:
     content: public Nullable<bool> TransferEncodingChunked { get; set; }
     content.vb: Public Property TransferEncodingChunked As Nullable(Of Boolean)
     parameters: []
     return:
       type: System.Nullable{System.Boolean}
-      description: Returns <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref>.true if the Transfer-Encoding header contains chunked, otherwise false.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Upgrade
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Upgrade
   id: Upgrade
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Upgrade
+  nameWithType: HttpRequestHeaders.Upgrade
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Upgrade
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 329
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Upgrade
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 407
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Upgrade header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<ProductHeaderValue> Upgrade { get; }
     content.vb: Public ReadOnly Property Upgrade As HttpHeaderValueCollection(Of ProductHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.ProductHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Upgrade header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.UserAgent
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.UserAgent
   id: UserAgent
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: UserAgent
+  nameWithType: HttpRequestHeaders.UserAgent
   fullName: System.Net.Http.Headers.HttpRequestHeaders.UserAgent
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 255
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: UserAgent
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 408
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the User-Agent header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<ProductInfoHeaderValue> UserAgent { get; }
     content.vb: Public ReadOnly Property UserAgent As HttpHeaderValueCollection(Of ProductInfoHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.ProductInfoHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the User-Agent header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Via
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Via
   id: Via
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Via
+  nameWithType: HttpRequestHeaders.Via
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Via
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 334
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Via
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 409
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Via header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<ViaHeaderValue> Via { get; }
     content.vb: Public ReadOnly Property Via As HttpHeaderValueCollection(Of ViaHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.ViaHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Via header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Net.Http.Headers.HttpRequestHeaders.Warning
+  commentId: P:System.Net.Http.Headers.HttpRequestHeaders.Warning
   id: Warning
   parent: System.Net.Http.Headers.HttpRequestHeaders
+  langs:
+  - csharp
+  - vb
   name: Warning
+  nameWithType: HttpRequestHeaders.Warning
   fullName: System.Net.Http.Headers.HttpRequestHeaders.Warning
   type: Property
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/Headers/HttpRequestHeaders.cs
-    startLine: 339
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Warning
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 410
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http.Headers
-  summary: Gets the value of the Warning header for an HTTP request.
   syntax:
     content: public HttpHeaderValueCollection<WarningHeaderValue> Warning { get; }
     content.vb: Public ReadOnly Property Warning As HttpHeaderValueCollection(Of WarningHeaderValue)
     parameters: []
     return:
       type: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.WarningHeaderValue}
-      description: Returns <xref href="System.Net.Http.Headers.HttpHeaderValueCollection`1" data-throw-if-not-resolved="false"></xref>.The value of the Warning header for an HTTP request.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Net.Http.Headers
+  commentId: N:System.Net.Http.Headers
   isExternal: false
   name: System.Net.Http.Headers
+  nameWithType: System.Net.Http.Headers
   fullName: System.Net.Http.Headers
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Net.Http.Headers.HttpHeaders
+  commentId: T:System.Net.Http.Headers.HttpHeaders
   parent: System.Net.Http.Headers
   isExternal: false
   name: HttpHeaders
+  nameWithType: HttpHeaders
   fullName: System.Net.Http.Headers.HttpHeaders
 - uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
   parent: System.Collections
   isExternal: false
   name: Collections.IEnumerable
+  nameWithType: Collections.IEnumerable
   fullName: System.Collections.IEnumerable
 - uid: System.Net.Http.Headers.HttpHeaders.Add(System.String,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:System.Net.Http.Headers.HttpHeaders.Add(System.String,System.Collections.Generic.IEnumerable{System.String})
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: true
   name: Add(String, Collections.Generic.IEnumerable<String>)
-  name.vb: Add(String, Collections.Generic.IEnumerable(Of String))
+  nameWithType: HttpHeaders.Add(String, Collections.Generic.IEnumerable<String>)
   fullName: System.Net.Http.Headers.HttpHeaders.Add(System.String, System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: System.Net.Http.Headers.HttpHeaders.Add(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType.vb: HttpHeaders.Add(String, Collections.Generic.IEnumerable(Of String))
+  fullname.vb: System.Net.Http.Headers.HttpHeaders.Add(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: Add(String, Collections.Generic.IEnumerable(Of String))
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.Add(System.String,System.Collections.Generic.IEnumerable{System.String})
     name: Add
+    nameWithType: HttpHeaders.Add
     fullName: System.Net.Http.Headers.HttpHeaders.Add
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.Add(System.String,System.Collections.Generic.IEnumerable{System.String})
     name: Add
+    nameWithType: HttpHeaders.Add
     fullName: System.Net.Http.Headers.HttpHeaders.Add
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaders.Add(System.String,System.String)
+  commentId: M:System.Net.Http.Headers.HttpHeaders.Add(System.String,System.String)
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: true
   name: Add(String, String)
+  nameWithType: HttpHeaders.Add(String, String)
   fullName: System.Net.Http.Headers.HttpHeaders.Add(System.String, System.String)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.Add(System.String,System.String)
     name: Add
+    nameWithType: HttpHeaders.Add
     fullName: System.Net.Http.Headers.HttpHeaders.Add
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.Add(System.String,System.String)
     name: Add
+    nameWithType: HttpHeaders.Add
     fullName: System.Net.Http.Headers.HttpHeaders.Add
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaders.Clear
+  commentId: M:System.Net.Http.Headers.HttpHeaders.Clear
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: false
   name: Clear()
+  nameWithType: HttpHeaders.Clear()
   fullName: System.Net.Http.Headers.HttpHeaders.Clear()
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.Clear
     name: Clear
+    nameWithType: HttpHeaders.Clear
     fullName: System.Net.Http.Headers.HttpHeaders.Clear
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.Clear
     name: Clear
+    nameWithType: HttpHeaders.Clear
     fullName: System.Net.Http.Headers.HttpHeaders.Clear
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaders.Contains(System.String)
+  commentId: M:System.Net.Http.Headers.HttpHeaders.Contains(System.String)
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: true
   name: Contains(String)
+  nameWithType: HttpHeaders.Contains(String)
   fullName: System.Net.Http.Headers.HttpHeaders.Contains(System.String)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.Contains(System.String)
     name: Contains
+    nameWithType: HttpHeaders.Contains
     fullName: System.Net.Http.Headers.HttpHeaders.Contains
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.Contains(System.String)
     name: Contains
+    nameWithType: HttpHeaders.Contains
     fullName: System.Net.Http.Headers.HttpHeaders.Contains
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaders.GetEnumerator
+  commentId: M:System.Net.Http.Headers.HttpHeaders.GetEnumerator
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: false
   name: GetEnumerator()
+  nameWithType: HttpHeaders.GetEnumerator()
   fullName: System.Net.Http.Headers.HttpHeaders.GetEnumerator()
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.GetEnumerator
     name: GetEnumerator
+    nameWithType: HttpHeaders.GetEnumerator
     fullName: System.Net.Http.Headers.HttpHeaders.GetEnumerator
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.GetEnumerator
     name: GetEnumerator
+    nameWithType: HttpHeaders.GetEnumerator
     fullName: System.Net.Http.Headers.HttpHeaders.GetEnumerator
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaders.GetValues(System.String)
+  commentId: M:System.Net.Http.Headers.HttpHeaders.GetValues(System.String)
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: true
   name: GetValues(String)
+  nameWithType: HttpHeaders.GetValues(String)
   fullName: System.Net.Http.Headers.HttpHeaders.GetValues(System.String)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.GetValues(System.String)
     name: GetValues
+    nameWithType: HttpHeaders.GetValues
     fullName: System.Net.Http.Headers.HttpHeaders.GetValues
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.GetValues(System.String)
     name: GetValues
+    nameWithType: HttpHeaders.GetValues
     fullName: System.Net.Http.Headers.HttpHeaders.GetValues
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaders.Remove(System.String)
+  commentId: M:System.Net.Http.Headers.HttpHeaders.Remove(System.String)
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: true
   name: Remove(String)
+  nameWithType: HttpHeaders.Remove(String)
   fullName: System.Net.Http.Headers.HttpHeaders.Remove(System.String)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.Remove(System.String)
     name: Remove
+    nameWithType: HttpHeaders.Remove
     fullName: System.Net.Http.Headers.HttpHeaders.Remove
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.Remove(System.String)
     name: Remove
+    nameWithType: HttpHeaders.Remove
     fullName: System.Net.Http.Headers.HttpHeaders.Remove
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaders.ToString
+  commentId: M:System.Net.Http.Headers.HttpHeaders.ToString
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: false
   name: ToString()
+  nameWithType: HttpHeaders.ToString()
   fullName: System.Net.Http.Headers.HttpHeaders.ToString()
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.ToString
     name: ToString
+    nameWithType: HttpHeaders.ToString
     fullName: System.Net.Http.Headers.HttpHeaders.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.ToString
     name: ToString
+    nameWithType: HttpHeaders.ToString
     fullName: System.Net.Http.Headers.HttpHeaders.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.Collections.Generic.IEnumerable{System.String})
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: true
   name: TryAddWithoutValidation(String, Collections.Generic.IEnumerable<String>)
-  name.vb: TryAddWithoutValidation(String, Collections.Generic.IEnumerable(Of String))
+  nameWithType: HttpHeaders.TryAddWithoutValidation(String, Collections.Generic.IEnumerable<String>)
   fullName: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String, System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType.vb: HttpHeaders.TryAddWithoutValidation(String, Collections.Generic.IEnumerable(Of String))
+  fullname.vb: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: TryAddWithoutValidation(String, Collections.Generic.IEnumerable(Of String))
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.Collections.Generic.IEnumerable{System.String})
     name: TryAddWithoutValidation
+    nameWithType: HttpHeaders.TryAddWithoutValidation
     fullName: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.Collections.Generic.IEnumerable{System.String})
     name: TryAddWithoutValidation
+    nameWithType: HttpHeaders.TryAddWithoutValidation
     fullName: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.String)
+  commentId: M:System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.String)
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: true
   name: TryAddWithoutValidation(String, String)
+  nameWithType: HttpHeaders.TryAddWithoutValidation(String, String)
   fullName: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String, System.String)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.String)
     name: TryAddWithoutValidation
+    nameWithType: HttpHeaders.TryAddWithoutValidation
     fullName: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation(System.String,System.String)
     name: TryAddWithoutValidation
+    nameWithType: HttpHeaders.TryAddWithoutValidation
     fullName: System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaders.TryGetValues(System.String,System.Collections.Generic.IEnumerable{System.String}@)
+  commentId: M:System.Net.Http.Headers.HttpHeaders.TryGetValues(System.String,System.Collections.Generic.IEnumerable{System.String}@)
   parent: System.Net.Http.Headers.HttpHeaders
   isExternal: true
   name: TryGetValues(String, Collections.Generic.IEnumerable<String>)
-  name.vb: TryGetValues(String, Collections.Generic.IEnumerable(Of String))
+  nameWithType: HttpHeaders.TryGetValues(String, Collections.Generic.IEnumerable<String>)
   fullName: System.Net.Http.Headers.HttpHeaders.TryGetValues(System.String, System.Collections.Generic.IEnumerable<System.String>)
-  fullName.vb: System.Net.Http.Headers.HttpHeaders.TryGetValues(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType.vb: HttpHeaders.TryGetValues(String, Collections.Generic.IEnumerable(Of String))
+  fullname.vb: System.Net.Http.Headers.HttpHeaders.TryGetValues(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: TryGetValues(String, Collections.Generic.IEnumerable(Of String))
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaders.TryGetValues(System.String,System.Collections.Generic.IEnumerable{System.String}@)
     name: TryGetValues
+    nameWithType: HttpHeaders.TryGetValues
     fullName: System.Net.Http.Headers.HttpHeaders.TryGetValues
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaders.TryGetValues(System.String,System.Collections.Generic.IEnumerable{System.String}@)
     name: TryGetValues
+    nameWithType: HttpHeaders.TryGetValues
     fullName: System.Net.Http.Headers.HttpHeaders.TryGetValues
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.MediaTypeWithQualityHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.MediaTypeWithQualityHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<MediaTypeWithQualityHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of MediaTypeWithQualityHeaderValue)
+  nameWithType: HttpHeaderValueCollection<MediaTypeWithQualityHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.MediaTypeWithQualityHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.MediaTypeWithQualityHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of MediaTypeWithQualityHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.MediaTypeWithQualityHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of MediaTypeWithQualityHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.MediaTypeWithQualityHeaderValue
     name: MediaTypeWithQualityHeaderValue
+    nameWithType: MediaTypeWithQualityHeaderValue
     fullName: System.Net.Http.Headers.MediaTypeWithQualityHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.MediaTypeWithQualityHeaderValue
     name: MediaTypeWithQualityHeaderValue
+    nameWithType: MediaTypeWithQualityHeaderValue
     fullName: System.Net.Http.Headers.MediaTypeWithQualityHeaderValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
-  parent: System.Net.Http.Headers
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection`1
   isExternal: false
   name: HttpHeaderValueCollection<T>
-  name.vb: HttpHeaderValueCollection(Of T)
+  nameWithType: HttpHeaderValueCollection<T>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<T>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of T)
+  nameWithType.vb: HttpHeaderValueCollection(Of T)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of T)
+  name.vb: HttpHeaderValueCollection(Of T)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.StringWithQualityHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.StringWithQualityHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<StringWithQualityHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of StringWithQualityHeaderValue)
+  nameWithType: HttpHeaderValueCollection<StringWithQualityHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.StringWithQualityHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.StringWithQualityHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of StringWithQualityHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.StringWithQualityHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of StringWithQualityHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.StringWithQualityHeaderValue
     name: StringWithQualityHeaderValue
+    nameWithType: StringWithQualityHeaderValue
     fullName: System.Net.Http.Headers.StringWithQualityHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.StringWithQualityHeaderValue
     name: StringWithQualityHeaderValue
+    nameWithType: StringWithQualityHeaderValue
     fullName: System.Net.Http.Headers.StringWithQualityHeaderValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.AuthenticationHeaderValue
+  commentId: T:System.Net.Http.Headers.AuthenticationHeaderValue
   parent: System.Net.Http.Headers
   isExternal: false
   name: AuthenticationHeaderValue
+  nameWithType: AuthenticationHeaderValue
   fullName: System.Net.Http.Headers.AuthenticationHeaderValue
 - uid: System.Net.Http.Headers.CacheControlHeaderValue
+  commentId: T:System.Net.Http.Headers.CacheControlHeaderValue
   parent: System.Net.Http.Headers
   isExternal: false
   name: CacheControlHeaderValue
+  nameWithType: CacheControlHeaderValue
   fullName: System.Net.Http.Headers.CacheControlHeaderValue
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.String}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.String}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<String>
-  name.vb: HttpHeaderValueCollection(Of String)
+  nameWithType: HttpHeaderValueCollection<String>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.String>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.String)
+  nameWithType.vb: HttpHeaderValueCollection(Of String)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.String)
+  name.vb: HttpHeaderValueCollection(Of String)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
   definition: System.Nullable`1
   name: Nullable<Boolean>
-  name.vb: Nullable(Of Boolean)
+  nameWithType: Nullable<Boolean>
   fullName: System.Nullable<System.Boolean>
-  fullName.vb: System.Nullable(Of System.Boolean)
+  nameWithType.vb: Nullable(Of Boolean)
+  fullname.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Nullable`1
+  commentId: T:System.Nullable`1
   parent: System
   isExternal: false
   name: Nullable<>
-  name.vb: Nullable(Of )
+  nameWithType: Nullable<>
   fullName: System.Nullable<>
-  fullName.vb: System.Nullable(Of )
+  nameWithType.vb: Nullable(Of )
+  fullname.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Nullable{System.DateTimeOffset}
+  commentId: '!:System.Nullable{System.DateTimeOffset}'
   definition: System.Nullable`1
   name: Nullable<DateTimeOffset>
-  name.vb: Nullable(Of DateTimeOffset)
+  nameWithType: Nullable<DateTimeOffset>
   fullName: System.Nullable<System.DateTimeOffset>
-  fullName.vb: System.Nullable(Of System.DateTimeOffset)
+  nameWithType.vb: Nullable(Of DateTimeOffset)
+  fullname.vb: System.Nullable(Of System.DateTimeOffset)
+  name.vb: Nullable(Of DateTimeOffset)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.DateTimeOffset
     name: DateTimeOffset
+    nameWithType: DateTimeOffset
     fullName: System.DateTimeOffset
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.DateTimeOffset
     name: DateTimeOffset
+    nameWithType: DateTimeOffset
     fullName: System.DateTimeOffset
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.NameValueWithParametersHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.NameValueWithParametersHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<NameValueWithParametersHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of NameValueWithParametersHeaderValue)
+  nameWithType: HttpHeaderValueCollection<NameValueWithParametersHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.NameValueWithParametersHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.NameValueWithParametersHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of NameValueWithParametersHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.NameValueWithParametersHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of NameValueWithParametersHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.NameValueWithParametersHeaderValue
     name: NameValueWithParametersHeaderValue
+    nameWithType: NameValueWithParametersHeaderValue
     fullName: System.Net.Http.Headers.NameValueWithParametersHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.NameValueWithParametersHeaderValue
     name: NameValueWithParametersHeaderValue
+    nameWithType: NameValueWithParametersHeaderValue
     fullName: System.Net.Http.Headers.NameValueWithParametersHeaderValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.EntityTagHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.EntityTagHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<EntityTagHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of EntityTagHeaderValue)
+  nameWithType: HttpHeaderValueCollection<EntityTagHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.EntityTagHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.EntityTagHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of EntityTagHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.EntityTagHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of EntityTagHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.EntityTagHeaderValue
     name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
     fullName: System.Net.Http.Headers.EntityTagHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.EntityTagHeaderValue
     name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
     fullName: System.Net.Http.Headers.EntityTagHeaderValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.RangeConditionHeaderValue
+  commentId: T:System.Net.Http.Headers.RangeConditionHeaderValue
   parent: System.Net.Http.Headers
   isExternal: false
   name: RangeConditionHeaderValue
+  nameWithType: RangeConditionHeaderValue
   fullName: System.Net.Http.Headers.RangeConditionHeaderValue
 - uid: System.Nullable{System.Int32}
+  commentId: '!:System.Nullable{System.Int32}'
   definition: System.Nullable`1
   name: Nullable<Int32>
-  name.vb: Nullable(Of Int32)
+  nameWithType: Nullable<Int32>
   fullName: System.Nullable<System.Int32>
-  fullName.vb: System.Nullable(Of System.Int32)
+  nameWithType.vb: Nullable(Of Int32)
+  fullname.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.NameValueHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.NameValueHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<NameValueHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of NameValueHeaderValue)
+  nameWithType: HttpHeaderValueCollection<NameValueHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.NameValueHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.NameValueHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of NameValueHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.NameValueHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of NameValueHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.NameValueHeaderValue
     name: NameValueHeaderValue
+    nameWithType: NameValueHeaderValue
     fullName: System.Net.Http.Headers.NameValueHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.NameValueHeaderValue
     name: NameValueHeaderValue
+    nameWithType: NameValueHeaderValue
     fullName: System.Net.Http.Headers.NameValueHeaderValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.RangeHeaderValue
+  commentId: T:System.Net.Http.Headers.RangeHeaderValue
   parent: System.Net.Http.Headers
   isExternal: false
   name: RangeHeaderValue
+  nameWithType: RangeHeaderValue
   fullName: System.Net.Http.Headers.RangeHeaderValue
 - uid: System.Uri
+  commentId: T:System.Uri
   parent: System
   isExternal: false
   name: Uri
+  nameWithType: Uri
   fullName: System.Uri
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.TransferCodingWithQualityHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.TransferCodingWithQualityHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<TransferCodingWithQualityHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of TransferCodingWithQualityHeaderValue)
+  nameWithType: HttpHeaderValueCollection<TransferCodingWithQualityHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.TransferCodingWithQualityHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.TransferCodingWithQualityHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of TransferCodingWithQualityHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.TransferCodingWithQualityHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of TransferCodingWithQualityHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.TransferCodingWithQualityHeaderValue
     name: TransferCodingWithQualityHeaderValue
+    nameWithType: TransferCodingWithQualityHeaderValue
     fullName: System.Net.Http.Headers.TransferCodingWithQualityHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.TransferCodingWithQualityHeaderValue
     name: TransferCodingWithQualityHeaderValue
+    nameWithType: TransferCodingWithQualityHeaderValue
     fullName: System.Net.Http.Headers.TransferCodingWithQualityHeaderValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.TransferCodingHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.TransferCodingHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<TransferCodingHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of TransferCodingHeaderValue)
+  nameWithType: HttpHeaderValueCollection<TransferCodingHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.TransferCodingHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.TransferCodingHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of TransferCodingHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.TransferCodingHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of TransferCodingHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.TransferCodingHeaderValue
     name: TransferCodingHeaderValue
+    nameWithType: TransferCodingHeaderValue
     fullName: System.Net.Http.Headers.TransferCodingHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.TransferCodingHeaderValue
     name: TransferCodingHeaderValue
+    nameWithType: TransferCodingHeaderValue
     fullName: System.Net.Http.Headers.TransferCodingHeaderValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.ProductHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.ProductHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<ProductHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of ProductHeaderValue)
+  nameWithType: HttpHeaderValueCollection<ProductHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.ProductHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.ProductHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of ProductHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.ProductHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of ProductHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.ProductHeaderValue
     name: ProductHeaderValue
+    nameWithType: ProductHeaderValue
     fullName: System.Net.Http.Headers.ProductHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.ProductHeaderValue
     name: ProductHeaderValue
+    nameWithType: ProductHeaderValue
     fullName: System.Net.Http.Headers.ProductHeaderValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.ProductInfoHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.ProductInfoHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<ProductInfoHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of ProductInfoHeaderValue)
+  nameWithType: HttpHeaderValueCollection<ProductInfoHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.ProductInfoHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.ProductInfoHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of ProductInfoHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.ProductInfoHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of ProductInfoHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.ProductInfoHeaderValue
     name: ProductInfoHeaderValue
+    nameWithType: ProductInfoHeaderValue
     fullName: System.Net.Http.Headers.ProductInfoHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.ProductInfoHeaderValue
     name: ProductInfoHeaderValue
+    nameWithType: ProductInfoHeaderValue
     fullName: System.Net.Http.Headers.ProductInfoHeaderValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.ViaHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.ViaHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<ViaHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of ViaHeaderValue)
+  nameWithType: HttpHeaderValueCollection<ViaHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.ViaHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.ViaHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of ViaHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.ViaHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of ViaHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.ViaHeaderValue
     name: ViaHeaderValue
+    nameWithType: ViaHeaderValue
     fullName: System.Net.Http.Headers.ViaHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.ViaHeaderValue
     name: ViaHeaderValue
+    nameWithType: ViaHeaderValue
     fullName: System.Net.Http.Headers.ViaHeaderValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.WarningHeaderValue}
+  commentId: T:System.Net.Http.Headers.HttpHeaderValueCollection{System.Net.Http.Headers.WarningHeaderValue}
   parent: System.Net.Http.Headers
   definition: System.Net.Http.Headers.HttpHeaderValueCollection`1
   name: HttpHeaderValueCollection<WarningHeaderValue>
-  name.vb: HttpHeaderValueCollection(Of WarningHeaderValue)
+  nameWithType: HttpHeaderValueCollection<WarningHeaderValue>
   fullName: System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.WarningHeaderValue>
-  fullName.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.WarningHeaderValue)
+  nameWithType.vb: HttpHeaderValueCollection(Of WarningHeaderValue)
+  fullname.vb: System.Net.Http.Headers.HttpHeaderValueCollection(Of System.Net.Http.Headers.WarningHeaderValue)
+  name.vb: HttpHeaderValueCollection(Of WarningHeaderValue)
   spec.csharp:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Net.Http.Headers.WarningHeaderValue
     name: WarningHeaderValue
+    nameWithType: WarningHeaderValue
     fullName: System.Net.Http.Headers.WarningHeaderValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Net.Http.Headers.HttpHeaderValueCollection`1
     name: HttpHeaderValueCollection
+    nameWithType: HttpHeaderValueCollection
     fullName: System.Net.Http.Headers.HttpHeaderValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Net.Http.Headers.WarningHeaderValue
     name: WarningHeaderValue
+    nameWithType: WarningHeaderValue
     fullName: System.Net.Http.Headers.WarningHeaderValue
   - name: )
+    nameWithType: )
     fullName: )

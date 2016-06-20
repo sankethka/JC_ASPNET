@@ -1,5 +1,6 @@
 items:
 - uid: System.ServiceProcess.ServiceType
+  commentId: T:System.ServiceProcess.ServiceType
   id: ServiceType
   parent: System.ServiceProcess
   children:
@@ -14,6 +15,7 @@ items:
   - csharp
   - vb
   name: ServiceType
+  nameWithType: ServiceType
   fullName: System.ServiceProcess.ServiceType
   type: Enum
   source:
@@ -21,22 +23,30 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ServiceType
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 56
+    startLine: 59
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Represents the type of the service.
   syntax:
     content: 'public enum ServiceType : int'
     content.vb: Public Enum ServiceType As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
 - uid: System.ServiceProcess.ServiceType.Adapter
+  commentId: F:System.ServiceProcess.ServiceType.Adapter
   id: Adapter
   parent: System.ServiceProcess.ServiceType
   langs:
   - csharp
   - vb
   name: Adapter
+  nameWithType: ServiceType.Adapter
   fullName: System.ServiceProcess.ServiceType.Adapter
   type: Field
   source:
@@ -44,22 +54,32 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Adapter
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 59
+    startLine: 62
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: A service for a hardware device that requires its own driver.
   syntax:
     content: Adapter = null
     content.vb: Adapter = Nothing
+    return:
+      type: System.ServiceProcess.ServiceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.ServiceProcess.ServiceType.FileSystemDriver
+  commentId: F:System.ServiceProcess.ServiceType.FileSystemDriver
   id: FileSystemDriver
   parent: System.ServiceProcess.ServiceType
   langs:
   - csharp
   - vb
   name: FileSystemDriver
+  nameWithType: ServiceType.FileSystemDriver
   fullName: System.ServiceProcess.ServiceType.FileSystemDriver
   type: Field
   source:
@@ -67,22 +87,32 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: FileSystemDriver
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 60
+    startLine: 63
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: A file system driver, which is also a Kernel device driver.
   syntax:
     content: FileSystemDriver = null
     content.vb: FileSystemDriver = Nothing
+    return:
+      type: System.ServiceProcess.ServiceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.ServiceProcess.ServiceType.InteractiveProcess
+  commentId: F:System.ServiceProcess.ServiceType.InteractiveProcess
   id: InteractiveProcess
   parent: System.ServiceProcess.ServiceType
   langs:
   - csharp
   - vb
   name: InteractiveProcess
+  nameWithType: ServiceType.InteractiveProcess
   fullName: System.ServiceProcess.ServiceType.InteractiveProcess
   type: Field
   source:
@@ -90,22 +120,32 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: InteractiveProcess
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 61
+    startLine: 64
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: A service that can communicate with the desktop.
   syntax:
     content: InteractiveProcess = null
     content.vb: InteractiveProcess = Nothing
+    return:
+      type: System.ServiceProcess.ServiceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.ServiceProcess.ServiceType.KernelDriver
+  commentId: F:System.ServiceProcess.ServiceType.KernelDriver
   id: KernelDriver
   parent: System.ServiceProcess.ServiceType
   langs:
   - csharp
   - vb
   name: KernelDriver
+  nameWithType: ServiceType.KernelDriver
   fullName: System.ServiceProcess.ServiceType.KernelDriver
   type: Field
   source:
@@ -113,22 +153,32 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: KernelDriver
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 62
+    startLine: 65
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: A Kernel device driver such as a hard disk or other low-level hardware device driver.
   syntax:
     content: KernelDriver = null
     content.vb: KernelDriver = Nothing
+    return:
+      type: System.ServiceProcess.ServiceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.ServiceProcess.ServiceType.RecognizerDriver
+  commentId: F:System.ServiceProcess.ServiceType.RecognizerDriver
   id: RecognizerDriver
   parent: System.ServiceProcess.ServiceType
   langs:
   - csharp
   - vb
   name: RecognizerDriver
+  nameWithType: ServiceType.RecognizerDriver
   fullName: System.ServiceProcess.ServiceType.RecognizerDriver
   type: Field
   source:
@@ -136,22 +186,32 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: RecognizerDriver
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 63
+    startLine: 66
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: A file system driver used during startup to determine the file systems present on the system.
   syntax:
     content: RecognizerDriver = null
     content.vb: RecognizerDriver = Nothing
+    return:
+      type: System.ServiceProcess.ServiceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.ServiceProcess.ServiceType.Win32OwnProcess
+  commentId: F:System.ServiceProcess.ServiceType.Win32OwnProcess
   id: Win32OwnProcess
   parent: System.ServiceProcess.ServiceType
   langs:
   - csharp
   - vb
   name: Win32OwnProcess
+  nameWithType: ServiceType.Win32OwnProcess
   fullName: System.ServiceProcess.ServiceType.Win32OwnProcess
   type: Field
   source:
@@ -159,22 +219,32 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Win32OwnProcess
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 64
+    startLine: 67
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: A Win32 program that can be started by the Service Controller and that obeys the service control protocol. This type of Win32 service runs in a process by itself.
   syntax:
     content: Win32OwnProcess = null
     content.vb: Win32OwnProcess = Nothing
+    return:
+      type: System.ServiceProcess.ServiceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.ServiceProcess.ServiceType.Win32ShareProcess
+  commentId: F:System.ServiceProcess.ServiceType.Win32ShareProcess
   id: Win32ShareProcess
   parent: System.ServiceProcess.ServiceType
   langs:
   - csharp
   - vb
   name: Win32ShareProcess
+  nameWithType: ServiceType.Win32ShareProcess
   fullName: System.ServiceProcess.ServiceType.Win32ShareProcess
   type: Field
   source:
@@ -182,17 +252,34 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Win32ShareProcess
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 65
+    startLine: 68
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: A Win32 service that can share a process with other Win32 services.
   syntax:
     content: Win32ShareProcess = null
     content.vb: Win32ShareProcess = Nothing
+    return:
+      type: System.ServiceProcess.ServiceType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System.ServiceProcess
+  commentId: N:System.ServiceProcess
   isExternal: false
   name: System.ServiceProcess
+  nameWithType: System.ServiceProcess
   fullName: System.ServiceProcess
+- uid: System.ServiceProcess.ServiceType
+  commentId: T:System.ServiceProcess.ServiceType
+  parent: System.ServiceProcess
+  isExternal: false
+  name: ServiceType
+  nameWithType: ServiceType
+  fullName: System.ServiceProcess.ServiceType

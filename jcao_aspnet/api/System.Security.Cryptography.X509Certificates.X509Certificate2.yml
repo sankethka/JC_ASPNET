@@ -1,5 +1,6 @@
 items:
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+  commentId: T:System.Security.Cryptography.X509Certificates.X509Certificate2
   id: X509Certificate2
   parent: System.Security.Cryptography.X509Certificates
   children:
@@ -30,23 +31,29 @@ items:
   - System.Security.Cryptography.X509Certificates.X509Certificate2.ToString
   - System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)
   - System.Security.Cryptography.X509Certificates.X509Certificate2.Version
+  langs:
+  - csharp
+  - vb
   name: X509Certificate2
+  nameWithType: X509Certificate2
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 16
+    id: X509Certificate2
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 126
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Represents an X.509 certificate.
   syntax:
     content: 'public class X509Certificate2 : X509Certificate'
-    content.vb: Public Class X509Certificate2 Inherits X509Certificate
+    content.vb: >-
+      Public Class X509Certificate2
+          Inherits X509Certificate
   inheritance:
   - System.Object
   - System.Security.Cryptography.X509Certificates.X509Certificate
@@ -68,114 +75,166 @@ items:
   - System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParametersString
   - System.Security.Cryptography.X509Certificates.X509Certificate.GetPublicKey
   - System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber
+  extensionMethods:
+  - System.Security.Cryptography.X509Certificates.X509Certificate2.System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey
+  - System.Security.Cryptography.X509Certificates.X509Certificate2.System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey
+  - System.Security.Cryptography.X509Certificates.X509Certificate2.System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey
+  - System.Security.Cryptography.X509Certificates.X509Certificate2.System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor
   id: '#ctor'
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: X509Certificate2()
+  nameWithType: X509Certificate2.X509Certificate2()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2()
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 18
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 128
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Initializes a new instance of the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public X509Certificate2()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[])
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[])
   id: '#ctor(System.Byte[])'
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: X509Certificate2(Byte[])
-  name.vb: X509Certificate2(Byte())
+  nameWithType: X509Certificate2.X509Certificate2(Byte[])
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.Byte[])
-  fullName.vb: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.Byte())
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 23
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 129
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Initializes a new instance of the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> class using information from a byte array.
   syntax:
     content: public X509Certificate2(byte[] rawData)
     content.vb: Public Sub New(rawData As Byte())
     parameters:
     - id: rawData
       type: System.Byte[]
-      description: A byte array containing data from an X.509 certificate.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: An error with the certificate occurs. For example:The certificate file does not exist.The certificate is invalid.The certificate's password is incorrect.
+  nameWithType.vb: X509Certificate2.X509Certificate2(Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.Byte())
+  name.vb: X509Certificate2(Byte())
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[],System.String)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[],System.String)
   id: '#ctor(System.Byte[],System.String)'
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: X509Certificate2(Byte[], String)
-  name.vb: X509Certificate2(Byte(), String)
+  nameWithType: X509Certificate2.X509Certificate2(Byte[], String)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.Byte[], System.String)
-  fullName.vb: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.Byte(), System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 28
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 130
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Initializes a new instance of the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> class using a byte array and a password.
   syntax:
     content: public X509Certificate2(byte[] rawData, string password)
     content.vb: Public Sub New(rawData As Byte(), password As String)
     parameters:
     - id: rawData
       type: System.Byte[]
-      description: A byte array containing data from an X.509 certificate.
     - id: password
       type: System.String
-      description: The password required to access the X.509 certificate data.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: An error with the certificate occurs. For example:The certificate file does not exist.The certificate is invalid.The certificate's password is incorrect.
+  nameWithType.vb: X509Certificate2.X509Certificate2(Byte(), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.Byte(), System.String)
+  name.vb: X509Certificate2(Byte(), String)
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[],System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.Byte[],System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)
   id: '#ctor(System.Byte[],System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)'
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: X509Certificate2(Byte[], String, X509KeyStorageFlags)
-  name.vb: X509Certificate2(Byte(), String, X509KeyStorageFlags)
+  nameWithType: X509Certificate2.X509Certificate2(Byte[], String, X509KeyStorageFlags)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.Byte[], System.String, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)
-  fullName.vb: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.Byte(), System.String, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 33
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 131
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Initializes a new instance of the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> class using a byte array, a password, and a key storage flag.
   syntax:
     content: public X509Certificate2(byte[] rawData, string password, X509KeyStorageFlags keyStorageFlags)
     content.vb: Public Sub New(rawData As Byte(), password As String, keyStorageFlags As X509KeyStorageFlags)
     parameters:
     - id: rawData
       type: System.Byte[]
-      description: A byte array containing data from an X.509 certificate.
     - id: password
       type: System.String
-      description: The password required to access the X.509 certificate data.
     - id: keyStorageFlags
       type: System.Security.Cryptography.X509Certificates.X509KeyStorageFlags
-      description: A bitwise combination of the enumeration values that control where and how to import the certificate.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: An error with the certificate occurs. For example:The certificate file does not exist.The certificate is invalid.The certificate's password is incorrect.
+  nameWithType.vb: X509Certificate2.X509Certificate2(Byte(), String, X509KeyStorageFlags)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.Byte(), System.String, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)
+  name.vb: X509Certificate2(Byte(), String, X509KeyStorageFlags)
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.IntPtr)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.IntPtr)
   id: '#ctor(System.IntPtr)'
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: X509Certificate2(IntPtr)
+  nameWithType: X509Certificate2.X509Certificate2(IntPtr)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.IntPtr)
   type: Constructor
   source:
@@ -183,1075 +242,1748 @@ items:
       path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
-    startLine: 129
+    startLine: 132
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Initializes a new instance of the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> class using an unmanaged handle.
   syntax:
     content: public X509Certificate2(IntPtr handle)
     content.vb: Public Sub New(handle As IntPtr)
     parameters:
     - id: handle
       type: System.IntPtr
-      description: A pointer to a certificate context in unmanaged code. The C structure is called PCCERT_CONTEXT.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: An error with the certificate occurs. For example:The certificate file does not exist.The certificate is invalid.The certificate's password is incorrect.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: X509Certificate2(String)
+  nameWithType: X509Certificate2.X509Certificate2(String)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 48
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 133
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Initializes a new instance of the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> class using a certificate file name.
   syntax:
     content: public X509Certificate2(string fileName)
     content.vb: Public Sub New(fileName As String)
     parameters:
     - id: fileName
       type: System.String
-      description: The name of a certificate file.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: An error with the certificate occurs. For example:The certificate file does not exist.The certificate is invalid.The certificate's password is incorrect.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String,System.String)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String,System.String)
   id: '#ctor(System.String,System.String)'
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: X509Certificate2(String, String)
+  nameWithType: X509Certificate2.X509Certificate2(String, String)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.String, System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 53
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 134
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Initializes a new instance of the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> class using a certificate file name and a password used to access the certificate.
   syntax:
     content: public X509Certificate2(string fileName, string password)
     content.vb: Public Sub New(fileName As String, password As String)
     parameters:
     - id: fileName
       type: System.String
-      description: The name of a certificate file.
     - id: password
       type: System.String
-      description: The password required to access the X.509 certificate data.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: An error with the certificate occurs. For example:The certificate file does not exist.The certificate is invalid.The certificate's password is incorrect.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String,System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.#ctor(System.String,System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)
   id: '#ctor(System.String,System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)'
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: X509Certificate2(String, String, X509KeyStorageFlags)
+  nameWithType: X509Certificate2.X509Certificate2(String, String, X509KeyStorageFlags)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.X509Certificate2(System.String, System.String, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 58
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 135
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Initializes a new instance of the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> class using a certificate file name, a password used to access the certificate, and a key storage flag.
   syntax:
     content: public X509Certificate2(string fileName, string password, X509KeyStorageFlags keyStorageFlags)
     content.vb: Public Sub New(fileName As String, password As String, keyStorageFlags As X509KeyStorageFlags)
     parameters:
     - id: fileName
       type: System.String
-      description: The name of a certificate file.
     - id: password
       type: System.String
-      description: The password required to access the X.509 certificate data.
     - id: keyStorageFlags
       type: System.Security.Cryptography.X509Certificates.X509KeyStorageFlags
-      description: A bitwise combination of the enumeration values that control where and how to import the certificate.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: An error with the certificate occurs. For example:The certificate file does not exist.The certificate is invalid.The certificate's password is incorrect.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.Archived
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.Archived
   id: Archived
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: Archived
+  nameWithType: X509Certificate2.Archived
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.Archived
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 63
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Archived
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 136
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets or sets a value indicating that an X.509 certificate is archived.
   syntax:
     content: public bool Archived { get; set; }
     content.vb: Public Property Archived As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the certificate is archived, false if the certificate is not archived.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The certificate is unreadable.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.Extensions
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.Extensions
   id: Extensions
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: Extensions
+  nameWithType: X509Certificate2.Extensions
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.Extensions
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 80
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Extensions
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 137
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets a collection of <xref href="System.Security.Cryptography.X509Certificates.X509Extension" data-throw-if-not-resolved="false"></xref> objects.
   syntax:
     content: public X509ExtensionCollection Extensions { get; }
     content.vb: Public ReadOnly Property Extensions As X509ExtensionCollection
     parameters: []
     return:
       type: System.Security.Cryptography.X509Certificates.X509ExtensionCollection
-      description: An <xref href="System.Security.Cryptography.X509Certificates.X509ExtensionCollection" data-throw-if-not-resolved="false"></xref> object.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The certificate is unreadable.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.FriendlyName
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.FriendlyName
   id: FriendlyName
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: FriendlyName
+  nameWithType: X509Certificate2.FriendlyName
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.FriendlyName
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 109
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FriendlyName
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 138
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets or sets the associated alias for a certificate.
   syntax:
     content: public string FriendlyName { get; set; }
     content.vb: Public Property FriendlyName As String
     parameters: []
     return:
       type: System.String
-      description: The certificate's friendly name.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The certificate is unreadable.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.HasPrivateKey
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.HasPrivateKey
   id: HasPrivateKey
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: HasPrivateKey
+  nameWithType: X509Certificate2.HasPrivateKey
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.HasPrivateKey
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 126
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HasPrivateKey
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 139
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets a value that indicates whether an <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> object contains a private key.
   syntax:
     content: public bool HasPrivateKey { get; }
     content.vb: Public ReadOnly Property HasPrivateKey As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> object contains a private key; otherwise, false.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The certificate context is invalid.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.IssuerName
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.IssuerName
   id: IssuerName
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: IssuerName
+  nameWithType: X509Certificate2.IssuerName
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.IssuerName
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 136
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IssuerName
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 140
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the distinguished name of the certificate issuer.
   syntax:
     content: public X500DistinguishedName IssuerName { get; }
     content.vb: Public ReadOnly Property IssuerName As X500DistinguishedName
     parameters: []
     return:
       type: System.Security.Cryptography.X509Certificates.X500DistinguishedName
-      description: An <xref href="System.Security.Cryptography.X509Certificates.X500DistinguishedName" data-throw-if-not-resolved="false"></xref> object that contains the name of the certificate issuer.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The certificate context is invalid.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.NotAfter
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.NotAfter
   id: NotAfter
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: NotAfter
+  nameWithType: X509Certificate2.NotAfter
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.NotAfter
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 149
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NotAfter
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 141
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the date in local time after which a certificate is no longer valid.
   syntax:
     content: public DateTime NotAfter { get; }
     content.vb: Public ReadOnly Property NotAfter As DateTime
     parameters: []
     return:
       type: System.DateTime
-      description: A <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> object that represents the expiration date for the certificate.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The certificate is unreadable.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.NotBefore
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.NotBefore
   id: NotBefore
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: NotBefore
+  nameWithType: X509Certificate2.NotBefore
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.NotBefore
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 154
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NotBefore
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 142
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the date in local time on which a certificate becomes valid.
   syntax:
     content: public DateTime NotBefore { get; }
     content.vb: Public ReadOnly Property NotBefore As DateTime
     parameters: []
     return:
       type: System.DateTime
-      description: A <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> object that represents the effective date of the certificate.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The certificate is unreadable.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.PublicKey
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.PublicKey
   id: PublicKey
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: PublicKey
+  nameWithType: X509Certificate2.PublicKey
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.PublicKey
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 159
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PublicKey
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 143
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets a <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2.PublicKey" data-throw-if-not-resolved="false"></xref> object associated with a certificate.
   syntax:
     content: public PublicKey PublicKey { get; }
     content.vb: Public ReadOnly Property PublicKey As PublicKey
     parameters: []
     return:
       type: System.Security.Cryptography.X509Certificates.PublicKey
-      description: A <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2.PublicKey" data-throw-if-not-resolved="false"></xref> object.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The key value is not an RSA or DSA key, or the key is unreadable.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.RawData
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.RawData
   id: RawData
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: RawData
+  nameWithType: X509Certificate2.RawData
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.RawData
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 178
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RawData
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 144
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the raw data of a certificate.
   syntax:
     content: public byte[] RawData { get; }
     content.vb: Public ReadOnly Property RawData As Byte()
     parameters: []
     return:
       type: System.Byte[]
-      description: The raw data of the certificate as a byte array.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.SerialNumber
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.SerialNumber
   id: SerialNumber
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: SerialNumber
+  nameWithType: X509Certificate2.SerialNumber
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.SerialNumber
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 193
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SerialNumber
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 145
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the serial number of a certificate.
   syntax:
     content: public string SerialNumber { get; }
     content.vb: Public ReadOnly Property SerialNumber As String
     parameters: []
     return:
       type: System.String
-      description: The serial number of the certificate.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.SignatureAlgorithm
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.SignatureAlgorithm
   id: SignatureAlgorithm
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: SignatureAlgorithm
+  nameWithType: X509Certificate2.SignatureAlgorithm
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.SignatureAlgorithm
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 203
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SignatureAlgorithm
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 146
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the algorithm used to create the signature of a certificate.
   syntax:
     content: public Oid SignatureAlgorithm { get; }
     content.vb: Public ReadOnly Property SignatureAlgorithm As Oid
     parameters: []
     return:
       type: System.Security.Cryptography.Oid
-      description: Returns the object identifier (<xref href="System.Security.Cryptography.Oid" data-throw-if-not-resolved="false"></xref>) of the signature algorithm.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The certificate is unreadable.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.SubjectName
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.SubjectName
   id: SubjectName
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: SubjectName
+  nameWithType: X509Certificate2.SubjectName
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.SubjectName
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 219
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SubjectName
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 147
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the subject distinguished name from a certificate.
   syntax:
     content: public X500DistinguishedName SubjectName { get; }
     content.vb: Public ReadOnly Property SubjectName As X500DistinguishedName
     parameters: []
     return:
       type: System.Security.Cryptography.X509Certificates.X500DistinguishedName
-      description: An <xref href="System.Security.Cryptography.X509Certificates.X500DistinguishedName" data-throw-if-not-resolved="false"></xref> object that represents the name of the certificate subject.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The certificate context is invalid.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.Thumbprint
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.Thumbprint
   id: Thumbprint
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: Thumbprint
+  nameWithType: X509Certificate2.Thumbprint
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.Thumbprint
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 232
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Thumbprint
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 148
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the thumbprint of a certificate.
   syntax:
     content: public string Thumbprint { get; }
     content.vb: Public ReadOnly Property Thumbprint As String
     parameters: []
     return:
       type: System.String
-      description: The thumbprint of the certificate.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.Version
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate2.Version
   id: Version
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: Version
+  nameWithType: X509Certificate2.Version
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.Version
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 241
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Version
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 149
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the X.509 format version of a certificate.
   syntax:
     content: public int Version { get; }
     content.vb: Public ReadOnly Property Version As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The certificate format.
-  exceptions:
-  - type: System.Security.Cryptography.CryptographicException
-    description: The certificate is unreadable.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.GetCertContentType(System.Byte[])
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.GetCertContentType(System.Byte[])
   id: GetCertContentType(System.Byte[])
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: GetCertContentType(Byte[])
-  name.vb: GetCertContentType(Byte())
+  nameWithType: X509Certificate2.GetCertContentType(Byte[])
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.GetCertContentType(System.Byte[])
-  fullName.vb: System.Security.Cryptography.X509Certificates.X509Certificate2.GetCertContentType(System.Byte())
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 254
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetCertContentType
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 150
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Indicates the type of certificate contained in a byte array.
   syntax:
     content: public static X509ContentType GetCertContentType(byte[] rawData)
     content.vb: Public Shared Function GetCertContentType(rawData As Byte()) As X509ContentType
     parameters:
     - id: rawData
       type: System.Byte[]
-      description: A byte array containing data from an X.509 certificate.
     return:
       type: System.Security.Cryptography.X509Certificates.X509ContentType
-      description: An <xref href="System.Security.Cryptography.X509Certificates.X509ContentType" data-throw-if-not-resolved="false"></xref> object.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*rawData* has a zero length or is null.'
+  nameWithType.vb: X509Certificate2.GetCertContentType(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Security.Cryptography.X509Certificates.X509Certificate2.GetCertContentType(System.Byte())
+  name.vb: GetCertContentType(Byte())
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.GetCertContentType(System.String)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.GetCertContentType(System.String)
   id: GetCertContentType(System.String)
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: GetCertContentType(String)
+  nameWithType: X509Certificate2.GetCertContentType(String)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.GetCertContentType(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 262
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetCertContentType
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 151
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Indicates the type of certificate contained in a file.
   syntax:
     content: public static X509ContentType GetCertContentType(string fileName)
     content.vb: Public Shared Function GetCertContentType(fileName As String) As X509ContentType
     parameters:
     - id: fileName
       type: System.String
-      description: The name of a certificate file.
     return:
       type: System.Security.Cryptography.X509Certificates.X509ContentType
-      description: An <xref href="System.Security.Cryptography.X509Certificates.X509ContentType" data-throw-if-not-resolved="false"></xref> object.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*fileName* is null.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.GetNameInfo(System.Security.Cryptography.X509Certificates.X509NameType,System.Boolean)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.GetNameInfo(System.Security.Cryptography.X509Certificates.X509NameType,System.Boolean)
   id: GetNameInfo(System.Security.Cryptography.X509Certificates.X509NameType,System.Boolean)
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: GetNameInfo(X509NameType, Boolean)
+  nameWithType: X509Certificate2.GetNameInfo(X509NameType, Boolean)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.GetNameInfo(System.Security.Cryptography.X509Certificates.X509NameType, System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 274
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetNameInfo
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 152
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the subject and issuer names from a certificate.
   syntax:
     content: public string GetNameInfo(X509NameType nameType, bool forIssuer)
     content.vb: Public Function GetNameInfo(nameType As X509NameType, forIssuer As Boolean) As String
     parameters:
     - id: nameType
       type: System.Security.Cryptography.X509Certificates.X509NameType
-      description: The <xref href="System.Security.Cryptography.X509Certificates.X509NameType" data-throw-if-not-resolved="false"></xref> value for the subject.
     - id: forIssuer
       type: System.Boolean
-      description: true to include the issuer name; otherwise, false.
     return:
       type: System.String
-      description: The name of the certificate.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.ToString
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString
   id: ToString
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: ToString()
+  nameWithType: X509Certificate2.ToString()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.ToString()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 279
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 153
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Displays an X.509 certificate in text format.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: The certificate information.
   overridden: System.Security.Cryptography.X509Certificates.X509Certificate.ToString
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)
   id: ToString(System.Boolean)
   parent: System.Security.Cryptography.X509Certificates.X509Certificate2
+  langs:
+  - csharp
+  - vb
   name: ToString(Boolean)
+  nameWithType: X509Certificate2.ToString(Boolean)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/X509Certificate2.cs
-    startLine: 284
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 154
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Displays an X.509 certificate in text format.
   syntax:
     content: public override string ToString(bool verbose)
     content.vb: Public Overrides Function ToString(verbose As Boolean) As String
     parameters:
     - id: verbose
       type: System.Boolean
-      description: true to display the public key, private key, extensions, and so forth; false to display information that is similar to the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref> class, including thumbprint, serial number, subject and issuer names, and so on.
     return:
       type: System.String
-      description: The certificate information.
   overridden: System.Security.Cryptography.X509Certificates.X509Certificate.ToString(System.Boolean)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.Security.Cryptography.X509Certificates
+  commentId: N:System.Security.Cryptography.X509Certificates
   isExternal: false
   name: System.Security.Cryptography.X509Certificates
+  nameWithType: System.Security.Cryptography.X509Certificates
   fullName: System.Security.Cryptography.X509Certificates
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate
+  commentId: T:System.Security.Cryptography.X509Certificates.X509Certificate
   parent: System.Security.Cryptography.X509Certificates
   isExternal: false
-  name: Cryptography.X509Certificates.X509Certificate
+  name: X509Certificate
+  nameWithType: X509Certificate
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Handle
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate.Handle
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: Handle
+  nameWithType: X509Certificate.Handle
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Handle
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Issuer
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate.Issuer
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: Issuer
+  nameWithType: X509Certificate.Issuer
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Issuer
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Subject
+  commentId: P:System.Security.Cryptography.X509Certificates.X509Certificate.Subject
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: Subject
+  nameWithType: X509Certificate.Subject
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Subject
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.Dispose
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: Dispose()
+  nameWithType: X509Certificate.Dispose()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose()
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose
     name: Dispose
+    nameWithType: X509Certificate.Dispose
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose
     name: Dispose
+    nameWithType: X509Certificate.Dispose
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose(System.Boolean)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.Dispose(System.Boolean)
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: true
   name: Dispose(Boolean)
+  nameWithType: X509Certificate.Dispose(Boolean)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose(System.Boolean)
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: X509Certificate.Dispose
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: X509Certificate.Dispose
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Equals(System.Object)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.Equals(System.Object)
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: true
   name: Equals(Object)
+  nameWithType: X509Certificate.Equals(Object)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Equals(System.Object)
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Equals(System.Object)
     name: Equals
+    nameWithType: X509Certificate.Equals
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Equals(System.Object)
     name: Equals
+    nameWithType: X509Certificate.Equals
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Equals(System.Security.Cryptography.X509Certificates.X509Certificate)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.Equals(System.Security.Cryptography.X509Certificates.X509Certificate)
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: Equals(X509Certificate)
+  nameWithType: X509Certificate.Equals(X509Certificate)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Equals(System.Security.Cryptography.X509Certificates.X509Certificate)
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Equals(System.Security.Cryptography.X509Certificates.X509Certificate)
     name: Equals
+    nameWithType: X509Certificate.Equals
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate
     name: X509Certificate
+    nameWithType: X509Certificate
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Equals(System.Security.Cryptography.X509Certificates.X509Certificate)
     name: Equals
+    nameWithType: X509Certificate.Equals
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate
     name: X509Certificate
+    nameWithType: X509Certificate
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Export(System.Security.Cryptography.X509Certificates.X509ContentType)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.Export(System.Security.Cryptography.X509Certificates.X509ContentType)
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: Export(X509ContentType)
+  nameWithType: X509Certificate.Export(X509ContentType)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Export(System.Security.Cryptography.X509Certificates.X509ContentType)
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Export(System.Security.Cryptography.X509Certificates.X509ContentType)
     name: Export
+    nameWithType: X509Certificate.Export
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Export
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Cryptography.X509Certificates.X509ContentType
     name: X509ContentType
+    nameWithType: X509ContentType
     fullName: System.Security.Cryptography.X509Certificates.X509ContentType
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Export(System.Security.Cryptography.X509Certificates.X509ContentType)
     name: Export
+    nameWithType: X509Certificate.Export
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Export
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Cryptography.X509Certificates.X509ContentType
     name: X509ContentType
+    nameWithType: X509ContentType
     fullName: System.Security.Cryptography.X509Certificates.X509ContentType
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Export(System.Security.Cryptography.X509Certificates.X509ContentType,System.String)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.Export(System.Security.Cryptography.X509Certificates.X509ContentType,System.String)
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: true
   name: Export(X509ContentType, String)
+  nameWithType: X509Certificate.Export(X509ContentType, String)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Export(System.Security.Cryptography.X509Certificates.X509ContentType, System.String)
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Export(System.Security.Cryptography.X509Certificates.X509ContentType,System.String)
     name: Export
+    nameWithType: X509Certificate.Export
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Export
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Cryptography.X509Certificates.X509ContentType
     name: X509ContentType
+    nameWithType: X509ContentType
     fullName: System.Security.Cryptography.X509Certificates.X509ContentType
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.Export(System.Security.Cryptography.X509Certificates.X509ContentType,System.String)
     name: Export
+    nameWithType: X509Certificate.Export
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.Export
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Cryptography.X509Certificates.X509ContentType
     name: X509ContentType
+    nameWithType: X509ContentType
     fullName: System.Security.Cryptography.X509Certificates.X509ContentType
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: GetCertHash()
+  nameWithType: X509Certificate.GetCertHash()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash()
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash
     name: GetCertHash
+    nameWithType: X509Certificate.GetCertHash
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash
     name: GetCertHash
+    nameWithType: X509Certificate.GetCertHash
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetFormat
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.GetFormat
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: GetFormat()
+  nameWithType: X509Certificate.GetFormat()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetFormat()
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetFormat
     name: GetFormat
+    nameWithType: X509Certificate.GetFormat
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetFormat
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetFormat
     name: GetFormat
+    nameWithType: X509Certificate.GetFormat
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetFormat
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetHashCode
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.GetHashCode
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: GetHashCode()
+  nameWithType: X509Certificate.GetHashCode()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetHashCode()
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetHashCode
     name: GetHashCode
+    nameWithType: X509Certificate.GetHashCode
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetHashCode
     name: GetHashCode
+    nameWithType: X509Certificate.GetHashCode
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithm
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithm
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: GetKeyAlgorithm()
+  nameWithType: X509Certificate.GetKeyAlgorithm()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithm()
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithm
     name: GetKeyAlgorithm
+    nameWithType: X509Certificate.GetKeyAlgorithm
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithm
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithm
     name: GetKeyAlgorithm
+    nameWithType: X509Certificate.GetKeyAlgorithm
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithm
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParameters
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParameters
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: GetKeyAlgorithmParameters()
+  nameWithType: X509Certificate.GetKeyAlgorithmParameters()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParameters()
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParameters
     name: GetKeyAlgorithmParameters
+    nameWithType: X509Certificate.GetKeyAlgorithmParameters
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParameters
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParameters
     name: GetKeyAlgorithmParameters
+    nameWithType: X509Certificate.GetKeyAlgorithmParameters
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParameters
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParametersString
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParametersString
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: GetKeyAlgorithmParametersString()
+  nameWithType: X509Certificate.GetKeyAlgorithmParametersString()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParametersString()
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParametersString
     name: GetKeyAlgorithmParametersString
+    nameWithType: X509Certificate.GetKeyAlgorithmParametersString
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParametersString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParametersString
     name: GetKeyAlgorithmParametersString
+    nameWithType: X509Certificate.GetKeyAlgorithmParametersString
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetKeyAlgorithmParametersString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetPublicKey
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.GetPublicKey
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: GetPublicKey()
+  nameWithType: X509Certificate.GetPublicKey()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetPublicKey()
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetPublicKey
     name: GetPublicKey
+    nameWithType: X509Certificate.GetPublicKey
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetPublicKey
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetPublicKey
     name: GetPublicKey
+    nameWithType: X509Certificate.GetPublicKey
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetPublicKey
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: GetSerialNumber()
+  nameWithType: X509Certificate.GetSerialNumber()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber()
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber
     name: GetSerialNumber
+    nameWithType: X509Certificate.GetSerialNumber
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber
     name: GetSerialNumber
+    nameWithType: X509Certificate.GetSerialNumber
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Security.Cryptography.X509Certificates.X509Certificate2.System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey
+  commentId: M:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  parent: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions
+  definition: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  name: GetECDsaPrivateKey()
+  nameWithType: ECDsaCertificateExtensions.GetECDsaPrivateKey()
+  fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey()
+  spec.csharp:
+  - uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey
+    name: GetECDsaPrivateKey
+    nameWithType: ECDsaCertificateExtensions.GetECDsaPrivateKey
+    fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey
+    name: GetECDsaPrivateKey
+    nameWithType: ECDsaCertificateExtensions.GetECDsaPrivateKey
+    fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Security.Cryptography.X509Certificates.X509Certificate2.System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey
+  commentId: M:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  parent: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions
+  definition: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  name: GetECDsaPublicKey()
+  nameWithType: ECDsaCertificateExtensions.GetECDsaPublicKey()
+  fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey()
+  spec.csharp:
+  - uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey
+    name: GetECDsaPublicKey
+    nameWithType: ECDsaCertificateExtensions.GetECDsaPublicKey
+    fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey
+    name: GetECDsaPublicKey
+    nameWithType: ECDsaCertificateExtensions.GetECDsaPublicKey
+    fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Security.Cryptography.X509Certificates.X509Certificate2.System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey
+  commentId: M:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  parent: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  definition: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  name: GetRSAPrivateKey()
+  nameWithType: RSACertificateExtensions.GetRSAPrivateKey()
+  fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey()
+  spec.csharp:
+  - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey
+    name: GetRSAPrivateKey
+    nameWithType: RSACertificateExtensions.GetRSAPrivateKey
+    fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey
+    name: GetRSAPrivateKey
+    nameWithType: RSACertificateExtensions.GetRSAPrivateKey
+    fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Security.Cryptography.X509Certificates.X509Certificate2.System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey
+  commentId: M:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  parent: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  definition: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  name: GetRSAPublicKey()
+  nameWithType: RSACertificateExtensions.GetRSAPublicKey()
+  fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey()
+  spec.csharp:
+  - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey
+    name: GetRSAPublicKey
+    nameWithType: RSACertificateExtensions.GetRSAPublicKey
+    fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey
+    name: GetRSAPublicKey
+    nameWithType: RSACertificateExtensions.GetRSAPublicKey
+    fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
-- uid: System.Byte[]
+- uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  commentId: M:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
   isExternal: false
+  name: GetECDsaPrivateKey(X509Certificate2)
+  nameWithType: ECDsaCertificateExtensions.GetECDsaPrivateKey(X509Certificate2)
+  fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  spec.csharp:
+  - uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+    name: GetECDsaPrivateKey
+    nameWithType: ECDsaCertificateExtensions.GetECDsaPrivateKey
+    fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+    name: X509Certificate2
+    nameWithType: X509Certificate2
+    fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+    name: GetECDsaPrivateKey
+    nameWithType: ECDsaCertificateExtensions.GetECDsaPrivateKey
+    fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPrivateKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+    name: X509Certificate2
+    nameWithType: X509Certificate2
+    fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions
+  commentId: T:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions
+  parent: System.Security.Cryptography.X509Certificates
+  isExternal: false
+  name: ECDsaCertificateExtensions
+  nameWithType: ECDsaCertificateExtensions
+  fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions
+- uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  commentId: M:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  isExternal: false
+  name: GetECDsaPublicKey(X509Certificate2)
+  nameWithType: ECDsaCertificateExtensions.GetECDsaPublicKey(X509Certificate2)
+  fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  spec.csharp:
+  - uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+    name: GetECDsaPublicKey
+    nameWithType: ECDsaCertificateExtensions.GetECDsaPublicKey
+    fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+    name: X509Certificate2
+    nameWithType: X509Certificate2
+    fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+    name: GetECDsaPublicKey
+    nameWithType: ECDsaCertificateExtensions.GetECDsaPublicKey
+    fullName: System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+    name: X509Certificate2
+    nameWithType: X509Certificate2
+    fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  commentId: M:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  isExternal: false
+  name: GetRSAPrivateKey(X509Certificate2)
+  nameWithType: RSACertificateExtensions.GetRSAPrivateKey(X509Certificate2)
+  fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  spec.csharp:
+  - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+    name: GetRSAPrivateKey
+    nameWithType: RSACertificateExtensions.GetRSAPrivateKey
+    fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+    name: X509Certificate2
+    nameWithType: X509Certificate2
+    fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+    name: GetRSAPrivateKey
+    nameWithType: RSACertificateExtensions.GetRSAPrivateKey
+    fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+    name: X509Certificate2
+    nameWithType: X509Certificate2
+    fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  commentId: T:System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  parent: System.Security.Cryptography.X509Certificates
+  isExternal: false
+  name: RSACertificateExtensions
+  nameWithType: RSACertificateExtensions
+  fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+- uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  commentId: M:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  isExternal: false
+  name: GetRSAPublicKey(X509Certificate2)
+  nameWithType: RSACertificateExtensions.GetRSAPublicKey(X509Certificate2)
+  fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  spec.csharp:
+  - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+    name: GetRSAPublicKey
+    nameWithType: RSACertificateExtensions.GetRSAPublicKey
+    fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+    name: X509Certificate2
+    nameWithType: X509Certificate2
+    fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+    name: GetRSAPublicKey
+    nameWithType: RSACertificateExtensions.GetRSAPublicKey
+    fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+    name: X509Certificate2
+    nameWithType: X509Certificate2
+    fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Byte[]
   name: Byte[]
-  name.vb: Byte()
+  nameWithType: Byte[]
   fullName: System.Byte[]
-  fullName.vb: System.Byte()
+  nameWithType.vb: Byte()
+  fullname.vb: System.Byte()
+  name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Security.Cryptography.X509Certificates.X509KeyStorageFlags
+  commentId: T:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags
   parent: System.Security.Cryptography.X509Certificates
   isExternal: false
   name: X509KeyStorageFlags
+  nameWithType: X509KeyStorageFlags
   fullName: System.Security.Cryptography.X509Certificates.X509KeyStorageFlags
 - uid: System.IntPtr
+  commentId: T:System.IntPtr
   parent: System
   isExternal: false
   name: IntPtr
+  nameWithType: IntPtr
   fullName: System.IntPtr
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Security.Cryptography.X509Certificates.X509ExtensionCollection
+  commentId: T:System.Security.Cryptography.X509Certificates.X509ExtensionCollection
   parent: System.Security.Cryptography.X509Certificates
   isExternal: false
   name: X509ExtensionCollection
+  nameWithType: X509ExtensionCollection
   fullName: System.Security.Cryptography.X509Certificates.X509ExtensionCollection
 - uid: System.Security.Cryptography.X509Certificates.X500DistinguishedName
+  commentId: T:System.Security.Cryptography.X509Certificates.X500DistinguishedName
   parent: System.Security.Cryptography.X509Certificates
   isExternal: false
   name: X500DistinguishedName
+  nameWithType: X500DistinguishedName
   fullName: System.Security.Cryptography.X509Certificates.X500DistinguishedName
 - uid: System.DateTime
+  commentId: T:System.DateTime
   parent: System
   isExternal: false
   name: DateTime
+  nameWithType: DateTime
   fullName: System.DateTime
 - uid: System.Security.Cryptography.X509Certificates.PublicKey
+  commentId: T:System.Security.Cryptography.X509Certificates.PublicKey
   parent: System.Security.Cryptography.X509Certificates
   isExternal: false
   name: PublicKey
+  nameWithType: PublicKey
   fullName: System.Security.Cryptography.X509Certificates.PublicKey
 - uid: System.Security.Cryptography.Oid
+  commentId: T:System.Security.Cryptography.Oid
   parent: System.Security.Cryptography
   isExternal: false
   name: Oid
+  nameWithType: Oid
   fullName: System.Security.Cryptography.Oid
 - uid: System.Security.Cryptography
+  commentId: N:System.Security.Cryptography
   isExternal: false
   name: System.Security.Cryptography
+  nameWithType: System.Security.Cryptography
   fullName: System.Security.Cryptography
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Security.Cryptography.X509Certificates.X509ContentType
+  commentId: T:System.Security.Cryptography.X509Certificates.X509ContentType
   parent: System.Security.Cryptography.X509Certificates
   isExternal: false
   name: X509ContentType
+  nameWithType: X509ContentType
   fullName: System.Security.Cryptography.X509Certificates.X509ContentType
 - uid: System.Security.Cryptography.X509Certificates.X509NameType
+  commentId: T:System.Security.Cryptography.X509Certificates.X509NameType
   parent: System.Security.Cryptography.X509Certificates
   isExternal: false
   name: X509NameType
+  nameWithType: X509NameType
   fullName: System.Security.Cryptography.X509Certificates.X509NameType
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.ToString
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.ToString
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: false
   name: ToString()
+  nameWithType: X509Certificate.ToString()
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.ToString()
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.ToString
     name: ToString
+    nameWithType: X509Certificate.ToString
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.ToString
     name: ToString
+    nameWithType: X509Certificate.ToString
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate.ToString(System.Boolean)
+  commentId: M:System.Security.Cryptography.X509Certificates.X509Certificate.ToString(System.Boolean)
   parent: System.Security.Cryptography.X509Certificates.X509Certificate
   isExternal: true
   name: ToString(Boolean)
+  nameWithType: X509Certificate.ToString(Boolean)
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate.ToString(System.Boolean)
   spec.csharp:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.ToString(System.Boolean)
     name: ToString
+    nameWithType: X509Certificate.ToString
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Cryptography.X509Certificates.X509Certificate.ToString(System.Boolean)
     name: ToString
+    nameWithType: X509Certificate.ToString
     fullName: System.Security.Cryptography.X509Certificates.X509Certificate.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Security.Cryptography.CryptographicException
-  isExternal: false
-  name: CryptographicException
-  fullName: System.Security.Cryptography.CryptographicException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException

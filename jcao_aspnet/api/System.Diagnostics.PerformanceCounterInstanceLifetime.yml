@@ -1,5 +1,6 @@
 items:
 - uid: System.Diagnostics.PerformanceCounterInstanceLifetime
+  commentId: T:System.Diagnostics.PerformanceCounterInstanceLifetime
   id: PerformanceCounterInstanceLifetime
   parent: System.Diagnostics
   children:
@@ -9,6 +10,7 @@ items:
   - csharp
   - vb
   name: PerformanceCounterInstanceLifetime
+  nameWithType: PerformanceCounterInstanceLifetime
   fullName: System.Diagnostics.PerformanceCounterInstanceLifetime
   type: Enum
   source:
@@ -16,22 +18,30 @@ items:
       path: src/System.Diagnostics.PerformanceCounter/ref/System.Diagnostics.PerformanceCounter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: PerformanceCounterInstanceLifetime
     path: src/System.Diagnostics.PerformanceCounter/ref/System.Diagnostics.PerformanceCounter.cs
-    startLine: 63
+    startLine: 66
   assemblies:
   - System.Diagnostics.PerformanceCounter
   namespace: System.Diagnostics
-  summary: Specifies the lifetime of a performance counter instance.
   syntax:
     content: 'public enum PerformanceCounterInstanceLifetime : int'
     content.vb: Public Enum PerformanceCounterInstanceLifetime As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
 - uid: System.Diagnostics.PerformanceCounterInstanceLifetime.Global
+  commentId: F:System.Diagnostics.PerformanceCounterInstanceLifetime.Global
   id: Global
   parent: System.Diagnostics.PerformanceCounterInstanceLifetime
   langs:
   - csharp
   - vb
   name: Global
+  nameWithType: PerformanceCounterInstanceLifetime.Global
   fullName: System.Diagnostics.PerformanceCounterInstanceLifetime.Global
   type: Field
   source:
@@ -39,22 +49,32 @@ items:
       path: src/System.Diagnostics.PerformanceCounter/ref/System.Diagnostics.PerformanceCounter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Global
     path: src/System.Diagnostics.PerformanceCounter/ref/System.Diagnostics.PerformanceCounter.cs
-    startLine: 65
+    startLine: 68
   assemblies:
   - System.Diagnostics.PerformanceCounter
   namespace: System.Diagnostics
-  summary: Remove the performance counter instance when no counters are using the process category.
   syntax:
     content: Global = null
     content.vb: Global = Nothing
+    return:
+      type: System.Diagnostics.PerformanceCounterInstanceLifetime
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Diagnostics.PerformanceCounterInstanceLifetime.Process
+  commentId: F:System.Diagnostics.PerformanceCounterInstanceLifetime.Process
   id: Process
   parent: System.Diagnostics.PerformanceCounterInstanceLifetime
   langs:
   - csharp
   - vb
   name: Process
+  nameWithType: PerformanceCounterInstanceLifetime.Process
   fullName: System.Diagnostics.PerformanceCounterInstanceLifetime.Process
   type: Field
   source:
@@ -62,17 +82,34 @@ items:
       path: src/System.Diagnostics.PerformanceCounter/ref/System.Diagnostics.PerformanceCounter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Process
     path: src/System.Diagnostics.PerformanceCounter/ref/System.Diagnostics.PerformanceCounter.cs
-    startLine: 66
+    startLine: 69
   assemblies:
   - System.Diagnostics.PerformanceCounter
   namespace: System.Diagnostics
-  summary: Remove the performance counter instance when the process is closed.
   syntax:
     content: Process = null
     content.vb: Process = Nothing
+    return:
+      type: System.Diagnostics.PerformanceCounterInstanceLifetime
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System.Diagnostics
+  commentId: N:System.Diagnostics
   isExternal: false
   name: System.Diagnostics
+  nameWithType: System.Diagnostics
   fullName: System.Diagnostics
+- uid: System.Diagnostics.PerformanceCounterInstanceLifetime
+  commentId: T:System.Diagnostics.PerformanceCounterInstanceLifetime
+  parent: System.Diagnostics
+  isExternal: false
+  name: PerformanceCounterInstanceLifetime
+  nameWithType: PerformanceCounterInstanceLifetime
+  fullName: System.Diagnostics.PerformanceCounterInstanceLifetime

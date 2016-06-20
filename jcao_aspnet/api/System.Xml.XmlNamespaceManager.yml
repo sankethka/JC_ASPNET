@@ -1,5 +1,6 @@
 items:
 - uid: System.Xml.XmlNamespaceManager
+  commentId: T:System.Xml.XmlNamespaceManager
   id: XmlNamespaceManager
   parent: System.Xml
   children:
@@ -19,6 +20,7 @@ items:
   - csharp
   - vb
   name: XmlNamespaceManager
+  nameWithType: XmlNamespaceManager
   fullName: System.Xml.XmlNamespaceManager
   type: Class
   source:
@@ -26,26 +28,37 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: XmlNamespaceManager
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 143
+    startLine: 146
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Resolves, adds, and removes namespaces to a collection and provides scope management for these namespaces.
   syntax:
     content: 'public class XmlNamespaceManager : Collections.IEnumerable, IXmlNamespaceResolver'
-    content.vb: Public Class XmlNamespaceManager Inherits Collections.IEnumerable Implements IXmlNamespaceResolver
+    content.vb: >-
+      Public Class XmlNamespaceManager
+          Inherits Collections.IEnumerable
+          Implements IXmlNamespaceResolver
   inheritance:
   - System.Object
   implements:
   - System.Xml.IXmlNamespaceResolver
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Xml.XmlNamespaceManager.#ctor(System.Xml.XmlNameTable)
+  commentId: M:System.Xml.XmlNamespaceManager.#ctor(System.Xml.XmlNameTable)
   id: '#ctor(System.Xml.XmlNameTable)'
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: XmlNamespaceManager(XmlNameTable)
+  nameWithType: XmlNamespaceManager.XmlNamespaceManager(XmlNameTable)
   fullName: System.Xml.XmlNamespaceManager.XmlNamespaceManager(System.Xml.XmlNameTable)
   type: Constructor
   source:
@@ -53,29 +66,31 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 145
+    startLine: 148
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Initializes a new instance of the <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> class with the specified <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public XmlNamespaceManager(XmlNameTable nameTable)
     content.vb: Public Sub New(nameTable As XmlNameTable)
     parameters:
     - id: nameTable
       type: System.Xml.XmlNameTable
-      description: The <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref> to use.
-  exceptions:
-  - type: System.NullReferenceException
-    description: null is passed to the constructor
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlNamespaceManager.DefaultNamespace
+  commentId: P:System.Xml.XmlNamespaceManager.DefaultNamespace
   id: DefaultNamespace
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: DefaultNamespace
+  nameWithType: XmlNamespaceManager.DefaultNamespace
   fullName: System.Xml.XmlNamespaceManager.DefaultNamespace
   type: Property
   source:
@@ -83,26 +98,35 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: DefaultNamespace
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 146
+    startLine: 149
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets the namespace URI for the default namespace.
   syntax:
     content: public virtual string DefaultNamespace { get; }
     content.vb: Public Overridable ReadOnly Property DefaultNamespace As String
     parameters: []
     return:
       type: System.String
-      description: Returns the namespace URI for the default namespace, or String.Empty if there is no default namespace.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Xml.XmlNamespaceManager.NameTable
+  commentId: P:System.Xml.XmlNamespaceManager.NameTable
   id: NameTable
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: NameTable
+  nameWithType: XmlNamespaceManager.NameTable
   fullName: System.Xml.XmlNamespaceManager.NameTable
   type: Property
   source:
@@ -110,26 +134,35 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NameTable
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 147
+    startLine: 150
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets the <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref> associated with this object.
   syntax:
     content: public virtual XmlNameTable NameTable { get; }
     content.vb: Public Overridable ReadOnly Property NameTable As XmlNameTable
     parameters: []
     return:
       type: System.Xml.XmlNameTable
-      description: The <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref> used by this object.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Xml.XmlNamespaceManager.AddNamespace(System.String,System.String)
+  commentId: M:System.Xml.XmlNamespaceManager.AddNamespace(System.String,System.String)
   id: AddNamespace(System.String,System.String)
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: AddNamespace(String, String)
+  nameWithType: XmlNamespaceManager.AddNamespace(String, String)
   fullName: System.Xml.XmlNamespaceManager.AddNamespace(System.String, System.String)
   type: Method
   source:
@@ -137,34 +170,35 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: AddNamespace
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 148
+    startLine: 151
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Adds the given namespace to the collection.
   syntax:
     content: public virtual void AddNamespace(string prefix, string uri)
     content.vb: Public Overridable Sub AddNamespace(prefix As String, uri As String)
     parameters:
     - id: prefix
       type: System.String
-      description: The prefix to associate with the namespace being added. Use String.Empty to add a default namespace.NoteIf the <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> will be used for resolving namespaces in an XML Path Language (XPath) expression, a prefix must be specified. If an XPath expression does not include a prefix, it is assumed that the namespace Uniform Resource Identifier (URI) is the empty namespace. For more information about XPath expressions and the <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref>, refer to the <xref href="System.Xml.XmlNode.SelectNodes(System.String)" data-throw-if-not-resolved="false"></xref> and <xref href="System.Xml.XPath.XPathExpression.SetContext(System.Xml.XmlNamespaceManager)" data-throw-if-not-resolved="false"></xref> methods.
     - id: uri
       type: System.String
-      description: The namespace to add.
-  exceptions:
-  - type: System.ArgumentException
-    description: The value for *prefix* is "xml" or "xmlns".
-  - type: System.ArgumentNullException
-    description: The value for *prefix* or *uri* is null.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Xml.XmlNamespaceManager.GetEnumerator
+  commentId: M:System.Xml.XmlNamespaceManager.GetEnumerator
   id: GetEnumerator
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: GetEnumerator()
+  nameWithType: XmlNamespaceManager.GetEnumerator()
   fullName: System.Xml.XmlNamespaceManager.GetEnumerator()
   type: Method
   source:
@@ -172,25 +206,32 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: GetEnumerator
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 149
+    startLine: 152
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Returns an enumerator to use to iterate through the namespaces in the <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public virtual Collections.IEnumerator GetEnumerator()
     content.vb: Public Overridable Function GetEnumerator As Collections.IEnumerator
     return:
       type: System.Collections.IEnumerator
-      description: An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> containing the prefixes stored by the <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Xml.XmlNamespaceManager.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
+  commentId: M:System.Xml.XmlNamespaceManager.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
   id: GetNamespacesInScope(System.Xml.XmlNamespaceScope)
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: GetNamespacesInScope(XmlNamespaceScope)
+  nameWithType: XmlNamespaceManager.GetNamespacesInScope(XmlNamespaceScope)
   fullName: System.Xml.XmlNamespaceManager.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
   type: Method
   source:
@@ -198,29 +239,37 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: GetNamespacesInScope
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 150
+    startLine: 153
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets a collection of namespace names keyed by prefix which can be used to enumerate the namespaces currently in scope.
   syntax:
     content: public virtual Collections.Generic.IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope)
     content.vb: Public Overridable Function GetNamespacesInScope(scope As XmlNamespaceScope) As Collections.Generic.IDictionary(Of String, String)
     parameters:
     - id: scope
       type: System.Xml.XmlNamespaceScope
-      description: An enumeration value that specifies the type of namespace nodes to return.
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: A collection of namespace and prefix pairs currently in scope.
+  implements:
+  - System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Xml.XmlNamespaceManager.HasNamespace(System.String)
+  commentId: M:System.Xml.XmlNamespaceManager.HasNamespace(System.String)
   id: HasNamespace(System.String)
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: HasNamespace(String)
+  nameWithType: XmlNamespaceManager.HasNamespace(String)
   fullName: System.Xml.XmlNamespaceManager.HasNamespace(System.String)
   type: Method
   source:
@@ -228,29 +277,35 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: HasNamespace
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 151
+    startLine: 154
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets a value indicating whether the supplied prefix has a namespace defined for the current pushed scope.
   syntax:
     content: public virtual bool HasNamespace(string prefix)
     content.vb: Public Overridable Function HasNamespace(prefix As String) As Boolean
     parameters:
     - id: prefix
       type: System.String
-      description: The prefix of the namespace you want to find.
     return:
       type: System.Boolean
-      description: true if there is a namespace defined; otherwise, false.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Xml.XmlNamespaceManager.LookupNamespace(System.String)
+  commentId: M:System.Xml.XmlNamespaceManager.LookupNamespace(System.String)
   id: LookupNamespace(System.String)
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: LookupNamespace(String)
+  nameWithType: XmlNamespaceManager.LookupNamespace(String)
   fullName: System.Xml.XmlNamespaceManager.LookupNamespace(System.String)
   type: Method
   source:
@@ -258,29 +313,37 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: LookupNamespace
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 152
+    startLine: 155
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets the namespace URI for the specified prefix.
   syntax:
     content: public virtual string LookupNamespace(string prefix)
     content.vb: Public Overridable Function LookupNamespace(prefix As String) As String
     parameters:
     - id: prefix
       type: System.String
-      description: The prefix whose namespace URI you want to resolve. To match the default namespace, pass String.Empty.
     return:
       type: System.String
-      description: Returns the namespace URI for *prefix* or null if there is no mapped namespace. The returned string is atomized.For more information on atomized strings, see the <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref> class.
+  implements:
+  - System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Xml.XmlNamespaceManager.LookupPrefix(System.String)
+  commentId: M:System.Xml.XmlNamespaceManager.LookupPrefix(System.String)
   id: LookupPrefix(System.String)
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: LookupPrefix(String)
+  nameWithType: XmlNamespaceManager.LookupPrefix(String)
   fullName: System.Xml.XmlNamespaceManager.LookupPrefix(System.String)
   type: Method
   source:
@@ -288,29 +351,37 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: LookupPrefix
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 153
+    startLine: 156
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Finds the prefix declared for the given namespace URI.
   syntax:
     content: public virtual string LookupPrefix(string uri)
     content.vb: Public Overridable Function LookupPrefix(uri As String) As String
     parameters:
     - id: uri
       type: System.String
-      description: The namespace to resolve for the prefix.
     return:
       type: System.String
-      description: The matching prefix. If there is no mapped prefix, the method returns String.Empty. If a null value is supplied, then null is returned.
+  implements:
+  - System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Xml.XmlNamespaceManager.PopScope
+  commentId: M:System.Xml.XmlNamespaceManager.PopScope
   id: PopScope
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: PopScope()
+  nameWithType: XmlNamespaceManager.PopScope()
   fullName: System.Xml.XmlNamespaceManager.PopScope()
   type: Method
   source:
@@ -318,25 +389,32 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: PopScope
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 154
+    startLine: 157
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Pops a namespace scope off the stack.
   syntax:
     content: public virtual bool PopScope()
     content.vb: Public Overridable Function PopScope As Boolean
     return:
       type: System.Boolean
-      description: true if there are namespace scopes left on the stack; false if there are no more namespaces to pop.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Xml.XmlNamespaceManager.PushScope
+  commentId: M:System.Xml.XmlNamespaceManager.PushScope
   id: PushScope
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: PushScope()
+  nameWithType: XmlNamespaceManager.PushScope()
   fullName: System.Xml.XmlNamespaceManager.PushScope()
   type: Method
   source:
@@ -344,22 +422,30 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: PushScope
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 155
+    startLine: 158
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Pushes a namespace scope onto the stack.
   syntax:
     content: public virtual void PushScope()
     content.vb: Public Overridable Sub PushScope
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Xml.XmlNamespaceManager.RemoveNamespace(System.String,System.String)
+  commentId: M:System.Xml.XmlNamespaceManager.RemoveNamespace(System.String,System.String)
   id: RemoveNamespace(System.String,System.String)
   parent: System.Xml.XmlNamespaceManager
   langs:
   - csharp
   - vb
   name: RemoveNamespace(String, String)
+  nameWithType: XmlNamespaceManager.RemoveNamespace(String, String)
   fullName: System.Xml.XmlNamespaceManager.RemoveNamespace(System.String, System.String)
   type: Method
   source:
@@ -367,157 +453,314 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: RemoveNamespace
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 156
+    startLine: 159
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Removes the given namespace for the given prefix.
   syntax:
     content: public virtual void RemoveNamespace(string prefix, string uri)
     content.vb: Public Overridable Sub RemoveNamespace(prefix As String, uri As String)
     parameters:
     - id: prefix
       type: System.String
-      description: The prefix for the namespace
     - id: uri
       type: System.String
-      description: The namespace to remove for the given prefix. The namespace removed is from the current namespace scope. Namespaces outside the current scope are ignored.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The value of *prefix* or *uri* is null.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 references:
 - uid: System.Xml
+  commentId: N:System.Xml
   isExternal: false
   name: System.Xml
+  nameWithType: System.Xml
   fullName: System.Xml
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Xml.IXmlNamespaceResolver
+  commentId: T:System.Xml.IXmlNamespaceResolver
   parent: System.Xml
   isExternal: false
   name: IXmlNamespaceResolver
+  nameWithType: IXmlNamespaceResolver
   fullName: System.Xml.IXmlNamespaceResolver
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Xml.XmlNameTable
+  commentId: T:System.Xml.XmlNameTable
   parent: System.Xml
   isExternal: false
   name: XmlNameTable
+  nameWithType: XmlNameTable
   fullName: System.Xml.XmlNameTable
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
   parent: System.Collections
   isExternal: false
   name: Collections.IEnumerator
+  nameWithType: Collections.IEnumerator
   fullName: System.Collections.IEnumerator
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
+- uid: System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
+  commentId: M:System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
+  parent: System.Xml.IXmlNamespaceResolver
+  isExternal: false
+  name: GetNamespacesInScope(XmlNamespaceScope)
+  nameWithType: IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope)
+  fullName: System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
+  spec.csharp:
+  - uid: System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
+    name: GetNamespacesInScope
+    nameWithType: IXmlNamespaceResolver.GetNamespacesInScope
+    fullName: System.Xml.IXmlNamespaceResolver.GetNamespacesInScope
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlNamespaceScope
+    name: XmlNamespaceScope
+    nameWithType: XmlNamespaceScope
+    fullName: System.Xml.XmlNamespaceScope
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
+    name: GetNamespacesInScope
+    nameWithType: IXmlNamespaceResolver.GetNamespacesInScope
+    fullName: System.Xml.IXmlNamespaceResolver.GetNamespacesInScope
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlNamespaceScope
+    name: XmlNamespaceScope
+    nameWithType: XmlNamespaceScope
+    fullName: System.Xml.XmlNamespaceScope
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Xml.XmlNamespaceScope
+  commentId: T:System.Xml.XmlNamespaceScope
   parent: System.Xml
   isExternal: false
   name: XmlNamespaceScope
+  nameWithType: XmlNamespaceScope
   fullName: System.Xml.XmlNamespaceScope
 - uid: System.Collections.Generic.IDictionary{System.String,System.String}
+  commentId: '!:System.Collections.Generic.IDictionary{System.String,System.String}'
   definition: System.Collections.Generic.IDictionary`2
   name: Collections.Generic.IDictionary<String, String>
+  nameWithType: Collections.Generic.IDictionary<String, String>
   fullName: System.Collections.Generic.IDictionary<System.String, System.String>
+  nameWithType.vb: Collections.Generic.IDictionary(Of String, String)
   fullname.vb: System.Collections.Generic.IDictionary(Of System.String, System.String)
   name.vb: Collections.Generic.IDictionary(Of String, String)
   spec.csharp:
   - uid: System.Collections.Generic.IDictionary`2
     name: Collections.Generic.IDictionary
+    nameWithType: Collections.Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IDictionary`2
     name: Collections.Generic.IDictionary
+    nameWithType: Collections.Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
   isExternal: false
-  name: Collections.Generic.IDictionary<, >
+  name: Generic.IDictionary<, >
+  nameWithType: Generic.IDictionary<, >
   fullName: System.Collections.Generic.IDictionary<, >
+  nameWithType.vb: Generic.IDictionary(Of , )
   fullname.vb: System.Collections.Generic.IDictionary(Of , )
-  name.vb: Collections.Generic.IDictionary(Of , )
+  name.vb: Generic.IDictionary(Of , )
   spec.csharp:
   - uid: System.Collections.Generic.IDictionary`2
-    name: Collections.Generic.IDictionary
+    name: Generic.IDictionary
+    nameWithType: Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IDictionary`2
-    name: Collections.Generic.IDictionary
+    name: Generic.IDictionary
+    nameWithType: Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
-- uid: System.NullReferenceException
-  isExternal: false
-  name: NullReferenceException
-  fullName: System.NullReferenceException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
+- uid: System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)
+  commentId: M:System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)
+  parent: System.Xml.IXmlNamespaceResolver
+  isExternal: true
+  name: LookupNamespace(String)
+  nameWithType: IXmlNamespaceResolver.LookupNamespace(String)
+  fullName: System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)
+  spec.csharp:
+  - uid: System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)
+    name: LookupNamespace
+    nameWithType: IXmlNamespaceResolver.LookupNamespace
+    fullName: System.Xml.IXmlNamespaceResolver.LookupNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)
+    name: LookupNamespace
+    nameWithType: IXmlNamespaceResolver.LookupNamespace
+    fullName: System.Xml.IXmlNamespaceResolver.LookupNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)
+  commentId: M:System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)
+  parent: System.Xml.IXmlNamespaceResolver
+  isExternal: true
+  name: LookupPrefix(String)
+  nameWithType: IXmlNamespaceResolver.LookupPrefix(String)
+  fullName: System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)
+  spec.csharp:
+  - uid: System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)
+    name: LookupPrefix
+    nameWithType: IXmlNamespaceResolver.LookupPrefix
+    fullName: System.Xml.IXmlNamespaceResolver.LookupPrefix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)
+    name: LookupPrefix
+    nameWithType: IXmlNamespaceResolver.LookupPrefix
+    fullName: System.Xml.IXmlNamespaceResolver.LookupPrefix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

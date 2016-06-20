@@ -1,5 +1,6 @@
 items:
 - uid: System.Globalization.TaiwanLunisolarCalendar
+  commentId: T:System.Globalization.TaiwanLunisolarCalendar
   id: TaiwanLunisolarCalendar
   parent: System.Globalization
   children:
@@ -8,23 +9,29 @@ items:
   - System.Globalization.TaiwanLunisolarCalendar.GetEra(System.DateTime)
   - System.Globalization.TaiwanLunisolarCalendar.MaxSupportedDateTime
   - System.Globalization.TaiwanLunisolarCalendar.MinSupportedDateTime
+  langs:
+  - csharp
+  - vb
   name: TaiwanLunisolarCalendar
+  nameWithType: TaiwanLunisolarCalendar
   fullName: System.Globalization.TaiwanLunisolarCalendar
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Globalization/TaiwanLunisolarCalendar.cs
+    remote:
+      path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Globalization/TaiwanLunisolarCalendar.cs
-    startLine: 21
+      repo: https://github.com/dotnet/corefx.git
+    id: TaiwanLunisolarCalendar
+    path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+    startLine: 273
   assemblies:
   - System.Globalization.Calendars
   namespace: System.Globalization
-  summary: Represents the Taiwan lunisolar calendar. As for the Taiwan calendar, years are calculated using the Gregorian calendar, while days and months are calculated using the lunisolar calendar.
   syntax:
     content: 'public class TaiwanLunisolarCalendar : EastAsianLunisolarCalendar'
-    content.vb: Public Class TaiwanLunisolarCalendar Inherits EastAsianLunisolarCalendar
+    content.vb: >-
+      Public Class TaiwanLunisolarCalendar
+          Inherits EastAsianLunisolarCalendar
   inheritance:
   - System.Object
   - System.Globalization.EastAsianLunisolarCalendar
@@ -49,950 +56,1314 @@ items:
   - System.Globalization.EastAsianLunisolarCalendar.IsLeapYear(System.Int32,System.Int32)
   - System.Globalization.EastAsianLunisolarCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   - System.Globalization.EastAsianLunisolarCalendar.ToFourDigitYear(System.Int32)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Globalization.TaiwanLunisolarCalendar.#ctor
+  commentId: M:System.Globalization.TaiwanLunisolarCalendar.#ctor
   id: '#ctor'
   parent: System.Globalization.TaiwanLunisolarCalendar
+  langs:
+  - csharp
+  - vb
   name: TaiwanLunisolarCalendar()
+  nameWithType: TaiwanLunisolarCalendar.TaiwanLunisolarCalendar()
   fullName: System.Globalization.TaiwanLunisolarCalendar.TaiwanLunisolarCalendar()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/TaiwanLunisolarCalendar.cs
-    startLine: 299
+    remote:
+      path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+    startLine: 275
   assemblies:
   - System.Globalization.Calendars
   namespace: System.Globalization
-  summary: Initializes a new instance of the <xref href="System.Globalization.TaiwanLunisolarCalendar" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public TaiwanLunisolarCalendar()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Globalization.TaiwanLunisolarCalendar.Eras
+  commentId: P:System.Globalization.TaiwanLunisolarCalendar.Eras
   id: Eras
   parent: System.Globalization.TaiwanLunisolarCalendar
+  langs:
+  - csharp
+  - vb
   name: Eras
+  nameWithType: TaiwanLunisolarCalendar.Eras
   fullName: System.Globalization.TaiwanLunisolarCalendar.Eras
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/TaiwanLunisolarCalendar.cs
-    startLine: 323
+    remote:
+      path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Eras
+    path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+    startLine: 276
   assemblies:
   - System.Globalization.Calendars
   namespace: System.Globalization
-  summary: Gets the eras that are relevant to the current <xref href="System.Globalization.TaiwanLunisolarCalendar" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public override int[] Eras { get; }
     content.vb: Public Overrides ReadOnly Property Eras As Integer()
     parameters: []
     return:
       type: System.Int32[]
-      description: An array that consists of a single element having a value that is always the current era.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Globalization.TaiwanLunisolarCalendar.MaxSupportedDateTime
+  commentId: P:System.Globalization.TaiwanLunisolarCalendar.MaxSupportedDateTime
   id: MaxSupportedDateTime
   parent: System.Globalization.TaiwanLunisolarCalendar
+  langs:
+  - csharp
+  - vb
   name: MaxSupportedDateTime
+  nameWithType: TaiwanLunisolarCalendar.MaxSupportedDateTime
   fullName: System.Globalization.TaiwanLunisolarCalendar.MaxSupportedDateTime
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/TaiwanLunisolarCalendar.cs
-    startLine: 61
+    remote:
+      path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MaxSupportedDateTime
+    path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+    startLine: 277
   assemblies:
   - System.Globalization.Calendars
   namespace: System.Globalization
-  summary: Gets the maximum date and time supported by the <xref href="System.Globalization.TaiwanLunisolarCalendar" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public override DateTime MaxSupportedDateTime { get; }
     content.vb: Public Overrides ReadOnly Property MaxSupportedDateTime As DateTime
     parameters: []
     return:
       type: System.DateTime
-      description: The latest date and time supported by the <xref href="System.Globalization.TaiwanLunisolarCalendar" data-throw-if-not-resolved="false"></xref> class, which is equivalent to the last moment of February 10, 2051 C.E. in the Gregorian calendar.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Globalization.TaiwanLunisolarCalendar.MinSupportedDateTime
+  commentId: P:System.Globalization.TaiwanLunisolarCalendar.MinSupportedDateTime
   id: MinSupportedDateTime
   parent: System.Globalization.TaiwanLunisolarCalendar
+  langs:
+  - csharp
+  - vb
   name: MinSupportedDateTime
+  nameWithType: TaiwanLunisolarCalendar.MinSupportedDateTime
   fullName: System.Globalization.TaiwanLunisolarCalendar.MinSupportedDateTime
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/TaiwanLunisolarCalendar.cs
-    startLine: 52
+    remote:
+      path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MinSupportedDateTime
+    path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+    startLine: 278
   assemblies:
   - System.Globalization.Calendars
   namespace: System.Globalization
-  summary: Gets the minimum date and time supported by the <xref href="System.Globalization.TaiwanLunisolarCalendar" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public override DateTime MinSupportedDateTime { get; }
     content.vb: Public Overrides ReadOnly Property MinSupportedDateTime As DateTime
     parameters: []
     return:
       type: System.DateTime
-      description: The earliest date and time supported by the <xref href="System.Globalization.TaiwanLunisolarCalendar" data-throw-if-not-resolved="false"></xref> class, which is equivalent to the first moment of February 18, 1912 C.E. in the Gregorian calendar.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Globalization.TaiwanLunisolarCalendar.GetEra(System.DateTime)
+  commentId: M:System.Globalization.TaiwanLunisolarCalendar.GetEra(System.DateTime)
   id: GetEra(System.DateTime)
   parent: System.Globalization.TaiwanLunisolarCalendar
+  langs:
+  - csharp
+  - vb
   name: GetEra(DateTime)
+  nameWithType: TaiwanLunisolarCalendar.GetEra(DateTime)
   fullName: System.Globalization.TaiwanLunisolarCalendar.GetEra(System.DateTime)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/TaiwanLunisolarCalendar.cs
-    startLine: 305
+    remote:
+      path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetEra
+    path: src/System.Globalization.Calendars/ref/System.Globalization.Calendars.cs
+    startLine: 279
   assemblies:
   - System.Globalization.Calendars
   namespace: System.Globalization
-  summary: Retrieves the era that corresponds to the specified <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public override int GetEra(DateTime time)
     content.vb: Public Overrides Function GetEra(time As DateTime) As Integer
     parameters:
     - id: time
       type: System.DateTime
-      description: The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> to read.
     return:
       type: System.Int32
-      description: An integer that represents the era specified in the *time* parameter.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.Globalization
+  commentId: N:System.Globalization
   isExternal: false
   name: System.Globalization
+  nameWithType: System.Globalization
   fullName: System.Globalization
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Globalization.EastAsianLunisolarCalendar
+  commentId: T:System.Globalization.EastAsianLunisolarCalendar
   parent: System.Globalization
   isExternal: false
   name: EastAsianLunisolarCalendar
+  nameWithType: EastAsianLunisolarCalendar
   fullName: System.Globalization.EastAsianLunisolarCalendar
 - uid: System.Globalization.EastAsianLunisolarCalendar.TwoDigitYearMax
+  commentId: P:System.Globalization.EastAsianLunisolarCalendar.TwoDigitYearMax
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: false
   name: TwoDigitYearMax
+  nameWithType: EastAsianLunisolarCalendar.TwoDigitYearMax
   fullName: System.Globalization.EastAsianLunisolarCalendar.TwoDigitYearMax
 - uid: System.Globalization.EastAsianLunisolarCalendar.AddMonths(System.DateTime,System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.AddMonths(System.DateTime,System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: AddMonths(DateTime, Int32)
+  nameWithType: EastAsianLunisolarCalendar.AddMonths(DateTime, Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.AddMonths(System.DateTime, System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.AddMonths(System.DateTime,System.Int32)
     name: AddMonths
+    nameWithType: EastAsianLunisolarCalendar.AddMonths
     fullName: System.Globalization.EastAsianLunisolarCalendar.AddMonths
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.AddMonths(System.DateTime,System.Int32)
     name: AddMonths
+    nameWithType: EastAsianLunisolarCalendar.AddMonths
     fullName: System.Globalization.EastAsianLunisolarCalendar.AddMonths
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.AddYears(System.DateTime,System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.AddYears(System.DateTime,System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: AddYears(DateTime, Int32)
+  nameWithType: EastAsianLunisolarCalendar.AddYears(DateTime, Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.AddYears(System.DateTime, System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.AddYears(System.DateTime,System.Int32)
     name: AddYears
+    nameWithType: EastAsianLunisolarCalendar.AddYears
     fullName: System.Globalization.EastAsianLunisolarCalendar.AddYears
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.AddYears(System.DateTime,System.Int32)
     name: AddYears
+    nameWithType: EastAsianLunisolarCalendar.AddYears
     fullName: System.Globalization.EastAsianLunisolarCalendar.AddYears
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetCelestialStem(System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetCelestialStem(System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetCelestialStem(Int32)
+  nameWithType: EastAsianLunisolarCalendar.GetCelestialStem(Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetCelestialStem(System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetCelestialStem(System.Int32)
     name: GetCelestialStem
+    nameWithType: EastAsianLunisolarCalendar.GetCelestialStem
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetCelestialStem
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetCelestialStem(System.Int32)
     name: GetCelestialStem
+    nameWithType: EastAsianLunisolarCalendar.GetCelestialStem
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetCelestialStem
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetDayOfMonth(System.DateTime)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetDayOfMonth(System.DateTime)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetDayOfMonth(DateTime)
+  nameWithType: EastAsianLunisolarCalendar.GetDayOfMonth(DateTime)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetDayOfMonth(System.DateTime)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetDayOfMonth(System.DateTime)
     name: GetDayOfMonth
+    nameWithType: EastAsianLunisolarCalendar.GetDayOfMonth
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetDayOfMonth
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetDayOfMonth(System.DateTime)
     name: GetDayOfMonth
+    nameWithType: EastAsianLunisolarCalendar.GetDayOfMonth
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetDayOfMonth
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetDayOfWeek(System.DateTime)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetDayOfWeek(System.DateTime)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetDayOfWeek(DateTime)
+  nameWithType: EastAsianLunisolarCalendar.GetDayOfWeek(DateTime)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetDayOfWeek(System.DateTime)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetDayOfWeek(System.DateTime)
     name: GetDayOfWeek
+    nameWithType: EastAsianLunisolarCalendar.GetDayOfWeek
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetDayOfWeek
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetDayOfWeek(System.DateTime)
     name: GetDayOfWeek
+    nameWithType: EastAsianLunisolarCalendar.GetDayOfWeek
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetDayOfWeek
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetDayOfYear(System.DateTime)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetDayOfYear(System.DateTime)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetDayOfYear(DateTime)
+  nameWithType: EastAsianLunisolarCalendar.GetDayOfYear(DateTime)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetDayOfYear(System.DateTime)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetDayOfYear(System.DateTime)
     name: GetDayOfYear
+    nameWithType: EastAsianLunisolarCalendar.GetDayOfYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetDayOfYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetDayOfYear(System.DateTime)
     name: GetDayOfYear
+    nameWithType: EastAsianLunisolarCalendar.GetDayOfYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetDayOfYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetDaysInMonth(System.Int32,System.Int32,System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetDaysInMonth(System.Int32,System.Int32,System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetDaysInMonth(Int32, Int32, Int32)
+  nameWithType: EastAsianLunisolarCalendar.GetDaysInMonth(Int32, Int32, Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetDaysInMonth(System.Int32, System.Int32, System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetDaysInMonth(System.Int32,System.Int32,System.Int32)
     name: GetDaysInMonth
+    nameWithType: EastAsianLunisolarCalendar.GetDaysInMonth
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetDaysInMonth
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetDaysInMonth(System.Int32,System.Int32,System.Int32)
     name: GetDaysInMonth
+    nameWithType: EastAsianLunisolarCalendar.GetDaysInMonth
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetDaysInMonth
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetDaysInYear(System.Int32,System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetDaysInYear(System.Int32,System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetDaysInYear(Int32, Int32)
+  nameWithType: EastAsianLunisolarCalendar.GetDaysInYear(Int32, Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetDaysInYear(System.Int32, System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetDaysInYear(System.Int32,System.Int32)
     name: GetDaysInYear
+    nameWithType: EastAsianLunisolarCalendar.GetDaysInYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetDaysInYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetDaysInYear(System.Int32,System.Int32)
     name: GetDaysInYear
+    nameWithType: EastAsianLunisolarCalendar.GetDaysInYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetDaysInYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetLeapMonth(System.Int32,System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetLeapMonth(System.Int32,System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetLeapMonth(Int32, Int32)
+  nameWithType: EastAsianLunisolarCalendar.GetLeapMonth(Int32, Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetLeapMonth(System.Int32, System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetLeapMonth(System.Int32,System.Int32)
     name: GetLeapMonth
+    nameWithType: EastAsianLunisolarCalendar.GetLeapMonth
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetLeapMonth
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetLeapMonth(System.Int32,System.Int32)
     name: GetLeapMonth
+    nameWithType: EastAsianLunisolarCalendar.GetLeapMonth
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetLeapMonth
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetMonth(System.DateTime)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetMonth(System.DateTime)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetMonth(DateTime)
+  nameWithType: EastAsianLunisolarCalendar.GetMonth(DateTime)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetMonth(System.DateTime)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetMonth(System.DateTime)
     name: GetMonth
+    nameWithType: EastAsianLunisolarCalendar.GetMonth
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetMonth
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetMonth(System.DateTime)
     name: GetMonth
+    nameWithType: EastAsianLunisolarCalendar.GetMonth
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetMonth
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetMonthsInYear(System.Int32,System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetMonthsInYear(System.Int32,System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetMonthsInYear(Int32, Int32)
+  nameWithType: EastAsianLunisolarCalendar.GetMonthsInYear(Int32, Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetMonthsInYear(System.Int32, System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetMonthsInYear(System.Int32,System.Int32)
     name: GetMonthsInYear
+    nameWithType: EastAsianLunisolarCalendar.GetMonthsInYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetMonthsInYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetMonthsInYear(System.Int32,System.Int32)
     name: GetMonthsInYear
+    nameWithType: EastAsianLunisolarCalendar.GetMonthsInYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetMonthsInYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetSexagenaryYear(System.DateTime)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetSexagenaryYear(System.DateTime)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetSexagenaryYear(DateTime)
+  nameWithType: EastAsianLunisolarCalendar.GetSexagenaryYear(DateTime)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetSexagenaryYear(System.DateTime)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetSexagenaryYear(System.DateTime)
     name: GetSexagenaryYear
+    nameWithType: EastAsianLunisolarCalendar.GetSexagenaryYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetSexagenaryYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetSexagenaryYear(System.DateTime)
     name: GetSexagenaryYear
+    nameWithType: EastAsianLunisolarCalendar.GetSexagenaryYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetSexagenaryYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetTerrestrialBranch(System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetTerrestrialBranch(System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetTerrestrialBranch(Int32)
+  nameWithType: EastAsianLunisolarCalendar.GetTerrestrialBranch(Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetTerrestrialBranch(System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetTerrestrialBranch(System.Int32)
     name: GetTerrestrialBranch
+    nameWithType: EastAsianLunisolarCalendar.GetTerrestrialBranch
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetTerrestrialBranch
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetTerrestrialBranch(System.Int32)
     name: GetTerrestrialBranch
+    nameWithType: EastAsianLunisolarCalendar.GetTerrestrialBranch
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetTerrestrialBranch
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.GetYear(System.DateTime)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.GetYear(System.DateTime)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: GetYear(DateTime)
+  nameWithType: EastAsianLunisolarCalendar.GetYear(DateTime)
   fullName: System.Globalization.EastAsianLunisolarCalendar.GetYear(System.DateTime)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetYear(System.DateTime)
     name: GetYear
+    nameWithType: EastAsianLunisolarCalendar.GetYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.GetYear(System.DateTime)
     name: GetYear
+    nameWithType: EastAsianLunisolarCalendar.GetYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.GetYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.DateTime
     name: DateTime
+    nameWithType: DateTime
     fullName: System.DateTime
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.IsLeapDay(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.IsLeapDay(System.Int32,System.Int32,System.Int32,System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: IsLeapDay(Int32, Int32, Int32, Int32)
+  nameWithType: EastAsianLunisolarCalendar.IsLeapDay(Int32, Int32, Int32, Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.IsLeapDay(System.Int32, System.Int32, System.Int32, System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.IsLeapDay(System.Int32,System.Int32,System.Int32,System.Int32)
     name: IsLeapDay
+    nameWithType: EastAsianLunisolarCalendar.IsLeapDay
     fullName: System.Globalization.EastAsianLunisolarCalendar.IsLeapDay
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.IsLeapDay(System.Int32,System.Int32,System.Int32,System.Int32)
     name: IsLeapDay
+    nameWithType: EastAsianLunisolarCalendar.IsLeapDay
     fullName: System.Globalization.EastAsianLunisolarCalendar.IsLeapDay
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.IsLeapMonth(System.Int32,System.Int32,System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.IsLeapMonth(System.Int32,System.Int32,System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: IsLeapMonth(Int32, Int32, Int32)
+  nameWithType: EastAsianLunisolarCalendar.IsLeapMonth(Int32, Int32, Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.IsLeapMonth(System.Int32, System.Int32, System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.IsLeapMonth(System.Int32,System.Int32,System.Int32)
     name: IsLeapMonth
+    nameWithType: EastAsianLunisolarCalendar.IsLeapMonth
     fullName: System.Globalization.EastAsianLunisolarCalendar.IsLeapMonth
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.IsLeapMonth(System.Int32,System.Int32,System.Int32)
     name: IsLeapMonth
+    nameWithType: EastAsianLunisolarCalendar.IsLeapMonth
     fullName: System.Globalization.EastAsianLunisolarCalendar.IsLeapMonth
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.IsLeapYear(System.Int32,System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.IsLeapYear(System.Int32,System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: IsLeapYear(Int32, Int32)
+  nameWithType: EastAsianLunisolarCalendar.IsLeapYear(Int32, Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.IsLeapYear(System.Int32, System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.IsLeapYear(System.Int32,System.Int32)
     name: IsLeapYear
+    nameWithType: EastAsianLunisolarCalendar.IsLeapYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.IsLeapYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.IsLeapYear(System.Int32,System.Int32)
     name: IsLeapYear
+    nameWithType: EastAsianLunisolarCalendar.IsLeapYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.IsLeapYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: ToDateTime(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
+  nameWithType: EastAsianLunisolarCalendar.ToDateTime(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.ToDateTime(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
     name: ToDateTime
+    nameWithType: EastAsianLunisolarCalendar.ToDateTime
     fullName: System.Globalization.EastAsianLunisolarCalendar.ToDateTime
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
     name: ToDateTime
+    nameWithType: EastAsianLunisolarCalendar.ToDateTime
     fullName: System.Globalization.EastAsianLunisolarCalendar.ToDateTime
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Globalization.EastAsianLunisolarCalendar.ToFourDigitYear(System.Int32)
+  commentId: M:System.Globalization.EastAsianLunisolarCalendar.ToFourDigitYear(System.Int32)
   parent: System.Globalization.EastAsianLunisolarCalendar
   isExternal: true
   name: ToFourDigitYear(Int32)
+  nameWithType: EastAsianLunisolarCalendar.ToFourDigitYear(Int32)
   fullName: System.Globalization.EastAsianLunisolarCalendar.ToFourDigitYear(System.Int32)
   spec.csharp:
   - uid: System.Globalization.EastAsianLunisolarCalendar.ToFourDigitYear(System.Int32)
     name: ToFourDigitYear
+    nameWithType: EastAsianLunisolarCalendar.ToFourDigitYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.ToFourDigitYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Globalization.EastAsianLunisolarCalendar.ToFourDigitYear(System.Int32)
     name: ToFourDigitYear
+    nameWithType: EastAsianLunisolarCalendar.ToFourDigitYear
     fullName: System.Globalization.EastAsianLunisolarCalendar.ToFourDigitYear
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Int32[]
-  isExternal: false
   name: Int32[]
-  name.vb: Int32()
+  nameWithType: Int32[]
   fullName: System.Int32[]
-  fullName.vb: System.Int32()
+  nameWithType.vb: Int32()
+  fullname.vb: System.Int32()
+  name.vb: Int32()
   spec.csharp:
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.DateTime
+  commentId: T:System.DateTime
   parent: System
   isExternal: false
   name: DateTime
+  nameWithType: DateTime
   fullName: System.DateTime
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32

@@ -1,38 +1,62 @@
 items:
 - uid: Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle
+  commentId: T:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle
   id: SafeMemoryMappedViewHandle
   parent: Microsoft.Win32.SafeHandles
   children:
   - Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle.ReleaseHandle
+  langs:
+  - csharp
+  - vb
   name: SafeMemoryMappedViewHandle
+  nameWithType: SafeMemoryMappedViewHandle
   fullName: Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle
   type: Class
   source:
-    remote: &o0
-      path: src/System.IO.MemoryMappedFiles/src/Microsoft/Win32/SafeMemoryMappedViewHandle.Windows.cs
+    remote:
+      path: src/System.IO.MemoryMappedFiles/ref/System.IO.MemoryMappedFiles.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.IO.MemoryMappedFiles/src/Microsoft/Win32/SafeMemoryMappedViewHandle.Windows.cs
-    startLine: 9
+    id: SafeMemoryMappedViewHandle
+    path: src/System.IO.MemoryMappedFiles/ref/System.IO.MemoryMappedFiles.cs
+    startLine: 15
   assemblies:
   - System.IO.MemoryMappedFiles
   namespace: Microsoft.Win32.SafeHandles
-  summary: Provides a safe handle that represents a view of a block of unmanaged memory for random access.
   syntax:
     content: 'public sealed class SafeMemoryMappedViewHandle : Runtime.InteropServices.SafeBuffer'
-    content.vb: Public NotInheritable Class SafeMemoryMappedViewHandle Inherits Runtime.InteropServices.SafeBuffer
+    content.vb: >-
+      Public NotInheritable Class SafeMemoryMappedViewHandle
+          Inherits Runtime.InteropServices.SafeBuffer
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle.ReleaseHandle
+  commentId: M:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle.ReleaseHandle
   id: ReleaseHandle
   parent: Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle
+  langs:
+  - csharp
+  - vb
   name: ReleaseHandle()
+  nameWithType: SafeMemoryMappedViewHandle.ReleaseHandle()
   fullName: Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle.ReleaseHandle()
   type: Method
   source:
-    remote: *o0
-    path: src/System.IO.MemoryMappedFiles/src/Microsoft/Win32/SafeMemoryMappedViewHandle.Windows.cs
-    startLine: 11
+    remote:
+      path: src/System.IO.MemoryMappedFiles/ref/System.IO.MemoryMappedFiles.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReleaseHandle
+    path: src/System.IO.MemoryMappedFiles/ref/System.IO.MemoryMappedFiles.cs
+    startLine: 18
   assemblies:
   - System.IO.MemoryMappedFiles
   namespace: Microsoft.Win32.SafeHandles
@@ -41,22 +65,36 @@ items:
     content.vb: Protected Overrides Function ReleaseHandle As Boolean
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 references:
 - uid: Microsoft.Win32.SafeHandles
+  commentId: N:Microsoft.Win32.SafeHandles
   isExternal: false
   name: Microsoft.Win32.SafeHandles
+  nameWithType: Microsoft.Win32.SafeHandles
   fullName: Microsoft.Win32.SafeHandles
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean

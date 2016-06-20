@@ -1,5 +1,6 @@
 items:
 - uid: System.Diagnostics.Contracts.Contract
+  commentId: T:System.Diagnostics.Contracts.Contract
   id: Contract
   parent: System.Diagnostics.Contracts
   children:
@@ -26,579 +27,846 @@ items:
   - System.Diagnostics.Contracts.Contract.Requires``1(System.Boolean,System.String)
   - System.Diagnostics.Contracts.Contract.Result``1
   - System.Diagnostics.Contracts.Contract.ValueAtReturn``1(``0@)
+  langs:
+  - csharp
+  - vb
   name: Contract
+  nameWithType: Contract
   fullName: System.Diagnostics.Contracts.Contract
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Diagnostics/Contracts/ContractsBCL.cs
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Diagnostics/Contracts/ContractsBCL.cs
-    startLine: 42
+      repo: https://github.com/dotnet/corefx.git
+    id: Contract
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 10
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Contains static methods for representing program contracts such as preconditions, postconditions, and object invariants.
   syntax:
     content: 'public class Contract : object'
-    content.vb: Public Class Contract Inherits Object
+    content.vb: >-
+      Public Class Contract
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Diagnostics.Contracts.Contract.ContractFailed
+  commentId: E:System.Diagnostics.Contracts.Contract.ContractFailed
   id: ContractFailed
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: ContractFailed
+  nameWithType: Contract.ContractFailed
   fullName: System.Diagnostics.Contracts.Contract.ContractFailed
   type: Event
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/Contracts/ContractsBCL.cs
-    startLine: 121
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ContractFailed
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 12
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Occurs when a contract fails.
   syntax:
     content: public static event EventHandler<ContractFailedEventArgs> ContractFailed
     content.vb: Public Shared Event ContractFailed As EventHandler(Of ContractFailedEventArgs)
+    return:
+      type: System.EventHandler{System.Diagnostics.Contracts.ContractFailedEventArgs}
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.Assert(System.Boolean)
+  commentId: M:System.Diagnostics.Contracts.Contract.Assert(System.Boolean)
   id: Assert(System.Boolean)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Assert(Boolean)
+  nameWithType: Contract.Assert(Boolean)
   fullName: System.Diagnostics.Contracts.Contract.Assert(System.Boolean)
   type: Method
   source:
-    remote: &o1
-      path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 335
+      repo: https://github.com/dotnet/corefx.git
+    id: Assert
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 13
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Checks for a condition; if the condition is false, follows the escalation policy set for the analyzer.
   syntax:
     content: public static void Assert(bool condition)
     content.vb: Public Shared Sub Assert(condition As Boolean)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.Assert(System.Boolean,System.String)
+  commentId: M:System.Diagnostics.Contracts.Contract.Assert(System.Boolean,System.String)
   id: Assert(System.Boolean,System.String)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Assert(Boolean, String)
+  nameWithType: Contract.Assert(Boolean, String)
   fullName: System.Diagnostics.Contracts.Contract.Assert(System.Boolean, System.String)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 352
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Assert
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 16
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Checks for a condition; if the condition is false, follows the escalation policy set by the analyzer and displays the specified message.
   syntax:
     content: public static void Assert(bool condition, string userMessage)
     content.vb: Public Shared Sub Assert(condition As Boolean, userMessage As String)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test.
     - id: userMessage
       type: System.String
-      description: A message to display if the condition is not met.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.Assume(System.Boolean)
+  commentId: M:System.Diagnostics.Contracts.Contract.Assume(System.Boolean)
   id: Assume(System.Boolean)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Assume(Boolean)
+  nameWithType: Contract.Assume(Boolean)
   fullName: System.Diagnostics.Contracts.Contract.Assume(System.Boolean)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 293
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Assume
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 19
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Instructs code analysis tools to assume that the specified condition is true, even if it cannot be statically proven to always be true.
   syntax:
     content: public static void Assume(bool condition)
     content.vb: Public Shared Sub Assume(condition As Boolean)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to assume true.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.Assume(System.Boolean,System.String)
+  commentId: M:System.Diagnostics.Contracts.Contract.Assume(System.Boolean,System.String)
   id: Assume(System.Boolean,System.String)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Assume(Boolean, String)
+  nameWithType: Contract.Assume(Boolean, String)
   fullName: System.Diagnostics.Contracts.Contract.Assume(System.Boolean, System.String)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 314
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Assume
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 22
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Instructs code analysis tools to assume that a condition is true, even if it cannot be statically proven to always be true, and displays a message if the assumption fails.
   syntax:
     content: public static void Assume(bool condition, string userMessage)
     content.vb: Public Shared Sub Assume(condition As Boolean, userMessage As String)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to assume true.
     - id: userMessage
       type: System.String
-      description: The message to post if the assumption fails.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.EndContractBlock
+  commentId: M:System.Diagnostics.Contracts.Contract.EndContractBlock
   id: EndContractBlock
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: EndContractBlock()
+  nameWithType: Contract.EndContractBlock()
   fullName: System.Diagnostics.Contracts.Contract.EndContractBlock()
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 869
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EndContractBlock
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 25
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Marks the end of the contract section when a method's contracts contain only preconditions in the if-then-throw form.
   syntax:
     content: public static void EndContractBlock()
     content.vb: Public Shared Sub
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.Ensures(System.Boolean)
+  commentId: M:System.Diagnostics.Contracts.Contract.Ensures(System.Boolean)
   id: Ensures(System.Boolean)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Ensures(Boolean)
+  nameWithType: Contract.Ensures(Boolean)
   fullName: System.Diagnostics.Contracts.Contract.Ensures(System.Boolean)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 462
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Ensures
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 27
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Specifies a postcondition contract for the enclosing method or property.
   syntax:
     content: public static void Ensures(bool condition)
     content.vb: Public Shared Sub Ensures(condition As Boolean)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test. The expression may include <xref href="System.Diagnostics.Contracts.Contract.OldValue``1(``0)" data-throw-if-not-resolved="false"></xref>, <xref href="System.Diagnostics.Contracts.Contract.ValueAtReturn``1(``0@)" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Diagnostics.Contracts.Contract.Result``1" data-throw-if-not-resolved="false"></xref> values.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.Ensures(System.Boolean,System.String)
+  commentId: M:System.Diagnostics.Contracts.Contract.Ensures(System.Boolean,System.String)
   id: Ensures(System.Boolean,System.String)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Ensures(Boolean, String)
+  nameWithType: Contract.Ensures(Boolean, String)
   fullName: System.Diagnostics.Contracts.Contract.Ensures(System.Boolean, System.String)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 482
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Ensures
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 29
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Specifies a postcondition contract for a provided exit condition and a message to display if the condition is false.
   syntax:
     content: public static void Ensures(bool condition, string userMessage)
     content.vb: Public Shared Sub Ensures(condition As Boolean, userMessage As String)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test. The expression may include <xref href="System.Diagnostics.Contracts.Contract.OldValue``1(``0)" data-throw-if-not-resolved="false"></xref> and <xref href="System.Diagnostics.Contracts.Contract.Result``1" data-throw-if-not-resolved="false"></xref> values.
     - id: userMessage
       type: System.String
-      description: The message to display if the expression is not true.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.EnsuresOnThrow``1(System.Boolean)
+  commentId: M:System.Diagnostics.Contracts.Contract.EnsuresOnThrow``1(System.Boolean)
   id: EnsuresOnThrow``1(System.Boolean)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: EnsuresOnThrow<TException>(Boolean)
-  name.vb: EnsuresOnThrow(Of TException)(Boolean)
+  nameWithType: Contract.EnsuresOnThrow<TException>(Boolean)
   fullName: System.Diagnostics.Contracts.Contract.EnsuresOnThrow<TException>(System.Boolean)
-  fullName.vb: System.Diagnostics.Contracts.Contract.EnsuresOnThrow(Of TException)(System.Boolean)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 502
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnsuresOnThrow
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 31
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Specifies a postcondition contract for the enclosing method or property, based on the provided exception and condition.
   syntax:
     content: 'public static void EnsuresOnThrow<TException>(bool condition)where TException : Exception'
     content.vb: Public Shared Sub EnsuresOnThrow(Of TException As Exception)(condition As Boolean)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test.
     typeParameters:
     - id: TException
+  nameWithType.vb: Contract.EnsuresOnThrow(Of TException)(Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.EnsuresOnThrow(Of TException)(System.Boolean)
+  name.vb: EnsuresOnThrow(Of TException)(Boolean)
 - uid: System.Diagnostics.Contracts.Contract.EnsuresOnThrow``1(System.Boolean,System.String)
+  commentId: M:System.Diagnostics.Contracts.Contract.EnsuresOnThrow``1(System.Boolean,System.String)
   id: EnsuresOnThrow``1(System.Boolean,System.String)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: EnsuresOnThrow<TException>(Boolean, String)
-  name.vb: EnsuresOnThrow(Of TException)(Boolean, String)
+  nameWithType: Contract.EnsuresOnThrow<TException>(Boolean, String)
   fullName: System.Diagnostics.Contracts.Contract.EnsuresOnThrow<TException>(System.Boolean, System.String)
-  fullName.vb: System.Diagnostics.Contracts.Contract.EnsuresOnThrow(Of TException)(System.Boolean, System.String)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 524
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnsuresOnThrow
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 33
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Specifies a postcondition contract and a message to display if the condition is false for the enclosing method or property, based on the provided exception and condition.
   syntax:
     content: 'public static void EnsuresOnThrow<TException>(bool condition, string userMessage)where TException : Exception'
     content.vb: Public Shared Sub EnsuresOnThrow(Of TException As Exception)(condition As Boolean, userMessage As String)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test.
     - id: userMessage
       type: System.String
-      description: The message to display if the expression is false.
     typeParameters:
     - id: TException
+  nameWithType.vb: Contract.EnsuresOnThrow(Of TException)(Boolean, String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.EnsuresOnThrow(Of TException)(System.Boolean, System.String)
+  name.vb: EnsuresOnThrow(Of TException)(Boolean, String)
 - uid: System.Diagnostics.Contracts.Contract.Exists(System.Int32,System.Int32,System.Predicate{System.Int32})
+  commentId: M:System.Diagnostics.Contracts.Contract.Exists(System.Int32,System.Int32,System.Predicate{System.Int32})
   id: Exists(System.Int32,System.Int32,System.Predicate{System.Int32})
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Exists(Int32, Int32, Predicate<Int32>)
-  name.vb: Exists(Int32, Int32, Predicate(Of Int32))
+  nameWithType: Contract.Exists(Int32, Int32, Predicate<Int32>)
   fullName: System.Diagnostics.Contracts.Contract.Exists(System.Int32, System.Int32, System.Predicate<System.Int32>)
-  fullName.vb: System.Diagnostics.Contracts.Contract.Exists(System.Int32, System.Int32, System.Predicate(Of System.Int32))
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 707
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Exists
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 35
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Determines whether a specified test is true for any integer within a range of integers.
   syntax:
     content: public static bool Exists(int fromInclusive, int toExclusive, Predicate<int> predicate)
     content.vb: Public Shared Function Exists(fromInclusive As Integer, toExclusive As Integer, predicate As Predicate(Of Integer)) As Boolean
     parameters:
     - id: fromInclusive
       type: System.Int32
-      description: The first integer to pass to *predicate*.
     - id: toExclusive
       type: System.Int32
-      description: One more than the last integer to pass to *predicate*.
     - id: predicate
       type: System.Predicate{System.Int32}
-      description: The function to evaluate for any value of the integer in the specified range.
     return:
       type: System.Boolean
-      description: true if *predicate* returns true for any integer starting from *fromInclusive* to *toExclusive* - 1.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*predicate* is null.'
-  - type: System.ArgumentException
-    description: '*toExclusive *is less than *fromInclusive*.'
+  nameWithType.vb: Contract.Exists(Int32, Int32, Predicate(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.Exists(System.Int32, System.Int32, System.Predicate(Of System.Int32))
+  name.vb: Exists(Int32, Int32, Predicate(Of Int32))
 - uid: System.Diagnostics.Contracts.Contract.Exists``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
+  commentId: M:System.Diagnostics.Contracts.Contract.Exists``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
   id: Exists``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Exists<T>(Collections.Generic.IEnumerable<T>, Predicate<T>)
-  name.vb: Exists(Of T)(Collections.Generic.IEnumerable(Of T), Predicate(Of T))
+  nameWithType: Contract.Exists<T>(Collections.Generic.IEnumerable<T>, Predicate<T>)
   fullName: System.Diagnostics.Contracts.Contract.Exists<T>(System.Collections.Generic.IEnumerable<T>, System.Predicate<T>)
-  fullName.vb: System.Diagnostics.Contracts.Contract.Exists(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Predicate(Of T))
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 737
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Exists
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 36
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Determines whether an element within a collection of elements exists within a function.
   syntax:
     content: public static bool Exists<T>(Collections.Generic.IEnumerable<T> collection, Predicate<T> predicate)
     content.vb: Public Shared Function Exists(Of T)(collection As Collections.Generic.IEnumerable(Of T), predicate As Predicate(Of T)) As Boolean
     parameters:
     - id: collection
       type: System.Collections.Generic.IEnumerable{{T}}
-      description: The collection from which elements of type *T* will be drawn to pass to *predicate*.
     - id: predicate
       type: System.Predicate{{T}}
-      description: The function to evaluate for an element in *collection*.
     typeParameters:
     - id: T
     return:
       type: System.Boolean
-      description: true if and only if *predicate* returns true for any element of type *T* in *collection*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*collection* or *predicate* is null.'
+  nameWithType.vb: Contract.Exists(Of T)(Collections.Generic.IEnumerable(Of T), Predicate(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.Exists(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Predicate(Of T))
+  name.vb: Exists(Of T)(Collections.Generic.IEnumerable(Of T), Predicate(Of T))
 - uid: System.Diagnostics.Contracts.Contract.ForAll(System.Int32,System.Int32,System.Predicate{System.Int32})
+  commentId: M:System.Diagnostics.Contracts.Contract.ForAll(System.Int32,System.Int32,System.Predicate{System.Int32})
   id: ForAll(System.Int32,System.Int32,System.Predicate{System.Int32})
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: ForAll(Int32, Int32, Predicate<Int32>)
-  name.vb: ForAll(Int32, Int32, Predicate(Of Int32))
+  nameWithType: Contract.ForAll(Int32, Int32, Predicate<Int32>)
   fullName: System.Diagnostics.Contracts.Contract.ForAll(System.Int32, System.Int32, System.Predicate<System.Int32>)
-  fullName.vb: System.Diagnostics.Contracts.Contract.ForAll(System.Int32, System.Int32, System.Predicate(Of System.Int32))
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 645
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForAll
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 37
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Determines whether a particular condition is valid for all integers in a specified range.
   syntax:
     content: public static bool ForAll(int fromInclusive, int toExclusive, Predicate<int> predicate)
     content.vb: Public Shared Function ForAll(fromInclusive As Integer, toExclusive As Integer, predicate As Predicate(Of Integer)) As Boolean
     parameters:
     - id: fromInclusive
       type: System.Int32
-      description: The first integer to pass to *predicate*.
     - id: toExclusive
       type: System.Int32
-      description: One more than the last integer to pass to *predicate*.
     - id: predicate
       type: System.Predicate{System.Int32}
-      description: The function to evaluate for the existence of the integers in the specified range.
     return:
       type: System.Boolean
-      description: true if *predicate* returns true for all integers starting from *fromInclusive* to *toExclusive* - 1.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*predicate* is null.'
-  - type: System.ArgumentException
-    description: '*toExclusive *is less than *fromInclusive*.'
+  nameWithType.vb: Contract.ForAll(Int32, Int32, Predicate(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.ForAll(System.Int32, System.Int32, System.Predicate(Of System.Int32))
+  name.vb: ForAll(Int32, Int32, Predicate(Of Int32))
 - uid: System.Diagnostics.Contracts.Contract.ForAll``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
+  commentId: M:System.Diagnostics.Contracts.Contract.ForAll``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
   id: ForAll``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: ForAll<T>(Collections.Generic.IEnumerable<T>, Predicate<T>)
-  name.vb: ForAll(Of T)(Collections.Generic.IEnumerable(Of T), Predicate(Of T))
+  nameWithType: Contract.ForAll<T>(Collections.Generic.IEnumerable<T>, Predicate<T>)
   fullName: System.Diagnostics.Contracts.Contract.ForAll<T>(System.Collections.Generic.IEnumerable<T>, System.Predicate<T>)
-  fullName.vb: System.Diagnostics.Contracts.Contract.ForAll(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Predicate(Of T))
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 676
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForAll
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 38
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Determines whether all the elements in a collection exist within a function.
   syntax:
     content: public static bool ForAll<T>(Collections.Generic.IEnumerable<T> collection, Predicate<T> predicate)
     content.vb: Public Shared Function ForAll(Of T)(collection As Collections.Generic.IEnumerable(Of T), predicate As Predicate(Of T)) As Boolean
     parameters:
     - id: collection
       type: System.Collections.Generic.IEnumerable{{T}}
-      description: The collection from which elements of type *T* will be drawn to pass to *predicate*.
     - id: predicate
       type: System.Predicate{{T}}
-      description: The function to evaluate for the existence of all the elements in *collection*.
     typeParameters:
     - id: T
     return:
       type: System.Boolean
-      description: true if and only if *predicate* returns true for all elements of type *T* in *collection*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*collection* or *predicate* is null.'
+  nameWithType.vb: Contract.ForAll(Of T)(Collections.Generic.IEnumerable(Of T), Predicate(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.ForAll(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Predicate(Of T))
+  name.vb: ForAll(Of T)(Collections.Generic.IEnumerable(Of T), Predicate(Of T))
 - uid: System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)
+  commentId: M:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)
   id: Invariant(System.Boolean)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Invariant(Boolean)
+  nameWithType: Contract.Invariant(Boolean)
   fullName: System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 599
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Invariant
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 39
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Specifies an invariant contract for the enclosing method or property.
   syntax:
     content: public static void Invariant(bool condition)
     content.vb: Public Shared Sub Invariant(condition As Boolean)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.Invariant(System.Boolean,System.String)
+  commentId: M:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean,System.String)
   id: Invariant(System.Boolean,System.String)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Invariant(Boolean, String)
+  nameWithType: Contract.Invariant(Boolean, String)
   fullName: System.Diagnostics.Contracts.Contract.Invariant(System.Boolean, System.String)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 619
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Invariant
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 41
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Specifies an invariant contract for the enclosing method or property, and displays a message if the condition for the contract fails.
   syntax:
     content: public static void Invariant(bool condition, string userMessage)
     content.vb: Public Shared Sub Invariant(condition As Boolean, userMessage As String)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test.
     - id: userMessage
       type: System.String
-      description: The message to display if the condition is false.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.OldValue``1(``0)
+  commentId: M:System.Diagnostics.Contracts.Contract.OldValue``1(``0)
   id: OldValue``1(``0)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: OldValue<T>(T)
-  name.vb: OldValue(Of T)(T)
+  nameWithType: Contract.OldValue<T>(T)
   fullName: System.Diagnostics.Contracts.Contract.OldValue<T>(T)
-  fullName.vb: System.Diagnostics.Contracts.Contract.OldValue(Of T)(T)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 577
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OldValue
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 43
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Represents values as they were at the start of a method or property.
   syntax:
     content: public static T OldValue<T>(T value)
     content.vb: Public Shared Function OldValue(Of T)(value As T) As T
     parameters:
     - id: value
       type: '{T}'
-      description: The value to represent (field or parameter).
     typeParameters:
     - id: T
     return:
       type: '{T}'
-      description: The value of the parameter or field at the start of a method or property.
+  nameWithType.vb: Contract.OldValue(Of T)(T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.OldValue(Of T)(T)
+  name.vb: OldValue(Of T)(T)
 - uid: System.Diagnostics.Contracts.Contract.Requires(System.Boolean)
+  commentId: M:System.Diagnostics.Contracts.Contract.Requires(System.Boolean)
   id: Requires(System.Boolean)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Requires(Boolean)
+  nameWithType: Contract.Requires(Boolean)
   fullName: System.Diagnostics.Contracts.Contract.Requires(System.Boolean)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 377
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Requires
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 44
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Specifies a precondition contract for the enclosing method or property.
   syntax:
     content: public static void Requires(bool condition)
     content.vb: Public Shared Sub Requires(condition As Boolean)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.Requires(System.Boolean,System.String)
+  commentId: M:System.Diagnostics.Contracts.Contract.Requires(System.Boolean,System.String)
   id: Requires(System.Boolean,System.String)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Requires(Boolean, String)
+  nameWithType: Contract.Requires(Boolean, String)
   fullName: System.Diagnostics.Contracts.Contract.Requires(System.Boolean, System.String)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 397
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Requires
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 46
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Specifies a precondition contract for the enclosing method or property, and displays a message if the condition for the contract fails.
   syntax:
     content: public static void Requires(bool condition, string userMessage)
     content.vb: Public Shared Sub Requires(condition As Boolean, userMessage As String)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test.
     - id: userMessage
       type: System.String
-      description: The message to display if the condition is false.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Diagnostics.Contracts.Contract.Requires``1(System.Boolean)
+  commentId: M:System.Diagnostics.Contracts.Contract.Requires``1(System.Boolean)
   id: Requires``1(System.Boolean)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Requires<TException>(Boolean)
-  name.vb: Requires(Of TException)(Boolean)
+  nameWithType: Contract.Requires<TException>(Boolean)
   fullName: System.Diagnostics.Contracts.Contract.Requires<TException>(System.Boolean)
-  fullName.vb: System.Diagnostics.Contracts.Contract.Requires(Of TException)(System.Boolean)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 416
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Requires
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 48
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Specifies a precondition contract for the enclosing method or property, and throws an exception if the condition for the contract fails.
   syntax:
     content: 'public static void Requires<TException>(bool condition)where TException : Exception'
     content.vb: Public Shared Sub Requires(Of TException As Exception)(condition As Boolean)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test.
     typeParameters:
     - id: TException
+  nameWithType.vb: Contract.Requires(Of TException)(Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.Requires(Of TException)(System.Boolean)
+  name.vb: Requires(Of TException)(Boolean)
 - uid: System.Diagnostics.Contracts.Contract.Requires``1(System.Boolean,System.String)
+  commentId: M:System.Diagnostics.Contracts.Contract.Requires``1(System.Boolean,System.String)
   id: Requires``1(System.Boolean,System.String)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Requires<TException>(Boolean, String)
-  name.vb: Requires(Of TException)(Boolean, String)
+  nameWithType: Contract.Requires<TException>(Boolean, String)
   fullName: System.Diagnostics.Contracts.Contract.Requires<TException>(System.Boolean, System.String)
-  fullName.vb: System.Diagnostics.Contracts.Contract.Requires(Of TException)(System.Boolean, System.String)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 437
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Requires
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 49
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Specifies a precondition contract for the enclosing method or property, and throws an exception with the provided message if the condition for the contract fails.
   syntax:
     content: 'public static void Requires<TException>(bool condition, string userMessage)where TException : Exception'
     content.vb: Public Shared Sub Requires(Of TException As Exception)(condition As Boolean, userMessage As String)
     parameters:
     - id: condition
       type: System.Boolean
-      description: The conditional expression to test.
     - id: userMessage
       type: System.String
-      description: The message to display if the condition is false.
     typeParameters:
     - id: TException
+  nameWithType.vb: Contract.Requires(Of TException)(Boolean, String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.Requires(Of TException)(System.Boolean, System.String)
+  name.vb: Requires(Of TException)(Boolean, String)
 - uid: System.Diagnostics.Contracts.Contract.Result``1
+  commentId: M:System.Diagnostics.Contracts.Contract.Result``1
   id: Result``1
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: Result<T>()
-  name.vb: Result(Of T)()
+  nameWithType: Contract.Result<T>()
   fullName: System.Diagnostics.Contracts.Contract.Result<T>()
-  fullName.vb: System.Diagnostics.Contracts.Contract.Result(Of T)()
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 545
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Result
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 50
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Represents the return value of a method or property.
   syntax:
     content: public static T Result<T>()
     content.vb: Public Shared Function Result(Of T) As T
@@ -606,214 +874,382 @@ items:
     - id: T
     return:
       type: '{T}'
-      description: Return value of the enclosing method or property.
+  nameWithType.vb: Contract.Result(Of T)()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.Result(Of T)()
+  name.vb: Result(Of T)()
 - uid: System.Diagnostics.Contracts.Contract.ValueAtReturn``1(``0@)
+  commentId: M:System.Diagnostics.Contracts.Contract.ValueAtReturn``1(``0@)
   id: ValueAtReturn``1(``0@)
   parent: System.Diagnostics.Contracts.Contract
+  langs:
+  - csharp
+  - vb
   name: ValueAtReturn<T>(out T)
-  name.vb: ValueAtReturn(Of T)(ByRef T)
+  nameWithType: Contract.ValueAtReturn<T>(out T)
   fullName: System.Diagnostics.Contracts.Contract.ValueAtReturn<T>(out T)
-  fullName.vb: System.Diagnostics.Contracts.Contract.ValueAtReturn(Of T)(ByRef T)
   type: Method
   source:
-    remote: *o1
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 561
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ValueAtReturn
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 51
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Diagnostics.Contracts
-  summary: Represents the final (output) value of an out parameter when returning from a method.
   syntax:
     content: public static T ValueAtReturn<T>(out T value)
     content.vb: Public Shared Function ValueAtReturn(Of T)(ByRef value As T) As T
     parameters:
     - id: value
       type: '{T}'
-      description: The out parameter.
     typeParameters:
     - id: T
     return:
       type: '{T}'
-      description: The output value of the out parameter.
+  nameWithType.vb: Contract.ValueAtReturn(Of T)(ByRef T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Diagnostics.Contracts.Contract.ValueAtReturn(Of T)(ByRef T)
+  name.vb: ValueAtReturn(Of T)(ByRef T)
 references:
 - uid: System.Diagnostics.Contracts
+  commentId: N:System.Diagnostics.Contracts
   isExternal: false
   name: System.Diagnostics.Contracts
+  nameWithType: System.Diagnostics.Contracts
   fullName: System.Diagnostics.Contracts
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
+- uid: System.EventHandler{System.Diagnostics.Contracts.ContractFailedEventArgs}
+  commentId: '!:System.EventHandler{System.Diagnostics.Contracts.ContractFailedEventArgs}'
+  definition: System.EventHandler`1
+  name: EventHandler<ContractFailedEventArgs>
+  nameWithType: EventHandler<ContractFailedEventArgs>
+  fullName: System.EventHandler<System.Diagnostics.Contracts.ContractFailedEventArgs>
+  nameWithType.vb: EventHandler(Of ContractFailedEventArgs)
+  fullname.vb: System.EventHandler(Of System.Diagnostics.Contracts.ContractFailedEventArgs)
+  name.vb: EventHandler(Of ContractFailedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Diagnostics.Contracts.ContractFailedEventArgs
+    name: ContractFailedEventArgs
+    nameWithType: ContractFailedEventArgs
+    fullName: System.Diagnostics.Contracts.ContractFailedEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Diagnostics.Contracts.ContractFailedEventArgs
+    name: ContractFailedEventArgs
+    nameWithType: ContractFailedEventArgs
+    fullName: System.Diagnostics.Contracts.ContractFailedEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: false
+  name: EventHandler<>
+  nameWithType: EventHandler<>
+  fullName: System.EventHandler<>
+  nameWithType.vb: EventHandler(Of )
+  fullname.vb: System.EventHandler(Of )
+  name.vb: EventHandler(Of )
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Predicate{System.Int32}
+  commentId: '!:System.Predicate{System.Int32}'
   definition: System.Predicate`1
   name: Predicate<Int32>
-  name.vb: Predicate(Of Int32)
+  nameWithType: Predicate<Int32>
   fullName: System.Predicate<System.Int32>
-  fullName.vb: System.Predicate(Of System.Int32)
+  nameWithType.vb: Predicate(Of Int32)
+  fullname.vb: System.Predicate(Of System.Int32)
+  name.vb: Predicate(Of Int32)
   spec.csharp:
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Predicate`1
-  parent: System
+  commentId: T:System.Predicate`1
   isExternal: false
   name: Predicate<>
-  name.vb: Predicate(Of )
+  nameWithType: Predicate<>
   fullName: System.Predicate<>
-  fullName.vb: System.Predicate(Of )
+  nameWithType.vb: Predicate(Of )
+  fullname.vb: System.Predicate(Of )
+  name.vb: Predicate(Of )
   spec.csharp:
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: '!:System.Collections.Generic.IEnumerable{`0}'
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  name: Collections.Generic.IEnumerable<T>
-  name.vb: Collections.Generic.IEnumerable(Of T)
+  name: Generic.IEnumerable<T>
+  nameWithType: Generic.IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  nameWithType.vb: Generic.IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: Generic.IEnumerable(Of T)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
+    name: Generic.IEnumerable
+    nameWithType: Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
+    name: Generic.IEnumerable
+    nameWithType: Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Predicate{{T}}
+  commentId: '!:System.Predicate{``0}'
   parent: System
   definition: System.Predicate`1
   name: Predicate<T>
-  name.vb: Predicate(Of T)
+  nameWithType: Predicate<T>
   fullName: System.Predicate<T>
-  fullName.vb: System.Predicate(Of T)
+  nameWithType.vb: Predicate(Of T)
+  fullname.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
   spec.csharp:
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
   name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
   isExternal: false
   name: T
+  nameWithType: T
   fullName: T
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

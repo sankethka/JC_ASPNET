@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute
+  commentId: T:System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute
   id: InterfaceImplementedInVersionAttribute
   parent: System.Runtime.InteropServices.WindowsRuntime
   children:
@@ -9,184 +10,280 @@ items:
   - System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.MajorVersion
   - System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.MinorVersion
   - System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.RevisionVersion
+  langs:
+  - csharp
+  - vb
   name: InterfaceImplementedInVersionAttribute
+  nameWithType: InterfaceImplementedInVersionAttribute
   fullName: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/Attributes.cs
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/Attributes.cs
-    startLine: 44
+      repo: https://github.com/dotnet/corefx.git
+    id: InterfaceImplementedInVersionAttribute
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 37
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Specifies the version of the target type that first implemented the specified interface.
   syntax:
     content: 'public sealed class InterfaceImplementedInVersionAttribute : Attribute'
-    content.vb: Public NotInheritable Class InterfaceImplementedInVersionAttribute Inherits Attribute
+    content.vb: >-
+      Public NotInheritable Class InterfaceImplementedInVersionAttribute
+          Inherits Attribute
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.#ctor(System.Type,System.Byte,System.Byte,System.Byte,System.Byte)
+  commentId: M:System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.#ctor(System.Type,System.Byte,System.Byte,System.Byte,System.Byte)
   id: '#ctor(System.Type,System.Byte,System.Byte,System.Byte,System.Byte)'
   parent: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute
+  langs:
+  - csharp
+  - vb
   name: InterfaceImplementedInVersionAttribute(Type, Byte, Byte, Byte, Byte)
+  nameWithType: InterfaceImplementedInVersionAttribute.InterfaceImplementedInVersionAttribute(Type, Byte, Byte, Byte, Byte)
   fullName: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.InterfaceImplementedInVersionAttribute(System.Type, System.Byte, System.Byte, System.Byte, System.Byte)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/Attributes.cs
-    startLine: 47
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 40
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Initializes a new instance of the <xref href="System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute" data-throw-if-not-resolved="false"></xref> class, specifying the interface that the target type implements and the version in which that interface was first implemented.
   syntax:
     content: public InterfaceImplementedInVersionAttribute(Type interfaceType, byte majorVersion, byte minorVersion, byte buildVersion, byte revisionVersion)
     content.vb: Public Sub New(interfaceType As Type, majorVersion As Byte, minorVersion As Byte, buildVersion As Byte, revisionVersion As Byte)
     parameters:
     - id: interfaceType
       type: System.Type
-      description: The interface that was first implemented in the specified version of the target type.
     - id: majorVersion
       type: System.Byte
-      description: The major component of the version of the target type that first implemented *interfaceType*.
     - id: minorVersion
       type: System.Byte
-      description: The minor component of the version of the target type that first implemented *interfaceType*.
     - id: buildVersion
       type: System.Byte
-      description: The build component of the version of the target type that first implemented *interfaceType*.
     - id: revisionVersion
       type: System.Byte
-      description: The revision component of the version of the target type that first implemented *interfaceType*.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.BuildVersion
+  commentId: P:System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.BuildVersion
   id: BuildVersion
   parent: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute
+  langs:
+  - csharp
+  - vb
   name: BuildVersion
+  nameWithType: InterfaceImplementedInVersionAttribute.BuildVersion
   fullName: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.BuildVersion
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/Attributes.cs
-    startLine: 71
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: BuildVersion
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 41
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Gets the build component of the version of the target type that first implemented the interface.
   syntax:
     content: public byte BuildVersion { get; }
     content.vb: Public ReadOnly Property BuildVersion As Byte
     parameters: []
     return:
       type: System.Byte
-      description: The build component of the version.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.InterfaceType
+  commentId: P:System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.InterfaceType
   id: InterfaceType
   parent: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute
+  langs:
+  - csharp
+  - vb
   name: InterfaceType
+  nameWithType: InterfaceImplementedInVersionAttribute.InterfaceType
   fullName: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.InterfaceType
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/Attributes.cs
-    startLine: 56
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: InterfaceType
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 42
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Gets the type of the interface that the target type implements.
   syntax:
     content: public Type InterfaceType { get; }
     content.vb: Public ReadOnly Property InterfaceType As Type
     parameters: []
     return:
       type: System.Type
-      description: The type of the interface.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.MajorVersion
+  commentId: P:System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.MajorVersion
   id: MajorVersion
   parent: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute
+  langs:
+  - csharp
+  - vb
   name: MajorVersion
+  nameWithType: InterfaceImplementedInVersionAttribute.MajorVersion
   fullName: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.MajorVersion
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/Attributes.cs
-    startLine: 61
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MajorVersion
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 43
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Gets the major component of the version of the target type that first implemented the interface.
   syntax:
     content: public byte MajorVersion { get; }
     content.vb: Public ReadOnly Property MajorVersion As Byte
     parameters: []
     return:
       type: System.Byte
-      description: The major component of the version.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.MinorVersion
+  commentId: P:System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.MinorVersion
   id: MinorVersion
   parent: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute
+  langs:
+  - csharp
+  - vb
   name: MinorVersion
+  nameWithType: InterfaceImplementedInVersionAttribute.MinorVersion
   fullName: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.MinorVersion
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/Attributes.cs
-    startLine: 66
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MinorVersion
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 44
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Gets the minor component of the version of the target type that first implemented the interface.
   syntax:
     content: public byte MinorVersion { get; }
     content.vb: Public ReadOnly Property MinorVersion As Byte
     parameters: []
     return:
       type: System.Byte
-      description: The minor component of the version.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.RevisionVersion
+  commentId: P:System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.RevisionVersion
   id: RevisionVersion
   parent: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute
+  langs:
+  - csharp
+  - vb
   name: RevisionVersion
+  nameWithType: InterfaceImplementedInVersionAttribute.RevisionVersion
   fullName: System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.RevisionVersion
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/Attributes.cs
-    startLine: 76
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RevisionVersion
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 45
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Gets the revision component of the version of the target type that first implemented the interface.
   syntax:
     content: public byte RevisionVersion { get; }
     content.vb: Public ReadOnly Property RevisionVersion As Byte
     parameters: []
     return:
       type: System.Byte
-      description: The revision component of the version.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Runtime.InteropServices.WindowsRuntime
+  commentId: N:System.Runtime.InteropServices.WindowsRuntime
   isExternal: false
   name: System.Runtime.InteropServices.WindowsRuntime
+  nameWithType: System.Runtime.InteropServices.WindowsRuntime
   fullName: System.Runtime.InteropServices.WindowsRuntime
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type
 - uid: System.Byte
+  commentId: T:System.Byte
   parent: System
   isExternal: false
   name: Byte
+  nameWithType: Byte
   fullName: System.Byte

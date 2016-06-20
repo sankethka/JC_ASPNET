@@ -1,61 +1,123 @@
 items:
 - uid: System.Globalization.TimeSpanStyles
+  commentId: T:System.Globalization.TimeSpanStyles
   id: TimeSpanStyles
   parent: System.Globalization
   children:
   - System.Globalization.TimeSpanStyles.AssumeNegative
   - System.Globalization.TimeSpanStyles.None
+  langs:
+  - csharp
+  - vb
   name: TimeSpanStyles
+  nameWithType: TimeSpanStyles
   fullName: System.Globalization.TimeSpanStyles
   type: Enum
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Globalization/TimeSpanStyles.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Globalization/TimeSpanStyles.cs
-    startLine: 6
+      repo: https://github.com/dotnet/corefx.git
+    id: TimeSpanStyles
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2615
   assemblies:
   - System.Runtime
   namespace: System.Globalization
-  summary: Defines the formatting options that customize string parsing for the <see cref="Overload:System.TimeSpan.ParseExact" /> and <see cref="Overload:System.TimeSpan.TryParseExact" /> methods.
   syntax:
-    content: public enum TimeSpanStyles
-    content.vb: Public Enum TimeSpanStyles
+    content: >-
+      [Flags]
+
+      public enum TimeSpanStyles
+    content.vb: >-
+      <Flags>
+
+      Public Enum TimeSpanStyles
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
 - uid: System.Globalization.TimeSpanStyles.AssumeNegative
+  commentId: F:System.Globalization.TimeSpanStyles.AssumeNegative
   id: AssumeNegative
   parent: System.Globalization.TimeSpanStyles
+  langs:
+  - csharp
+  - vb
   name: AssumeNegative
+  nameWithType: TimeSpanStyles.AssumeNegative
   fullName: System.Globalization.TimeSpanStyles.AssumeNegative
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/TimeSpanStyles.cs
-    startLine: 9
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AssumeNegative
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2618
   assemblies:
   - System.Runtime
   namespace: System.Globalization
-  summary: Indicates that input is always interpreted as a negative time interval.
   syntax:
     content: AssumeNegative = 1
+    return:
+      type: System.Globalization.TimeSpanStyles
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Globalization.TimeSpanStyles.None
+  commentId: F:System.Globalization.TimeSpanStyles.None
   id: None
   parent: System.Globalization.TimeSpanStyles
+  langs:
+  - csharp
+  - vb
   name: None
+  nameWithType: TimeSpanStyles.None
   fullName: System.Globalization.TimeSpanStyles.None
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/TimeSpanStyles.cs
-    startLine: 8
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: None
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2619
   assemblies:
   - System.Runtime
   namespace: System.Globalization
-  summary: Indicates that input is interpreted as a negative time interval only if a negative sign is present.
   syntax:
     content: None = 0
+    return:
+      type: System.Globalization.TimeSpanStyles
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System.Globalization
+  commentId: N:System.Globalization
   isExternal: false
   name: System.Globalization
+  nameWithType: System.Globalization
   fullName: System.Globalization
+- uid: System.Globalization.TimeSpanStyles
+  commentId: T:System.Globalization.TimeSpanStyles
+  parent: System.Globalization
+  isExternal: false
+  name: TimeSpanStyles
+  nameWithType: TimeSpanStyles
+  fullName: System.Globalization.TimeSpanStyles

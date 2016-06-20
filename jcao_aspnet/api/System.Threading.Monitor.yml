@@ -1,5 +1,6 @@
 items:
 - uid: System.Threading.Monitor
+  commentId: T:System.Threading.Monitor
   id: Monitor
   parent: System.Threading
   children:
@@ -18,524 +19,631 @@ items:
   - System.Threading.Monitor.Wait(System.Object)
   - System.Threading.Monitor.Wait(System.Object,System.Int32)
   - System.Threading.Monitor.Wait(System.Object,System.TimeSpan)
+  langs:
+  - csharp
+  - vb
   name: Monitor
+  nameWithType: Monitor
   fullName: System.Threading.Monitor
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Threading/Monitor.cs
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 28
+      repo: https://github.com/dotnet/corefx.git
+    id: Monitor
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 183
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Provides a mechanism that synchronizes access to objects.
   syntax:
     content: 'public class Monitor : object'
-    content.vb: Public Class Monitor Inherits Object
+    content.vb: >-
+      Public Class Monitor
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Threading.Monitor.Enter(System.Object)
+  commentId: M:System.Threading.Monitor.Enter(System.Object)
   id: Enter(System.Object)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: Enter(Object)
+  nameWithType: Monitor.Enter(Object)
   fullName: System.Threading.Monitor.Enter(System.Object)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Enter
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 185
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Acquires an exclusive lock on the specified object.
   syntax:
     content: public static void Enter(object obj)
     content.vb: Public Shared Sub Enter(obj As Object)
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to acquire the monitor lock.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Monitor.Enter(System.Object,System.Boolean@)
+  commentId: M:System.Threading.Monitor.Enter(System.Object,System.Boolean@)
   id: Enter(System.Object,System.Boolean@)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: Enter(Object, ref Boolean)
-  name.vb: Enter(Object, ByRef Boolean)
+  nameWithType: Monitor.Enter(Object, ref Boolean)
   fullName: System.Threading.Monitor.Enter(System.Object, ref System.Boolean)
-  fullName.vb: System.Threading.Monitor.Enter(System.Object, ByRef System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 50
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Enter
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 186
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Acquires an exclusive lock on the specified object, and atomically sets a value that indicates whether the lock was taken.
   syntax:
     content: public static void Enter(object obj, ref bool lockTaken)
     content.vb: Public Shared Sub Enter(obj As Object, ByRef lockTaken As Boolean)
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to wait.
     - id: lockTaken
       type: System.Boolean
-      description: "The result of the attempt to acquire the lock, passed by reference. The input must be false. The output is true if the lock is acquired; otherwise, the output is false. The output is set even if an exception occurs during the attempt to acquire the lock. Note   If no exception occurs, the output of this method is always true."
-  exceptions:
-  - type: System.ArgumentException
-    description: The input to *lockTaken* is true.
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
+  nameWithType.vb: Monitor.Enter(Object, ByRef Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Monitor.Enter(System.Object, ByRef System.Boolean)
+  name.vb: Enter(Object, ByRef Boolean)
 - uid: System.Threading.Monitor.Exit(System.Object)
+  commentId: M:System.Threading.Monitor.Exit(System.Object)
   id: Exit(System.Object)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: Exit(Object)
+  nameWithType: Monitor.Exit(Object)
   fullName: System.Threading.Monitor.Exit(System.Object)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Exit
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 187
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Releases an exclusive lock on the specified object.
   syntax:
     content: public static void Exit(object obj)
     content.vb: Public Shared Sub Exit(obj As Object)
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to release the lock.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
-  - type: System.Threading.SynchronizationLockException
-    description: The current thread does not own the lock for the specified object.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Monitor.IsEntered(System.Object)
+  commentId: M:System.Threading.Monitor.IsEntered(System.Object)
   id: IsEntered(System.Object)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: IsEntered(Object)
+  nameWithType: Monitor.IsEntered(Object)
   fullName: System.Threading.Monitor.IsEntered(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 160
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsEntered
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 188
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Determines whether the current thread holds the lock on the specified object.
   syntax:
     content: public static bool IsEntered(object obj)
     content.vb: Public Shared Function IsEntered(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: The object to test.
     return:
       type: System.Boolean
-      description: true if the current thread holds the lock on *obj*; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*obj* is null.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Monitor.Pulse(System.Object)
+  commentId: M:System.Threading.Monitor.Pulse(System.Object)
   id: Pulse(System.Object)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: Pulse(Object)
+  nameWithType: Monitor.Pulse(Object)
   fullName: System.Threading.Monitor.Pulse(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 225
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Pulse
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 189
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Notifies a thread in the waiting queue of a change in the locked object's state.
   syntax:
     content: public static void Pulse(object obj)
     content.vb: Public Shared Sub Pulse(obj As Object)
     parameters:
     - id: obj
       type: System.Object
-      description: The object a thread is waiting for.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
-  - type: System.Threading.SynchronizationLockException
-    description: The calling thread does not own the lock for the specified object.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Monitor.PulseAll(System.Object)
+  commentId: M:System.Threading.Monitor.PulseAll(System.Object)
   id: PulseAll(System.Object)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: PulseAll(Object)
+  nameWithType: Monitor.PulseAll(Object)
   fullName: System.Threading.Monitor.PulseAll(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 243
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PulseAll
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 190
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Notifies all waiting threads of a change in the object's state.
   syntax:
     content: public static void PulseAll(object obj)
     content.vb: Public Shared Sub PulseAll(obj As Object)
     parameters:
     - id: obj
       type: System.Object
-      description: The object that sends the pulse.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
-  - type: System.Threading.SynchronizationLockException
-    description: The calling thread does not own the lock for the specified object.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Monitor.TryEnter(System.Object)
+  commentId: M:System.Threading.Monitor.TryEnter(System.Object)
   id: TryEnter(System.Object)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: TryEnter(Object)
+  nameWithType: Monitor.TryEnter(Object)
   fullName: System.Threading.Monitor.TryEnter(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 91
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryEnter
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 191
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Attempts to acquire an exclusive lock on the specified object.
   syntax:
     content: public static bool TryEnter(object obj)
     content.vb: Public Shared Function TryEnter(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to acquire the lock.
     return:
       type: System.Boolean
-      description: true if the current thread acquires the lock; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Monitor.TryEnter(System.Object,System.Boolean@)
+  commentId: M:System.Threading.Monitor.TryEnter(System.Object,System.Boolean@)
   id: TryEnter(System.Object,System.Boolean@)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: TryEnter(Object, ref Boolean)
-  name.vb: TryEnter(Object, ByRef Boolean)
+  nameWithType: Monitor.TryEnter(Object, ref Boolean)
   fullName: System.Threading.Monitor.TryEnter(System.Object, ref System.Boolean)
-  fullName.vb: System.Threading.Monitor.TryEnter(System.Object, ByRef System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 100
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryEnter
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 192
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Attempts to acquire an exclusive lock on the specified object, and atomically sets a value that indicates whether the lock was taken.
   syntax:
     content: public static void TryEnter(object obj, ref bool lockTaken)
     content.vb: Public Shared Sub TryEnter(obj As Object, ByRef lockTaken As Boolean)
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to acquire the lock.
     - id: lockTaken
       type: System.Boolean
-      description: The result of the attempt to acquire the lock, passed by reference. The input must be false. The output is true if the lock is acquired; otherwise, the output is false. The output is set even if an exception occurs during the attempt to acquire the lock.
-  exceptions:
-  - type: System.ArgumentException
-    description: The input to *lockTaken* is true.
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
+  nameWithType.vb: Monitor.TryEnter(Object, ByRef Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Monitor.TryEnter(System.Object, ByRef System.Boolean)
+  name.vb: TryEnter(Object, ByRef Boolean)
 - uid: System.Threading.Monitor.TryEnter(System.Object,System.Int32)
+  commentId: M:System.Threading.Monitor.TryEnter(System.Object,System.Int32)
   id: TryEnter(System.Object,System.Int32)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: TryEnter(Object, Int32)
+  nameWithType: Monitor.TryEnter(Object, Int32)
   fullName: System.Threading.Monitor.TryEnter(System.Object, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 118
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryEnter
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 193
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Attempts, for the specified number of milliseconds, to acquire an exclusive lock on the specified object.
   syntax:
     content: public static bool TryEnter(object obj, int millisecondsTimeout)
     content.vb: Public Shared Function TryEnter(obj As Object, millisecondsTimeout As Integer) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to acquire the lock.
     - id: millisecondsTimeout
       type: System.Int32
-      description: The number of milliseconds to wait for the lock.
     return:
       type: System.Boolean
-      description: true if the current thread acquires the lock; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
-  - type: System.ArgumentOutOfRangeException
-    description: '*millisecondsTimeout* is negative, and not equal to <xref href="System.Threading.Timeout.Infinite" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Monitor.TryEnter(System.Object,System.Int32,System.Boolean@)
+  commentId: M:System.Threading.Monitor.TryEnter(System.Object,System.Int32,System.Boolean@)
   id: TryEnter(System.Object,System.Int32,System.Boolean@)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: TryEnter(Object, Int32, ref Boolean)
-  name.vb: TryEnter(Object, Int32, ByRef Boolean)
+  nameWithType: Monitor.TryEnter(Object, Int32, ref Boolean)
   fullName: System.Threading.Monitor.TryEnter(System.Object, System.Int32, ref System.Boolean)
-  fullName.vb: System.Threading.Monitor.TryEnter(System.Object, System.Int32, ByRef System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 140
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryEnter
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 194
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Attempts, for the specified number of milliseconds, to acquire an exclusive lock on the specified object, and atomically sets a value that indicates whether the lock was taken.
   syntax:
     content: public static void TryEnter(object obj, int millisecondsTimeout, ref bool lockTaken)
     content.vb: Public Shared Sub TryEnter(obj As Object, millisecondsTimeout As Integer, ByRef lockTaken As Boolean)
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to acquire the lock.
     - id: millisecondsTimeout
       type: System.Int32
-      description: The number of milliseconds to wait for the lock.
     - id: lockTaken
       type: System.Boolean
-      description: The result of the attempt to acquire the lock, passed by reference. The input must be false. The output is true if the lock is acquired; otherwise, the output is false. The output is set even if an exception occurs during the attempt to acquire the lock.
-  exceptions:
-  - type: System.ArgumentException
-    description: The input to *lockTaken* is true.
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
-  - type: System.ArgumentOutOfRangeException
-    description: '*millisecondsTimeout* is negative, and not equal to <xref href="System.Threading.Timeout.Infinite" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: Monitor.TryEnter(Object, Int32, ByRef Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Monitor.TryEnter(System.Object, System.Int32, ByRef System.Boolean)
+  name.vb: TryEnter(Object, Int32, ByRef Boolean)
 - uid: System.Threading.Monitor.TryEnter(System.Object,System.TimeSpan)
+  commentId: M:System.Threading.Monitor.TryEnter(System.Object,System.TimeSpan)
   id: TryEnter(System.Object,System.TimeSpan)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: TryEnter(Object, TimeSpan)
+  nameWithType: Monitor.TryEnter(Object, TimeSpan)
   fullName: System.Threading.Monitor.TryEnter(System.Object, System.TimeSpan)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 133
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryEnter
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 195
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Attempts, for the specified amount of time, to acquire an exclusive lock on the specified object.
   syntax:
     content: public static bool TryEnter(object obj, TimeSpan timeout)
     content.vb: Public Shared Function TryEnter(obj As Object, timeout As TimeSpan) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to acquire the lock.
     - id: timeout
       type: System.TimeSpan
-      description: "A <xref href=\"System.TimeSpan\" data-throw-if-not-resolved=\"false\"></xref> representing the amount of time to wait for the lock. A value of –1 millisecond specifies an infinite wait."
     return:
       type: System.Boolean
-      description: true if the current thread acquires the lock; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
-  - type: System.ArgumentOutOfRangeException
-    description: "The value of *timeout* in milliseconds is negative and is not equal to <xref href=\"System.Threading.Timeout.Infinite\" data-throw-if-not-resolved=\"false\"></xref> (–1 millisecond), or is greater than <xref href=\"System.Int32.MaxValue\" data-throw-if-not-resolved=\"false\"></xref>."
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Monitor.TryEnter(System.Object,System.TimeSpan,System.Boolean@)
+  commentId: M:System.Threading.Monitor.TryEnter(System.Object,System.TimeSpan,System.Boolean@)
   id: TryEnter(System.Object,System.TimeSpan,System.Boolean@)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: TryEnter(Object, TimeSpan, ref Boolean)
-  name.vb: TryEnter(Object, TimeSpan, ByRef Boolean)
+  nameWithType: Monitor.TryEnter(Object, TimeSpan, ref Boolean)
   fullName: System.Threading.Monitor.TryEnter(System.Object, System.TimeSpan, ref System.Boolean)
-  fullName.vb: System.Threading.Monitor.TryEnter(System.Object, System.TimeSpan, ByRef System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 148
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryEnter
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 196
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Attempts, for the specified amount of time, to acquire an exclusive lock on the specified object, and atomically sets a value that indicates whether the lock was taken.
   syntax:
     content: public static void TryEnter(object obj, TimeSpan timeout, ref bool lockTaken)
     content.vb: Public Shared Sub TryEnter(obj As Object, timeout As TimeSpan, ByRef lockTaken As Boolean)
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to acquire the lock.
     - id: timeout
       type: System.TimeSpan
-      description: "The amount of time to wait for the lock. A value of –1 millisecond specifies an infinite wait."
     - id: lockTaken
       type: System.Boolean
-      description: The result of the attempt to acquire the lock, passed by reference. The input must be false. The output is true if the lock is acquired; otherwise, the output is false. The output is set even if an exception occurs during the attempt to acquire the lock.
-  exceptions:
-  - type: System.ArgumentException
-    description: The input to *lockTaken* is true.
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
-  - type: System.ArgumentOutOfRangeException
-    description: "The value of *timeout* in milliseconds is negative and is not equal to <xref href=\"System.Threading.Timeout.Infinite\" data-throw-if-not-resolved=\"false\"></xref> (–1 millisecond), or is greater than <xref href=\"System.Int32.MaxValue\" data-throw-if-not-resolved=\"false\"></xref>."
+  nameWithType.vb: Monitor.TryEnter(Object, TimeSpan, ByRef Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Monitor.TryEnter(System.Object, System.TimeSpan, ByRef System.Boolean)
+  name.vb: TryEnter(Object, TimeSpan, ByRef Boolean)
 - uid: System.Threading.Monitor.Wait(System.Object)
+  commentId: M:System.Threading.Monitor.Wait(System.Object)
   id: Wait(System.Object)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: Wait(Object)
+  nameWithType: Monitor.Wait(Object)
   fullName: System.Threading.Monitor.Wait(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 211
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Wait
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 197
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Releases the lock on an object and blocks the current thread until it reacquires the lock.
   syntax:
     content: public static bool Wait(object obj)
     content.vb: Public Shared Function Wait(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to wait.
     return:
       type: System.Boolean
-      description: true if the call returned because the caller reacquired the lock for the specified object. This method does not return if the lock is not reacquired.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
-  - type: System.Threading.SynchronizationLockException
-    description: The calling thread does not own the lock for the specified object.
-  - type: System.Threading.ThreadInterruptedException
-    description: The thread that invokes Wait is later interrupted from the waiting state. This happens when another thread calls this thread's <xref href="System.Threading.Thread.Interrupt" data-throw-if-not-resolved="false"></xref> method.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Monitor.Wait(System.Object,System.Int32)
+  commentId: M:System.Threading.Monitor.Wait(System.Object,System.Int32)
   id: Wait(System.Object,System.Int32)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: Wait(Object, Int32)
+  nameWithType: Monitor.Wait(Object, Int32)
   fullName: System.Threading.Monitor.Wait(System.Object, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 201
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Wait
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 198
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Releases the lock on an object and blocks the current thread until it reacquires the lock. If the specified time-out interval elapses, the thread enters the ready queue.
   syntax:
     content: public static bool Wait(object obj, int millisecondsTimeout)
     content.vb: Public Shared Function Wait(obj As Object, millisecondsTimeout As Integer) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to wait.
     - id: millisecondsTimeout
       type: System.Int32
-      description: The number of milliseconds to wait before the thread enters the ready queue.
     return:
       type: System.Boolean
-      description: true if the lock was reacquired before the specified time elapsed; false if the lock was reacquired after the specified time elapsed. The method does not return until the lock is reacquired.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
-  - type: System.Threading.SynchronizationLockException
-    description: The calling thread does not own the lock for the specified object.
-  - type: System.Threading.ThreadInterruptedException
-    description: The thread that invokes Wait is later interrupted from the waiting state. This happens when another thread calls this thread's <xref href="System.Threading.Thread.Interrupt" data-throw-if-not-resolved="false"></xref> method.
-  - type: System.ArgumentOutOfRangeException
-    description: The value of the *millisecondsTimeout* parameter is negative, and is not equal to <xref href="System.Threading.Timeout.Infinite" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Threading.Monitor.Wait(System.Object,System.TimeSpan)
+  commentId: M:System.Threading.Monitor.Wait(System.Object,System.TimeSpan)
   id: Wait(System.Object,System.TimeSpan)
   parent: System.Threading.Monitor
+  langs:
+  - csharp
+  - vb
   name: Wait(Object, TimeSpan)
+  nameWithType: Monitor.Wait(Object, TimeSpan)
   fullName: System.Threading.Monitor.Wait(System.Object, System.TimeSpan)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Monitor.cs
-    startLine: 206
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Wait
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 199
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Releases the lock on an object and blocks the current thread until it reacquires the lock. If the specified time-out interval elapses, the thread enters the ready queue.
   syntax:
     content: public static bool Wait(object obj, TimeSpan timeout)
     content.vb: Public Shared Function Wait(obj As Object, timeout As TimeSpan) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: The object on which to wait.
     - id: timeout
       type: System.TimeSpan
-      description: A <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> representing the amount of time to wait before the thread enters the ready queue.
     return:
       type: System.Boolean
-      description: true if the lock was reacquired before the specified time elapsed; false if the lock was reacquired after the specified time elapsed. The method does not return until the lock is reacquired.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *obj* parameter is null.
-  - type: System.Threading.SynchronizationLockException
-    description: The calling thread does not own the lock for the specified object.
-  - type: System.Threading.ThreadInterruptedException
-    description: The thread that invokes Wait is later interrupted from the waiting state. This happens when another thread calls this thread's <xref href="System.Threading.Thread.Interrupt" data-throw-if-not-resolved="false"></xref> method.
-  - type: System.ArgumentOutOfRangeException
-    description: "The value of the *timeout* parameter in milliseconds is negative and does not represent <xref href=\"System.Threading.Timeout.Infinite\" data-throw-if-not-resolved=\"false\"></xref> (–1 millisecond), or is greater than <xref href=\"System.Int32.MaxValue\" data-throw-if-not-resolved=\"false\"></xref>."
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.TimeSpan
+  commentId: T:System.TimeSpan
   parent: System
   isExternal: false
   name: TimeSpan
+  nameWithType: TimeSpan
   fullName: System.TimeSpan
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.Threading.SynchronizationLockException
-  isExternal: false
-  name: SynchronizationLockException
-  fullName: System.Threading.SynchronizationLockException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.Threading.ThreadInterruptedException

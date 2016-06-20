@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter
+  commentId: T:System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter
   id: ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter
   parent: System.Runtime.CompilerServices
   children:
@@ -7,181 +8,308 @@ items:
   - System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.IsCompleted
   - System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.OnCompleted(System.Action)
   - System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.UnsafeOnCompleted(System.Action)
+  langs:
+  - csharp
+  - vb
   name: ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter
-  name.vb: ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter
+  nameWithType: ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter
   fullName: System.Runtime.CompilerServices.ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter
-  fullName.vb: System.Runtime.CompilerServices.ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter
   type: Struct
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
-    startLine: 468
+      repo: https://github.com/dotnet/corefx.git
+    id: ConfiguredTaskAwaiter
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 91
   assemblies:
   - System.Threading.Tasks
   namespace: System.Runtime.CompilerServices
-  summary: Provides an awaiter for an awaitable object(<xref href="System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1" data-throw-if-not-resolved="false"></xref>).
   syntax:
     content: 'public struct ConfiguredTaskAwaiter : ICriticalNotifyCompletion, INotifyCompletion'
-    content.vb: Public Structure ConfiguredTaskAwaiter Implements ICriticalNotifyCompletion, INotifyCompletion
+    content.vb: >-
+      Public Structure ConfiguredTaskAwaiter
+          Implements ICriticalNotifyCompletion, INotifyCompletion
   implements:
   - System.Runtime.CompilerServices.ICriticalNotifyCompletion
   - System.Runtime.CompilerServices.INotifyCompletion
+  nameWithType.vb: ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+  fullName.vb: System.Runtime.CompilerServices.ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter
+  name.vb: ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter
 - uid: System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.IsCompleted
+  commentId: P:System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.IsCompleted
   id: IsCompleted
   parent: System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter
+  langs:
+  - csharp
+  - vb
   name: IsCompleted
+  nameWithType: ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter.IsCompleted
   fullName: System.Runtime.CompilerServices.ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter.IsCompleted
-  fullName.vb: System.Runtime.CompilerServices.ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.IsCompleted
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
-    startLine: 491
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsCompleted
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 94
   assemblies:
   - System.Threading.Tasks
   namespace: System.Runtime.CompilerServices
-  summary: Gets a value that specifies whether the task being awaited has been completed.
   syntax:
     content: public bool IsCompleted { get; }
     content.vb: Public ReadOnly Property IsCompleted As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the task being awaited has been completed; otherwise, false.
-  exceptions:
-  - type: System.NullReferenceException
-    description: The awaiter was not properly initialized.
+  nameWithType.vb: ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.IsCompleted
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Runtime.CompilerServices.ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.IsCompleted
 - uid: System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult
+  commentId: M:System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult
   id: GetResult
   parent: System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter
+  langs:
+  - csharp
+  - vb
   name: GetResult()
+  nameWithType: ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter.GetResult()
   fullName: System.Runtime.CompilerServices.ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter.GetResult()
-  fullName.vb: System.Runtime.CompilerServices.ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.GetResult()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
-    startLine: 523
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetResult
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 95
   assemblies:
   - System.Threading.Tasks
   namespace: System.Runtime.CompilerServices
-  summary: Ends the await on the completed task.
   syntax:
     content: public TResult GetResult()
     content.vb: Public Function GetResult As TResult
     return:
       type: '{TResult}'
-      description: The result of the completed task.
-  exceptions:
-  - type: System.NullReferenceException
-    description: The awaiter was not properly initialized.
-  - type: System.Threading.Tasks.TaskCanceledException
-    description: The task was canceled.
-  - type: System.Exception
-    description: The task completed in a faulted state.
+  nameWithType.vb: ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.GetResult()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.CompilerServices.ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.GetResult()
 - uid: System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.OnCompleted(System.Action)
+  commentId: M:System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.OnCompleted(System.Action)
   id: OnCompleted(System.Action)
   parent: System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter
+  langs:
+  - csharp
+  - vb
   name: OnCompleted(Action)
+  nameWithType: ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter.OnCompleted(Action)
   fullName: System.Runtime.CompilerServices.ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter.OnCompleted(System.Action)
-  fullName.vb: System.Runtime.CompilerServices.ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.OnCompleted(System.Action)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
-    startLine: 501
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OnCompleted
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 96
   assemblies:
   - System.Threading.Tasks
   namespace: System.Runtime.CompilerServices
-  summary: Schedules the continuation action for the task associated with this awaiter.
   syntax:
     content: public void OnCompleted(Action continuation)
     content.vb: Public Sub OnCompleted(continuation As Action)
     parameters:
     - id: continuation
       type: System.Action
-      description: The action to invoke when the await operation completes.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *continuation* argument is null.
-  - type: System.NullReferenceException
-    description: The awaiter was not properly initialized.
+  implements:
+  - System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+  nameWithType.vb: ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.OnCompleted(Action)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.CompilerServices.ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.OnCompleted(System.Action)
 - uid: System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.UnsafeOnCompleted(System.Action)
+  commentId: M:System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.UnsafeOnCompleted(System.Action)
   id: UnsafeOnCompleted(System.Action)
   parent: System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter
+  langs:
+  - csharp
+  - vb
   name: UnsafeOnCompleted(Action)
+  nameWithType: ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter.UnsafeOnCompleted(Action)
   fullName: System.Runtime.CompilerServices.ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter.UnsafeOnCompleted(System.Action)
-  fullName.vb: System.Runtime.CompilerServices.ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.UnsafeOnCompleted(System.Action)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/TaskAwaiter.cs
-    startLine: 512
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: UnsafeOnCompleted
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 97
   assemblies:
   - System.Threading.Tasks
   namespace: System.Runtime.CompilerServices
-  summary: Schedules the continuation action for the task associated with this awaiter.
   syntax:
     content: public void UnsafeOnCompleted(Action continuation)
     content.vb: Public Sub UnsafeOnCompleted(continuation As Action)
     parameters:
     - id: continuation
       type: System.Action
-      description: The action to invoke when the await operation completes.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *continuation* argument is null.
-  - type: System.NullReferenceException
-    description: The awaiter was not properly initialized.
+  implements:
+  - System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+  nameWithType.vb: ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.UnsafeOnCompleted(Action)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.CompilerServices.ConfiguredTaskAwaitable(Of TResult).ConfiguredTaskAwaiter.UnsafeOnCompleted(System.Action)
 references:
 - uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
   isExternal: false
   name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
   fullName: System.Runtime.CompilerServices
 - uid: System.Runtime.CompilerServices.ICriticalNotifyCompletion
+  commentId: T:System.Runtime.CompilerServices.ICriticalNotifyCompletion
   parent: System.Runtime.CompilerServices
   isExternal: false
   name: ICriticalNotifyCompletion
+  nameWithType: ICriticalNotifyCompletion
   fullName: System.Runtime.CompilerServices.ICriticalNotifyCompletion
 - uid: System.Runtime.CompilerServices.INotifyCompletion
+  commentId: T:System.Runtime.CompilerServices.INotifyCompletion
   parent: System.Runtime.CompilerServices
   isExternal: false
   name: INotifyCompletion
+  nameWithType: INotifyCompletion
   fullName: System.Runtime.CompilerServices.INotifyCompletion
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: '{TResult}'
+  commentId: '!:TResult'
+  definition: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: TResult
   isExternal: false
   name: TResult
+  nameWithType: TResult
   fullName: TResult
+- uid: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+  commentId: M:System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+  parent: System.Runtime.CompilerServices.INotifyCompletion
+  isExternal: true
+  name: OnCompleted(Action)
+  nameWithType: INotifyCompletion.OnCompleted(Action)
+  fullName: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+  spec.csharp:
+  - uid: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+    name: OnCompleted
+    nameWithType: INotifyCompletion.OnCompleted
+    fullName: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)
+    name: OnCompleted
+    nameWithType: INotifyCompletion.OnCompleted
+    fullName: System.Runtime.CompilerServices.INotifyCompletion.OnCompleted
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Action
+  commentId: T:System.Action
   isExternal: false
   name: Action
+  nameWithType: Action
   fullName: System.Action
-- uid: System.NullReferenceException
-  isExternal: false
-  name: NullReferenceException
-  fullName: System.NullReferenceException
-- uid: System.Threading.Tasks.TaskCanceledException
-  isExternal: false
-  name: TaskCanceledException
-  fullName: System.Threading.Tasks.TaskCanceledException
-- uid: System.Exception
-  parent: System
-  isExternal: false
-  name: Exception
-  fullName: System.Exception
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
+- uid: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+  commentId: M:System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+  parent: System.Runtime.CompilerServices.ICriticalNotifyCompletion
+  isExternal: true
+  name: UnsafeOnCompleted(Action)
+  nameWithType: ICriticalNotifyCompletion.UnsafeOnCompleted(Action)
+  fullName: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+  spec.csharp:
+  - uid: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+    name: UnsafeOnCompleted
+    nameWithType: ICriticalNotifyCompletion.UnsafeOnCompleted
+    fullName: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)
+    name: UnsafeOnCompleted
+    nameWithType: ICriticalNotifyCompletion.UnsafeOnCompleted
+    fullName: System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

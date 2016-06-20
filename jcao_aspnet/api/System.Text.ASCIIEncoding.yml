@@ -1,5 +1,6 @@
 items:
 - uid: System.Text.ASCIIEncoding
+  commentId: T:System.Text.ASCIIEncoding
   id: ASCIIEncoding
   parent: System.Text
   children:
@@ -20,725 +21,846 @@ items:
   - System.Text.ASCIIEncoding.GetMaxCharCount(System.Int32)
   - System.Text.ASCIIEncoding.GetString(System.Byte[],System.Int32,System.Int32)
   - System.Text.ASCIIEncoding.IsSingleByte
+  langs:
+  - csharp
+  - vb
   name: ASCIIEncoding
+  nameWithType: ASCIIEncoding
   fullName: System.Text.ASCIIEncoding
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 22
+      repo: https://github.com/dotnet/corefx.git
+    id: ASCIIEncoding
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 10
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Represents an ASCII character encoding of Unicode characters.
   syntax:
     content: 'public class ASCIIEncoding : Encoding'
-    content.vb: Public Class ASCIIEncoding Inherits Encoding
+    content.vb: >-
+      Public Class ASCIIEncoding
+          Inherits Encoding
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Text.ASCIIEncoding.#ctor
+  commentId: M:System.Text.ASCIIEncoding.#ctor
   id: '#ctor'
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: ASCIIEncoding()
+  nameWithType: ASCIIEncoding.ASCIIEncoding()
   fullName: System.Text.ASCIIEncoding.ASCIIEncoding()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 27
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 12
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Initializes a new instance of the <xref href="System.Text.ASCIIEncoding" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public ASCIIEncoding()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Text.ASCIIEncoding.IsSingleByte
+  commentId: P:System.Text.ASCIIEncoding.IsSingleByte
   id: IsSingleByte
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: IsSingleByte
+  nameWithType: ASCIIEncoding.IsSingleByte
   fullName: System.Text.ASCIIEncoding.IsSingleByte
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 999
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsSingleByte
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 13
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Gets a value indicating whether the current encoding uses single-byte code points.
   syntax:
     content: public override bool IsSingleByte { get; }
     content.vb: Public Overrides ReadOnly Property IsSingleByte As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: This property is always true.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Text.ASCIIEncoding.GetByteCount(System.Char*,System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetByteCount(System.Char*,System.Int32)
   id: GetByteCount(System.Char*,System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetByteCount(Char*, Int32)
+  nameWithType: ASCIIEncoding.GetByteCount(Char*, Int32)
   fullName: System.Text.ASCIIEncoding.GetByteCount(System.Char*, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 104
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetByteCount
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 14
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Calculates the number of bytes produced by encoding a set of characters starting at the specified character pointer.
   syntax:
     content: public override int GetByteCount(char *chars, int count)
     content.vb: Public Overrides Function GetByteCount(chars As Char *, count As Integer) As Integer
     parameters:
     - id: chars
       type: System.Char*
-      description: A pointer to the first character to encode.
     - id: count
       type: System.Int32
-      description: The number of characters to encode.
     return:
       type: System.Int32
-      description: The number of bytes produced by encoding the specified characters.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*chars* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*count* is less than zero.-or- The resulting number of bytes is greater than the maximum number that can be returned as an integer.'
-  - type: System.Text.EncoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.EncoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.EncoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Text.ASCIIEncoding.GetByteCount(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetByteCount(System.Char[],System.Int32,System.Int32)
   id: GetByteCount(System.Char[],System.Int32,System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetByteCount(Char[], Int32, Int32)
-  name.vb: GetByteCount(Char(), Int32, Int32)
+  nameWithType: ASCIIEncoding.GetByteCount(Char[], Int32, Int32)
   fullName: System.Text.ASCIIEncoding.GetByteCount(System.Char[], System.Int32, System.Int32)
-  fullName.vb: System.Text.ASCIIEncoding.GetByteCount(System.Char(), System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 57
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetByteCount
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 17
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Calculates the number of bytes produced by encoding a set of characters from the specified character array.
   syntax:
     content: public override int GetByteCount(char[] chars, int index, int count)
     content.vb: Public Overrides Function GetByteCount(chars As Char(), index As Integer, count As Integer) As Integer
     parameters:
     - id: chars
       type: System.Char[]
-      description: The character array containing the set of characters to encode.
     - id: index
       type: System.Int32
-      description: The index of the first character to encode.
     - id: count
       type: System.Int32
-      description: The number of characters to encode.
     return:
       type: System.Int32
-      description: The number of bytes produced by encoding the specified characters.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*chars* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*index* or *count* is less than zero.-or- *index* and *count* do not denote a valid range in *chars*.-or- The resulting number of bytes is greater than the maximum number that can be returned as an integer.'
-  - type: System.Text.EncoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.EncoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.EncoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: ASCIIEncoding.GetByteCount(Char(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.Text.ASCIIEncoding.GetByteCount(System.Char(), System.Int32, System.Int32)
+  name.vb: GetByteCount(Char(), Int32, Int32)
 - uid: System.Text.ASCIIEncoding.GetByteCount(System.String)
+  commentId: M:System.Text.ASCIIEncoding.GetByteCount(System.String)
   id: GetByteCount(System.String)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetByteCount(String)
+  nameWithType: ASCIIEncoding.GetByteCount(String)
   fullName: System.Text.ASCIIEncoding.GetByteCount(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 88
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetByteCount
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 18
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Calculates the number of bytes produced by encoding the characters in the specified <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public override int GetByteCount(string chars)
     content.vb: Public Overrides Function GetByteCount(chars As String) As Integer
     parameters:
     - id: chars
       type: System.String
-      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> containing the set of characters to encode.
     return:
       type: System.Int32
-      description: The number of bytes produced by encoding the specified characters.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*chars* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: The resulting number of bytes is greater than the maximum number that can be returned as an integer.
-  - type: System.Text.EncoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.EncoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.EncoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Text.ASCIIEncoding.GetBytes(System.Char*,System.Int32,System.Byte*,System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetBytes(System.Char*,System.Int32,System.Byte*,System.Int32)
   id: GetBytes(System.Char*,System.Int32,System.Byte*,System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetBytes(Char*, Int32, Byte*, Int32)
+  nameWithType: ASCIIEncoding.GetBytes(Char*, Int32, Byte*, Int32)
   fullName: System.Text.ASCIIEncoding.GetBytes(System.Char*, System.Int32, System.Byte*, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 219
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetBytes
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 19
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Encodes a set of characters starting at the specified character pointer into a sequence of bytes that are stored starting at the specified byte pointer.
   syntax:
     content: public override int GetBytes(char *chars, int charCount, byte *bytes, int byteCount)
     content.vb: Public Overrides Function GetBytes(chars As Char *, charCount As Integer, bytes As Byte *, byteCount As Integer) As Integer
     parameters:
     - id: chars
       type: System.Char*
-      description: A pointer to the first character to encode.
     - id: charCount
       type: System.Int32
-      description: The number of characters to encode.
     - id: bytes
       type: System.Byte*
-      description: A pointer to the location at which to start writing the resulting sequence of bytes.
     - id: byteCount
       type: System.Int32
-      description: The maximum number of bytes to write.
     return:
       type: System.Int32
-      description: The actual number of bytes written at the location indicated by *bytes*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*chars* is null.-or- *bytes* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*charCount* or *byteCount* is less than zero.'
-  - type: System.ArgumentException
-    description: '*byteCount* is less than the resulting number of bytes.'
-  - type: System.Text.EncoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.EncoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.EncoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Text.ASCIIEncoding.GetBytes(System.Char[],System.Int32,System.Int32,System.Byte[],System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetBytes(System.Char[],System.Int32,System.Int32,System.Byte[],System.Int32)
   id: GetBytes(System.Char[],System.Int32,System.Int32,System.Byte[],System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetBytes(Char[], Int32, Int32, Byte[], Int32)
-  name.vb: GetBytes(Char(), Int32, Int32, Byte(), Int32)
+  nameWithType: ASCIIEncoding.GetBytes(Char[], Int32, Int32, Byte[], Int32)
   fullName: System.Text.ASCIIEncoding.GetBytes(System.Char[], System.Int32, System.Int32, System.Byte[], System.Int32)
-  fullName.vb: System.Text.ASCIIEncoding.GetBytes(System.Char(), System.Int32, System.Int32, System.Byte(), System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 175
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetBytes
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 22
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Encodes a set of characters from the specified character array into the specified byte array.
   syntax:
     content: public override int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex)
     content.vb: Public Overrides Function GetBytes(chars As Char(), charIndex As Integer, charCount As Integer, bytes As Byte(), byteIndex As Integer) As Integer
     parameters:
     - id: chars
       type: System.Char[]
-      description: The character array containing the set of characters to encode.
     - id: charIndex
       type: System.Int32
-      description: The index of the first character to encode.
     - id: charCount
       type: System.Int32
-      description: The number of characters to encode.
     - id: bytes
       type: System.Byte[]
-      description: The byte array to contain the resulting sequence of bytes.
     - id: byteIndex
       type: System.Int32
-      description: The index at which to start writing the resulting sequence of bytes.
     return:
       type: System.Int32
-      description: The actual number of bytes written into *bytes*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*chars* is null.-or- *bytes* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*charIndex* or *charCount* or *byteIndex* is less than zero.-or- *charIndex* and *charCount* do not denote a valid range in *chars*.-or- *byteIndex* is not a valid index in *bytes*.'
-  - type: System.ArgumentException
-    description: '*bytes* does not have enough capacity from *byteIndex* to the end of the array to accommodate the resulting bytes.'
-  - type: System.Text.EncoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.EncoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.EncoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: ASCIIEncoding.GetBytes(Char(), Int32, Int32, Byte(), Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.Text.ASCIIEncoding.GetBytes(System.Char(), System.Int32, System.Int32, System.Byte(), System.Int32)
+  name.vb: GetBytes(Char(), Int32, Int32, Byte(), Int32)
 - uid: System.Text.ASCIIEncoding.GetBytes(System.String,System.Int32,System.Int32,System.Byte[],System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetBytes(System.String,System.Int32,System.Int32,System.Byte[],System.Int32)
   id: GetBytes(System.String,System.Int32,System.Int32,System.Byte[],System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetBytes(String, Int32, Int32, Byte[], Int32)
-  name.vb: GetBytes(String, Int32, Int32, Byte(), Int32)
+  nameWithType: ASCIIEncoding.GetBytes(String, Int32, Int32, Byte[], Int32)
   fullName: System.Text.ASCIIEncoding.GetBytes(System.String, System.Int32, System.Int32, System.Byte[], System.Int32)
-  fullName.vb: System.Text.ASCIIEncoding.GetBytes(System.String, System.Int32, System.Int32, System.Byte(), System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 128
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetBytes
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 23
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Encodes a set of characters from the specified <xref href="System.String" data-throw-if-not-resolved="false"></xref> into the specified byte array.
   syntax:
     content: public override int GetBytes(string chars, int charIndex, int charCount, byte[] bytes, int byteIndex)
     content.vb: Public Overrides Function GetBytes(chars As String, charIndex As Integer, charCount As Integer, bytes As Byte(), byteIndex As Integer) As Integer
     parameters:
     - id: chars
       type: System.String
-      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> containing the set of characters to encode.
     - id: charIndex
       type: System.Int32
-      description: The index of the first character to encode.
     - id: charCount
       type: System.Int32
-      description: The number of characters to encode.
     - id: bytes
       type: System.Byte[]
-      description: The byte array to contain the resulting sequence of bytes.
     - id: byteIndex
       type: System.Int32
-      description: The index at which to start writing the resulting sequence of bytes.
     return:
       type: System.Int32
-      description: The actual number of bytes written into *bytes*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*s* is null.-or- *bytes* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*charIndex* or *charCount* or *byteIndex* is less than zero.-or- *charIndex* and *charCount* do not denote a valid range in *chars*.-or- *byteIndex* is not a valid index in *bytes*.'
-  - type: System.ArgumentException
-    description: '*bytes* does not have enough capacity from *byteIndex* to the end of the array to accommodate the resulting bytes.'
-  - type: System.Text.EncoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.EncoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.EncoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: ASCIIEncoding.GetBytes(String, Int32, Int32, Byte(), Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.Text.ASCIIEncoding.GetBytes(System.String, System.Int32, System.Int32, System.Byte(), System.Int32)
+  name.vb: GetBytes(String, Int32, Int32, Byte(), Int32)
 - uid: System.Text.ASCIIEncoding.GetCharCount(System.Byte*,System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetCharCount(System.Byte*,System.Int32)
   id: GetCharCount(System.Byte*,System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetCharCount(Byte*, Int32)
+  nameWithType: ASCIIEncoding.GetCharCount(Byte*, Int32)
   fullName: System.Text.ASCIIEncoding.GetCharCount(System.Byte*, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 275
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetCharCount
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 24
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Calculates the number of characters produced by decoding a sequence of bytes starting at the specified byte pointer.
   syntax:
     content: public override int GetCharCount(byte *bytes, int count)
     content.vb: Public Overrides Function GetCharCount(bytes As Byte *, count As Integer) As Integer
     parameters:
     - id: bytes
       type: System.Byte*
-      description: A pointer to the first byte to decode.
     - id: count
       type: System.Int32
-      description: The number of bytes to decode.
     return:
       type: System.Int32
-      description: The number of characters produced by decoding the specified sequence of bytes.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*bytes* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*count* is less than zero.-or- The resulting number of bytes is greater than the maximum number that can be returned as an integer.'
-  - type: System.Text.DecoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.DecoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.DecoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Text.ASCIIEncoding.GetCharCount(System.Byte[],System.Int32,System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetCharCount(System.Byte[],System.Int32,System.Int32)
   id: GetCharCount(System.Byte[],System.Int32,System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetCharCount(Byte[], Int32, Int32)
-  name.vb: GetCharCount(Byte(), Int32, Int32)
+  nameWithType: ASCIIEncoding.GetCharCount(Byte[], Int32, Int32)
   fullName: System.Text.ASCIIEncoding.GetCharCount(System.Byte[], System.Int32, System.Int32)
-  fullName.vb: System.Text.ASCIIEncoding.GetCharCount(System.Byte(), System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 245
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetCharCount
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 27
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Calculates the number of characters produced by decoding a sequence of bytes from the specified byte array.
   syntax:
     content: public override int GetCharCount(byte[] bytes, int index, int count)
     content.vb: Public Overrides Function GetCharCount(bytes As Byte(), index As Integer, count As Integer) As Integer
     parameters:
     - id: bytes
       type: System.Byte[]
-      description: The byte array containing the sequence of bytes to decode.
     - id: index
       type: System.Int32
-      description: The index of the first byte to decode.
     - id: count
       type: System.Int32
-      description: The number of bytes to decode.
     return:
       type: System.Int32
-      description: The number of characters produced by decoding the specified sequence of bytes.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*bytes* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*index* or *count* is less than zero.-or- *index* and *count* do not denote a valid range in *bytes*.-or- The resulting number of bytes is greater than the maximum number that can be returned as an integer.'
-  - type: System.Text.DecoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.DecoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.DecoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: ASCIIEncoding.GetCharCount(Byte(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.Text.ASCIIEncoding.GetCharCount(System.Byte(), System.Int32, System.Int32)
+  name.vb: GetCharCount(Byte(), Int32, Int32)
 - uid: System.Text.ASCIIEncoding.GetChars(System.Byte*,System.Int32,System.Char*,System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetChars(System.Byte*,System.Int32,System.Char*,System.Int32)
   id: GetChars(System.Byte*,System.Int32,System.Char*,System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetChars(Byte*, Int32, Char*, Int32)
+  nameWithType: ASCIIEncoding.GetChars(Byte*, Int32, Char*, Int32)
   fullName: System.Text.ASCIIEncoding.GetChars(System.Byte*, System.Int32, System.Char*, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 342
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetChars
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 28
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Decodes a sequence of bytes starting at the specified byte pointer into a set of characters that are stored starting at the specified character pointer.
   syntax:
     content: public override int GetChars(byte *bytes, int byteCount, char *chars, int charCount)
     content.vb: Public Overrides Function GetChars(bytes As Byte *, byteCount As Integer, chars As Char *, charCount As Integer) As Integer
     parameters:
     - id: bytes
       type: System.Byte*
-      description: A pointer to the first byte to decode.
     - id: byteCount
       type: System.Int32
-      description: The number of bytes to decode.
     - id: chars
       type: System.Char*
-      description: A pointer to the location at which to start writing the resulting set of characters.
     - id: charCount
       type: System.Int32
-      description: The maximum number of characters to write.
     return:
       type: System.Int32
-      description: The actual number of characters written at the location indicated by *chars*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*bytes* is null.-or- *chars* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*byteCount* or *charCount* is less than zero.'
-  - type: System.ArgumentException
-    description: '*charCount* is less than the resulting number of characters.'
-  - type: System.Text.DecoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.DecoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.DecoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Text.ASCIIEncoding.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)
   id: GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetChars(Byte[], Int32, Int32, Char[], Int32)
-  name.vb: GetChars(Byte(), Int32, Int32, Char(), Int32)
+  nameWithType: ASCIIEncoding.GetChars(Byte[], Int32, Int32, Char[], Int32)
   fullName: System.Text.ASCIIEncoding.GetChars(System.Byte[], System.Int32, System.Int32, System.Char[], System.Int32)
-  fullName.vb: System.Text.ASCIIEncoding.GetChars(System.Byte(), System.Int32, System.Int32, System.Char(), System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 298
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetChars
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 31
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Decodes a sequence of bytes from the specified byte array into the specified character array.
   syntax:
     content: public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex)
     content.vb: Public Overrides Function GetChars(bytes As Byte(), byteIndex As Integer, byteCount As Integer, chars As Char(), charIndex As Integer) As Integer
     parameters:
     - id: bytes
       type: System.Byte[]
-      description: The byte array containing the sequence of bytes to decode.
     - id: byteIndex
       type: System.Int32
-      description: The index of the first byte to decode.
     - id: byteCount
       type: System.Int32
-      description: The number of bytes to decode.
     - id: chars
       type: System.Char[]
-      description: The character array to contain the resulting set of characters.
     - id: charIndex
       type: System.Int32
-      description: The index at which to start writing the resulting set of characters.
     return:
       type: System.Int32
-      description: The actual number of characters written into *chars*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*bytes* is null.-or- *chars* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*byteIndex* or *byteCount* or *charIndex* is less than zero.-or- *byteindex* and *byteCount* do not denote a valid range in *bytes*.-or- *charIndex* is not a valid index in *chars*.'
-  - type: System.ArgumentException
-    description: '*chars* does not have enough capacity from *charIndex* to the end of the array to accommodate the resulting characters.'
-  - type: System.Text.DecoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.DecoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.DecoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: ASCIIEncoding.GetChars(Byte(), Int32, Int32, Char(), Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.Text.ASCIIEncoding.GetChars(System.Byte(), System.Int32, System.Int32, System.Char(), System.Int32)
+  name.vb: GetChars(Byte(), Int32, Int32, Char(), Int32)
 - uid: System.Text.ASCIIEncoding.GetDecoder
+  commentId: M:System.Text.ASCIIEncoding.GetDecoder
   id: GetDecoder
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetDecoder()
+  nameWithType: ASCIIEncoding.GetDecoder()
   fullName: System.Text.ASCIIEncoding.GetDecoder()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 1008
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetDecoder
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 32
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Obtains a decoder that converts an ASCII encoded sequence of bytes into a sequence of Unicode characters.
   syntax:
     content: public override Decoder GetDecoder()
     content.vb: Public Overrides Function GetDecoder As Decoder
     return:
       type: System.Text.Decoder
-      description: A <xref href="System.Text.Decoder" data-throw-if-not-resolved="false"></xref> that converts an ASCII encoded sequence of bytes into a sequence of Unicode characters.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Text.ASCIIEncoding.GetEncoder
+  commentId: M:System.Text.ASCIIEncoding.GetEncoder
   id: GetEncoder
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetEncoder()
+  nameWithType: ASCIIEncoding.GetEncoder()
   fullName: System.Text.ASCIIEncoding.GetEncoder()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 1015
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetEncoder
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 33
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Obtains an encoder that converts a sequence of Unicode characters into an ASCII encoded sequence of bytes.
   syntax:
     content: public override Encoder GetEncoder()
     content.vb: Public Overrides Function GetEncoder As Encoder
     return:
       type: System.Text.Encoder
-      description: An <xref href="System.Text.Encoder" data-throw-if-not-resolved="false"></xref> that converts a sequence of Unicode characters into an ASCII encoded sequence of bytes.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Text.ASCIIEncoding.GetMaxByteCount(System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetMaxByteCount(System.Int32)
   id: GetMaxByteCount(System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetMaxByteCount(Int32)
+  nameWithType: ASCIIEncoding.GetMaxByteCount(Int32)
   fullName: System.Text.ASCIIEncoding.GetMaxByteCount(System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 956
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetMaxByteCount
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 34
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Calculates the maximum number of bytes produced by encoding the specified number of characters.
   syntax:
     content: public override int GetMaxByteCount(int charCount)
     content.vb: Public Overrides Function GetMaxByteCount(charCount As Integer) As Integer
     parameters:
     - id: charCount
       type: System.Int32
-      description: The number of characters to encode.
     return:
       type: System.Int32
-      description: The maximum number of bytes produced by encoding the specified number of characters.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*charCount* is less than zero.-or- The resulting number of bytes is greater than the maximum number that can be returned as an integer.'
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Text.ASCIIEncoding.GetMaxCharCount(System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetMaxCharCount(System.Int32)
   id: GetMaxCharCount(System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetMaxCharCount(Int32)
+  nameWithType: ASCIIEncoding.GetMaxCharCount(Int32)
   fullName: System.Text.ASCIIEncoding.GetMaxCharCount(System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 977
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetMaxCharCount
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 35
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Calculates the maximum number of characters produced by decoding the specified number of bytes.
   syntax:
     content: public override int GetMaxCharCount(int byteCount)
     content.vb: Public Overrides Function GetMaxCharCount(byteCount As Integer) As Integer
     parameters:
     - id: byteCount
       type: System.Int32
-      description: The number of bytes to decode.
     return:
       type: System.Int32
-      description: The maximum number of characters produced by decoding the specified number of bytes.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*byteCount* is less than zero.-or- The resulting number of bytes is greater than the maximum number that can be returned as an integer.'
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Text.ASCIIEncoding.GetString(System.Byte[],System.Int32,System.Int32)
+  commentId: M:System.Text.ASCIIEncoding.GetString(System.Byte[],System.Int32,System.Int32)
   id: GetString(System.Byte[],System.Int32,System.Int32)
   parent: System.Text.ASCIIEncoding
+  langs:
+  - csharp
+  - vb
   name: GetString(Byte[], Int32, Int32)
-  name.vb: GetString(Byte(), Int32, Int32)
+  nameWithType: ASCIIEncoding.GetString(Byte[], Int32, Int32)
   fullName: System.Text.ASCIIEncoding.GetString(System.Byte[], System.Int32, System.Int32)
-  fullName.vb: System.Text.ASCIIEncoding.GetString(System.Byte(), System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/ASCIIEncoding.cs
-    startLine: 368
+    remote:
+      path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetString
+    path: src/System.Text.Encoding.Extensions/ref/System.Text.Encoding.Extensions.cs
+    startLine: 36
   assemblies:
   - System.Text.Encoding.Extensions
   namespace: System.Text
-  summary: Decodes a range of bytes from a byte array into a string.
   syntax:
     content: public override string GetString(byte[] bytes, int byteIndex, int byteCount)
     content.vb: Public Overrides Function GetString(bytes As Byte(), byteIndex As Integer, byteCount As Integer) As String
     parameters:
     - id: bytes
       type: System.Byte[]
-      description: The byte array containing the sequence of bytes to decode.
     - id: byteIndex
       type: System.Int32
-      description: The index of the first byte to decode.
     - id: byteCount
       type: System.Int32
-      description: The number of bytes to decode.
     return:
       type: System.String
-      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> containing the results of decoding the specified sequence of bytes.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*bytes* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*index* or *count* is less than zero.-or- *index* and *count* do not denote a valid range in *bytes*.'
-  - type: System.Text.DecoderFallbackException
-    description: A fallback occurred (see Character Encoding in the .NET Framework for complete explanation)-and-<xref href="System.Text.Encoding.DecoderFallback" data-throw-if-not-resolved="false"></xref> is set to <xref href="System.Text.DecoderExceptionFallback" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: ASCIIEncoding.GetString(Byte(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.Text.ASCIIEncoding.GetString(System.Byte(), System.Int32, System.Int32)
+  name.vb: GetString(Byte(), Int32, Int32)
 references:
 - uid: System.Text
+  commentId: N:System.Text
   isExternal: false
   name: System.Text
+  nameWithType: System.Text
   fullName: System.Text
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Char*
-  isExternal: false
   name: Char*
+  nameWithType: Char*
   fullName: System.Char*
   spec.csharp:
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
   - name: '*'
+    nameWithType: '*'
     fullName: '*'
   spec.vb:
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
   - name: '*'
+    nameWithType: '*'
     fullName: '*'
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Char[]
-  isExternal: false
   name: Char[]
-  name.vb: Char()
+  nameWithType: Char[]
   fullName: System.Char[]
-  fullName.vb: System.Char()
+  nameWithType.vb: Char()
+  fullname.vb: System.Char()
+  name.vb: Char()
   spec.csharp:
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Byte*
-  isExternal: true
   name: Byte*
+  nameWithType: Byte*
   fullName: System.Byte*
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: '*'
+    nameWithType: '*'
     fullName: '*'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: '*'
+    nameWithType: '*'
     fullName: '*'
 - uid: System.Byte[]
-  isExternal: false
   name: Byte[]
-  name.vb: Byte()
+  nameWithType: Byte[]
   fullName: System.Byte[]
-  fullName.vb: System.Byte()
+  nameWithType.vb: Byte()
+  fullname.vb: System.Byte()
+  name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Text.Decoder
+  commentId: T:System.Text.Decoder
   parent: System.Text
   isExternal: false
   name: Decoder
+  nameWithType: Decoder
   fullName: System.Text.Decoder
 - uid: System.Text.Encoder
+  commentId: T:System.Text.Encoder
   parent: System.Text
   isExternal: false
   name: Encoder
+  nameWithType: Encoder
   fullName: System.Text.Encoder
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.Text.EncoderFallbackException
-  isExternal: false
-  name: EncoderFallbackException
-  fullName: System.Text.EncoderFallbackException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.Text.DecoderFallbackException
-  isExternal: false
-  name: DecoderFallbackException
-  fullName: System.Text.DecoderFallbackException

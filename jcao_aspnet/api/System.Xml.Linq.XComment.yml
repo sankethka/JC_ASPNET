@@ -1,5 +1,6 @@
 items:
 - uid: System.Xml.Linq.XComment
+  commentId: T:System.Xml.Linq.XComment
   id: XComment
   parent: System.Xml.Linq
   children:
@@ -12,6 +13,7 @@ items:
   - csharp
   - vb
   name: XComment
+  nameWithType: XComment
   fullName: System.Xml.Linq.XComment
   type: Class
   source:
@@ -19,15 +21,17 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: XComment
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 121
+    startLine: 124
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Represents an XML comment.
   syntax:
     content: 'public class XComment : XNode'
-    content.vb: Public Class XComment Inherits XNode
+    content.vb: >-
+      Public Class XComment
+          Inherits XNode
   inheritance:
   - System.Object
   - System.Xml.Linq.XObject
@@ -73,13 +77,21 @@ items:
   - System.Xml.Linq.XObject.Annotations``1
   - System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
   - System.Xml.Linq.XObject.RemoveAnnotations``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Xml.Linq.XComment.#ctor(System.String)
+  commentId: M:System.Xml.Linq.XComment.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.Xml.Linq.XComment
   langs:
   - csharp
   - vb
   name: XComment(String)
+  nameWithType: XComment.XComment(String)
   fullName: System.Xml.Linq.XComment.XComment(System.String)
   type: Constructor
   source:
@@ -87,29 +99,31 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 123
+    startLine: 126
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Initializes a new instance of the <xref href="System.Xml.Linq.XComment" data-throw-if-not-resolved="false"></xref> class with the specified string content.
   syntax:
     content: public XComment(string value)
     content.vb: Public Sub New(value As String)
     parameters:
     - id: value
       type: System.String
-      description: A string that contains the contents of the new <xref href="System.Xml.Linq.XComment" data-throw-if-not-resolved="false"></xref> object.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *value* parameter is null.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XComment.#ctor(System.Xml.Linq.XComment)
+  commentId: M:System.Xml.Linq.XComment.#ctor(System.Xml.Linq.XComment)
   id: '#ctor(System.Xml.Linq.XComment)'
   parent: System.Xml.Linq.XComment
   langs:
   - csharp
   - vb
   name: XComment(XComment)
+  nameWithType: XComment.XComment(XComment)
   fullName: System.Xml.Linq.XComment.XComment(System.Xml.Linq.XComment)
   type: Constructor
   source:
@@ -117,29 +131,31 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 124
+    startLine: 127
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Initializes a new instance of the <xref href="System.Xml.Linq.XComment" data-throw-if-not-resolved="false"></xref> class from an existing comment node.
   syntax:
     content: public XComment(XComment other)
     content.vb: Public Sub New(other As XComment)
     parameters:
     - id: other
       type: System.Xml.Linq.XComment
-      description: The <xref href="System.Xml.Linq.XComment" data-throw-if-not-resolved="false"></xref> node to copy from.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *other* parameter is null.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XComment.NodeType
+  commentId: P:System.Xml.Linq.XComment.NodeType
   id: NodeType
   parent: System.Xml.Linq.XComment
   langs:
   - csharp
   - vb
   name: NodeType
+  nameWithType: XComment.NodeType
   fullName: System.Xml.Linq.XComment.NodeType
   type: Property
   source:
@@ -147,27 +163,36 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NodeType
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 125
+    startLine: 128
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Gets the node type for this node.
   syntax:
     content: public override XmlNodeType NodeType { get; }
     content.vb: Public Overrides ReadOnly Property NodeType As XmlNodeType
     parameters: []
     return:
       type: System.Xml.XmlNodeType
-      description: The node type. For <xref href="System.Xml.Linq.XComment" data-throw-if-not-resolved="false"></xref> objects, this value is <xref href="System.Xml.XmlNodeType.Comment" data-throw-if-not-resolved="false"></xref>.
   overridden: System.Xml.Linq.XObject.NodeType
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Xml.Linq.XComment.Value
+  commentId: P:System.Xml.Linq.XComment.Value
   id: Value
   parent: System.Xml.Linq.XComment
   langs:
   - csharp
   - vb
   name: Value
+  nameWithType: XComment.Value
   fullName: System.Xml.Linq.XComment.Value
   type: Property
   source:
@@ -175,29 +200,33 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Value
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 126
+    startLine: 129
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Gets or sets the string value of this comment.
   syntax:
     content: public string Value { get; set; }
     content.vb: Public Property Value As String
     parameters: []
     return:
       type: System.String
-      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> that contains the string value of this comment.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *value* is null.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.Linq.XComment.WriteTo(System.Xml.XmlWriter)
+  commentId: M:System.Xml.Linq.XComment.WriteTo(System.Xml.XmlWriter)
   id: WriteTo(System.Xml.XmlWriter)
   parent: System.Xml.Linq.XComment
   langs:
   - csharp
   - vb
   name: WriteTo(XmlWriter)
+  nameWithType: XComment.WriteTo(XmlWriter)
   fullName: System.Xml.Linq.XComment.WriteTo(System.Xml.XmlWriter)
   type: Method
   source:
@@ -205,985 +234,1344 @@ items:
       path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: WriteTo
     path: src/System.Xml.XDocument/ref/System.Xml.XDocument.cs
-    startLine: 127
+    startLine: 130
   assemblies:
   - System.Xml.XDocument
   namespace: System.Xml.Linq
-  summary: Write this comment to an <xref href="System.Xml.XmlWriter" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public override void WriteTo(XmlWriter writer)
     content.vb: Public Overrides Sub WriteTo(writer As XmlWriter)
     parameters:
     - id: writer
       type: System.Xml.XmlWriter
-      description: An <xref href="System.Xml.XmlWriter" data-throw-if-not-resolved="false"></xref> into which this method will write.
   overridden: System.Xml.Linq.XNode.WriteTo(System.Xml.XmlWriter)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.Xml.Linq
+  commentId: N:System.Xml.Linq
   isExternal: false
   name: System.Xml.Linq
+  nameWithType: System.Xml.Linq
   fullName: System.Xml.Linq
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Xml.Linq.XObject
+  commentId: T:System.Xml.Linq.XObject
   parent: System.Xml.Linq
   isExternal: false
   name: XObject
+  nameWithType: XObject
   fullName: System.Xml.Linq.XObject
 - uid: System.Xml.Linq.XNode
+  commentId: T:System.Xml.Linq.XNode
   parent: System.Xml.Linq
   isExternal: false
   name: Linq.XNode
+  nameWithType: Linq.XNode
   fullName: System.Xml.Linq.XNode
 - uid: System.Xml.Linq.XNode.DocumentOrderComparer
+  commentId: P:System.Xml.Linq.XNode.DocumentOrderComparer
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: DocumentOrderComparer
+  nameWithType: XNode.DocumentOrderComparer
   fullName: System.Xml.Linq.XNode.DocumentOrderComparer
 - uid: System.Xml.Linq.XNode.EqualityComparer
+  commentId: P:System.Xml.Linq.XNode.EqualityComparer
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: EqualityComparer
+  nameWithType: XNode.EqualityComparer
   fullName: System.Xml.Linq.XNode.EqualityComparer
 - uid: System.Xml.Linq.XNode.NextNode
+  commentId: P:System.Xml.Linq.XNode.NextNode
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: NextNode
+  nameWithType: XNode.NextNode
   fullName: System.Xml.Linq.XNode.NextNode
 - uid: System.Xml.Linq.XNode.PreviousNode
+  commentId: P:System.Xml.Linq.XNode.PreviousNode
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: PreviousNode
+  nameWithType: XNode.PreviousNode
   fullName: System.Xml.Linq.XNode.PreviousNode
 - uid: System.Xml.Linq.XNode.AddAfterSelf(System.Object)
+  commentId: M:System.Xml.Linq.XNode.AddAfterSelf(System.Object)
   parent: System.Xml.Linq.XNode
   isExternal: true
   name: AddAfterSelf(Object)
+  nameWithType: XNode.AddAfterSelf(Object)
   fullName: System.Xml.Linq.XNode.AddAfterSelf(System.Object)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.AddAfterSelf(System.Object)
     name: AddAfterSelf
+    nameWithType: XNode.AddAfterSelf
     fullName: System.Xml.Linq.XNode.AddAfterSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.AddAfterSelf(System.Object)
     name: AddAfterSelf
+    nameWithType: XNode.AddAfterSelf
     fullName: System.Xml.Linq.XNode.AddAfterSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.AddAfterSelf(System.Object[])
+  commentId: M:System.Xml.Linq.XNode.AddAfterSelf(System.Object[])
   parent: System.Xml.Linq.XNode
   isExternal: true
   name: AddAfterSelf(Object[])
+  nameWithType: XNode.AddAfterSelf(Object[])
   fullName: System.Xml.Linq.XNode.AddAfterSelf(System.Object[])
+  nameWithType.vb: XNode.AddAfterSelf(Object())
   fullname.vb: System.Xml.Linq.XNode.AddAfterSelf(System.Object())
   name.vb: AddAfterSelf(Object())
   spec.csharp:
   - uid: System.Xml.Linq.XNode.AddAfterSelf(System.Object[])
     name: AddAfterSelf
+    nameWithType: XNode.AddAfterSelf
     fullName: System.Xml.Linq.XNode.AddAfterSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.AddAfterSelf(System.Object[])
     name: AddAfterSelf
+    nameWithType: XNode.AddAfterSelf
     fullName: System.Xml.Linq.XNode.AddAfterSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.AddBeforeSelf(System.Object)
+  commentId: M:System.Xml.Linq.XNode.AddBeforeSelf(System.Object)
   parent: System.Xml.Linq.XNode
   isExternal: true
   name: AddBeforeSelf(Object)
+  nameWithType: XNode.AddBeforeSelf(Object)
   fullName: System.Xml.Linq.XNode.AddBeforeSelf(System.Object)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.AddBeforeSelf(System.Object)
     name: AddBeforeSelf
+    nameWithType: XNode.AddBeforeSelf
     fullName: System.Xml.Linq.XNode.AddBeforeSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.AddBeforeSelf(System.Object)
     name: AddBeforeSelf
+    nameWithType: XNode.AddBeforeSelf
     fullName: System.Xml.Linq.XNode.AddBeforeSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.AddBeforeSelf(System.Object[])
+  commentId: M:System.Xml.Linq.XNode.AddBeforeSelf(System.Object[])
   parent: System.Xml.Linq.XNode
   isExternal: true
   name: AddBeforeSelf(Object[])
+  nameWithType: XNode.AddBeforeSelf(Object[])
   fullName: System.Xml.Linq.XNode.AddBeforeSelf(System.Object[])
+  nameWithType.vb: XNode.AddBeforeSelf(Object())
   fullname.vb: System.Xml.Linq.XNode.AddBeforeSelf(System.Object())
   name.vb: AddBeforeSelf(Object())
   spec.csharp:
   - uid: System.Xml.Linq.XNode.AddBeforeSelf(System.Object[])
     name: AddBeforeSelf
+    nameWithType: XNode.AddBeforeSelf
     fullName: System.Xml.Linq.XNode.AddBeforeSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.AddBeforeSelf(System.Object[])
     name: AddBeforeSelf
+    nameWithType: XNode.AddBeforeSelf
     fullName: System.Xml.Linq.XNode.AddBeforeSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.Ancestors
+  commentId: M:System.Xml.Linq.XNode.Ancestors
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: Ancestors()
+  nameWithType: XNode.Ancestors()
   fullName: System.Xml.Linq.XNode.Ancestors()
   spec.csharp:
   - uid: System.Xml.Linq.XNode.Ancestors
     name: Ancestors
+    nameWithType: XNode.Ancestors
     fullName: System.Xml.Linq.XNode.Ancestors
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.Ancestors
     name: Ancestors
+    nameWithType: XNode.Ancestors
     fullName: System.Xml.Linq.XNode.Ancestors
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.Ancestors(System.Xml.Linq.XName)
+  commentId: M:System.Xml.Linq.XNode.Ancestors(System.Xml.Linq.XName)
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: Ancestors(XName)
+  nameWithType: XNode.Ancestors(XName)
   fullName: System.Xml.Linq.XNode.Ancestors(System.Xml.Linq.XName)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.Ancestors(System.Xml.Linq.XName)
     name: Ancestors
+    nameWithType: XNode.Ancestors
     fullName: System.Xml.Linq.XNode.Ancestors
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XName
     name: XName
+    nameWithType: XName
     fullName: System.Xml.Linq.XName
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.Ancestors(System.Xml.Linq.XName)
     name: Ancestors
+    nameWithType: XNode.Ancestors
     fullName: System.Xml.Linq.XNode.Ancestors
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XName
     name: XName
+    nameWithType: XName
     fullName: System.Xml.Linq.XName
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.CompareDocumentOrder(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
+  commentId: M:System.Xml.Linq.XNode.CompareDocumentOrder(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: CompareDocumentOrder(XNode, XNode)
+  nameWithType: XNode.CompareDocumentOrder(XNode, XNode)
   fullName: System.Xml.Linq.XNode.CompareDocumentOrder(System.Xml.Linq.XNode, System.Xml.Linq.XNode)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.CompareDocumentOrder(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
     name: CompareDocumentOrder
+    nameWithType: XNode.CompareDocumentOrder
     fullName: System.Xml.Linq.XNode.CompareDocumentOrder
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.CompareDocumentOrder(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
     name: CompareDocumentOrder
+    nameWithType: XNode.CompareDocumentOrder
     fullName: System.Xml.Linq.XNode.CompareDocumentOrder
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.CreateReader
+  commentId: M:System.Xml.Linq.XNode.CreateReader
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: CreateReader()
+  nameWithType: XNode.CreateReader()
   fullName: System.Xml.Linq.XNode.CreateReader()
   spec.csharp:
   - uid: System.Xml.Linq.XNode.CreateReader
     name: CreateReader
+    nameWithType: XNode.CreateReader
     fullName: System.Xml.Linq.XNode.CreateReader
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.CreateReader
     name: CreateReader
+    nameWithType: XNode.CreateReader
     fullName: System.Xml.Linq.XNode.CreateReader
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.CreateReader(System.Xml.Linq.ReaderOptions)
+  commentId: M:System.Xml.Linq.XNode.CreateReader(System.Xml.Linq.ReaderOptions)
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: CreateReader(ReaderOptions)
+  nameWithType: XNode.CreateReader(ReaderOptions)
   fullName: System.Xml.Linq.XNode.CreateReader(System.Xml.Linq.ReaderOptions)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.CreateReader(System.Xml.Linq.ReaderOptions)
     name: CreateReader
+    nameWithType: XNode.CreateReader
     fullName: System.Xml.Linq.XNode.CreateReader
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.ReaderOptions
     name: ReaderOptions
+    nameWithType: ReaderOptions
     fullName: System.Xml.Linq.ReaderOptions
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.CreateReader(System.Xml.Linq.ReaderOptions)
     name: CreateReader
+    nameWithType: XNode.CreateReader
     fullName: System.Xml.Linq.XNode.CreateReader
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.ReaderOptions
     name: ReaderOptions
+    nameWithType: ReaderOptions
     fullName: System.Xml.Linq.ReaderOptions
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.DeepEquals(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
+  commentId: M:System.Xml.Linq.XNode.DeepEquals(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: DeepEquals(XNode, XNode)
+  nameWithType: XNode.DeepEquals(XNode, XNode)
   fullName: System.Xml.Linq.XNode.DeepEquals(System.Xml.Linq.XNode, System.Xml.Linq.XNode)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.DeepEquals(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
     name: DeepEquals
+    nameWithType: XNode.DeepEquals
     fullName: System.Xml.Linq.XNode.DeepEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.DeepEquals(System.Xml.Linq.XNode,System.Xml.Linq.XNode)
     name: DeepEquals
+    nameWithType: XNode.DeepEquals
     fullName: System.Xml.Linq.XNode.DeepEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.ElementsAfterSelf
+  commentId: M:System.Xml.Linq.XNode.ElementsAfterSelf
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: ElementsAfterSelf()
+  nameWithType: XNode.ElementsAfterSelf()
   fullName: System.Xml.Linq.XNode.ElementsAfterSelf()
   spec.csharp:
   - uid: System.Xml.Linq.XNode.ElementsAfterSelf
     name: ElementsAfterSelf
+    nameWithType: XNode.ElementsAfterSelf
     fullName: System.Xml.Linq.XNode.ElementsAfterSelf
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.ElementsAfterSelf
     name: ElementsAfterSelf
+    nameWithType: XNode.ElementsAfterSelf
     fullName: System.Xml.Linq.XNode.ElementsAfterSelf
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.ElementsAfterSelf(System.Xml.Linq.XName)
+  commentId: M:System.Xml.Linq.XNode.ElementsAfterSelf(System.Xml.Linq.XName)
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: ElementsAfterSelf(XName)
+  nameWithType: XNode.ElementsAfterSelf(XName)
   fullName: System.Xml.Linq.XNode.ElementsAfterSelf(System.Xml.Linq.XName)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.ElementsAfterSelf(System.Xml.Linq.XName)
     name: ElementsAfterSelf
+    nameWithType: XNode.ElementsAfterSelf
     fullName: System.Xml.Linq.XNode.ElementsAfterSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XName
     name: XName
+    nameWithType: XName
     fullName: System.Xml.Linq.XName
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.ElementsAfterSelf(System.Xml.Linq.XName)
     name: ElementsAfterSelf
+    nameWithType: XNode.ElementsAfterSelf
     fullName: System.Xml.Linq.XNode.ElementsAfterSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XName
     name: XName
+    nameWithType: XName
     fullName: System.Xml.Linq.XName
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.ElementsBeforeSelf
+  commentId: M:System.Xml.Linq.XNode.ElementsBeforeSelf
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: ElementsBeforeSelf()
+  nameWithType: XNode.ElementsBeforeSelf()
   fullName: System.Xml.Linq.XNode.ElementsBeforeSelf()
   spec.csharp:
   - uid: System.Xml.Linq.XNode.ElementsBeforeSelf
     name: ElementsBeforeSelf
+    nameWithType: XNode.ElementsBeforeSelf
     fullName: System.Xml.Linq.XNode.ElementsBeforeSelf
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.ElementsBeforeSelf
     name: ElementsBeforeSelf
+    nameWithType: XNode.ElementsBeforeSelf
     fullName: System.Xml.Linq.XNode.ElementsBeforeSelf
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.ElementsBeforeSelf(System.Xml.Linq.XName)
+  commentId: M:System.Xml.Linq.XNode.ElementsBeforeSelf(System.Xml.Linq.XName)
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: ElementsBeforeSelf(XName)
+  nameWithType: XNode.ElementsBeforeSelf(XName)
   fullName: System.Xml.Linq.XNode.ElementsBeforeSelf(System.Xml.Linq.XName)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.ElementsBeforeSelf(System.Xml.Linq.XName)
     name: ElementsBeforeSelf
+    nameWithType: XNode.ElementsBeforeSelf
     fullName: System.Xml.Linq.XNode.ElementsBeforeSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XName
     name: XName
+    nameWithType: XName
     fullName: System.Xml.Linq.XName
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.ElementsBeforeSelf(System.Xml.Linq.XName)
     name: ElementsBeforeSelf
+    nameWithType: XNode.ElementsBeforeSelf
     fullName: System.Xml.Linq.XNode.ElementsBeforeSelf
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XName
     name: XName
+    nameWithType: XName
     fullName: System.Xml.Linq.XName
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.IsAfter(System.Xml.Linq.XNode)
+  commentId: M:System.Xml.Linq.XNode.IsAfter(System.Xml.Linq.XNode)
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: IsAfter(XNode)
+  nameWithType: XNode.IsAfter(XNode)
   fullName: System.Xml.Linq.XNode.IsAfter(System.Xml.Linq.XNode)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.IsAfter(System.Xml.Linq.XNode)
     name: IsAfter
+    nameWithType: XNode.IsAfter
     fullName: System.Xml.Linq.XNode.IsAfter
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.IsAfter(System.Xml.Linq.XNode)
     name: IsAfter
+    nameWithType: XNode.IsAfter
     fullName: System.Xml.Linq.XNode.IsAfter
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.IsBefore(System.Xml.Linq.XNode)
+  commentId: M:System.Xml.Linq.XNode.IsBefore(System.Xml.Linq.XNode)
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: IsBefore(XNode)
+  nameWithType: XNode.IsBefore(XNode)
   fullName: System.Xml.Linq.XNode.IsBefore(System.Xml.Linq.XNode)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.IsBefore(System.Xml.Linq.XNode)
     name: IsBefore
+    nameWithType: XNode.IsBefore
     fullName: System.Xml.Linq.XNode.IsBefore
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.IsBefore(System.Xml.Linq.XNode)
     name: IsBefore
+    nameWithType: XNode.IsBefore
     fullName: System.Xml.Linq.XNode.IsBefore
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.XNode
     name: XNode
+    nameWithType: XNode
     fullName: System.Xml.Linq.XNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.NodesAfterSelf
+  commentId: M:System.Xml.Linq.XNode.NodesAfterSelf
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: NodesAfterSelf()
+  nameWithType: XNode.NodesAfterSelf()
   fullName: System.Xml.Linq.XNode.NodesAfterSelf()
   spec.csharp:
   - uid: System.Xml.Linq.XNode.NodesAfterSelf
     name: NodesAfterSelf
+    nameWithType: XNode.NodesAfterSelf
     fullName: System.Xml.Linq.XNode.NodesAfterSelf
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.NodesAfterSelf
     name: NodesAfterSelf
+    nameWithType: XNode.NodesAfterSelf
     fullName: System.Xml.Linq.XNode.NodesAfterSelf
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.NodesBeforeSelf
+  commentId: M:System.Xml.Linq.XNode.NodesBeforeSelf
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: NodesBeforeSelf()
+  nameWithType: XNode.NodesBeforeSelf()
   fullName: System.Xml.Linq.XNode.NodesBeforeSelf()
   spec.csharp:
   - uid: System.Xml.Linq.XNode.NodesBeforeSelf
     name: NodesBeforeSelf
+    nameWithType: XNode.NodesBeforeSelf
     fullName: System.Xml.Linq.XNode.NodesBeforeSelf
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.NodesBeforeSelf
     name: NodesBeforeSelf
+    nameWithType: XNode.NodesBeforeSelf
     fullName: System.Xml.Linq.XNode.NodesBeforeSelf
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.ReadFrom(System.Xml.XmlReader)
+  commentId: M:System.Xml.Linq.XNode.ReadFrom(System.Xml.XmlReader)
   parent: System.Xml.Linq.XNode
   isExternal: true
   name: ReadFrom(XmlReader)
+  nameWithType: XNode.ReadFrom(XmlReader)
   fullName: System.Xml.Linq.XNode.ReadFrom(System.Xml.XmlReader)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.ReadFrom(System.Xml.XmlReader)
     name: ReadFrom
+    nameWithType: XNode.ReadFrom
     fullName: System.Xml.Linq.XNode.ReadFrom
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlReader
     name: XmlReader
+    nameWithType: XmlReader
     fullName: System.Xml.XmlReader
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.ReadFrom(System.Xml.XmlReader)
     name: ReadFrom
+    nameWithType: XNode.ReadFrom
     fullName: System.Xml.Linq.XNode.ReadFrom
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlReader
     name: XmlReader
+    nameWithType: XmlReader
     fullName: System.Xml.XmlReader
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.Remove
+  commentId: M:System.Xml.Linq.XNode.Remove
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: Remove()
+  nameWithType: XNode.Remove()
   fullName: System.Xml.Linq.XNode.Remove()
   spec.csharp:
   - uid: System.Xml.Linq.XNode.Remove
     name: Remove
+    nameWithType: XNode.Remove
     fullName: System.Xml.Linq.XNode.Remove
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.Remove
     name: Remove
+    nameWithType: XNode.Remove
     fullName: System.Xml.Linq.XNode.Remove
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.ReplaceWith(System.Object)
+  commentId: M:System.Xml.Linq.XNode.ReplaceWith(System.Object)
   parent: System.Xml.Linq.XNode
   isExternal: true
   name: ReplaceWith(Object)
+  nameWithType: XNode.ReplaceWith(Object)
   fullName: System.Xml.Linq.XNode.ReplaceWith(System.Object)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.ReplaceWith(System.Object)
     name: ReplaceWith
+    nameWithType: XNode.ReplaceWith
     fullName: System.Xml.Linq.XNode.ReplaceWith
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.ReplaceWith(System.Object)
     name: ReplaceWith
+    nameWithType: XNode.ReplaceWith
     fullName: System.Xml.Linq.XNode.ReplaceWith
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.ReplaceWith(System.Object[])
+  commentId: M:System.Xml.Linq.XNode.ReplaceWith(System.Object[])
   parent: System.Xml.Linq.XNode
   isExternal: true
   name: ReplaceWith(Object[])
+  nameWithType: XNode.ReplaceWith(Object[])
   fullName: System.Xml.Linq.XNode.ReplaceWith(System.Object[])
+  nameWithType.vb: XNode.ReplaceWith(Object())
   fullname.vb: System.Xml.Linq.XNode.ReplaceWith(System.Object())
   name.vb: ReplaceWith(Object())
   spec.csharp:
   - uid: System.Xml.Linq.XNode.ReplaceWith(System.Object[])
     name: ReplaceWith
+    nameWithType: XNode.ReplaceWith
     fullName: System.Xml.Linq.XNode.ReplaceWith
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.ReplaceWith(System.Object[])
     name: ReplaceWith
+    nameWithType: XNode.ReplaceWith
     fullName: System.Xml.Linq.XNode.ReplaceWith
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.ToString
+  commentId: M:System.Xml.Linq.XNode.ToString
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: ToString()
+  nameWithType: XNode.ToString()
   fullName: System.Xml.Linq.XNode.ToString()
   spec.csharp:
   - uid: System.Xml.Linq.XNode.ToString
     name: ToString
+    nameWithType: XNode.ToString
     fullName: System.Xml.Linq.XNode.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.ToString
     name: ToString
+    nameWithType: XNode.ToString
     fullName: System.Xml.Linq.XNode.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)
+  commentId: M:System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)
   parent: System.Xml.Linq.XNode
   isExternal: false
   name: ToString(SaveOptions)
+  nameWithType: XNode.ToString(SaveOptions)
   fullName: System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)
     name: ToString
+    nameWithType: XNode.ToString
     fullName: System.Xml.Linq.XNode.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.SaveOptions
     name: SaveOptions
+    nameWithType: SaveOptions
     fullName: System.Xml.Linq.SaveOptions
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)
     name: ToString
+    nameWithType: XNode.ToString
     fullName: System.Xml.Linq.XNode.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.Linq.SaveOptions
     name: SaveOptions
+    nameWithType: SaveOptions
     fullName: System.Xml.Linq.SaveOptions
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.BaseUri
+  commentId: P:System.Xml.Linq.XObject.BaseUri
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: BaseUri
+  nameWithType: XObject.BaseUri
   fullName: System.Xml.Linq.XObject.BaseUri
 - uid: System.Xml.Linq.XObject.Document
+  commentId: P:System.Xml.Linq.XObject.Document
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Document
+  nameWithType: XObject.Document
   fullName: System.Xml.Linq.XObject.Document
 - uid: System.Xml.Linq.XObject.Parent
+  commentId: P:System.Xml.Linq.XObject.Parent
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Parent
+  nameWithType: XObject.Parent
   fullName: System.Xml.Linq.XObject.Parent
 - uid: System.Xml.Linq.XObject.Changed
+  commentId: E:System.Xml.Linq.XObject.Changed
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Changed
+  nameWithType: XObject.Changed
   fullName: System.Xml.Linq.XObject.Changed
 - uid: System.Xml.Linq.XObject.Changing
+  commentId: E:System.Xml.Linq.XObject.Changing
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Changing
+  nameWithType: XObject.Changing
   fullName: System.Xml.Linq.XObject.Changing
 - uid: System.Xml.Linq.XObject.AddAnnotation(System.Object)
+  commentId: M:System.Xml.Linq.XObject.AddAnnotation(System.Object)
   parent: System.Xml.Linq.XObject
   isExternal: true
   name: AddAnnotation(Object)
+  nameWithType: XObject.AddAnnotation(Object)
   fullName: System.Xml.Linq.XObject.AddAnnotation(System.Object)
   spec.csharp:
   - uid: System.Xml.Linq.XObject.AddAnnotation(System.Object)
     name: AddAnnotation
+    nameWithType: XObject.AddAnnotation
     fullName: System.Xml.Linq.XObject.AddAnnotation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.AddAnnotation(System.Object)
     name: AddAnnotation
+    nameWithType: XObject.AddAnnotation
     fullName: System.Xml.Linq.XObject.AddAnnotation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.Annotation(System.Type)
+  commentId: M:System.Xml.Linq.XObject.Annotation(System.Type)
   parent: System.Xml.Linq.XObject
   isExternal: true
   name: Annotation(Type)
+  nameWithType: XObject.Annotation(Type)
   fullName: System.Xml.Linq.XObject.Annotation(System.Type)
   spec.csharp:
   - uid: System.Xml.Linq.XObject.Annotation(System.Type)
     name: Annotation
+    nameWithType: XObject.Annotation
     fullName: System.Xml.Linq.XObject.Annotation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.Annotation(System.Type)
     name: Annotation
+    nameWithType: XObject.Annotation
     fullName: System.Xml.Linq.XObject.Annotation
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.Annotation``1
+  commentId: M:System.Xml.Linq.XObject.Annotation``1
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Annotation<T>()
+  nameWithType: XObject.Annotation<T>()
   fullName: System.Xml.Linq.XObject.Annotation<T>()
+  nameWithType.vb: XObject.Annotation(Of T)()
   fullname.vb: System.Xml.Linq.XObject.Annotation(Of T)()
   name.vb: Annotation(Of T)()
   spec.csharp:
   - uid: System.Xml.Linq.XObject.Annotation``1
     name: Annotation<T>
+    nameWithType: XObject.Annotation<T>
     fullName: System.Xml.Linq.XObject.Annotation<T>
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.Annotation``1
     name: Annotation(Of T)
+    nameWithType: XObject.Annotation(Of T)
     fullName: System.Xml.Linq.XObject.Annotation(Of T)
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.Annotations(System.Type)
+  commentId: M:System.Xml.Linq.XObject.Annotations(System.Type)
   parent: System.Xml.Linq.XObject
   isExternal: true
   name: Annotations(Type)
+  nameWithType: XObject.Annotations(Type)
   fullName: System.Xml.Linq.XObject.Annotations(System.Type)
   spec.csharp:
   - uid: System.Xml.Linq.XObject.Annotations(System.Type)
     name: Annotations
+    nameWithType: XObject.Annotations
     fullName: System.Xml.Linq.XObject.Annotations
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.Annotations(System.Type)
     name: Annotations
+    nameWithType: XObject.Annotations
     fullName: System.Xml.Linq.XObject.Annotations
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.Annotations``1
+  commentId: M:System.Xml.Linq.XObject.Annotations``1
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: Annotations<T>()
+  nameWithType: XObject.Annotations<T>()
   fullName: System.Xml.Linq.XObject.Annotations<T>()
+  nameWithType.vb: XObject.Annotations(Of T)()
   fullname.vb: System.Xml.Linq.XObject.Annotations(Of T)()
   name.vb: Annotations(Of T)()
   spec.csharp:
   - uid: System.Xml.Linq.XObject.Annotations``1
     name: Annotations<T>
+    nameWithType: XObject.Annotations<T>
     fullName: System.Xml.Linq.XObject.Annotations<T>
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.Annotations``1
     name: Annotations(Of T)
+    nameWithType: XObject.Annotations(Of T)
     fullName: System.Xml.Linq.XObject.Annotations(Of T)
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
+  commentId: M:System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
   parent: System.Xml.Linq.XObject
   isExternal: true
   name: RemoveAnnotations(Type)
+  nameWithType: XObject.RemoveAnnotations(Type)
   fullName: System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
   spec.csharp:
   - uid: System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
     name: RemoveAnnotations
+    nameWithType: XObject.RemoveAnnotations
     fullName: System.Xml.Linq.XObject.RemoveAnnotations
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.RemoveAnnotations(System.Type)
     name: RemoveAnnotations
+    nameWithType: XObject.RemoveAnnotations
     fullName: System.Xml.Linq.XObject.RemoveAnnotations
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.Linq.XObject.RemoveAnnotations``1
+  commentId: M:System.Xml.Linq.XObject.RemoveAnnotations``1
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: RemoveAnnotations<T>()
+  nameWithType: XObject.RemoveAnnotations<T>()
   fullName: System.Xml.Linq.XObject.RemoveAnnotations<T>()
+  nameWithType.vb: XObject.RemoveAnnotations(Of T)()
   fullname.vb: System.Xml.Linq.XObject.RemoveAnnotations(Of T)()
   name.vb: RemoveAnnotations(Of T)()
   spec.csharp:
   - uid: System.Xml.Linq.XObject.RemoveAnnotations``1
     name: RemoveAnnotations<T>
+    nameWithType: XObject.RemoveAnnotations<T>
     fullName: System.Xml.Linq.XObject.RemoveAnnotations<T>
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XObject.RemoveAnnotations``1
     name: RemoveAnnotations(Of T)
+    nameWithType: XObject.RemoveAnnotations(Of T)
     fullName: System.Xml.Linq.XObject.RemoveAnnotations(Of T)
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Xml.Linq.XComment
+  commentId: T:System.Xml.Linq.XComment
   parent: System.Xml.Linq
   isExternal: false
   name: XComment
+  nameWithType: XComment
   fullName: System.Xml.Linq.XComment
 - uid: System.Xml.Linq.XObject.NodeType
+  commentId: P:System.Xml.Linq.XObject.NodeType
   parent: System.Xml.Linq.XObject
   isExternal: false
   name: NodeType
+  nameWithType: XObject.NodeType
   fullName: System.Xml.Linq.XObject.NodeType
 - uid: System.Xml.XmlNodeType
+  commentId: T:System.Xml.XmlNodeType
   parent: System.Xml
   isExternal: false
   name: XmlNodeType
+  nameWithType: XmlNodeType
   fullName: System.Xml.XmlNodeType
 - uid: System.Xml
+  commentId: N:System.Xml
   isExternal: false
   name: System.Xml
+  nameWithType: System.Xml
   fullName: System.Xml
 - uid: System.Xml.Linq.XNode.WriteTo(System.Xml.XmlWriter)
+  commentId: M:System.Xml.Linq.XNode.WriteTo(System.Xml.XmlWriter)
   parent: System.Xml.Linq.XNode
   isExternal: true
   name: WriteTo(XmlWriter)
+  nameWithType: XNode.WriteTo(XmlWriter)
   fullName: System.Xml.Linq.XNode.WriteTo(System.Xml.XmlWriter)
   spec.csharp:
   - uid: System.Xml.Linq.XNode.WriteTo(System.Xml.XmlWriter)
     name: WriteTo
+    nameWithType: XNode.WriteTo
     fullName: System.Xml.Linq.XNode.WriteTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlWriter
     name: XmlWriter
+    nameWithType: XmlWriter
     fullName: System.Xml.XmlWriter
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.Linq.XNode.WriteTo(System.Xml.XmlWriter)
     name: WriteTo
+    nameWithType: XNode.WriteTo
     fullName: System.Xml.Linq.XNode.WriteTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlWriter
     name: XmlWriter
+    nameWithType: XmlWriter
     fullName: System.Xml.XmlWriter
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlWriter
+  commentId: T:System.Xml.XmlWriter
   parent: System.Xml
   isExternal: false
   name: XmlWriter
+  nameWithType: XmlWriter
   fullName: System.Xml.XmlWriter
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException

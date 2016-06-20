@@ -1,5 +1,6 @@
 items:
 - uid: System.Data.Common.DbTransaction
+  commentId: T:System.Data.Common.DbTransaction
   id: DbTransaction
   parent: System.Data.Common
   children:
@@ -11,207 +12,484 @@ items:
   - System.Data.Common.DbTransaction.Dispose(System.Boolean)
   - System.Data.Common.DbTransaction.IsolationLevel
   - System.Data.Common.DbTransaction.Rollback
+  - System.Data.Common.DbTransaction.System#Data#IDbTransaction#Connection
+  langs:
+  - csharp
+  - vb
   name: DbTransaction
+  nameWithType: DbTransaction
   fullName: System.Data.Common.DbTransaction
   type: Class
   source:
-    remote: &o0
-      path: src/System.Data.Common/src/System/Data/Common/DbTransaction.cs
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Data.Common/src/System/Data/Common/DbTransaction.cs
-    startLine: 13
+    id: DbTransaction
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 462
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: The base class for a transaction.
   syntax:
-    content: 'public abstract class DbTransaction : IDisposable'
-    content.vb: Public MustInherit Class DbTransaction Inherits IDisposable
+    content: 'public abstract class DbTransaction : object, IDbTransaction, IDisposable'
+    content.vb: >-
+      Public MustInherit Class DbTransaction
+          Inherits Object
+          Implements IDbTransaction, IDisposable
   inheritance:
   - System.Object
+  implements:
+  - System.Data.IDbTransaction
+  - System.IDisposable
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Data.Common.DbTransaction.#ctor
+  commentId: M:System.Data.Common.DbTransaction.#ctor
   id: '#ctor'
   parent: System.Data.Common.DbTransaction
+  langs:
+  - csharp
+  - vb
   name: DbTransaction()
+  nameWithType: DbTransaction.DbTransaction()
   fullName: System.Data.Common.DbTransaction.DbTransaction()
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbTransaction.cs
-    startLine: 16
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 464
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Initializes a new <xref href="System.Data.Common.DbTransaction" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: protected DbTransaction()
     content.vb: Protected Sub New
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Data.Common.DbTransaction.Connection
+  commentId: P:System.Data.Common.DbTransaction.Connection
   id: Connection
   parent: System.Data.Common.DbTransaction
+  langs:
+  - csharp
+  - vb
   name: Connection
+  nameWithType: DbTransaction.Connection
   fullName: System.Data.Common.DbTransaction.Connection
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbTransaction.cs
-    startLine: 20
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Connection
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 465
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Specifies the <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref> object associated with the transaction.
   syntax:
     content: public DbConnection Connection { get; }
     content.vb: Public ReadOnly Property Connection As DbConnection
     parameters: []
     return:
       type: System.Data.Common.DbConnection
-      description: The <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref> object associated with the transaction.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Data.Common.DbTransaction.DbConnection
+  commentId: P:System.Data.Common.DbTransaction.DbConnection
   id: DbConnection
   parent: System.Data.Common.DbTransaction
+  langs:
+  - csharp
+  - vb
   name: DbConnection
+  nameWithType: DbTransaction.DbConnection
   fullName: System.Data.Common.DbTransaction.DbConnection
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbTransaction.cs
-    startLine: 29
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DbConnection
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 466
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Specifies the <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref> object associated with the transaction.
   syntax:
     content: protected abstract DbConnection DbConnection { get; }
     content.vb: Protected MustOverride ReadOnly Property DbConnection As DbConnection
     parameters: []
     return:
       type: System.Data.Common.DbConnection
-      description: The <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref> object associated with the transaction.
+  modifiers.csharp:
+  - protected
+  - abstract
+  - get
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  - ReadOnly
 - uid: System.Data.Common.DbTransaction.IsolationLevel
+  commentId: P:System.Data.Common.DbTransaction.IsolationLevel
   id: IsolationLevel
   parent: System.Data.Common.DbTransaction
+  langs:
+  - csharp
+  - vb
   name: IsolationLevel
+  nameWithType: DbTransaction.IsolationLevel
   fullName: System.Data.Common.DbTransaction.IsolationLevel
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbTransaction.cs
-    startLine: 34
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsolationLevel
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 467
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Specifies the <xref href="System.Data.IsolationLevel" data-throw-if-not-resolved="false"></xref> for this transaction.
   syntax:
     content: public abstract IsolationLevel IsolationLevel { get; }
     content.vb: Public MustOverride ReadOnly Property IsolationLevel As IsolationLevel
     parameters: []
     return:
       type: System.Data.IsolationLevel
-      description: The <xref href="System.Data.IsolationLevel" data-throw-if-not-resolved="false"></xref> for this transaction.
+  implements:
+  - System.Data.IDbTransaction.IsolationLevel
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: System.Data.Common.DbTransaction.System#Data#IDbTransaction#Connection
+  commentId: P:System.Data.Common.DbTransaction.System#Data#IDbTransaction#Connection
+  id: System#Data#IDbTransaction#Connection
+  isEii: true
+  parent: System.Data.Common.DbTransaction
+  langs:
+  - csharp
+  - vb
+  name: IDbTransaction.Connection
+  nameWithType: DbTransaction.IDbTransaction.Connection
+  fullName: System.Data.Common.DbTransaction.System.Data.IDbTransaction.Connection
+  type: Property
+  source:
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.Data.IDbTransaction.Connection
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 468
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  syntax:
+    content: IDbConnection IDbTransaction.Connection { get; }
+    content.vb: ReadOnly WriteOnly Property System.Data.IDbTransaction.Connection As IDbConnection Implements IDbTransaction.Connection
+    parameters: []
+    return:
+      type: System.Data.IDbConnection
+  implements:
+  - System.Data.IDbTransaction.Connection
+  nameWithType.vb: DbTransaction.System.Data.IDbTransaction.Connection
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  name.vb: System.Data.IDbTransaction.Connection
 - uid: System.Data.Common.DbTransaction.Commit
+  commentId: M:System.Data.Common.DbTransaction.Commit
   id: Commit
   parent: System.Data.Common.DbTransaction
+  langs:
+  - csharp
+  - vb
   name: Commit()
+  nameWithType: DbTransaction.Commit()
   fullName: System.Data.Common.DbTransaction.Commit()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbTransaction.cs
-    startLine: 39
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Commit
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 469
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Commits the database transaction.
   syntax:
     content: public abstract void Commit()
     content.vb: Public MustOverride Sub Commit
+  implements:
+  - System.Data.IDbTransaction.Commit
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
 - uid: System.Data.Common.DbTransaction.Dispose
+  commentId: M:System.Data.Common.DbTransaction.Dispose
   id: Dispose
   parent: System.Data.Common.DbTransaction
+  langs:
+  - csharp
+  - vb
   name: Dispose()
+  nameWithType: DbTransaction.Dispose()
   fullName: System.Data.Common.DbTransaction.Dispose()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbTransaction.cs
-    startLine: 41
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Dispose
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 470
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Releases the unmanaged resources used by the <xref href="System.Data.Common.DbTransaction" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void Dispose()
     content.vb: Public Sub Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Data.Common.DbTransaction.Dispose(System.Boolean)
+  commentId: M:System.Data.Common.DbTransaction.Dispose(System.Boolean)
   id: Dispose(System.Boolean)
   parent: System.Data.Common.DbTransaction
+  langs:
+  - csharp
+  - vb
   name: Dispose(Boolean)
+  nameWithType: DbTransaction.Dispose(Boolean)
   fullName: System.Data.Common.DbTransaction.Dispose(System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbTransaction.cs
-    startLine: 46
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Dispose
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 471
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Releases the unmanaged resources used by the <xref href="System.Data.Common.DbTransaction" data-throw-if-not-resolved="false"></xref> and optionally releases the managed resources.
   syntax:
     content: protected virtual void Dispose(bool disposing)
     content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
     parameters:
     - id: disposing
       type: System.Boolean
-      description: If true, this method releases all resources held by any managed objects that this <xref href="System.Data.Common.DbTransaction" data-throw-if-not-resolved="false"></xref> references.
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
 - uid: System.Data.Common.DbTransaction.Rollback
+  commentId: M:System.Data.Common.DbTransaction.Rollback
   id: Rollback
   parent: System.Data.Common.DbTransaction
+  langs:
+  - csharp
+  - vb
   name: Rollback()
+  nameWithType: DbTransaction.Rollback()
   fullName: System.Data.Common.DbTransaction.Rollback()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbTransaction.cs
-    startLine: 50
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Rollback
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 472
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Rolls back a transaction from a pending state.
   syntax:
     content: public abstract void Rollback()
     content.vb: Public MustOverride Sub Rollback
+  implements:
+  - System.Data.IDbTransaction.Rollback
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
 references:
 - uid: System.Data.Common
+  commentId: N:System.Data.Common
   isExternal: false
   name: System.Data.Common
+  nameWithType: System.Data.Common
   fullName: System.Data.Common
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
+- uid: System.Data.IDbTransaction
+  commentId: T:System.Data.IDbTransaction
+  parent: System.Data
+  isExternal: false
+  name: IDbTransaction
+  nameWithType: IDbTransaction
+  fullName: System.Data.IDbTransaction
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: false
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: false
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
 - uid: System.Data.Common.DbConnection
+  commentId: T:System.Data.Common.DbConnection
   parent: System.Data.Common
   isExternal: false
   name: DbConnection
+  nameWithType: DbConnection
   fullName: System.Data.Common.DbConnection
+- uid: System.Data.IDbTransaction.IsolationLevel
+  commentId: P:System.Data.IDbTransaction.IsolationLevel
+  parent: System.Data.IDbTransaction
+  isExternal: false
+  name: IsolationLevel
+  nameWithType: IDbTransaction.IsolationLevel
+  fullName: System.Data.IDbTransaction.IsolationLevel
 - uid: System.Data.IsolationLevel
+  commentId: T:System.Data.IsolationLevel
   parent: System.Data
   isExternal: false
   name: IsolationLevel
+  nameWithType: IsolationLevel
   fullName: System.Data.IsolationLevel
-- uid: System.Data
+- uid: System.Data.IDbTransaction.Connection
+  commentId: P:System.Data.IDbTransaction.Connection
+  parent: System.Data.IDbTransaction
   isExternal: false
-  name: System.Data
-  fullName: System.Data
+  name: Connection
+  nameWithType: IDbTransaction.Connection
+  fullName: System.Data.IDbTransaction.Connection
+- uid: System.Data.IDbConnection
+  commentId: T:System.Data.IDbConnection
+  parent: System.Data
+  isExternal: false
+  name: IDbConnection
+  nameWithType: IDbConnection
+  fullName: System.Data.IDbConnection
+- uid: System.Data.IDbTransaction.Commit
+  commentId: M:System.Data.IDbTransaction.Commit
+  parent: System.Data.IDbTransaction
+  isExternal: false
+  name: Commit()
+  nameWithType: IDbTransaction.Commit()
+  fullName: System.Data.IDbTransaction.Commit()
+  spec.csharp:
+  - uid: System.Data.IDbTransaction.Commit
+    name: Commit
+    nameWithType: IDbTransaction.Commit
+    fullName: System.Data.IDbTransaction.Commit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.IDbTransaction.Commit
+    name: Commit
+    nameWithType: IDbTransaction.Commit
+    fullName: System.Data.IDbTransaction.Commit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
+- uid: System.Data.IDbTransaction.Rollback
+  commentId: M:System.Data.IDbTransaction.Rollback
+  parent: System.Data.IDbTransaction
+  isExternal: false
+  name: Rollback()
+  nameWithType: IDbTransaction.Rollback()
+  fullName: System.Data.IDbTransaction.Rollback()
+  spec.csharp:
+  - uid: System.Data.IDbTransaction.Rollback
+    name: Rollback
+    nameWithType: IDbTransaction.Rollback
+    fullName: System.Data.IDbTransaction.Rollback
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.IDbTransaction.Rollback
+    name: Rollback
+    nameWithType: IDbTransaction.Rollback
+    fullName: System.Data.IDbTransaction.Rollback
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

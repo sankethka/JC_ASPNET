@@ -1,26 +1,33 @@
 items:
 - uid: System.Threading.ManualResetEvent
+  commentId: T:System.Threading.ManualResetEvent
   id: ManualResetEvent
   parent: System.Threading
   children:
   - System.Threading.ManualResetEvent.#ctor(System.Boolean)
+  langs:
+  - csharp
+  - vb
   name: ManualResetEvent
+  nameWithType: ManualResetEvent
   fullName: System.Threading.ManualResetEvent
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Threading/ManualResetEvent.cs
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/ManualResetEvent.cs
-    startLine: 19
+      repo: https://github.com/dotnet/corefx.git
+    id: ManualResetEvent
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 160
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Notifies one or more waiting threads that an event has occurred. This class cannot be inherited.
   syntax:
     content: 'public sealed class ManualResetEvent : EventWaitHandle'
-    content.vb: Public NotInheritable Class ManualResetEvent Inherits EventWaitHandle
+    content.vb: >-
+      Public NotInheritable Class ManualResetEvent
+          Inherits EventWaitHandle
   inheritance:
   - System.Object
   - System.Threading.EventWaitHandle
@@ -29,158 +36,227 @@ items:
   - System.Threading.EventWaitHandle.Reset
   - System.Threading.EventWaitHandle.Set
   - System.Threading.EventWaitHandle.TryOpenExisting(System.String,System.Threading.EventWaitHandle@)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Threading.ManualResetEvent.#ctor(System.Boolean)
+  commentId: M:System.Threading.ManualResetEvent.#ctor(System.Boolean)
   id: '#ctor(System.Boolean)'
   parent: System.Threading.ManualResetEvent
+  langs:
+  - csharp
+  - vb
   name: ManualResetEvent(Boolean)
+  nameWithType: ManualResetEvent.ManualResetEvent(Boolean)
   fullName: System.Threading.ManualResetEvent.ManualResetEvent(System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/ManualResetEvent.cs
-    startLine: 23
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 162
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Initializes a new instance of the <xref href="System.Threading.ManualResetEvent" data-throw-if-not-resolved="false"></xref> class with a Boolean value indicating whether to set the initial state to signaled.
   syntax:
     content: public ManualResetEvent(bool initialState)
     content.vb: Public Sub New(initialState As Boolean)
     parameters:
     - id: initialState
       type: System.Boolean
-      description: true to set the initial state signaled; false to set the initial state to nonsignaled.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Threading.EventWaitHandle
+  commentId: T:System.Threading.EventWaitHandle
   parent: System.Threading
   isExternal: false
   name: EventWaitHandle
+  nameWithType: EventWaitHandle
   fullName: System.Threading.EventWaitHandle
 - uid: System.Threading.EventWaitHandle.OpenExisting(System.String)
+  commentId: M:System.Threading.EventWaitHandle.OpenExisting(System.String)
   parent: System.Threading.EventWaitHandle
   isExternal: true
   name: OpenExisting(String)
+  nameWithType: EventWaitHandle.OpenExisting(String)
   fullName: System.Threading.EventWaitHandle.OpenExisting(System.String)
   spec.csharp:
   - uid: System.Threading.EventWaitHandle.OpenExisting(System.String)
     name: OpenExisting
+    nameWithType: EventWaitHandle.OpenExisting
     fullName: System.Threading.EventWaitHandle.OpenExisting
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Threading.EventWaitHandle.OpenExisting(System.String)
     name: OpenExisting
+    nameWithType: EventWaitHandle.OpenExisting
     fullName: System.Threading.EventWaitHandle.OpenExisting
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Threading.EventWaitHandle.Reset
+  commentId: M:System.Threading.EventWaitHandle.Reset
   parent: System.Threading.EventWaitHandle
   isExternal: false
   name: Reset()
+  nameWithType: EventWaitHandle.Reset()
   fullName: System.Threading.EventWaitHandle.Reset()
   spec.csharp:
   - uid: System.Threading.EventWaitHandle.Reset
     name: Reset
+    nameWithType: EventWaitHandle.Reset
     fullName: System.Threading.EventWaitHandle.Reset
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Threading.EventWaitHandle.Reset
     name: Reset
+    nameWithType: EventWaitHandle.Reset
     fullName: System.Threading.EventWaitHandle.Reset
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Threading.EventWaitHandle.Set
+  commentId: M:System.Threading.EventWaitHandle.Set
   parent: System.Threading.EventWaitHandle
   isExternal: false
   name: Set()
+  nameWithType: EventWaitHandle.Set()
   fullName: System.Threading.EventWaitHandle.Set()
   spec.csharp:
   - uid: System.Threading.EventWaitHandle.Set
     name: Set
+    nameWithType: EventWaitHandle.Set
     fullName: System.Threading.EventWaitHandle.Set
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Threading.EventWaitHandle.Set
     name: Set
+    nameWithType: EventWaitHandle.Set
     fullName: System.Threading.EventWaitHandle.Set
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Threading.EventWaitHandle.TryOpenExisting(System.String,System.Threading.EventWaitHandle@)
+  commentId: M:System.Threading.EventWaitHandle.TryOpenExisting(System.String,System.Threading.EventWaitHandle@)
   parent: System.Threading.EventWaitHandle
   isExternal: true
   name: TryOpenExisting(String, EventWaitHandle)
+  nameWithType: EventWaitHandle.TryOpenExisting(String, EventWaitHandle)
   fullName: System.Threading.EventWaitHandle.TryOpenExisting(System.String, System.Threading.EventWaitHandle)
   spec.csharp:
   - uid: System.Threading.EventWaitHandle.TryOpenExisting(System.String,System.Threading.EventWaitHandle@)
     name: TryOpenExisting
+    nameWithType: EventWaitHandle.TryOpenExisting
     fullName: System.Threading.EventWaitHandle.TryOpenExisting
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.EventWaitHandle
     name: EventWaitHandle
+    nameWithType: EventWaitHandle
     fullName: System.Threading.EventWaitHandle
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Threading.EventWaitHandle.TryOpenExisting(System.String,System.Threading.EventWaitHandle@)
     name: TryOpenExisting
+    nameWithType: EventWaitHandle.TryOpenExisting
     fullName: System.Threading.EventWaitHandle.TryOpenExisting
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.EventWaitHandle
     name: EventWaitHandle
+    nameWithType: EventWaitHandle
     fullName: System.Threading.EventWaitHandle
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean

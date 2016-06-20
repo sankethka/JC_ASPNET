@@ -1,105 +1,153 @@
 items:
 - uid: System.IObserver`1
+  commentId: T:System.IObserver`1
   id: IObserver`1
   parent: System
   children:
   - System.IObserver`1.OnCompleted
   - System.IObserver`1.OnError(System.Exception)
   - System.IObserver`1.OnNext(`0)
+  langs:
+  - csharp
+  - vb
   name: IObserver<T>
-  name.vb: IObserver(Of T)
+  nameWithType: IObserver<T>
   fullName: System.IObserver<T>
-  fullName.vb: System.IObserver(Of T)
   type: Interface
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/IObserver.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/IObserver.cs
-    startLine: 20
+      repo: https://github.com/dotnet/corefx.git
+    id: IObserver
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1191
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Provides a mechanism for receiving push-based notifications.
   syntax:
     content: public interface IObserver<in T>
     content.vb: Public Interface IObserver(Of In T)
     typeParameters:
     - id: T
+  nameWithType.vb: IObserver(Of T)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: System.IObserver(Of T)
+  name.vb: IObserver(Of T)
 - uid: System.IObserver`1.OnCompleted
+  commentId: M:System.IObserver`1.OnCompleted
   id: OnCompleted
   parent: System.IObserver`1
+  langs:
+  - csharp
+  - vb
   name: OnCompleted()
+  nameWithType: IObserver<T>.OnCompleted()
   fullName: System.IObserver<T>.OnCompleted()
-  fullName.vb: System.IObserver(Of T).OnCompleted()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IObserver.cs
-    startLine: 24
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OnCompleted
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1193
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Notifies the observer that the provider has finished sending push-based notifications.
   syntax:
     content: void OnCompleted()
     content.vb: Sub OnCompleted
+  nameWithType.vb: IObserver(Of T).OnCompleted()
+  fullName.vb: System.IObserver(Of T).OnCompleted()
 - uid: System.IObserver`1.OnError(System.Exception)
+  commentId: M:System.IObserver`1.OnError(System.Exception)
   id: OnError(System.Exception)
   parent: System.IObserver`1
+  langs:
+  - csharp
+  - vb
   name: OnError(Exception)
+  nameWithType: IObserver<T>.OnError(Exception)
   fullName: System.IObserver<T>.OnError(System.Exception)
-  fullName.vb: System.IObserver(Of T).OnError(System.Exception)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IObserver.cs
-    startLine: 23
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OnError
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1194
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Notifies the observer that the provider has experienced an error condition.
   syntax:
     content: void OnError(Exception error)
     content.vb: Sub OnError(error As Exception)
     parameters:
     - id: error
       type: System.Exception
-      description: An object that provides additional information about the error.
+  nameWithType.vb: IObserver(Of T).OnError(Exception)
+  fullName.vb: System.IObserver(Of T).OnError(System.Exception)
 - uid: System.IObserver`1.OnNext(`0)
+  commentId: M:System.IObserver`1.OnNext(`0)
   id: OnNext(`0)
   parent: System.IObserver`1
+  langs:
+  - csharp
+  - vb
   name: OnNext(T)
+  nameWithType: IObserver<T>.OnNext(T)
   fullName: System.IObserver<T>.OnNext(T)
-  fullName.vb: System.IObserver(Of T).OnNext(T)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IObserver.cs
-    startLine: 22
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OnNext
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1195
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Provides the observer with new data.
   syntax:
     content: void OnNext(T value)
     content.vb: Sub OnNext(value As T)
     parameters:
     - id: value
       type: '{T}'
-      description: The current notification information.
+  nameWithType.vb: IObserver(Of T).OnNext(T)
+  fullName.vb: System.IObserver(Of T).OnNext(T)
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: false
   name: Exception
+  nameWithType: Exception
   fullName: System.Exception
 - uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
   isExternal: false
   name: T
+  nameWithType: T
   fullName: T

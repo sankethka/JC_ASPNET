@@ -1,5 +1,6 @@
 items:
 - uid: System.ServiceProcess.ServiceController
+  commentId: T:System.ServiceProcess.ServiceController
   id: ServiceController
   parent: System.ServiceProcess
   children:
@@ -35,6 +36,7 @@ items:
   - csharp
   - vb
   name: ServiceController
+  nameWithType: ServiceController
   fullName: System.ServiceProcess.ServiceController
   type: Class
   source:
@@ -42,24 +44,34 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ServiceController
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Represents a Windows service and allows you to connect to a running or stopped service, manipulate it, or get information about it.
   syntax:
     content: 'public class ServiceController : IDisposable'
-    content.vb: Public Class ServiceController Inherits IDisposable
+    content.vb: >-
+      Public Class ServiceController
+          Inherits IDisposable
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.ServiceProcess.ServiceController.#ctor(System.String)
+  commentId: M:System.ServiceProcess.ServiceController.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: ServiceController(String)
+  nameWithType: ServiceController.ServiceController(String)
   fullName: System.ServiceProcess.ServiceController.ServiceController(System.String)
   type: Constructor
   source:
@@ -67,29 +79,31 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Initializes a new instance of the <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> class that is associated with an existing service on the local computer.
   syntax:
     content: public ServiceController(string name)
     content.vb: Public Sub New(name As String)
     parameters:
     - id: name
       type: System.String
-      description: The name that identifies the service to the system. This can also be the display name for the service.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*name* is invalid.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ServiceProcess.ServiceController.#ctor(System.String,System.String)
+  commentId: M:System.ServiceProcess.ServiceController.#ctor(System.String,System.String)
   id: '#ctor(System.String,System.String)'
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: ServiceController(String, String)
+  nameWithType: ServiceController.ServiceController(String, String)
   fullName: System.ServiceProcess.ServiceController.ServiceController(System.String, System.String)
   type: Constructor
   source:
@@ -97,32 +111,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Initializes a new instance of the <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> class that is associated with an existing service on the specified computer.
   syntax:
     content: public ServiceController(string name, string machineName)
     content.vb: Public Sub New(name As String, machineName As String)
     parameters:
     - id: name
       type: System.String
-      description: The name that identifies the service to the system. This can also be the display name for the service.
     - id: machineName
       type: System.String
-      description: The computer on which the service resides.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*name* is invalid.-or- *machineName* is invalid.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ServiceProcess.ServiceController.CanPauseAndContinue
+  commentId: P:System.ServiceProcess.ServiceController.CanPauseAndContinue
   id: CanPauseAndContinue
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: CanPauseAndContinue
+  nameWithType: ServiceController.CanPauseAndContinue
   fullName: System.ServiceProcess.ServiceController.CanPauseAndContinue
   type: Property
   source:
@@ -130,31 +145,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CanPauseAndContinue
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Gets a value indicating whether the service can be paused and resumed.
   syntax:
     content: public bool CanPauseAndContinue { get; }
     content.vb: Public ReadOnly Property CanPauseAndContinue As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the service can be paused; otherwise, false.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.CanShutdown
+  commentId: P:System.ServiceProcess.ServiceController.CanShutdown
   id: CanShutdown
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: CanShutdown
+  nameWithType: ServiceController.CanShutdown
   fullName: System.ServiceProcess.ServiceController.CanShutdown
   type: Property
   source:
@@ -162,31 +179,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CanShutdown
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Gets a value indicating whether the service should be notified when the system is shutting down.
   syntax:
     content: public bool CanShutdown { get; }
     content.vb: Public ReadOnly Property CanShutdown As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the service should be notified when the system is shutting down; otherwise, false.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.CanStop
+  commentId: P:System.ServiceProcess.ServiceController.CanStop
   id: CanStop
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: CanStop
+  nameWithType: ServiceController.CanStop
   fullName: System.ServiceProcess.ServiceController.CanStop
   type: Property
   source:
@@ -194,31 +213,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CanStop
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Gets a value indicating whether the service can be stopped after it has started.
   syntax:
     content: public bool CanStop { get; }
     content.vb: Public ReadOnly Property CanStop As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the service can be stopped and the <xref href="System.ServiceProcess.ServiceBase.OnStop" data-throw-if-not-resolved="false"></xref> method called; otherwise, false.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.DependentServices
+  commentId: P:System.ServiceProcess.ServiceController.DependentServices
   id: DependentServices
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: DependentServices
+  nameWithType: ServiceController.DependentServices
   fullName: System.ServiceProcess.ServiceController.DependentServices
   type: Property
   source:
@@ -226,31 +247,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: DependentServices
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Gets the set of services that depends on the service associated with this <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> instance.
   syntax:
     content: public ServiceController[] DependentServices { get; }
     content.vb: Public ReadOnly Property DependentServices As ServiceController()
     parameters: []
     return:
       type: System.ServiceProcess.ServiceController[]
-      description: An array of <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> instances, each of which is associated with a service that depends on this service.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.DisplayName
+  commentId: P:System.ServiceProcess.ServiceController.DisplayName
   id: DisplayName
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: DisplayName
+  nameWithType: ServiceController.DisplayName
   fullName: System.ServiceProcess.ServiceController.DisplayName
   type: Property
   source:
@@ -258,33 +281,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: DisplayName
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Gets or sets a friendly name for the service.
   syntax:
     content: public string DisplayName { get; }
     content.vb: Public ReadOnly Property DisplayName As String
     parameters: []
     return:
       type: System.String
-      description: The friendly name of the service, which can be used to identify the service.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The <xref href="System.ServiceProcess.ServiceController.DisplayName" data-throw-if-not-resolved="false"></xref> is null.
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.MachineName
+  commentId: P:System.ServiceProcess.ServiceController.MachineName
   id: MachineName
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: MachineName
+  nameWithType: ServiceController.MachineName
   fullName: System.ServiceProcess.ServiceController.MachineName
   type: Property
   source:
@@ -292,29 +315,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: MachineName
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Gets or sets the name of the computer on which this service resides.
   syntax:
     content: public string MachineName { get; }
     content.vb: Public ReadOnly Property MachineName As String
     parameters: []
     return:
       type: System.String
-      description: The name of the computer that is running the service associated with this <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> instance. The default is the local computer (".").
-  exceptions:
-  - type: System.ArgumentException
-    description: The <xref href="System.ServiceProcess.ServiceController.MachineName" data-throw-if-not-resolved="false"></xref> syntax is invalid.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.ServiceHandle
+  commentId: P:System.ServiceProcess.ServiceController.ServiceHandle
   id: ServiceHandle
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: ServiceHandle
+  nameWithType: ServiceController.ServiceHandle
   fullName: System.ServiceProcess.ServiceController.ServiceHandle
   type: Property
   source:
@@ -322,29 +349,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ServiceHandle
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Gets the handle for the service.
   syntax:
     content: public Runtime.InteropServices.SafeHandle ServiceHandle { get; }
     content.vb: Public ReadOnly Property ServiceHandle As Runtime.InteropServices.SafeHandle
     parameters: []
     return:
       type: System.Runtime.InteropServices.SafeHandle
-      description: A <xref href="System.Runtime.InteropServices.SafeHandle" data-throw-if-not-resolved="false"></xref> that contains the handle for the service.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.ServiceName
+  commentId: P:System.ServiceProcess.ServiceController.ServiceName
   id: ServiceName
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: ServiceName
+  nameWithType: ServiceController.ServiceName
   fullName: System.ServiceProcess.ServiceController.ServiceName
   type: Property
   source:
@@ -352,33 +383,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ServiceName
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 18
+    startLine: 21
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Gets or sets the name that identifies the service that this instance references.
   syntax:
     content: public string ServiceName { get; }
     content.vb: Public ReadOnly Property ServiceName As String
     parameters: []
     return:
       type: System.String
-      description: The name that identifies the service that this <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> instance references. The default is an empty string ("").
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The <xref href="System.ServiceProcess.ServiceController.ServiceName" data-throw-if-not-resolved="false"></xref> is null.
-  - type: System.ArgumentException
-    description: The syntax of the <xref href="System.ServiceProcess.ServiceController.ServiceName" data-throw-if-not-resolved="false"></xref> property is invalid.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.ServicesDependedOn
+  commentId: P:System.ServiceProcess.ServiceController.ServicesDependedOn
   id: ServicesDependedOn
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: ServicesDependedOn
+  nameWithType: ServiceController.ServicesDependedOn
   fullName: System.ServiceProcess.ServiceController.ServicesDependedOn
   type: Property
   source:
@@ -386,31 +417,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ServicesDependedOn
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: The set of services that this service depends on.
   syntax:
     content: public ServiceController[] ServicesDependedOn { get; }
     content.vb: Public ReadOnly Property ServicesDependedOn As ServiceController()
     parameters: []
     return:
       type: System.ServiceProcess.ServiceController[]
-      description: An array of <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> instances, each of which is associated with a service that must be running for this service to run.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.ServiceType
+  commentId: P:System.ServiceProcess.ServiceController.ServiceType
   id: ServiceType
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: ServiceType
+  nameWithType: ServiceController.ServiceType
   fullName: System.ServiceProcess.ServiceController.ServiceType
   type: Property
   source:
@@ -418,31 +451,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ServiceType
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Gets the type of service that this object references.
   syntax:
     content: public ServiceType ServiceType { get; }
     content.vb: Public ReadOnly Property ServiceType As ServiceType
     parameters: []
     return:
       type: System.ServiceProcess.ServiceType
-      description: One of the <xref href="System.ServiceProcess.ServiceType" data-throw-if-not-resolved="false"></xref> values, used to indicate the network service type.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.StartType
+  commentId: P:System.ServiceProcess.ServiceController.StartType
   id: StartType
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: StartType
+  nameWithType: ServiceController.StartType
   fullName: System.ServiceProcess.ServiceController.StartType
   type: Property
   source:
@@ -450,8 +485,9 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: StartType
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
@@ -461,13 +497,21 @@ items:
     parameters: []
     return:
       type: System.ServiceProcess.ServiceStartMode
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.Status
+  commentId: P:System.ServiceProcess.ServiceController.Status
   id: Status
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: Status
+  nameWithType: ServiceController.Status
   fullName: System.ServiceProcess.ServiceController.Status
   type: Property
   source:
@@ -475,31 +519,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Status
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Gets the status of the service that is referenced by this instance.
   syntax:
     content: public ServiceControllerStatus Status { get; }
     content.vb: Public ReadOnly Property Status As ServiceControllerStatus
     parameters: []
     return:
       type: System.ServiceProcess.ServiceControllerStatus
-      description: One of the <xref href="System.ServiceProcess.ServiceControllerStatus" data-throw-if-not-resolved="false"></xref> values that indicates whether the service is running, stopped, or paused, or whether a start, stop, pause, or continue command is pending.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ServiceProcess.ServiceController.Continue
+  commentId: M:System.ServiceProcess.ServiceController.Continue
   id: Continue
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: Continue()
+  nameWithType: ServiceController.Continue()
   fullName: System.ServiceProcess.ServiceController.Continue()
   type: Method
   source:
@@ -507,27 +553,28 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Continue
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Continues a service after it has been paused.
   syntax:
     content: public void Continue()
     content.vb: Public Sub Continue
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ServiceProcess.ServiceController.Dispose
+  commentId: M:System.ServiceProcess.ServiceController.Dispose
   id: Dispose
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: Dispose()
+  nameWithType: ServiceController.Dispose()
   fullName: System.ServiceProcess.ServiceController.Dispose()
   type: Method
   source:
@@ -535,21 +582,28 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Dispose
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 24
+    startLine: 27
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
   syntax:
     content: public void Dispose()
     content.vb: Public Sub Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ServiceProcess.ServiceController.Dispose(System.Boolean)
+  commentId: M:System.ServiceProcess.ServiceController.Dispose(System.Boolean)
   id: Dispose(System.Boolean)
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: Dispose(Boolean)
+  nameWithType: ServiceController.Dispose(Boolean)
   fullName: System.ServiceProcess.ServiceController.Dispose(System.Boolean)
   type: Method
   source:
@@ -557,26 +611,33 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Dispose
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 25
+    startLine: 28
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Releases the unmanaged resources used by the <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> and optionally releases the managed resources.
   syntax:
     content: protected virtual void Dispose(bool disposing)
     content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
     parameters:
     - id: disposing
       type: System.Boolean
-      description: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
 - uid: System.ServiceProcess.ServiceController.GetDevices
+  commentId: M:System.ServiceProcess.ServiceController.GetDevices
   id: GetDevices
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: GetDevices()
+  nameWithType: ServiceController.GetDevices()
   fullName: System.ServiceProcess.ServiceController.GetDevices()
   type: Method
   source:
@@ -584,28 +645,32 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: GetDevices
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 26
+    startLine: 29
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Retrieves the device driver services on the local computer.
   syntax:
     content: public static ServiceController[] GetDevices()
     content.vb: Public Shared Function GetDevices As ServiceController()
     return:
       type: System.ServiceProcess.ServiceController[]
-      description: An array of type <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> in which each element is associated with a device driver service on the local computer.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.ServiceProcess.ServiceController.GetDevices(System.String)
+  commentId: M:System.ServiceProcess.ServiceController.GetDevices(System.String)
   id: GetDevices(System.String)
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: GetDevices(String)
+  nameWithType: ServiceController.GetDevices(String)
   fullName: System.ServiceProcess.ServiceController.GetDevices(System.String)
   type: Method
   source:
@@ -613,34 +678,35 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: GetDevices
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Retrieves the device driver services on the specified computer.
   syntax:
     content: public static ServiceController[] GetDevices(string machineName)
     content.vb: Public Shared Function GetDevices(machineName As String) As ServiceController()
     parameters:
     - id: machineName
       type: System.String
-      description: The computer from which to retrieve the device driver services.
     return:
       type: System.ServiceProcess.ServiceController[]
-      description: An array of type <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> in which each element is associated with a device driver service on the specified computer.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.ArgumentException
-    description: The *machineName* parameter has invalid syntax.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.ServiceProcess.ServiceController.GetServices
+  commentId: M:System.ServiceProcess.ServiceController.GetServices
   id: GetServices
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: GetServices()
+  nameWithType: ServiceController.GetServices()
   fullName: System.ServiceProcess.ServiceController.GetServices()
   type: Method
   source:
@@ -648,28 +714,32 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: GetServices
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Retrieves all the services on the local computer, except for the device driver services.
   syntax:
     content: public static ServiceController[] GetServices()
     content.vb: Public Shared Function GetServices As ServiceController()
     return:
       type: System.ServiceProcess.ServiceController[]
-      description: An array of type <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> in which each element is associated with a service on the local computer.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.ServiceProcess.ServiceController.GetServices(System.String)
+  commentId: M:System.ServiceProcess.ServiceController.GetServices(System.String)
   id: GetServices(System.String)
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: GetServices(String)
+  nameWithType: ServiceController.GetServices(String)
   fullName: System.ServiceProcess.ServiceController.GetServices(System.String)
   type: Method
   source:
@@ -677,34 +747,35 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: GetServices
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 29
+    startLine: 32
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Retrieves all the services on the specified computer, except for the device driver services.
   syntax:
     content: public static ServiceController[] GetServices(string machineName)
     content.vb: Public Shared Function GetServices(machineName As String) As ServiceController()
     parameters:
     - id: machineName
       type: System.String
-      description: The computer from which to retrieve the services.
     return:
       type: System.ServiceProcess.ServiceController[]
-      description: An array of type <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="false"></xref> in which each element is associated with a service on the specified computer.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.ArgumentException
-    description: The *machineName* parameter has invalid syntax.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.ServiceProcess.ServiceController.Pause
+  commentId: M:System.ServiceProcess.ServiceController.Pause
   id: Pause
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: Pause()
+  nameWithType: ServiceController.Pause()
   fullName: System.ServiceProcess.ServiceController.Pause()
   type: Method
   source:
@@ -712,27 +783,28 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Pause
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Suspends a service's operation.
   syntax:
     content: public void Pause()
     content.vb: Public Sub Pause
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ServiceProcess.ServiceController.Refresh
+  commentId: M:System.ServiceProcess.ServiceController.Refresh
   id: Refresh
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: Refresh()
+  nameWithType: ServiceController.Refresh()
   fullName: System.ServiceProcess.ServiceController.Refresh()
   type: Method
   source:
@@ -740,22 +812,28 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Refresh
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 31
+    startLine: 34
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Refreshes property values by resetting the properties to their current values.
   syntax:
     content: public void Refresh()
     content.vb: Public Sub Refresh
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ServiceProcess.ServiceController.Start
+  commentId: M:System.ServiceProcess.ServiceController.Start
   id: Start
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: Start()
+  nameWithType: ServiceController.Start()
   fullName: System.ServiceProcess.ServiceController.Start()
   type: Method
   source:
@@ -763,63 +841,63 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Start
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 32
+    startLine: 35
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Starts the service, passing no arguments.
   syntax:
     content: public void Start()
     content.vb: Public Sub Start
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ServiceProcess.ServiceController.Start(System.String[])
+  commentId: M:System.ServiceProcess.ServiceController.Start(System.String[])
   id: Start(System.String[])
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: Start(String[])
-  name.vb: Start(String())
+  nameWithType: ServiceController.Start(String[])
   fullName: System.ServiceProcess.ServiceController.Start(System.String[])
-  fullName.vb: System.ServiceProcess.ServiceController.Start(System.String())
   type: Method
   source:
     remote:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Start
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 33
+    startLine: 36
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Starts a service, passing the specified arguments.
   syntax:
     content: public void Start(string[] args)
     content.vb: Public Sub Start(args As String())
     parameters:
     - id: args
       type: System.String[]
-      description: An array of arguments to pass to the service when it starts.
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service cannot be started.
-  - type: System.ArgumentNullException
-    description: '*args* is null.-or-A member of the array is null.'
+  nameWithType.vb: ServiceController.Start(String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.ServiceProcess.ServiceController.Start(System.String())
+  name.vb: Start(String())
 - uid: System.ServiceProcess.ServiceController.Stop
+  commentId: M:System.ServiceProcess.ServiceController.Stop
   id: Stop
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: Stop()
+  nameWithType: ServiceController.Stop()
   fullName: System.ServiceProcess.ServiceController.Stop()
   type: Method
   source:
@@ -827,27 +905,28 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Stop
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 34
+    startLine: 37
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Stops this service and any services that are dependent on this service.
   syntax:
     content: public void Stop()
     content.vb: Public Sub Stop
-  exceptions:
-  - type: System.ComponentModel.Win32Exception
-    description: An error occurred when accessing a system API.
-  - type: System.InvalidOperationException
-    description: The service was not found.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ServiceProcess.ServiceController.WaitForStatus(System.ServiceProcess.ServiceControllerStatus)
+  commentId: M:System.ServiceProcess.ServiceController.WaitForStatus(System.ServiceProcess.ServiceControllerStatus)
   id: WaitForStatus(System.ServiceProcess.ServiceControllerStatus)
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: WaitForStatus(ServiceControllerStatus)
+  nameWithType: ServiceController.WaitForStatus(ServiceControllerStatus)
   fullName: System.ServiceProcess.ServiceController.WaitForStatus(System.ServiceProcess.ServiceControllerStatus)
   type: Method
   source:
@@ -855,29 +934,31 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: WaitForStatus
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 35
+    startLine: 38
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Infinitely waits for the service to reach the specified status.
   syntax:
     content: public void WaitForStatus(ServiceControllerStatus desiredStatus)
     content.vb: Public Sub WaitForStatus(desiredStatus As ServiceControllerStatus)
     parameters:
     - id: desiredStatus
       type: System.ServiceProcess.ServiceControllerStatus
-      description: The status to wait for.
-  exceptions:
-  - type: System.ComponentModel.InvalidEnumArgumentException
-    description: The *desiredStatus* parameter is not any of the values defined in the <xref href="System.ServiceProcess.ServiceControllerStatus" data-throw-if-not-resolved="false"></xref> enumeration.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ServiceProcess.ServiceController.WaitForStatus(System.ServiceProcess.ServiceControllerStatus,System.TimeSpan)
+  commentId: M:System.ServiceProcess.ServiceController.WaitForStatus(System.ServiceProcess.ServiceControllerStatus,System.TimeSpan)
   id: WaitForStatus(System.ServiceProcess.ServiceControllerStatus,System.TimeSpan)
   parent: System.ServiceProcess.ServiceController
   langs:
   - csharp
   - vb
   name: WaitForStatus(ServiceControllerStatus, TimeSpan)
+  nameWithType: ServiceController.WaitForStatus(ServiceControllerStatus, TimeSpan)
   fullName: System.ServiceProcess.ServiceController.WaitForStatus(System.ServiceProcess.ServiceControllerStatus, System.TimeSpan)
   type: Method
   source:
@@ -885,136 +966,142 @@ items:
       path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: WaitForStatus
     path: src/System.ServiceProcess.ServiceController/ref/System.ServiceProcess.ServiceController.cs
-    startLine: 36
+    startLine: 39
   assemblies:
   - System.ServiceProcess.ServiceController
   namespace: System.ServiceProcess
-  summary: Waits for the service to reach the specified status or for the specified time-out to expire.
   syntax:
     content: public void WaitForStatus(ServiceControllerStatus desiredStatus, TimeSpan timeout)
     content.vb: Public Sub WaitForStatus(desiredStatus As ServiceControllerStatus, timeout As TimeSpan)
     parameters:
     - id: desiredStatus
       type: System.ServiceProcess.ServiceControllerStatus
-      description: The status to wait for.
     - id: timeout
       type: System.TimeSpan
-      description: A <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> object specifying the amount of time to wait for the service to reach the specified status.
-  exceptions:
-  - type: System.ComponentModel.InvalidEnumArgumentException
-    description: The *desiredStatus* parameter is not any of the values defined in the <xref href="System.ServiceProcess.ServiceControllerStatus" data-throw-if-not-resolved="false"></xref> enumeration.
-  - type: System.ServiceProcess.TimeoutException
-    description: The value specified for the *timeout* parameter expires.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.ServiceProcess
+  commentId: N:System.ServiceProcess
   isExternal: false
   name: System.ServiceProcess
+  nameWithType: System.ServiceProcess
   fullName: System.ServiceProcess
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.ServiceProcess.ServiceController[]
-  isExternal: false
   name: ServiceController[]
+  nameWithType: ServiceController[]
   fullName: System.ServiceProcess.ServiceController[]
+  nameWithType.vb: ServiceController()
   fullname.vb: System.ServiceProcess.ServiceController()
   name.vb: ServiceController()
   spec.csharp:
   - uid: System.ServiceProcess.ServiceController
     name: ServiceController
+    nameWithType: ServiceController
     fullName: System.ServiceProcess.ServiceController
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.ServiceProcess.ServiceController
     name: ServiceController
+    nameWithType: ServiceController
     fullName: System.ServiceProcess.ServiceController
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Runtime.InteropServices.SafeHandle
+  commentId: T:System.Runtime.InteropServices.SafeHandle
   parent: System.Runtime.InteropServices
   isExternal: false
-  name: Runtime.InteropServices.SafeHandle
+  name: SafeHandle
+  nameWithType: SafeHandle
   fullName: System.Runtime.InteropServices.SafeHandle
 - uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
   isExternal: false
   name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
 - uid: System.ServiceProcess.ServiceType
+  commentId: T:System.ServiceProcess.ServiceType
   parent: System.ServiceProcess
   isExternal: false
   name: ServiceType
+  nameWithType: ServiceType
   fullName: System.ServiceProcess.ServiceType
 - uid: System.ServiceProcess.ServiceStartMode
+  commentId: T:System.ServiceProcess.ServiceStartMode
   parent: System.ServiceProcess
   isExternal: false
   name: ServiceStartMode
+  nameWithType: ServiceStartMode
   fullName: System.ServiceProcess.ServiceStartMode
 - uid: System.ServiceProcess.ServiceControllerStatus
+  commentId: T:System.ServiceProcess.ServiceControllerStatus
   parent: System.ServiceProcess
   isExternal: false
   name: ServiceControllerStatus
+  nameWithType: ServiceControllerStatus
   fullName: System.ServiceProcess.ServiceControllerStatus
 - uid: System.String[]
-  isExternal: false
   name: String[]
+  nameWithType: String[]
   fullName: System.String[]
+  nameWithType.vb: String()
   fullname.vb: System.String()
   name.vb: String()
   spec.csharp:
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.TimeSpan
+  commentId: T:System.TimeSpan
   parent: System
   isExternal: false
   name: TimeSpan
+  nameWithType: TimeSpan
   fullName: System.TimeSpan
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.ComponentModel.Win32Exception
-  isExternal: false
-  name: Win32Exception
-  fullName: System.ComponentModel.Win32Exception
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ComponentModel.InvalidEnumArgumentException
-- uid: System.ServiceProcess.TimeoutException
-  isExternal: false
-  name: TimeoutException
-  fullName: System.ServiceProcess.TimeoutException

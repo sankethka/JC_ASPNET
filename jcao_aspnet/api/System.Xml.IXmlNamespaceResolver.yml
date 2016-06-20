@@ -1,5 +1,6 @@
 items:
 - uid: System.Xml.IXmlNamespaceResolver
+  commentId: T:System.Xml.IXmlNamespaceResolver
   id: IXmlNamespaceResolver
   parent: System.Xml
   children:
@@ -10,6 +11,7 @@ items:
   - csharp
   - vb
   name: IXmlNamespaceResolver
+  nameWithType: IXmlNamespaceResolver
   fullName: System.Xml.IXmlNamespaceResolver
   type: Interface
   source:
@@ -17,22 +19,30 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: IXmlNamespaceResolver
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 24
+    startLine: 27
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Provides read-only access to a set of prefix and namespace mappings.
   syntax:
     content: public interface IXmlNamespaceResolver
     content.vb: Public Interface IXmlNamespaceResolver
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
+  commentId: M:System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
   id: GetNamespacesInScope(System.Xml.XmlNamespaceScope)
   parent: System.Xml.IXmlNamespaceResolver
   langs:
   - csharp
   - vb
   name: GetNamespacesInScope(XmlNamespaceScope)
+  nameWithType: IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope)
   fullName: System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)
   type: Method
   source:
@@ -40,29 +50,29 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: GetNamespacesInScope
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 26
+    startLine: 29
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets a collection of defined prefix-namespace mappings that are currently in scope.
   syntax:
     content: Collections.Generic.IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope)
     content.vb: Function GetNamespacesInScope(scope As XmlNamespaceScope) As Collections.Generic.IDictionary(Of String, String)
     parameters:
     - id: scope
       type: System.Xml.XmlNamespaceScope
-      description: An <xref href="System.Xml.XmlNamespaceScope" data-throw-if-not-resolved="false"></xref> value that specifies the type of namespace nodes to return.
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: An <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="false"></xref> that contains the current in-scope namespaces.
 - uid: System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)
+  commentId: M:System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)
   id: LookupNamespace(System.String)
   parent: System.Xml.IXmlNamespaceResolver
   langs:
   - csharp
   - vb
   name: LookupNamespace(String)
+  nameWithType: IXmlNamespaceResolver.LookupNamespace(String)
   fullName: System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)
   type: Method
   source:
@@ -70,29 +80,29 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: LookupNamespace
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets the namespace URI mapped to the specified prefix.
   syntax:
     content: string LookupNamespace(string prefix)
     content.vb: Function LookupNamespace(prefix As String) As String
     parameters:
     - id: prefix
       type: System.String
-      description: The prefix whose namespace URI you wish to find.
     return:
       type: System.String
-      description: The namespace URI that is mapped to the prefix; null if the prefix is not mapped to a namespace URI.
 - uid: System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)
+  commentId: M:System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)
   id: LookupPrefix(System.String)
   parent: System.Xml.IXmlNamespaceResolver
   langs:
   - csharp
   - vb
   name: LookupPrefix(String)
+  nameWithType: IXmlNamespaceResolver.LookupPrefix(String)
   fullName: System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)
   type: Method
   source:
@@ -100,112 +110,152 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: LookupPrefix
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets the prefix that is mapped to the specified namespace URI.
   syntax:
     content: string LookupPrefix(string namespaceName)
     content.vb: Function LookupPrefix(namespaceName As String) As String
     parameters:
     - id: namespaceName
       type: System.String
-      description: The namespace URI whose prefix you wish to find.
     return:
       type: System.String
-      description: The prefix that is mapped to the namespace URI; null if the namespace URI is not mapped to a prefix.
 references:
 - uid: System.Xml
+  commentId: N:System.Xml
   isExternal: false
   name: System.Xml
+  nameWithType: System.Xml
   fullName: System.Xml
 - uid: System.Xml.XmlNamespaceScope
+  commentId: T:System.Xml.XmlNamespaceScope
   parent: System.Xml
   isExternal: false
   name: XmlNamespaceScope
+  nameWithType: XmlNamespaceScope
   fullName: System.Xml.XmlNamespaceScope
 - uid: System.Collections.Generic.IDictionary{System.String,System.String}
+  commentId: '!:System.Collections.Generic.IDictionary{System.String,System.String}'
   definition: System.Collections.Generic.IDictionary`2
   name: Collections.Generic.IDictionary<String, String>
+  nameWithType: Collections.Generic.IDictionary<String, String>
   fullName: System.Collections.Generic.IDictionary<System.String, System.String>
+  nameWithType.vb: Collections.Generic.IDictionary(Of String, String)
   fullname.vb: System.Collections.Generic.IDictionary(Of System.String, System.String)
   name.vb: Collections.Generic.IDictionary(Of String, String)
   spec.csharp:
   - uid: System.Collections.Generic.IDictionary`2
     name: Collections.Generic.IDictionary
+    nameWithType: Collections.Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IDictionary`2
     name: Collections.Generic.IDictionary
+    nameWithType: Collections.Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
   isExternal: false
-  name: Collections.Generic.IDictionary<, >
+  name: Generic.IDictionary<, >
+  nameWithType: Generic.IDictionary<, >
   fullName: System.Collections.Generic.IDictionary<, >
+  nameWithType.vb: Generic.IDictionary(Of , )
   fullname.vb: System.Collections.Generic.IDictionary(Of , )
-  name.vb: Collections.Generic.IDictionary(Of , )
+  name.vb: Generic.IDictionary(Of , )
   spec.csharp:
   - uid: System.Collections.Generic.IDictionary`2
-    name: Collections.Generic.IDictionary
+    name: Generic.IDictionary
+    nameWithType: Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IDictionary`2
-    name: Collections.Generic.IDictionary
+    name: Generic.IDictionary
+    nameWithType: Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System

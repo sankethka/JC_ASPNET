@@ -1,5 +1,6 @@
 items:
 - uid: System.Lazy`1
+  commentId: T:System.Lazy`1
   id: Lazy`1
   parent: System
   children:
@@ -12,22 +13,24 @@ items:
   - System.Lazy`1.IsValueCreated
   - System.Lazy`1.ToString
   - System.Lazy`1.Value
+  langs:
+  - csharp
+  - vb
   name: Lazy<T>
-  name.vb: Lazy(Of T)
+  nameWithType: Lazy<T>
   fullName: System.Lazy<T>
-  fullName.vb: System.Lazy(Of T)
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Lazy.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Lazy.cs
-    startLine: 48
+      repo: https://github.com/dotnet/corefx.git
+    id: Lazy
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1201
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Provides support for lazy initialization.
   syntax:
     content: public class Lazy<T>
     content.vb: Public Class Lazy(Of T)
@@ -42,527 +45,710 @@ items:
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  nameWithType.vb: Lazy(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: System.Lazy(Of T)
+  name.vb: Lazy(Of T)
 - uid: System.Lazy`1.#ctor
+  commentId: M:System.Lazy`1.#ctor
   id: '#ctor'
   parent: System.Lazy`1
+  langs:
+  - csharp
+  - vb
   name: Lazy()
+  nameWithType: Lazy<T>.Lazy()
   fullName: System.Lazy<T>.Lazy()
-  fullName.vb: System.Lazy(Of T).Lazy()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Lazy.cs
-    startLine: 120
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1203
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> class. When lazy initialization occurs, the default constructor of the target type is used.
   syntax:
     content: public Lazy()
     content.vb: Public Sub New
+  nameWithType.vb: Lazy(Of T).Lazy()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T).Lazy()
 - uid: System.Lazy`1.#ctor(System.Boolean)
+  commentId: M:System.Lazy`1.#ctor(System.Boolean)
   id: '#ctor(System.Boolean)'
   parent: System.Lazy`1
+  langs:
+  - csharp
+  - vb
   name: Lazy(Boolean)
+  nameWithType: Lazy<T>.Lazy(Boolean)
   fullName: System.Lazy<T>.Lazy(System.Boolean)
-  fullName.vb: System.Lazy(Of T).Lazy(System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Lazy.cs
-    startLine: 149
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1204
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> class. When lazy initialization occurs, the default constructor of the target type and the specified initialization mode are used.
   syntax:
     content: public Lazy(bool isThreadSafe)
     content.vb: Public Sub New(isThreadSafe As Boolean)
     parameters:
     - id: isThreadSafe
       type: System.Boolean
-      description: true to make this instance usable concurrently by multiple threads; false to make the instance usable by only one thread at a time.
+  nameWithType.vb: Lazy(Of T).Lazy(Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T).Lazy(System.Boolean)
 - uid: System.Lazy`1.#ctor(System.Func{`0})
+  commentId: M:System.Lazy`1.#ctor(System.Func{`0})
   id: '#ctor(System.Func{`0})'
   parent: System.Lazy`1
+  langs:
+  - csharp
+  - vb
   name: Lazy(Func<T>)
-  name.vb: Lazy(Func(Of T))
+  nameWithType: Lazy<T>.Lazy(Func<T>)
   fullName: System.Lazy<T>.Lazy(System.Func<T>)
-  fullName.vb: System.Lazy(Of T).Lazy(System.Func(Of T))
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Lazy.cs
-    startLine: 138
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1205
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> class. When lazy initialization occurs, the specified initialization function is used.
   syntax:
     content: public Lazy(Func<T> valueFactory)
     content.vb: Public Sub New(valueFactory As Func(Of T))
     parameters:
     - id: valueFactory
       type: System.Func{{T}}
-      description: The delegate that is invoked to produce the lazily initialized value when it is needed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*valueFactory* is null.'
+  nameWithType.vb: Lazy(Of T).Lazy(Func(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T).Lazy(System.Func(Of T))
+  name.vb: Lazy(Func(Of T))
 - uid: System.Lazy`1.#ctor(System.Func{`0},System.Boolean)
+  commentId: M:System.Lazy`1.#ctor(System.Func{`0},System.Boolean)
   id: '#ctor(System.Func{`0},System.Boolean)'
   parent: System.Lazy`1
+  langs:
+  - csharp
+  - vb
   name: Lazy(Func<T>, Boolean)
-  name.vb: Lazy(Func(Of T), Boolean)
+  nameWithType: Lazy<T>.Lazy(Func<T>, Boolean)
   fullName: System.Lazy<T>.Lazy(System.Func<T>, System.Boolean)
-  fullName.vb: System.Lazy(Of T).Lazy(System.Func(Of T), System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Lazy.cs
-    startLine: 177
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1206
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> class. When lazy initialization occurs, the specified initialization function and initialization mode are used.
   syntax:
     content: public Lazy(Func<T> valueFactory, bool isThreadSafe)
     content.vb: Public Sub New(valueFactory As Func(Of T), isThreadSafe As Boolean)
     parameters:
     - id: valueFactory
       type: System.Func{{T}}
-      description: The delegate that is invoked to produce the lazily initialized value when it is needed.
     - id: isThreadSafe
       type: System.Boolean
-      description: true to make this instance usable concurrently by multiple threads; false to make this instance usable by only one thread at a time.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*valueFactory* is null.'
+  nameWithType.vb: Lazy(Of T).Lazy(Func(Of T), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T).Lazy(System.Func(Of T), System.Boolean)
+  name.vb: Lazy(Func(Of T), Boolean)
 - uid: System.Lazy`1.#ctor(System.Func{`0},System.Threading.LazyThreadSafetyMode)
+  commentId: M:System.Lazy`1.#ctor(System.Func{`0},System.Threading.LazyThreadSafetyMode)
   id: '#ctor(System.Func{`0},System.Threading.LazyThreadSafetyMode)'
   parent: System.Lazy`1
+  langs:
+  - csharp
+  - vb
   name: Lazy(Func<T>, LazyThreadSafetyMode)
-  name.vb: Lazy(Func(Of T), LazyThreadSafetyMode)
+  nameWithType: Lazy<T>.Lazy(Func<T>, LazyThreadSafetyMode)
   fullName: System.Lazy<T>.Lazy(System.Func<T>, System.Threading.LazyThreadSafetyMode)
-  fullName.vb: System.Lazy(Of T).Lazy(System.Func(Of T), System.Threading.LazyThreadSafetyMode)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Lazy.cs
-    startLine: 193
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1207
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> class that uses the specified initialization function and thread-safety mode.
   syntax:
     content: public Lazy(Func<T> valueFactory, LazyThreadSafetyMode mode)
     content.vb: Public Sub New(valueFactory As Func(Of T), mode As LazyThreadSafetyMode)
     parameters:
     - id: valueFactory
       type: System.Func{{T}}
-      description: The delegate that is invoked to produce the lazily initialized value when it is needed.
     - id: mode
       type: System.Threading.LazyThreadSafetyMode
-      description: One of the enumeration values that specifies the thread safety mode.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*mode* contains an invalid value.'
-  - type: System.ArgumentNullException
-    description: '*valueFactory* is null.'
+  nameWithType.vb: Lazy(Of T).Lazy(Func(Of T), LazyThreadSafetyMode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T).Lazy(System.Func(Of T), System.Threading.LazyThreadSafetyMode)
+  name.vb: Lazy(Func(Of T), LazyThreadSafetyMode)
 - uid: System.Lazy`1.#ctor(System.Threading.LazyThreadSafetyMode)
+  commentId: M:System.Lazy`1.#ctor(System.Threading.LazyThreadSafetyMode)
   id: '#ctor(System.Threading.LazyThreadSafetyMode)'
   parent: System.Lazy`1
+  langs:
+  - csharp
+  - vb
   name: Lazy(LazyThreadSafetyMode)
+  nameWithType: Lazy<T>.Lazy(LazyThreadSafetyMode)
   fullName: System.Lazy<T>.Lazy(System.Threading.LazyThreadSafetyMode)
-  fullName.vb: System.Lazy(Of T).Lazy(System.Threading.LazyThreadSafetyMode)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Lazy.cs
-    startLine: 160
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1208
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> class that uses the default constructor of *T* and the specified thread-safety mode.
   syntax:
     content: public Lazy(LazyThreadSafetyMode mode)
     content.vb: Public Sub New(mode As LazyThreadSafetyMode)
     parameters:
     - id: mode
       type: System.Threading.LazyThreadSafetyMode
-      description: One of the enumeration values that specifies the thread safety mode.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*mode* contains an invalid value.'
+  nameWithType.vb: Lazy(Of T).Lazy(LazyThreadSafetyMode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Lazy(Of T).Lazy(System.Threading.LazyThreadSafetyMode)
 - uid: System.Lazy`1.IsValueCreated
+  commentId: P:System.Lazy`1.IsValueCreated
   id: IsValueCreated
   parent: System.Lazy`1
+  langs:
+  - csharp
+  - vb
   name: IsValueCreated
+  nameWithType: Lazy<T>.IsValueCreated
   fullName: System.Lazy<T>.IsValueCreated
-  fullName.vb: System.Lazy(Of T).IsValueCreated
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Lazy.cs
-    startLine: 280
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsValueCreated
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1209
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Gets a value that indicates whether a value has been created for this <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> instance.
   syntax:
     content: public bool IsValueCreated { get; }
     content.vb: Public ReadOnly Property IsValueCreated As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if a value has been created for this <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> instance; otherwise, false.
+  nameWithType.vb: Lazy(Of T).IsValueCreated
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Lazy(Of T).IsValueCreated
 - uid: System.Lazy`1.Value
+  commentId: P:System.Lazy`1.Value
   id: Value
   parent: System.Lazy`1
+  langs:
+  - csharp
+  - vb
   name: Value
+  nameWithType: Lazy<T>.Value
   fullName: System.Lazy<T>.Value
-  fullName.vb: System.Lazy(Of T).Value
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Lazy.cs
-    startLine: 309
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Value
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1210
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Gets the lazily initialized value of the current <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> instance.
   syntax:
     content: public T Value { get; }
     content.vb: Public ReadOnly Property Value As T
     parameters: []
     return:
       type: '{T}'
-      description: The lazily initialized value of the current <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> instance.
-  exceptions:
-  - type: System.MemberAccessException
-    description: The <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> instance is initialized to use the default constructor of the type that is being lazily initialized, and permissions to access the constructor are missing.
-  - type: System.MissingMemberException
-    description: The <xref href="System.Lazy`1" data-throw-if-not-resolved="false"></xref> instance is initialized to use the default constructor of the type that is being lazily initialized, and that type does not have a public, parameterless constructor.
-  - type: System.InvalidOperationException
-    description: The initialization function tries to access <xref href="System.Lazy`1.Value" data-throw-if-not-resolved="false"></xref> on this instance.
+  nameWithType.vb: Lazy(Of T).Value
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Lazy(Of T).Value
 - uid: System.Lazy`1.ToString
+  commentId: M:System.Lazy`1.ToString
   id: ToString
   parent: System.Lazy`1
+  langs:
+  - csharp
+  - vb
   name: ToString()
+  nameWithType: Lazy<T>.ToString()
   fullName: System.Lazy<T>.ToString()
-  fullName.vb: System.Lazy(Of T).ToString()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Lazy.cs
-    startLine: 232
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1211
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Creates and returns a string representation of the <xref href="System.Lazy`1.Value" data-throw-if-not-resolved="false"></xref> property for this instance.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: The result of calling the <xref href="System.Object.ToString" data-throw-if-not-resolved="false"></xref> method on the <xref href="System.Lazy`1.Value" data-throw-if-not-resolved="false"></xref> property for this instance, if the value has been created (that is, if the <xref href="System.Lazy`1.IsValueCreated" data-throw-if-not-resolved="false"></xref> property returns true). Otherwise, a string indicating that the value has not been created.
   overridden: System.Object.ToString
-  exceptions:
-  - type: System.NullReferenceException
-    description: The <xref href="System.Lazy`1.Value" data-throw-if-not-resolved="false"></xref> property is null.
+  nameWithType.vb: Lazy(Of T).ToString()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.Lazy(Of T).ToString()
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object)
+  nameWithType: Object.Equals(Object)
   fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
   parent: System.Object
   isExternal: false
   name: GetHashCode()
+  nameWithType: Object.GetHashCode()
   fullName: System.Object.GetHashCode()
   spec.csharp:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Func{{T}}
+  commentId: '!:System.Func{``0}'
   parent: System
   definition: System.Func`1
   name: Func<T>
-  name.vb: Func(Of T)
+  nameWithType: Func<T>
   fullName: System.Func<T>
-  fullName.vb: System.Func(Of T)
+  nameWithType.vb: Func(Of T)
+  fullname.vb: System.Func(Of T)
+  name.vb: Func(Of T)
   spec.csharp:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func`1
-  parent: System
+  commentId: T:System.Func`1
   isExternal: false
   name: Func<>
-  name.vb: Func(Of )
+  nameWithType: Func<>
   fullName: System.Func<>
-  fullName.vb: System.Func(Of )
+  nameWithType.vb: Func(Of )
+  fullname.vb: System.Func(Of )
+  name.vb: Func(Of )
   spec.csharp:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Threading.LazyThreadSafetyMode
+  commentId: T:System.Threading.LazyThreadSafetyMode
   parent: System.Threading
   isExternal: false
   name: LazyThreadSafetyMode
+  nameWithType: LazyThreadSafetyMode
   fullName: System.Threading.LazyThreadSafetyMode
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
   isExternal: false
   name: T
+  nameWithType: T
   fullName: T
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.MemberAccessException
-  parent: System
-  isExternal: false
-  name: MemberAccessException
-  fullName: System.MemberAccessException
-- uid: System.MissingMemberException
-  parent: System
-  isExternal: false
-  name: MissingMemberException
-  fullName: System.MissingMemberException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: System.NullReferenceException
-  isExternal: false
-  name: NullReferenceException
-  fullName: System.NullReferenceException

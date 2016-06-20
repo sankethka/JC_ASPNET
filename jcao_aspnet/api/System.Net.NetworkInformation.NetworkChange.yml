@@ -1,56 +1,98 @@
 items:
 - uid: System.Net.NetworkInformation.NetworkChange
+  commentId: T:System.Net.NetworkInformation.NetworkChange
   id: NetworkChange
   parent: System.Net.NetworkInformation
   children:
   - System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged
+  langs:
+  - csharp
+  - vb
   name: NetworkChange
+  nameWithType: NetworkChange
   fullName: System.Net.NetworkInformation.NetworkChange
   type: Class
   source:
-    remote: &o0
-      path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/NetworkAddressChange.Windows.cs
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/NetworkAddressChange.Windows.cs
-    startLine: 12
+    id: NetworkChange
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 255
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Allows applications to receive notification when the Internet Protocol (IP) address of a network interface, also called a network card or adapter, changes.
   syntax:
     content: 'public class NetworkChange : object'
-    content.vb: Public Class NetworkChange Inherits Object
+    content.vb: >-
+      Public Class NetworkChange
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged
+  commentId: E:System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged
   id: NetworkAddressChanged
   parent: System.Net.NetworkInformation.NetworkChange
+  langs:
+  - csharp
+  - vb
   name: NetworkAddressChanged
+  nameWithType: NetworkChange.NetworkAddressChanged
   fullName: System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged
   type: Event
   source:
-    remote: *o0
-    path: src/System.Net.NetworkInformation/src/System/Net/NetworkInformation/NetworkAddressChange.Windows.cs
-    startLine: 26
+    remote:
+      path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NetworkAddressChanged
+    path: src/System.Net.NetworkInformation/ref/System.Net.NetworkInformation.cs
+    startLine: 257
   assemblies:
   - System.Net.NetworkInformation
   namespace: System.Net.NetworkInformation
-  summary: Occurs when the IP address of a network interface changes.
   syntax:
     content: public static event NetworkAddressChangedEventHandler NetworkAddressChanged
     content.vb: Public Shared Event NetworkAddressChanged As NetworkAddressChangedEventHandler
+    return:
+      type: System.Net.NetworkInformation.NetworkAddressChangedEventHandler
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Net.NetworkInformation
+  commentId: N:System.Net.NetworkInformation
   isExternal: false
   name: System.Net.NetworkInformation
+  nameWithType: System.Net.NetworkInformation
   fullName: System.Net.NetworkInformation
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
+- uid: System.Net.NetworkInformation.NetworkAddressChangedEventHandler
+  commentId: T:System.Net.NetworkInformation.NetworkAddressChangedEventHandler
+  parent: System.Net.NetworkInformation
+  isExternal: false
+  name: NetworkAddressChangedEventHandler
+  nameWithType: NetworkAddressChangedEventHandler
+  fullName: System.Net.NetworkInformation.NetworkAddressChangedEventHandler

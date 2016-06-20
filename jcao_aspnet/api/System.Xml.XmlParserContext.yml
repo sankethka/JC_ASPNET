@@ -1,5 +1,6 @@
 items:
 - uid: System.Xml.XmlParserContext
+  commentId: T:System.Xml.XmlParserContext
   id: XmlParserContext
   parent: System.Xml
   children:
@@ -21,6 +22,7 @@ items:
   - csharp
   - vb
   name: XmlParserContext
+  nameWithType: XmlParserContext
   fullName: System.Xml.XmlParserContext
   type: Class
   source:
@@ -28,24 +30,34 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: XmlParserContext
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 193
+    startLine: 196
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Provides all the context information required by the <xref href="System.Xml.XmlReader" data-throw-if-not-resolved="false"></xref> to parse an XML fragment.
   syntax:
     content: 'public class XmlParserContext : object'
-    content.vb: Public Class XmlParserContext Inherits Object
+    content.vb: >-
+      Public Class XmlParserContext
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.String,System.String,System.String,System.String,System.String,System.Xml.XmlSpace)
+  commentId: M:System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.String,System.String,System.String,System.String,System.String,System.Xml.XmlSpace)
   id: '#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.String,System.String,System.String,System.String,System.String,System.Xml.XmlSpace)'
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: XmlParserContext(XmlNameTable, XmlNamespaceManager, String, String, String, String, String, String, XmlSpace)
+  nameWithType: XmlParserContext.XmlParserContext(XmlNameTable, XmlNamespaceManager, String, String, String, String, String, String, XmlSpace)
   fullName: System.Xml.XmlParserContext.XmlParserContext(System.Xml.XmlNameTable, System.Xml.XmlNamespaceManager, System.String, System.String, System.String, System.String, System.String, System.String, System.Xml.XmlSpace)
   type: Constructor
   source:
@@ -53,53 +65,47 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 195
+    startLine: 198
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Initializes a new instance of the XmlParserContext class with the specified <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref>, <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref>, base URI, xml:lang, xml:space, and document type values.
   syntax:
     content: public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, string docTypeName, string pubId, string sysId, string internalSubset, string baseURI, string xmlLang, XmlSpace xmlSpace)
     content.vb: Public Sub New(nt As XmlNameTable, nsMgr As XmlNamespaceManager, docTypeName As String, pubId As String, sysId As String, internalSubset As String, baseURI As String, xmlLang As String, xmlSpace As XmlSpace)
     parameters:
     - id: nt
       type: System.Xml.XmlNameTable
-      description: The <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref> to use to atomize strings. If this is null, the name table used to construct the *nsMgr* is used instead. For more information about atomized strings, see <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref>.
     - id: nsMgr
       type: System.Xml.XmlNamespaceManager
-      description: The <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> to use for looking up namespace information, or null.
     - id: docTypeName
       type: System.String
-      description: The name of the document type declaration.
     - id: pubId
       type: System.String
-      description: The public identifier.
     - id: sysId
       type: System.String
-      description: The system identifier.
     - id: internalSubset
       type: System.String
-      description: The internal DTD subset. The DTD subset is used for entity resolution, not for document validation.
     - id: baseURI
       type: System.String
-      description: The base URI for the XML fragment (the location from which the fragment was loaded).
     - id: xmlLang
       type: System.String
-      description: The xml:lang scope.
     - id: xmlSpace
       type: System.Xml.XmlSpace
-      description: An <xref href="System.Xml.XmlSpace" data-throw-if-not-resolved="false"></xref> value indicating the xml:space scope.
-  exceptions:
-  - type: System.Xml.XmlException
-    description: '*nt* is not the same XmlNameTable used to construct *nsMgr*.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.String,System.String,System.String,System.String,System.String,System.Xml.XmlSpace,System.Text.Encoding)
+  commentId: M:System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.String,System.String,System.String,System.String,System.String,System.Xml.XmlSpace,System.Text.Encoding)
   id: '#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.String,System.String,System.String,System.String,System.String,System.Xml.XmlSpace,System.Text.Encoding)'
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: XmlParserContext(XmlNameTable, XmlNamespaceManager, String, String, String, String, String, String, XmlSpace, Text.Encoding)
+  nameWithType: XmlParserContext.XmlParserContext(XmlNameTable, XmlNamespaceManager, String, String, String, String, String, String, XmlSpace, Text.Encoding)
   fullName: System.Xml.XmlParserContext.XmlParserContext(System.Xml.XmlNameTable, System.Xml.XmlNamespaceManager, System.String, System.String, System.String, System.String, System.String, System.String, System.Xml.XmlSpace, System.Text.Encoding)
   type: Constructor
   source:
@@ -107,56 +113,49 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 196
+    startLine: 199
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Initializes a new instance of the XmlParserContext class with the specified <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref>, <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref>, base URI, xml:lang, xml:space, encoding, and document type values.
   syntax:
     content: public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, string docTypeName, string pubId, string sysId, string internalSubset, string baseURI, string xmlLang, XmlSpace xmlSpace, Text.Encoding enc)
     content.vb: Public Sub New(nt As XmlNameTable, nsMgr As XmlNamespaceManager, docTypeName As String, pubId As String, sysId As String, internalSubset As String, baseURI As String, xmlLang As String, xmlSpace As XmlSpace, enc As Text.Encoding)
     parameters:
     - id: nt
       type: System.Xml.XmlNameTable
-      description: The <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref> to use to atomize strings. If this is null, the name table used to construct the *nsMgr* is used instead. For more information about atomized strings, see <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref>.
     - id: nsMgr
       type: System.Xml.XmlNamespaceManager
-      description: The <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> to use for looking up namespace information, or null.
     - id: docTypeName
       type: System.String
-      description: The name of the document type declaration.
     - id: pubId
       type: System.String
-      description: The public identifier.
     - id: sysId
       type: System.String
-      description: The system identifier.
     - id: internalSubset
       type: System.String
-      description: The internal DTD subset. The DTD is used for entity resolution, not for document validation.
     - id: baseURI
       type: System.String
-      description: The base URI for the XML fragment (the location from which the fragment was loaded).
     - id: xmlLang
       type: System.String
-      description: The xml:lang scope.
     - id: xmlSpace
       type: System.Xml.XmlSpace
-      description: An <xref href="System.Xml.XmlSpace" data-throw-if-not-resolved="false"></xref> value indicating the xml:space scope.
     - id: enc
       type: System.Text.Encoding
-      description: An <xref href="System.Text.Encoding" data-throw-if-not-resolved="false"></xref> object indicating the encoding setting.
-  exceptions:
-  - type: System.Xml.XmlException
-    description: '*nt* is not the same XmlNameTable used to construct *nsMgr*.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.Xml.XmlSpace)
+  commentId: M:System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.Xml.XmlSpace)
   id: '#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.Xml.XmlSpace)'
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: XmlParserContext(XmlNameTable, XmlNamespaceManager, String, XmlSpace)
+  nameWithType: XmlParserContext.XmlParserContext(XmlNameTable, XmlNamespaceManager, String, XmlSpace)
   fullName: System.Xml.XmlParserContext.XmlParserContext(System.Xml.XmlNameTable, System.Xml.XmlNamespaceManager, System.String, System.Xml.XmlSpace)
   type: Constructor
   source:
@@ -164,38 +163,37 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 197
+    startLine: 200
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Initializes a new instance of the XmlParserContext class with the specified <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref>, <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref>, xml:lang, and xml:space values.
   syntax:
     content: public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, string xmlLang, XmlSpace xmlSpace)
     content.vb: Public Sub New(nt As XmlNameTable, nsMgr As XmlNamespaceManager, xmlLang As String, xmlSpace As XmlSpace)
     parameters:
     - id: nt
       type: System.Xml.XmlNameTable
-      description: The <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref> to use to atomize strings. If this is null, the name table used to construct the *nsMgr* is used instead. For more information about atomized strings, see <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref>.
     - id: nsMgr
       type: System.Xml.XmlNamespaceManager
-      description: The <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> to use for looking up namespace information, or null.
     - id: xmlLang
       type: System.String
-      description: The xml:lang scope.
     - id: xmlSpace
       type: System.Xml.XmlSpace
-      description: An <xref href="System.Xml.XmlSpace" data-throw-if-not-resolved="false"></xref> value indicating the xml:space scope.
-  exceptions:
-  - type: System.Xml.XmlException
-    description: '*nt* is not the same XmlNameTable used to construct *nsMgr*.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.Xml.XmlSpace,System.Text.Encoding)
+  commentId: M:System.Xml.XmlParserContext.#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.Xml.XmlSpace,System.Text.Encoding)
   id: '#ctor(System.Xml.XmlNameTable,System.Xml.XmlNamespaceManager,System.String,System.Xml.XmlSpace,System.Text.Encoding)'
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: XmlParserContext(XmlNameTable, XmlNamespaceManager, String, XmlSpace, Text.Encoding)
+  nameWithType: XmlParserContext.XmlParserContext(XmlNameTable, XmlNamespaceManager, String, XmlSpace, Text.Encoding)
   fullName: System.Xml.XmlParserContext.XmlParserContext(System.Xml.XmlNameTable, System.Xml.XmlNamespaceManager, System.String, System.Xml.XmlSpace, System.Text.Encoding)
   type: Constructor
   source:
@@ -203,41 +201,39 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 198
+    startLine: 201
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Initializes a new instance of the XmlParserContext class with the specified <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref>, <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref>, xml:lang, xml:space, and encoding.
   syntax:
     content: public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, string xmlLang, XmlSpace xmlSpace, Text.Encoding enc)
     content.vb: Public Sub New(nt As XmlNameTable, nsMgr As XmlNamespaceManager, xmlLang As String, xmlSpace As XmlSpace, enc As Text.Encoding)
     parameters:
     - id: nt
       type: System.Xml.XmlNameTable
-      description: The <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref> to use to atomize strings. If this is null, the name table used to construct the *nsMgr* is used instead. For more information on atomized strings, see <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref>.
     - id: nsMgr
       type: System.Xml.XmlNamespaceManager
-      description: The <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref> to use for looking up namespace information, or null.
     - id: xmlLang
       type: System.String
-      description: The xml:lang scope.
     - id: xmlSpace
       type: System.Xml.XmlSpace
-      description: An <xref href="System.Xml.XmlSpace" data-throw-if-not-resolved="false"></xref> value indicating the xml:space scope.
     - id: enc
       type: System.Text.Encoding
-      description: An <xref href="System.Text.Encoding" data-throw-if-not-resolved="false"></xref> object indicating the encoding setting.
-  exceptions:
-  - type: System.Xml.XmlException
-    description: '*nt* is not the same XmlNameTable used to construct *nsMgr*.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.BaseURI
+  commentId: P:System.Xml.XmlParserContext.BaseURI
   id: BaseURI
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: BaseURI
+  nameWithType: XmlParserContext.BaseURI
   fullName: System.Xml.XmlParserContext.BaseURI
   type: Property
   source:
@@ -245,26 +241,33 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: BaseURI
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 199
+    startLine: 202
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets or sets the base URI.
   syntax:
     content: public string BaseURI { get; set; }
     content.vb: Public Property BaseURI As String
     parameters: []
     return:
       type: System.String
-      description: The base URI to use to resolve the DTD file.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.DocTypeName
+  commentId: P:System.Xml.XmlParserContext.DocTypeName
   id: DocTypeName
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: DocTypeName
+  nameWithType: XmlParserContext.DocTypeName
   fullName: System.Xml.XmlParserContext.DocTypeName
   type: Property
   source:
@@ -272,26 +275,33 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: DocTypeName
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 200
+    startLine: 203
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets or sets the name of the document type declaration.
   syntax:
     content: public string DocTypeName { get; set; }
     content.vb: Public Property DocTypeName As String
     parameters: []
     return:
       type: System.String
-      description: The name of the document type declaration.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.Encoding
+  commentId: P:System.Xml.XmlParserContext.Encoding
   id: Encoding
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: Encoding
+  nameWithType: XmlParserContext.Encoding
   fullName: System.Xml.XmlParserContext.Encoding
   type: Property
   source:
@@ -299,26 +309,33 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Encoding
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 201
+    startLine: 204
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets or sets the encoding type.
   syntax:
     content: public Text.Encoding Encoding { get; set; }
     content.vb: Public Property Encoding As Text.Encoding
     parameters: []
     return:
       type: System.Text.Encoding
-      description: An <xref href="System.Text.Encoding" data-throw-if-not-resolved="false"></xref> object indicating the encoding type.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.InternalSubset
+  commentId: P:System.Xml.XmlParserContext.InternalSubset
   id: InternalSubset
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: InternalSubset
+  nameWithType: XmlParserContext.InternalSubset
   fullName: System.Xml.XmlParserContext.InternalSubset
   type: Property
   source:
@@ -326,26 +343,33 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: InternalSubset
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 202
+    startLine: 205
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets or sets the internal DTD subset.
   syntax:
     content: public string InternalSubset { get; set; }
     content.vb: Public Property InternalSubset As String
     parameters: []
     return:
       type: System.String
-      description: The internal DTD subset. For example, this property returns everything between the square brackets &lt;!DOCTYPE doc [...]&gt;.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.NamespaceManager
+  commentId: P:System.Xml.XmlParserContext.NamespaceManager
   id: NamespaceManager
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: NamespaceManager
+  nameWithType: XmlParserContext.NamespaceManager
   fullName: System.Xml.XmlParserContext.NamespaceManager
   type: Property
   source:
@@ -353,26 +377,33 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NamespaceManager
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 203
+    startLine: 206
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets or sets the <xref href="System.Xml.XmlNamespaceManager" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public XmlNamespaceManager NamespaceManager { get; set; }
     content.vb: Public Property NamespaceManager As XmlNamespaceManager
     parameters: []
     return:
       type: System.Xml.XmlNamespaceManager
-      description: The XmlNamespaceManager.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.NameTable
+  commentId: P:System.Xml.XmlParserContext.NameTable
   id: NameTable
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: NameTable
+  nameWithType: XmlParserContext.NameTable
   fullName: System.Xml.XmlParserContext.NameTable
   type: Property
   source:
@@ -380,26 +411,33 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NameTable
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 204
+    startLine: 207
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets the <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref> used to atomize strings. For more information on atomized strings, see <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public XmlNameTable NameTable { get; set; }
     content.vb: Public Property NameTable As XmlNameTable
     parameters: []
     return:
       type: System.Xml.XmlNameTable
-      description: The XmlNameTable.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.PublicId
+  commentId: P:System.Xml.XmlParserContext.PublicId
   id: PublicId
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: PublicId
+  nameWithType: XmlParserContext.PublicId
   fullName: System.Xml.XmlParserContext.PublicId
   type: Property
   source:
@@ -407,26 +445,33 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: PublicId
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 205
+    startLine: 208
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets or sets the public identifier.
   syntax:
     content: public string PublicId { get; set; }
     content.vb: Public Property PublicId As String
     parameters: []
     return:
       type: System.String
-      description: The public identifier.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.SystemId
+  commentId: P:System.Xml.XmlParserContext.SystemId
   id: SystemId
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: SystemId
+  nameWithType: XmlParserContext.SystemId
   fullName: System.Xml.XmlParserContext.SystemId
   type: Property
   source:
@@ -434,26 +479,33 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: SystemId
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 206
+    startLine: 209
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets or sets the system identifier.
   syntax:
     content: public string SystemId { get; set; }
     content.vb: Public Property SystemId As String
     parameters: []
     return:
       type: System.String
-      description: The system identifier.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.XmlLang
+  commentId: P:System.Xml.XmlParserContext.XmlLang
   id: XmlLang
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: XmlLang
+  nameWithType: XmlParserContext.XmlLang
   fullName: System.Xml.XmlParserContext.XmlLang
   type: Property
   source:
@@ -461,26 +513,33 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: XmlLang
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 207
+    startLine: 210
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets or sets the current xml:lang scope.
   syntax:
     content: public string XmlLang { get; set; }
     content.vb: Public Property XmlLang As String
     parameters: []
     return:
       type: System.String
-      description: The current xml:lang scope. If there is no xml:lang in scope, String.Empty is returned.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlParserContext.XmlSpace
+  commentId: P:System.Xml.XmlParserContext.XmlSpace
   id: XmlSpace
   parent: System.Xml.XmlParserContext
   langs:
   - csharp
   - vb
   name: XmlSpace
+  nameWithType: XmlParserContext.XmlSpace
   fullName: System.Xml.XmlParserContext.XmlSpace
   type: Property
   source:
@@ -488,63 +547,82 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: XmlSpace
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 208
+    startLine: 211
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Gets or sets the current xml:space scope.
   syntax:
     content: public XmlSpace XmlSpace { get; set; }
     content.vb: Public Property XmlSpace As XmlSpace
     parameters: []
     return:
       type: System.Xml.XmlSpace
-      description: An <xref href="System.Xml.XmlSpace" data-throw-if-not-resolved="false"></xref> value indicating the xml:space scope.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Xml
+  commentId: N:System.Xml
   isExternal: false
   name: System.Xml
+  nameWithType: System.Xml
   fullName: System.Xml
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Xml.XmlNameTable
+  commentId: T:System.Xml.XmlNameTable
   parent: System.Xml
   isExternal: false
   name: XmlNameTable
+  nameWithType: XmlNameTable
   fullName: System.Xml.XmlNameTable
 - uid: System.Xml.XmlNamespaceManager
+  commentId: T:System.Xml.XmlNamespaceManager
   parent: System.Xml
   isExternal: false
   name: XmlNamespaceManager
+  nameWithType: XmlNamespaceManager
   fullName: System.Xml.XmlNamespaceManager
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Xml.XmlSpace
+  commentId: T:System.Xml.XmlSpace
   parent: System.Xml
   isExternal: false
   name: XmlSpace
+  nameWithType: XmlSpace
   fullName: System.Xml.XmlSpace
 - uid: System.Text.Encoding
+  commentId: T:System.Text.Encoding
   parent: System.Text
   isExternal: false
-  name: Text.Encoding
+  name: Encoding
+  nameWithType: Encoding
   fullName: System.Text.Encoding
 - uid: System.Text
+  commentId: N:System.Text
   isExternal: false
   name: System.Text
+  nameWithType: System.Text
   fullName: System.Text
-- uid: System.Xml.XmlException
-  isExternal: false
-  name: XmlException
-  fullName: System.Xml.XmlException

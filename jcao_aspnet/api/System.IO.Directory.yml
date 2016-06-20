@@ -1,5 +1,6 @@
 items:
 - uid: System.IO.Directory
+  commentId: T:System.IO.Directory
   id: Directory
   parent: System.IO
   children:
@@ -42,1674 +43,1628 @@ items:
   - System.IO.Directory.SetLastAccessTimeUtc(System.String,System.DateTime)
   - System.IO.Directory.SetLastWriteTime(System.String,System.DateTime)
   - System.IO.Directory.SetLastWriteTimeUtc(System.String,System.DateTime)
+  langs:
+  - csharp
+  - vb
   name: Directory
+  nameWithType: Directory
   fullName: System.IO.Directory
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/IO/Directory.cs
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 36
+      repo: https://github.com/dotnet/corefx.git
+    id: Directory
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 20
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Exposes static methods for creating, moving, and enumerating through directories and subdirectories. This class cannot be inherited.To browse the .NET Framework source code for this type, see the Reference Source.
   syntax:
     content: 'public class Directory : object'
-    content.vb: Public Class Directory Inherits Object
+    content.vb: >-
+      Public Class Directory
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.IO.Directory.CreateDirectory(System.String)
+  commentId: M:System.IO.Directory.CreateDirectory(System.String)
   id: CreateDirectory(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: CreateDirectory(String)
+  nameWithType: Directory.CreateDirectory(String)
   fullName: System.IO.Directory.CreateDirectory(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 55
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateDirectory
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 22
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Creates all directories and subdirectories in the specified path unless they already exist.
   syntax:
     content: public static DirectoryInfo CreateDirectory(string path)
     content.vb: Public Shared Function CreateDirectory(path As String) As DirectoryInfo
     parameters:
     - id: path
       type: System.String
-      description: The directory to create.
     return:
       type: System.IO.DirectoryInfo
-      description: An object that represents the directory at the specified path. This object is returned regardless of whether a directory at the specified path already exists.
-  exceptions:
-  - type: System.IO.IOException
-    description: The directory specified by *path* is a file.-or-The network name is not known.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.-or-*path* is prefixed with, or contains, only a colon character (:).'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified path is invalid (for example, it is on an unmapped drive).
-  - type: System.NotSupportedException
-    description: '*path* contains a colon character (:) that is not part of a drive label ("C:\").'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.Delete(System.String)
+  commentId: M:System.IO.Directory.Delete(System.String)
   id: Delete(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: Delete(String)
+  nameWithType: Directory.Delete(String)
   fullName: System.IO.Directory.Delete(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 1112
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Delete
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 23
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Deletes an empty directory from a specified path.
   syntax:
     content: public static void Delete(string path)
     content.vb: Public Shared Sub Delete(path As String)
     parameters:
     - id: path
       type: System.String
-      description: The name of the empty directory to remove. This directory must be writable and empty.
-  exceptions:
-  - type: System.IO.IOException
-    description: A file with the same name and location specified by *path* exists.-or-The directory is the application's current working directory.-or-The directory specified by *path* is not empty.-or-The directory is read-only or contains a read-only file.-or-The directory is being used by another process.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* does not exist or could not be found.-or-The specified path is invalid (for example, it is on an unmapped drive).'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.Delete(System.String,System.Boolean)
+  commentId: M:System.IO.Directory.Delete(System.String,System.Boolean)
   id: Delete(System.String,System.Boolean)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: Delete(String, Boolean)
+  nameWithType: Directory.Delete(String, Boolean)
   fullName: System.IO.Directory.Delete(System.String, System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 1119
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Delete
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 24
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Deletes the specified directory and, if indicated, any subdirectories and files in the directory.
   syntax:
     content: public static void Delete(string path, bool recursive)
     content.vb: Public Shared Sub Delete(path As String, recursive As Boolean)
     parameters:
     - id: path
       type: System.String
-      description: The name of the directory to remove.
     - id: recursive
       type: System.Boolean
-      description: true to remove directories, subdirectories, and files in *path*; otherwise, false.
-  exceptions:
-  - type: System.IO.IOException
-    description: A file with the same name and location specified by *path* exists.-or-The directory specified by *path* is read-only, or *recursive* is false and *path* is not an empty directory. -or-The directory is the application's current working directory. -or-The directory contains a read-only file.-or-The directory is being used by another process.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* does not exist or could not be found.-or-The specified path is invalid (for example, it is on an unmapped drive).'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.EnumerateDirectories(System.String)
+  commentId: M:System.IO.Directory.EnumerateDirectories(System.String)
   id: EnumerateDirectories(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: EnumerateDirectories(String)
+  nameWithType: Directory.EnumerateDirectories(String)
   fullName: System.IO.Directory.EnumerateDirectories(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 740
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnumerateDirectories
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 25
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an enumerable collection of directory names in a specified path.
   syntax:
     content: public static Collections.Generic.IEnumerable<string> EnumerateDirectories(string path)
     content.vb: Public Shared Function EnumerateDirectories(path As String) As Collections.Generic.IEnumerable(Of String)
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: An enumerable collection of the full names (including paths) for the directories in the directory specified by *path*.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path *is a zero-length string, contains only white space, or contains invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* is invalid, such as referring to an unmapped drive.'
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or combined exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.EnumerateDirectories(System.String,System.String)
+  commentId: M:System.IO.Directory.EnumerateDirectories(System.String,System.String)
   id: EnumerateDirectories(System.String,System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: EnumerateDirectories(String, String)
+  nameWithType: Directory.EnumerateDirectories(String, String)
   fullName: System.IO.Directory.EnumerateDirectories(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 749
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnumerateDirectories
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 26
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an enumerable collection of directory names that match a search pattern in a specified path.
   syntax:
     content: public static Collections.Generic.IEnumerable<string> EnumerateDirectories(string path, string searchPattern)
     content.vb: Public Shared Function EnumerateDirectories(path As String, searchPattern As String) As Collections.Generic.IEnumerable(Of String)
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of directories in *path*.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: An enumerable collection of the full names (including paths) for the directories in the directory specified by *path* and that match the specified search pattern.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path *is a zero-length string, contains only white space, or contains invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.- or -*searchPattern* does not contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.-or-*searchPattern* is null.'
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* is invalid, such as referring to an unmapped drive.'
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or combined exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.EnumerateDirectories(System.String,System.String,System.IO.SearchOption)
+  commentId: M:System.IO.Directory.EnumerateDirectories(System.String,System.String,System.IO.SearchOption)
   id: EnumerateDirectories(System.String,System.String,System.IO.SearchOption)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: EnumerateDirectories(String, String, SearchOption)
+  nameWithType: Directory.EnumerateDirectories(String, String, SearchOption)
   fullName: System.IO.Directory.EnumerateDirectories(System.String, System.String, System.IO.SearchOption)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 760
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnumerateDirectories
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 27
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an enumerable collection of directory names that match a search pattern in a specified path, and optionally searches subdirectories.
   syntax:
     content: public static Collections.Generic.IEnumerable<string> EnumerateDirectories(string path, string searchPattern, SearchOption searchOption)
     content.vb: Public Shared Function EnumerateDirectories(path As String, searchPattern As String, searchOption As SearchOption) As Collections.Generic.IEnumerable(Of String)
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of directories in *path*.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
     - id: searchOption
       type: System.IO.SearchOption
-      description: One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is <xref href="System.IO.SearchOption.TopDirectoryOnly" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: An enumerable collection of the full names (including paths) for the directories in the directory specified by *path* and that match the specified search pattern and option.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path *is a zero-length string, contains only white space, or contains invalid characters. You can query for invalid characters by using the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.- or -*searchPattern* does not contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.-or-*searchPattern* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*searchOption* is not a valid <xref href="System.IO.SearchOption" data-throw-if-not-resolved="false"></xref> value.'
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* is invalid, such as referring to an unmapped drive.'
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or combined exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.EnumerateFiles(System.String)
+  commentId: M:System.IO.Directory.EnumerateFiles(System.String)
   id: EnumerateFiles(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: EnumerateFiles(String)
+  nameWithType: Directory.EnumerateFiles(String)
   fullName: System.IO.Directory.EnumerateFiles(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 782
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnumerateFiles
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 28
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an enumerable collection of file names in a specified path.
   syntax:
     content: public static Collections.Generic.IEnumerable<string> EnumerateFiles(string path)
     content.vb: Public Shared Function EnumerateFiles(path As String) As Collections.Generic.IEnumerable(Of String)
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: An enumerable collection of the full names (including paths) for the files in the directory specified by *path*.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path *is a zero-length string, contains only white space, or contains invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* is invalid, such as referring to an unmapped drive.'
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or combined exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.EnumerateFiles(System.String,System.String)
+  commentId: M:System.IO.Directory.EnumerateFiles(System.String,System.String)
   id: EnumerateFiles(System.String,System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: EnumerateFiles(String, String)
+  nameWithType: Directory.EnumerateFiles(String, String)
   fullName: System.IO.Directory.EnumerateFiles(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 792
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnumerateFiles
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 29
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an enumerable collection of file names that match a search pattern in a specified path.
   syntax:
     content: public static Collections.Generic.IEnumerable<string> EnumerateFiles(string path, string searchPattern)
     content.vb: Public Shared Function EnumerateFiles(path As String, searchPattern As String) As Collections.Generic.IEnumerable(Of String)
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of files in *path*.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: An enumerable collection of the full names (including paths) for the files in the directory specified by *path* and that match the specified search pattern.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path *is a zero-length string, contains only white space, or contains invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.- or -*searchPattern* does not contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.-or-*searchPattern* is null.'
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* is invalid, such as referring to an unmapped drive.'
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or combined exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.EnumerateFiles(System.String,System.String,System.IO.SearchOption)
+  commentId: M:System.IO.Directory.EnumerateFiles(System.String,System.String,System.IO.SearchOption)
   id: EnumerateFiles(System.String,System.String,System.IO.SearchOption)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: EnumerateFiles(String, String, SearchOption)
+  nameWithType: Directory.EnumerateFiles(String, String, SearchOption)
   fullName: System.IO.Directory.EnumerateFiles(System.String, System.String, System.IO.SearchOption)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 804
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnumerateFiles
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 30
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an enumerable collection of file names that match a search pattern in a specified path, and optionally searches subdirectories.
   syntax:
     content: public static Collections.Generic.IEnumerable<string> EnumerateFiles(string path, string searchPattern, SearchOption searchOption)
     content.vb: Public Shared Function EnumerateFiles(path As String, searchPattern As String, searchOption As SearchOption) As Collections.Generic.IEnumerable(Of String)
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of files in *path*.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
     - id: searchOption
       type: System.IO.SearchOption
-      description: One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is <xref href="System.IO.SearchOption.TopDirectoryOnly" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: An enumerable collection of the full names (including paths) for the files in the directory specified by *path* and that match the specified search pattern and option.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path *is a zero-length string, contains only white space, or contains invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.- or -*searchPattern* does not contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.-or-*searchPattern* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*searchOption* is not a valid <xref href="System.IO.SearchOption" data-throw-if-not-resolved="false"></xref> value.'
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* is invalid, such as referring to an unmapped drive.'
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or combined exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.EnumerateFileSystemEntries(System.String)
+  commentId: M:System.IO.Directory.EnumerateFileSystemEntries(System.String)
   id: EnumerateFileSystemEntries(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: EnumerateFileSystemEntries(String)
+  nameWithType: Directory.EnumerateFileSystemEntries(String)
   fullName: System.IO.Directory.EnumerateFileSystemEntries(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 828
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnumerateFileSystemEntries
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 31
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an enumerable collection of file names and directory names in a specified path.
   syntax:
     content: public static Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path)
     content.vb: Public Shared Function EnumerateFileSystemEntries(path As String) As Collections.Generic.IEnumerable(Of String)
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: An enumerable collection of file-system entries in the directory specified by *path*.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path *is a zero-length string, contains only white space, or contains invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* is invalid, such as referring to an unmapped drive.'
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or combined exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.EnumerateFileSystemEntries(System.String,System.String)
+  commentId: M:System.IO.Directory.EnumerateFileSystemEntries(System.String,System.String)
   id: EnumerateFileSystemEntries(System.String,System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: EnumerateFileSystemEntries(String, String)
+  nameWithType: Directory.EnumerateFileSystemEntries(String, String)
   fullName: System.IO.Directory.EnumerateFileSystemEntries(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 838
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnumerateFileSystemEntries
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 32
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an enumerable collection of file names and directory names that  match a search pattern in a specified path.
   syntax:
     content: public static Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern)
     content.vb: Public Shared Function EnumerateFileSystemEntries(path As String, searchPattern As String) As Collections.Generic.IEnumerable(Of String)
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of file-system entries in *path*.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: An enumerable collection of file-system entries in the directory specified by *path* and that match the specified search pattern.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path *is a zero-length string, contains only white space, or contains invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.- or -*searchPattern* does not contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.-or-*searchPattern* is null.'
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* is invalid, such as referring to an unmapped drive.'
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or combined exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.EnumerateFileSystemEntries(System.String,System.String,System.IO.SearchOption)
+  commentId: M:System.IO.Directory.EnumerateFileSystemEntries(System.String,System.String,System.IO.SearchOption)
   id: EnumerateFileSystemEntries(System.String,System.String,System.IO.SearchOption)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: EnumerateFileSystemEntries(String, String, SearchOption)
+  nameWithType: Directory.EnumerateFileSystemEntries(String, String, SearchOption)
   fullName: System.IO.Directory.EnumerateFileSystemEntries(System.String, System.String, System.IO.SearchOption)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 850
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnumerateFileSystemEntries
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 33
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an enumerable collection of file names and directory names that match a search pattern in a specified path, and optionally searches subdirectories.
   syntax:
     content: public static Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, SearchOption searchOption)
     content.vb: Public Shared Function EnumerateFileSystemEntries(path As String, searchPattern As String, searchOption As SearchOption) As Collections.Generic.IEnumerable(Of String)
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against file-system entries in *path*.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
     - id: searchOption
       type: System.IO.SearchOption
-      description: One of the enumeration values  that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is <xref href="System.IO.SearchOption.TopDirectoryOnly" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: An enumerable collection of file-system entries in the directory specified by *path* and that match the specified search pattern and option.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path *is a zero-length string, contains only white space, or contains invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.- or -*searchPattern* does not contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.-or-*searchPattern* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*searchOption* is not a valid <xref href="System.IO.SearchOption" data-throw-if-not-resolved="false"></xref> value.'
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* is invalid, such as referring to an unmapped drive.'
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or combined exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.Exists(System.String)
+  commentId: M:System.IO.Directory.Exists(System.String)
   id: Exists(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: Exists(String)
+  nameWithType: Directory.Exists(String)
   fullName: System.IO.Directory.Exists(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 344
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Exists
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 34
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Determines whether the given path refers to an existing directory on disk.
   syntax:
     content: public static bool Exists(string path)
     content.vb: Public Shared Function Exists(path As String) As Boolean
     parameters:
     - id: path
       type: System.String
-      description: The path to test.
     return:
       type: System.Boolean
-      description: true if *path* refers to an existing directory; false if the directory does not exist or an error occurs when trying to determine if the specified file exists.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetCreationTime(System.String)
+  commentId: M:System.IO.Directory.GetCreationTime(System.String)
   id: GetCreationTime(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetCreationTime(String)
+  nameWithType: Directory.GetCreationTime(String)
   fullName: System.IO.Directory.GetCreationTime(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 432
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetCreationTime
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 35
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Gets the creation date and time of a directory.
   syntax:
     content: public static DateTime GetCreationTime(string path)
     content.vb: Public Shared Function GetCreationTime(path As String) As DateTime
     parameters:
     - id: path
       type: System.String
-      description: The path of the directory.
     return:
       type: System.DateTime
-      description: A structure that is set to the creation date and time for the specified directory. This value is expressed in local time.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetCreationTimeUtc(System.String)
+  commentId: M:System.IO.Directory.GetCreationTimeUtc(System.String)
   id: GetCreationTimeUtc(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetCreationTimeUtc(String)
+  nameWithType: Directory.GetCreationTimeUtc(String)
   fullName: System.IO.Directory.GetCreationTimeUtc(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 437
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetCreationTimeUtc
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 36
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Gets the creation date and time, in Coordinated Universal Time (UTC) format, of a directory.
   syntax:
     content: public static DateTime GetCreationTimeUtc(string path)
     content.vb: Public Shared Function GetCreationTimeUtc(path As String) As DateTime
     parameters:
     - id: path
       type: System.String
-      description: The path of the directory.
     return:
       type: System.DateTime
-      description: A structure that is set to the creation date and time for the specified directory. This value is expressed in UTC time.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetCurrentDirectory
+  commentId: M:System.IO.Directory.GetCurrentDirectory
   id: GetCurrentDirectory
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetCurrentDirectory()
+  nameWithType: Directory.GetCurrentDirectory()
   fullName: System.IO.Directory.GetCurrentDirectory()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 955
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetCurrentDirectory
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 37
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Gets the current working directory of the application.
   syntax:
     content: public static string GetCurrentDirectory()
     content.vb: Public Shared Function GetCurrentDirectory As String
     return:
       type: System.String
-      description: A string that contains the path of the current working directory, and does not end with a backslash (\).
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.NotSupportedException
-    description: The operating system is Windows CE, which does not have current directory functionality.This method is available in the .NET Compact Framework, but is not currently supported.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetDirectories(System.String)
+  commentId: M:System.IO.Directory.GetDirectories(System.String)
   id: GetDirectories(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetDirectories(String)
+  nameWithType: Directory.GetDirectories(String)
   fullName: System.IO.Directory.GetDirectories(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 586
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetDirectories
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 38
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the names of subdirectories (including their paths) in the specified directory.
   syntax:
     content: public static string[] GetDirectories(string path)
     content.vb: Public Shared Function GetDirectories(path As String) As String()
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     return:
       type: System.String[]
-      description: An array of the full names (including paths) of subdirectories in the specified path, or an empty array if no directories are found.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified path is invalid (for example, it is on an unmapped drive).
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetDirectories(System.String,System.String)
+  commentId: M:System.IO.Directory.GetDirectories(System.String,System.String)
   id: GetDirectories(System.String,System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetDirectories(String, String)
+  nameWithType: Directory.GetDirectories(String, String)
   fullName: System.IO.Directory.GetDirectories(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 598
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetDirectories
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 39
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the names of subdirectories (including their paths) that match the specified search pattern in the specified directory.
   syntax:
     content: public static string[] GetDirectories(string path, string searchPattern)
     content.vb: Public Shared Function GetDirectories(path As String, searchPattern As String) As String()
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of subdirectories in *path*. This parameter can contain a combination of valid literal and wildcard characters (see Remarks), but doesn't support regular expressions.
     return:
       type: System.String[]
-      description: An array of the full names (including paths) of the subdirectories that match the search pattern in the specified directory, or an empty array if no directories are found.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref>.-or- *searchPattern* doesn''t contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* or *searchPattern* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified path is invalid (for example, it is on an unmapped drive).
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetDirectories(System.String,System.String,System.IO.SearchOption)
+  commentId: M:System.IO.Directory.GetDirectories(System.String,System.String,System.IO.SearchOption)
   id: GetDirectories(System.String,System.String,System.IO.SearchOption)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetDirectories(String, String, SearchOption)
+  nameWithType: Directory.GetDirectories(String, String, SearchOption)
   fullName: System.IO.Directory.GetDirectories(System.String, System.String, System.IO.SearchOption)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 612
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetDirectories
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 40
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the names of the subdirectories (including their paths) that match the specified search pattern in the specified directory, and optionally searches subdirectories.
   syntax:
     content: public static string[] GetDirectories(string path, string searchPattern, SearchOption searchOption)
     content.vb: Public Shared Function GetDirectories(path As String, searchPattern As String, searchOption As SearchOption) As String()
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of subdirectories in *path*. This parameter can contain a combination of valid literal and wildcard characters (see Remarks), but doesn't support regular expressions.
     - id: searchOption
       type: System.IO.SearchOption
-      description: One of the enumeration values that specifies whether the search operation should include all subdirectories or only the current directory.
     return:
       type: System.String[]
-      description: An array of the full names (including paths) of the subdirectories that match the specified criteria, or an empty array if no directories are found.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.-or- *searchPattern* does not contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* or *searchPattern* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*searchOption* is not a valid <xref href="System.IO.SearchOption" data-throw-if-not-resolved="false"></xref> value.'
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified path is invalid (for example, it is on an unmapped drive).
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetDirectoryRoot(System.String)
+  commentId: M:System.IO.Directory.GetDirectoryRoot(System.String)
   id: GetDirectoryRoot(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetDirectoryRoot(String)
+  nameWithType: Directory.GetDirectoryRoot(String)
   fullName: System.IO.Directory.GetDirectoryRoot(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 923
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetDirectoryRoot
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 41
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the volume information, root information, or both for the specified path.
   syntax:
     content: public static string GetDirectoryRoot(string path)
     content.vb: Public Shared Function GetDirectoryRoot(path As String) As String
     parameters:
     - id: path
       type: System.String
-      description: The path of a file or directory.
     return:
       type: System.String
-      description: A string that contains the volume information, root information, or both for the specified path.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref>.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetFiles(System.String)
+  commentId: M:System.IO.Directory.GetFiles(System.String)
   id: GetFiles(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetFiles(String)
+  nameWithType: Directory.GetFiles(String)
   fullName: System.IO.Directory.GetFiles(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 524
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetFiles
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 42
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the names of files (including their paths) in the specified directory.
   syntax:
     content: public static string[] GetFiles(string path)
     content.vb: Public Shared Function GetFiles(path As String) As String()
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     return:
       type: System.String[]
-      description: An array of the full names (including paths) for the files in the specified directory, or an empty array if no files are found.
-  exceptions:
-  - type: System.IO.IOException
-    description: '*path* is a file name.-or-A network error has occurred.'
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified path is not found or is invalid (for example, it is on an unmapped drive).
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetFiles(System.String,System.String)
+  commentId: M:System.IO.Directory.GetFiles(System.String,System.String)
   id: GetFiles(System.String,System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetFiles(String, String)
+  nameWithType: Directory.GetFiles(String, String)
   fullName: System.IO.Directory.GetFiles(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 536
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetFiles
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 43
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the names of files (including their paths) that match the specified search pattern in the specified directory.
   syntax:
     content: public static string[] GetFiles(string path, string searchPattern)
     content.vb: Public Shared Function GetFiles(path As String, searchPattern As String) As String()
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of files in *path*.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
     return:
       type: System.String[]
-      description: An array of the full names (including paths) for the files in the specified directory that match the specified search pattern, or an empty array if no files are found.
-  exceptions:
-  - type: System.IO.IOException
-    description: '*path* is a file name.-or-A network error has occurred.'
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref>.-or- *searchPattern* doesn''t contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* or *searchPattern* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified path is not found or is invalid (for example, it is on an unmapped drive).
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetFiles(System.String,System.String,System.IO.SearchOption)
+  commentId: M:System.IO.Directory.GetFiles(System.String,System.String,System.IO.SearchOption)
   id: GetFiles(System.String,System.String,System.IO.SearchOption)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetFiles(String, String, SearchOption)
+  nameWithType: Directory.GetFiles(String, String, SearchOption)
   fullName: System.IO.Directory.GetFiles(System.String, System.String, System.IO.SearchOption)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 550
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetFiles
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 44
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the names of files (including their paths) that match the specified search pattern in the specified directory, using a value to determine whether to search subdirectories.
   syntax:
     content: public static string[] GetFiles(string path, string searchPattern, SearchOption searchOption)
     content.vb: Public Shared Function GetFiles(path As String, searchPattern As String, searchOption As SearchOption) As String()
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of files in *path*.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
     - id: searchOption
       type: System.IO.SearchOption
-      description: One of the enumeration values that specifies whether the search operation should include all subdirectories or only the current directory.
     return:
       type: System.String[]
-      description: An array of the full names (including paths) for the files in the specified directory that match the specified search pattern and option, or an empty array if no files are found.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method. -or- *searchPattern* does not contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* or *searchpattern* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*searchOption* is not a valid <xref href="System.IO.SearchOption" data-throw-if-not-resolved="false"></xref> value.'
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified path is not found or is invalid (for example, it is on an unmapped drive).
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.IOException
-    description: '*path* is a file name.-or-A network error has occurred.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetFileSystemEntries(System.String)
+  commentId: M:System.IO.Directory.GetFileSystemEntries(System.String)
   id: GetFileSystemEntries(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetFileSystemEntries(String)
+  nameWithType: Directory.GetFileSystemEntries(String)
   fullName: System.IO.Directory.GetFileSystemEntries(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 650
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetFileSystemEntries
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 45
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the names of all files and subdirectories in a specified path.
   syntax:
     content: public static string[] GetFileSystemEntries(string path)
     content.vb: Public Shared Function GetFileSystemEntries(path As String) As String()
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     return:
       type: System.String[]
-      description: An array of the names of files and subdirectories in the specified directory, or an empty array if no files or subdirectories are found.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref>.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified path is invalid (for example, it is on an unmapped drive).
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetFileSystemEntries(System.String,System.String)
+  commentId: M:System.IO.Directory.GetFileSystemEntries(System.String,System.String)
   id: GetFileSystemEntries(System.String,System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetFileSystemEntries(String, String)
+  nameWithType: Directory.GetFileSystemEntries(String, String)
   fullName: System.IO.Directory.GetFileSystemEntries(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 662
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetFileSystemEntries
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 46
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an array of file names and directory names that that match a search pattern in a specified path.
   syntax:
     content: public static string[] GetFileSystemEntries(string path, string searchPattern)
     content.vb: Public Shared Function GetFileSystemEntries(path As String, searchPattern As String) As String()
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of file and directories in *path*.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
     return:
       type: System.String[]
-      description: An array of file names and directory names that match the specified search criteria, or an empty array if no files or directories are found.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.-or- *searchPattern* does not contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* or *searchPattern* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified path is invalid (for example, it is on an unmapped drive).
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetFileSystemEntries(System.String,System.String,System.IO.SearchOption)
+  commentId: M:System.IO.Directory.GetFileSystemEntries(System.String,System.String,System.IO.SearchOption)
   id: GetFileSystemEntries(System.String,System.String,System.IO.SearchOption)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetFileSystemEntries(String, String, SearchOption)
+  nameWithType: Directory.GetFileSystemEntries(String, String, SearchOption)
   fullName: System.IO.Directory.GetFileSystemEntries(System.String, System.String, System.IO.SearchOption)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 676
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetFileSystemEntries
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 47
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns an array of all the file names and directory names that match a search pattern in a specified path, and optionally searches subdirectories.
   syntax:
     content: public static string[] GetFileSystemEntries(string path, string searchPattern, SearchOption searchOption)
     content.vb: Public Shared Function GetFileSystemEntries(path As String, searchPattern As String, searchOption As SearchOption) As String()
     parameters:
     - id: path
       type: System.String
-      description: The relative or absolute path to the directory to search. This string is not case-sensitive.
     - id: searchPattern
       type: System.String
-      description: The search string to match against the names of files and directories in *path*.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't support regular expressions.
     - id: searchOption
       type: System.IO.SearchOption
-      description: One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is <xref href="System.IO.SearchOption.TopDirectoryOnly" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.String[]
-      description: An array of file the file names and directory names that match the specified search criteria, or an empty array if no files or directories are found.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*path *is a zero-length string, contains only white space, or contains invalid characters. You can query for invalid characters by using the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.- or -*searchPattern* does not contain a valid pattern.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.-or-*searchPattern* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*searchOption* is not a valid <xref href="System.IO.SearchOption" data-throw-if-not-resolved="false"></xref> value.'
-  - type: System.IO.DirectoryNotFoundException
-    description: '*path* is invalid, such as referring to an unmapped drive.'
-  - type: System.IO.IOException
-    description: '*path* is a file name.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or combined exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetLastAccessTime(System.String)
+  commentId: M:System.IO.Directory.GetLastAccessTime(System.String)
   id: GetLastAccessTime(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetLastAccessTime(String)
+  nameWithType: Directory.GetLastAccessTime(String)
   fullName: System.IO.Directory.GetLastAccessTime(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 490
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetLastAccessTime
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 48
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the date and time the specified file or directory was last accessed.
   syntax:
     content: public static DateTime GetLastAccessTime(string path)
     content.vb: Public Shared Function GetLastAccessTime(path As String) As DateTime
     parameters:
     - id: path
       type: System.String
-      description: The file or directory for which to obtain access date and time information.
     return:
       type: System.DateTime
-      description: A structure that is set to the date and time the specified file or directory was last accessed. This value is expressed in local time.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.NotSupportedException
-    description: The *path* parameter is in an invalid format.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetLastAccessTimeUtc(System.String)
+  commentId: M:System.IO.Directory.GetLastAccessTimeUtc(System.String)
   id: GetLastAccessTimeUtc(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetLastAccessTimeUtc(String)
+  nameWithType: Directory.GetLastAccessTimeUtc(String)
   fullName: System.IO.Directory.GetLastAccessTimeUtc(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 495
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetLastAccessTimeUtc
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 49
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the date and time, in Coordinated Universal Time (UTC) format, that the specified file or directory was last accessed.
   syntax:
     content: public static DateTime GetLastAccessTimeUtc(string path)
     content.vb: Public Shared Function GetLastAccessTimeUtc(path As String) As DateTime
     parameters:
     - id: path
       type: System.String
-      description: The file or directory for which to obtain access date and time information.
     return:
       type: System.DateTime
-      description: A structure that is set to the date and time the specified file or directory was last accessed. This value is expressed in UTC time.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.NotSupportedException
-    description: The *path* parameter is in an invalid format.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetLastWriteTime(System.String)
+  commentId: M:System.IO.Directory.GetLastWriteTime(System.String)
   id: GetLastWriteTime(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetLastWriteTime(String)
+  nameWithType: Directory.GetLastWriteTime(String)
   fullName: System.IO.Directory.GetLastWriteTime(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 461
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetLastWriteTime
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 50
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the date and time the specified file or directory was last written to.
   syntax:
     content: public static DateTime GetLastWriteTime(string path)
     content.vb: Public Shared Function GetLastWriteTime(path As String) As DateTime
     parameters:
     - id: path
       type: System.String
-      description: The file or directory for which to obtain modification date and time information.
     return:
       type: System.DateTime
-      description: A structure that is set to the date and time the specified file or directory was last written to. This value is expressed in local time.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetLastWriteTimeUtc(System.String)
+  commentId: M:System.IO.Directory.GetLastWriteTimeUtc(System.String)
   id: GetLastWriteTimeUtc(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetLastWriteTimeUtc(String)
+  nameWithType: Directory.GetLastWriteTimeUtc(String)
   fullName: System.IO.Directory.GetLastWriteTimeUtc(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 466
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetLastWriteTimeUtc
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 51
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Returns the date and time, in Coordinated Universal Time (UTC) format, that the specified file or directory was last written to.
   syntax:
     content: public static DateTime GetLastWriteTimeUtc(string path)
     content.vb: Public Shared Function GetLastWriteTimeUtc(path As String) As DateTime
     parameters:
     - id: path
       type: System.String
-      description: The file or directory for which to obtain modification date and time information.
     return:
       type: System.DateTime
-      description: A structure that is set to the date and time the specified file or directory was last written to. This value is expressed in UTC time.
-  exceptions:
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.GetParent(System.String)
+  commentId: M:System.IO.Directory.GetParent(System.String)
   id: GetParent(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: GetParent(String)
+  nameWithType: Directory.GetParent(String)
   fullName: System.IO.Directory.GetParent(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 38
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetParent
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 52
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Retrieves the parent directory of the specified path, including both absolute and relative paths.
   syntax:
     content: public static DirectoryInfo GetParent(string path)
     content.vb: Public Shared Function GetParent(path As String) As DirectoryInfo
     parameters:
     - id: path
       type: System.String
-      description: The path for which to retrieve the parent directory.
     return:
       type: System.IO.DirectoryInfo
-      description: The parent directory, or null if *path* is the root directory, including the root of a UNC server or share name.
-  exceptions:
-  - type: System.IO.IOException
-    description: The directory specified by *path* is read-only.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified path was not found.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.Move(System.String,System.String)
+  commentId: M:System.IO.Directory.Move(System.String,System.String)
   id: Move(System.String,System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: Move(String, String)
+  nameWithType: Directory.Move(String, String)
   fullName: System.IO.Directory.Move(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 1042
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Move
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 53
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Moves a file or a directory and its contents to a new location.
   syntax:
     content: public static void Move(string sourceDirName, string destDirName)
     content.vb: Public Shared Sub Move(sourceDirName As String, destDirName As String)
     parameters:
     - id: sourceDirName
       type: System.String
-      description: The path of the file or directory to move.
     - id: destDirName
       type: System.String
-      description: The path to the new location for *sourceDirName*. If *sourceDirName* is a file, then *destDirName* must also be a file name.
-  exceptions:
-  - type: System.IO.IOException
-    description: An attempt was made to move a directory to a different volume. -or- *destDirName* already exists. -or- The *sourceDirName* and *destDirName* parameters refer to the same file or directory. -or-The directory or a file within it is being used by another process.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentException
-    description: '*sourceDirName* or *destDirName* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*sourceDirName* or *destDirName* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.IO.DirectoryNotFoundException
-    description: The path specified by *sourceDirName* is invalid (for example, it is on an unmapped drive).
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.SetCreationTime(System.String,System.DateTime)
+  commentId: M:System.IO.Directory.SetCreationTime(System.String,System.DateTime)
   id: SetCreationTime(System.String,System.DateTime)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: SetCreationTime(String, DateTime)
+  nameWithType: Directory.SetCreationTime(String, DateTime)
   fullName: System.IO.Directory.SetCreationTime(System.String, System.DateTime)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 413
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetCreationTime
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 54
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Sets the creation date and time for the specified file or directory.
   syntax:
     content: public static void SetCreationTime(string path, DateTime creationTime)
     content.vb: Public Shared Sub SetCreationTime(path As String, creationTime As DateTime)
     parameters:
     - id: path
       type: System.String
-      description: The file or directory for which to set the creation date and time information.
     - id: creationTime
       type: System.DateTime
-      description: The date and time the file or directory was last written to. This value is expressed in local time.
-  exceptions:
-  - type: System.IO.FileNotFoundException
-    description: The specified path was not found.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentOutOfRangeException
-    description: '*creationTime* specifies a value outside the range of dates or times permitted for this operation.'
-  - type: System.PlatformNotSupportedException
-    description: The current operating system is not Windows NT or later.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.SetCreationTimeUtc(System.String,System.DateTime)
+  commentId: M:System.IO.Directory.SetCreationTimeUtc(System.String,System.DateTime)
   id: SetCreationTimeUtc(System.String,System.DateTime)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: SetCreationTimeUtc(String, DateTime)
+  nameWithType: Directory.SetCreationTimeUtc(String, DateTime)
   fullName: System.IO.Directory.SetCreationTimeUtc(System.String, System.DateTime)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 418
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetCreationTimeUtc
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 55
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Sets the creation date and time, in Coordinated Universal Time (UTC) format, for the specified file or directory.
   syntax:
     content: public static void SetCreationTimeUtc(string path, DateTime creationTimeUtc)
     content.vb: Public Shared Sub SetCreationTimeUtc(path As String, creationTimeUtc As DateTime)
     parameters:
     - id: path
       type: System.String
-      description: The file or directory for which to set the creation date and time information.
     - id: creationTimeUtc
       type: System.DateTime
-      description: The date and time the directory or file was created. This value is expressed in local time.
-  exceptions:
-  - type: System.IO.FileNotFoundException
-    description: The specified path was not found.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.ArgumentOutOfRangeException
-    description: '*creationTime* specifies a value outside the range of dates or times permitted for this operation.'
-  - type: System.PlatformNotSupportedException
-    description: The current operating system is not Windows NT or later.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.SetCurrentDirectory(System.String)
+  commentId: M:System.IO.Directory.SetCurrentDirectory(System.String)
   id: SetCurrentDirectory(System.String)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: SetCurrentDirectory(String)
+  nameWithType: Directory.SetCurrentDirectory(String)
   fullName: System.IO.Directory.SetCurrentDirectory(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 1009
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetCurrentDirectory
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 56
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Sets the application's current working directory to the specified directory.
   syntax:
     content: public static void SetCurrentDirectory(string path)
     content.vb: Public Shared Sub SetCurrentDirectory(path As String)
     parameters:
     - id: path
       type: System.String
-      description: The path to which the current working directory is set.
-  exceptions:
-  - type: System.IO.IOException
-    description: An I/O error occurred.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permission to access unmanaged code.
-  - type: System.IO.FileNotFoundException
-    description: The specified path was not found.
-  - type: System.IO.DirectoryNotFoundException
-    description: The specified directory was not found.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.SetLastAccessTime(System.String,System.DateTime)
+  commentId: M:System.IO.Directory.SetLastAccessTime(System.String,System.DateTime)
   id: SetLastAccessTime(System.String,System.DateTime)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: SetLastAccessTime(String, DateTime)
+  nameWithType: Directory.SetLastAccessTime(String, DateTime)
   fullName: System.IO.Directory.SetLastAccessTime(System.String, System.DateTime)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 471
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetLastAccessTime
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 57
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Sets the date and time the specified file or directory was last accessed.
   syntax:
     content: public static void SetLastAccessTime(string path, DateTime lastAccessTime)
     content.vb: Public Shared Sub SetLastAccessTime(path As String, lastAccessTime As DateTime)
     parameters:
     - id: path
       type: System.String
-      description: The file or directory for which to set the access date and time information.
     - id: lastAccessTime
       type: System.DateTime
-      description: An object that contains the value to set for the access date and time of *path*. This value is expressed in local time.
-  exceptions:
-  - type: System.IO.FileNotFoundException
-    description: The specified path was not found.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.PlatformNotSupportedException
-    description: The current operating system is not Windows NT or later.
-  - type: System.ArgumentOutOfRangeException
-    description: '*lastAccessTime* specifies a value outside the range of dates or times permitted for this operation.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.SetLastAccessTimeUtc(System.String,System.DateTime)
+  commentId: M:System.IO.Directory.SetLastAccessTimeUtc(System.String,System.DateTime)
   id: SetLastAccessTimeUtc(System.String,System.DateTime)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: SetLastAccessTimeUtc(String, DateTime)
+  nameWithType: Directory.SetLastAccessTimeUtc(String, DateTime)
   fullName: System.IO.Directory.SetLastAccessTimeUtc(System.String, System.DateTime)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 476
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetLastAccessTimeUtc
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 58
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Sets the date and time, in Coordinated Universal Time (UTC) format, that the specified file or directory was last accessed.
   syntax:
     content: public static void SetLastAccessTimeUtc(string path, DateTime lastAccessTimeUtc)
     content.vb: Public Shared Sub SetLastAccessTimeUtc(path As String, lastAccessTimeUtc As DateTime)
     parameters:
     - id: path
       type: System.String
-      description: The file or directory for which to set the access date and time information.
     - id: lastAccessTimeUtc
       type: System.DateTime
-      description: An object that  contains the value to set for the access date and time of *path*. This value is expressed in UTC time.
-  exceptions:
-  - type: System.IO.FileNotFoundException
-    description: The specified path was not found.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.PlatformNotSupportedException
-    description: The current operating system is not Windows NT or later.
-  - type: System.ArgumentOutOfRangeException
-    description: '*lastAccessTimeUtc* specifies a value outside the range of dates or times permitted for this operation.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.SetLastWriteTime(System.String,System.DateTime)
+  commentId: M:System.IO.Directory.SetLastWriteTime(System.String,System.DateTime)
   id: SetLastWriteTime(System.String,System.DateTime)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: SetLastWriteTime(String, DateTime)
+  nameWithType: Directory.SetLastWriteTime(String, DateTime)
   fullName: System.IO.Directory.SetLastWriteTime(System.String, System.DateTime)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 442
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetLastWriteTime
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 59
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Sets the date and time a directory was last written to.
   syntax:
     content: public static void SetLastWriteTime(string path, DateTime lastWriteTime)
     content.vb: Public Shared Sub SetLastWriteTime(path As String, lastWriteTime As DateTime)
     parameters:
     - id: path
       type: System.String
-      description: The path of the directory.
     - id: lastWriteTime
       type: System.DateTime
-      description: The date and time the directory was last written to. This value is expressed in local time.
-  exceptions:
-  - type: System.IO.FileNotFoundException
-    description: The specified path was not found.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.PlatformNotSupportedException
-    description: The current operating system is not Windows NT or later.
-  - type: System.ArgumentOutOfRangeException
-    description: '*lastWriteTime* specifies a value outside the range of dates or times permitted for this operation.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.IO.Directory.SetLastWriteTimeUtc(System.String,System.DateTime)
+  commentId: M:System.IO.Directory.SetLastWriteTimeUtc(System.String,System.DateTime)
   id: SetLastWriteTimeUtc(System.String,System.DateTime)
   parent: System.IO.Directory
+  langs:
+  - csharp
+  - vb
   name: SetLastWriteTimeUtc(String, DateTime)
+  nameWithType: Directory.SetLastWriteTimeUtc(String, DateTime)
   fullName: System.IO.Directory.SetLastWriteTimeUtc(System.String, System.DateTime)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IO/Directory.cs
-    startLine: 447
+    remote:
+      path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetLastWriteTimeUtc
+    path: src/System.IO.FileSystem/ref/System.IO.FileSystem.cs
+    startLine: 60
   assemblies:
   - System.IO.FileSystem
   namespace: System.IO
-  summary: Sets the date and time, in Coordinated Universal Time (UTC) format, that a directory was last written to.
   syntax:
     content: public static void SetLastWriteTimeUtc(string path, DateTime lastWriteTimeUtc)
     content.vb: Public Shared Sub SetLastWriteTimeUtc(path As String, lastWriteTimeUtc As DateTime)
     parameters:
     - id: path
       type: System.String
-      description: The path of the directory.
     - id: lastWriteTimeUtc
       type: System.DateTime
-      description: The date and time the directory was last written to. This value is expressed in UTC time.
-  exceptions:
-  - type: System.IO.FileNotFoundException
-    description: The specified path was not found.
-  - type: System.ArgumentException
-    description: '*path* is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters with the  <xref href="System.IO.Path.GetInvalidPathChars" data-throw-if-not-resolved="false"></xref> method.'
-  - type: System.ArgumentNullException
-    description: '*path* is null.'
-  - type: System.IO.PathTooLongException
-    description: The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.
-  - type: System.UnauthorizedAccessException
-    description: The caller does not have the required permission.
-  - type: System.PlatformNotSupportedException
-    description: The current operating system is not Windows NT or later.
-  - type: System.ArgumentOutOfRangeException
-    description: '*lastWriteTimeUtc* specifies a value outside the range of dates or times permitted for this operation.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.IO
+  commentId: N:System.IO
   isExternal: false
   name: System.IO
+  nameWithType: System.IO
   fullName: System.IO
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.IO.DirectoryInfo
+  commentId: T:System.IO.DirectoryInfo
   parent: System.IO
   isExternal: false
   name: DirectoryInfo
+  nameWithType: DirectoryInfo
   fullName: System.IO.DirectoryInfo
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<String>
-  name.vb: Collections.Generic.IEnumerable(Of String)
+  nameWithType: Collections.Generic.IEnumerable<String>
   fullName: System.Collections.Generic.IEnumerable<System.String>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of String)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: Collections.Generic.IEnumerable(Of String)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
   name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: System.IO.SearchOption
+  commentId: T:System.IO.SearchOption
   parent: System.IO
   isExternal: false
   name: SearchOption
+  nameWithType: SearchOption
   fullName: System.IO.SearchOption
 - uid: System.DateTime
+  commentId: T:System.DateTime
   parent: System
   isExternal: false
   name: DateTime
+  nameWithType: DateTime
   fullName: System.DateTime
 - uid: System.String[]
-  isExternal: false
   name: String[]
-  name.vb: String()
+  nameWithType: String[]
   fullName: System.String[]
-  fullName.vb: System.String()
+  nameWithType.vb: String()
+  fullname.vb: System.String()
+  name.vb: String()
   spec.csharp:
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
   - name: ()
+    nameWithType: ()
     fullName: ()
-- uid: System.IO.IOException
-  parent: System.IO
-  isExternal: false
-  name: IOException
-  fullName: System.IO.IOException
-- uid: System.UnauthorizedAccessException
-  isExternal: false
-  name: UnauthorizedAccessException
-  fullName: System.UnauthorizedAccessException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.IO.PathTooLongException
-  isExternal: false
-  name: PathTooLongException
-  fullName: System.IO.PathTooLongException
-- uid: System.IO.DirectoryNotFoundException
-  isExternal: false
-  name: DirectoryNotFoundException
-  fullName: System.IO.DirectoryNotFoundException
-- uid: System.NotSupportedException
-  parent: System
-  isExternal: false
-  name: NotSupportedException
-  fullName: System.NotSupportedException
-- uid: System.Security.SecurityException
-  isExternal: false
-  name: SecurityException
-  fullName: System.Security.SecurityException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.IO.FileNotFoundException
-  isExternal: false
-  name: FileNotFoundException
-  fullName: System.IO.FileNotFoundException
-- uid: System.PlatformNotSupportedException
-  isExternal: false
-  name: PlatformNotSupportedException
-  fullName: System.PlatformNotSupportedException

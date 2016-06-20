@@ -1,94 +1,156 @@
 items:
 - uid: System.Reflection.ModuleExtensions
+  commentId: T:System.Reflection.ModuleExtensions
   id: ModuleExtensions
   parent: System.Reflection
   children:
   - System.Reflection.ModuleExtensions.GetModuleVersionId(Module)
   - System.Reflection.ModuleExtensions.HasModuleVersionId(Module)
+  langs:
+  - csharp
+  - vb
   name: ModuleExtensions
+  nameWithType: ModuleExtensions
   fullName: System.Reflection.ModuleExtensions
   type: Class
   source:
-    remote: &o0
-      path: src/System.Reflection.TypeExtensions/src/System/Reflection/TypeExtensions.CoreCLR.cs
+    remote:
+      path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Reflection.TypeExtensions/src/System/Reflection/TypeExtensions.CoreCLR.cs
-    startLine: 346
+    id: ModuleExtensions
+    path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+    startLine: 35
   assemblies:
   - System.Reflection.TypeExtensions
   namespace: System.Reflection
   syntax:
     content: 'public class ModuleExtensions : object'
-    content.vb: Public Class ModuleExtensions Inherits Object
+    content.vb: >-
+      Public Class ModuleExtensions
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Reflection.ModuleExtensions.HasModuleVersionId(Module)
+  commentId: M:System.Reflection.ModuleExtensions.HasModuleVersionId(Module)
   id: HasModuleVersionId(Module)
+  isExtensionMethod: true
   parent: System.Reflection.ModuleExtensions
+  langs:
+  - csharp
+  - vb
   name: HasModuleVersionId(Module)
+  nameWithType: ModuleExtensions.HasModuleVersionId(Module)
   fullName: System.Reflection.ModuleExtensions.HasModuleVersionId(Module)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Reflection.TypeExtensions/src/System/Reflection/TypeExtensions.CoreCLR.cs
-    startLine: 348
+    remote:
+      path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HasModuleVersionId
+    path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+    startLine: 37
   assemblies:
   - System.Reflection.TypeExtensions
   namespace: System.Reflection
   syntax:
-    content: public static bool HasModuleVersionId(Module module)
-    content.vb: Public Shared Function HasModuleVersionId(module As Module) As Boolean
+    content: public static bool HasModuleVersionId(this Module module)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function HasModuleVersionId(module As  Module) As Boolean
     parameters:
     - id: module
       type: Module
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Reflection.ModuleExtensions.GetModuleVersionId(Module)
+  commentId: M:System.Reflection.ModuleExtensions.GetModuleVersionId(Module)
   id: GetModuleVersionId(Module)
+  isExtensionMethod: true
   parent: System.Reflection.ModuleExtensions
+  langs:
+  - csharp
+  - vb
   name: GetModuleVersionId(Module)
+  nameWithType: ModuleExtensions.GetModuleVersionId(Module)
   fullName: System.Reflection.ModuleExtensions.GetModuleVersionId(Module)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Reflection.TypeExtensions/src/System/Reflection/TypeExtensions.CoreCLR.cs
-    startLine: 354
+    remote:
+      path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetModuleVersionId
+    path: src/System.Reflection.TypeExtensions/ref/System.Reflection.TypeExtensions.cs
+    startLine: 38
   assemblies:
   - System.Reflection.TypeExtensions
   namespace: System.Reflection
   syntax:
-    content: public static Guid GetModuleVersionId(Module module)
-    content.vb: Public Shared Function GetModuleVersionId(module As Module) As Guid
+    content: public static Guid GetModuleVersionId(this Module module)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetModuleVersionId(module As  Module) As Guid
     parameters:
     - id: module
       type: Module
     return:
       type: Guid
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: Module
   isExternal: true
   name: Module
+  nameWithType: Module
   fullName: Module
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: Guid
   isExternal: true
   name: Guid
+  nameWithType: Guid
   fullName: Guid

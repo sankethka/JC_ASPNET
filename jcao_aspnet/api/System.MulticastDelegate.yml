@@ -1,5 +1,6 @@
 items:
 - uid: System.MulticastDelegate
+  commentId: T:System.MulticastDelegate
   id: MulticastDelegate
   parent: System
   children:
@@ -8,23 +9,31 @@ items:
   - System.MulticastDelegate.GetInvocationList
   - System.MulticastDelegate.op_Equality(System.MulticastDelegate,System.MulticastDelegate)
   - System.MulticastDelegate.op_Inequality(System.MulticastDelegate,System.MulticastDelegate)
+  langs:
+  - csharp
+  - vb
   name: MulticastDelegate
+  nameWithType: MulticastDelegate
   fullName: System.MulticastDelegate
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/MulticastDelegate.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/MulticastDelegate.cs
-    startLine: 13
+      repo: https://github.com/dotnet/corefx.git
+    id: MulticastDelegate
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1261
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Represents a multicast delegate; that is, a delegate that can have more than one element in its invocation list.
   syntax:
     content: 'public abstract class MulticastDelegate : Delegate'
-    content.vb: Public MustInherit Class MulticastDelegate Inherits Delegate
+    content.vb: >-
+      Public MustInherit Class MulticastDelegate
+          Inherits
+
+           Delegate
   inheritance:
   - System.Object
   - System.Delegate
@@ -40,580 +49,799 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.MulticastDelegate.Equals(System.Object)
+  commentId: M:System.MulticastDelegate.Equals(System.Object)
   id: Equals(System.Object)
   parent: System.MulticastDelegate
+  langs:
+  - csharp
+  - vb
   name: Equals(Object)
+  nameWithType: MulticastDelegate.Equals(Object)
   fullName: System.MulticastDelegate.Equals(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/MulticastDelegate.cs
-    startLine: 102
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1264
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Determines whether this multicast delegate and the specified object are equal.
   syntax:
     content: public override sealed bool Equals(object obj)
     content.vb: Public NotOverridable Overrides Function Equals(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: The object to compare with this instance.
     return:
       type: System.Boolean
-      description: true if *obj* and this instance have the same invocation lists; otherwise, false.
   overridden: System.Delegate.Equals(System.Object)
-  exceptions:
-  - type: System.MemberAccessException
-    description: Cannot create an instance of an abstract class, or this member was invoked with a late-binding mechanism.
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
 - uid: System.MulticastDelegate.GetHashCode
+  commentId: M:System.MulticastDelegate.GetHashCode
   id: GetHashCode
   parent: System.MulticastDelegate
+  langs:
+  - csharp
+  - vb
   name: GetHashCode()
+  nameWithType: MulticastDelegate.GetHashCode()
   fullName: System.MulticastDelegate.GetHashCode()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/MulticastDelegate.cs
-    startLine: 499
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1265
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Returns the hash code for this instance.
   syntax:
     content: public override sealed int GetHashCode()
     content.vb: Public NotOverridable Overrides Function GetHashCode As Integer
     return:
       type: System.Int32
-      description: A 32-bit signed integer hash code.
   overridden: System.Delegate.GetHashCode
-  exceptions:
-  - type: System.MemberAccessException
-    description: Cannot create an instance of an abstract class, or this member was invoked with a late-binding mechanism.
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
 - uid: System.MulticastDelegate.GetInvocationList
+  commentId: M:System.MulticastDelegate.GetInvocationList
   id: GetInvocationList
   parent: System.MulticastDelegate
+  langs:
+  - csharp
+  - vb
   name: GetInvocationList()
+  nameWithType: MulticastDelegate.GetInvocationList()
   fullName: System.MulticastDelegate.GetInvocationList()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/MulticastDelegate.cs
-    startLine: 458
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetInvocationList
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1266
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Returns the invocation list of this multicast delegate, in invocation order.
   syntax:
     content: public override sealed Delegate[] GetInvocationList()
-    content.vb: Public NotOverridable Overrides Function GetInvocationList As
+    content.vb: 'Public NotOverridable Overrides Function GetInvocationList As '
     return:
       type: System.Delegate[]
-      description: An array of delegates whose invocation lists collectively match the invocation list of this instance.
   overridden: System.Delegate.GetInvocationList
-  exceptions:
-  - type: System.MemberAccessException
-    description: Cannot create an instance of an abstract class, or this member was invoked with a late-binding mechanism.
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
 - uid: System.MulticastDelegate.op_Equality(System.MulticastDelegate,System.MulticastDelegate)
+  commentId: M:System.MulticastDelegate.op_Equality(System.MulticastDelegate,System.MulticastDelegate)
   id: op_Equality(System.MulticastDelegate,System.MulticastDelegate)
   parent: System.MulticastDelegate
+  langs:
+  - csharp
+  - vb
   name: Equality(MulticastDelegate, MulticastDelegate)
+  nameWithType: MulticastDelegate.Equality(MulticastDelegate, MulticastDelegate)
   fullName: System.MulticastDelegate.Equality(System.MulticastDelegate, System.MulticastDelegate)
   type: Operator
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/MulticastDelegate.cs
-    startLine: 483
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Equality
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1267
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Determines whether two <xref href="System.MulticastDelegate" data-throw-if-not-resolved="false"></xref> objects are equal.
   syntax:
     content: public static bool operator ==(MulticastDelegate d1, MulticastDelegate d2)
     content.vb: Public Shared Operator =(d1 As MulticastDelegate, d2 As MulticastDelegate) As Boolean
     parameters:
     - id: d1
       type: System.MulticastDelegate
-      description: The left operand.
     - id: d2
       type: System.MulticastDelegate
-      description: The right operand.
     return:
       type: System.Boolean
-      description: true if *d1* and *d2* have the same invocation lists; otherwise, false.
-  exceptions:
-  - type: System.MemberAccessException
-    description: Cannot create an instance of an abstract class, or this member was invoked with a late-binding mechanism.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.MulticastDelegate.op_Inequality(System.MulticastDelegate,System.MulticastDelegate)
+  commentId: M:System.MulticastDelegate.op_Inequality(System.MulticastDelegate,System.MulticastDelegate)
   id: op_Inequality(System.MulticastDelegate,System.MulticastDelegate)
   parent: System.MulticastDelegate
+  langs:
+  - csharp
+  - vb
   name: Inequality(MulticastDelegate, MulticastDelegate)
+  nameWithType: MulticastDelegate.Inequality(MulticastDelegate, MulticastDelegate)
   fullName: System.MulticastDelegate.Inequality(System.MulticastDelegate, System.MulticastDelegate)
   type: Operator
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/MulticastDelegate.cs
-    startLine: 491
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Inequality
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1268
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Determines whether two <xref href="System.MulticastDelegate" data-throw-if-not-resolved="false"></xref> objects are not equal.
   syntax:
     content: public static bool operator !=(MulticastDelegate d1, MulticastDelegate d2)
     content.vb: Public Shared Operator <>(d1 As MulticastDelegate, d2 As MulticastDelegate) As Boolean
     parameters:
     - id: d1
       type: System.MulticastDelegate
-      description: The left operand.
     - id: d2
       type: System.MulticastDelegate
-      description: The right operand.
     return:
       type: System.Boolean
-      description: true if *d1* and *d2* do not have the same invocation lists; otherwise, false.
-  exceptions:
-  - type: System.MemberAccessException
-    description: Cannot create an instance of an abstract class, or this member was invoked with a late-binding mechanism.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Delegate
+  commentId: T:System.Delegate
   parent: System
   isExternal: false
   name: Delegate
+  nameWithType: Delegate
   fullName: System.Delegate
 - uid: System.Delegate.Target
+  commentId: P:System.Delegate.Target
   parent: System.Delegate
   isExternal: false
   name: Target
+  nameWithType: Delegate.Target
   fullName: System.Delegate.Target
 - uid: System.Delegate.Combine(System.Delegate,System.Delegate)
+  commentId: M:System.Delegate.Combine(System.Delegate,System.Delegate)
   parent: System.Delegate
   isExternal: false
   name: Combine(Delegate, Delegate)
+  nameWithType: Delegate.Combine(Delegate, Delegate)
   fullName: System.Delegate.Combine(System.Delegate, System.Delegate)
   spec.csharp:
   - uid: System.Delegate.Combine(System.Delegate,System.Delegate)
     name: Combine
+    nameWithType: Delegate.Combine
     fullName: System.Delegate.Combine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Delegate.Combine(System.Delegate,System.Delegate)
     name: Combine
+    nameWithType: Delegate.Combine
     fullName: System.Delegate.Combine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Delegate.Combine(System.Delegate[])
+  commentId: M:System.Delegate.Combine(System.Delegate[])
   parent: System.Delegate
   isExternal: false
   name: Combine(Delegate[])
-  name.vb: Combine(Delegate())
+  nameWithType: Delegate.Combine(Delegate[])
   fullName: System.Delegate.Combine(System.Delegate[])
-  fullName.vb: System.Delegate.Combine(System.Delegate())
+  nameWithType.vb: Delegate.Combine(Delegate())
+  fullname.vb: System.Delegate.Combine(System.Delegate())
+  name.vb: Combine(Delegate())
   spec.csharp:
   - uid: System.Delegate.Combine(System.Delegate[])
     name: Combine
+    nameWithType: Delegate.Combine
     fullName: System.Delegate.Combine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Delegate.Combine(System.Delegate[])
     name: Combine
+    nameWithType: Delegate.Combine
     fullName: System.Delegate.Combine
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Delegate.DynamicInvoke(System.Object[])
+  commentId: M:System.Delegate.DynamicInvoke(System.Object[])
   parent: System.Delegate
   isExternal: false
   name: DynamicInvoke(Object[])
-  name.vb: DynamicInvoke(Object())
+  nameWithType: Delegate.DynamicInvoke(Object[])
   fullName: System.Delegate.DynamicInvoke(System.Object[])
-  fullName.vb: System.Delegate.DynamicInvoke(System.Object())
+  nameWithType.vb: Delegate.DynamicInvoke(Object())
+  fullname.vb: System.Delegate.DynamicInvoke(System.Object())
+  name.vb: DynamicInvoke(Object())
   spec.csharp:
   - uid: System.Delegate.DynamicInvoke(System.Object[])
     name: DynamicInvoke
+    nameWithType: Delegate.DynamicInvoke
     fullName: System.Delegate.DynamicInvoke
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Delegate.DynamicInvoke(System.Object[])
     name: DynamicInvoke
+    nameWithType: Delegate.DynamicInvoke
     fullName: System.Delegate.DynamicInvoke
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Delegate.Remove(System.Delegate,System.Delegate)
+  commentId: M:System.Delegate.Remove(System.Delegate,System.Delegate)
   parent: System.Delegate
   isExternal: false
   name: Remove(Delegate, Delegate)
+  nameWithType: Delegate.Remove(Delegate, Delegate)
   fullName: System.Delegate.Remove(System.Delegate, System.Delegate)
   spec.csharp:
   - uid: System.Delegate.Remove(System.Delegate,System.Delegate)
     name: Remove
+    nameWithType: Delegate.Remove
     fullName: System.Delegate.Remove
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Delegate.Remove(System.Delegate,System.Delegate)
     name: Remove
+    nameWithType: Delegate.Remove
     fullName: System.Delegate.Remove
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Delegate.RemoveAll(System.Delegate,System.Delegate)
+  commentId: M:System.Delegate.RemoveAll(System.Delegate,System.Delegate)
   parent: System.Delegate
   isExternal: false
   name: RemoveAll(Delegate, Delegate)
+  nameWithType: Delegate.RemoveAll(Delegate, Delegate)
   fullName: System.Delegate.RemoveAll(System.Delegate, System.Delegate)
   spec.csharp:
   - uid: System.Delegate.RemoveAll(System.Delegate,System.Delegate)
     name: RemoveAll
+    nameWithType: Delegate.RemoveAll
     fullName: System.Delegate.RemoveAll
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Delegate.RemoveAll(System.Delegate,System.Delegate)
     name: RemoveAll
+    nameWithType: Delegate.RemoveAll
     fullName: System.Delegate.RemoveAll
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Delegate.Equals(System.Object)
+  commentId: M:System.Delegate.Equals(System.Object)
   parent: System.Delegate
   isExternal: false
   name: Equals(Object)
+  nameWithType: Delegate.Equals(Object)
   fullName: System.Delegate.Equals(System.Object)
   spec.csharp:
   - uid: System.Delegate.Equals(System.Object)
     name: Equals
+    nameWithType: Delegate.Equals
     fullName: System.Delegate.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Delegate.Equals(System.Object)
     name: Equals
+    nameWithType: Delegate.Equals
     fullName: System.Delegate.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Delegate.GetHashCode
+  commentId: M:System.Delegate.GetHashCode
   parent: System.Delegate
   isExternal: false
   name: GetHashCode()
+  nameWithType: Delegate.GetHashCode()
   fullName: System.Delegate.GetHashCode()
   spec.csharp:
   - uid: System.Delegate.GetHashCode
     name: GetHashCode
+    nameWithType: Delegate.GetHashCode
     fullName: System.Delegate.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Delegate.GetHashCode
     name: GetHashCode
+    nameWithType: Delegate.GetHashCode
     fullName: System.Delegate.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Delegate.GetInvocationList
+  commentId: M:System.Delegate.GetInvocationList
   parent: System.Delegate
   isExternal: false
   name: GetInvocationList()
+  nameWithType: Delegate.GetInvocationList()
   fullName: System.Delegate.GetInvocationList()
   spec.csharp:
   - uid: System.Delegate.GetInvocationList
     name: GetInvocationList
+    nameWithType: Delegate.GetInvocationList
     fullName: System.Delegate.GetInvocationList
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Delegate.GetInvocationList
     name: GetInvocationList
+    nameWithType: Delegate.GetInvocationList
     fullName: System.Delegate.GetInvocationList
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Delegate[]
-  isExternal: false
   name: Delegate[]
-  name.vb: Delegate()
+  nameWithType: Delegate[]
   fullName: System.Delegate[]
-  fullName.vb: System.Delegate()
+  nameWithType.vb: Delegate()
+  fullname.vb: System.Delegate()
+  name.vb: Delegate()
   spec.csharp:
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.MulticastDelegate
+  commentId: T:System.MulticastDelegate
   parent: System
   isExternal: false
   name: MulticastDelegate
+  nameWithType: MulticastDelegate
   fullName: System.MulticastDelegate
-- uid: System.MemberAccessException
-  parent: System
-  isExternal: false
-  name: MemberAccessException
-  fullName: System.MemberAccessException

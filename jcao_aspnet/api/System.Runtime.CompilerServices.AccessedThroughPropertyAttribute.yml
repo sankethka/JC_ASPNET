@@ -1,27 +1,39 @@
 items:
 - uid: System.Runtime.CompilerServices.AccessedThroughPropertyAttribute
+  commentId: T:System.Runtime.CompilerServices.AccessedThroughPropertyAttribute
   id: AccessedThroughPropertyAttribute
   parent: System.Runtime.CompilerServices
   children:
   - System.Runtime.CompilerServices.AccessedThroughPropertyAttribute.#ctor(System.String)
   - System.Runtime.CompilerServices.AccessedThroughPropertyAttribute.PropertyName
+  langs:
+  - csharp
+  - vb
   name: AccessedThroughPropertyAttribute
+  nameWithType: AccessedThroughPropertyAttribute
   fullName: System.Runtime.CompilerServices.AccessedThroughPropertyAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/CompilerServices/AccessedThroughPropertyAttribute.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/CompilerServices/AccessedThroughPropertyAttribute.cs
-    startLine: 10
+      repo: https://github.com/dotnet/corefx.git
+    id: AccessedThroughPropertyAttribute
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2824
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Specifies the name of the property that accesses the attributed field.
   syntax:
-    content: 'public sealed class AccessedThroughPropertyAttribute : Attribute'
-    content.vb: Public NotInheritable Class AccessedThroughPropertyAttribute Inherits Attribute
+    content: >-
+      [AttributeUsage(AttributeTargets.Field)]
+
+      public sealed class AccessedThroughPropertyAttribute : Attribute
+    content.vb: >-
+      <AttributeUsage(AttributeTargets.Field)>
+
+      Public NotInheritable Class AccessedThroughPropertyAttribute
+          Inherits Attribute
   inheritance:
   - System.Object
   - System.Attribute
@@ -33,254 +45,372 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  attributes:
+  - type: System.AttributeUsageAttribute
+    ctor: System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
+    arguments:
+    - type: System.AttributeTargets
+      value: 256
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Runtime.CompilerServices.AccessedThroughPropertyAttribute.#ctor(System.String)
+  commentId: M:System.Runtime.CompilerServices.AccessedThroughPropertyAttribute.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.Runtime.CompilerServices.AccessedThroughPropertyAttribute
+  langs:
+  - csharp
+  - vb
   name: AccessedThroughPropertyAttribute(String)
+  nameWithType: AccessedThroughPropertyAttribute.AccessedThroughPropertyAttribute(String)
   fullName: System.Runtime.CompilerServices.AccessedThroughPropertyAttribute.AccessedThroughPropertyAttribute(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/AccessedThroughPropertyAttribute.cs
-    startLine: 16
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2827
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Initializes a new instance of the AccessedThroughPropertyAttribute class with the name of the property used to access the attributed field.
   syntax:
     content: public AccessedThroughPropertyAttribute(string propertyName)
     content.vb: Public Sub New(propertyName As String)
     parameters:
     - id: propertyName
       type: System.String
-      description: The name of the property used to access the attributed field.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.CompilerServices.AccessedThroughPropertyAttribute.PropertyName
+  commentId: P:System.Runtime.CompilerServices.AccessedThroughPropertyAttribute.PropertyName
   id: PropertyName
   parent: System.Runtime.CompilerServices.AccessedThroughPropertyAttribute
+  langs:
+  - csharp
+  - vb
   name: PropertyName
+  nameWithType: AccessedThroughPropertyAttribute.PropertyName
   fullName: System.Runtime.CompilerServices.AccessedThroughPropertyAttribute.PropertyName
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/AccessedThroughPropertyAttribute.cs
-    startLine: 21
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PropertyName
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2828
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Gets the name of the property used to access the attributed field.
   syntax:
     content: public string PropertyName { get; }
     content.vb: Public ReadOnly Property PropertyName As String
     parameters: []
     return:
       type: System.String
-      description: The name of the property used to access the attributed field.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
   isExternal: false
   name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
   fullName: System.Runtime.CompilerServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Attribute
+  commentId: T:System.Attribute
   parent: System
   isExternal: false
   name: Attribute
+  nameWithType: Attribute
   fullName: System.Attribute
 - uid: System.Attribute.Equals(System.Object)
+  commentId: M:System.Attribute.Equals(System.Object)
   parent: System.Attribute
   isExternal: false
   name: Equals(Object)
+  nameWithType: Attribute.Equals(Object)
   fullName: System.Attribute.Equals(System.Object)
   spec.csharp:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Attribute.GetHashCode
+  commentId: M:System.Attribute.GetHashCode
   parent: System.Attribute
   isExternal: false
   name: GetHashCode()
+  nameWithType: Attribute.GetHashCode()
   fullName: System.Attribute.GetHashCode()
   spec.csharp:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String

@@ -1,5 +1,6 @@
 items:
 - uid: Microsoft.VisualBasic.CompilerServices.Operators
+  commentId: T:Microsoft.VisualBasic.CompilerServices.Operators
   id: Operators
   parent: Microsoft.VisualBasic.CompilerServices
   children:
@@ -36,6 +37,7 @@ items:
   - csharp
   - vb
   name: Operators
+  nameWithType: Operators
   fullName: Microsoft.VisualBasic.CompilerServices.Operators
   type: Class
   source:
@@ -43,24 +45,36 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Operators
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 147
+    startLine: 150
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Provides late-bound math operators, such as <xref href="Microsoft.VisualBasic.CompilerServices.Operators.AddObject(System.Object,System.Object)" data-throw-if-not-resolved="false"></xref> and <xref href="Microsoft.VisualBasic.CompilerServices.Operators.CompareObject(System.Object,System.Object,System.Boolean)" data-throw-if-not-resolved="false"></xref>, which the Visual Basic compiler uses internally.
   syntax:
     content: 'public sealed class Operators : object'
-    content.vb: Public NotInheritable Class Operators Inherits Object
+    content.vb: >-
+      Public NotInheritable Class Operators
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.AddObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.AddObject(System.Object,System.Object)
   id: AddObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: AddObject(Object, Object)
+  nameWithType: Operators.AddObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.AddObject(System.Object, System.Object)
   type: Method
   source:
@@ -68,32 +82,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: AddObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 151
+    startLine: 154
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic addition (+) operator.
   syntax:
     content: public static object AddObject(object Left, object Right)
     content.vb: Public Shared Function AddObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any numeric expression.
     - id: Right
       type: System.Object
-      description: Required. Any numeric expression.
     return:
       type: System.Object
-      description: The sum of *Left* and *Right*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.AndObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.AndObject(System.Object,System.Object)
   id: AndObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: AndObject(Object, Object)
+  nameWithType: Operators.AndObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.AndObject(System.Object, System.Object)
   type: Method
   source:
@@ -101,32 +120,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: AndObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 152
+    startLine: 155
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic And operator.
   syntax:
     content: public static object AndObject(object Left, object Right)
     content.vb: Public Shared Function AndObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any Boolean or numeric expression.
     - id: Right
       type: System.Object
-      description: Required. Any Boolean or numeric expression.
     return:
       type: System.Object
-      description: For Boolean operations, True if both *Left* and *Right* evaluate to True; otherwise, False. For bitwise operations, 1 if both *Left* and *Right* evaluate to 1; otherwise, 0.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectEqual(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectEqual(System.Object,System.Object,System.Boolean)
   id: CompareObjectEqual(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: CompareObjectEqual(Object, Object, Boolean)
+  nameWithType: Operators.CompareObjectEqual(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectEqual(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -134,35 +158,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CompareObjectEqual
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 153
+    startLine: 156
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic equal (=) operator.
   syntax:
     content: public static object CompareObjectEqual(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function CompareObjectEqual(Left As Object, Right As Object, TextCompare As Boolean) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Object
-      description: True if *Left* and *Right* are equal; otherwise, False.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectGreater(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectGreater(System.Object,System.Object,System.Boolean)
   id: CompareObjectGreater(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: CompareObjectGreater(Object, Object, Boolean)
+  nameWithType: Operators.CompareObjectGreater(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectGreater(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -170,35 +198,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CompareObjectGreater
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 154
+    startLine: 157
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic greater-than (&gt;) operator.
   syntax:
     content: public static object CompareObjectGreater(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function CompareObjectGreater(Left As Object, Right As Object, TextCompare As Boolean) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Object
-      description: True if *Left* is greater than *Right*; otherwise, False.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectGreaterEqual(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectGreaterEqual(System.Object,System.Object,System.Boolean)
   id: CompareObjectGreaterEqual(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: CompareObjectGreaterEqual(Object, Object, Boolean)
+  nameWithType: Operators.CompareObjectGreaterEqual(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectGreaterEqual(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -206,35 +238,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CompareObjectGreaterEqual
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 155
+    startLine: 158
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic greater-than or equal-to (&gt;=) operator.
   syntax:
     content: public static object CompareObjectGreaterEqual(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function CompareObjectGreaterEqual(Left As Object, Right As Object, TextCompare As Boolean) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Object
-      description: True if *Left* is greater than or equal to *Right*; otherwise, False.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectLess(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectLess(System.Object,System.Object,System.Boolean)
   id: CompareObjectLess(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: CompareObjectLess(Object, Object, Boolean)
+  nameWithType: Operators.CompareObjectLess(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectLess(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -242,35 +278,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CompareObjectLess
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 156
+    startLine: 159
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic less-than (&lt;) operator.
   syntax:
     content: public static object CompareObjectLess(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function CompareObjectLess(Left As Object, Right As Object, TextCompare As Boolean) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Object
-      description: True if *Left* is less than *Right*; otherwise, False.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectLessEqual(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectLessEqual(System.Object,System.Object,System.Boolean)
   id: CompareObjectLessEqual(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: CompareObjectLessEqual(Object, Object, Boolean)
+  nameWithType: Operators.CompareObjectLessEqual(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectLessEqual(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -278,35 +318,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CompareObjectLessEqual
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 157
+    startLine: 160
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic less-than or equal-to (&lt;=) operator.
   syntax:
     content: public static object CompareObjectLessEqual(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function CompareObjectLessEqual(Left As Object, Right As Object, TextCompare As Boolean) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Object
-      description: True if *Left* is less than or equal to *Right*; otherwise, False.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual(System.Object,System.Object,System.Boolean)
   id: CompareObjectNotEqual(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: CompareObjectNotEqual(Object, Object, Boolean)
+  nameWithType: Operators.CompareObjectNotEqual(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -314,35 +358,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CompareObjectNotEqual
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 158
+    startLine: 161
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic not-equal (&lt;&gt;) operator.
   syntax:
     content: public static object CompareObjectNotEqual(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function CompareObjectNotEqual(Left As Object, Right As Object, TextCompare As Boolean) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Object
-      description: True if *Left* is not equal to *Right*; otherwise, False.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.CompareString(System.String,System.String,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.CompareString(System.String,System.String,System.Boolean)
   id: CompareString(System.String,System.String,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: CompareString(String, String, Boolean)
+  nameWithType: Operators.CompareString(String, String, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.CompareString(System.String, System.String, System.Boolean)
   type: Method
   source:
@@ -350,35 +398,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CompareString
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 159
+    startLine: 162
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Performs binary or text string comparison when given two strings.
   syntax:
     content: public static int CompareString(string Left, string Right, bool TextCompare)
     content.vb: Public Shared Function CompareString(Left As String, Right As String, TextCompare As Boolean) As Integer
     parameters:
     - id: Left
       type: System.String
-      description: Required. Any String expression.
     - id: Right
       type: System.String
-      description: Required. Any String expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Int32
-      description: Value Condition -1 *Left* is less than *Right*. 0*Left* is equal to *Right*. 1 *Left* is greater than *Right*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(System.Object,System.Object)
   id: ConcatenateObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: ConcatenateObject(Object, Object)
+  nameWithType: Operators.ConcatenateObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(System.Object, System.Object)
   type: Method
   source:
@@ -386,32 +438,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ConcatenateObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 160
+    startLine: 163
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic concatenation (&amp;) operator.
   syntax:
     content: public static object ConcatenateObject(object Left, object Right)
     content.vb: Public Shared Function ConcatenateObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     return:
       type: System.Object
-      description: A string representing the concatenation of *Left* and *Right*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(System.Object,System.Object,System.Boolean)
   id: ConditionalCompareObjectEqual(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: ConditionalCompareObjectEqual(Object, Object, Boolean)
+  nameWithType: Operators.ConditionalCompareObjectEqual(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -419,35 +476,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ConditionalCompareObjectEqual
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 161
+    startLine: 164
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the overloaded Visual Basic equals (=) operator.
   syntax:
     content: public static bool ConditionalCompareObjectEqual(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function ConditionalCompareObjectEqual(Left As Object, Right As Object, TextCompare As Boolean) As Boolean
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Boolean
-      description: The result of the overloaded equals operator. False if operator overloading is not supported.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectGreater(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectGreater(System.Object,System.Object,System.Boolean)
   id: ConditionalCompareObjectGreater(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: ConditionalCompareObjectGreater(Object, Object, Boolean)
+  nameWithType: Operators.ConditionalCompareObjectGreater(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectGreater(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -455,35 +516,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ConditionalCompareObjectGreater
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 162
+    startLine: 165
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the overloaded Visual Basic greater-than (&gt;) operator.
   syntax:
     content: public static bool ConditionalCompareObjectGreater(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function ConditionalCompareObjectGreater(Left As Object, Right As Object, TextCompare As Boolean) As Boolean
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Boolean
-      description: The result of the overloaded greater-than operator. False if operator overloading is not supported.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectGreaterEqual(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectGreaterEqual(System.Object,System.Object,System.Boolean)
   id: ConditionalCompareObjectGreaterEqual(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: ConditionalCompareObjectGreaterEqual(Object, Object, Boolean)
+  nameWithType: Operators.ConditionalCompareObjectGreaterEqual(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectGreaterEqual(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -491,35 +556,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ConditionalCompareObjectGreaterEqual
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 163
+    startLine: 166
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the overloaded Visual Basic greater-than or equal-to (&gt;=) operator.
   syntax:
     content: public static bool ConditionalCompareObjectGreaterEqual(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function ConditionalCompareObjectGreaterEqual(Left As Object, Right As Object, TextCompare As Boolean) As Boolean
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Boolean
-      description: The result of the overloaded greater-than or equal-to operator. False if operator overloading is not supported.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLess(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLess(System.Object,System.Object,System.Boolean)
   id: ConditionalCompareObjectLess(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: ConditionalCompareObjectLess(Object, Object, Boolean)
+  nameWithType: Operators.ConditionalCompareObjectLess(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLess(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -527,35 +596,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ConditionalCompareObjectLess
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 164
+    startLine: 167
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the overloaded Visual Basic less-than (&lt;) operator.
   syntax:
     content: public static bool ConditionalCompareObjectLess(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function ConditionalCompareObjectLess(Left As Object, Right As Object, TextCompare As Boolean) As Boolean
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Boolean
-      description: The result of the overloaded less-than operator. False if operator overloading is not supported.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLessEqual(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLessEqual(System.Object,System.Object,System.Boolean)
   id: ConditionalCompareObjectLessEqual(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: ConditionalCompareObjectLessEqual(Object, Object, Boolean)
+  nameWithType: Operators.ConditionalCompareObjectLessEqual(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLessEqual(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -563,35 +636,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ConditionalCompareObjectLessEqual
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 165
+    startLine: 168
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the overloaded Visual Basic less-than or equal-to (&lt;=) operator.
   syntax:
     content: public static bool ConditionalCompareObjectLessEqual(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function ConditionalCompareObjectLessEqual(Left As Object, Right As Object, TextCompare As Boolean) As Boolean
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Boolean
-      description: The result of the overloaded less-than or equal-to operator. False if operator overloading is not supported.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectNotEqual(System.Object,System.Object,System.Boolean)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectNotEqual(System.Object,System.Object,System.Boolean)
   id: ConditionalCompareObjectNotEqual(System.Object,System.Object,System.Boolean)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: ConditionalCompareObjectNotEqual(Object, Object, Boolean)
+  nameWithType: Operators.ConditionalCompareObjectNotEqual(Object, Object, Boolean)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectNotEqual(System.Object, System.Object, System.Boolean)
   type: Method
   source:
@@ -599,35 +676,39 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ConditionalCompareObjectNotEqual
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 166
+    startLine: 169
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the overloaded Visual Basic not-equal (&lt;&gt;) operator.
   syntax:
     content: public static bool ConditionalCompareObjectNotEqual(object Left, object Right, bool TextCompare)
     content.vb: Public Shared Function ConditionalCompareObjectNotEqual(Left As Object, Right As Object, TextCompare As Boolean) As Boolean
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any expression.
     - id: Right
       type: System.Object
-      description: Required. Any expression.
     - id: TextCompare
       type: System.Boolean
-      description: Required. True to perform a case-insensitive string comparison; otherwise, False.
     return:
       type: System.Boolean
-      description: The result of the overloaded not-equal operator. False if operator overloading is not supported.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.DivideObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.DivideObject(System.Object,System.Object)
   id: DivideObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: DivideObject(Object, Object)
+  nameWithType: Operators.DivideObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.DivideObject(System.Object, System.Object)
   type: Method
   source:
@@ -635,32 +716,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: DivideObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 167
+    startLine: 170
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic division (/) operator.
   syntax:
     content: public static object DivideObject(object Left, object Right)
     content.vb: Public Shared Function DivideObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any numeric expression.
     - id: Right
       type: System.Object
-      description: Required. Any numeric expression.
     return:
       type: System.Object
-      description: The full quotient of *Left* divided by *Right*, including any remainder.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.ExponentObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.ExponentObject(System.Object,System.Object)
   id: ExponentObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: ExponentObject(Object, Object)
+  nameWithType: Operators.ExponentObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.ExponentObject(System.Object, System.Object)
   type: Method
   source:
@@ -668,32 +754,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ExponentObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 168
+    startLine: 171
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic exponent (^) operator.
   syntax:
     content: public static object ExponentObject(object Left, object Right)
     content.vb: Public Shared Function ExponentObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any numeric expression.
     - id: Right
       type: System.Object
-      description: Required. Any numeric expression.
     return:
       type: System.Object
-      description: The result of *Left* raised to the power of *Right*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.IntDivideObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.IntDivideObject(System.Object,System.Object)
   id: IntDivideObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: IntDivideObject(Object, Object)
+  nameWithType: Operators.IntDivideObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.IntDivideObject(System.Object, System.Object)
   type: Method
   source:
@@ -701,32 +792,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: IntDivideObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 169
+    startLine: 172
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic integer division (\) operator.
   syntax:
     content: public static object IntDivideObject(object Left, object Right)
     content.vb: Public Shared Function IntDivideObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any numeric expression.
     - id: Right
       type: System.Object
-      description: Required. Any numeric expression.
     return:
       type: System.Object
-      description: The integer quotient of *Left* divided by *Right*, which discards any remainder and retains only the integer portion.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.LeftShiftObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.LeftShiftObject(System.Object,System.Object)
   id: LeftShiftObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: LeftShiftObject(Object, Object)
+  nameWithType: Operators.LeftShiftObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.LeftShiftObject(System.Object, System.Object)
   type: Method
   source:
@@ -734,32 +830,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: LeftShiftObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 170
+    startLine: 173
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic arithmetic left shift (&lt;&lt;) operator.
   syntax:
     content: public static object LeftShiftObject(object Operand, object Amount)
     content.vb: Public Shared Function LeftShiftObject(Operand As Object, Amount As Object) As Object
     parameters:
     - id: Operand
       type: System.Object
-      description: Required. Integral numeric expression. The bit pattern to be shifted. The data type must be an integral type (SByte, Byte, Short, UShort, Integer, UInteger, Long, or ULong).
     - id: Amount
       type: System.Object
-      description: Required. Numeric expression. The number of bits to shift the bit pattern. The data type must be Integer or widen to Integer.
     return:
       type: System.Object
-      description: An integral numeric value. The result of shifting the bit pattern. The data type is the same as that of *Operand*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.ModObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.ModObject(System.Object,System.Object)
   id: ModObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: ModObject(Object, Object)
+  nameWithType: Operators.ModObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.ModObject(System.Object, System.Object)
   type: Method
   source:
@@ -767,32 +868,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ModObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 171
+    startLine: 174
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic Mod operator.
   syntax:
     content: public static object ModObject(object Left, object Right)
     content.vb: Public Shared Function ModObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any numeric expression.
     - id: Right
       type: System.Object
-      description: Required. Any numeric expression.
     return:
       type: System.Object
-      description: The remainder after *Left* is divided by *Right*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(System.Object,System.Object)
   id: MultiplyObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: MultiplyObject(Object, Object)
+  nameWithType: Operators.MultiplyObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(System.Object, System.Object)
   type: Method
   source:
@@ -800,32 +906,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: MultiplyObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 172
+    startLine: 175
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic multiply (*) operator.
   syntax:
     content: public static object MultiplyObject(object Left, object Right)
     content.vb: Public Shared Function MultiplyObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any numeric expression.
     - id: Right
       type: System.Object
-      description: Required. Any numeric expression.
     return:
       type: System.Object
-      description: The product of *Left* and *Right*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.NegateObject(System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.NegateObject(System.Object)
   id: NegateObject(System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: NegateObject(Object)
+  nameWithType: Operators.NegateObject(Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.NegateObject(System.Object)
   type: Method
   source:
@@ -833,29 +944,35 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NegateObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 173
+    startLine: 176
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: "Represents the Visual Basic unary minus (–) operator."
   syntax:
     content: public static object NegateObject(object Operand)
     content.vb: Public Shared Function NegateObject(Operand As Object) As Object
     parameters:
     - id: Operand
       type: System.Object
-      description: Required. Any numeric expression.
     return:
       type: System.Object
-      description: The negative value of *Operand*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.NotObject(System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.NotObject(System.Object)
   id: NotObject(System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: NotObject(Object)
+  nameWithType: Operators.NotObject(Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.NotObject(System.Object)
   type: Method
   source:
@@ -863,29 +980,35 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NotObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 174
+    startLine: 177
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic Not operator.
   syntax:
     content: public static object NotObject(object Operand)
     content.vb: Public Shared Function NotObject(Operand As Object) As Object
     parameters:
     - id: Operand
       type: System.Object
-      description: Required. Any Boolean or numeric expression.
     return:
       type: System.Object
-      description: For Boolean operations, False if *Operand* is True; otherwise, True. For bitwise operations, 1 if *Operand* is 0; otherwise, 0.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.OrObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.OrObject(System.Object,System.Object)
   id: OrObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: OrObject(Object, Object)
+  nameWithType: Operators.OrObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.OrObject(System.Object, System.Object)
   type: Method
   source:
@@ -893,32 +1016,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: OrObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 175
+    startLine: 178
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic Or operator.
   syntax:
     content: public static object OrObject(object Left, object Right)
     content.vb: Public Shared Function OrObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any Boolean or numeric expression.
     - id: Right
       type: System.Object
-      description: Required. Any Boolean or numeric expression.
     return:
       type: System.Object
-      description: For Boolean operations, False if both *Left* and *Right* evaluate to False; otherwise, True. For bitwise operations, 0 if both *Left* and *Right* evaluate to 0; otherwise, 1.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.PlusObject(System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.PlusObject(System.Object)
   id: PlusObject(System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: PlusObject(Object)
+  nameWithType: Operators.PlusObject(Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.PlusObject(System.Object)
   type: Method
   source:
@@ -926,29 +1054,35 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: PlusObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 176
+    startLine: 179
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic unary plus (+) operator.
   syntax:
     content: public static object PlusObject(object Operand)
     content.vb: Public Shared Function PlusObject(Operand As Object) As Object
     parameters:
     - id: Operand
       type: System.Object
-      description: Required. Any numeric expression.
     return:
       type: System.Object
-      description: The value of *Operand*. (The sign of the *Operand* is unchanged.)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.RightShiftObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.RightShiftObject(System.Object,System.Object)
   id: RightShiftObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: RightShiftObject(Object, Object)
+  nameWithType: Operators.RightShiftObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.RightShiftObject(System.Object, System.Object)
   type: Method
   source:
@@ -956,32 +1090,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: RightShiftObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 177
+    startLine: 180
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic arithmetic right shift (&gt;&gt;) operator.
   syntax:
     content: public static object RightShiftObject(object Operand, object Amount)
     content.vb: Public Shared Function RightShiftObject(Operand As Object, Amount As Object) As Object
     parameters:
     - id: Operand
       type: System.Object
-      description: Required. Integral numeric expression. The bit pattern to be shifted. The data type must be an integral type (SByte, Byte, Short, UShort, Integer, UInteger, Long, or ULong).
     - id: Amount
       type: System.Object
-      description: Required. Numeric expression. The number of bits to shift the bit pattern. The data type must be Integer or widen to Integer.
     return:
       type: System.Object
-      description: An integral numeric value. The result of shifting the bit pattern. The data type is the same as that of *Operand*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(System.Object,System.Object)
   id: SubtractObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: SubtractObject(Object, Object)
+  nameWithType: Operators.SubtractObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(System.Object, System.Object)
   type: Method
   source:
@@ -989,32 +1128,37 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: SubtractObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 178
+    startLine: 181
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: "Represents the Visual Basic subtraction (–) operator."
   syntax:
     content: public static object SubtractObject(object Left, object Right)
     content.vb: Public Shared Function SubtractObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any numeric expression.
     - id: Right
       type: System.Object
-      description: Required. Any numeric expression.
     return:
       type: System.Object
-      description: The difference between *Left* and *Right*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: Microsoft.VisualBasic.CompilerServices.Operators.XorObject(System.Object,System.Object)
+  commentId: M:Microsoft.VisualBasic.CompilerServices.Operators.XorObject(System.Object,System.Object)
   id: XorObject(System.Object,System.Object)
   parent: Microsoft.VisualBasic.CompilerServices.Operators
   langs:
   - csharp
   - vb
   name: XorObject(Object, Object)
+  nameWithType: Operators.XorObject(Object, Object)
   fullName: Microsoft.VisualBasic.CompilerServices.Operators.XorObject(System.Object, System.Object)
   type: Method
   source:
@@ -1022,51 +1166,66 @@ items:
       path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: XorObject
     path: src/Microsoft.VisualBasic/ref/Microsoft.VisualBasic.cs
-    startLine: 179
+    startLine: 182
   assemblies:
   - Microsoft.VisualBasic
   namespace: Microsoft.VisualBasic.CompilerServices
-  summary: Represents the Visual Basic Xor operator.
   syntax:
     content: public static object XorObject(object Left, object Right)
     content.vb: Public Shared Function XorObject(Left As Object, Right As Object) As Object
     parameters:
     - id: Left
       type: System.Object
-      description: Required. Any Boolean or numeric expression.
     - id: Right
       type: System.Object
-      description: Required. Any Boolean or numeric expression.
     return:
       type: System.Object
-      description: A Boolean or numeric value. For a Boolean comparison, the return value is the logical exclusion (exclusive logical disjunction) of two Boolean values. For bitwise (numeric) operations, the return value is a numeric value that represents the bitwise exclusion (exclusive bitwise disjunction) of two numeric bit patterns. For more information, see Xor Operator (Visual Basic).
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: Microsoft.VisualBasic.CompilerServices
+  commentId: N:Microsoft.VisualBasic.CompilerServices
   isExternal: false
   name: Microsoft.VisualBasic.CompilerServices
+  nameWithType: Microsoft.VisualBasic.CompilerServices
   fullName: Microsoft.VisualBasic.CompilerServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32

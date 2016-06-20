@@ -1,5 +1,6 @@
 items:
 - uid: System.Threading.Tasks.ParallelLoopState
+  commentId: T:System.Threading.Tasks.ParallelLoopState
   id: ParallelLoopState
   parent: System.Threading.Tasks
   children:
@@ -9,227 +10,336 @@ items:
   - System.Threading.Tasks.ParallelLoopState.LowestBreakIteration
   - System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration
   - System.Threading.Tasks.ParallelLoopState.Stop
+  langs:
+  - csharp
+  - vb
   name: ParallelLoopState
+  nameWithType: ParallelLoopState
   fullName: System.Threading.Tasks.ParallelLoopState
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
-    startLine: 28
+      repo: https://github.com/dotnet/corefx.git
+    id: ParallelLoopState
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 53
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Enables iterations of parallel loops to interact with other iterations. An instance of this class is provided by the <xref href="System.Threading.Tasks.Parallel" data-throw-if-not-resolved="false"></xref> class to each loop; you can not create instances in your code.
   syntax:
     content: 'public class ParallelLoopState : object'
-    content.vb: Public Class ParallelLoopState Inherits Object
+    content.vb: >-
+      Public Class ParallelLoopState
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Threading.Tasks.ParallelLoopState.IsExceptional
+  commentId: P:System.Threading.Tasks.ParallelLoopState.IsExceptional
   id: IsExceptional
   parent: System.Threading.Tasks.ParallelLoopState
+  langs:
+  - csharp
+  - vb
   name: IsExceptional
+  nameWithType: ParallelLoopState.IsExceptional
   fullName: System.Threading.Tasks.ParallelLoopState.IsExceptional
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
-    startLine: 91
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsExceptional
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 56
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Gets whether any iteration of the loop has thrown an exception that went unhandled by that iteration.
   syntax:
     content: public bool IsExceptional { get; }
     content.vb: Public ReadOnly Property IsExceptional As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if an unhandled exception was thrown; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Threading.Tasks.ParallelLoopState.IsStopped
+  commentId: P:System.Threading.Tasks.ParallelLoopState.IsStopped
   id: IsStopped
   parent: System.Threading.Tasks.ParallelLoopState
+  langs:
+  - csharp
+  - vb
   name: IsStopped
+  nameWithType: ParallelLoopState.IsStopped
   fullName: System.Threading.Tasks.ParallelLoopState.IsStopped
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
-    startLine: 79
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsStopped
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 57
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Gets whether any iteration of the loop has called the <xref href="System.Threading.Tasks.ParallelLoopState.Stop" data-throw-if-not-resolved="false"></xref> method.
   syntax:
     content: public bool IsStopped { get; }
     content.vb: Public ReadOnly Property IsStopped As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if any iteration has stopped the loop by calling the <xref href="System.Threading.Tasks.ParallelLoopState.Stop" data-throw-if-not-resolved="false"></xref> method; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Threading.Tasks.ParallelLoopState.LowestBreakIteration
+  commentId: P:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration
   id: LowestBreakIteration
   parent: System.Threading.Tasks.ParallelLoopState
+  langs:
+  - csharp
+  - vb
   name: LowestBreakIteration
+  nameWithType: ParallelLoopState.LowestBreakIteration
   fullName: System.Threading.Tasks.ParallelLoopState.LowestBreakIteration
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
-    startLine: 118
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LowestBreakIteration
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 58
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Gets the lowest iteration of the loop from which <xref href="System.Threading.Tasks.ParallelLoopState.Break" data-throw-if-not-resolved="false"></xref> was called.
   syntax:
     content: public Nullable<long> LowestBreakIteration { get; }
     content.vb: Public ReadOnly Property LowestBreakIteration As Nullable(Of Long)
     parameters: []
     return:
       type: System.Nullable{System.Int64}
-      description: The lowest iteration from which <xref href="System.Threading.Tasks.ParallelLoopState.Break" data-throw-if-not-resolved="false"></xref> was called. In the case of a <xref href="System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0})" data-throw-if-not-resolved="false"></xref> loop, the value is based on an internally-generated index.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration
+  commentId: P:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration
   id: ShouldExitCurrentIteration
   parent: System.Threading.Tasks.ParallelLoopState
+  langs:
+  - csharp
+  - vb
   name: ShouldExitCurrentIteration
+  nameWithType: ParallelLoopState.ShouldExitCurrentIteration
   fullName: System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
-    startLine: 68
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ShouldExitCurrentIteration
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 59
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Gets whether the current iteration of the loop should exit based on requests made by this or other iterations.
   syntax:
     content: public bool ShouldExitCurrentIteration { get; }
     content.vb: Public ReadOnly Property ShouldExitCurrentIteration As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the current iteration should exit; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Threading.Tasks.ParallelLoopState.Break
+  commentId: M:System.Threading.Tasks.ParallelLoopState.Break
   id: Break
   parent: System.Threading.Tasks.ParallelLoopState
+  langs:
+  - csharp
+  - vb
   name: Break()
+  nameWithType: ParallelLoopState.Break()
   fullName: System.Threading.Tasks.ParallelLoopState.Break()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
-    startLine: 185
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Break
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 60
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Communicates that the <xref href="System.Threading.Tasks.Parallel" data-throw-if-not-resolved="false"></xref> loop should cease execution of iterations beyond the current iteration at the system's earliest convenience.
   syntax:
     content: public void Break()
     content.vb: Public Sub Break
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Threading.Tasks.ParallelLoopState.Stop" data-throw-if-not-resolved="false"></xref> method was previously called. <xref href="System.Threading.Tasks.ParallelLoopState.Break" data-throw-if-not-resolved="false"></xref> and <xref href="System.Threading.Tasks.ParallelLoopState.Stop" data-throw-if-not-resolved="false"></xref> may not be used in combination by iterations of the same loop.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Threading.Tasks.ParallelLoopState.Stop
+  commentId: M:System.Threading.Tasks.ParallelLoopState.Stop
   id: Stop
   parent: System.Threading.Tasks.ParallelLoopState
+  langs:
+  - csharp
+  - vb
   name: Stop()
+  nameWithType: ParallelLoopState.Stop()
   fullName: System.Threading.Tasks.ParallelLoopState.Stop()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/ParallelLoopState.cs
-    startLine: 146
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Stop
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 61
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Communicates that the <xref href="System.Threading.Tasks.Parallel" data-throw-if-not-resolved="false"></xref> loop should cease execution at the system's earliest convenience.
   syntax:
     content: public void Stop()
     content.vb: Public Sub Stop
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Threading.Tasks.ParallelLoopState.Break" data-throw-if-not-resolved="false"></xref> method was called previously. <xref href="System.Threading.Tasks.ParallelLoopState.Break" data-throw-if-not-resolved="false"></xref> and <xref href="System.Threading.Tasks.ParallelLoopState.Stop" data-throw-if-not-resolved="false"></xref> may not be used in combination by iterations of the same loop.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
   isExternal: false
   name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
   fullName: System.Threading.Tasks
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Nullable{System.Int64}
+  commentId: '!:System.Nullable{System.Int64}'
   definition: System.Nullable`1
   name: Nullable<Int64>
-  name.vb: Nullable(Of Int64)
+  nameWithType: Nullable<Int64>
   fullName: System.Nullable<System.Int64>
-  fullName.vb: System.Nullable(Of System.Int64)
+  nameWithType.vb: Nullable(Of Int64)
+  fullname.vb: System.Nullable(Of System.Int64)
+  name.vb: Nullable(Of Int64)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Nullable`1
+  commentId: T:System.Nullable`1
   parent: System
   isExternal: false
   name: Nullable<>
-  name.vb: Nullable(Of )
+  nameWithType: Nullable<>
   fullName: System.Nullable<>
-  fullName.vb: System.Nullable(Of )
+  nameWithType.vb: Nullable(Of )
+  fullname.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Nullable`1
     name: Nullable
+    nameWithType: Nullable
     fullName: System.Nullable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException

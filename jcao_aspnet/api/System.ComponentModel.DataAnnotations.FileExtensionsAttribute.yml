@@ -1,5 +1,6 @@
 items:
 - uid: System.ComponentModel.DataAnnotations.FileExtensionsAttribute
+  commentId: T:System.ComponentModel.DataAnnotations.FileExtensionsAttribute
   id: FileExtensionsAttribute
   parent: System.ComponentModel.DataAnnotations
   children:
@@ -7,23 +8,29 @@ items:
   - System.ComponentModel.DataAnnotations.FileExtensionsAttribute.Extensions
   - System.ComponentModel.DataAnnotations.FileExtensionsAttribute.FormatErrorMessage(System.String)
   - System.ComponentModel.DataAnnotations.FileExtensionsAttribute.IsValid(System.Object)
+  langs:
+  - csharp
+  - vb
   name: FileExtensionsAttribute
+  nameWithType: FileExtensionsAttribute
   fullName: System.ComponentModel.DataAnnotations.FileExtensionsAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/FileExtensionsAttribute.cs
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/FileExtensionsAttribute.cs
-    startLine: 11
+    id: FileExtensionsAttribute
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 145
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Validates file name extensions.
   syntax:
     content: 'public sealed class FileExtensionsAttribute : DataTypeAttribute'
-    content.vb: Public NotInheritable Class FileExtensionsAttribute Inherits DataTypeAttribute
+    content.vb: >-
+      Public NotInheritable Class FileExtensionsAttribute
+          Inherits DataTypeAttribute
   inheritance:
   - System.Object
   - System.ComponentModel.DataAnnotations.ValidationAttribute
@@ -42,402 +49,573 @@ items:
   - System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
   - System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
   - System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.String)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.ComponentModel.DataAnnotations.FileExtensionsAttribute.#ctor
+  commentId: M:System.ComponentModel.DataAnnotations.FileExtensionsAttribute.#ctor
   id: '#ctor'
   parent: System.ComponentModel.DataAnnotations.FileExtensionsAttribute
+  langs:
+  - csharp
+  - vb
   name: FileExtensionsAttribute()
+  nameWithType: FileExtensionsAttribute.FileExtensionsAttribute()
   fullName: System.ComponentModel.DataAnnotations.FileExtensionsAttribute.FileExtensionsAttribute()
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/FileExtensionsAttribute.cs
-    startLine: 17
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 148
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DataAnnotations.FileExtensionsAttribute" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public FileExtensionsAttribute()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DataAnnotations.FileExtensionsAttribute.Extensions
+  commentId: P:System.ComponentModel.DataAnnotations.FileExtensionsAttribute.Extensions
   id: Extensions
   parent: System.ComponentModel.DataAnnotations.FileExtensionsAttribute
+  langs:
+  - csharp
+  - vb
   name: Extensions
+  nameWithType: FileExtensionsAttribute.Extensions
   fullName: System.ComponentModel.DataAnnotations.FileExtensionsAttribute.Extensions
   type: Property
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/FileExtensionsAttribute.cs
-    startLine: 25
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Extensions
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 149
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Gets or sets the file name extensions.
   syntax:
     content: public string Extensions { get; set; }
     content.vb: Public Property Extensions As String
     parameters: []
     return:
       type: System.String
-      description: The file name extensions, or the default file extensions (".png", ".jpg", ".jpeg", and ".gif") if the property is not set.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DataAnnotations.FileExtensionsAttribute.FormatErrorMessage(System.String)
+  commentId: M:System.ComponentModel.DataAnnotations.FileExtensionsAttribute.FormatErrorMessage(System.String)
   id: FormatErrorMessage(System.String)
   parent: System.ComponentModel.DataAnnotations.FileExtensionsAttribute
+  langs:
+  - csharp
+  - vb
   name: FormatErrorMessage(String)
+  nameWithType: FileExtensionsAttribute.FormatErrorMessage(String)
   fullName: System.ComponentModel.DataAnnotations.FileExtensionsAttribute.FormatErrorMessage(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/FileExtensionsAttribute.cs
-    startLine: 51
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FormatErrorMessage
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 150
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Applies formatting to an error message, based on the data field where the error occurred.
   syntax:
     content: public override string FormatErrorMessage(string name)
     content.vb: Public Overrides Function FormatErrorMessage(name As String) As String
     parameters:
     - id: name
       type: System.String
-      description: The name of the field that caused the validation failure.
     return:
       type: System.String
-      description: The formatted error message.
   overridden: System.ComponentModel.DataAnnotations.ValidationAttribute.FormatErrorMessage(System.String)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.ComponentModel.DataAnnotations.FileExtensionsAttribute.IsValid(System.Object)
+  commentId: M:System.ComponentModel.DataAnnotations.FileExtensionsAttribute.IsValid(System.Object)
   id: IsValid(System.Object)
   parent: System.ComponentModel.DataAnnotations.FileExtensionsAttribute
+  langs:
+  - csharp
+  - vb
   name: IsValid(Object)
+  nameWithType: FileExtensionsAttribute.IsValid(Object)
   fullName: System.ComponentModel.DataAnnotations.FileExtensionsAttribute.IsValid(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/FileExtensionsAttribute.cs
-    startLine: 56
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsValid
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 151
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Checks that the specified file name extension or extensions is valid.
   syntax:
     content: public override bool IsValid(object value)
     content.vb: Public Overrides Function IsValid(value As Object) As Boolean
     parameters:
     - id: value
       type: System.Object
-      description: A comma delimited list of valid file extensions.
     return:
       type: System.Boolean
-      description: true if the file name extension is valid; otherwise, false.
   overridden: System.ComponentModel.DataAnnotations.DataTypeAttribute.IsValid(System.Object)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.ComponentModel.DataAnnotations
+  commentId: N:System.ComponentModel.DataAnnotations
   isExternal: false
   name: System.ComponentModel.DataAnnotations
+  nameWithType: System.ComponentModel.DataAnnotations
   fullName: System.ComponentModel.DataAnnotations
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute
+  commentId: T:System.ComponentModel.DataAnnotations.ValidationAttribute
   parent: System.ComponentModel.DataAnnotations
   isExternal: false
   name: ValidationAttribute
+  nameWithType: ValidationAttribute
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute
 - uid: System.ComponentModel.DataAnnotations.DataTypeAttribute
+  commentId: T:System.ComponentModel.DataAnnotations.DataTypeAttribute
   parent: System.ComponentModel.DataAnnotations
   isExternal: false
   name: DataTypeAttribute
+  nameWithType: DataTypeAttribute
   fullName: System.ComponentModel.DataAnnotations.DataTypeAttribute
 - uid: System.ComponentModel.DataAnnotations.DataTypeAttribute.CustomDataType
+  commentId: P:System.ComponentModel.DataAnnotations.DataTypeAttribute.CustomDataType
   parent: System.ComponentModel.DataAnnotations.DataTypeAttribute
   isExternal: false
   name: CustomDataType
+  nameWithType: DataTypeAttribute.CustomDataType
   fullName: System.ComponentModel.DataAnnotations.DataTypeAttribute.CustomDataType
 - uid: System.ComponentModel.DataAnnotations.DataTypeAttribute.DataType
+  commentId: P:System.ComponentModel.DataAnnotations.DataTypeAttribute.DataType
   parent: System.ComponentModel.DataAnnotations.DataTypeAttribute
   isExternal: false
   name: DataType
+  nameWithType: DataTypeAttribute.DataType
   fullName: System.ComponentModel.DataAnnotations.DataTypeAttribute.DataType
 - uid: System.ComponentModel.DataAnnotations.DataTypeAttribute.DisplayFormat
+  commentId: P:System.ComponentModel.DataAnnotations.DataTypeAttribute.DisplayFormat
   parent: System.ComponentModel.DataAnnotations.DataTypeAttribute
   isExternal: false
   name: DisplayFormat
+  nameWithType: DataTypeAttribute.DisplayFormat
   fullName: System.ComponentModel.DataAnnotations.DataTypeAttribute.DisplayFormat
 - uid: System.ComponentModel.DataAnnotations.DataTypeAttribute.GetDataTypeName
+  commentId: M:System.ComponentModel.DataAnnotations.DataTypeAttribute.GetDataTypeName
   parent: System.ComponentModel.DataAnnotations.DataTypeAttribute
   isExternal: false
   name: GetDataTypeName()
+  nameWithType: DataTypeAttribute.GetDataTypeName()
   fullName: System.ComponentModel.DataAnnotations.DataTypeAttribute.GetDataTypeName()
   spec.csharp:
   - uid: System.ComponentModel.DataAnnotations.DataTypeAttribute.GetDataTypeName
     name: GetDataTypeName
+    nameWithType: DataTypeAttribute.GetDataTypeName
     fullName: System.ComponentModel.DataAnnotations.DataTypeAttribute.GetDataTypeName
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.DataAnnotations.DataTypeAttribute.GetDataTypeName
     name: GetDataTypeName
+    nameWithType: DataTypeAttribute.GetDataTypeName
     fullName: System.ComponentModel.DataAnnotations.DataTypeAttribute.GetDataTypeName
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage
+  commentId: P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage
   parent: System.ComponentModel.DataAnnotations.ValidationAttribute
   isExternal: false
   name: ErrorMessage
+  nameWithType: ValidationAttribute.ErrorMessage
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceName
+  commentId: P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceName
   parent: System.ComponentModel.DataAnnotations.ValidationAttribute
   isExternal: false
   name: ErrorMessageResourceName
+  nameWithType: ValidationAttribute.ErrorMessageResourceName
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceName
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceType
+  commentId: P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceType
   parent: System.ComponentModel.DataAnnotations.ValidationAttribute
   isExternal: false
   name: ErrorMessageResourceType
+  nameWithType: ValidationAttribute.ErrorMessageResourceType
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceType
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageString
+  commentId: P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageString
   parent: System.ComponentModel.DataAnnotations.ValidationAttribute
   isExternal: false
   name: ErrorMessageString
+  nameWithType: ValidationAttribute.ErrorMessageString
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageString
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.RequiresValidationContext
+  commentId: P:System.ComponentModel.DataAnnotations.ValidationAttribute.RequiresValidationContext
   parent: System.ComponentModel.DataAnnotations.ValidationAttribute
   isExternal: false
   name: RequiresValidationContext
+  nameWithType: ValidationAttribute.RequiresValidationContext
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.RequiresValidationContext
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  commentId: M:System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
   parent: System.ComponentModel.DataAnnotations.ValidationAttribute
   isExternal: true
   name: GetValidationResult(Object, ValidationContext)
+  nameWithType: ValidationAttribute.GetValidationResult(Object, ValidationContext)
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
   spec.csharp:
   - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
     name: GetValidationResult
+    nameWithType: ValidationAttribute.GetValidationResult
     fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.ComponentModel.DataAnnotations.ValidationContext
     name: ValidationContext
+    nameWithType: ValidationContext
     fullName: System.ComponentModel.DataAnnotations.ValidationContext
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
     name: GetValidationResult
+    nameWithType: ValidationAttribute.GetValidationResult
     fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.ComponentModel.DataAnnotations.ValidationContext
     name: ValidationContext
+    nameWithType: ValidationContext
     fullName: System.ComponentModel.DataAnnotations.ValidationContext
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  commentId: M:System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
   parent: System.ComponentModel.DataAnnotations.ValidationAttribute
   isExternal: true
   name: IsValid(Object, ValidationContext)
+  nameWithType: ValidationAttribute.IsValid(Object, ValidationContext)
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
   spec.csharp:
   - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
     name: IsValid
+    nameWithType: ValidationAttribute.IsValid
     fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.ComponentModel.DataAnnotations.ValidationContext
     name: ValidationContext
+    nameWithType: ValidationContext
     fullName: System.ComponentModel.DataAnnotations.ValidationContext
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
     name: IsValid
+    nameWithType: ValidationAttribute.IsValid
     fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.ComponentModel.DataAnnotations.ValidationContext
     name: ValidationContext
+    nameWithType: ValidationContext
     fullName: System.ComponentModel.DataAnnotations.ValidationContext
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  commentId: M:System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
   parent: System.ComponentModel.DataAnnotations.ValidationAttribute
   isExternal: true
   name: Validate(Object, ValidationContext)
+  nameWithType: ValidationAttribute.Validate(Object, ValidationContext)
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
   spec.csharp:
   - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
     name: Validate
+    nameWithType: ValidationAttribute.Validate
     fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.ComponentModel.DataAnnotations.ValidationContext
     name: ValidationContext
+    nameWithType: ValidationContext
     fullName: System.ComponentModel.DataAnnotations.ValidationContext
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
     name: Validate
+    nameWithType: ValidationAttribute.Validate
     fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.ComponentModel.DataAnnotations.ValidationContext
     name: ValidationContext
+    nameWithType: ValidationContext
     fullName: System.ComponentModel.DataAnnotations.ValidationContext
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.String)
+  commentId: M:System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.String)
   parent: System.ComponentModel.DataAnnotations.ValidationAttribute
   isExternal: true
   name: Validate(Object, String)
+  nameWithType: ValidationAttribute.Validate(Object, String)
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object, System.String)
   spec.csharp:
   - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.String)
     name: Validate
+    nameWithType: ValidationAttribute.Validate
     fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.String)
     name: Validate
+    nameWithType: ValidationAttribute.Validate
     fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.Validate
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.FormatErrorMessage(System.String)
+  commentId: M:System.ComponentModel.DataAnnotations.ValidationAttribute.FormatErrorMessage(System.String)
   parent: System.ComponentModel.DataAnnotations.ValidationAttribute
   isExternal: true
   name: FormatErrorMessage(String)
+  nameWithType: ValidationAttribute.FormatErrorMessage(String)
   fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.FormatErrorMessage(System.String)
   spec.csharp:
   - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.FormatErrorMessage(System.String)
     name: FormatErrorMessage
+    nameWithType: ValidationAttribute.FormatErrorMessage
     fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.FormatErrorMessage
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.DataAnnotations.ValidationAttribute.FormatErrorMessage(System.String)
     name: FormatErrorMessage
+    nameWithType: ValidationAttribute.FormatErrorMessage
     fullName: System.ComponentModel.DataAnnotations.ValidationAttribute.FormatErrorMessage
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.DataAnnotations.DataTypeAttribute.IsValid(System.Object)
+  commentId: M:System.ComponentModel.DataAnnotations.DataTypeAttribute.IsValid(System.Object)
   parent: System.ComponentModel.DataAnnotations.DataTypeAttribute
   isExternal: true
   name: IsValid(Object)
+  nameWithType: DataTypeAttribute.IsValid(Object)
   fullName: System.ComponentModel.DataAnnotations.DataTypeAttribute.IsValid(System.Object)
   spec.csharp:
   - uid: System.ComponentModel.DataAnnotations.DataTypeAttribute.IsValid(System.Object)
     name: IsValid
+    nameWithType: DataTypeAttribute.IsValid
     fullName: System.ComponentModel.DataAnnotations.DataTypeAttribute.IsValid
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.DataAnnotations.DataTypeAttribute.IsValid(System.Object)
     name: IsValid
+    nameWithType: DataTypeAttribute.IsValid
     fullName: System.ComponentModel.DataAnnotations.DataTypeAttribute.IsValid
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean

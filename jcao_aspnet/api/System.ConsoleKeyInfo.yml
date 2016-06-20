@@ -1,154 +1,419 @@
 items:
 - uid: System.ConsoleKeyInfo
+  commentId: T:System.ConsoleKeyInfo
   id: ConsoleKeyInfo
   parent: System
   children:
   - System.ConsoleKeyInfo.#ctor(System.Char,System.ConsoleKey,System.Boolean,System.Boolean,System.Boolean)
+  - System.ConsoleKeyInfo.Equals(System.ConsoleKeyInfo)
+  - System.ConsoleKeyInfo.Equals(System.Object)
+  - System.ConsoleKeyInfo.GetHashCode
   - System.ConsoleKeyInfo.Key
   - System.ConsoleKeyInfo.KeyChar
   - System.ConsoleKeyInfo.Modifiers
+  - System.ConsoleKeyInfo.op_Equality(System.ConsoleKeyInfo,System.ConsoleKeyInfo)
+  - System.ConsoleKeyInfo.op_Inequality(System.ConsoleKeyInfo,System.ConsoleKeyInfo)
+  langs:
+  - csharp
+  - vb
   name: ConsoleKeyInfo
+  nameWithType: ConsoleKeyInfo
   fullName: System.ConsoleKeyInfo
   type: Struct
   source:
-    remote: &o0
-      path: src/System.Console/src/System/ConsoleKeyInfo.cs
+    remote:
+      path: src/System.Console/ref/System.Console.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Console/src/System/ConsoleKeyInfo.cs
-    startLine: 6
+    id: ConsoleKeyInfo
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 126
   assemblies:
   - System.Console
   namespace: System
-  summary: Describes the console key that was pressed, including the character represented by the console key and the state of the SHIFT, ALT, and CTRL modifier keys.
   syntax:
     content: public struct ConsoleKeyInfo
     content.vb: Public Structure ConsoleKeyInfo
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
 - uid: System.ConsoleKeyInfo.#ctor(System.Char,System.ConsoleKey,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:System.ConsoleKeyInfo.#ctor(System.Char,System.ConsoleKey,System.Boolean,System.Boolean,System.Boolean)
   id: '#ctor(System.Char,System.ConsoleKey,System.Boolean,System.Boolean,System.Boolean)'
   parent: System.ConsoleKeyInfo
+  langs:
+  - csharp
+  - vb
   name: ConsoleKeyInfo(Char, ConsoleKey, Boolean, Boolean, Boolean)
+  nameWithType: ConsoleKeyInfo.ConsoleKeyInfo(Char, ConsoleKey, Boolean, Boolean, Boolean)
   fullName: System.ConsoleKeyInfo.ConsoleKeyInfo(System.Char, System.ConsoleKey, System.Boolean, System.Boolean, System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Console/src/System/ConsoleKeyInfo.cs
-    startLine: 12
+    remote:
+      path: src/System.Console/ref/System.Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 128
   assemblies:
   - System.Console
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> structure using the specified character, console key, and modifier keys.
   syntax:
     content: public ConsoleKeyInfo(char keyChar, ConsoleKey key, bool shift, bool alt, bool control)
     content.vb: Public Sub New(keyChar As Char, key As ConsoleKey, shift As Boolean, alt As Boolean, control As Boolean)
     parameters:
     - id: keyChar
       type: System.Char
-      description: The Unicode character that corresponds to the *key* parameter.
     - id: key
       type: System.ConsoleKey
-      description: The console key that corresponds to the *keyChar* parameter.
     - id: shift
       type: System.Boolean
-      description: true to indicate that a SHIFT key was pressed; otherwise, false.
     - id: alt
       type: System.Boolean
-      description: true to indicate that an ALT key was pressed; otherwise, false.
     - id: control
       type: System.Boolean
-      description: true to indicate that a CTRL key was pressed; otherwise, false.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The numeric value of the *key* parameter is less than 0 or greater than 255.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ConsoleKeyInfo.KeyChar
+  commentId: P:System.ConsoleKeyInfo.KeyChar
   id: KeyChar
   parent: System.ConsoleKeyInfo
+  langs:
+  - csharp
+  - vb
   name: KeyChar
+  nameWithType: ConsoleKeyInfo.KeyChar
   fullName: System.ConsoleKeyInfo.KeyChar
   type: Property
   source:
-    remote: *o0
-    path: src/System.Console/src/System/ConsoleKeyInfo.cs
-    startLine: 34
+    remote:
+      path: src/System.Console/ref/System.Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: KeyChar
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 129
   assemblies:
   - System.Console
   namespace: System
-  summary: Gets the Unicode character represented by the current <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public char KeyChar { get; }
     content.vb: Public ReadOnly Property KeyChar As Char
     parameters: []
     return:
       type: System.Char
-      description: An object that corresponds to the console key represented by the current <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ConsoleKeyInfo.Key
+  commentId: P:System.ConsoleKeyInfo.Key
   id: Key
   parent: System.ConsoleKeyInfo
+  langs:
+  - csharp
+  - vb
   name: Key
+  nameWithType: ConsoleKeyInfo.Key
   fullName: System.ConsoleKeyInfo.Key
   type: Property
   source:
-    remote: *o0
-    path: src/System.Console/src/System/ConsoleKeyInfo.cs
-    startLine: 39
+    remote:
+      path: src/System.Console/ref/System.Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Key
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 130
   assemblies:
   - System.Console
   namespace: System
-  summary: Gets the console key represented by the current <xref href="System.ConsoleKeyInfo" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public ConsoleKey Key { get; }
     content.vb: Public ReadOnly Property Key As ConsoleKey
     parameters: []
     return:
       type: System.ConsoleKey
-      description: A value that identifies the console key that was pressed.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ConsoleKeyInfo.Modifiers
+  commentId: P:System.ConsoleKeyInfo.Modifiers
   id: Modifiers
   parent: System.ConsoleKeyInfo
+  langs:
+  - csharp
+  - vb
   name: Modifiers
+  nameWithType: ConsoleKeyInfo.Modifiers
   fullName: System.ConsoleKeyInfo.Modifiers
   type: Property
   source:
-    remote: *o0
-    path: src/System.Console/src/System/ConsoleKeyInfo.cs
-    startLine: 44
+    remote:
+      path: src/System.Console/ref/System.Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Modifiers
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 131
   assemblies:
   - System.Console
   namespace: System
-  summary: Gets a bitwise combination of <xref href="System.ConsoleModifiers" data-throw-if-not-resolved="false"></xref> values that specifies one or more modifier keys pressed simultaneously with the console key.
   syntax:
     content: public ConsoleModifiers Modifiers { get; }
     content.vb: Public ReadOnly Property Modifiers As ConsoleModifiers
     parameters: []
     return:
       type: System.ConsoleModifiers
-      description: A bitwise combination of the enumeration values. There is no default value.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: System.ConsoleKeyInfo.Equals(System.ConsoleKeyInfo)
+  commentId: M:System.ConsoleKeyInfo.Equals(System.ConsoleKeyInfo)
+  id: Equals(System.ConsoleKeyInfo)
+  parent: System.ConsoleKeyInfo
+  langs:
+  - csharp
+  - vb
+  name: Equals(ConsoleKeyInfo)
+  nameWithType: ConsoleKeyInfo.Equals(ConsoleKeyInfo)
+  fullName: System.ConsoleKeyInfo.Equals(System.ConsoleKeyInfo)
+  type: Method
+  source:
+    remote:
+      path: src/System.Console/ref/System.Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 132
+  assemblies:
+  - System.Console
+  namespace: System
+  syntax:
+    content: public bool Equals(ConsoleKeyInfo obj)
+    content.vb: Public Function Equals(obj As ConsoleKeyInfo) As Boolean
+    parameters:
+    - id: obj
+      type: System.ConsoleKeyInfo
+    return:
+      type: System.Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: System.ConsoleKeyInfo.Equals(System.Object)
+  commentId: M:System.ConsoleKeyInfo.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: System.ConsoleKeyInfo
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: ConsoleKeyInfo.Equals(Object)
+  fullName: System.ConsoleKeyInfo.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/System.Console/ref/System.Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 133
+  assemblies:
+  - System.Console
+  namespace: System
+  syntax:
+    content: public override bool Equals(object value)
+    content.vb: Public Overrides Function Equals(value As Object) As Boolean
+    parameters:
+    - id: value
+      type: System.Object
+    return:
+      type: System.Boolean
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: System.ConsoleKeyInfo.GetHashCode
+  commentId: M:System.ConsoleKeyInfo.GetHashCode
+  id: GetHashCode
+  parent: System.ConsoleKeyInfo
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ConsoleKeyInfo.GetHashCode()
+  fullName: System.ConsoleKeyInfo.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/System.Console/ref/System.Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 134
+  assemblies:
+  - System.Console
+  namespace: System
+  syntax:
+    content: public override int GetHashCode()
+    content.vb: Public Overrides Function GetHashCode As Integer
+    return:
+      type: System.Int32
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: System.ConsoleKeyInfo.op_Equality(System.ConsoleKeyInfo,System.ConsoleKeyInfo)
+  commentId: M:System.ConsoleKeyInfo.op_Equality(System.ConsoleKeyInfo,System.ConsoleKeyInfo)
+  id: op_Equality(System.ConsoleKeyInfo,System.ConsoleKeyInfo)
+  parent: System.ConsoleKeyInfo
+  langs:
+  - csharp
+  - vb
+  name: Equality(ConsoleKeyInfo, ConsoleKeyInfo)
+  nameWithType: ConsoleKeyInfo.Equality(ConsoleKeyInfo, ConsoleKeyInfo)
+  fullName: System.ConsoleKeyInfo.Equality(System.ConsoleKeyInfo, System.ConsoleKeyInfo)
+  type: Operator
+  source:
+    remote:
+      path: src/System.Console/ref/System.Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Equality
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 135
+  assemblies:
+  - System.Console
+  namespace: System
+  syntax:
+    content: public static bool operator ==(ConsoleKeyInfo a, ConsoleKeyInfo b)
+    content.vb: Public Shared Operator =(a As ConsoleKeyInfo, b As ConsoleKeyInfo) As Boolean
+    parameters:
+    - id: a
+      type: System.ConsoleKeyInfo
+    - id: b
+      type: System.ConsoleKeyInfo
+    return:
+      type: System.Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: System.ConsoleKeyInfo.op_Inequality(System.ConsoleKeyInfo,System.ConsoleKeyInfo)
+  commentId: M:System.ConsoleKeyInfo.op_Inequality(System.ConsoleKeyInfo,System.ConsoleKeyInfo)
+  id: op_Inequality(System.ConsoleKeyInfo,System.ConsoleKeyInfo)
+  parent: System.ConsoleKeyInfo
+  langs:
+  - csharp
+  - vb
+  name: Inequality(ConsoleKeyInfo, ConsoleKeyInfo)
+  nameWithType: ConsoleKeyInfo.Inequality(ConsoleKeyInfo, ConsoleKeyInfo)
+  fullName: System.ConsoleKeyInfo.Inequality(System.ConsoleKeyInfo, System.ConsoleKeyInfo)
+  type: Operator
+  source:
+    remote:
+      path: src/System.Console/ref/System.Console.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Inequality
+    path: src/System.Console/ref/System.Console.cs
+    startLine: 136
+  assemblies:
+  - System.Console
+  namespace: System
+  syntax:
+    content: public static bool operator !=(ConsoleKeyInfo a, ConsoleKeyInfo b)
+    content.vb: Public Shared Operator <>(a As ConsoleKeyInfo, b As ConsoleKeyInfo) As Boolean
+    parameters:
+    - id: a
+      type: System.ConsoleKeyInfo
+    - id: b
+      type: System.ConsoleKeyInfo
+    return:
+      type: System.Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Char
+  commentId: T:System.Char
   parent: System
   isExternal: false
   name: Char
+  nameWithType: Char
   fullName: System.Char
 - uid: System.ConsoleKey
+  commentId: T:System.ConsoleKey
   parent: System
   isExternal: false
   name: ConsoleKey
+  nameWithType: ConsoleKey
   fullName: System.ConsoleKey
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.ConsoleModifiers
+  commentId: T:System.ConsoleModifiers
   parent: System
   isExternal: false
   name: ConsoleModifiers
+  nameWithType: ConsoleModifiers
   fullName: System.ConsoleModifiers
-- uid: System.ArgumentOutOfRangeException
+- uid: System.ConsoleKeyInfo
+  commentId: T:System.ConsoleKeyInfo
+  parent: System
   isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
+  name: ConsoleKeyInfo
+  nameWithType: ConsoleKeyInfo
+  fullName: System.ConsoleKeyInfo
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: false
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: false
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

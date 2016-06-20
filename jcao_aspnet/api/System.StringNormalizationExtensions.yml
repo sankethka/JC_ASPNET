@@ -1,5 +1,6 @@
 items:
 - uid: System.StringNormalizationExtensions
+  commentId: T:System.StringNormalizationExtensions
   id: StringNormalizationExtensions
   parent: System
   children:
@@ -7,64 +8,106 @@ items:
   - System.StringNormalizationExtensions.IsNormalized(System.String,System.Text.NormalizationForm)
   - System.StringNormalizationExtensions.Normalize(System.String)
   - System.StringNormalizationExtensions.Normalize(System.String,System.Text.NormalizationForm)
+  langs:
+  - csharp
+  - vb
   name: StringNormalizationExtensions
+  nameWithType: StringNormalizationExtensions
   fullName: System.StringNormalizationExtensions
   type: Class
   source:
-    remote: &o0
-      path: src/Common/src/System/StringNormalizationExtensions.Windows.cs
+    remote:
+      path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/Common/src/System/StringNormalizationExtensions.Windows.cs
-    startLine: 12
-  assemblies:
-  - System.Globalization.Extensions
-  namespace: System
-  syntax:
-    content: 'public class StringNormalizationExtensions : object'
-    content.vb: Public Class StringNormalizationExtensions Inherits Object
-  inheritance:
-  - System.Object
-- uid: System.StringNormalizationExtensions.IsNormalized(System.String)
-  id: IsNormalized(System.String)
-  parent: System.StringNormalizationExtensions
-  name: IsNormalized(String)
-  fullName: System.StringNormalizationExtensions.IsNormalized(System.String)
-  type: Method
-  source:
-    remote: &o1
-      path: src/Common/src/System/StringNormalizationExtensions.cs
-      branch: master
-      repo: https://github.com/dotnet/corefx.git
-    path: src/Common/src/System/StringNormalizationExtensions.cs
-    startLine: 15
-  assemblies:
-  - System.Globalization.Extensions
-  namespace: System
-  syntax:
-    content: public static bool IsNormalized(string value)
-    content.vb: Public Shared Function IsNormalized(value As String) As Boolean
-    parameters:
-    - id: value
-      type: System.String
-    return:
-      type: System.Boolean
-- uid: System.StringNormalizationExtensions.IsNormalized(System.String,System.Text.NormalizationForm)
-  id: IsNormalized(System.String,System.Text.NormalizationForm)
-  parent: System.StringNormalizationExtensions
-  name: IsNormalized(String, NormalizationForm)
-  fullName: System.StringNormalizationExtensions.IsNormalized(System.String, System.Text.NormalizationForm)
-  type: Method
-  source:
-    remote: *o0
-    path: src/Common/src/System/StringNormalizationExtensions.Windows.cs
+    id: StringNormalizationExtensions
+    path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
     startLine: 14
   assemblies:
   - System.Globalization.Extensions
   namespace: System
   syntax:
-    content: public static bool IsNormalized(string value, NormalizationForm normalizationForm)
-    content.vb: Public Shared Function IsNormalized(value As String, normalizationForm As NormalizationForm) As Boolean
+    content: 'public class StringNormalizationExtensions : object'
+    content.vb: >-
+      Public Class StringNormalizationExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: System.StringNormalizationExtensions.IsNormalized(System.String)
+  commentId: M:System.StringNormalizationExtensions.IsNormalized(System.String)
+  id: IsNormalized(System.String)
+  isExtensionMethod: true
+  parent: System.StringNormalizationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsNormalized(String)
+  nameWithType: StringNormalizationExtensions.IsNormalized(String)
+  fullName: System.StringNormalizationExtensions.IsNormalized(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsNormalized
+    path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+    startLine: 16
+  assemblies:
+  - System.Globalization.Extensions
+  namespace: System
+  syntax:
+    content: public static bool IsNormalized(this string value)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsNormalized(value As String) As Boolean
+    parameters:
+    - id: value
+      type: System.String
+    return:
+      type: System.Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: System.StringNormalizationExtensions.IsNormalized(System.String,System.Text.NormalizationForm)
+  commentId: M:System.StringNormalizationExtensions.IsNormalized(System.String,System.Text.NormalizationForm)
+  id: IsNormalized(System.String,System.Text.NormalizationForm)
+  isExtensionMethod: true
+  parent: System.StringNormalizationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsNormalized(String, NormalizationForm)
+  nameWithType: StringNormalizationExtensions.IsNormalized(String, NormalizationForm)
+  fullName: System.StringNormalizationExtensions.IsNormalized(System.String, System.Text.NormalizationForm)
+  type: Method
+  source:
+    remote:
+      path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsNormalized
+    path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+    startLine: 17
+  assemblies:
+  - System.Globalization.Extensions
+  namespace: System
+  syntax:
+    content: public static bool IsNormalized(this string value, NormalizationForm normalizationForm)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsNormalized(value As String, normalizationForm As NormalizationForm) As Boolean
     parameters:
     - id: value
       type: System.String
@@ -72,43 +115,81 @@ items:
       type: System.Text.NormalizationForm
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.StringNormalizationExtensions.Normalize(System.String)
+  commentId: M:System.StringNormalizationExtensions.Normalize(System.String)
   id: Normalize(System.String)
+  isExtensionMethod: true
   parent: System.StringNormalizationExtensions
+  langs:
+  - csharp
+  - vb
   name: Normalize(String)
+  nameWithType: StringNormalizationExtensions.Normalize(String)
   fullName: System.StringNormalizationExtensions.Normalize(System.String)
   type: Method
   source:
-    remote: *o1
-    path: src/Common/src/System/StringNormalizationExtensions.cs
-    startLine: 20
+    remote:
+      path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Normalize
+    path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+    startLine: 19
   assemblies:
   - System.Globalization.Extensions
   namespace: System
   syntax:
-    content: public static String Normalize(string value)
-    content.vb: Public Shared Function Normalize(value As String) As String
+    content: public static String Normalize(this string value)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Normalize(value As String) As String
     parameters:
     - id: value
       type: System.String
     return:
       type: String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.StringNormalizationExtensions.Normalize(System.String,System.Text.NormalizationForm)
+  commentId: M:System.StringNormalizationExtensions.Normalize(System.String,System.Text.NormalizationForm)
   id: Normalize(System.String,System.Text.NormalizationForm)
+  isExtensionMethod: true
   parent: System.StringNormalizationExtensions
+  langs:
+  - csharp
+  - vb
   name: Normalize(String, NormalizationForm)
+  nameWithType: StringNormalizationExtensions.Normalize(String, NormalizationForm)
   fullName: System.StringNormalizationExtensions.Normalize(System.String, System.Text.NormalizationForm)
   type: Method
   source:
-    remote: *o0
-    path: src/Common/src/System/StringNormalizationExtensions.Windows.cs
-    startLine: 48
+    remote:
+      path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Normalize
+    path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+    startLine: 20
   assemblies:
   - System.Globalization.Extensions
   namespace: System
   syntax:
-    content: public static String Normalize(string value, NormalizationForm normalizationForm)
-    content.vb: Public Shared Function Normalize(value As String, normalizationForm As NormalizationForm) As String
+    content: public static String Normalize(this string value, NormalizationForm normalizationForm)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Normalize(value As String, normalizationForm As NormalizationForm) As String
     parameters:
     - id: value
       type: System.String
@@ -116,36 +197,55 @@ items:
       type: System.Text.NormalizationForm
     return:
       type: String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Text.NormalizationForm
+  commentId: T:System.Text.NormalizationForm
   parent: System.Text
   isExternal: false
   name: NormalizationForm
+  nameWithType: NormalizationForm
   fullName: System.Text.NormalizationForm
 - uid: System.Text
+  commentId: N:System.Text
   isExternal: false
   name: System.Text
+  nameWithType: System.Text
   fullName: System.Text
 - uid: String
   isExternal: true
   name: String
+  nameWithType: String
   fullName: String

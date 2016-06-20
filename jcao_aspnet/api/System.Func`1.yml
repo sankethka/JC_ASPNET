@@ -1,24 +1,27 @@
 items:
 - uid: System.Func`1
+  commentId: T:System.Func`1
   id: Func`1
   parent: System
   children: []
+  langs:
+  - csharp
+  - vb
   name: Func<TResult>
-  name.vb: Func(Of TResult)
+  nameWithType: Func<TResult>
   fullName: System.Func<TResult>
-  fullName.vb: System.Func(Of TResult)
   type: Delegate
   source:
     remote:
-      path: src/mscorlib/src/System/Action.cs
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Action.cs
-    startLine: 43
+      repo: https://github.com/dotnet/corefx.git
+    id: Func
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 880
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Encapsulates a method that has no parameters and returns a value of the type specified by the *TResult* parameter.
   syntax:
     content: public delegate TResult Func<out TResult>();
     content.vb: Public Delegate Function Func(Of Out TResult) As TResult
@@ -26,13 +29,30 @@ items:
     - id: TResult
     return:
       type: '{TResult}'
-      description: The return value of the method that this delegate encapsulates.
+  nameWithType.vb: Func(Of TResult)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: '{TResult}'
+  commentId: '!:TResult'
+  definition: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: TResult
   isExternal: false
   name: TResult
+  nameWithType: TResult
   fullName: TResult

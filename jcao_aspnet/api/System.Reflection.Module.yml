@@ -1,5 +1,6 @@
 items:
 - uid: System.Reflection.Module
+  commentId: T:System.Reflection.Module
   id: Module
   parent: System.Reflection
   children:
@@ -11,350 +12,455 @@ items:
   - System.Reflection.Module.GetType(System.String,System.Boolean,System.Boolean)
   - System.Reflection.Module.Name
   - System.Reflection.Module.ToString
+  langs:
+  - csharp
+  - vb
   name: Module
+  nameWithType: Module
   fullName: System.Reflection.Module
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Reflection/Module.cs
+    remote:
+      path: src/System.Reflection/ref/4.0/System.Reflection.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Reflection/Module.cs
-    startLine: 57
+      repo: https://github.com/dotnet/corefx.git
+    id: Module
+    path: src/System.Reflection/ref/4.0/System.Reflection.cs
+    startLine: 200
   assemblies:
   - System.Reflection
   namespace: System.Reflection
-  summary: Performs reflection on a module.
   syntax:
     content: 'public abstract class Module : object'
-    content.vb: Public MustInherit Class Module Inherits Object
+    content.vb: >-
+      Public MustInherit Class Module
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Reflection.Module.Assembly
+  commentId: P:System.Reflection.Module.Assembly
   id: Assembly
   parent: System.Reflection.Module
+  langs:
+  - csharp
+  - vb
   name: Assembly
+  nameWithType: Module.Assembly
   fullName: System.Reflection.Module.Assembly
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Module.cs
-    startLine: 515
+    remote:
+      path: src/System.Reflection/ref/4.0/System.Reflection.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Assembly
+    path: src/System.Reflection/ref/4.0/System.Reflection.cs
+    startLine: 203
   assemblies:
   - System.Reflection
   namespace: System.Reflection
-  summary: Gets the appropriate <xref href="System.Reflection.Assembly" data-throw-if-not-resolved="false"></xref> for this instance of <xref href="System.Reflection.Module" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public virtual Assembly Assembly { get; }
     content.vb: Public Overridable ReadOnly Property Assembly As Assembly
     parameters: []
     return:
       type: System.Reflection.Assembly
-      description: An Assembly object.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Reflection.Module.CustomAttributes
+  commentId: P:System.Reflection.Module.CustomAttributes
   id: CustomAttributes
   parent: System.Reflection.Module
+  langs:
+  - csharp
+  - vb
   name: CustomAttributes
+  nameWithType: Module.CustomAttributes
   fullName: System.Reflection.Module.CustomAttributes
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Module.cs
-    startLine: 129
+    remote:
+      path: src/System.Reflection/ref/4.0/System.Reflection.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CustomAttributes
+    path: src/System.Reflection/ref/4.0/System.Reflection.cs
+    startLine: 204
   assemblies:
   - System.Reflection
   namespace: System.Reflection
-  summary: Gets a collection that contains this module's custom attributes.
   syntax:
     content: public virtual Collections.Generic.IEnumerable<CustomAttributeData> CustomAttributes { get; }
     content.vb: Public Overridable ReadOnly Property CustomAttributes As Collections.Generic.IEnumerable(Of CustomAttributeData)
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Reflection.CustomAttributeData}
-      description: A collection that contains this module's custom attributes.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Reflection.Module.FullyQualifiedName
+  commentId: P:System.Reflection.Module.FullyQualifiedName
   id: FullyQualifiedName
   parent: System.Reflection.Module
+  langs:
+  - csharp
+  - vb
   name: FullyQualifiedName
+  nameWithType: Module.FullyQualifiedName
   fullName: System.Reflection.Module.FullyQualifiedName
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Module.cs
-    startLine: 301
+    remote:
+      path: src/System.Reflection/ref/4.0/System.Reflection.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FullyQualifiedName
+    path: src/System.Reflection/ref/4.0/System.Reflection.cs
+    startLine: 205
   assemblies:
   - System.Reflection
   namespace: System.Reflection
-  summary: Gets a string representing the fully qualified name and path to this module.
   syntax:
     content: public virtual string FullyQualifiedName { get; }
     content.vb: Public Overridable ReadOnly Property FullyQualifiedName As String
     parameters: []
     return:
       type: System.String
-      description: The fully qualified module name.
-  exceptions:
-  - type: System.Security.SecurityException
-    description: The caller does not have the required permissions.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Reflection.Module.Name
+  commentId: P:System.Reflection.Module.Name
   id: Name
   parent: System.Reflection.Module
+  langs:
+  - csharp
+  - vb
   name: Name
+  nameWithType: Module.Name
   fullName: System.Reflection.Module.Name
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Module.cs
-    startLine: 500
+    remote:
+      path: src/System.Reflection/ref/4.0/System.Reflection.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Name
+    path: src/System.Reflection/ref/4.0/System.Reflection.cs
+    startLine: 206
   assemblies:
   - System.Reflection
   namespace: System.Reflection
-  summary: Gets a String representing the name of the module with the path removed.
   syntax:
     content: public virtual string Name { get; }
     content.vb: Public Overridable ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-      description: The module name with no path.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Reflection.Module.Equals(System.Object)
+  commentId: M:System.Reflection.Module.Equals(System.Object)
   id: Equals(System.Object)
   parent: System.Reflection.Module
+  langs:
+  - csharp
+  - vb
   name: Equals(Object)
+  nameWithType: Module.Equals(Object)
   fullName: System.Reflection.Module.Equals(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Module.cs
-    startLine: 107
+    remote:
+      path: src/System.Reflection/ref/4.0/System.Reflection.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Reflection/ref/4.0/System.Reflection.cs
+    startLine: 207
   assemblies:
   - System.Reflection
   namespace: System.Reflection
-  summary: Determines whether this module and the specified object are equal.
   syntax:
     content: public override bool Equals(object o)
     content.vb: Public Overrides Function Equals(o As Object) As Boolean
     parameters:
     - id: o
       type: System.Object
-      description: The object to compare with this instance.
     return:
       type: System.Boolean
-      description: true if *o* is equal to this instance; otherwise, false.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Reflection.Module.GetHashCode
+  commentId: M:System.Reflection.Module.GetHashCode
   id: GetHashCode
   parent: System.Reflection.Module
+  langs:
+  - csharp
+  - vb
   name: GetHashCode()
+  nameWithType: Module.GetHashCode()
   fullName: System.Reflection.Module.GetHashCode()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Module.cs
-    startLine: 112
+    remote:
+      path: src/System.Reflection/ref/4.0/System.Reflection.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Reflection/ref/4.0/System.Reflection.cs
+    startLine: 208
   assemblies:
   - System.Reflection
   namespace: System.Reflection
-  summary: Returns the hash code for this instance.
   syntax:
     content: public override int GetHashCode()
     content.vb: Public Overrides Function GetHashCode As Integer
     return:
       type: System.Int32
-      description: A 32-bit signed integer hash code.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Reflection.Module.GetType(System.String,System.Boolean,System.Boolean)
+  commentId: M:System.Reflection.Module.GetType(System.String,System.Boolean,System.Boolean)
   id: GetType(System.String,System.Boolean,System.Boolean)
   parent: System.Reflection.Module
+  langs:
+  - csharp
+  - vb
   name: GetType(String, Boolean, Boolean)
+  nameWithType: Module.GetType(String, Boolean, Boolean)
   fullName: System.Reflection.Module.GetType(System.String, System.Boolean, System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Module.cs
-    startLine: 295
+    remote:
+      path: src/System.Reflection/ref/4.0/System.Reflection.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetType
+    path: src/System.Reflection/ref/4.0/System.Reflection.cs
+    startLine: 209
   assemblies:
   - System.Reflection
   namespace: System.Reflection
-  summary: Returns the specified type, specifying whether to make a case-sensitive search of the module and whether to throw an exception if the type cannot be found.
   syntax:
     content: public virtual Type GetType(string className, bool throwOnError, bool ignoreCase)
     content.vb: Public Overridable Function GetType(className As String, throwOnError As Boolean, ignoreCase As Boolean) As Type
     parameters:
     - id: className
       type: System.String
-      description: The name of the type to locate. The name must be fully qualified with the namespace.
     - id: throwOnError
       type: System.Boolean
-      description: true to throw an exception if the type cannot be found; false to return null.
     - id: ignoreCase
       type: System.Boolean
-      description: true for case-insensitive search; otherwise, false.
     return:
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object representing the specified type, if the type is declared in this module; otherwise, null.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*className* is null.'
-  - type: System.Reflection.TargetInvocationException
-    description: The class initializers are invoked and an exception is thrown.
-  - type: System.ArgumentException
-    description: '*className* is a zero-length string.'
-  - type: System.TypeLoadException
-    description: '*throwOnError* is true, and the type cannot be found.'
-  - type: System.IO.FileNotFoundException
-    description: '*className* requires a dependent assembly that could not be found.'
-  - type: System.IO.FileLoadException
-    description: '*className* requires a dependent assembly that was found but could not be loaded.-or-The current assembly was loaded into the reflection-only context, and *className* requires a dependent assembly that was not preloaded.'
-  - type: System.BadImageFormatException
-    description: '*className* requires a dependent assembly, but the file is not a valid assembly. -or-*className* requires a dependent assembly which was compiled for a version of the runtime later than the currently loaded version.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Reflection.Module.ToString
+  commentId: M:System.Reflection.Module.ToString
   id: ToString
   parent: System.Reflection.Module
+  langs:
+  - csharp
+  - vb
   name: ToString()
+  nameWithType: Module.ToString()
   fullName: System.Reflection.Module.ToString()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Module.cs
-    startLine: 123
+    remote:
+      path: src/System.Reflection/ref/4.0/System.Reflection.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Reflection/ref/4.0/System.Reflection.cs
+    startLine: 210
   assemblies:
   - System.Reflection
   namespace: System.Reflection
-  summary: Returns the name of the module.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: A String representing the name of this module.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
   parent: System.Reflection
   isExternal: false
-  name: Reflection.Assembly
+  name: Assembly
+  nameWithType: Assembly
   fullName: System.Reflection.Assembly
 - uid: System.Collections.Generic.IEnumerable{System.Reflection.CustomAttributeData}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Reflection.CustomAttributeData}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<CustomAttributeData>
-  name.vb: Collections.Generic.IEnumerable(Of CustomAttributeData)
+  nameWithType: Collections.Generic.IEnumerable<CustomAttributeData>
   fullName: System.Collections.Generic.IEnumerable<System.Reflection.CustomAttributeData>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Reflection.CustomAttributeData)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of CustomAttributeData)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Reflection.CustomAttributeData)
+  name.vb: Collections.Generic.IEnumerable(Of CustomAttributeData)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Reflection.CustomAttributeData
     name: CustomAttributeData
+    nameWithType: CustomAttributeData
     fullName: System.Reflection.CustomAttributeData
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Reflection.CustomAttributeData
     name: CustomAttributeData
+    nameWithType: CustomAttributeData
     fullName: System.Reflection.CustomAttributeData
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type
-- uid: System.Security.SecurityException
-  isExternal: false
-  name: SecurityException
-  fullName: System.Security.SecurityException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.Reflection.TargetInvocationException
-  isExternal: false
-  name: TargetInvocationException
-  fullName: System.Reflection.TargetInvocationException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.TypeLoadException
-  parent: System
-  isExternal: false
-  name: TypeLoadException
-  fullName: System.TypeLoadException
-- uid: System.IO.FileNotFoundException
-  isExternal: false
-  name: FileNotFoundException
-  fullName: System.IO.FileNotFoundException
-- uid: System.IO.FileLoadException
-  isExternal: false
-  name: FileLoadException
-  fullName: System.IO.FileLoadException
-- uid: System.BadImageFormatException
-  isExternal: false
-  name: BadImageFormatException
-  fullName: System.BadImageFormatException

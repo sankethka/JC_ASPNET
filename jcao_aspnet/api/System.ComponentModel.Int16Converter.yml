@@ -1,26 +1,33 @@
 items:
 - uid: System.ComponentModel.Int16Converter
+  commentId: T:System.ComponentModel.Int16Converter
   id: Int16Converter
   parent: System.ComponentModel
   children:
   - System.ComponentModel.Int16Converter.#ctor
+  langs:
+  - csharp
+  - vb
   name: Int16Converter
+  nameWithType: Int16Converter
   fullName: System.ComponentModel.Int16Converter
   type: Class
   source:
     remote:
-      path: src/System.ComponentModel.TypeConverter/src/System/ComponentModel/Int16Converter.cs
+      path: src/System.ComponentModel.TypeConverter/ref/System.ComponentModel.TypeConverter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.ComponentModel.TypeConverter/src/System/ComponentModel/Int16Converter.cs
-    startLine: 12
+    id: Int16Converter
+    path: src/System.ComponentModel.TypeConverter/ref/System.ComponentModel.TypeConverter.cs
+    startLine: 262
   assemblies:
   - System.ComponentModel.TypeConverter
   namespace: System.ComponentModel
-  summary: Provides a type converter to convert 16-bit signed integer objects to and from other representations.
   syntax:
     content: 'public class Int16Converter : BaseNumberConverter'
-    content.vb: Public Class Int16Converter Inherits BaseNumberConverter
+    content.vb: >-
+      Public Class Int16Converter
+          Inherits BaseNumberConverter
   inheritance:
   - System.Object
   - System.ComponentModel.TypeConverter
@@ -33,19 +40,52 @@ items:
   - System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)
   - System.ComponentModel.TypeConverter.CanConvertTo(System.Type)
   - System.ComponentModel.TypeConverter.ConvertFrom(System.Object)
+  - System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.ComponentModel.ITypeDescriptorContext,System.String)
   - System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)
   - System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)
+  - System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.String)
   - System.ComponentModel.TypeConverter.ConvertFromString(System.String)
   - System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)
+  - System.ComponentModel.TypeConverter.ConvertToInvariantString(System.ComponentModel.ITypeDescriptorContext,System.Object)
   - System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)
   - System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
+  - System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Object)
   - System.ComponentModel.TypeConverter.ConvertToString(System.Object)
+  - System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)
+  - System.ComponentModel.TypeConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)
   - System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)
   - System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)
+  - System.ComponentModel.TypeConverter.GetCreateInstanceSupported
+  - System.ComponentModel.TypeConverter.GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)
+  - System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object)
+  - System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])
+  - System.ComponentModel.TypeConverter.GetProperties(System.Object)
+  - System.ComponentModel.TypeConverter.GetPropertiesSupported
+  - System.ComponentModel.TypeConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
+  - System.ComponentModel.TypeConverter.GetStandardValues
+  - System.ComponentModel.TypeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+  - System.ComponentModel.TypeConverter.GetStandardValuesExclusive
+  - System.ComponentModel.TypeConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+  - System.ComponentModel.TypeConverter.GetStandardValuesSupported
+  - System.ComponentModel.TypeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
+  - System.ComponentModel.TypeConverter.IsValid(System.ComponentModel.ITypeDescriptorContext,System.Object)
+  - System.ComponentModel.TypeConverter.IsValid(System.Object)
+  - System.ComponentModel.TypeConverter.SortProperties(System.ComponentModel.PropertyDescriptorCollection,System.String[])
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.ComponentModel.Int16Converter.#ctor
+  commentId: M:System.ComponentModel.Int16Converter.#ctor
   id: '#ctor'
   parent: System.ComponentModel.Int16Converter
+  langs:
+  - csharp
+  - vb
   name: Int16Converter()
+  nameWithType: Int16Converter.Int16Converter()
   fullName: System.ComponentModel.Int16Converter.Int16Converter()
   type: Constructor
   source:
@@ -53,644 +93,1828 @@ items:
       path: src/System.ComponentModel.TypeConverter/ref/System.ComponentModel.TypeConverter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.ComponentModel.TypeConverter/ref/System.ComponentModel.TypeConverter.cs
-    startLine: 87
+    startLine: 264
   assemblies:
   - System.ComponentModel.TypeConverter
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.Int16Converter" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public Int16Converter()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.ComponentModel
+  commentId: N:System.ComponentModel
   isExternal: false
   name: System.ComponentModel
+  nameWithType: System.ComponentModel
   fullName: System.ComponentModel
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.ComponentModel.TypeConverter
+  commentId: T:System.ComponentModel.TypeConverter
   parent: System.ComponentModel
   isExternal: false
   name: TypeConverter
+  nameWithType: TypeConverter
   fullName: System.ComponentModel.TypeConverter
 - uid: System.ComponentModel.BaseNumberConverter
+  commentId: T:System.ComponentModel.BaseNumberConverter
   parent: System.ComponentModel
   isExternal: false
   name: BaseNumberConverter
+  nameWithType: BaseNumberConverter
   fullName: System.ComponentModel.BaseNumberConverter
 - uid: System.ComponentModel.BaseNumberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)
+  commentId: M:System.ComponentModel.BaseNumberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)
   parent: System.ComponentModel.BaseNumberConverter
   isExternal: true
   name: CanConvertFrom(ITypeDescriptorContext, Type)
+  nameWithType: BaseNumberConverter.CanConvertFrom(ITypeDescriptorContext, Type)
   fullName: System.ComponentModel.BaseNumberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext, System.Type)
   spec.csharp:
   - uid: System.ComponentModel.BaseNumberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)
     name: CanConvertFrom
+    nameWithType: BaseNumberConverter.CanConvertFrom
     fullName: System.ComponentModel.BaseNumberConverter.CanConvertFrom
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.BaseNumberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)
     name: CanConvertFrom
+    nameWithType: BaseNumberConverter.CanConvertFrom
     fullName: System.ComponentModel.BaseNumberConverter.CanConvertFrom
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.BaseNumberConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)
+  commentId: M:System.ComponentModel.BaseNumberConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)
   parent: System.ComponentModel.BaseNumberConverter
   isExternal: true
   name: CanConvertTo(ITypeDescriptorContext, Type)
+  nameWithType: BaseNumberConverter.CanConvertTo(ITypeDescriptorContext, Type)
   fullName: System.ComponentModel.BaseNumberConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext, System.Type)
   spec.csharp:
   - uid: System.ComponentModel.BaseNumberConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)
     name: CanConvertTo
+    nameWithType: BaseNumberConverter.CanConvertTo
     fullName: System.ComponentModel.BaseNumberConverter.CanConvertTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.BaseNumberConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)
     name: CanConvertTo
+    nameWithType: BaseNumberConverter.CanConvertTo
     fullName: System.ComponentModel.BaseNumberConverter.CanConvertTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.BaseNumberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
+  commentId: M:System.ComponentModel.BaseNumberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
   parent: System.ComponentModel.BaseNumberConverter
   isExternal: true
   name: ConvertFrom(ITypeDescriptorContext, Globalization.CultureInfo, Object)
+  nameWithType: BaseNumberConverter.ConvertFrom(ITypeDescriptorContext, Globalization.CultureInfo, Object)
   fullName: System.ComponentModel.BaseNumberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext, System.Globalization.CultureInfo, System.Object)
   spec.csharp:
   - uid: System.ComponentModel.BaseNumberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
     name: ConvertFrom
+    nameWithType: BaseNumberConverter.ConvertFrom
     fullName: System.ComponentModel.BaseNumberConverter.ConvertFrom
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Globalization.CultureInfo
     name: Globalization.CultureInfo
+    nameWithType: Globalization.CultureInfo
     fullName: System.Globalization.CultureInfo
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.BaseNumberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
     name: ConvertFrom
+    nameWithType: BaseNumberConverter.ConvertFrom
     fullName: System.ComponentModel.BaseNumberConverter.ConvertFrom
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Globalization.CultureInfo
     name: Globalization.CultureInfo
+    nameWithType: Globalization.CultureInfo
     fullName: System.Globalization.CultureInfo
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.BaseNumberConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)
+  commentId: M:System.ComponentModel.BaseNumberConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)
   parent: System.ComponentModel.BaseNumberConverter
   isExternal: true
   name: ConvertTo(ITypeDescriptorContext, Globalization.CultureInfo, Object, Type)
+  nameWithType: BaseNumberConverter.ConvertTo(ITypeDescriptorContext, Globalization.CultureInfo, Object, Type)
   fullName: System.ComponentModel.BaseNumberConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext, System.Globalization.CultureInfo, System.Object, System.Type)
   spec.csharp:
   - uid: System.ComponentModel.BaseNumberConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)
     name: ConvertTo
+    nameWithType: BaseNumberConverter.ConvertTo
     fullName: System.ComponentModel.BaseNumberConverter.ConvertTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Globalization.CultureInfo
     name: Globalization.CultureInfo
+    nameWithType: Globalization.CultureInfo
     fullName: System.Globalization.CultureInfo
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.BaseNumberConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)
     name: ConvertTo
+    nameWithType: BaseNumberConverter.ConvertTo
     fullName: System.ComponentModel.BaseNumberConverter.ConvertTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Globalization.CultureInfo
     name: Globalization.CultureInfo
+    nameWithType: Globalization.CultureInfo
     fullName: System.Globalization.CultureInfo
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)
+  commentId: M:System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: CanConvertFrom(Type)
+  nameWithType: TypeConverter.CanConvertFrom(Type)
   fullName: System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)
     name: CanConvertFrom
+    nameWithType: TypeConverter.CanConvertFrom
     fullName: System.ComponentModel.TypeConverter.CanConvertFrom
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)
     name: CanConvertFrom
+    nameWithType: TypeConverter.CanConvertFrom
     fullName: System.ComponentModel.TypeConverter.CanConvertFrom
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.CanConvertTo(System.Type)
+  commentId: M:System.ComponentModel.TypeConverter.CanConvertTo(System.Type)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: CanConvertTo(Type)
+  nameWithType: TypeConverter.CanConvertTo(Type)
   fullName: System.ComponentModel.TypeConverter.CanConvertTo(System.Type)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.CanConvertTo(System.Type)
     name: CanConvertTo
+    nameWithType: TypeConverter.CanConvertTo
     fullName: System.ComponentModel.TypeConverter.CanConvertTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.CanConvertTo(System.Type)
     name: CanConvertTo
+    nameWithType: TypeConverter.CanConvertTo
     fullName: System.ComponentModel.TypeConverter.CanConvertTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.ConvertFrom(System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertFrom(System.Object)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: ConvertFrom(Object)
+  nameWithType: TypeConverter.ConvertFrom(Object)
   fullName: System.ComponentModel.TypeConverter.ConvertFrom(System.Object)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.ConvertFrom(System.Object)
     name: ConvertFrom
+    nameWithType: TypeConverter.ConvertFrom
     fullName: System.ComponentModel.TypeConverter.ConvertFrom
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.ConvertFrom(System.Object)
     name: ConvertFrom
+    nameWithType: TypeConverter.ConvertFrom
     fullName: System.ComponentModel.TypeConverter.ConvertFrom
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.ComponentModel.ITypeDescriptorContext,System.String)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.ComponentModel.ITypeDescriptorContext,System.String)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: ConvertFromInvariantString(ITypeDescriptorContext, String)
+  nameWithType: TypeConverter.ConvertFromInvariantString(ITypeDescriptorContext, String)
+  fullName: System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.ComponentModel.ITypeDescriptorContext, System.String)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.ComponentModel.ITypeDescriptorContext,System.String)
+    name: ConvertFromInvariantString
+    nameWithType: TypeConverter.ConvertFromInvariantString
+    fullName: System.ComponentModel.TypeConverter.ConvertFromInvariantString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.ComponentModel.ITypeDescriptorContext,System.String)
+    name: ConvertFromInvariantString
+    nameWithType: TypeConverter.ConvertFromInvariantString
+    fullName: System.ComponentModel.TypeConverter.ConvertFromInvariantString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: ConvertFromInvariantString(String)
+  nameWithType: TypeConverter.ConvertFromInvariantString(String)
   fullName: System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)
     name: ConvertFromInvariantString
+    nameWithType: TypeConverter.ConvertFromInvariantString
     fullName: System.ComponentModel.TypeConverter.ConvertFromInvariantString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)
     name: ConvertFromInvariantString
+    nameWithType: TypeConverter.ConvertFromInvariantString
     fullName: System.ComponentModel.TypeConverter.ConvertFromInvariantString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: ConvertFromString(ITypeDescriptorContext, Globalization.CultureInfo, String)
+  nameWithType: TypeConverter.ConvertFromString(ITypeDescriptorContext, Globalization.CultureInfo, String)
   fullName: System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext, System.Globalization.CultureInfo, System.String)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)
     name: ConvertFromString
+    nameWithType: TypeConverter.ConvertFromString
     fullName: System.ComponentModel.TypeConverter.ConvertFromString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Globalization.CultureInfo
     name: Globalization.CultureInfo
+    nameWithType: Globalization.CultureInfo
     fullName: System.Globalization.CultureInfo
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)
     name: ConvertFromString
+    nameWithType: TypeConverter.ConvertFromString
     fullName: System.ComponentModel.TypeConverter.ConvertFromString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Globalization.CultureInfo
     name: Globalization.CultureInfo
+    nameWithType: Globalization.CultureInfo
     fullName: System.Globalization.CultureInfo
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.String)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.String)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: ConvertFromString(ITypeDescriptorContext, String)
+  nameWithType: TypeConverter.ConvertFromString(ITypeDescriptorContext, String)
+  fullName: System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext, System.String)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.String)
+    name: ConvertFromString
+    nameWithType: TypeConverter.ConvertFromString
+    fullName: System.ComponentModel.TypeConverter.ConvertFromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.String)
+    name: ConvertFromString
+    nameWithType: TypeConverter.ConvertFromString
+    fullName: System.ComponentModel.TypeConverter.ConvertFromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.ConvertFromString(System.String)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertFromString(System.String)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: ConvertFromString(String)
+  nameWithType: TypeConverter.ConvertFromString(String)
   fullName: System.ComponentModel.TypeConverter.ConvertFromString(System.String)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.ConvertFromString(System.String)
     name: ConvertFromString
+    nameWithType: TypeConverter.ConvertFromString
     fullName: System.ComponentModel.TypeConverter.ConvertFromString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.ConvertFromString(System.String)
     name: ConvertFromString
+    nameWithType: TypeConverter.ConvertFromString
     fullName: System.ComponentModel.TypeConverter.ConvertFromString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: ConvertTo(Object, Type)
+  nameWithType: TypeConverter.ConvertTo(Object, Type)
   fullName: System.ComponentModel.TypeConverter.ConvertTo(System.Object, System.Type)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)
     name: ConvertTo
+    nameWithType: TypeConverter.ConvertTo
     fullName: System.ComponentModel.TypeConverter.ConvertTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)
     name: ConvertTo
+    nameWithType: TypeConverter.ConvertTo
     fullName: System.ComponentModel.TypeConverter.ConvertTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.ConvertToInvariantString(System.ComponentModel.ITypeDescriptorContext,System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertToInvariantString(System.ComponentModel.ITypeDescriptorContext,System.Object)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: ConvertToInvariantString(ITypeDescriptorContext, Object)
+  nameWithType: TypeConverter.ConvertToInvariantString(ITypeDescriptorContext, Object)
+  fullName: System.ComponentModel.TypeConverter.ConvertToInvariantString(System.ComponentModel.ITypeDescriptorContext, System.Object)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.ConvertToInvariantString(System.ComponentModel.ITypeDescriptorContext,System.Object)
+    name: ConvertToInvariantString
+    nameWithType: TypeConverter.ConvertToInvariantString
+    fullName: System.ComponentModel.TypeConverter.ConvertToInvariantString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.ConvertToInvariantString(System.ComponentModel.ITypeDescriptorContext,System.Object)
+    name: ConvertToInvariantString
+    nameWithType: TypeConverter.ConvertToInvariantString
+    fullName: System.ComponentModel.TypeConverter.ConvertToInvariantString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: ConvertToInvariantString(Object)
+  nameWithType: TypeConverter.ConvertToInvariantString(Object)
   fullName: System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)
     name: ConvertToInvariantString
+    nameWithType: TypeConverter.ConvertToInvariantString
     fullName: System.ComponentModel.TypeConverter.ConvertToInvariantString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)
     name: ConvertToInvariantString
+    nameWithType: TypeConverter.ConvertToInvariantString
     fullName: System.ComponentModel.TypeConverter.ConvertToInvariantString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: ConvertToString(ITypeDescriptorContext, Globalization.CultureInfo, Object)
+  nameWithType: TypeConverter.ConvertToString(ITypeDescriptorContext, Globalization.CultureInfo, Object)
   fullName: System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext, System.Globalization.CultureInfo, System.Object)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
     name: ConvertToString
+    nameWithType: TypeConverter.ConvertToString
     fullName: System.ComponentModel.TypeConverter.ConvertToString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Globalization.CultureInfo
     name: Globalization.CultureInfo
+    nameWithType: Globalization.CultureInfo
     fullName: System.Globalization.CultureInfo
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)
     name: ConvertToString
+    nameWithType: TypeConverter.ConvertToString
     fullName: System.ComponentModel.TypeConverter.ConvertToString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.ComponentModel.ITypeDescriptorContext
     name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
     fullName: System.ComponentModel.ITypeDescriptorContext
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Globalization.CultureInfo
     name: Globalization.CultureInfo
+    nameWithType: Globalization.CultureInfo
     fullName: System.Globalization.CultureInfo
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Object)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: ConvertToString(ITypeDescriptorContext, Object)
+  nameWithType: TypeConverter.ConvertToString(ITypeDescriptorContext, Object)
+  fullName: System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext, System.Object)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Object)
+    name: ConvertToString
+    nameWithType: TypeConverter.ConvertToString
+    fullName: System.ComponentModel.TypeConverter.ConvertToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Object)
+    name: ConvertToString
+    nameWithType: TypeConverter.ConvertToString
+    fullName: System.ComponentModel.TypeConverter.ConvertToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.ConvertToString(System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.ConvertToString(System.Object)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: ConvertToString(Object)
+  nameWithType: TypeConverter.ConvertToString(Object)
   fullName: System.ComponentModel.TypeConverter.ConvertToString(System.Object)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.ConvertToString(System.Object)
     name: ConvertToString
+    nameWithType: TypeConverter.ConvertToString
     fullName: System.ComponentModel.TypeConverter.ConvertToString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.ConvertToString(System.Object)
     name: ConvertToString
+    nameWithType: TypeConverter.ConvertToString
     fullName: System.ComponentModel.TypeConverter.ConvertToString
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)
+  commentId: M:System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: CreateInstance(Collections.IDictionary)
+  nameWithType: TypeConverter.CreateInstance(Collections.IDictionary)
+  fullName: System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)
+    name: CreateInstance
+    nameWithType: TypeConverter.CreateInstance
+    fullName: System.ComponentModel.TypeConverter.CreateInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.IDictionary
+    name: Collections.IDictionary
+    nameWithType: Collections.IDictionary
+    fullName: System.Collections.IDictionary
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)
+    name: CreateInstance
+    nameWithType: TypeConverter.CreateInstance
+    fullName: System.ComponentModel.TypeConverter.CreateInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.IDictionary
+    name: Collections.IDictionary
+    nameWithType: Collections.IDictionary
+    fullName: System.Collections.IDictionary
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)
+  commentId: M:System.ComponentModel.TypeConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: CreateInstance(ITypeDescriptorContext, Collections.IDictionary)
+  nameWithType: TypeConverter.CreateInstance(ITypeDescriptorContext, Collections.IDictionary)
+  fullName: System.ComponentModel.TypeConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext, System.Collections.IDictionary)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)
+    name: CreateInstance
+    nameWithType: TypeConverter.CreateInstance
+    fullName: System.ComponentModel.TypeConverter.CreateInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.IDictionary
+    name: Collections.IDictionary
+    nameWithType: Collections.IDictionary
+    fullName: System.Collections.IDictionary
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)
+    name: CreateInstance
+    nameWithType: TypeConverter.CreateInstance
+    fullName: System.ComponentModel.TypeConverter.CreateInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.IDictionary
+    name: Collections.IDictionary
+    nameWithType: Collections.IDictionary
+    fullName: System.Collections.IDictionary
+    isExternal: true
+  - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: GetConvertFromException(Object)
+  nameWithType: TypeConverter.GetConvertFromException(Object)
   fullName: System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)
     name: GetConvertFromException
+    nameWithType: TypeConverter.GetConvertFromException
     fullName: System.ComponentModel.TypeConverter.GetConvertFromException
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)
     name: GetConvertFromException
+    nameWithType: TypeConverter.GetConvertFromException
     fullName: System.ComponentModel.TypeConverter.GetConvertFromException
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)
+  commentId: M:System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)
   parent: System.ComponentModel.TypeConverter
   isExternal: true
   name: GetConvertToException(Object, Type)
+  nameWithType: TypeConverter.GetConvertToException(Object, Type)
   fullName: System.ComponentModel.TypeConverter.GetConvertToException(System.Object, System.Type)
   spec.csharp:
   - uid: System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)
     name: GetConvertToException
+    nameWithType: TypeConverter.GetConvertToException
     fullName: System.ComponentModel.TypeConverter.GetConvertToException
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)
     name: GetConvertToException
+    nameWithType: TypeConverter.GetConvertToException
     fullName: System.ComponentModel.TypeConverter.GetConvertToException
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetCreateInstanceSupported
+  commentId: M:System.ComponentModel.TypeConverter.GetCreateInstanceSupported
+  parent: System.ComponentModel.TypeConverter
+  isExternal: false
+  name: GetCreateInstanceSupported()
+  nameWithType: TypeConverter.GetCreateInstanceSupported()
+  fullName: System.ComponentModel.TypeConverter.GetCreateInstanceSupported()
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetCreateInstanceSupported
+    name: GetCreateInstanceSupported
+    nameWithType: TypeConverter.GetCreateInstanceSupported
+    fullName: System.ComponentModel.TypeConverter.GetCreateInstanceSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetCreateInstanceSupported
+    name: GetCreateInstanceSupported
+    nameWithType: TypeConverter.GetCreateInstanceSupported
+    fullName: System.ComponentModel.TypeConverter.GetCreateInstanceSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)
+  commentId: M:System.ComponentModel.TypeConverter.GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: false
+  name: GetCreateInstanceSupported(ITypeDescriptorContext)
+  nameWithType: TypeConverter.GetCreateInstanceSupported(ITypeDescriptorContext)
+  fullName: System.ComponentModel.TypeConverter.GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)
+    name: GetCreateInstanceSupported
+    nameWithType: TypeConverter.GetCreateInstanceSupported
+    fullName: System.ComponentModel.TypeConverter.GetCreateInstanceSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)
+    name: GetCreateInstanceSupported
+    nameWithType: TypeConverter.GetCreateInstanceSupported
+    fullName: System.ComponentModel.TypeConverter.GetCreateInstanceSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: GetProperties(ITypeDescriptorContext, Object)
+  nameWithType: TypeConverter.GetProperties(ITypeDescriptorContext, Object)
+  fullName: System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext, System.Object)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object)
+    name: GetProperties
+    nameWithType: TypeConverter.GetProperties
+    fullName: System.ComponentModel.TypeConverter.GetProperties
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object)
+    name: GetProperties
+    nameWithType: TypeConverter.GetProperties
+    fullName: System.ComponentModel.TypeConverter.GetProperties
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])
+  commentId: M:System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: GetProperties(ITypeDescriptorContext, Object, Attribute[])
+  nameWithType: TypeConverter.GetProperties(ITypeDescriptorContext, Object, Attribute[])
+  fullName: System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext, System.Object, System.Attribute[])
+  nameWithType.vb: TypeConverter.GetProperties(ITypeDescriptorContext, Object, Attribute())
+  fullname.vb: System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext, System.Object, System.Attribute())
+  name.vb: GetProperties(ITypeDescriptorContext, Object, Attribute())
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])
+    name: GetProperties
+    nameWithType: TypeConverter.GetProperties
+    fullName: System.ComponentModel.TypeConverter.GetProperties
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Attribute
+    name: Attribute
+    nameWithType: Attribute
+    fullName: System.Attribute
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])
+    name: GetProperties
+    nameWithType: TypeConverter.GetProperties
+    fullName: System.ComponentModel.TypeConverter.GetProperties
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Attribute
+    name: Attribute
+    nameWithType: Attribute
+    fullName: System.Attribute
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetProperties(System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.GetProperties(System.Object)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: GetProperties(Object)
+  nameWithType: TypeConverter.GetProperties(Object)
+  fullName: System.ComponentModel.TypeConverter.GetProperties(System.Object)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetProperties(System.Object)
+    name: GetProperties
+    nameWithType: TypeConverter.GetProperties
+    fullName: System.ComponentModel.TypeConverter.GetProperties
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetProperties(System.Object)
+    name: GetProperties
+    nameWithType: TypeConverter.GetProperties
+    fullName: System.ComponentModel.TypeConverter.GetProperties
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetPropertiesSupported
+  commentId: M:System.ComponentModel.TypeConverter.GetPropertiesSupported
+  parent: System.ComponentModel.TypeConverter
+  isExternal: false
+  name: GetPropertiesSupported()
+  nameWithType: TypeConverter.GetPropertiesSupported()
+  fullName: System.ComponentModel.TypeConverter.GetPropertiesSupported()
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetPropertiesSupported
+    name: GetPropertiesSupported
+    nameWithType: TypeConverter.GetPropertiesSupported
+    fullName: System.ComponentModel.TypeConverter.GetPropertiesSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetPropertiesSupported
+    name: GetPropertiesSupported
+    nameWithType: TypeConverter.GetPropertiesSupported
+    fullName: System.ComponentModel.TypeConverter.GetPropertiesSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
+  commentId: M:System.ComponentModel.TypeConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: false
+  name: GetPropertiesSupported(ITypeDescriptorContext)
+  nameWithType: TypeConverter.GetPropertiesSupported(ITypeDescriptorContext)
+  fullName: System.ComponentModel.TypeConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
+    name: GetPropertiesSupported
+    nameWithType: TypeConverter.GetPropertiesSupported
+    fullName: System.ComponentModel.TypeConverter.GetPropertiesSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)
+    name: GetPropertiesSupported
+    nameWithType: TypeConverter.GetPropertiesSupported
+    fullName: System.ComponentModel.TypeConverter.GetPropertiesSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetStandardValues
+  commentId: M:System.ComponentModel.TypeConverter.GetStandardValues
+  parent: System.ComponentModel.TypeConverter
+  isExternal: false
+  name: GetStandardValues()
+  nameWithType: TypeConverter.GetStandardValues()
+  fullName: System.ComponentModel.TypeConverter.GetStandardValues()
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValues
+    name: GetStandardValues
+    nameWithType: TypeConverter.GetStandardValues
+    fullName: System.ComponentModel.TypeConverter.GetStandardValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValues
+    name: GetStandardValues
+    nameWithType: TypeConverter.GetStandardValues
+    fullName: System.ComponentModel.TypeConverter.GetStandardValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+  commentId: M:System.ComponentModel.TypeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: false
+  name: GetStandardValues(ITypeDescriptorContext)
+  nameWithType: TypeConverter.GetStandardValues(ITypeDescriptorContext)
+  fullName: System.ComponentModel.TypeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+    name: GetStandardValues
+    nameWithType: TypeConverter.GetStandardValues
+    fullName: System.ComponentModel.TypeConverter.GetStandardValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)
+    name: GetStandardValues
+    nameWithType: TypeConverter.GetStandardValues
+    fullName: System.ComponentModel.TypeConverter.GetStandardValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetStandardValuesExclusive
+  commentId: M:System.ComponentModel.TypeConverter.GetStandardValuesExclusive
+  parent: System.ComponentModel.TypeConverter
+  isExternal: false
+  name: GetStandardValuesExclusive()
+  nameWithType: TypeConverter.GetStandardValuesExclusive()
+  fullName: System.ComponentModel.TypeConverter.GetStandardValuesExclusive()
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValuesExclusive
+    name: GetStandardValuesExclusive
+    nameWithType: TypeConverter.GetStandardValuesExclusive
+    fullName: System.ComponentModel.TypeConverter.GetStandardValuesExclusive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValuesExclusive
+    name: GetStandardValuesExclusive
+    nameWithType: TypeConverter.GetStandardValuesExclusive
+    fullName: System.ComponentModel.TypeConverter.GetStandardValuesExclusive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+  commentId: M:System.ComponentModel.TypeConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: false
+  name: GetStandardValuesExclusive(ITypeDescriptorContext)
+  nameWithType: TypeConverter.GetStandardValuesExclusive(ITypeDescriptorContext)
+  fullName: System.ComponentModel.TypeConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+    name: GetStandardValuesExclusive
+    nameWithType: TypeConverter.GetStandardValuesExclusive
+    fullName: System.ComponentModel.TypeConverter.GetStandardValuesExclusive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)
+    name: GetStandardValuesExclusive
+    nameWithType: TypeConverter.GetStandardValuesExclusive
+    fullName: System.ComponentModel.TypeConverter.GetStandardValuesExclusive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetStandardValuesSupported
+  commentId: M:System.ComponentModel.TypeConverter.GetStandardValuesSupported
+  parent: System.ComponentModel.TypeConverter
+  isExternal: false
+  name: GetStandardValuesSupported()
+  nameWithType: TypeConverter.GetStandardValuesSupported()
+  fullName: System.ComponentModel.TypeConverter.GetStandardValuesSupported()
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValuesSupported
+    name: GetStandardValuesSupported
+    nameWithType: TypeConverter.GetStandardValuesSupported
+    fullName: System.ComponentModel.TypeConverter.GetStandardValuesSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValuesSupported
+    name: GetStandardValuesSupported
+    nameWithType: TypeConverter.GetStandardValuesSupported
+    fullName: System.ComponentModel.TypeConverter.GetStandardValuesSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
+  commentId: M:System.ComponentModel.TypeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: false
+  name: GetStandardValuesSupported(ITypeDescriptorContext)
+  nameWithType: TypeConverter.GetStandardValuesSupported(ITypeDescriptorContext)
+  fullName: System.ComponentModel.TypeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
+    name: GetStandardValuesSupported
+    nameWithType: TypeConverter.GetStandardValuesSupported
+    fullName: System.ComponentModel.TypeConverter.GetStandardValuesSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)
+    name: GetStandardValuesSupported
+    nameWithType: TypeConverter.GetStandardValuesSupported
+    fullName: System.ComponentModel.TypeConverter.GetStandardValuesSupported
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.IsValid(System.ComponentModel.ITypeDescriptorContext,System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.IsValid(System.ComponentModel.ITypeDescriptorContext,System.Object)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: IsValid(ITypeDescriptorContext, Object)
+  nameWithType: TypeConverter.IsValid(ITypeDescriptorContext, Object)
+  fullName: System.ComponentModel.TypeConverter.IsValid(System.ComponentModel.ITypeDescriptorContext, System.Object)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.IsValid(System.ComponentModel.ITypeDescriptorContext,System.Object)
+    name: IsValid
+    nameWithType: TypeConverter.IsValid
+    fullName: System.ComponentModel.TypeConverter.IsValid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.IsValid(System.ComponentModel.ITypeDescriptorContext,System.Object)
+    name: IsValid
+    nameWithType: TypeConverter.IsValid
+    fullName: System.ComponentModel.TypeConverter.IsValid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.ITypeDescriptorContext
+    name: ITypeDescriptorContext
+    nameWithType: ITypeDescriptorContext
+    fullName: System.ComponentModel.ITypeDescriptorContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.IsValid(System.Object)
+  commentId: M:System.ComponentModel.TypeConverter.IsValid(System.Object)
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: IsValid(Object)
+  nameWithType: TypeConverter.IsValid(Object)
+  fullName: System.ComponentModel.TypeConverter.IsValid(System.Object)
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.IsValid(System.Object)
+    name: IsValid
+    nameWithType: TypeConverter.IsValid
+    fullName: System.ComponentModel.TypeConverter.IsValid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.IsValid(System.Object)
+    name: IsValid
+    nameWithType: TypeConverter.IsValid
+    fullName: System.ComponentModel.TypeConverter.IsValid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ComponentModel.TypeConverter.SortProperties(System.ComponentModel.PropertyDescriptorCollection,System.String[])
+  commentId: M:System.ComponentModel.TypeConverter.SortProperties(System.ComponentModel.PropertyDescriptorCollection,System.String[])
+  parent: System.ComponentModel.TypeConverter
+  isExternal: true
+  name: SortProperties(PropertyDescriptorCollection, String[])
+  nameWithType: TypeConverter.SortProperties(PropertyDescriptorCollection, String[])
+  fullName: System.ComponentModel.TypeConverter.SortProperties(System.ComponentModel.PropertyDescriptorCollection, System.String[])
+  nameWithType.vb: TypeConverter.SortProperties(PropertyDescriptorCollection, String())
+  fullname.vb: System.ComponentModel.TypeConverter.SortProperties(System.ComponentModel.PropertyDescriptorCollection, System.String())
+  name.vb: SortProperties(PropertyDescriptorCollection, String())
+  spec.csharp:
+  - uid: System.ComponentModel.TypeConverter.SortProperties(System.ComponentModel.PropertyDescriptorCollection,System.String[])
+    name: SortProperties
+    nameWithType: TypeConverter.SortProperties
+    fullName: System.ComponentModel.TypeConverter.SortProperties
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.PropertyDescriptorCollection
+    name: PropertyDescriptorCollection
+    nameWithType: PropertyDescriptorCollection
+    fullName: System.ComponentModel.PropertyDescriptorCollection
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ComponentModel.TypeConverter.SortProperties(System.ComponentModel.PropertyDescriptorCollection,System.String[])
+    name: SortProperties
+    nameWithType: TypeConverter.SortProperties
+    fullName: System.ComponentModel.TypeConverter.SortProperties
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ComponentModel.PropertyDescriptorCollection
+    name: PropertyDescriptorCollection
+    nameWithType: PropertyDescriptorCollection
+    fullName: System.ComponentModel.PropertyDescriptorCollection
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System

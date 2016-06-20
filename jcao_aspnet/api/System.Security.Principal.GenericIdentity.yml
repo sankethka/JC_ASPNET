@@ -1,5 +1,6 @@
 items:
 - uid: System.Security.Principal.GenericIdentity
+  commentId: T:System.Security.Principal.GenericIdentity
   id: GenericIdentity
   parent: System.Security.Principal
   children:
@@ -11,23 +12,29 @@ items:
   - System.Security.Principal.GenericIdentity.Clone
   - System.Security.Principal.GenericIdentity.IsAuthenticated
   - System.Security.Principal.GenericIdentity.Name
+  langs:
+  - csharp
+  - vb
   name: GenericIdentity
+  nameWithType: GenericIdentity
   fullName: System.Security.Principal.GenericIdentity
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.Claims/src/System/Security/Claims/GenericIdentity.cs
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.Claims/src/System/Security/Claims/GenericIdentity.cs
-    startLine: 11
+    id: GenericIdentity
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 200
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Principal
-  summary: Represents a generic user.
   syntax:
     content: 'public class GenericIdentity : ClaimsIdentity'
-    content.vb: Public Class GenericIdentity Inherits ClaimsIdentity
+    content.vb: >-
+      Public Class GenericIdentity
+          Inherits ClaimsIdentity
   inheritance:
   - System.Object
   - System.Security.Claims.ClaimsIdentity
@@ -54,836 +61,1175 @@ items:
   - System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)
   - System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)
   - System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter,System.Byte[])
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Security.Principal.GenericIdentity.#ctor(System.Security.Principal.GenericIdentity)
+  commentId: M:System.Security.Principal.GenericIdentity.#ctor(System.Security.Principal.GenericIdentity)
   id: '#ctor(System.Security.Principal.GenericIdentity)'
   parent: System.Security.Principal.GenericIdentity
+  langs:
+  - csharp
+  - vb
   name: GenericIdentity(GenericIdentity)
+  nameWithType: GenericIdentity.GenericIdentity(GenericIdentity)
   fullName: System.Security.Principal.GenericIdentity.GenericIdentity(System.Security.Principal.GenericIdentity)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/GenericIdentity.cs
-    startLine: 49
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 202
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Principal
-  summary: Initializes a new instance of the <xref href="System.Security.Principal.GenericIdentity" data-throw-if-not-resolved="false"></xref> class by using the specified <xref href="System.Security.Principal.GenericIdentity" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: protected GenericIdentity(GenericIdentity identity)
     content.vb: Protected Sub New(identity As GenericIdentity)
     parameters:
     - id: identity
       type: System.Security.Principal.GenericIdentity
-      description: The object from which to construct the new instance of <xref href="System.Security.Principal.GenericIdentity" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Security.Principal.GenericIdentity.#ctor(System.String)
+  commentId: M:System.Security.Principal.GenericIdentity.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.Security.Principal.GenericIdentity
+  langs:
+  - csharp
+  - vb
   name: GenericIdentity(String)
+  nameWithType: GenericIdentity.GenericIdentity(String)
   fullName: System.Security.Principal.GenericIdentity.GenericIdentity(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/GenericIdentity.cs
-    startLine: 18
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 203
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Principal
-  summary: Initializes a new instance of the <xref href="System.Security.Principal.GenericIdentity" data-throw-if-not-resolved="false"></xref> class representing the user with the specified name.
   syntax:
     content: public GenericIdentity(string name)
     content.vb: Public Sub New(name As String)
     parameters:
     - id: name
       type: System.String
-      description: The name of the user on whose behalf the code is running.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *name* parameter is null.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Principal.GenericIdentity.#ctor(System.String,System.String)
+  commentId: M:System.Security.Principal.GenericIdentity.#ctor(System.String,System.String)
   id: '#ctor(System.String,System.String)'
   parent: System.Security.Principal.GenericIdentity
+  langs:
+  - csharp
+  - vb
   name: GenericIdentity(String, String)
+  nameWithType: GenericIdentity.GenericIdentity(String, String)
   fullName: System.Security.Principal.GenericIdentity.GenericIdentity(System.String, System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/GenericIdentity.cs
-    startLine: 30
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 204
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Principal
-  summary: Initializes a new instance of the <xref href="System.Security.Principal.GenericIdentity" data-throw-if-not-resolved="false"></xref> class representing the user with the specified name and authentication type.
   syntax:
     content: public GenericIdentity(string name, string type)
     content.vb: Public Sub New(name As String, type As String)
     parameters:
     - id: name
       type: System.String
-      description: The name of the user on whose behalf the code is running.
     - id: type
       type: System.String
-      description: The type of authentication used to identify the user.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *name* parameter is null.-or- The *type* parameter is null.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Principal.GenericIdentity.AuthenticationType
+  commentId: P:System.Security.Principal.GenericIdentity.AuthenticationType
   id: AuthenticationType
   parent: System.Security.Principal.GenericIdentity
+  langs:
+  - csharp
+  - vb
   name: AuthenticationType
+  nameWithType: GenericIdentity.AuthenticationType
   fullName: System.Security.Principal.GenericIdentity.AuthenticationType
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/GenericIdentity.cs
-    startLine: 81
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AuthenticationType
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 205
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Principal
-  summary: Gets the type of authentication used to identify the user.
   syntax:
     content: public override string AuthenticationType { get; }
     content.vb: Public Overrides ReadOnly Property AuthenticationType As String
     parameters: []
     return:
       type: System.String
-      description: The type of authentication used to identify the user.
   overridden: System.Security.Claims.ClaimsIdentity.AuthenticationType
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Security.Principal.GenericIdentity.Claims
+  commentId: P:System.Security.Principal.GenericIdentity.Claims
   id: Claims
   parent: System.Security.Principal.GenericIdentity
+  langs:
+  - csharp
+  - vb
   name: Claims
+  nameWithType: GenericIdentity.Claims
   fullName: System.Security.Principal.GenericIdentity.Claims
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/GenericIdentity.cs
-    startLine: 64
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Claims
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 206
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Principal
-  summary: Gets all claims for the user represented by this generic identity.
   syntax:
     content: public override Collections.Generic.IEnumerable<Claim> Claims { get; }
     content.vb: Public Overrides ReadOnly Property Claims As Collections.Generic.IEnumerable(Of Claim)
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-      description: A collection of claims for this <xref href="System.Security.Principal.GenericIdentity" data-throw-if-not-resolved="false"></xref> object.
   overridden: System.Security.Claims.ClaimsIdentity.Claims
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Security.Principal.GenericIdentity.IsAuthenticated
+  commentId: P:System.Security.Principal.GenericIdentity.IsAuthenticated
   id: IsAuthenticated
   parent: System.Security.Principal.GenericIdentity
+  langs:
+  - csharp
+  - vb
   name: IsAuthenticated
+  nameWithType: GenericIdentity.IsAuthenticated
   fullName: System.Security.Principal.GenericIdentity.IsAuthenticated
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/GenericIdentity.cs
-    startLine: 89
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsAuthenticated
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 207
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Principal
-  summary: Gets a value indicating whether the user has been authenticated.
   syntax:
     content: public override bool IsAuthenticated { get; }
     content.vb: Public Overrides ReadOnly Property IsAuthenticated As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the user was has been authenticated; otherwise, false.
   overridden: System.Security.Claims.ClaimsIdentity.IsAuthenticated
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Security.Principal.GenericIdentity.Name
+  commentId: P:System.Security.Principal.GenericIdentity.Name
   id: Name
   parent: System.Security.Principal.GenericIdentity
+  langs:
+  - csharp
+  - vb
   name: Name
+  nameWithType: GenericIdentity.Name
   fullName: System.Security.Principal.GenericIdentity.Name
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/GenericIdentity.cs
-    startLine: 73
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Name
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 208
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Principal
-  summary: Gets the user's name.
   syntax:
     content: public override string Name { get; }
     content.vb: Public Overrides ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-      description: The name of the user on whose behalf the code is being run.
   overridden: System.Security.Claims.ClaimsIdentity.Name
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Security.Principal.GenericIdentity.Clone
+  commentId: M:System.Security.Principal.GenericIdentity.Clone
   id: Clone
   parent: System.Security.Principal.GenericIdentity
+  langs:
+  - csharp
+  - vb
   name: Clone()
+  nameWithType: GenericIdentity.Clone()
   fullName: System.Security.Principal.GenericIdentity.Clone()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/GenericIdentity.cs
-    startLine: 59
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Clone
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 209
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Principal
-  summary: Creates a new object that is a copy of the current instance.
   syntax:
     content: public override ClaimsIdentity Clone()
     content.vb: Public Overrides Function Clone As ClaimsIdentity
     return:
       type: System.Security.Claims.ClaimsIdentity
-      description: A copy of the current instance.
   overridden: System.Security.Claims.ClaimsIdentity.Clone
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.Security.Principal
+  commentId: N:System.Security.Principal
   isExternal: false
   name: System.Security.Principal
+  nameWithType: System.Security.Principal
   fullName: System.Security.Principal
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Security.Claims.ClaimsIdentity
+  commentId: T:System.Security.Claims.ClaimsIdentity
   parent: System.Security.Claims
   isExternal: false
   name: Claims.ClaimsIdentity
+  nameWithType: Claims.ClaimsIdentity
   fullName: System.Security.Claims.ClaimsIdentity
 - uid: System.Security.Claims.ClaimsIdentity.DefaultIssuer
+  commentId: F:System.Security.Claims.ClaimsIdentity.DefaultIssuer
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: DefaultIssuer
+  nameWithType: ClaimsIdentity.DefaultIssuer
   fullName: System.Security.Claims.ClaimsIdentity.DefaultIssuer
 - uid: System.Security.Claims.ClaimsIdentity.DefaultNameClaimType
+  commentId: F:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: DefaultNameClaimType
+  nameWithType: ClaimsIdentity.DefaultNameClaimType
   fullName: System.Security.Claims.ClaimsIdentity.DefaultNameClaimType
 - uid: System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType
+  commentId: F:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: DefaultRoleClaimType
+  nameWithType: ClaimsIdentity.DefaultRoleClaimType
   fullName: System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType
 - uid: System.Security.Claims.ClaimsIdentity.Actor
+  commentId: P:System.Security.Claims.ClaimsIdentity.Actor
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: Actor
+  nameWithType: ClaimsIdentity.Actor
   fullName: System.Security.Claims.ClaimsIdentity.Actor
 - uid: System.Security.Claims.ClaimsIdentity.BootstrapContext
+  commentId: P:System.Security.Claims.ClaimsIdentity.BootstrapContext
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: BootstrapContext
+  nameWithType: ClaimsIdentity.BootstrapContext
   fullName: System.Security.Claims.ClaimsIdentity.BootstrapContext
 - uid: System.Security.Claims.ClaimsIdentity.CustomSerializationData
+  commentId: P:System.Security.Claims.ClaimsIdentity.CustomSerializationData
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: CustomSerializationData
+  nameWithType: ClaimsIdentity.CustomSerializationData
   fullName: System.Security.Claims.ClaimsIdentity.CustomSerializationData
 - uid: System.Security.Claims.ClaimsIdentity.Label
+  commentId: P:System.Security.Claims.ClaimsIdentity.Label
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: Label
+  nameWithType: ClaimsIdentity.Label
   fullName: System.Security.Claims.ClaimsIdentity.Label
 - uid: System.Security.Claims.ClaimsIdentity.NameClaimType
+  commentId: P:System.Security.Claims.ClaimsIdentity.NameClaimType
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: NameClaimType
+  nameWithType: ClaimsIdentity.NameClaimType
   fullName: System.Security.Claims.ClaimsIdentity.NameClaimType
 - uid: System.Security.Claims.ClaimsIdentity.RoleClaimType
+  commentId: P:System.Security.Claims.ClaimsIdentity.RoleClaimType
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: RoleClaimType
+  nameWithType: ClaimsIdentity.RoleClaimType
   fullName: System.Security.Claims.ClaimsIdentity.RoleClaimType
 - uid: System.Security.Claims.ClaimsIdentity.AddClaim(System.Security.Claims.Claim)
+  commentId: M:System.Security.Claims.ClaimsIdentity.AddClaim(System.Security.Claims.Claim)
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: AddClaim(Claim)
+  nameWithType: ClaimsIdentity.AddClaim(Claim)
   fullName: System.Security.Claims.ClaimsIdentity.AddClaim(System.Security.Claims.Claim)
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.AddClaim(System.Security.Claims.Claim)
     name: AddClaim
+    nameWithType: ClaimsIdentity.AddClaim
     fullName: System.Security.Claims.ClaimsIdentity.AddClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.AddClaim(System.Security.Claims.Claim)
     name: AddClaim
+    nameWithType: ClaimsIdentity.AddClaim
     fullName: System.Security.Claims.ClaimsIdentity.AddClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
+  commentId: M:System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: true
   name: AddClaims(Collections.Generic.IEnumerable<Claim>)
-  name.vb: AddClaims(Collections.Generic.IEnumerable(Of Claim))
+  nameWithType: ClaimsIdentity.AddClaims(Collections.Generic.IEnumerable<Claim>)
   fullName: System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim))
+  nameWithType.vb: ClaimsIdentity.AddClaims(Collections.Generic.IEnumerable(Of Claim))
+  fullname.vb: System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim))
+  name.vb: AddClaims(Collections.Generic.IEnumerable(Of Claim))
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
     name: AddClaims
+    nameWithType: ClaimsIdentity.AddClaims
     fullName: System.Security.Claims.ClaimsIdentity.AddClaims
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
     name: AddClaims
+    nameWithType: ClaimsIdentity.AddClaims
     fullName: System.Security.Claims.ClaimsIdentity.AddClaims
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.CreateClaim(System.IO.BinaryReader)
+  commentId: M:System.Security.Claims.ClaimsIdentity.CreateClaim(System.IO.BinaryReader)
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: true
   name: CreateClaim(IO.BinaryReader)
+  nameWithType: ClaimsIdentity.CreateClaim(IO.BinaryReader)
   fullName: System.Security.Claims.ClaimsIdentity.CreateClaim(System.IO.BinaryReader)
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.CreateClaim(System.IO.BinaryReader)
     name: CreateClaim
+    nameWithType: ClaimsIdentity.CreateClaim
     fullName: System.Security.Claims.ClaimsIdentity.CreateClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.BinaryReader
     name: IO.BinaryReader
+    nameWithType: IO.BinaryReader
     fullName: System.IO.BinaryReader
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.CreateClaim(System.IO.BinaryReader)
     name: CreateClaim
+    nameWithType: ClaimsIdentity.CreateClaim
     fullName: System.Security.Claims.ClaimsIdentity.CreateClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.BinaryReader
     name: IO.BinaryReader
+    nameWithType: IO.BinaryReader
     fullName: System.IO.BinaryReader
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate{System.Security.Claims.Claim})
+  commentId: M:System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate{System.Security.Claims.Claim})
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: true
   name: FindAll(Predicate<Claim>)
-  name.vb: FindAll(Predicate(Of Claim))
+  nameWithType: ClaimsIdentity.FindAll(Predicate<Claim>)
   fullName: System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate<System.Security.Claims.Claim>)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate(Of System.Security.Claims.Claim))
+  nameWithType.vb: ClaimsIdentity.FindAll(Predicate(Of Claim))
+  fullname.vb: System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate(Of System.Security.Claims.Claim))
+  name.vb: FindAll(Predicate(Of Claim))
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate{System.Security.Claims.Claim})
     name: FindAll
+    nameWithType: ClaimsIdentity.FindAll
     fullName: System.Security.Claims.ClaimsIdentity.FindAll
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate{System.Security.Claims.Claim})
     name: FindAll
+    nameWithType: ClaimsIdentity.FindAll
     fullName: System.Security.Claims.ClaimsIdentity.FindAll
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.FindAll(System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.FindAll(System.String)
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: true
   name: FindAll(String)
+  nameWithType: ClaimsIdentity.FindAll(String)
   fullName: System.Security.Claims.ClaimsIdentity.FindAll(System.String)
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.FindAll(System.String)
     name: FindAll
+    nameWithType: ClaimsIdentity.FindAll
     fullName: System.Security.Claims.ClaimsIdentity.FindAll
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.FindAll(System.String)
     name: FindAll
+    nameWithType: ClaimsIdentity.FindAll
     fullName: System.Security.Claims.ClaimsIdentity.FindAll
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate{System.Security.Claims.Claim})
+  commentId: M:System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate{System.Security.Claims.Claim})
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: true
   name: FindFirst(Predicate<Claim>)
-  name.vb: FindFirst(Predicate(Of Claim))
+  nameWithType: ClaimsIdentity.FindFirst(Predicate<Claim>)
   fullName: System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate<System.Security.Claims.Claim>)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate(Of System.Security.Claims.Claim))
+  nameWithType.vb: ClaimsIdentity.FindFirst(Predicate(Of Claim))
+  fullname.vb: System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate(Of System.Security.Claims.Claim))
+  name.vb: FindFirst(Predicate(Of Claim))
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate{System.Security.Claims.Claim})
     name: FindFirst
+    nameWithType: ClaimsIdentity.FindFirst
     fullName: System.Security.Claims.ClaimsIdentity.FindFirst
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate{System.Security.Claims.Claim})
     name: FindFirst
+    nameWithType: ClaimsIdentity.FindFirst
     fullName: System.Security.Claims.ClaimsIdentity.FindFirst
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.FindFirst(System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.FindFirst(System.String)
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: true
   name: FindFirst(String)
+  nameWithType: ClaimsIdentity.FindFirst(String)
   fullName: System.Security.Claims.ClaimsIdentity.FindFirst(System.String)
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.FindFirst(System.String)
     name: FindFirst
+    nameWithType: ClaimsIdentity.FindFirst
     fullName: System.Security.Claims.ClaimsIdentity.FindFirst
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.FindFirst(System.String)
     name: FindFirst
+    nameWithType: ClaimsIdentity.FindFirst
     fullName: System.Security.Claims.ClaimsIdentity.FindFirst
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate{System.Security.Claims.Claim})
+  commentId: M:System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate{System.Security.Claims.Claim})
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: true
   name: HasClaim(Predicate<Claim>)
-  name.vb: HasClaim(Predicate(Of Claim))
+  nameWithType: ClaimsIdentity.HasClaim(Predicate<Claim>)
   fullName: System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate<System.Security.Claims.Claim>)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate(Of System.Security.Claims.Claim))
+  nameWithType.vb: ClaimsIdentity.HasClaim(Predicate(Of Claim))
+  fullname.vb: System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate(Of System.Security.Claims.Claim))
+  name.vb: HasClaim(Predicate(Of Claim))
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate{System.Security.Claims.Claim})
     name: HasClaim
+    nameWithType: ClaimsIdentity.HasClaim
     fullName: System.Security.Claims.ClaimsIdentity.HasClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate{System.Security.Claims.Claim})
     name: HasClaim
+    nameWithType: ClaimsIdentity.HasClaim
     fullName: System.Security.Claims.ClaimsIdentity.HasClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.HasClaim(System.String,System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.HasClaim(System.String,System.String)
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: true
   name: HasClaim(String, String)
+  nameWithType: ClaimsIdentity.HasClaim(String, String)
   fullName: System.Security.Claims.ClaimsIdentity.HasClaim(System.String, System.String)
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.HasClaim(System.String,System.String)
     name: HasClaim
+    nameWithType: ClaimsIdentity.HasClaim
     fullName: System.Security.Claims.ClaimsIdentity.HasClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.HasClaim(System.String,System.String)
     name: HasClaim
+    nameWithType: ClaimsIdentity.HasClaim
     fullName: System.Security.Claims.ClaimsIdentity.HasClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.RemoveClaim(System.Security.Claims.Claim)
+  commentId: M:System.Security.Claims.ClaimsIdentity.RemoveClaim(System.Security.Claims.Claim)
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: RemoveClaim(Claim)
+  nameWithType: ClaimsIdentity.RemoveClaim(Claim)
   fullName: System.Security.Claims.ClaimsIdentity.RemoveClaim(System.Security.Claims.Claim)
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.RemoveClaim(System.Security.Claims.Claim)
     name: RemoveClaim
+    nameWithType: ClaimsIdentity.RemoveClaim
     fullName: System.Security.Claims.ClaimsIdentity.RemoveClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.RemoveClaim(System.Security.Claims.Claim)
     name: RemoveClaim
+    nameWithType: ClaimsIdentity.RemoveClaim
     fullName: System.Security.Claims.ClaimsIdentity.RemoveClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)
+  commentId: M:System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: TryRemoveClaim(Claim)
+  nameWithType: ClaimsIdentity.TryRemoveClaim(Claim)
   fullName: System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)
     name: TryRemoveClaim
+    nameWithType: ClaimsIdentity.TryRemoveClaim
     fullName: System.Security.Claims.ClaimsIdentity.TryRemoveClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)
     name: TryRemoveClaim
+    nameWithType: ClaimsIdentity.TryRemoveClaim
     fullName: System.Security.Claims.ClaimsIdentity.TryRemoveClaim
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)
+  commentId: M:System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: true
   name: WriteTo(IO.BinaryWriter)
+  nameWithType: ClaimsIdentity.WriteTo(IO.BinaryWriter)
   fullName: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)
     name: WriteTo
+    nameWithType: ClaimsIdentity.WriteTo
     fullName: System.Security.Claims.ClaimsIdentity.WriteTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.BinaryWriter
     name: IO.BinaryWriter
+    nameWithType: IO.BinaryWriter
     fullName: System.IO.BinaryWriter
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)
     name: WriteTo
+    nameWithType: ClaimsIdentity.WriteTo
     fullName: System.Security.Claims.ClaimsIdentity.WriteTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.BinaryWriter
     name: IO.BinaryWriter
+    nameWithType: IO.BinaryWriter
     fullName: System.IO.BinaryWriter
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter,System.Byte[])
+  commentId: M:System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter,System.Byte[])
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: true
   name: WriteTo(IO.BinaryWriter, Byte[])
-  name.vb: WriteTo(IO.BinaryWriter, Byte())
+  nameWithType: ClaimsIdentity.WriteTo(IO.BinaryWriter, Byte[])
   fullName: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter, System.Byte[])
-  fullName.vb: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter, System.Byte())
+  nameWithType.vb: ClaimsIdentity.WriteTo(IO.BinaryWriter, Byte())
+  fullname.vb: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter, System.Byte())
+  name.vb: WriteTo(IO.BinaryWriter, Byte())
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter,System.Byte[])
     name: WriteTo
+    nameWithType: ClaimsIdentity.WriteTo
     fullName: System.Security.Claims.ClaimsIdentity.WriteTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.BinaryWriter
     name: IO.BinaryWriter
+    nameWithType: IO.BinaryWriter
     fullName: System.IO.BinaryWriter
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter,System.Byte[])
     name: WriteTo
+    nameWithType: ClaimsIdentity.WriteTo
     fullName: System.Security.Claims.ClaimsIdentity.WriteTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.BinaryWriter
     name: IO.BinaryWriter
+    nameWithType: IO.BinaryWriter
     fullName: System.IO.BinaryWriter
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Security.Claims
+  commentId: N:System.Security.Claims
   isExternal: false
   name: System.Security.Claims
+  nameWithType: System.Security.Claims
   fullName: System.Security.Claims
 - uid: System.Security.Principal.GenericIdentity
+  commentId: T:System.Security.Principal.GenericIdentity
   parent: System.Security.Principal
   isExternal: false
   name: GenericIdentity
+  nameWithType: GenericIdentity
   fullName: System.Security.Principal.GenericIdentity
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Security.Claims.ClaimsIdentity.AuthenticationType
+  commentId: P:System.Security.Claims.ClaimsIdentity.AuthenticationType
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: AuthenticationType
+  nameWithType: ClaimsIdentity.AuthenticationType
   fullName: System.Security.Claims.ClaimsIdentity.AuthenticationType
 - uid: System.Security.Claims.ClaimsIdentity.Claims
+  commentId: P:System.Security.Claims.ClaimsIdentity.Claims
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: Claims
+  nameWithType: ClaimsIdentity.Claims
   fullName: System.Security.Claims.ClaimsIdentity.Claims
 - uid: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<Claims.Claim>
-  name.vb: Collections.Generic.IEnumerable(Of Claims.Claim)
+  nameWithType: Collections.Generic.IEnumerable<Claims.Claim>
   fullName: System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of Claims.Claim)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim)
+  name.vb: Collections.Generic.IEnumerable(Of Claims.Claim)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Security.Claims.Claim
     name: Claims.Claim
+    nameWithType: Claims.Claim
     fullName: System.Security.Claims.Claim
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Security.Claims.Claim
     name: Claims.Claim
+    nameWithType: Claims.Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: System.Security.Claims.ClaimsIdentity.IsAuthenticated
+  commentId: P:System.Security.Claims.ClaimsIdentity.IsAuthenticated
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: IsAuthenticated
+  nameWithType: ClaimsIdentity.IsAuthenticated
   fullName: System.Security.Claims.ClaimsIdentity.IsAuthenticated
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Security.Claims.ClaimsIdentity.Name
+  commentId: P:System.Security.Claims.ClaimsIdentity.Name
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: Name
+  nameWithType: ClaimsIdentity.Name
   fullName: System.Security.Claims.ClaimsIdentity.Name
 - uid: System.Security.Claims.ClaimsIdentity.Clone
+  commentId: M:System.Security.Claims.ClaimsIdentity.Clone
   parent: System.Security.Claims.ClaimsIdentity
   isExternal: false
   name: Clone()
+  nameWithType: ClaimsIdentity.Clone()
   fullName: System.Security.Claims.ClaimsIdentity.Clone()
   spec.csharp:
   - uid: System.Security.Claims.ClaimsIdentity.Clone
     name: Clone
+    nameWithType: ClaimsIdentity.Clone
     fullName: System.Security.Claims.ClaimsIdentity.Clone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.Claims.ClaimsIdentity.Clone
     name: Clone
+    nameWithType: ClaimsIdentity.Clone
     fullName: System.Security.Claims.ClaimsIdentity.Clone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException

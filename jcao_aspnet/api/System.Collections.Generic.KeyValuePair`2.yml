@@ -1,5 +1,6 @@
 items:
 - uid: System.Collections.Generic.KeyValuePair`2
+  commentId: T:System.Collections.Generic.KeyValuePair`2
   id: KeyValuePair`2
   parent: System.Collections.Generic
   children:
@@ -7,25 +8,33 @@ items:
   - System.Collections.Generic.KeyValuePair`2.Key
   - System.Collections.Generic.KeyValuePair`2.ToString
   - System.Collections.Generic.KeyValuePair`2.Value
+  langs:
+  - csharp
+  - vb
   name: KeyValuePair<TKey, TValue>
-  name.vb: KeyValuePair(Of TKey, TValue)
+  nameWithType: KeyValuePair<TKey, TValue>
   fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>
-  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
   type: Struct
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Collections/Generic/KeyValuePair.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Collections/Generic/KeyValuePair.cs
-    startLine: 23
+      repo: https://github.com/dotnet/corefx.git
+    id: KeyValuePair
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2442
   assemblies:
   - System.Runtime
   namespace: System.Collections.Generic
-  summary: Defines a key/value pair that can be set or retrieved.
   syntax:
-    content: public struct KeyValuePair<TKey, TValue>
-    content.vb: Public Structure KeyValuePair(Of TKey, TValue)
+    content: >-
+      [StructLayout(LayoutKind.Sequential)]
+
+      public struct KeyValuePair<TKey, TValue>
+    content.vb: >-
+      <StructLayout(LayoutKind.Sequential)>
+
+      Public Structure KeyValuePair(Of TKey, TValue)
     typeParameters:
     - id: TKey
     - id: TValue
@@ -35,290 +44,444 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.InteropServices.StructLayoutAttribute
+    ctor: System.Runtime.InteropServices.StructLayoutAttribute.#ctor(System.Runtime.InteropServices.LayoutKind)
+    arguments:
+    - type: System.Runtime.InteropServices.LayoutKind
+      value: 0
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
+  name.vb: KeyValuePair(Of TKey, TValue)
 - uid: System.Collections.Generic.KeyValuePair`2.#ctor(`0,`1)
+  commentId: M:System.Collections.Generic.KeyValuePair`2.#ctor(`0,`1)
   id: '#ctor(`0,`1)'
   parent: System.Collections.Generic.KeyValuePair`2
+  langs:
+  - csharp
+  - vb
   name: KeyValuePair(TKey, TValue)
+  nameWithType: KeyValuePair<TKey, TValue>.KeyValuePair(TKey, TValue)
   fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>.KeyValuePair(TKey, TValue)
-  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue).KeyValuePair(TKey, TValue)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/Generic/KeyValuePair.cs
-    startLine: 28
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2445
   assemblies:
   - System.Runtime
   namespace: System.Collections.Generic
-  summary: Initializes a new instance of the <xref href="System.Collections.Generic.KeyValuePair`2" data-throw-if-not-resolved="false"></xref> structure with the specified key and value.
   syntax:
     content: public KeyValuePair(TKey key, TValue value)
     content.vb: Public Sub New(key As TKey, value As TValue)
     parameters:
     - id: key
       type: '{TKey}'
-      description: The object defined in each key/value pair.
     - id: value
       type: '{TValue}'
-      description: The definition associated with *key*.
+  nameWithType.vb: KeyValuePair(Of TKey, TValue).KeyValuePair(TKey, TValue)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue).KeyValuePair(TKey, TValue)
 - uid: System.Collections.Generic.KeyValuePair`2.Key
+  commentId: P:System.Collections.Generic.KeyValuePair`2.Key
   id: Key
   parent: System.Collections.Generic.KeyValuePair`2
+  langs:
+  - csharp
+  - vb
   name: Key
+  nameWithType: KeyValuePair<TKey, TValue>.Key
   fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>.Key
-  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue).Key
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/Generic/KeyValuePair.cs
-    startLine: 33
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Key
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2446
   assemblies:
   - System.Runtime
   namespace: System.Collections.Generic
-  summary: Gets the key in the key/value pair.
   syntax:
     content: public TKey Key { get; }
     content.vb: Public ReadOnly Property Key As TKey
     parameters: []
     return:
       type: '{TKey}'
-      description: A *TKey* that is the key of the <xref href="System.Collections.Generic.KeyValuePair`2" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: KeyValuePair(Of TKey, TValue).Key
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue).Key
 - uid: System.Collections.Generic.KeyValuePair`2.Value
+  commentId: P:System.Collections.Generic.KeyValuePair`2.Value
   id: Value
   parent: System.Collections.Generic.KeyValuePair`2
+  langs:
+  - csharp
+  - vb
   name: Value
+  nameWithType: KeyValuePair<TKey, TValue>.Value
   fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>.Value
-  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue).Value
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/Generic/KeyValuePair.cs
-    startLine: 37
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Value
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2447
   assemblies:
   - System.Runtime
   namespace: System.Collections.Generic
-  summary: Gets the value in the key/value pair.
   syntax:
     content: public TValue Value { get; }
     content.vb: Public ReadOnly Property Value As TValue
     parameters: []
     return:
       type: '{TValue}'
-      description: A *TValue* that is the value of the <xref href="System.Collections.Generic.KeyValuePair`2" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: KeyValuePair(Of TKey, TValue).Value
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue).Value
 - uid: System.Collections.Generic.KeyValuePair`2.ToString
+  commentId: M:System.Collections.Generic.KeyValuePair`2.ToString
   id: ToString
   parent: System.Collections.Generic.KeyValuePair`2
+  langs:
+  - csharp
+  - vb
   name: ToString()
+  nameWithType: KeyValuePair<TKey, TValue>.ToString()
   fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>.ToString()
-  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue).ToString()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/Generic/KeyValuePair.cs
-    startLine: 41
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2448
   assemblies:
   - System.Runtime
   namespace: System.Collections.Generic
-  summary: Returns a string representation of the <xref href="System.Collections.Generic.KeyValuePair`2" data-throw-if-not-resolved="false"></xref>, using the string representations of the key and value.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: A string representation of the <xref href="System.Collections.Generic.KeyValuePair`2" data-throw-if-not-resolved="false"></xref>, which includes the string representations of the key and value.
   overridden: System.ValueType.ToString
+  nameWithType.vb: KeyValuePair(Of TKey, TValue).ToString()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue).ToString()
 references:
 - uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
   name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType
   isExternal: false
   name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
   fullName: System.ValueType.Equals(System.Object)
   spec.csharp:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
     fullName: System.ValueType.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
     fullName: System.ValueType.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
   parent: System.ValueType
   isExternal: false
   name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
   fullName: System.ValueType.GetHashCode()
   spec.csharp:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
     fullName: System.ValueType.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
     fullName: System.ValueType.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ValueType
+  commentId: T:System.ValueType
   parent: System
   isExternal: false
   name: ValueType
+  nameWithType: ValueType
   fullName: System.ValueType
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: '{TKey}'
-  isExternal: false
+  commentId: '!:TKey'
+  definition: TKey
   name: TKey
+  nameWithType: TKey
   fullName: TKey
 - uid: '{TValue}'
+  commentId: '!:TValue'
+  definition: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: TKey
+  isExternal: false
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: TValue
   isExternal: false
   name: TValue
+  nameWithType: TValue
   fullName: TValue
 - uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
   parent: System.ValueType
   isExternal: false
   name: ToString()
+  nameWithType: ValueType.ToString()
   fullName: System.ValueType.ToString()
   spec.csharp:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
     fullName: System.ValueType.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
     fullName: System.ValueType.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String

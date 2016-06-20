@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
+  commentId: T:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
   id: IEnumConnectionPoints
   parent: System.Runtime.InteropServices.ComTypes
   children:
@@ -7,158 +8,210 @@ items:
   - System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Next(System.Int32,System.Runtime.InteropServices.ComTypes.IConnectionPoint[],System.IntPtr)
   - System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Reset
   - System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Skip(System.Int32)
+  langs:
+  - csharp
+  - vb
   name: IEnumConnectionPoints
+  nameWithType: IEnumConnectionPoints
   fullName: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
   type: Interface
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/InteropServices/ComTypes/IEnumConnectionPoints.cs
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/InteropServices/ComTypes/IEnumConnectionPoints.cs
-    startLine: 17
+      repo: https://github.com/dotnet/corefx.git
+    id: IEnumConnectionPoints
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 1109
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices.ComTypes
-  summary: Manages the definition of the IEnumConnectionPoints interface.
   syntax:
     content: public interface IEnumConnectionPoints
     content.vb: Public Interface IEnumConnectionPoints
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Clone(System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints@)
+  commentId: M:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Clone(System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints@)
   id: Clone(System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints@)
   parent: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
+  langs:
+  - csharp
+  - vb
   name: Clone(out IEnumConnectionPoints)
-  name.vb: Clone(ByRef IEnumConnectionPoints)
+  nameWithType: IEnumConnectionPoints.Clone(out IEnumConnectionPoints)
   fullName: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Clone(out System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints)
-  fullName.vb: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Clone(ByRef System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/ComTypes/IEnumConnectionPoints.cs
-    startLine: 27
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Clone
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 1113
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices.ComTypes
-  summary: Creates a new enumerator that contains the same enumeration state as the current one.
   syntax:
     content: void Clone(out IEnumConnectionPoints ppenum)
     content.vb: Sub Clone(ByRef ppenum As IEnumConnectionPoints)
     parameters:
     - id: ppenum
       type: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
-      description: When this method returns, contains a reference to the newly created enumerator. This parameter is passed uninitialized.
+  nameWithType.vb: IEnumConnectionPoints.Clone(ByRef IEnumConnectionPoints)
+  fullName.vb: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Clone(ByRef System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints)
+  name.vb: Clone(ByRef IEnumConnectionPoints)
 - uid: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Next(System.Int32,System.Runtime.InteropServices.ComTypes.IConnectionPoint[],System.IntPtr)
+  commentId: M:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Next(System.Int32,System.Runtime.InteropServices.ComTypes.IConnectionPoint[],System.IntPtr)
   id: Next(System.Int32,System.Runtime.InteropServices.ComTypes.IConnectionPoint[],System.IntPtr)
   parent: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
+  langs:
+  - csharp
+  - vb
   name: Next(Int32, IConnectionPoint[], IntPtr)
-  name.vb: Next(Int32, IConnectionPoint(), IntPtr)
+  nameWithType: IEnumConnectionPoints.Next(Int32, IConnectionPoint[], IntPtr)
   fullName: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Next(System.Int32, System.Runtime.InteropServices.ComTypes.IConnectionPoint[], System.IntPtr)
-  fullName.vb: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Next(System.Int32, System.Runtime.InteropServices.ComTypes.IConnectionPoint(), System.IntPtr)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/ComTypes/IEnumConnectionPoints.cs
-    startLine: 22
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Next
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 1114
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices.ComTypes
-  summary: Retrieves a specified number of items in the enumeration sequence.
   syntax:
     content: int Next(int celt, IConnectionPoint[] rgelt, IntPtr pceltFetched)
     content.vb: Function Next(celt As Integer, rgelt As IConnectionPoint(), pceltFetched As IntPtr) As Integer
     parameters:
     - id: celt
       type: System.Int32
-      description: The number of IConnectionPoint references to return in *rgelt*.
     - id: rgelt
       type: System.Runtime.InteropServices.ComTypes.IConnectionPoint[]
-      description: When this method returns, contains a reference to the enumerated connections. This parameter is passed uninitialized.
     - id: pceltFetched
       type: System.IntPtr
-      description: When this method returns, contains a reference to the actual number of connections enumerated in *rgelt*.
     return:
       type: System.Int32
-      description: S_OK if the *pceltFetched* parameter equals the *celt* parameter; otherwise, S_FALSE.
+  nameWithType.vb: IEnumConnectionPoints.Next(Int32, IConnectionPoint(), IntPtr)
+  fullName.vb: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Next(System.Int32, System.Runtime.InteropServices.ComTypes.IConnectionPoint(), System.IntPtr)
+  name.vb: Next(Int32, IConnectionPoint(), IntPtr)
 - uid: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Reset
+  commentId: M:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Reset
   id: Reset
   parent: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
+  langs:
+  - csharp
+  - vb
   name: Reset()
+  nameWithType: IEnumConnectionPoints.Reset()
   fullName: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Reset()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/ComTypes/IEnumConnectionPoints.cs
-    startLine: 26
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Reset
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 1115
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices.ComTypes
-  summary: Resets the enumeration sequence to the beginning.
   syntax:
     content: void Reset()
     content.vb: Sub Reset
 - uid: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Skip(System.Int32)
+  commentId: M:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Skip(System.Int32)
   id: Skip(System.Int32)
   parent: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
+  langs:
+  - csharp
+  - vb
   name: Skip(Int32)
+  nameWithType: IEnumConnectionPoints.Skip(Int32)
   fullName: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints.Skip(System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/ComTypes/IEnumConnectionPoints.cs
-    startLine: 24
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Skip
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 1116
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices.ComTypes
-  summary: Skips a specified number of items in the enumeration sequence.
   syntax:
     content: int Skip(int celt)
     content.vb: Function Skip(celt As Integer) As Integer
     parameters:
     - id: celt
       type: System.Int32
-      description: The number of elements to skip in the enumeration.
     return:
       type: System.Int32
-      description: S_OK if the number of elements skipped equals the *celt* parameter; otherwise, S_FALSE.
 references:
 - uid: System.Runtime.InteropServices.ComTypes
+  commentId: N:System.Runtime.InteropServices.ComTypes
   isExternal: false
   name: System.Runtime.InteropServices.ComTypes
+  nameWithType: System.Runtime.InteropServices.ComTypes
   fullName: System.Runtime.InteropServices.ComTypes
 - uid: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
+  commentId: T:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
   parent: System.Runtime.InteropServices.ComTypes
   isExternal: false
   name: IEnumConnectionPoints
+  nameWithType: IEnumConnectionPoints
   fullName: System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Runtime.InteropServices.ComTypes.IConnectionPoint[]
-  isExternal: false
   name: IConnectionPoint[]
-  name.vb: IConnectionPoint()
+  nameWithType: IConnectionPoint[]
   fullName: System.Runtime.InteropServices.ComTypes.IConnectionPoint[]
-  fullName.vb: System.Runtime.InteropServices.ComTypes.IConnectionPoint()
+  nameWithType.vb: IConnectionPoint()
+  fullname.vb: System.Runtime.InteropServices.ComTypes.IConnectionPoint()
+  name.vb: IConnectionPoint()
   spec.csharp:
   - uid: System.Runtime.InteropServices.ComTypes.IConnectionPoint
     name: IConnectionPoint
+    nameWithType: IConnectionPoint
     fullName: System.Runtime.InteropServices.ComTypes.IConnectionPoint
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Runtime.InteropServices.ComTypes.IConnectionPoint
     name: IConnectionPoint
+    nameWithType: IConnectionPoint
     fullName: System.Runtime.InteropServices.ComTypes.IConnectionPoint
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.IntPtr
+  commentId: T:System.IntPtr
   parent: System
   isExternal: false
   name: IntPtr
+  nameWithType: IntPtr
   fullName: System.IntPtr
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System

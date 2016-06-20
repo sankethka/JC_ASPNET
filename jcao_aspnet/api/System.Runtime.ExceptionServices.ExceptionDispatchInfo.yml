@@ -1,25 +1,30 @@
 items:
 - uid: System.Runtime.ExceptionServices.ExceptionDispatchInfo
+  commentId: T:System.Runtime.ExceptionServices.ExceptionDispatchInfo
   id: ExceptionDispatchInfo
   parent: System.Runtime.ExceptionServices
   children:
   - System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(System.Exception)
   - System.Runtime.ExceptionServices.ExceptionDispatchInfo.SourceException
   - System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw
+  langs:
+  - csharp
+  - vb
   name: ExceptionDispatchInfo
+  nameWithType: ExceptionDispatchInfo
   fullName: System.Runtime.ExceptionServices.ExceptionDispatchInfo
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/ExceptionServices/ExceptionServicesCommon.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/ExceptionServices/ExceptionServicesCommon.cs
-    startLine: 28
+      repo: https://github.com/dotnet/corefx.git
+    id: ExceptionDispatchInfo
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 3008
   assemblies:
   - System.Runtime
   namespace: System.Runtime.ExceptionServices
-  summary: Represents an exception whose state is captured at a certain point in code.
   syntax:
     content: public sealed class ExceptionDispatchInfo
     content.vb: Public NotInheritable Class ExceptionDispatchInfo
@@ -33,282 +38,399 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Runtime.ExceptionServices.ExceptionDispatchInfo.SourceException
+  commentId: P:System.Runtime.ExceptionServices.ExceptionDispatchInfo.SourceException
   id: SourceException
   parent: System.Runtime.ExceptionServices.ExceptionDispatchInfo
+  langs:
+  - csharp
+  - vb
   name: SourceException
+  nameWithType: ExceptionDispatchInfo.SourceException
   fullName: System.Runtime.ExceptionServices.ExceptionDispatchInfo.SourceException
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/ExceptionServices/ExceptionServicesCommon.cs
-    startLine: 110
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SourceException
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 3011
   assemblies:
   - System.Runtime
   namespace: System.Runtime.ExceptionServices
-  summary: Gets the exception that is represented by the current instance.
   syntax:
     content: public Exception SourceException { get; }
     content.vb: Public ReadOnly Property SourceException As Exception
     parameters: []
     return:
       type: System.Exception
-      description: The exception that is represented by the current instance.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(System.Exception)
+  commentId: M:System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(System.Exception)
   id: Capture(System.Exception)
   parent: System.Runtime.ExceptionServices.ExceptionDispatchInfo
+  langs:
+  - csharp
+  - vb
   name: Capture(Exception)
+  nameWithType: ExceptionDispatchInfo.Capture(Exception)
   fullName: System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(System.Exception)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/ExceptionServices/ExceptionServicesCommon.cs
-    startLine: 99
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Capture
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 3012
   assemblies:
   - System.Runtime
   namespace: System.Runtime.ExceptionServices
-  summary: Creates an <xref href="System.Runtime.ExceptionServices.ExceptionDispatchInfo" data-throw-if-not-resolved="false"></xref> object that represents the specified exception at the current point in code.
   syntax:
     content: public static ExceptionDispatchInfo Capture(Exception source)
     content.vb: Public Shared Function Capture(source As Exception) As ExceptionDispatchInfo
     parameters:
     - id: source
       type: System.Exception
-      description: The exception whose state is captured, and which is represented by the returned object.
     return:
       type: System.Runtime.ExceptionServices.ExceptionDispatchInfo
-      description: An object that represents the specified exception at the current point in code.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*source* is null.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw
+  commentId: M:System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw
   id: Throw
   parent: System.Runtime.ExceptionServices.ExceptionDispatchInfo
+  langs:
+  - csharp
+  - vb
   name: Throw()
+  nameWithType: ExceptionDispatchInfo.Throw()
   fullName: System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/ExceptionServices/ExceptionServicesCommon.cs
-    startLine: 126
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Throw
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 3013
   assemblies:
   - System.Runtime
   namespace: System.Runtime.ExceptionServices
-  summary: Throws the exception that is represented by the current <xref href="System.Runtime.ExceptionServices.ExceptionDispatchInfo" data-throw-if-not-resolved="false"></xref> object, after restoring the state that was saved when the exception was captured.
   syntax:
     content: public void Throw()
     content.vb: Public Sub Throw
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Runtime.ExceptionServices
+  commentId: N:System.Runtime.ExceptionServices
   isExternal: false
   name: System.Runtime.ExceptionServices
+  nameWithType: System.Runtime.ExceptionServices
   fullName: System.Runtime.ExceptionServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object)
+  nameWithType: Object.Equals(Object)
   fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
   parent: System.Object
   isExternal: false
   name: GetHashCode()
+  nameWithType: Object.GetHashCode()
   fullName: System.Object.GetHashCode()
   spec.csharp:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: false
   name: Exception
+  nameWithType: Exception
   fullName: System.Exception
 - uid: System.Runtime.ExceptionServices.ExceptionDispatchInfo
+  commentId: T:System.Runtime.ExceptionServices.ExceptionDispatchInfo
   parent: System.Runtime.ExceptionServices
   isExternal: false
   name: ExceptionDispatchInfo
+  nameWithType: ExceptionDispatchInfo
   fullName: System.Runtime.ExceptionServices.ExceptionDispatchInfo
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

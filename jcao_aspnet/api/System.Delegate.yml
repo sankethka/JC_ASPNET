@@ -1,5 +1,6 @@
 items:
 - uid: System.Delegate
+  commentId: T:System.Delegate
   id: Delegate
   parent: System
   children:
@@ -14,20 +15,24 @@ items:
   - System.Delegate.Remove(System.Delegate,System.Delegate)
   - System.Delegate.RemoveAll(System.Delegate,System.Delegate)
   - System.Delegate.Target
+  langs:
+  - csharp
+  - vb
   name: Delegate
+  nameWithType: Delegate
   fullName: System.Delegate
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Delegate.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 16
+      repo: https://github.com/dotnet/corefx.git
+    id: Delegate
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 722
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Represents a delegate, which is a data structure that refers to a static method or to a class instance and an instance method of that class.
   syntax:
     content: public abstract class Delegate
     content.vb: Public MustInherit Class Delegate
@@ -39,563 +44,751 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Delegate.Target
+  commentId: P:System.Delegate.Target
   id: Target
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: Target
+  nameWithType: Delegate.Target
   fullName: System.Delegate.Target
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 285
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Target
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 725
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Gets the class instance on which the current delegate invokes the instance method.
   syntax:
     content: public object Target { get; }
     content.vb: Public ReadOnly Property Target As Object
     parameters: []
     return:
       type: System.Object
-      description: The object on which the current delegate invokes the instance method, if the delegate represents an instance method; null if the delegate represents a static method.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Delegate.Combine(System.Delegate,System.Delegate)
+  commentId: M:System.Delegate.Combine(System.Delegate,System.Delegate)
   id: Combine(System.Delegate,System.Delegate)
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: Combine(Delegate, Delegate)
+  nameWithType: Delegate.Combine(Delegate, Delegate)
   fullName: System.Delegate.Combine(System.Delegate, System.Delegate)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 192
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Combine
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 726
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Concatenates the invocation lists of two delegates.
   syntax:
     content: public static Delegate Combine(Delegate a, Delegate b)
-    content.vb: Public Shared Function Combine(a As Delegate, b As Delegate) As
+    content.vb: 'Public Shared Function Combine(a As  Delegate, b As  Delegate) As '
     parameters:
     - id: a
       type: System.Delegate
-      description: The delegate whose invocation list comes first.
     - id: b
       type: System.Delegate
-      description: The delegate whose invocation list comes last.
     return:
       type: System.Delegate
-      description: A new delegate with an invocation list that concatenates the invocation lists of *a* and *b* in that order. Returns *a* if *b* is null, returns *b* if *a* is a null reference, and returns a null reference if both *a* and *b* are null references.
-  exceptions:
-  - type: System.ArgumentException
-    description: Both *a* and *b* are not null, and *a* and *b* are not instances of the same delegate type.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Delegate.Combine(System.Delegate[])
+  commentId: M:System.Delegate.Combine(System.Delegate[])
   id: Combine(System.Delegate[])
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: Combine(Delegate[])
-  name.vb: Combine(Delegate())
+  nameWithType: Delegate.Combine(Delegate[])
   fullName: System.Delegate.Combine(System.Delegate[])
-  fullName.vb: System.Delegate.Combine(System.Delegate())
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 200
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Combine
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 727
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Concatenates the invocation lists of an array of delegates.
   syntax:
     content: public static Delegate Combine(params Delegate[] delegates)
-    content.vb: Public Shared Function Combine(ParamArray delegates As Delegate ()) As
+    content.vb: 'Public Shared Function Combine(ParamArray delegates As  Delegate ()) As '
     parameters:
     - id: delegates
       type: System.Delegate[]
-      description: The array of delegates to combine.
     return:
       type: System.Delegate
-      description: A new delegate with an invocation list that concatenates the invocation lists of the delegates in the *delegates* array. Returns null if *delegates* is null, if *delegates* contains zero elements, or if every entry in *delegates* is null.
-  exceptions:
-  - type: System.ArgumentException
-    description: Not all the non-null entries in *delegates* are instances of the same delegate type.
+  nameWithType.vb: Delegate.Combine(Delegate())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Delegate.Combine(System.Delegate())
+  name.vb: Combine(Delegate())
 - uid: System.Delegate.DynamicInvoke(System.Object[])
+  commentId: M:System.Delegate.DynamicInvoke(System.Object[])
   id: DynamicInvoke(System.Object[])
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: DynamicInvoke(Object[])
-  name.vb: DynamicInvoke(Object())
+  nameWithType: Delegate.DynamicInvoke(Object[])
   fullName: System.Delegate.DynamicInvoke(System.Object[])
-  fullName.vb: System.Delegate.DynamicInvoke(System.Object())
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 104
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DynamicInvoke
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 728
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Dynamically invokes (late-bound) the method represented by the current delegate.
   syntax:
     content: public object DynamicInvoke(params object[] args)
     content.vb: Public Function DynamicInvoke(ParamArray args As Object()) As Object
     parameters:
     - id: args
       type: System.Object[]
-      description: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
     return:
       type: System.Object
-      description: The object returned by the method represented by the delegate.
-  exceptions:
-  - type: System.MemberAccessException
-    description: The caller does not have access to the method represented by the delegate (for example, if the method is private).-or- The number, order, or type of parameters listed in *args* is invalid.
-  - type: System.ArgumentException
-    description: The method represented by the delegate is invoked on an object or a class that does not support it.
-  - type: System.Reflection.TargetInvocationException
-    description: The method represented by the delegate is an instance method and the target object is null.-or- One of the encapsulated methods throws an exception.
+  nameWithType.vb: Delegate.DynamicInvoke(Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Delegate.DynamicInvoke(System.Object())
+  name.vb: DynamicInvoke(Object())
 - uid: System.Delegate.Equals(System.Object)
+  commentId: M:System.Delegate.Equals(System.Object)
   id: Equals(System.Object)
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: Equals(Object)
+  nameWithType: Delegate.Equals(Object)
   fullName: System.Delegate.Equals(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 125
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 729
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Determines whether the specified object and the current delegate are of the same type and share the same targets, methods, and invocation list.
   syntax:
     content: public override bool Equals(object obj)
     content.vb: Public Overrides Function Equals(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: The object to compare with the current delegate.
     return:
       type: System.Boolean
-      description: true if *obj* and the current delegate have the same targets, methods, and invocation list; otherwise, false.
   overridden: System.Object.Equals(System.Object)
-  exceptions:
-  - type: System.MemberAccessException
-    description: The caller does not have access to the method represented by the delegate (for example, if the method is private).
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Delegate.GetHashCode
+  commentId: M:System.Delegate.GetHashCode
   id: GetHashCode
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: GetHashCode()
+  nameWithType: Delegate.GetHashCode()
   fullName: System.Delegate.GetHashCode()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 177
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 730
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Returns a hash code for the delegate.
   syntax:
     content: public override int GetHashCode()
     content.vb: Public Overrides Function GetHashCode As Integer
     return:
       type: System.Int32
-      description: A hash code for the delegate.
   overridden: System.Object.GetHashCode
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Delegate.GetInvocationList
+  commentId: M:System.Delegate.GetInvocationList
   id: GetInvocationList
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: GetInvocationList()
+  nameWithType: Delegate.GetInvocationList()
   fullName: System.Delegate.GetInvocationList()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 213
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetInvocationList
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 731
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Returns the invocation list of the delegate.
   syntax:
     content: public virtual Delegate[] GetInvocationList()
-    content.vb: Public Overridable Function GetInvocationList As
+    content.vb: 'Public Overridable Function GetInvocationList As '
     return:
       type: System.Delegate[]
-      description: An array of delegates representing the invocation list of the current delegate.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Delegate.op_Equality(System.Delegate,System.Delegate)
+  commentId: M:System.Delegate.op_Equality(System.Delegate,System.Delegate)
   id: op_Equality(System.Delegate,System.Delegate)
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: Equality(Delegate, Delegate)
+  nameWithType: Delegate.Equality(Delegate, Delegate)
   fullName: System.Delegate.Equality(System.Delegate, System.Delegate)
   type: Operator
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 572
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Equality
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 732
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Determines whether the specified delegates are equal.
   syntax:
     content: public static bool operator ==(Delegate d1, Delegate d2)
-    content.vb: Public Shared Operator =(d1 As Delegate, d2 As Delegate) As Boolean
+    content.vb: Public Shared Operator =(d1 As  Delegate, d2 As  Delegate) As Boolean
     parameters:
     - id: d1
       type: System.Delegate
-      description: The first delegate to compare.
     - id: d2
       type: System.Delegate
-      description: The second delegate to compare.
     return:
       type: System.Boolean
-      description: true if *d1* is equal to *d2*; otherwise, false.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Delegate.op_Inequality(System.Delegate,System.Delegate)
+  commentId: M:System.Delegate.op_Inequality(System.Delegate,System.Delegate)
   id: op_Inequality(System.Delegate,System.Delegate)
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: Inequality(Delegate, Delegate)
+  nameWithType: Delegate.Inequality(Delegate, Delegate)
   fullName: System.Delegate.Inequality(System.Delegate, System.Delegate)
   type: Operator
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 580
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Inequality
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 733
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Determines whether the specified delegates are not equal.
   syntax:
     content: public static bool operator !=(Delegate d1, Delegate d2)
-    content.vb: Public Shared Operator <>(d1 As Delegate, d2 As Delegate) As Boolean
+    content.vb: Public Shared Operator <>(d1 As  Delegate, d2 As  Delegate) As Boolean
     parameters:
     - id: d1
       type: System.Delegate
-      description: The first delegate to compare.
     - id: d2
       type: System.Delegate
-      description: The second delegate to compare.
     return:
       type: System.Boolean
-      description: true if *d1* is not equal to *d2*; otherwise, false.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Delegate.Remove(System.Delegate,System.Delegate)
+  commentId: M:System.Delegate.Remove(System.Delegate,System.Delegate)
   id: Remove(System.Delegate,System.Delegate)
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: Remove(Delegate, Delegate)
+  nameWithType: Delegate.Remove(Delegate, Delegate)
   fullName: System.Delegate.Remove(System.Delegate, System.Delegate)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 294
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Remove
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 734
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Removes the last occurrence of the invocation list of a delegate from the invocation list of another delegate.
   syntax:
     content: public static Delegate Remove(Delegate source, Delegate value)
-    content.vb: Public Shared Function Remove(source As Delegate, value As Delegate) As
+    content.vb: 'Public Shared Function Remove(source As  Delegate, value As  Delegate) As '
     parameters:
     - id: source
       type: System.Delegate
-      description: The delegate from which to remove the invocation list of *value*.
     - id: value
       type: System.Delegate
-      description: The delegate that supplies the invocation list to remove from the invocation list of *source*.
     return:
       type: System.Delegate
-      description: A new delegate with an invocation list formed by taking the invocation list of *source* and removing the last occurrence of the invocation list of *value*, if the invocation list of *value* is found within the invocation list of *source*. Returns *source* if *value* is null or if the invocation list of *value* is not found within the invocation list of *source*. Returns a null reference if the invocation list of *value* is equal to the invocation list of *source* or if *source* is a null reference.
-  exceptions:
-  - type: System.MemberAccessException
-    description: The caller does not have access to the method represented by the delegate (for example, if the method is private).
-  - type: System.ArgumentException
-    description: The delegate types do not match.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Delegate.RemoveAll(System.Delegate,System.Delegate)
+  commentId: M:System.Delegate.RemoveAll(System.Delegate,System.Delegate)
   id: RemoveAll(System.Delegate,System.Delegate)
   parent: System.Delegate
+  langs:
+  - csharp
+  - vb
   name: RemoveAll(Delegate, Delegate)
+  nameWithType: Delegate.RemoveAll(Delegate, Delegate)
   fullName: System.Delegate.RemoveAll(System.Delegate, System.Delegate)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Delegate.cs
-    startLine: 309
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveAll
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 735
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Removes all occurrences of the invocation list of a delegate from the invocation list of another delegate.
   syntax:
     content: public static Delegate RemoveAll(Delegate source, Delegate value)
-    content.vb: Public Shared Function RemoveAll(source As Delegate, value As Delegate) As
+    content.vb: 'Public Shared Function RemoveAll(source As  Delegate, value As  Delegate) As '
     parameters:
     - id: source
       type: System.Delegate
-      description: The delegate from which to remove the invocation list of *value*.
     - id: value
       type: System.Delegate
-      description: The delegate that supplies the invocation list to remove from the invocation list of *source*.
     return:
       type: System.Delegate
-      description: A new delegate with an invocation list formed by taking the invocation list of *source* and removing all occurrences of the invocation list of *value*, if the invocation list of *value* is found within the invocation list of *source*. Returns *source* if *value* is null or if the invocation list of *value* is not found within the invocation list of *source*. Returns a null reference if the invocation list of *value* is equal to the invocation list of *source*, if *source* contains only a series of invocation lists that are equal to the invocation list of *value*, or if *source* is a null reference.
-  exceptions:
-  - type: System.MemberAccessException
-    description: The caller does not have access to the method represented by the delegate (for example, if the method is private).
-  - type: System.ArgumentException
-    description: The delegate types do not match.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Delegate
+  commentId: T:System.Delegate
   parent: System
   isExternal: false
   name: Delegate
+  nameWithType: Delegate
   fullName: System.Delegate
 - uid: System.Delegate[]
-  isExternal: false
   name: Delegate[]
-  name.vb: Delegate()
+  nameWithType: Delegate[]
   fullName: System.Delegate[]
-  fullName.vb: System.Delegate()
+  nameWithType.vb: Delegate()
+  fullname.vb: System.Delegate()
+  name.vb: Delegate()
   spec.csharp:
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Delegate
     name: Delegate
+    nameWithType: Delegate
     fullName: System.Delegate
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Object[]
-  isExternal: false
   name: Object[]
-  name.vb: Object()
+  nameWithType: Object[]
   fullName: System.Object[]
-  fullName.vb: System.Object()
+  nameWithType.vb: Object()
+  fullname.vb: System.Object()
+  name.vb: Object()
   spec.csharp:
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object)
+  nameWithType: Object.Equals(Object)
   fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
   parent: System.Object
   isExternal: false
   name: GetHashCode()
+  nameWithType: Object.GetHashCode()
   fullName: System.Object.GetHashCode()
   spec.csharp:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.MemberAccessException
-  parent: System
-  isExternal: false
-  name: MemberAccessException
-  fullName: System.MemberAccessException
-- uid: System.Reflection.TargetInvocationException
-  isExternal: false
-  name: TargetInvocationException
-  fullName: System.Reflection.TargetInvocationException

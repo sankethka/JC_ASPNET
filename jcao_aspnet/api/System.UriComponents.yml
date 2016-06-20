@@ -1,5 +1,6 @@
 items:
 - uid: System.UriComponents
+  commentId: T:System.UriComponents
   id: UriComponents
   parent: System
   children:
@@ -20,297 +21,598 @@ items:
   - System.UriComponents.StrongAuthority
   - System.UriComponents.StrongPort
   - System.UriComponents.UserInfo
+  langs:
+  - csharp
+  - vb
   name: UriComponents
+  nameWithType: UriComponents
   fullName: System.UriComponents
   type: Enum
   source:
-    remote: &o0
-      path: src/System.Private.Uri/src/System/UriEnumTypes.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 14
+    id: UriComponents
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2179
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Specifies the parts of a <xref href="System.Uri" data-throw-if-not-resolved="false"></xref>.
   syntax:
-    content: public enum UriComponents
-    content.vb: Public Enum UriComponents
+    content: >-
+      [Flags]
+
+      public enum UriComponents
+    content.vb: >-
+      <Flags>
+
+      Public Enum UriComponents
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
 - uid: System.UriComponents.AbsoluteUri
+  commentId: F:System.UriComponents.AbsoluteUri
   id: AbsoluteUri
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: AbsoluteUri
+  nameWithType: UriComponents.AbsoluteUri
   fullName: System.UriComponents.AbsoluteUri
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 39
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AbsoluteUri
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2182
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.Scheme" data-throw-if-not-resolved="false"></xref>, <xref href="System.Uri.UserInfo" data-throw-if-not-resolved="false"></xref>, <xref href="System.Uri.Host" data-throw-if-not-resolved="false"></xref>, <xref href="System.Uri.Port" data-throw-if-not-resolved="false"></xref>, <xref href="System.Uri.LocalPath" data-throw-if-not-resolved="false"></xref>, <xref href="System.Uri.Query" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Uri.Fragment" data-throw-if-not-resolved="false"></xref> data.
   syntax:
     content: AbsoluteUri = 127
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.Fragment
+  commentId: F:System.UriComponents.Fragment
   id: Fragment
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: Fragment
+  nameWithType: UriComponents.Fragment
   fullName: System.UriComponents.Fragment
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 25
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Fragment
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2183
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.Fragment" data-throw-if-not-resolved="false"></xref> data.
   syntax:
     content: Fragment = 64
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.Host
+  commentId: F:System.UriComponents.Host
   id: Host
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: Host
+  nameWithType: UriComponents.Host
   fullName: System.UriComponents.Host
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 21
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Host
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2184
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.Host" data-throw-if-not-resolved="false"></xref> data.
   syntax:
     content: Host = 4
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.HostAndPort
+  commentId: F:System.UriComponents.HostAndPort
   id: HostAndPort
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: HostAndPort
+  nameWithType: UriComponents.HostAndPort
   fullName: System.UriComponents.HostAndPort
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 40
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HostAndPort
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2185
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.Host" data-throw-if-not-resolved="false"></xref> and <xref href="System.Uri.Port" data-throw-if-not-resolved="false"></xref> data. If no port data is in the Uri and a default port has been assigned to the <xref href="System.Uri.Scheme" data-throw-if-not-resolved="false"></xref>, the default port is returned. If there is no default port, -1 is returned.
   syntax:
     content: HostAndPort = 132
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.HttpRequestUrl
+  commentId: F:System.UriComponents.HttpRequestUrl
   id: HttpRequestUrl
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: HttpRequestUrl
+  nameWithType: UriComponents.HttpRequestUrl
   fullName: System.UriComponents.HttpRequestUrl
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 43
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HttpRequestUrl
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2186
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.Scheme" data-throw-if-not-resolved="false"></xref>, <xref href="System.Uri.Host" data-throw-if-not-resolved="false"></xref>, <xref href="System.Uri.Port" data-throw-if-not-resolved="false"></xref>, <xref href="System.Uri.LocalPath" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Uri.Query" data-throw-if-not-resolved="false"></xref> data.
   syntax:
     content: HttpRequestUrl = 61
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.KeepDelimiter
+  commentId: F:System.UriComponents.KeepDelimiter
   id: KeepDelimiter
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: KeepDelimiter
+  nameWithType: UriComponents.KeepDelimiter
   fullName: System.UriComponents.KeepDelimiter
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 32
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: KeepDelimiter
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2187
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Specifies that the delimiter should be included.
   syntax:
     content: KeepDelimiter = 1073741824
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.NormalizedHost
+  commentId: F:System.UriComponents.NormalizedHost
   id: NormalizedHost
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: NormalizedHost
+  nameWithType: UriComponents.NormalizedHost
   fullName: System.UriComponents.NormalizedHost
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 28
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NormalizedHost
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2188
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The normalized form of the <xref href="System.Uri.Host" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: NormalizedHost = 256
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.Path
+  commentId: F:System.UriComponents.Path
   id: Path
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: Path
+  nameWithType: UriComponents.Path
   fullName: System.UriComponents.Path
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 23
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Path
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2189
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.LocalPath" data-throw-if-not-resolved="false"></xref> data.
   syntax:
     content: Path = 16
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.PathAndQuery
+  commentId: F:System.UriComponents.PathAndQuery
   id: PathAndQuery
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: PathAndQuery
+  nameWithType: UriComponents.PathAndQuery
   fullName: System.UriComponents.PathAndQuery
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 44
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PathAndQuery
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2190
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.LocalPath" data-throw-if-not-resolved="false"></xref> and <xref href="System.Uri.Query" data-throw-if-not-resolved="false"></xref> data. Also see <xref href="System.Uri.PathAndQuery" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: PathAndQuery = 48
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.Port
+  commentId: F:System.UriComponents.Port
   id: Port
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: Port
+  nameWithType: UriComponents.Port
   fullName: System.UriComponents.Port
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 22
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Port
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2191
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.Port" data-throw-if-not-resolved="false"></xref> data.
   syntax:
     content: Port = 8
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.Query
+  commentId: F:System.UriComponents.Query
   id: Query
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: Query
+  nameWithType: UriComponents.Query
   fullName: System.UriComponents.Query
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 24
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Query
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2192
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.Query" data-throw-if-not-resolved="false"></xref> data.
   syntax:
     content: Query = 32
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.Scheme
+  commentId: F:System.UriComponents.Scheme
   id: Scheme
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: Scheme
+  nameWithType: UriComponents.Scheme
   fullName: System.UriComponents.Scheme
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 19
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Scheme
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2193
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.Scheme" data-throw-if-not-resolved="false"></xref> data.
   syntax:
     content: Scheme = 1
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.SchemeAndServer
+  commentId: F:System.UriComponents.SchemeAndServer
   id: SchemeAndServer
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: SchemeAndServer
+  nameWithType: UriComponents.SchemeAndServer
   fullName: System.UriComponents.SchemeAndServer
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 42
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SchemeAndServer
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2194
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.Scheme" data-throw-if-not-resolved="false"></xref>, <xref href="System.Uri.Host" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Uri.Port" data-throw-if-not-resolved="false"></xref> data.
   syntax:
     content: SchemeAndServer = 13
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.SerializationInfoString
+  commentId: F:System.UriComponents.SerializationInfoString
   id: SerializationInfoString
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: SerializationInfoString
+  nameWithType: UriComponents.SerializationInfoString
   fullName: System.UriComponents.SerializationInfoString
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 36
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SerializationInfoString
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2195
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The complete <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> context that is needed for Uri Serializers. The context includes the IPv6 scope.
   syntax:
     content: SerializationInfoString = -2147483648
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.StrongAuthority
+  commentId: F:System.UriComponents.StrongAuthority
   id: StrongAuthority
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: StrongAuthority
+  nameWithType: UriComponents.StrongAuthority
   fullName: System.UriComponents.StrongAuthority
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 41
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: StrongAuthority
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2196
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.UserInfo" data-throw-if-not-resolved="false"></xref>, <xref href="System.Uri.Host" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Uri.Port" data-throw-if-not-resolved="false"></xref> data. If no port data is in the <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> and a default port has been assigned to the <xref href="System.Uri.Scheme" data-throw-if-not-resolved="false"></xref>, the default port is returned. If there is no default port, -1 is returned.
   syntax:
     content: StrongAuthority = 134
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.StrongPort
+  commentId: F:System.UriComponents.StrongPort
   id: StrongPort
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: StrongPort
+  nameWithType: UriComponents.StrongPort
   fullName: System.UriComponents.StrongPort
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 27
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: StrongPort
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2197
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.Port" data-throw-if-not-resolved="false"></xref> data. If no port data is in the <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> and a default port has been assigned to the <xref href="System.Uri.Scheme" data-throw-if-not-resolved="false"></xref>, the default port is returned. If there is no default port, -1 is returned.
   syntax:
     content: StrongPort = 128
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.UriComponents.UserInfo
+  commentId: F:System.UriComponents.UserInfo
   id: UserInfo
   parent: System.UriComponents
+  langs:
+  - csharp
+  - vb
   name: UserInfo
+  nameWithType: UriComponents.UserInfo
   fullName: System.UriComponents.UserInfo
   type: Field
   source:
-    remote: *o0
-    path: src/System.Private.Uri/src/System/UriEnumTypes.cs
-    startLine: 20
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: UserInfo
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2198
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The <xref href="System.Uri.UserInfo" data-throw-if-not-resolved="false"></xref> data.
   syntax:
     content: UserInfo = 2
+    return:
+      type: System.UriComponents
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
+- uid: System.UriComponents
+  commentId: T:System.UriComponents
+  parent: System
+  isExternal: false
+  name: UriComponents
+  nameWithType: UriComponents
+  fullName: System.UriComponents

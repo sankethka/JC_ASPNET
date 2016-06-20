@@ -1,118 +1,159 @@
 items:
 - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  commentId: T:System.Security.Cryptography.X509Certificates.RSACertificateExtensions
   id: RSACertificateExtensions
   parent: System.Security.Cryptography.X509Certificates
   children:
   - System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
   - System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  langs:
+  - csharp
+  - vb
   name: RSACertificateExtensions
+  nameWithType: RSACertificateExtensions
   fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/RSACertificateExtensions.cs
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/RSACertificateExtensions.cs
-    startLine: 13
+    id: RSACertificateExtensions
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 39
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Provides extension methods for retrieving <xref href="System.Security.Cryptography.RSA" data-throw-if-not-resolved="false"></xref> implementations for the public and private keys of an <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: 'public class RSACertificateExtensions : object'
-    content.vb: Public Class RSACertificateExtensions Inherits Object
+    content.vb: >-
+      Public Class RSACertificateExtensions
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  commentId: M:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
   id: GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  isExtensionMethod: true
   parent: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  langs:
+  - csharp
+  - vb
   name: GetRSAPrivateKey(X509Certificate2)
+  nameWithType: RSACertificateExtensions.GetRSAPrivateKey(X509Certificate2)
   fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/RSACertificateExtensions.cs
-    startLine: 27
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetRSAPrivateKey
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 41
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the <xref href="System.Security.Cryptography.RSA" data-throw-if-not-resolved="false"></xref> private key from the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref>.
   syntax:
-    content: public static RSA GetRSAPrivateKey(X509Certificate2 certificate)
-    content.vb: Public Shared Function GetRSAPrivateKey(certificate As X509Certificate2) As RSA
+    content: public static RSA GetRSAPrivateKey(this X509Certificate2 certificate)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetRSAPrivateKey(certificate As X509Certificate2) As RSA
     parameters:
     - id: certificate
       type: System.Security.Cryptography.X509Certificates.X509Certificate2
-      description: The certificate.
     return:
       type: System.Security.Cryptography.RSA
-      description: The private key, or null if the certificate does not have an RSA public key.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*certificate* is null.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  commentId: M:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
   id: GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
+  isExtensionMethod: true
   parent: System.Security.Cryptography.X509Certificates.RSACertificateExtensions
+  langs:
+  - csharp
+  - vb
   name: GetRSAPublicKey(X509Certificate2)
+  nameWithType: RSACertificateExtensions.GetRSAPublicKey(X509Certificate2)
   fullName: System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.X509Certificates/src/System/Security/Cryptography/X509Certificates/RSACertificateExtensions.cs
-    startLine: 18
+    remote:
+      path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetRSAPublicKey
+    path: src/System.Security.Cryptography.X509Certificates/ref/System.Security.Cryptography.X509Certificates.cs
+    startLine: 42
   assemblies:
   - System.Security.Cryptography.X509Certificates
   namespace: System.Security.Cryptography.X509Certificates
-  summary: Gets the <xref href="System.Security.Cryptography.RSA" data-throw-if-not-resolved="false"></xref> public key from the <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="false"></xref>.
   syntax:
-    content: public static RSA GetRSAPublicKey(X509Certificate2 certificate)
-    content.vb: Public Shared Function GetRSAPublicKey(certificate As X509Certificate2) As RSA
+    content: public static RSA GetRSAPublicKey(this X509Certificate2 certificate)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetRSAPublicKey(certificate As X509Certificate2) As RSA
     parameters:
     - id: certificate
       type: System.Security.Cryptography.X509Certificates.X509Certificate2
-      description: The certificate.
     return:
       type: System.Security.Cryptography.RSA
-      description: The public key, or null if the certificate does not have an RSA public key.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*certificate* is null.'
-  - type: System.Security.Cryptography.CryptographicException
-    description: Windows reports an error. See the <xref href="System.Exception.Message" data-throw-if-not-resolved="false"></xref> property for more information.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Security.Cryptography.X509Certificates
+  commentId: N:System.Security.Cryptography.X509Certificates
   isExternal: false
   name: System.Security.Cryptography.X509Certificates
+  nameWithType: System.Security.Cryptography.X509Certificates
   fullName: System.Security.Cryptography.X509Certificates
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Security.Cryptography.X509Certificates.X509Certificate2
+  commentId: T:System.Security.Cryptography.X509Certificates.X509Certificate2
   parent: System.Security.Cryptography.X509Certificates
   isExternal: false
   name: X509Certificate2
+  nameWithType: X509Certificate2
   fullName: System.Security.Cryptography.X509Certificates.X509Certificate2
 - uid: System.Security.Cryptography.RSA
+  commentId: T:System.Security.Cryptography.RSA
   parent: System.Security.Cryptography
   isExternal: false
   name: RSA
+  nameWithType: RSA
   fullName: System.Security.Cryptography.RSA
 - uid: System.Security.Cryptography
+  commentId: N:System.Security.Cryptography
   isExternal: false
   name: System.Security.Cryptography
+  nameWithType: System.Security.Cryptography
   fullName: System.Security.Cryptography
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.Security.Cryptography.CryptographicException
-  isExternal: false
-  name: CryptographicException
-  fullName: System.Security.Cryptography.CryptographicException

@@ -1,28 +1,39 @@
 items:
 - uid: System.Collections.DictionaryEntry
+  commentId: T:System.Collections.DictionaryEntry
   id: DictionaryEntry
   parent: System.Collections
   children:
   - System.Collections.DictionaryEntry.#ctor(System.Object,System.Object)
   - System.Collections.DictionaryEntry.Key
   - System.Collections.DictionaryEntry.Value
+  langs:
+  - csharp
+  - vb
   name: DictionaryEntry
+  nameWithType: DictionaryEntry
   fullName: System.Collections.DictionaryEntry
   type: Struct
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Collections/DictionaryEntry.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Collections/DictionaryEntry.cs
-    startLine: 20
+      repo: https://github.com/dotnet/corefx.git
+    id: DictionaryEntry
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2285
   assemblies:
   - System.Runtime
   namespace: System.Collections
-  summary: Defines a dictionary key/value pair that can be set or retrieved.
   syntax:
-    content: public struct DictionaryEntry
-    content.vb: Public Structure DictionaryEntry
+    content: >-
+      [StructLayout(LayoutKind.Sequential)]
+
+      public struct DictionaryEntry
+    content.vb: >-
+      <StructLayout(LayoutKind.Sequential)>
+
+      Public Structure DictionaryEntry
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
@@ -30,259 +41,370 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.InteropServices.StructLayoutAttribute
+    ctor: System.Runtime.InteropServices.StructLayoutAttribute.#ctor(System.Runtime.InteropServices.LayoutKind)
+    arguments:
+    - type: System.Runtime.InteropServices.LayoutKind
+      value: 0
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
 - uid: System.Collections.DictionaryEntry.#ctor(System.Object,System.Object)
+  commentId: M:System.Collections.DictionaryEntry.#ctor(System.Object,System.Object)
   id: '#ctor(System.Object,System.Object)'
   parent: System.Collections.DictionaryEntry
+  langs:
+  - csharp
+  - vb
   name: DictionaryEntry(Object, Object)
+  nameWithType: DictionaryEntry.DictionaryEntry(Object, Object)
   fullName: System.Collections.DictionaryEntry.DictionaryEntry(System.Object, System.Object)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/DictionaryEntry.cs
-    startLine: 29
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2288
   assemblies:
   - System.Runtime
   namespace: System.Collections
-  summary: Initializes an instance of the <xref href="System.Collections.DictionaryEntry" data-throw-if-not-resolved="false"></xref> type with the specified key and value.
   syntax:
     content: public DictionaryEntry(object key, object value)
     content.vb: Public Sub New(key As Object, value As Object)
     parameters:
     - id: key
       type: System.Object
-      description: The object defined in each key/value pair.
     - id: value
       type: System.Object
-      description: The definition associated with *key*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*key* is null and the .NET Framework version is 1.0 or 1.1.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.DictionaryEntry.Key
+  commentId: P:System.Collections.DictionaryEntry.Key
   id: Key
   parent: System.Collections.DictionaryEntry
+  langs:
+  - csharp
+  - vb
   name: Key
+  nameWithType: DictionaryEntry.Key
   fullName: System.Collections.DictionaryEntry.Key
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/DictionaryEntry.cs
-    startLine: 34
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Key
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2289
   assemblies:
   - System.Runtime
   namespace: System.Collections
-  summary: Gets or sets the key in the key/value pair.
   syntax:
     content: public object Key { get; set; }
     content.vb: Public Property Key As Object
     parameters: []
     return:
       type: System.Object
-      description: The key in the key/value pair.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Collections.DictionaryEntry.Value
+  commentId: P:System.Collections.DictionaryEntry.Value
   id: Value
   parent: System.Collections.DictionaryEntry
+  langs:
+  - csharp
+  - vb
   name: Value
+  nameWithType: DictionaryEntry.Value
   fullName: System.Collections.DictionaryEntry.Value
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/DictionaryEntry.cs
-    startLine: 44
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Value
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2290
   assemblies:
   - System.Runtime
   namespace: System.Collections
-  summary: Gets or sets the value in the key/value pair.
   syntax:
     content: public object Value { get; set; }
     content.vb: Public Property Value As Object
     parameters: []
     return:
       type: System.Object
-      description: The value in the key/value pair.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
 - uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType
   isExternal: false
   name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
   fullName: System.ValueType.Equals(System.Object)
   spec.csharp:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
     fullName: System.ValueType.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ValueType.Equals(System.Object)
     name: Equals
+    nameWithType: ValueType.Equals
     fullName: System.ValueType.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
   parent: System.ValueType
   isExternal: false
   name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
   fullName: System.ValueType.GetHashCode()
   spec.csharp:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
     fullName: System.ValueType.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ValueType.GetHashCode
     name: GetHashCode
+    nameWithType: ValueType.GetHashCode
     fullName: System.ValueType.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
   parent: System.ValueType
   isExternal: false
   name: ToString()
+  nameWithType: ValueType.ToString()
   fullName: System.ValueType.ToString()
   spec.csharp:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
     fullName: System.ValueType.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.ValueType.ToString
     name: ToString
+    nameWithType: ValueType.ToString
     fullName: System.ValueType.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.ValueType
+  commentId: T:System.ValueType
   parent: System
   isExternal: false
   name: ValueType
+  nameWithType: ValueType
   fullName: System.ValueType
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException

@@ -1,5 +1,6 @@
 items:
 - uid: System.Collections.Concurrent.Partitioner
+  commentId: T:System.Collections.Concurrent.Partitioner
   id: Partitioner
   parent: System.Collections.Concurrent
   children:
@@ -11,609 +12,816 @@ items:
   - System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IEnumerable{``0})
   - System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Concurrent.EnumerablePartitionerOptions)
   - System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IList{``0},System.Boolean)
+  langs:
+  - csharp
+  - vb
   name: Partitioner
+  nameWithType: Partitioner
   fullName: System.Collections.Concurrent.Partitioner
   type: Class
   source:
-    remote: &o0
-      path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
+    remote:
+      path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
-    startLine: 67
+    id: Partitioner
+    path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+    startLine: 191
   assemblies:
   - System.Collections.Concurrent
   namespace: System.Collections.Concurrent
-  summary: Provides common partitioning strategies for arrays, lists, and enumerables.
   syntax:
     content: 'public class Partitioner : object'
-    content.vb: Public Class Partitioner Inherits Object
+    content.vb: >-
+      Public Class Partitioner
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Collections.Concurrent.Partitioner.Create(System.Int32,System.Int32)
+  commentId: M:System.Collections.Concurrent.Partitioner.Create(System.Int32,System.Int32)
   id: Create(System.Int32,System.Int32)
   parent: System.Collections.Concurrent.Partitioner
+  langs:
+  - csharp
+  - vb
   name: Create(Int32, Int32)
+  nameWithType: Partitioner.Create(Int32, Int32)
   fullName: System.Collections.Concurrent.Partitioner.Create(System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
-    startLine: 239
+    remote:
+      path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+    startLine: 193
   assemblies:
   - System.Collections.Concurrent
   namespace: System.Collections.Concurrent
-  summary: Creates a partitioner that chunks the user-specified range.
   syntax:
     content: public static OrderablePartitioner<Tuple<int, int>> Create(int fromInclusive, int toExclusive)
     content.vb: Public Shared Function Create(fromInclusive As Integer, toExclusive As Integer) As OrderablePartitioner(Of Tuple(Of Integer, Integer))
     parameters:
     - id: fromInclusive
       type: System.Int32
-      description: The lower, inclusive bound of the range.
     - id: toExclusive
       type: System.Int32
-      description: The upper, exclusive bound of the range.
     return:
       type: System.Collections.Concurrent.OrderablePartitioner{System.Tuple{System.Int32,System.Int32}}
-      description: A partitioner.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The *toExclusive* argument is less than or equal to the *fromInclusive* argument.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Collections.Concurrent.Partitioner.Create(System.Int32,System.Int32,System.Int32)
+  commentId: M:System.Collections.Concurrent.Partitioner.Create(System.Int32,System.Int32,System.Int32)
   id: Create(System.Int32,System.Int32,System.Int32)
   parent: System.Collections.Concurrent.Partitioner
+  langs:
+  - csharp
+  - vb
   name: Create(Int32, Int32, Int32)
+  nameWithType: Partitioner.Create(Int32, Int32, Int32)
   fullName: System.Collections.Concurrent.Partitioner.Create(System.Int32, System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
-    startLine: 262
+    remote:
+      path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+    startLine: 194
   assemblies:
   - System.Collections.Concurrent
   namespace: System.Collections.Concurrent
-  summary: Creates a partitioner that chunks the user-specified range.
   syntax:
     content: public static OrderablePartitioner<Tuple<int, int>> Create(int fromInclusive, int toExclusive, int rangeSize)
     content.vb: Public Shared Function Create(fromInclusive As Integer, toExclusive As Integer, rangeSize As Integer) As OrderablePartitioner(Of Tuple(Of Integer, Integer))
     parameters:
     - id: fromInclusive
       type: System.Int32
-      description: The lower, inclusive bound of the range.
     - id: toExclusive
       type: System.Int32
-      description: The upper, exclusive bound of the range.
     - id: rangeSize
       type: System.Int32
-      description: The size of each subrange.
     return:
       type: System.Collections.Concurrent.OrderablePartitioner{System.Tuple{System.Int32,System.Int32}}
-      description: A partitioner.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The *toExclusive* argument is less than or equal to the *fromInclusive* argument.-or-The *rangeSize* argument is less than or equal to 0.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Collections.Concurrent.Partitioner.Create(System.Int64,System.Int64)
+  commentId: M:System.Collections.Concurrent.Partitioner.Create(System.Int64,System.Int64)
   id: Create(System.Int64,System.Int64)
   parent: System.Collections.Concurrent.Partitioner
+  langs:
+  - csharp
+  - vb
   name: Create(Int64, Int64)
+  nameWithType: Partitioner.Create(Int64, Int64)
   fullName: System.Collections.Concurrent.Partitioner.Create(System.Int64, System.Int64)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
-    startLine: 182
+    remote:
+      path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+    startLine: 195
   assemblies:
   - System.Collections.Concurrent
   namespace: System.Collections.Concurrent
-  summary: Creates a partitioner that chunks the user-specified range.
   syntax:
     content: public static OrderablePartitioner<Tuple<long, long>> Create(long fromInclusive, long toExclusive)
     content.vb: Public Shared Function Create(fromInclusive As Long, toExclusive As Long) As OrderablePartitioner(Of Tuple(Of Long, Long))
     parameters:
     - id: fromInclusive
       type: System.Int64
-      description: The lower, inclusive bound of the range.
     - id: toExclusive
       type: System.Int64
-      description: The upper, exclusive bound of the range.
     return:
       type: System.Collections.Concurrent.OrderablePartitioner{System.Tuple{System.Int64,System.Int64}}
-      description: A partitioner.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The *toExclusive* argument is less than or equal to the *fromInclusive* argument.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Collections.Concurrent.Partitioner.Create(System.Int64,System.Int64,System.Int64)
+  commentId: M:System.Collections.Concurrent.Partitioner.Create(System.Int64,System.Int64,System.Int64)
   id: Create(System.Int64,System.Int64,System.Int64)
   parent: System.Collections.Concurrent.Partitioner
+  langs:
+  - csharp
+  - vb
   name: Create(Int64, Int64, Int64)
+  nameWithType: Partitioner.Create(Int64, Int64, Int64)
   fullName: System.Collections.Concurrent.Partitioner.Create(System.Int64, System.Int64, System.Int64)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
-    startLine: 205
+    remote:
+      path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+    startLine: 196
   assemblies:
   - System.Collections.Concurrent
   namespace: System.Collections.Concurrent
-  summary: Creates a partitioner that chunks the user-specified range.
   syntax:
     content: public static OrderablePartitioner<Tuple<long, long>> Create(long fromInclusive, long toExclusive, long rangeSize)
     content.vb: Public Shared Function Create(fromInclusive As Long, toExclusive As Long, rangeSize As Long) As OrderablePartitioner(Of Tuple(Of Long, Long))
     parameters:
     - id: fromInclusive
       type: System.Int64
-      description: The lower, inclusive bound of the range.
     - id: toExclusive
       type: System.Int64
-      description: The upper, exclusive bound of the range.
     - id: rangeSize
       type: System.Int64
-      description: The size of each subrange.
     return:
       type: System.Collections.Concurrent.OrderablePartitioner{System.Tuple{System.Int64,System.Int64}}
-      description: A partitioner.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The *toExclusive* argument is less than or equal to the *fromInclusive* argument.-or-The *rangeSize* argument is less than or equal to 0.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Collections.Concurrent.Partitioner.Create``1(``0[],System.Boolean)
+  commentId: M:System.Collections.Concurrent.Partitioner.Create``1(``0[],System.Boolean)
   id: Create``1(``0[],System.Boolean)
   parent: System.Collections.Concurrent.Partitioner
+  langs:
+  - csharp
+  - vb
   name: Create<TSource>(TSource[], Boolean)
-  name.vb: Create(Of TSource)(TSource(), Boolean)
+  nameWithType: Partitioner.Create<TSource>(TSource[], Boolean)
   fullName: System.Collections.Concurrent.Partitioner.Create<TSource>(TSource[], System.Boolean)
-  fullName.vb: System.Collections.Concurrent.Partitioner.Create(Of TSource)(TSource(), System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections.Concurrent/src/System/Collections/Concurrent/PartitionerStatic.cs
-    startLine: 110
+    remote:
+      path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+    startLine: 197
   assemblies:
   - System.Collections.Concurrent
   namespace: System.Collections.Concurrent
-  summary: Creates an orderable partitioner from a <xref href="System.Array" data-throw-if-not-resolved="false"></xref> instance.
   syntax:
     content: public static OrderablePartitioner<TSource> Create<TSource>(TSource[] array, bool loadBalance)
     content.vb: Public Shared Function Create(Of TSource)(array As TSource(), loadBalance As Boolean) As OrderablePartitioner(Of TSource)
     parameters:
     - id: array
       type: '{TSource}[]'
-      description: The array to be partitioned.
     - id: loadBalance
       type: System.Boolean
-      description: A Boolean value that indicates whether the created partitioner should dynamically load balance between partitions rather than statically partition.
     typeParameters:
     - id: TSource
     return:
       type: System.Collections.Concurrent.OrderablePartitioner{{TSource}}
-      description: An orderable partitioner based on the input array.
+  nameWithType.vb: Partitioner.Create(Of TSource)(TSource(), Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Collections.Concurrent.Partitioner.Create(Of TSource)(TSource(), System.Boolean)
+  name.vb: Create(Of TSource)(TSource(), Boolean)
 - uid: System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IEnumerable{``0})
   id: Create``1(System.Collections.Generic.IEnumerable{``0})
   parent: System.Collections.Concurrent.Partitioner
+  langs:
+  - csharp
+  - vb
   name: Create<TSource>(Generic.IEnumerable<TSource>)
-  name.vb: Create(Of TSource)(Generic.IEnumerable(Of TSource))
+  nameWithType: Partitioner.Create<TSource>(Generic.IEnumerable<TSource>)
   fullName: System.Collections.Concurrent.Partitioner.Create<TSource>(System.Collections.Generic.IEnumerable<TSource>)
-  fullName.vb: System.Collections.Concurrent.Partitioner.Create(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource))
   type: Method
   source:
-    remote: &o1
+    remote:
       path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Create
     path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
-    startLine: 195
+    startLine: 198
   assemblies:
   - System.Collections.Concurrent
   namespace: System.Collections.Concurrent
-  summary: Creates an orderable partitioner from a <xref href="System.Collections.Generic.IEnumerable`1" data-throw-if-not-resolved="false"></xref> instance.
   syntax:
     content: public static OrderablePartitioner<TSource> Create<TSource>(Generic.IEnumerable<TSource> source)
     content.vb: Public Shared Function Create(Of TSource)(source As Generic.IEnumerable(Of TSource)) As OrderablePartitioner(Of TSource)
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: The enumerable to be partitioned.
     typeParameters:
     - id: TSource
     return:
       type: System.Collections.Concurrent.OrderablePartitioner{{TSource}}
-      description: An orderable partitioner based on the input array.
+  nameWithType.vb: Partitioner.Create(Of TSource)(Generic.IEnumerable(Of TSource))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Collections.Concurrent.Partitioner.Create(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource))
+  name.vb: Create(Of TSource)(Generic.IEnumerable(Of TSource))
 - uid: System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Concurrent.EnumerablePartitionerOptions)
+  commentId: M:System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Concurrent.EnumerablePartitionerOptions)
   id: Create``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Concurrent.EnumerablePartitionerOptions)
   parent: System.Collections.Concurrent.Partitioner
+  langs:
+  - csharp
+  - vb
   name: Create<TSource>(Generic.IEnumerable<TSource>, EnumerablePartitionerOptions)
-  name.vb: Create(Of TSource)(Generic.IEnumerable(Of TSource), EnumerablePartitionerOptions)
+  nameWithType: Partitioner.Create<TSource>(Generic.IEnumerable<TSource>, EnumerablePartitionerOptions)
   fullName: System.Collections.Concurrent.Partitioner.Create<TSource>(System.Collections.Generic.IEnumerable<TSource>, System.Collections.Concurrent.EnumerablePartitionerOptions)
-  fullName.vb: System.Collections.Concurrent.Partitioner.Create(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Collections.Concurrent.EnumerablePartitionerOptions)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
     path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
-    startLine: 196
+    startLine: 199
   assemblies:
   - System.Collections.Concurrent
   namespace: System.Collections.Concurrent
-  summary: Creates an orderable partitioner from a <xref href="System.Collections.Generic.IEnumerable`1" data-throw-if-not-resolved="false"></xref> instance.
   syntax:
     content: public static OrderablePartitioner<TSource> Create<TSource>(Generic.IEnumerable<TSource> source, EnumerablePartitionerOptions partitionerOptions)
     content.vb: Public Shared Function Create(Of TSource)(source As Generic.IEnumerable(Of TSource), partitionerOptions As EnumerablePartitionerOptions) As OrderablePartitioner(Of TSource)
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: The enumerable to be partitioned.
     - id: partitionerOptions
       type: System.Collections.Concurrent.EnumerablePartitionerOptions
-      description: Options to control the buffering behavior of the partitioner.
     typeParameters:
     - id: TSource
     return:
       type: System.Collections.Concurrent.OrderablePartitioner{{TSource}}
-      description: An orderable partitioner based on the input array.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The *partitionerOptions* argument specifies an invalid value for <xref href="System.Collections.Concurrent.EnumerablePartitionerOptions" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: Partitioner.Create(Of TSource)(Generic.IEnumerable(Of TSource), EnumerablePartitionerOptions)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Collections.Concurrent.Partitioner.Create(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Collections.Concurrent.EnumerablePartitionerOptions)
+  name.vb: Create(Of TSource)(Generic.IEnumerable(Of TSource), EnumerablePartitionerOptions)
 - uid: System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IList{``0},System.Boolean)
+  commentId: M:System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IList{``0},System.Boolean)
   id: Create``1(System.Collections.Generic.IList{``0},System.Boolean)
   parent: System.Collections.Concurrent.Partitioner
+  langs:
+  - csharp
+  - vb
   name: Create<TSource>(Generic.IList<TSource>, Boolean)
-  name.vb: Create(Of TSource)(Generic.IList(Of TSource), Boolean)
+  nameWithType: Partitioner.Create<TSource>(Generic.IList<TSource>, Boolean)
   fullName: System.Collections.Concurrent.Partitioner.Create<TSource>(System.Collections.Generic.IList<TSource>, System.Boolean)
-  fullName.vb: System.Collections.Concurrent.Partitioner.Create(Of TSource)(System.Collections.Generic.IList(Of TSource), System.Boolean)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
     path: src/System.Collections.Concurrent/ref/System.Collections.Concurrent.cs
-    startLine: 197
+    startLine: 200
   assemblies:
   - System.Collections.Concurrent
   namespace: System.Collections.Concurrent
-  summary: Creates an orderable partitioner from an <xref href="System.Collections.Generic.IList`1" data-throw-if-not-resolved="false"></xref> instance.
   syntax:
     content: public static OrderablePartitioner<TSource> Create<TSource>(Generic.IList<TSource> list, bool loadBalance)
     content.vb: Public Shared Function Create(Of TSource)(list As Generic.IList(Of TSource), loadBalance As Boolean) As OrderablePartitioner(Of TSource)
     parameters:
     - id: list
       type: System.Collections.Generic.IList{{TSource}}
-      description: The list to be partitioned.
     - id: loadBalance
       type: System.Boolean
-      description: A Boolean value that indicates whether the created partitioner should dynamically load balance between partitions rather than statically partition.
     typeParameters:
     - id: TSource
     return:
       type: System.Collections.Concurrent.OrderablePartitioner{{TSource}}
-      description: An orderable partitioner based on the input list.
+  nameWithType.vb: Partitioner.Create(Of TSource)(Generic.IList(Of TSource), Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Collections.Concurrent.Partitioner.Create(Of TSource)(System.Collections.Generic.IList(Of TSource), System.Boolean)
+  name.vb: Create(Of TSource)(Generic.IList(Of TSource), Boolean)
 references:
 - uid: System.Collections.Concurrent
+  commentId: N:System.Collections.Concurrent
   isExternal: false
   name: System.Collections.Concurrent
+  nameWithType: System.Collections.Concurrent
   fullName: System.Collections.Concurrent
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Collections.Concurrent.OrderablePartitioner{System.Tuple{System.Int32,System.Int32}}
+  commentId: T:System.Collections.Concurrent.OrderablePartitioner{System.Tuple{System.Int32,System.Int32}}
   parent: System.Collections.Concurrent
   definition: System.Collections.Concurrent.OrderablePartitioner`1
   name: OrderablePartitioner<Tuple<Int32, Int32>>
-  name.vb: OrderablePartitioner(Of Tuple(Of Int32, Int32))
+  nameWithType: OrderablePartitioner<Tuple<Int32, Int32>>
   fullName: System.Collections.Concurrent.OrderablePartitioner<System.Tuple<System.Int32, System.Int32>>
-  fullName.vb: System.Collections.Concurrent.OrderablePartitioner(Of System.Tuple(Of System.Int32, System.Int32))
+  nameWithType.vb: OrderablePartitioner(Of Tuple(Of Int32, Int32))
+  fullname.vb: System.Collections.Concurrent.OrderablePartitioner(Of System.Tuple(Of System.Int32, System.Int32))
+  name.vb: OrderablePartitioner(Of Tuple(Of Int32, Int32))
   spec.csharp:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
     name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Tuple`2
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
     name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Tuple`2
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Concurrent.OrderablePartitioner`1
-  parent: System.Collections.Concurrent
+  commentId: T:System.Collections.Concurrent.OrderablePartitioner`1
   isExternal: false
-  name: Collections.Concurrent.OrderablePartitioner<>
-  name.vb: Collections.Concurrent.OrderablePartitioner(Of )
-  fullName: System.Collections.Concurrent.OrderablePartitioner<>
-  fullName.vb: System.Collections.Concurrent.OrderablePartitioner(Of )
+  name: OrderablePartitioner<TSource>
+  nameWithType: OrderablePartitioner<TSource>
+  fullName: System.Collections.Concurrent.OrderablePartitioner<TSource>
+  nameWithType.vb: OrderablePartitioner(Of TSource)
+  fullname.vb: System.Collections.Concurrent.OrderablePartitioner(Of TSource)
+  name.vb: OrderablePartitioner(Of TSource)
   spec.csharp:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
-    name: Collections.Concurrent.OrderablePartitioner
+    name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
-    name: Collections.Concurrent.OrderablePartitioner
+    name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Int64
+  commentId: T:System.Int64
   parent: System
   isExternal: false
   name: Int64
+  nameWithType: Int64
   fullName: System.Int64
 - uid: System.Collections.Concurrent.OrderablePartitioner{System.Tuple{System.Int64,System.Int64}}
+  commentId: T:System.Collections.Concurrent.OrderablePartitioner{System.Tuple{System.Int64,System.Int64}}
   parent: System.Collections.Concurrent
   definition: System.Collections.Concurrent.OrderablePartitioner`1
   name: OrderablePartitioner<Tuple<Int64, Int64>>
-  name.vb: OrderablePartitioner(Of Tuple(Of Int64, Int64))
+  nameWithType: OrderablePartitioner<Tuple<Int64, Int64>>
   fullName: System.Collections.Concurrent.OrderablePartitioner<System.Tuple<System.Int64, System.Int64>>
-  fullName.vb: System.Collections.Concurrent.OrderablePartitioner(Of System.Tuple(Of System.Int64, System.Int64))
+  nameWithType.vb: OrderablePartitioner(Of Tuple(Of Int64, Int64))
+  fullname.vb: System.Collections.Concurrent.OrderablePartitioner(Of System.Tuple(Of System.Int64, System.Int64))
+  name.vb: OrderablePartitioner(Of Tuple(Of Int64, Int64))
   spec.csharp:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
     name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Tuple`2
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
     name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Tuple`2
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{TSource}[]'
-  isExternal: false
   name: TSource[]
-  name.vb: TSource()
+  nameWithType: TSource[]
   fullName: TSource[]
-  fullName.vb: TSource()
+  nameWithType.vb: TSource()
+  fullname.vb: TSource()
+  name.vb: TSource()
   spec.csharp:
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Collections.Concurrent.OrderablePartitioner{{TSource}}
+  commentId: T:System.Collections.Concurrent.OrderablePartitioner{``0}
   parent: System.Collections.Concurrent
   definition: System.Collections.Concurrent.OrderablePartitioner`1
-  name: Collections.Concurrent.OrderablePartitioner<TSource>
-  name.vb: Collections.Concurrent.OrderablePartitioner(Of TSource)
+  name: OrderablePartitioner<TSource>
+  nameWithType: OrderablePartitioner<TSource>
   fullName: System.Collections.Concurrent.OrderablePartitioner<TSource>
-  fullName.vb: System.Collections.Concurrent.OrderablePartitioner(Of TSource)
+  nameWithType.vb: OrderablePartitioner(Of TSource)
+  fullname.vb: System.Collections.Concurrent.OrderablePartitioner(Of TSource)
+  name.vb: OrderablePartitioner(Of TSource)
   spec.csharp:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
-    name: Collections.Concurrent.OrderablePartitioner
+    name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
-    name: Collections.Concurrent.OrderablePartitioner
+    name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable{{TSource}}
+  commentId: '!:System.Collections.Generic.IEnumerable{`0}'
   definition: System.Collections.Generic.IEnumerable`1
-  name: Collections.Generic.IEnumerable<TSource>
-  name.vb: Collections.Generic.IEnumerable(Of TSource)
+  name: Generic.IEnumerable<TSource>
+  nameWithType: Generic.IEnumerable<TSource>
   fullName: System.Collections.Generic.IEnumerable<TSource>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of TSource)
+  nameWithType.vb: Generic.IEnumerable(Of TSource)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of TSource)
+  name.vb: Generic.IEnumerable(Of TSource)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
+    name: Generic.IEnumerable
+    nameWithType: Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
+    name: Generic.IEnumerable
+    nameWithType: Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: System.Collections.Concurrent.EnumerablePartitionerOptions
+  commentId: T:System.Collections.Concurrent.EnumerablePartitionerOptions
   parent: System.Collections.Concurrent
   isExternal: false
   name: EnumerablePartitionerOptions
+  nameWithType: EnumerablePartitionerOptions
   fullName: System.Collections.Concurrent.EnumerablePartitionerOptions
 - uid: System.Collections.Generic.IList{{TSource}}
+  commentId: '!:System.Collections.Generic.IList{``0}'
   definition: System.Collections.Generic.IList`1
   name: Generic.IList<TSource>
-  name.vb: Generic.IList(Of TSource)
+  nameWithType: Generic.IList<TSource>
   fullName: System.Collections.Generic.IList<TSource>
-  fullName.vb: System.Collections.Generic.IList(Of TSource)
+  nameWithType.vb: Generic.IList(Of TSource)
+  fullname.vb: System.Collections.Generic.IList(Of TSource)
+  name.vb: Generic.IList(Of TSource)
   spec.csharp:
   - uid: System.Collections.Generic.IList`1
     name: Generic.IList
+    nameWithType: Generic.IList
     fullName: System.Collections.Generic.IList
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IList`1
     name: Generic.IList
+    nameWithType: Generic.IList
     fullName: System.Collections.Generic.IList
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IList`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IList`1
   isExternal: false
   name: Collections.Generic.IList<>
-  name.vb: Collections.Generic.IList(Of )
+  nameWithType: Collections.Generic.IList<>
   fullName: System.Collections.Generic.IList<>
-  fullName.vb: System.Collections.Generic.IList(Of )
+  nameWithType.vb: Collections.Generic.IList(Of )
+  fullname.vb: System.Collections.Generic.IList(Of )
+  name.vb: Collections.Generic.IList(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IList`1
     name: Collections.Generic.IList
+    nameWithType: Collections.Generic.IList
     fullName: System.Collections.Generic.IList
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IList`1
     name: Collections.Generic.IList
+    nameWithType: Collections.Generic.IList
     fullName: System.Collections.Generic.IList
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException

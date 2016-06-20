@@ -1,28 +1,35 @@
 items:
 - uid: Microsoft.Win32.SafeHandles.SafeWaitHandle
+  commentId: T:Microsoft.Win32.SafeHandles.SafeWaitHandle
   id: SafeWaitHandle
   parent: Microsoft.Win32.SafeHandles
   children:
   - Microsoft.Win32.SafeHandles.SafeWaitHandle.#ctor(System.IntPtr,System.Boolean)
   - Microsoft.Win32.SafeHandles.SafeWaitHandle.IsInvalid
   - Microsoft.Win32.SafeHandles.SafeWaitHandle.ReleaseHandle
+  langs:
+  - csharp
+  - vb
   name: SafeWaitHandle
+  nameWithType: SafeWaitHandle
   fullName: Microsoft.Win32.SafeHandles.SafeWaitHandle
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/Microsoft/Win32/SafeHandles/SafeWaitHandle.cs
+    remote:
+      path: src/System.Runtime.Handles/ref/System.Runtime.Handles.Manual.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/Microsoft/Win32/SafeHandles/SafeWaitHandle.cs
-    startLine: 26
+      repo: https://github.com/dotnet/corefx.git
+    id: SafeWaitHandle
+    path: src/System.Runtime.Handles/ref/System.Runtime.Handles.Manual.cs
+    startLine: 10
   assemblies:
   - System.Runtime.Handles
   namespace: Microsoft.Win32.SafeHandles
-  summary: Represents a wrapper class for a wait handle.
   syntax:
     content: 'public sealed class SafeWaitHandle : SafeHandle'
-    content.vb: Public NotInheritable Class SafeWaitHandle Inherits SafeHandle
+    content.vb: >-
+      Public NotInheritable Class SafeWaitHandle
+          Inherits SafeHandle
   inheritance:
   - System.Object
   - System.Runtime.InteropServices.SafeHandle
@@ -36,40 +43,67 @@ items:
   - System.Runtime.InteropServices.SafeHandle.Dispose(System.Boolean)
   - System.Runtime.InteropServices.SafeHandle.SetHandle(System.IntPtr)
   - System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: Microsoft.Win32.SafeHandles.SafeWaitHandle.#ctor(System.IntPtr,System.Boolean)
+  commentId: M:Microsoft.Win32.SafeHandles.SafeWaitHandle.#ctor(System.IntPtr,System.Boolean)
   id: '#ctor(System.IntPtr,System.Boolean)'
   parent: Microsoft.Win32.SafeHandles.SafeWaitHandle
+  langs:
+  - csharp
+  - vb
   name: SafeWaitHandle(IntPtr, Boolean)
+  nameWithType: SafeWaitHandle.SafeWaitHandle(IntPtr, Boolean)
   fullName: Microsoft.Win32.SafeHandles.SafeWaitHandle.SafeWaitHandle(System.IntPtr, System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/Microsoft/Win32/SafeHandles/SafeWaitHandle.cs
-    startLine: 34
+    remote:
+      path: src/System.Runtime.Handles/ref/System.Runtime.Handles.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime.Handles/ref/System.Runtime.Handles.cs
+    startLine: 13
   assemblies:
   - System.Runtime.Handles
   namespace: Microsoft.Win32.SafeHandles
-  summary: Initializes a new instance of the <xref href="Microsoft.Win32.SafeHandles.SafeWaitHandle" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public SafeWaitHandle(IntPtr existingHandle, bool ownsHandle)
     content.vb: Public Sub New(existingHandle As IntPtr, ownsHandle As Boolean)
     parameters:
     - id: existingHandle
       type: System.IntPtr
-      description: An <xref href="System.IntPtr" data-throw-if-not-resolved="false"></xref> object that represents the pre-existing handle to use.
     - id: ownsHandle
       type: System.Boolean
-      description: true to reliably release the handle during the finalization phase; false to prevent reliable release (not recommended).
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Microsoft.Win32.SafeHandles.SafeWaitHandle.ReleaseHandle
+  commentId: M:Microsoft.Win32.SafeHandles.SafeWaitHandle.ReleaseHandle
   id: ReleaseHandle
   parent: Microsoft.Win32.SafeHandles.SafeWaitHandle
+  langs:
+  - csharp
+  - vb
   name: ReleaseHandle()
+  nameWithType: SafeWaitHandle.ReleaseHandle()
   fullName: Microsoft.Win32.SafeHandles.SafeWaitHandle.ReleaseHandle()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/Microsoft/Win32/SafeHandles/SafeWaitHandle.cs
-    startLine: 40
+    remote:
+      path: src/System.Runtime.Handles/ref/System.Runtime.Handles.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReleaseHandle
+    path: src/System.Runtime.Handles/ref/System.Runtime.Handles.cs
+    startLine: 14
   assemblies:
   - System.Runtime.Handles
   namespace: Microsoft.Win32.SafeHandles
@@ -79,10 +113,21 @@ items:
     return:
       type: System.Boolean
   overridden: System.Runtime.InteropServices.SafeHandle.ReleaseHandle
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: Microsoft.Win32.SafeHandles.SafeWaitHandle.IsInvalid
+  commentId: P:Microsoft.Win32.SafeHandles.SafeWaitHandle.IsInvalid
   id: IsInvalid
   parent: Microsoft.Win32.SafeHandles.SafeWaitHandle
+  langs:
+  - csharp
+  - vb
   name: IsInvalid
+  nameWithType: SafeWaitHandle.IsInvalid
   fullName: Microsoft.Win32.SafeHandles.SafeWaitHandle.IsInvalid
   type: Property
   source:
@@ -90,8 +135,9 @@ items:
       path: src/System.Runtime.Handles/ref/System.Runtime.Handles.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: IsInvalid
     path: src/System.Runtime.Handles/ref/System.Runtime.Handles.Manual.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - System.Runtime.Handles
   namespace: Microsoft.Win32.SafeHandles
@@ -102,243 +148,341 @@ items:
     return:
       type: System.Boolean
   overridden: System.Runtime.InteropServices.SafeHandle.IsInvalid
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 references:
 - uid: Microsoft.Win32.SafeHandles
+  commentId: N:Microsoft.Win32.SafeHandles
   isExternal: false
   name: Microsoft.Win32.SafeHandles
+  nameWithType: Microsoft.Win32.SafeHandles
   fullName: Microsoft.Win32.SafeHandles
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Runtime.InteropServices.SafeHandle
+  commentId: T:System.Runtime.InteropServices.SafeHandle
   parent: System.Runtime.InteropServices
   isExternal: false
-  name: Runtime.InteropServices.SafeHandle
+  name: SafeHandle
+  nameWithType: SafeHandle
   fullName: System.Runtime.InteropServices.SafeHandle
 - uid: System.Runtime.InteropServices.SafeHandle.handle
+  commentId: F:System.Runtime.InteropServices.SafeHandle.handle
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: false
   name: handle
+  nameWithType: SafeHandle.handle
   fullName: System.Runtime.InteropServices.SafeHandle.handle
 - uid: System.Runtime.InteropServices.SafeHandle.IsClosed
+  commentId: P:System.Runtime.InteropServices.SafeHandle.IsClosed
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: false
   name: IsClosed
+  nameWithType: SafeHandle.IsClosed
   fullName: System.Runtime.InteropServices.SafeHandle.IsClosed
 - uid: System.Runtime.InteropServices.SafeHandle.DangerousAddRef(System.Boolean@)
+  commentId: M:System.Runtime.InteropServices.SafeHandle.DangerousAddRef(System.Boolean@)
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: true
   name: DangerousAddRef(Boolean)
+  nameWithType: SafeHandle.DangerousAddRef(Boolean)
   fullName: System.Runtime.InteropServices.SafeHandle.DangerousAddRef(System.Boolean)
   spec.csharp:
   - uid: System.Runtime.InteropServices.SafeHandle.DangerousAddRef(System.Boolean@)
     name: DangerousAddRef
+    nameWithType: SafeHandle.DangerousAddRef
     fullName: System.Runtime.InteropServices.SafeHandle.DangerousAddRef
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Runtime.InteropServices.SafeHandle.DangerousAddRef(System.Boolean@)
     name: DangerousAddRef
+    nameWithType: SafeHandle.DangerousAddRef
     fullName: System.Runtime.InteropServices.SafeHandle.DangerousAddRef
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Runtime.InteropServices.SafeHandle.DangerousGetHandle
+  commentId: M:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: false
   name: DangerousGetHandle()
+  nameWithType: SafeHandle.DangerousGetHandle()
   fullName: System.Runtime.InteropServices.SafeHandle.DangerousGetHandle()
   spec.csharp:
   - uid: System.Runtime.InteropServices.SafeHandle.DangerousGetHandle
     name: DangerousGetHandle
+    nameWithType: SafeHandle.DangerousGetHandle
     fullName: System.Runtime.InteropServices.SafeHandle.DangerousGetHandle
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Runtime.InteropServices.SafeHandle.DangerousGetHandle
     name: DangerousGetHandle
+    nameWithType: SafeHandle.DangerousGetHandle
     fullName: System.Runtime.InteropServices.SafeHandle.DangerousGetHandle
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Runtime.InteropServices.SafeHandle.DangerousRelease
+  commentId: M:System.Runtime.InteropServices.SafeHandle.DangerousRelease
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: false
   name: DangerousRelease()
+  nameWithType: SafeHandle.DangerousRelease()
   fullName: System.Runtime.InteropServices.SafeHandle.DangerousRelease()
   spec.csharp:
   - uid: System.Runtime.InteropServices.SafeHandle.DangerousRelease
     name: DangerousRelease
+    nameWithType: SafeHandle.DangerousRelease
     fullName: System.Runtime.InteropServices.SafeHandle.DangerousRelease
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Runtime.InteropServices.SafeHandle.DangerousRelease
     name: DangerousRelease
+    nameWithType: SafeHandle.DangerousRelease
     fullName: System.Runtime.InteropServices.SafeHandle.DangerousRelease
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Runtime.InteropServices.SafeHandle.Dispose
+  commentId: M:System.Runtime.InteropServices.SafeHandle.Dispose
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: false
   name: Dispose()
+  nameWithType: SafeHandle.Dispose()
   fullName: System.Runtime.InteropServices.SafeHandle.Dispose()
   spec.csharp:
   - uid: System.Runtime.InteropServices.SafeHandle.Dispose
     name: Dispose
+    nameWithType: SafeHandle.Dispose
     fullName: System.Runtime.InteropServices.SafeHandle.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Runtime.InteropServices.SafeHandle.Dispose
     name: Dispose
+    nameWithType: SafeHandle.Dispose
     fullName: System.Runtime.InteropServices.SafeHandle.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Runtime.InteropServices.SafeHandle.Dispose(System.Boolean)
+  commentId: M:System.Runtime.InteropServices.SafeHandle.Dispose(System.Boolean)
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: true
   name: Dispose(Boolean)
+  nameWithType: SafeHandle.Dispose(Boolean)
   fullName: System.Runtime.InteropServices.SafeHandle.Dispose(System.Boolean)
   spec.csharp:
   - uid: System.Runtime.InteropServices.SafeHandle.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: SafeHandle.Dispose
     fullName: System.Runtime.InteropServices.SafeHandle.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Runtime.InteropServices.SafeHandle.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: SafeHandle.Dispose
     fullName: System.Runtime.InteropServices.SafeHandle.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Runtime.InteropServices.SafeHandle.SetHandle(System.IntPtr)
+  commentId: M:System.Runtime.InteropServices.SafeHandle.SetHandle(System.IntPtr)
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: true
   name: SetHandle(IntPtr)
+  nameWithType: SafeHandle.SetHandle(IntPtr)
   fullName: System.Runtime.InteropServices.SafeHandle.SetHandle(System.IntPtr)
   spec.csharp:
   - uid: System.Runtime.InteropServices.SafeHandle.SetHandle(System.IntPtr)
     name: SetHandle
+    nameWithType: SafeHandle.SetHandle
     fullName: System.Runtime.InteropServices.SafeHandle.SetHandle
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IntPtr
     name: IntPtr
+    nameWithType: IntPtr
     fullName: System.IntPtr
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Runtime.InteropServices.SafeHandle.SetHandle(System.IntPtr)
     name: SetHandle
+    nameWithType: SafeHandle.SetHandle
     fullName: System.Runtime.InteropServices.SafeHandle.SetHandle
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IntPtr
     name: IntPtr
+    nameWithType: IntPtr
     fullName: System.IntPtr
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid
+  commentId: M:System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: false
   name: SetHandleAsInvalid()
+  nameWithType: SafeHandle.SetHandleAsInvalid()
   fullName: System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid()
   spec.csharp:
   - uid: System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid
     name: SetHandleAsInvalid
+    nameWithType: SafeHandle.SetHandleAsInvalid
     fullName: System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid
     name: SetHandleAsInvalid
+    nameWithType: SafeHandle.SetHandleAsInvalid
     fullName: System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
   isExternal: false
   name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
 - uid: System.IntPtr
+  commentId: T:System.IntPtr
   parent: System
   isExternal: false
   name: IntPtr
+  nameWithType: IntPtr
   fullName: System.IntPtr
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Runtime.InteropServices.SafeHandle.ReleaseHandle
+  commentId: M:System.Runtime.InteropServices.SafeHandle.ReleaseHandle
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: false
   name: ReleaseHandle()
+  nameWithType: SafeHandle.ReleaseHandle()
   fullName: System.Runtime.InteropServices.SafeHandle.ReleaseHandle()
   spec.csharp:
   - uid: System.Runtime.InteropServices.SafeHandle.ReleaseHandle
     name: ReleaseHandle
+    nameWithType: SafeHandle.ReleaseHandle
     fullName: System.Runtime.InteropServices.SafeHandle.ReleaseHandle
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Runtime.InteropServices.SafeHandle.ReleaseHandle
     name: ReleaseHandle
+    nameWithType: SafeHandle.ReleaseHandle
     fullName: System.Runtime.InteropServices.SafeHandle.ReleaseHandle
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Runtime.InteropServices.SafeHandle.IsInvalid
+  commentId: P:System.Runtime.InteropServices.SafeHandle.IsInvalid
   parent: System.Runtime.InteropServices.SafeHandle
   isExternal: false
   name: IsInvalid
+  nameWithType: SafeHandle.IsInvalid
   fullName: System.Runtime.InteropServices.SafeHandle.IsInvalid

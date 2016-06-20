@@ -1,5 +1,6 @@
 items:
 - uid: System.AttributeUsageAttribute
+  commentId: T:System.AttributeUsageAttribute
   id: AttributeUsageAttribute
   parent: System
   children:
@@ -7,23 +8,34 @@ items:
   - System.AttributeUsageAttribute.AllowMultiple
   - System.AttributeUsageAttribute.Inherited
   - System.AttributeUsageAttribute.ValidOn
+  langs:
+  - csharp
+  - vb
   name: AttributeUsageAttribute
+  nameWithType: AttributeUsageAttribute
   fullName: System.AttributeUsageAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/AttributeUsageAttribute.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/AttributeUsageAttribute.cs
-    startLine: 16
+      repo: https://github.com/dotnet/corefx.git
+    id: AttributeUsageAttribute
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 220
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Specifies the usage of another attribute class. This class cannot be inherited.
   syntax:
-    content: 'public sealed class AttributeUsageAttribute : Attribute'
-    content.vb: Public NotInheritable Class AttributeUsageAttribute Inherits Attribute
+    content: >-
+      [AttributeUsage(AttributeTargets.Class, Inherited = true)]
+
+      public sealed class AttributeUsageAttribute : Attribute
+    content.vb: >-
+      <AttributeUsage(AttributeTargets.Class, Inherited:=True)>
+
+      Public NotInheritable Class AttributeUsageAttribute
+          Inherits Attribute
   inheritance:
   - System.Object
   - System.Attribute
@@ -35,297 +47,445 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  attributes:
+  - type: System.AttributeUsageAttribute
+    ctor: System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
+    arguments:
+    - type: System.AttributeTargets
+      value: 4
+    namedArguments:
+    - name: Inherited
+      type: System.Boolean
+      value: true
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
+  commentId: M:System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
   id: '#ctor(System.AttributeTargets)'
   parent: System.AttributeUsageAttribute
+  langs:
+  - csharp
+  - vb
   name: AttributeUsageAttribute(AttributeTargets)
+  nameWithType: AttributeUsageAttribute.AttributeUsageAttribute(AttributeTargets)
   fullName: System.AttributeUsageAttribute.AttributeUsageAttribute(System.AttributeTargets)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AttributeUsageAttribute.cs
-    startLine: 28
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 223
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.AttributeUsageAttribute" data-throw-if-not-resolved="false"></xref> class with the specified list of <xref href="System.AttributeTargets" data-throw-if-not-resolved="false"></xref>, the <xref href="System.AttributeUsageAttribute.AllowMultiple" data-throw-if-not-resolved="false"></xref> value, and the <xref href="System.AttributeUsageAttribute.Inherited" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public AttributeUsageAttribute(AttributeTargets validOn)
     content.vb: Public Sub New(validOn As AttributeTargets)
     parameters:
     - id: validOn
       type: System.AttributeTargets
-      description: The set of values combined using a bitwise OR operation to indicate which program elements are valid.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.AttributeUsageAttribute.AllowMultiple
+  commentId: P:System.AttributeUsageAttribute.AllowMultiple
   id: AllowMultiple
   parent: System.AttributeUsageAttribute
+  langs:
+  - csharp
+  - vb
   name: AllowMultiple
+  nameWithType: AttributeUsageAttribute.AllowMultiple
   fullName: System.AttributeUsageAttribute.AllowMultiple
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AttributeUsageAttribute.cs
-    startLine: 44
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AllowMultiple
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 224
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Gets or sets a Boolean value indicating whether more than one instance of the indicated attribute can be specified for a single program element.
   syntax:
     content: public bool AllowMultiple { get; set; }
     content.vb: Public Property AllowMultiple As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if more than one instance is allowed to be specified; otherwise, false. The default is false.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.AttributeUsageAttribute.Inherited
+  commentId: P:System.AttributeUsageAttribute.Inherited
   id: Inherited
   parent: System.AttributeUsageAttribute
+  langs:
+  - csharp
+  - vb
   name: Inherited
+  nameWithType: AttributeUsageAttribute.Inherited
   fullName: System.AttributeUsageAttribute.Inherited
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AttributeUsageAttribute.cs
-    startLine: 50
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Inherited
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 225
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Gets or sets a Boolean value indicating whether the indicated attribute can be inherited by derived classes and overriding members.
   syntax:
     content: public bool Inherited { get; set; }
     content.vb: Public Property Inherited As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the attribute can be inherited by derived classes and overriding members; otherwise, false. The default is true.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.AttributeUsageAttribute.ValidOn
+  commentId: P:System.AttributeUsageAttribute.ValidOn
   id: ValidOn
   parent: System.AttributeUsageAttribute
+  langs:
+  - csharp
+  - vb
   name: ValidOn
+  nameWithType: AttributeUsageAttribute.ValidOn
   fullName: System.AttributeUsageAttribute.ValidOn
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AttributeUsageAttribute.cs
-    startLine: 39
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ValidOn
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 226
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Gets a set of values identifying which program elements that the indicated attribute can be applied to.
   syntax:
     content: public AttributeTargets ValidOn { get; }
     content.vb: Public ReadOnly Property ValidOn As AttributeTargets
     parameters: []
     return:
       type: System.AttributeTargets
-      description: One or several <xref href="System.AttributeTargets" data-throw-if-not-resolved="false"></xref> values. The default is All.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Attribute
+  commentId: T:System.Attribute
   parent: System
   isExternal: false
   name: Attribute
+  nameWithType: Attribute
   fullName: System.Attribute
 - uid: System.Attribute.Equals(System.Object)
+  commentId: M:System.Attribute.Equals(System.Object)
   parent: System.Attribute
   isExternal: false
   name: Equals(Object)
+  nameWithType: Attribute.Equals(Object)
   fullName: System.Attribute.Equals(System.Object)
   spec.csharp:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Attribute.GetHashCode
+  commentId: M:System.Attribute.GetHashCode
   parent: System.Attribute
   isExternal: false
   name: GetHashCode()
+  nameWithType: Attribute.GetHashCode()
   fullName: System.Attribute.GetHashCode()
   spec.csharp:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.AttributeTargets
+  commentId: T:System.AttributeTargets
   parent: System
   isExternal: false
   name: AttributeTargets
+  nameWithType: AttributeTargets
   fullName: System.AttributeTargets
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean

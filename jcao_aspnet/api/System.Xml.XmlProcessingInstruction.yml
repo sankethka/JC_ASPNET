@@ -1,5 +1,6 @@
 items:
 - uid: System.Xml.XmlProcessingInstruction
+  commentId: T:System.Xml.XmlProcessingInstruction
   id: XmlProcessingInstruction
   parent: System.Xml
   children:
@@ -18,6 +19,7 @@ items:
   - csharp
   - vb
   name: XmlProcessingInstruction
+  nameWithType: XmlProcessingInstruction
   fullName: System.Xml.XmlProcessingInstruction
   type: Class
   source:
@@ -25,15 +27,17 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: XmlProcessingInstruction
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 309
+    startLine: 312
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Represents a processing instruction, which XML defines to keep processor-specific information in the text of the document.
   syntax:
     content: 'public class XmlProcessingInstruction : XmlLinkedNode'
-    content.vb: Public Class XmlProcessingInstruction Inherits XmlLinkedNode
+    content.vb: >-
+      Public Class XmlProcessingInstruction
+          Inherits XmlLinkedNode
   inheritance:
   - System.Object
   - System.Xml.XmlNode
@@ -69,13 +73,21 @@ items:
   - System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)
   - System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)
   - System.Xml.XmlNode.Supports(System.String,System.String)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Xml.XmlProcessingInstruction.#ctor(System.String,System.String,System.Xml.XmlDocument)
+  commentId: M:System.Xml.XmlProcessingInstruction.#ctor(System.String,System.String,System.Xml.XmlDocument)
   id: '#ctor(System.String,System.String,System.Xml.XmlDocument)'
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: XmlProcessingInstruction(String, String, XmlDocument)
+  nameWithType: XmlProcessingInstruction.XmlProcessingInstruction(String, String, XmlDocument)
   fullName: System.Xml.XmlProcessingInstruction.XmlProcessingInstruction(System.String, System.String, System.Xml.XmlDocument)
   type: Constructor
   source:
@@ -83,32 +95,35 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 311
+    startLine: 314
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Initializes a new instance of the <xref href="System.Xml.XmlProcessingInstruction" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: protected XmlProcessingInstruction(string target, string data, XmlDocument doc)
     content.vb: Protected Sub New(target As String, data As String, doc As XmlDocument)
     parameters:
     - id: target
       type: System.String
-      description: The target of the processing instruction; see the <xref href="System.Xml.XmlProcessingInstruction.Target" data-throw-if-not-resolved="false"></xref> property.
     - id: data
       type: System.String
-      description: The content of the instruction; see the <xref href="System.Xml.XmlProcessingInstruction.Data" data-throw-if-not-resolved="false"></xref> property.
     - id: doc
       type: System.Xml.XmlDocument
-      description: The parent XML document.
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Xml.XmlProcessingInstruction.Data
+  commentId: P:System.Xml.XmlProcessingInstruction.Data
   id: Data
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: Data
+  nameWithType: XmlProcessingInstruction.Data
   fullName: System.Xml.XmlProcessingInstruction.Data
   type: Property
   source:
@@ -116,26 +131,33 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Data
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 312
+    startLine: 315
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Gets or sets the content of the processing instruction, excluding the target.
   syntax:
     content: public string Data { get; set; }
     content.vb: Public Property Data As String
     parameters: []
     return:
       type: System.String
-      description: The content of the processing instruction, excluding the target.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Xml.XmlProcessingInstruction.InnerText
+  commentId: P:System.Xml.XmlProcessingInstruction.InnerText
   id: InnerText
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: InnerText
+  nameWithType: XmlProcessingInstruction.InnerText
   fullName: System.Xml.XmlProcessingInstruction.InnerText
   type: Property
   source:
@@ -143,27 +165,36 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: InnerText
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 313
+    startLine: 316
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Gets or sets the concatenated values of the node and all its children.
   syntax:
     content: public override string InnerText { get; set; }
     content.vb: Public Overrides Property InnerText As String
     parameters: []
     return:
       type: System.String
-      description: The concatenated values of the node and all its children.
   overridden: System.Xml.XmlNode.InnerText
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Xml.XmlProcessingInstruction.LocalName
+  commentId: P:System.Xml.XmlProcessingInstruction.LocalName
   id: LocalName
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: LocalName
+  nameWithType: XmlProcessingInstruction.LocalName
   fullName: System.Xml.XmlProcessingInstruction.LocalName
   type: Property
   source:
@@ -171,27 +202,36 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: LocalName
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 314
+    startLine: 317
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Gets the local name of the node.
   syntax:
     content: public override string LocalName { get; }
     content.vb: Public Overrides ReadOnly Property LocalName As String
     parameters: []
     return:
       type: System.String
-      description: For processing instruction nodes, this property returns the target of the processing instruction.
   overridden: System.Xml.XmlNode.LocalName
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Xml.XmlProcessingInstruction.Name
+  commentId: P:System.Xml.XmlProcessingInstruction.Name
   id: Name
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: Name
+  nameWithType: XmlProcessingInstruction.Name
   fullName: System.Xml.XmlProcessingInstruction.Name
   type: Property
   source:
@@ -199,27 +239,36 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Name
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 315
+    startLine: 318
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Gets the qualified name of the node.
   syntax:
     content: public override string Name { get; }
     content.vb: Public Overrides ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-      description: For processing instruction nodes, this property returns the target of the processing instruction.
   overridden: System.Xml.XmlNode.Name
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Xml.XmlProcessingInstruction.NodeType
+  commentId: P:System.Xml.XmlProcessingInstruction.NodeType
   id: NodeType
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: NodeType
+  nameWithType: XmlProcessingInstruction.NodeType
   fullName: System.Xml.XmlProcessingInstruction.NodeType
   type: Property
   source:
@@ -227,27 +276,36 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NodeType
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 316
+    startLine: 319
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Gets the type of the current node.
   syntax:
     content: public override XmlNodeType NodeType { get; }
     content.vb: Public Overrides ReadOnly Property NodeType As XmlNodeType
     parameters: []
     return:
       type: System.Xml.XmlNodeType
-      description: For XmlProcessingInstruction nodes, this value is XmlNodeType.ProcessingInstruction.
   overridden: System.Xml.XmlNode.NodeType
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Xml.XmlProcessingInstruction.Target
+  commentId: P:System.Xml.XmlProcessingInstruction.Target
   id: Target
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: Target
+  nameWithType: XmlProcessingInstruction.Target
   fullName: System.Xml.XmlProcessingInstruction.Target
   type: Property
   source:
@@ -255,26 +313,33 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Target
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 317
+    startLine: 320
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Gets the target of the processing instruction.
   syntax:
     content: public string Target { get; }
     content.vb: Public ReadOnly Property Target As String
     parameters: []
     return:
       type: System.String
-      description: The target of the processing instruction.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Xml.XmlProcessingInstruction.Value
+  commentId: P:System.Xml.XmlProcessingInstruction.Value
   id: Value
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: Value
+  nameWithType: XmlProcessingInstruction.Value
   fullName: System.Xml.XmlProcessingInstruction.Value
   type: Property
   source:
@@ -282,30 +347,36 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Value
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 318
+    startLine: 321
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Gets or sets the value of the node.
   syntax:
     content: public override string Value { get; set; }
     content.vb: Public Overrides Property Value As String
     parameters: []
     return:
       type: System.String
-      description: The entire content of the processing instruction, excluding the target.
   overridden: System.Xml.XmlNode.Value
-  exceptions:
-  - type: System.ArgumentException
-    description: Node is read-only.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Xml.XmlProcessingInstruction.CloneNode(System.Boolean)
+  commentId: M:System.Xml.XmlProcessingInstruction.CloneNode(System.Boolean)
   id: CloneNode(System.Boolean)
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: CloneNode(Boolean)
+  nameWithType: XmlProcessingInstruction.CloneNode(Boolean)
   fullName: System.Xml.XmlProcessingInstruction.CloneNode(System.Boolean)
   type: Method
   source:
@@ -313,30 +384,36 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CloneNode
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 319
+    startLine: 322
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Creates a duplicate of this node.
   syntax:
     content: public override XmlNode CloneNode(bool deep)
     content.vb: Public Overrides Function CloneNode(deep As Boolean) As XmlNode
     parameters:
     - id: deep
       type: System.Boolean
-      description: true to recursively clone the subtree under the specified node; false to clone only the node itself.
     return:
       type: System.Xml.XmlNode
-      description: The duplicate node.
   overridden: System.Xml.XmlNode.CloneNode(System.Boolean)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Xml.XmlProcessingInstruction.WriteContentTo(System.Xml.XmlWriter)
+  commentId: M:System.Xml.XmlProcessingInstruction.WriteContentTo(System.Xml.XmlWriter)
   id: WriteContentTo(System.Xml.XmlWriter)
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: WriteContentTo(XmlWriter)
+  nameWithType: XmlProcessingInstruction.WriteContentTo(XmlWriter)
   fullName: System.Xml.XmlProcessingInstruction.WriteContentTo(System.Xml.XmlWriter)
   type: Method
   source:
@@ -344,27 +421,34 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: WriteContentTo
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 320
+    startLine: 323
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Saves all the children of the node to the specified <xref href="System.Xml.XmlWriter" data-throw-if-not-resolved="false"></xref>. Because ProcessingInstruction nodes do not have children, this method has no effect.
   syntax:
     content: public override void WriteContentTo(XmlWriter w)
     content.vb: Public Overrides Sub WriteContentTo(w As XmlWriter)
     parameters:
     - id: w
       type: System.Xml.XmlWriter
-      description: The XmlWriter to which you want to save.
   overridden: System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)
+  commentId: M:System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)
   id: WriteTo(System.Xml.XmlWriter)
   parent: System.Xml.XmlProcessingInstruction
   langs:
   - csharp
   - vb
   name: WriteTo(XmlWriter)
+  nameWithType: XmlProcessingInstruction.WriteTo(XmlWriter)
   fullName: System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)
   type: Method
   source:
@@ -372,691 +456,939 @@ items:
       path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: WriteTo
     path: src/System.Xml.XmlDocument/ref/System.Xml.XmlDocument.cs
-    startLine: 321
+    startLine: 324
   assemblies:
   - System.Xml.XmlDocument
   namespace: System.Xml
-  summary: Saves the node to the specified <xref href="System.Xml.XmlWriter" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public override void WriteTo(XmlWriter w)
     content.vb: Public Overrides Sub WriteTo(w As XmlWriter)
     parameters:
     - id: w
       type: System.Xml.XmlWriter
-      description: The XmlWriter to which you want to save.
   overridden: System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.Xml
+  commentId: N:System.Xml
   isExternal: false
   name: System.Xml
+  nameWithType: System.Xml
   fullName: System.Xml
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Xml.XmlNode
+  commentId: T:System.Xml.XmlNode
   parent: System.Xml
   isExternal: false
   name: XmlNode
+  nameWithType: XmlNode
   fullName: System.Xml.XmlNode
 - uid: System.Xml.XmlLinkedNode
+  commentId: T:System.Xml.XmlLinkedNode
   parent: System.Xml
   isExternal: false
   name: XmlLinkedNode
+  nameWithType: XmlLinkedNode
   fullName: System.Xml.XmlLinkedNode
 - uid: System.Xml.XmlLinkedNode.NextSibling
+  commentId: P:System.Xml.XmlLinkedNode.NextSibling
   parent: System.Xml.XmlLinkedNode
   isExternal: false
   name: NextSibling
+  nameWithType: XmlLinkedNode.NextSibling
   fullName: System.Xml.XmlLinkedNode.NextSibling
 - uid: System.Xml.XmlLinkedNode.PreviousSibling
+  commentId: P:System.Xml.XmlLinkedNode.PreviousSibling
   parent: System.Xml.XmlLinkedNode
   isExternal: false
   name: PreviousSibling
+  nameWithType: XmlLinkedNode.PreviousSibling
   fullName: System.Xml.XmlLinkedNode.PreviousSibling
 - uid: System.Xml.XmlNode.Attributes
+  commentId: P:System.Xml.XmlNode.Attributes
   parent: System.Xml.XmlNode
   isExternal: false
   name: Attributes
+  nameWithType: XmlNode.Attributes
   fullName: System.Xml.XmlNode.Attributes
 - uid: System.Xml.XmlNode.BaseURI
+  commentId: P:System.Xml.XmlNode.BaseURI
   parent: System.Xml.XmlNode
   isExternal: false
   name: BaseURI
+  nameWithType: XmlNode.BaseURI
   fullName: System.Xml.XmlNode.BaseURI
 - uid: System.Xml.XmlNode.ChildNodes
+  commentId: P:System.Xml.XmlNode.ChildNodes
   parent: System.Xml.XmlNode
   isExternal: false
   name: ChildNodes
+  nameWithType: XmlNode.ChildNodes
   fullName: System.Xml.XmlNode.ChildNodes
 - uid: System.Xml.XmlNode.FirstChild
+  commentId: P:System.Xml.XmlNode.FirstChild
   parent: System.Xml.XmlNode
   isExternal: false
   name: FirstChild
+  nameWithType: XmlNode.FirstChild
   fullName: System.Xml.XmlNode.FirstChild
 - uid: System.Xml.XmlNode.HasChildNodes
+  commentId: P:System.Xml.XmlNode.HasChildNodes
   parent: System.Xml.XmlNode
   isExternal: false
   name: HasChildNodes
+  nameWithType: XmlNode.HasChildNodes
   fullName: System.Xml.XmlNode.HasChildNodes
 - uid: System.Xml.XmlNode.InnerXml
+  commentId: P:System.Xml.XmlNode.InnerXml
   parent: System.Xml.XmlNode
   isExternal: false
   name: InnerXml
+  nameWithType: XmlNode.InnerXml
   fullName: System.Xml.XmlNode.InnerXml
 - uid: System.Xml.XmlNode.IsReadOnly
+  commentId: P:System.Xml.XmlNode.IsReadOnly
   parent: System.Xml.XmlNode
   isExternal: false
   name: IsReadOnly
+  nameWithType: XmlNode.IsReadOnly
   fullName: System.Xml.XmlNode.IsReadOnly
 - uid: System.Xml.XmlNode.Item(System.String)
+  commentId: P:System.Xml.XmlNode.Item(System.String)
   parent: System.Xml.XmlNode
   isExternal: true
   name: Item[String]
+  nameWithType: XmlNode.Item[String]
   fullName: System.Xml.XmlNode.Item[System.String]
+  nameWithType.vb: XmlNode.Item(String)
   fullname.vb: System.Xml.XmlNode.Item(System.String)
   name.vb: Item(String)
   spec.csharp:
   - uid: System.Xml.XmlNode.Item(System.String)
     name: Item
+    nameWithType: XmlNode.Item
     fullName: System.Xml.XmlNode.Item
   - name: '['
+    nameWithType: '['
     fullName: '['
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ']'
+    nameWithType: ']'
     fullName: ']'
   spec.vb:
   - uid: System.Xml.XmlNode.Item(System.String)
     name: Item
+    nameWithType: XmlNode.Item
     fullName: System.Xml.XmlNode.Item
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.Item(System.String,System.String)
+  commentId: P:System.Xml.XmlNode.Item(System.String,System.String)
   parent: System.Xml.XmlNode
   isExternal: true
   name: Item[String, String]
+  nameWithType: XmlNode.Item[String, String]
   fullName: System.Xml.XmlNode.Item[System.String, System.String]
+  nameWithType.vb: XmlNode.Item(String, String)
   fullname.vb: System.Xml.XmlNode.Item(System.String, System.String)
   name.vb: Item(String, String)
   spec.csharp:
   - uid: System.Xml.XmlNode.Item(System.String,System.String)
     name: Item
+    nameWithType: XmlNode.Item
     fullName: System.Xml.XmlNode.Item
   - name: '['
+    nameWithType: '['
     fullName: '['
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ']'
+    nameWithType: ']'
     fullName: ']'
   spec.vb:
   - uid: System.Xml.XmlNode.Item(System.String,System.String)
     name: Item
+    nameWithType: XmlNode.Item
     fullName: System.Xml.XmlNode.Item
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.LastChild
+  commentId: P:System.Xml.XmlNode.LastChild
   parent: System.Xml.XmlNode
   isExternal: false
   name: LastChild
+  nameWithType: XmlNode.LastChild
   fullName: System.Xml.XmlNode.LastChild
 - uid: System.Xml.XmlNode.NamespaceURI
+  commentId: P:System.Xml.XmlNode.NamespaceURI
   parent: System.Xml.XmlNode
   isExternal: false
   name: NamespaceURI
+  nameWithType: XmlNode.NamespaceURI
   fullName: System.Xml.XmlNode.NamespaceURI
 - uid: System.Xml.XmlNode.OuterXml
+  commentId: P:System.Xml.XmlNode.OuterXml
   parent: System.Xml.XmlNode
   isExternal: false
   name: OuterXml
+  nameWithType: XmlNode.OuterXml
   fullName: System.Xml.XmlNode.OuterXml
 - uid: System.Xml.XmlNode.OwnerDocument
+  commentId: P:System.Xml.XmlNode.OwnerDocument
   parent: System.Xml.XmlNode
   isExternal: false
   name: OwnerDocument
+  nameWithType: XmlNode.OwnerDocument
   fullName: System.Xml.XmlNode.OwnerDocument
 - uid: System.Xml.XmlNode.ParentNode
+  commentId: P:System.Xml.XmlNode.ParentNode
   parent: System.Xml.XmlNode
   isExternal: false
   name: ParentNode
+  nameWithType: XmlNode.ParentNode
   fullName: System.Xml.XmlNode.ParentNode
 - uid: System.Xml.XmlNode.Prefix
+  commentId: P:System.Xml.XmlNode.Prefix
   parent: System.Xml.XmlNode
   isExternal: false
   name: Prefix
+  nameWithType: XmlNode.Prefix
   fullName: System.Xml.XmlNode.Prefix
 - uid: System.Xml.XmlNode.PreviousText
+  commentId: P:System.Xml.XmlNode.PreviousText
   parent: System.Xml.XmlNode
   isExternal: false
   name: PreviousText
+  nameWithType: XmlNode.PreviousText
   fullName: System.Xml.XmlNode.PreviousText
 - uid: System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)
+  commentId: M:System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)
   parent: System.Xml.XmlNode
   isExternal: false
   name: AppendChild(XmlNode)
+  nameWithType: XmlNode.AppendChild(XmlNode)
   fullName: System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)
   spec.csharp:
   - uid: System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)
     name: AppendChild
+    nameWithType: XmlNode.AppendChild
     fullName: System.Xml.XmlNode.AppendChild
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)
     name: AppendChild
+    nameWithType: XmlNode.AppendChild
     fullName: System.Xml.XmlNode.AppendChild
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.GetEnumerator
+  commentId: M:System.Xml.XmlNode.GetEnumerator
   parent: System.Xml.XmlNode
   isExternal: false
   name: GetEnumerator()
+  nameWithType: XmlNode.GetEnumerator()
   fullName: System.Xml.XmlNode.GetEnumerator()
   spec.csharp:
   - uid: System.Xml.XmlNode.GetEnumerator
     name: GetEnumerator
+    nameWithType: XmlNode.GetEnumerator
     fullName: System.Xml.XmlNode.GetEnumerator
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.GetEnumerator
     name: GetEnumerator
+    nameWithType: XmlNode.GetEnumerator
     fullName: System.Xml.XmlNode.GetEnumerator
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)
+  commentId: M:System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)
   parent: System.Xml.XmlNode
   isExternal: true
   name: GetNamespaceOfPrefix(String)
+  nameWithType: XmlNode.GetNamespaceOfPrefix(String)
   fullName: System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)
   spec.csharp:
   - uid: System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)
     name: GetNamespaceOfPrefix
+    nameWithType: XmlNode.GetNamespaceOfPrefix
     fullName: System.Xml.XmlNode.GetNamespaceOfPrefix
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)
     name: GetNamespaceOfPrefix
+    nameWithType: XmlNode.GetNamespaceOfPrefix
     fullName: System.Xml.XmlNode.GetNamespaceOfPrefix
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.GetPrefixOfNamespace(System.String)
+  commentId: M:System.Xml.XmlNode.GetPrefixOfNamespace(System.String)
   parent: System.Xml.XmlNode
   isExternal: true
   name: GetPrefixOfNamespace(String)
+  nameWithType: XmlNode.GetPrefixOfNamespace(String)
   fullName: System.Xml.XmlNode.GetPrefixOfNamespace(System.String)
   spec.csharp:
   - uid: System.Xml.XmlNode.GetPrefixOfNamespace(System.String)
     name: GetPrefixOfNamespace
+    nameWithType: XmlNode.GetPrefixOfNamespace
     fullName: System.Xml.XmlNode.GetPrefixOfNamespace
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.GetPrefixOfNamespace(System.String)
     name: GetPrefixOfNamespace
+    nameWithType: XmlNode.GetPrefixOfNamespace
     fullName: System.Xml.XmlNode.GetPrefixOfNamespace
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)
+  commentId: M:System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)
   parent: System.Xml.XmlNode
   isExternal: false
   name: InsertAfter(XmlNode, XmlNode)
+  nameWithType: XmlNode.InsertAfter(XmlNode, XmlNode)
   fullName: System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode, System.Xml.XmlNode)
   spec.csharp:
   - uid: System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)
     name: InsertAfter
+    nameWithType: XmlNode.InsertAfter
     fullName: System.Xml.XmlNode.InsertAfter
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)
     name: InsertAfter
+    nameWithType: XmlNode.InsertAfter
     fullName: System.Xml.XmlNode.InsertAfter
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)
+  commentId: M:System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)
   parent: System.Xml.XmlNode
   isExternal: false
   name: InsertBefore(XmlNode, XmlNode)
+  nameWithType: XmlNode.InsertBefore(XmlNode, XmlNode)
   fullName: System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode, System.Xml.XmlNode)
   spec.csharp:
   - uid: System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)
     name: InsertBefore
+    nameWithType: XmlNode.InsertBefore
     fullName: System.Xml.XmlNode.InsertBefore
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)
     name: InsertBefore
+    nameWithType: XmlNode.InsertBefore
     fullName: System.Xml.XmlNode.InsertBefore
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.Normalize
+  commentId: M:System.Xml.XmlNode.Normalize
   parent: System.Xml.XmlNode
   isExternal: false
   name: Normalize()
+  nameWithType: XmlNode.Normalize()
   fullName: System.Xml.XmlNode.Normalize()
   spec.csharp:
   - uid: System.Xml.XmlNode.Normalize
     name: Normalize
+    nameWithType: XmlNode.Normalize
     fullName: System.Xml.XmlNode.Normalize
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.Normalize
     name: Normalize
+    nameWithType: XmlNode.Normalize
     fullName: System.Xml.XmlNode.Normalize
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)
+  commentId: M:System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)
   parent: System.Xml.XmlNode
   isExternal: false
   name: PrependChild(XmlNode)
+  nameWithType: XmlNode.PrependChild(XmlNode)
   fullName: System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)
   spec.csharp:
   - uid: System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)
     name: PrependChild
+    nameWithType: XmlNode.PrependChild
     fullName: System.Xml.XmlNode.PrependChild
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)
     name: PrependChild
+    nameWithType: XmlNode.PrependChild
     fullName: System.Xml.XmlNode.PrependChild
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.RemoveAll
+  commentId: M:System.Xml.XmlNode.RemoveAll
   parent: System.Xml.XmlNode
   isExternal: false
   name: RemoveAll()
+  nameWithType: XmlNode.RemoveAll()
   fullName: System.Xml.XmlNode.RemoveAll()
   spec.csharp:
   - uid: System.Xml.XmlNode.RemoveAll
     name: RemoveAll
+    nameWithType: XmlNode.RemoveAll
     fullName: System.Xml.XmlNode.RemoveAll
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.RemoveAll
     name: RemoveAll
+    nameWithType: XmlNode.RemoveAll
     fullName: System.Xml.XmlNode.RemoveAll
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)
+  commentId: M:System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)
   parent: System.Xml.XmlNode
   isExternal: false
   name: RemoveChild(XmlNode)
+  nameWithType: XmlNode.RemoveChild(XmlNode)
   fullName: System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)
   spec.csharp:
   - uid: System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)
     name: RemoveChild
+    nameWithType: XmlNode.RemoveChild
     fullName: System.Xml.XmlNode.RemoveChild
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)
     name: RemoveChild
+    nameWithType: XmlNode.RemoveChild
     fullName: System.Xml.XmlNode.RemoveChild
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)
+  commentId: M:System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)
   parent: System.Xml.XmlNode
   isExternal: false
   name: ReplaceChild(XmlNode, XmlNode)
+  nameWithType: XmlNode.ReplaceChild(XmlNode, XmlNode)
   fullName: System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode, System.Xml.XmlNode)
   spec.csharp:
   - uid: System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)
     name: ReplaceChild
+    nameWithType: XmlNode.ReplaceChild
     fullName: System.Xml.XmlNode.ReplaceChild
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)
     name: ReplaceChild
+    nameWithType: XmlNode.ReplaceChild
     fullName: System.Xml.XmlNode.ReplaceChild
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Xml.XmlNode
     name: XmlNode
+    nameWithType: XmlNode
     fullName: System.Xml.XmlNode
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlNode.Supports(System.String,System.String)
+  commentId: M:System.Xml.XmlNode.Supports(System.String,System.String)
   parent: System.Xml.XmlNode
   isExternal: true
   name: Supports(String, String)
+  nameWithType: XmlNode.Supports(String, String)
   fullName: System.Xml.XmlNode.Supports(System.String, System.String)
   spec.csharp:
   - uid: System.Xml.XmlNode.Supports(System.String,System.String)
     name: Supports
+    nameWithType: XmlNode.Supports
     fullName: System.Xml.XmlNode.Supports
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.Supports(System.String,System.String)
     name: Supports
+    nameWithType: XmlNode.Supports
     fullName: System.Xml.XmlNode.Supports
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Xml.XmlDocument
+  commentId: T:System.Xml.XmlDocument
   parent: System.Xml
   isExternal: false
   name: XmlDocument
+  nameWithType: XmlDocument
   fullName: System.Xml.XmlDocument
 - uid: System.Xml.XmlNode.InnerText
+  commentId: P:System.Xml.XmlNode.InnerText
   parent: System.Xml.XmlNode
   isExternal: false
   name: InnerText
+  nameWithType: XmlNode.InnerText
   fullName: System.Xml.XmlNode.InnerText
 - uid: System.Xml.XmlNode.LocalName
+  commentId: P:System.Xml.XmlNode.LocalName
   parent: System.Xml.XmlNode
   isExternal: false
   name: LocalName
+  nameWithType: XmlNode.LocalName
   fullName: System.Xml.XmlNode.LocalName
 - uid: System.Xml.XmlNode.Name
+  commentId: P:System.Xml.XmlNode.Name
   parent: System.Xml.XmlNode
   isExternal: false
   name: Name
+  nameWithType: XmlNode.Name
   fullName: System.Xml.XmlNode.Name
 - uid: System.Xml.XmlNode.NodeType
+  commentId: P:System.Xml.XmlNode.NodeType
   parent: System.Xml.XmlNode
   isExternal: false
   name: NodeType
+  nameWithType: XmlNode.NodeType
   fullName: System.Xml.XmlNode.NodeType
 - uid: System.Xml.XmlNodeType
+  commentId: T:System.Xml.XmlNodeType
   parent: System.Xml
   isExternal: false
   name: XmlNodeType
+  nameWithType: XmlNodeType
   fullName: System.Xml.XmlNodeType
 - uid: System.Xml.XmlNode.Value
+  commentId: P:System.Xml.XmlNode.Value
   parent: System.Xml.XmlNode
   isExternal: false
   name: Value
+  nameWithType: XmlNode.Value
   fullName: System.Xml.XmlNode.Value
 - uid: System.Xml.XmlNode.CloneNode(System.Boolean)
+  commentId: M:System.Xml.XmlNode.CloneNode(System.Boolean)
   parent: System.Xml.XmlNode
   isExternal: true
   name: CloneNode(Boolean)
+  nameWithType: XmlNode.CloneNode(Boolean)
   fullName: System.Xml.XmlNode.CloneNode(System.Boolean)
   spec.csharp:
   - uid: System.Xml.XmlNode.CloneNode(System.Boolean)
     name: CloneNode
+    nameWithType: XmlNode.CloneNode
     fullName: System.Xml.XmlNode.CloneNode
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.CloneNode(System.Boolean)
     name: CloneNode
+    nameWithType: XmlNode.CloneNode
     fullName: System.Xml.XmlNode.CloneNode
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)
+  commentId: M:System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)
   parent: System.Xml.XmlNode
   isExternal: true
   name: WriteContentTo(XmlWriter)
+  nameWithType: XmlNode.WriteContentTo(XmlWriter)
   fullName: System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)
   spec.csharp:
   - uid: System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)
     name: WriteContentTo
+    nameWithType: XmlNode.WriteContentTo
     fullName: System.Xml.XmlNode.WriteContentTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlWriter
     name: XmlWriter
+    nameWithType: XmlWriter
     fullName: System.Xml.XmlWriter
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)
     name: WriteContentTo
+    nameWithType: XmlNode.WriteContentTo
     fullName: System.Xml.XmlNode.WriteContentTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlWriter
     name: XmlWriter
+    nameWithType: XmlWriter
     fullName: System.Xml.XmlWriter
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Xml.XmlWriter
+  commentId: T:System.Xml.XmlWriter
   parent: System.Xml
   isExternal: false
   name: XmlWriter
+  nameWithType: XmlWriter
   fullName: System.Xml.XmlWriter
 - uid: System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)
+  commentId: M:System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)
   parent: System.Xml.XmlNode
   isExternal: true
   name: WriteTo(XmlWriter)
+  nameWithType: XmlNode.WriteTo(XmlWriter)
   fullName: System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)
   spec.csharp:
   - uid: System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)
     name: WriteTo
+    nameWithType: XmlNode.WriteTo
     fullName: System.Xml.XmlNode.WriteTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlWriter
     name: XmlWriter
+    nameWithType: XmlWriter
     fullName: System.Xml.XmlWriter
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)
     name: WriteTo
+    nameWithType: XmlNode.WriteTo
     fullName: System.Xml.XmlNode.WriteTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Xml.XmlWriter
     name: XmlWriter
+    nameWithType: XmlWriter
     fullName: System.Xml.XmlWriter
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

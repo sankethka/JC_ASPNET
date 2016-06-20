@@ -1,40 +1,56 @@
 items:
 - uid: System.Threading.ContextCallback
+  commentId: T:System.Threading.ContextCallback
   id: ContextCallback
   parent: System.Threading
   children: []
+  langs:
+  - csharp
+  - vb
   name: ContextCallback
+  nameWithType: ContextCallback
   fullName: System.Threading.ContextCallback
   type: Delegate
   source:
     remote:
-      path: src/mscorlib/src/System/Threading/ExecutionContext.cs
+      path: src/System.Threading/ref/System.Threading.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/ExecutionContext.cs
-    startLine: 33
+      repo: https://github.com/dotnet/corefx.git
+    id: ContextCallback
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 66
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Represents a method to be called within a new context.
   syntax:
     content: public delegate void ContextCallback(object state);
     content.vb: Public Delegate Sub ContextCallback(state As Object)
     parameters:
     - id: state
       type: System.Object
-      description: An object containing information to be used by the callback method each time it executes.
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
 references:
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System

@@ -1,5 +1,6 @@
 items:
 - uid: System.Linq.Lookup`2
+  commentId: T:System.Linq.Lookup`2
   id: Lookup`2
   parent: System.Linq
   children:
@@ -8,25 +9,30 @@ items:
   - System.Linq.Lookup`2.Count
   - System.Linq.Lookup`2.GetEnumerator
   - System.Linq.Lookup`2.Item(`0)
+  langs:
+  - csharp
+  - vb
   name: Lookup<TKey, TElement>
-  name.vb: Lookup(Of TKey, TElement)
+  nameWithType: Lookup<TKey, TElement>
   fullName: System.Linq.Lookup<TKey, TElement>
-  fullName.vb: System.Linq.Lookup(Of TKey, TElement)
   type: Class
   source:
-    remote: &o0
-      path: src/System.Linq/src/System/Linq/Enumerable.cs
+    remote:
+      path: src/System.Linq/ref/System.Linq.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Linq/src/System/Linq/Enumerable.cs
-    startLine: 3396
+    id: Lookup
+    path: src/System.Linq/ref/System.Linq.cs
+    startLine: 204
   assemblies:
   - System.Linq
   namespace: System.Linq
-  summary: Represents a collection of keys each mapped to one or more values.
   syntax:
     content: 'public class Lookup<TKey, TElement> : Collections.Generic.IEnumerable<IGrouping<TKey, TElement>>, ILookup<TKey, TElement>, Collections.Generic.IEnumerable<IGrouping<TKey, TElement>>, Collections.IEnumerable'
-    content.vb: Public Class Lookup(Of TKey, TElement) Inherits Collections.Generic.IEnumerable(Of IGrouping(Of TKey, TElement)) Implements ILookup(Of TKey, TElement), Collections.Generic.IEnumerable(Of IGrouping(Of TKey, TElement)), Collections.IEnumerable
+    content.vb: >-
+      Public Class Lookup(Of TKey, TElement)
+          Inherits Collections.Generic.IEnumerable(Of IGrouping(Of TKey, TElement))
+          Implements ILookup(Of TKey, TElement), Collections.Generic.IEnumerable(Of IGrouping(Of TKey, TElement)), Collections.IEnumerable
     typeParameters:
     - id: TKey
     - id: TElement
@@ -36,547 +42,963 @@ items:
   - System.Linq.ILookup{{TKey},{TElement}}
   - System.Collections.Generic.IEnumerable{System.Linq.IGrouping{{TKey},{TElement}}}
   - System.Collections.IEnumerable
+  nameWithType.vb: Lookup(Of TKey, TElement)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: System.Linq.Lookup(Of TKey, TElement)
+  name.vb: Lookup(Of TKey, TElement)
 - uid: System.Linq.Lookup`2.Count
+  commentId: P:System.Linq.Lookup`2.Count
   id: Count
   parent: System.Linq.Lookup`2
+  langs:
+  - csharp
+  - vb
   name: Count
+  nameWithType: Lookup<TKey, TElement>.Count
   fullName: System.Linq.Lookup<TKey, TElement>.Count
-  fullName.vb: System.Linq.Lookup(Of TKey, TElement).Count
   type: Property
   source:
-    remote: *o0
-    path: src/System.Linq/src/System/Linq/Enumerable.cs
-    startLine: 3434
+    remote:
+      path: src/System.Linq/ref/System.Linq.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Count
+    path: src/System.Linq/ref/System.Linq.cs
+    startLine: 207
   assemblies:
   - System.Linq
   namespace: System.Linq
-  summary: Gets the number of key/value collection pairs in the <xref href="System.Linq.Lookup`2" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public int Count { get; }
     content.vb: Public ReadOnly Property Count As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The number of key/value collection pairs in the <xref href="System.Linq.Lookup`2" data-throw-if-not-resolved="false"></xref>.
+  implements:
+  - System.Linq.ILookup{{TKey},{TElement}}.Count
+  nameWithType.vb: Lookup(Of TKey, TElement).Count
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Linq.Lookup(Of TKey, TElement).Count
 - uid: System.Linq.Lookup`2.Item(`0)
+  commentId: P:System.Linq.Lookup`2.Item(`0)
   id: Item(`0)
   parent: System.Linq.Lookup`2
+  langs:
+  - csharp
+  - vb
   name: Item[TKey]
-  name.vb: Item(TKey)
+  nameWithType: Lookup<TKey, TElement>.Item[TKey]
   fullName: System.Linq.Lookup<TKey, TElement>.Item[TKey]
-  fullName.vb: System.Linq.Lookup(Of TKey, TElement).Item(TKey)
   type: Property
   source:
-    remote: *o0
-    path: src/System.Linq/src/System/Linq/Enumerable.cs
-    startLine: 3439
+    remote:
+      path: src/System.Linq/ref/System.Linq.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: this[]
+    path: src/System.Linq/ref/System.Linq.cs
+    startLine: 208
   assemblies:
   - System.Linq
   namespace: System.Linq
-  summary: Gets the collection of values indexed by the specified key.
   syntax:
     content: public Collections.Generic.IEnumerable<TElement> this[TKey key] { get; }
     content.vb: Public ReadOnly Property Item(key As TKey) As Collections.Generic.IEnumerable(Of TElement)
     parameters:
     - id: key
       type: '{TKey}'
-      description: The key of the desired collection of values.
     return:
       type: System.Collections.Generic.IEnumerable{{TElement}}
-      description: The collection of values indexed by the specified key.
+  implements:
+  - System.Linq.ILookup{{TKey},{TElement}}.Item({TKey})
+  nameWithType.vb: Lookup(Of TKey, TElement).Item(TKey)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Linq.Lookup(Of TKey, TElement).Item(TKey)
+  name.vb: Item(TKey)
 - uid: System.Linq.Lookup`2.ApplyResultSelector``1(System.Func{`0,System.Collections.Generic.IEnumerable{`1},``0})
+  commentId: M:System.Linq.Lookup`2.ApplyResultSelector``1(System.Func{`0,System.Collections.Generic.IEnumerable{`1},``0})
   id: ApplyResultSelector``1(System.Func{`0,System.Collections.Generic.IEnumerable{`1},``0})
   parent: System.Linq.Lookup`2
+  langs:
+  - csharp
+  - vb
   name: ApplyResultSelector<TResult>(Func<TKey, Collections.Generic.IEnumerable<TElement>, TResult>)
-  name.vb: ApplyResultSelector(Of TResult)(Func(Of TKey, Collections.Generic.IEnumerable(Of TElement), TResult))
+  nameWithType: Lookup<TKey, TElement>.ApplyResultSelector<TResult>(Func<TKey, Collections.Generic.IEnumerable<TElement>, TResult>)
   fullName: System.Linq.Lookup<TKey, TElement>.ApplyResultSelector<TResult>(System.Func<TKey, System.Collections.Generic.IEnumerable<TElement>, TResult>)
-  fullName.vb: System.Linq.Lookup(Of TKey, TElement).ApplyResultSelector(Of TResult)(System.Func(Of TKey, System.Collections.Generic.IEnumerable(Of TElement), TResult))
   type: Method
   source:
     remote:
       path: src/System.Linq/ref/System.Linq.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ApplyResultSelector
     path: src/System.Linq/ref/System.Linq.cs
-    startLine: 204
+    startLine: 209
   assemblies:
   - System.Linq
   namespace: System.Linq
-  summary: Applies a transform function to each key and its associated values and returns the results.
   syntax:
     content: public Collections.Generic.IEnumerable<TResult> ApplyResultSelector<TResult>(Func<TKey, Collections.Generic.IEnumerable<TElement>, TResult> resultSelector)
     content.vb: Public Function ApplyResultSelector(Of TResult)(resultSelector As Func(Of TKey, Collections.Generic.IEnumerable(Of TElement), TResult)) As Collections.Generic.IEnumerable(Of TResult)
     parameters:
     - id: resultSelector
       type: System.Func{{TKey},System.Collections.Generic.IEnumerable{{TElement}},{TResult}}
-      description: A function to project a result value from each key and its associated values.
     typeParameters:
     - id: TResult
     return:
       type: System.Collections.Generic.IEnumerable{{TResult}}
-      description: A collection that contains one value for each key/value collection pair in the <xref href="System.Linq.Lookup`2" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: Lookup(Of TKey, TElement).ApplyResultSelector(Of TResult)(Func(Of TKey, Collections.Generic.IEnumerable(Of TElement), TResult))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Linq.Lookup(Of TKey, TElement).ApplyResultSelector(Of TResult)(System.Func(Of TKey, System.Collections.Generic.IEnumerable(Of TElement), TResult))
+  name.vb: ApplyResultSelector(Of TResult)(Func(Of TKey, Collections.Generic.IEnumerable(Of TElement), TResult))
 - uid: System.Linq.Lookup`2.Contains(`0)
+  commentId: M:System.Linq.Lookup`2.Contains(`0)
   id: Contains(`0)
   parent: System.Linq.Lookup`2
+  langs:
+  - csharp
+  - vb
   name: Contains(TKey)
+  nameWithType: Lookup<TKey, TElement>.Contains(TKey)
   fullName: System.Linq.Lookup<TKey, TElement>.Contains(TKey)
-  fullName.vb: System.Linq.Lookup(Of TKey, TElement).Contains(TKey)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Linq/src/System/Linq/Enumerable.cs
-    startLine: 3449
+    remote:
+      path: src/System.Linq/ref/System.Linq.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Contains
+    path: src/System.Linq/ref/System.Linq.cs
+    startLine: 210
   assemblies:
   - System.Linq
   namespace: System.Linq
-  summary: Determines whether a specified key is in the <xref href="System.Linq.Lookup`2" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public bool Contains(TKey key)
     content.vb: Public Function Contains(key As TKey) As Boolean
     parameters:
     - id: key
       type: '{TKey}'
-      description: The key to find in the <xref href="System.Linq.Lookup`2" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Boolean
-      description: true if *key* is in the <xref href="System.Linq.Lookup`2" data-throw-if-not-resolved="false"></xref>; otherwise, false.
+  implements:
+  - System.Linq.ILookup{{TKey},{TElement}}.Contains({TKey})
+  nameWithType.vb: Lookup(Of TKey, TElement).Contains(TKey)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Linq.Lookup(Of TKey, TElement).Contains(TKey)
 - uid: System.Linq.Lookup`2.GetEnumerator
+  commentId: M:System.Linq.Lookup`2.GetEnumerator
   id: GetEnumerator
   parent: System.Linq.Lookup`2
+  langs:
+  - csharp
+  - vb
   name: GetEnumerator()
+  nameWithType: Lookup<TKey, TElement>.GetEnumerator()
   fullName: System.Linq.Lookup<TKey, TElement>.GetEnumerator()
-  fullName.vb: System.Linq.Lookup(Of TKey, TElement).GetEnumerator()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Linq/src/System/Linq/Enumerable.cs
-    startLine: 3454
+    remote:
+      path: src/System.Linq/ref/System.Linq.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetEnumerator
+    path: src/System.Linq/ref/System.Linq.cs
+    startLine: 211
   assemblies:
   - System.Linq
   namespace: System.Linq
-  summary: Returns a generic enumerator that iterates through the <xref href="System.Linq.Lookup`2" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public Collections.Generic.IEnumerator<IGrouping<TKey, TElement>> GetEnumerator()
     content.vb: Public Function GetEnumerator As Collections.Generic.IEnumerator(Of IGrouping(Of TKey, TElement))
     return:
       type: System.Collections.Generic.IEnumerator{System.Linq.IGrouping{{TKey},{TElement}}}
-      description: An enumerator for the <xref href="System.Linq.Lookup`2" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: Lookup(Of TKey, TElement).GetEnumerator()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Linq.Lookup(Of TKey, TElement).GetEnumerator()
 references:
 - uid: System.Linq
+  commentId: N:System.Linq
   isExternal: false
   name: System.Linq
+  nameWithType: System.Linq
   fullName: System.Linq
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Linq.ILookup{{TKey},{TElement}}
+  commentId: '!:System.Linq.ILookup{``1,``2}'
   parent: System.Linq
   definition: System.Linq.ILookup`2
   name: ILookup<TKey, TElement>
-  name.vb: ILookup(Of TKey, TElement)
+  nameWithType: ILookup<TKey, TElement>
   fullName: System.Linq.ILookup<TKey, TElement>
-  fullName.vb: System.Linq.ILookup(Of TKey, TElement)
+  nameWithType.vb: ILookup(Of TKey, TElement)
+  fullname.vb: System.Linq.ILookup(Of TKey, TElement)
+  name.vb: ILookup(Of TKey, TElement)
   spec.csharp:
   - uid: System.Linq.ILookup`2
     name: ILookup
+    nameWithType: ILookup
     fullName: System.Linq.ILookup
   - name: <
+    nameWithType: <
     fullName: <
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Linq.ILookup`2
     name: ILookup
+    nameWithType: ILookup
     fullName: System.Linq.ILookup
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable{System.Linq.IGrouping{{TKey},{TElement}}}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Linq.IGrouping{``1,``2}}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<IGrouping<TKey, TElement>>
-  name.vb: Collections.Generic.IEnumerable(Of IGrouping(Of TKey, TElement))
+  nameWithType: Collections.Generic.IEnumerable<IGrouping<TKey, TElement>>
   fullName: System.Collections.Generic.IEnumerable<System.Linq.IGrouping<TKey, TElement>>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Linq.IGrouping(Of TKey, TElement))
+  nameWithType.vb: Collections.Generic.IEnumerable(Of IGrouping(Of TKey, TElement))
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Linq.IGrouping(Of TKey, TElement))
+  name.vb: Collections.Generic.IEnumerable(Of IGrouping(Of TKey, TElement))
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Linq.IGrouping`2
     name: IGrouping
+    nameWithType: IGrouping
     fullName: System.Linq.IGrouping
   - name: <
+    nameWithType: <
     fullName: <
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Linq.IGrouping`2
     name: IGrouping
+    nameWithType: IGrouping
     fullName: System.Linq.IGrouping
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
   parent: System.Collections
   isExternal: false
   name: Collections.IEnumerable
+  nameWithType: Collections.IEnumerable
   fullName: System.Collections.IEnumerable
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Linq.ILookup`2
-  parent: System.Linq
+  commentId: T:System.Linq.ILookup`2
   isExternal: false
-  name: ILookup<TKey, TElement>
-  name.vb: ILookup(Of TKey, TElement)
-  fullName: System.Linq.ILookup<TKey, TElement>
-  fullName.vb: System.Linq.ILookup(Of TKey, TElement)
+  name: ILookup<, >
+  nameWithType: ILookup<, >
+  fullName: System.Linq.ILookup<, >
+  nameWithType.vb: ILookup(Of , )
+  fullname.vb: System.Linq.ILookup(Of , )
+  name.vb: ILookup(Of , )
   spec.csharp:
   - uid: System.Linq.ILookup`2
     name: ILookup
+    nameWithType: ILookup
     fullName: System.Linq.ILookup
   - name: <
+    nameWithType: <
     fullName: <
-  - name: TKey
-    fullName: TKey
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: TElement
-    fullName: TElement
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Linq.ILookup`2
     name: ILookup
+    nameWithType: ILookup
     fullName: System.Linq.ILookup
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - name: TKey
-    fullName: TKey
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: TElement
-    fullName: TElement
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
+- uid: System.Linq.ILookup{{TKey},{TElement}}.Count
+  commentId: P:System.Linq.ILookup{`0,`1}.Count
+  parent: System.Linq.ILookup{{TKey},{TElement}}
+  definition: System.Linq.ILookup`2.Count
+  name: Count
+  nameWithType: ILookup<TKey, TElement>.Count
+  fullName: System.Linq.ILookup<TKey, TElement>.Count
+  nameWithType.vb: ILookup(Of TKey, TElement).Count
+  fullname.vb: System.Linq.ILookup(Of TKey, TElement).Count
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
-- uid: '{TKey}'
+- uid: System.Linq.ILookup`2.Count
+  commentId: P:System.Linq.ILookup`2.Count
   isExternal: false
+  name: Count
+  nameWithType: ILookup<TKey, TElement>.Count
+  fullName: System.Linq.ILookup<TKey, TElement>.Count
+  nameWithType.vb: ILookup(Of TKey, TElement).Count
+  fullname.vb: System.Linq.ILookup(Of TKey, TElement).Count
+- uid: System.Linq.ILookup{{TKey},{TElement}}.Item({TKey})
+  commentId: P:System.Linq.ILookup{`0,`1}.Item(`0)
+  parent: System.Linq.ILookup{{TKey},{TElement}}
+  definition: System.Linq.ILookup`2.Item(`0)
+  name: Item[TKey]
+  nameWithType: ILookup<TKey, TElement>.Item[TKey]
+  fullName: System.Linq.ILookup<TKey, TElement>.Item[TKey]
+  nameWithType.vb: ILookup(Of TKey, TElement).Item(TKey)
+  fullname.vb: System.Linq.ILookup(Of TKey, TElement).Item(TKey)
+  name.vb: Item(TKey)
+  spec.csharp:
+  - uid: System.Linq.ILookup`2.Item(`0)
+    name: Item
+    nameWithType: ILookup<TKey, TElement>.Item
+    fullName: System.Linq.ILookup<TKey, TElement>.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Linq.ILookup`2.Item(`0)
+    name: Item
+    nameWithType: ILookup(Of TKey, TElement).Item
+    fullName: System.Linq.ILookup(Of TKey, TElement).Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TKey}'
+  commentId: '!:TKey'
+  definition: TKey
   name: TKey
+  nameWithType: TKey
   fullName: TKey
 - uid: System.Collections.Generic.IEnumerable{{TElement}}
+  commentId: '!:System.Collections.Generic.IEnumerable{``0}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<TElement>
-  name.vb: Collections.Generic.IEnumerable(Of TElement)
+  nameWithType: Collections.Generic.IEnumerable<TElement>
   fullName: System.Collections.Generic.IEnumerable<TElement>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of TElement)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of TElement)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of TElement)
+  name.vb: Collections.Generic.IEnumerable(Of TElement)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: )
+    nameWithType: )
     fullName: )
+- uid: System.Linq.ILookup`2.Item(`0)
+  commentId: P:System.Linq.ILookup`2.Item(`0)
+  isExternal: false
+  name: Item[TKey]
+  nameWithType: ILookup<TKey, TElement>.Item[TKey]
+  fullName: System.Linq.ILookup<TKey, TElement>.Item[TKey]
+  nameWithType.vb: ILookup(Of TKey, TElement).Item(TKey)
+  fullname.vb: System.Linq.ILookup(Of TKey, TElement).Item(TKey)
+  name.vb: Item(TKey)
+  spec.csharp:
+  - uid: System.Linq.ILookup`2.Item(`0)
+    name: Item
+    nameWithType: ILookup<TKey, TElement>.Item
+    fullName: System.Linq.ILookup<TKey, TElement>.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Linq.ILookup`2.Item(`0)
+    name: Item
+    nameWithType: ILookup(Of TKey, TElement).Item
+    fullName: System.Linq.ILookup(Of TKey, TElement).Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TKey
+  isExternal: false
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
 - uid: System.Func{{TKey},System.Collections.Generic.IEnumerable{{TElement}},{TResult}}
+  commentId: '!:System.Func{``1,System.Collections.Generic.IEnumerable{``2},``3}'
   definition: System.Func`3
   name: Func<TKey, Collections.Generic.IEnumerable<TElement>, TResult>
-  name.vb: Func(Of TKey, Collections.Generic.IEnumerable(Of TElement), TResult)
+  nameWithType: Func<TKey, Collections.Generic.IEnumerable<TElement>, TResult>
   fullName: System.Func<TKey, System.Collections.Generic.IEnumerable<TElement>, TResult>
-  fullName.vb: System.Func(Of TKey, System.Collections.Generic.IEnumerable(Of TElement), TResult)
+  nameWithType.vb: Func(Of TKey, Collections.Generic.IEnumerable(Of TElement), TResult)
+  fullname.vb: System.Func(Of TKey, System.Collections.Generic.IEnumerable(Of TElement), TResult)
+  name.vb: Func(Of TKey, Collections.Generic.IEnumerable(Of TElement), TResult)
   spec.csharp:
   - uid: System.Func`3
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TResult
+    nameWithType: TResult
     fullName: TResult
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`3
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: )
+    nameWithType: )
     fullName: )
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TResult
+    nameWithType: TResult
     fullName: TResult
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable{{TResult}}
+  commentId: '!:System.Collections.Generic.IEnumerable{``0}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<TResult>
-  name.vb: Collections.Generic.IEnumerable(Of TResult)
+  nameWithType: Collections.Generic.IEnumerable<TResult>
   fullName: System.Collections.Generic.IEnumerable<TResult>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of TResult)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of TResult)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of TResult)
+  name.vb: Collections.Generic.IEnumerable(Of TResult)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TResult
+    nameWithType: TResult
     fullName: TResult
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TResult
+    nameWithType: TResult
     fullName: TResult
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func`3
+  commentId: T:System.Func`3
   isExternal: false
-  name: Func<T1, T2, TResult>
-  name.vb: Func(Of T1, T2, TResult)
-  fullName: System.Func<T1, T2, TResult>
-  fullName.vb: System.Func(Of T1, T2, TResult)
+  name: Func<, , >
+  nameWithType: Func<, , >
+  fullName: System.Func<, , >
+  nameWithType.vb: Func(Of , , )
+  fullname.vb: System.Func(Of , , )
+  name.vb: Func(Of , , )
   spec.csharp:
   - uid: System.Func`3
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - name: T1
-    fullName: T1
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T2
-    fullName: T2
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: TResult
-    fullName: TResult
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`3
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - name: T1
-    fullName: T1
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T2
-    fullName: T2
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: TResult
-    fullName: TResult
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.ILookup{{TKey},{TElement}}.Contains({TKey})
+  commentId: M:System.Linq.ILookup{`0,`1}.Contains(`0)
+  parent: System.Linq.ILookup{{TKey},{TElement}}
+  definition: System.Linq.ILookup`2.Contains(`0)
+  name: Contains(TKey)
+  nameWithType: ILookup<TKey, TElement>.Contains(TKey)
+  fullName: System.Linq.ILookup<TKey, TElement>.Contains(TKey)
+  nameWithType.vb: ILookup(Of TKey, TElement).Contains(TKey)
+  fullname.vb: System.Linq.ILookup(Of TKey, TElement).Contains(TKey)
+  spec.csharp:
+  - uid: System.Linq.ILookup`2.Contains(`0)
+    name: Contains
+    nameWithType: ILookup<TKey, TElement>.Contains
+    fullName: System.Linq.ILookup<TKey, TElement>.Contains
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Linq.ILookup`2.Contains(`0)
+    name: Contains
+    nameWithType: ILookup(Of TKey, TElement).Contains
+    fullName: System.Linq.ILookup(Of TKey, TElement).Contains
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
+- uid: System.Linq.ILookup`2.Contains(`0)
+  commentId: M:System.Linq.ILookup`2.Contains(`0)
+  isExternal: false
+  name: Contains(TKey)
+  nameWithType: ILookup<TKey, TElement>.Contains(TKey)
+  fullName: System.Linq.ILookup<TKey, TElement>.Contains(TKey)
+  nameWithType.vb: ILookup(Of TKey, TElement).Contains(TKey)
+  fullname.vb: System.Linq.ILookup(Of TKey, TElement).Contains(TKey)
+  spec.csharp:
+  - uid: System.Linq.ILookup`2.Contains(`0)
+    name: Contains
+    nameWithType: ILookup<TKey, TElement>.Contains
+    fullName: System.Linq.ILookup<TKey, TElement>.Contains
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Linq.ILookup`2.Contains(`0)
+    name: Contains
+    nameWithType: ILookup(Of TKey, TElement).Contains
+    fullName: System.Linq.ILookup(Of TKey, TElement).Contains
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.Generic.IEnumerator{System.Linq.IGrouping{{TKey},{TElement}}}
+  commentId: '!:System.Collections.Generic.IEnumerator{System.Linq.IGrouping{`0,`1}}'
   definition: System.Collections.Generic.IEnumerator`1
   name: Collections.Generic.IEnumerator<IGrouping<TKey, TElement>>
-  name.vb: Collections.Generic.IEnumerator(Of IGrouping(Of TKey, TElement))
+  nameWithType: Collections.Generic.IEnumerator<IGrouping<TKey, TElement>>
   fullName: System.Collections.Generic.IEnumerator<System.Linq.IGrouping<TKey, TElement>>
-  fullName.vb: System.Collections.Generic.IEnumerator(Of System.Linq.IGrouping(Of TKey, TElement))
+  nameWithType.vb: Collections.Generic.IEnumerator(Of IGrouping(Of TKey, TElement))
+  fullname.vb: System.Collections.Generic.IEnumerator(Of System.Linq.IGrouping(Of TKey, TElement))
+  name.vb: Collections.Generic.IEnumerator(Of IGrouping(Of TKey, TElement))
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerator`1
     name: Collections.Generic.IEnumerator
+    nameWithType: Collections.Generic.IEnumerator
     fullName: System.Collections.Generic.IEnumerator
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Linq.IGrouping`2
     name: IGrouping
+    nameWithType: IGrouping
     fullName: System.Linq.IGrouping
   - name: <
+    nameWithType: <
     fullName: <
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerator`1
     name: Collections.Generic.IEnumerator
+    nameWithType: Collections.Generic.IEnumerator
     fullName: System.Collections.Generic.IEnumerator
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Linq.IGrouping`2
     name: IGrouping
+    nameWithType: IGrouping
     fullName: System.Linq.IGrouping
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerator`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerator`1
   isExternal: false
-  name: Collections.Generic.IEnumerator<>
-  name.vb: Collections.Generic.IEnumerator(Of )
+  name: Generic.IEnumerator<>
+  nameWithType: Generic.IEnumerator<>
   fullName: System.Collections.Generic.IEnumerator<>
-  fullName.vb: System.Collections.Generic.IEnumerator(Of )
+  nameWithType.vb: Generic.IEnumerator(Of )
+  fullname.vb: System.Collections.Generic.IEnumerator(Of )
+  name.vb: Generic.IEnumerator(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerator`1
-    name: Collections.Generic.IEnumerator
+    name: Generic.IEnumerator
+    nameWithType: Generic.IEnumerator
     fullName: System.Collections.Generic.IEnumerator
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerator`1
-    name: Collections.Generic.IEnumerator
+    name: Generic.IEnumerator
+    nameWithType: Generic.IEnumerator
     fullName: System.Collections.Generic.IEnumerator
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )

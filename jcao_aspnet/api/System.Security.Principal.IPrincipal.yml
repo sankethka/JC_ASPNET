@@ -1,93 +1,131 @@
 items:
 - uid: System.Security.Principal.IPrincipal
+  commentId: T:System.Security.Principal.IPrincipal
   id: IPrincipal
   parent: System.Security.Principal
   children:
   - System.Security.Principal.IPrincipal.Identity
   - System.Security.Principal.IPrincipal.IsInRole(System.String)
+  langs:
+  - csharp
+  - vb
   name: IPrincipal
+  nameWithType: IPrincipal
   fullName: System.Security.Principal.IPrincipal
   type: Interface
   source:
-    remote: &o0
-      path: src/System.Security.Principal/src/System/Security/Principal/IPrincipal.cs
+    remote:
+      path: src/System.Security.Principal/ref/System.Security.Principal.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.Principal/src/System/Security/Principal/IPrincipal.cs
-    startLine: 12
+    id: IPrincipal
+    path: src/System.Security.Principal/ref/System.Security.Principal.cs
+    startLine: 16
   assemblies:
   - System.Security.Principal
   namespace: System.Security.Principal
-  summary: Defines the basic functionality of a principal object.
   syntax:
     content: public interface IPrincipal
     content.vb: Public Interface IPrincipal
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: System.Security.Principal.IPrincipal.Identity
+  commentId: P:System.Security.Principal.IPrincipal.Identity
   id: Identity
   parent: System.Security.Principal.IPrincipal
+  langs:
+  - csharp
+  - vb
   name: Identity
+  nameWithType: IPrincipal.Identity
   fullName: System.Security.Principal.IPrincipal.Identity
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Principal/src/System/Security/Principal/IPrincipal.cs
-    startLine: 15
+    remote:
+      path: src/System.Security.Principal/ref/System.Security.Principal.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Identity
+    path: src/System.Security.Principal/ref/System.Security.Principal.cs
+    startLine: 18
   assemblies:
   - System.Security.Principal
   namespace: System.Security.Principal
-  summary: Gets the identity of the current principal.
   syntax:
     content: IIdentity Identity { get; }
     content.vb: ReadOnly Property Identity As IIdentity
     parameters: []
     return:
       type: System.Security.Principal.IIdentity
-      description: The <xref href="System.Security.Principal.IIdentity" data-throw-if-not-resolved="false"></xref> object associated with the current principal.
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: System.Security.Principal.IPrincipal.IsInRole(System.String)
+  commentId: M:System.Security.Principal.IPrincipal.IsInRole(System.String)
   id: IsInRole(System.String)
   parent: System.Security.Principal.IPrincipal
+  langs:
+  - csharp
+  - vb
   name: IsInRole(String)
+  nameWithType: IPrincipal.IsInRole(String)
   fullName: System.Security.Principal.IPrincipal.IsInRole(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Principal/src/System/Security/Principal/IPrincipal.cs
-    startLine: 18
+    remote:
+      path: src/System.Security.Principal/ref/System.Security.Principal.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsInRole
+    path: src/System.Security.Principal/ref/System.Security.Principal.cs
+    startLine: 19
   assemblies:
   - System.Security.Principal
   namespace: System.Security.Principal
-  summary: Determines whether the current principal belongs to the specified role.
   syntax:
     content: bool IsInRole(string role)
     content.vb: Function IsInRole(role As String) As Boolean
     parameters:
     - id: role
       type: System.String
-      description: The name of the role for which to check membership.
     return:
       type: System.Boolean
-      description: true if the current principal is a member of the specified role; otherwise, false.
 references:
 - uid: System.Security.Principal
+  commentId: N:System.Security.Principal
   isExternal: false
   name: System.Security.Principal
+  nameWithType: System.Security.Principal
   fullName: System.Security.Principal
 - uid: System.Security.Principal.IIdentity
+  commentId: T:System.Security.Principal.IIdentity
   parent: System.Security.Principal
   isExternal: false
-  name: Principal.IIdentity
+  name: IIdentity
+  nameWithType: IIdentity
   fullName: System.Security.Principal.IIdentity
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System

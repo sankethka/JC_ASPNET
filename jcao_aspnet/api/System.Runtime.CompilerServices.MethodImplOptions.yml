@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.CompilerServices.MethodImplOptions
+  commentId: T:System.Runtime.CompilerServices.MethodImplOptions
   id: MethodImplOptions
   parent: System.Runtime.CompilerServices
   children:
@@ -7,89 +8,182 @@ items:
   - System.Runtime.CompilerServices.MethodImplOptions.NoInlining
   - System.Runtime.CompilerServices.MethodImplOptions.NoOptimization
   - System.Runtime.CompilerServices.MethodImplOptions.PreserveSig
+  langs:
+  - csharp
+  - vb
   name: MethodImplOptions
+  nameWithType: MethodImplOptions
   fullName: System.Runtime.CompilerServices.MethodImplOptions
   type: Enum
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/CompilerServices/MethodImplAttribute.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/CompilerServices/MethodImplAttribute.cs
-    startLine: 12
+      repo: https://github.com/dotnet/corefx.git
+    id: MethodImplOptions
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2945
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Defines the details of how a method is implemented.
   syntax:
-    content: public enum MethodImplOptions
-    content.vb: Public Enum MethodImplOptions
+    content: >-
+      [Flags]
+
+      public enum MethodImplOptions
+    content.vb: >-
+      <Flags>
+
+      Public Enum MethodImplOptions
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
 - uid: System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining
+  commentId: F:System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining
   id: AggressiveInlining
   parent: System.Runtime.CompilerServices.MethodImplOptions
+  langs:
+  - csharp
+  - vb
   name: AggressiveInlining
+  nameWithType: MethodImplOptions.AggressiveInlining
   fullName: System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/MethodImplAttribute.cs
-    startLine: 23
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AggressiveInlining
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2948
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: The method should be inlined if possible.
   syntax:
     content: AggressiveInlining = 256
+    return:
+      type: System.Runtime.CompilerServices.MethodImplOptions
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Runtime.CompilerServices.MethodImplOptions.NoInlining
+  commentId: F:System.Runtime.CompilerServices.MethodImplOptions.NoInlining
   id: NoInlining
   parent: System.Runtime.CompilerServices.MethodImplOptions
+  langs:
+  - csharp
+  - vb
   name: NoInlining
+  nameWithType: MethodImplOptions.NoInlining
   fullName: System.Runtime.CompilerServices.MethodImplOptions.NoInlining
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/MethodImplAttribute.cs
-    startLine: 22
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NoInlining
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2949
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: The method cannot be inlined. Inlining is an optimization by which a method call is replaced with the method body.
   syntax:
     content: NoInlining = 8
+    return:
+      type: System.Runtime.CompilerServices.MethodImplOptions
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Runtime.CompilerServices.MethodImplOptions.NoOptimization
+  commentId: F:System.Runtime.CompilerServices.MethodImplOptions.NoOptimization
   id: NoOptimization
   parent: System.Runtime.CompilerServices.MethodImplOptions
+  langs:
+  - csharp
+  - vb
   name: NoOptimization
+  nameWithType: MethodImplOptions.NoOptimization
   fullName: System.Runtime.CompilerServices.MethodImplOptions.NoOptimization
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/MethodImplAttribute.cs
-    startLine: 25
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NoOptimization
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2950
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: The method is not optimized by the just-in-time (JIT) compiler or by native code generation (see Ngen.exe) when debugging possible code generation problems.
   syntax:
     content: NoOptimization = 64
+    return:
+      type: System.Runtime.CompilerServices.MethodImplOptions
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Runtime.CompilerServices.MethodImplOptions.PreserveSig
+  commentId: F:System.Runtime.CompilerServices.MethodImplOptions.PreserveSig
   id: PreserveSig
   parent: System.Runtime.CompilerServices.MethodImplOptions
+  langs:
+  - csharp
+  - vb
   name: PreserveSig
+  nameWithType: MethodImplOptions.PreserveSig
   fullName: System.Runtime.CompilerServices.MethodImplOptions.PreserveSig
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/CompilerServices/MethodImplAttribute.cs
-    startLine: 19
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PreserveSig
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2951
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: The method signature is exported exactly as declared.
   syntax:
     content: PreserveSig = 128
+    return:
+      type: System.Runtime.CompilerServices.MethodImplOptions
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
   isExternal: false
   name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
   fullName: System.Runtime.CompilerServices
+- uid: System.Runtime.CompilerServices.MethodImplOptions
+  commentId: T:System.Runtime.CompilerServices.MethodImplOptions
+  parent: System.Runtime.CompilerServices
+  isExternal: false
+  name: MethodImplOptions
+  nameWithType: MethodImplOptions
+  fullName: System.Runtime.CompilerServices.MethodImplOptions

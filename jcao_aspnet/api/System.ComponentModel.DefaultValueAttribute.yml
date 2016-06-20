@@ -1,5 +1,6 @@
 items:
 - uid: System.ComponentModel.DefaultValueAttribute
+  commentId: T:System.ComponentModel.DefaultValueAttribute
   id: DefaultValueAttribute
   parent: System.ComponentModel
   children:
@@ -17,23 +18,34 @@ items:
   - System.ComponentModel.DefaultValueAttribute.Equals(System.Object)
   - System.ComponentModel.DefaultValueAttribute.GetHashCode
   - System.ComponentModel.DefaultValueAttribute.Value
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute
+  nameWithType: DefaultValueAttribute
   fullName: System.ComponentModel.DefaultValueAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 15
+    id: DefaultValueAttribute
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2522
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Specifies the default value for a property.
   syntax:
-    content: 'public class DefaultValueAttribute : Attribute'
-    content.vb: Public Class DefaultValueAttribute Inherits Attribute
+    content: >-
+      [AttributeUsage(AttributeTargets.All | AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Constructor | AttributeTargets.Delegate | AttributeTargets.Enum | AttributeTargets.Event | AttributeTargets.Field | AttributeTargets.GenericParameter | AttributeTargets.Interface | AttributeTargets.Method | AttributeTargets.Module | AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.ReturnValue | AttributeTargets.Struct)]
+
+      public class DefaultValueAttribute : Attribute
+    content.vb: >-
+      <AttributeUsage(AttributeTargets.All Or AttributeTargets.Assembly Or AttributeTargets.Class Or AttributeTargets.Constructor Or AttributeTargets.Delegate Or AttributeTargets.Enum Or AttributeTargets.Event Or AttributeTargets.Field Or AttributeTargets.GenericParameter Or AttributeTargets.Interface Or AttributeTargets.Method Or AttributeTargets.Module Or AttributeTargets.Parameter Or AttributeTargets.Property Or AttributeTargets.ReturnValue Or AttributeTargets.Struct)>
+
+      Public Class DefaultValueAttribute
+          Inherits Attribute
   inheritance:
   - System.Object
   - System.Attribute
@@ -43,220 +55,347 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  attributes:
+  - type: System.AttributeUsageAttribute
+    ctor: System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
+    arguments:
+    - type: System.AttributeTargets
+      value: 32767
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.Boolean)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.Boolean)
   id: '#ctor(System.Boolean)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(Boolean)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(Boolean)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 119
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2525
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class using a <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref> value.
   syntax:
     content: public DefaultValueAttribute(bool value)
     content.vb: Public Sub New(value As Boolean)
     parameters:
     - id: value
       type: System.Boolean
-      description: A <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref> that is the default value.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.Byte)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.Byte)
   id: '#ctor(System.Byte)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(Byte)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(Byte)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.Byte)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 69
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2526
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class using an 8-bit unsigned integer.
   syntax:
     content: public DefaultValueAttribute(byte value)
     content.vb: Public Sub New(value As Byte)
     parameters:
     - id: value
       type: System.Byte
-      description: An 8-bit unsigned integer that is the default value.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.Char)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.Char)
   id: '#ctor(System.Char)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(Char)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(Char)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.Char)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 61
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2527
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class using a Unicode character.
   syntax:
     content: public DefaultValueAttribute(char value)
     content.vb: Public Sub New(value As Char)
     parameters:
     - id: value
       type: System.Char
-      description: A Unicode character that is the default value.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.Double)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.Double)
   id: '#ctor(System.Double)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(Double)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(Double)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.Double)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 111
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2528
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class using a double-precision floating point number.
   syntax:
     content: public DefaultValueAttribute(double value)
     content.vb: Public Sub New(value As Double)
     parameters:
     - id: value
       type: System.Double
-      description: A double-precision floating point number that is the default value.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.Int16)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.Int16)
   id: '#ctor(System.Int16)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(Int16)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(Int16)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.Int16)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 77
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2529
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class using a 16-bit signed integer.
   syntax:
     content: public DefaultValueAttribute(short value)
     content.vb: Public Sub New(value As Short)
     parameters:
     - id: value
       type: System.Int16
-      description: A 16-bit signed integer that is the default value.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.Int32)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.Int32)
   id: '#ctor(System.Int32)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(Int32)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(Int32)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.Int32)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 85
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2530
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class using a 32-bit signed integer.
   syntax:
     content: public DefaultValueAttribute(int value)
     content.vb: Public Sub New(value As Integer)
     parameters:
     - id: value
       type: System.Int32
-      description: A 32-bit signed integer that is the default value.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.Int64)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.Int64)
   id: '#ctor(System.Int64)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(Int64)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(Int64)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.Int64)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 93
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2531
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class using a 64-bit signed integer.
   syntax:
     content: public DefaultValueAttribute(long value)
     content.vb: Public Sub New(value As Long)
     parameters:
     - id: value
       type: System.Int64
-      description: A 64-bit signed integer that is the default value.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.Object)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.Object)
   id: '#ctor(System.Object)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(Object)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(Object)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.Object)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 135
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2532
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public DefaultValueAttribute(object value)
     content.vb: Public Sub New(value As Object)
     parameters:
     - id: value
       type: System.Object
-      description: An <xref href="System.Object" data-throw-if-not-resolved="false"></xref> that represents the default value.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.Single)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.Single)
   id: '#ctor(System.Single)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(Single)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(Single)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.Single)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 102
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2533
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class using a single-precision floating point number.
   syntax:
     content: public DefaultValueAttribute(float value)
     content.vb: Public Sub New(value As Single)
     parameters:
     - id: value
       type: System.Single
-      description: A single-precision floating point number that is the default value.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.String)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(String)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(String)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 126
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2534
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class using a <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public DefaultValueAttribute(string value)
     content.vb: Public Sub New(value As String)
     parameters:
     - id: value
       type: System.String
-      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> that is the default value.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.#ctor(System.Type,System.String)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.#ctor(System.Type,System.String)
   id: '#ctor(System.Type,System.String)'
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: DefaultValueAttribute(Type, String)
+  nameWithType: DefaultValueAttribute.DefaultValueAttribute(Type, String)
   fullName: System.ComponentModel.DefaultValueAttribute.DefaultValueAttribute(System.Type, System.String)
   type: Constructor
   source:
@@ -264,78 +403,116 @@ items:
       path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Runtime/ref/System.Runtime.cs
-    startLine: 2529
+    startLine: 2535
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref> class, converting the specified value to the specified type, and using an invariant culture as the translation context.
   syntax:
     content: public DefaultValueAttribute(Type type, string value)
     content.vb: Public Sub New(type As Type, value As String)
     parameters:
     - id: type
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that represents the type to convert the value to.
     - id: value
       type: System.String
-      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> that can be converted to the type using the <xref href="System.ComponentModel.TypeConverter" data-throw-if-not-resolved="false"></xref> for the type and the U.S. English culture.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DefaultValueAttribute.Value
+  commentId: P:System.ComponentModel.DefaultValueAttribute.Value
   id: Value
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: Value
+  nameWithType: DefaultValueAttribute.Value
   fullName: System.ComponentModel.DefaultValueAttribute.Value
   type: Property
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 147
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Value
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2536
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Gets the default value of the property this attribute is bound to.
   syntax:
     content: public virtual object Value { get; }
     content.vb: Public Overridable ReadOnly Property Value As Object
     parameters: []
     return:
       type: System.Object
-      description: An <xref href="System.Object" data-throw-if-not-resolved="false"></xref> that represents the default value of the property this attribute is bound to.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.ComponentModel.DefaultValueAttribute.Equals(System.Object)
+  commentId: M:System.ComponentModel.DefaultValueAttribute.Equals(System.Object)
   id: Equals(System.Object)
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: Equals(Object)
+  nameWithType: DefaultValueAttribute.Equals(Object)
   fullName: System.ComponentModel.DefaultValueAttribute.Equals(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 155
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2537
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
-  summary: Returns whether the value of the given object is equal to the current <xref href="System.ComponentModel.DefaultValueAttribute" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public override bool Equals(object obj)
     content.vb: Public Overrides Function Equals(obj As Object) As Boolean
     parameters:
     - id: obj
       type: System.Object
-      description: The object to test the value equality of.
     return:
       type: System.Boolean
-      description: true if the value of the given object is equal to that of the current; otherwise, false.
   overridden: System.Attribute.Equals(System.Object)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.ComponentModel.DefaultValueAttribute.GetHashCode
+  commentId: M:System.ComponentModel.DefaultValueAttribute.GetHashCode
   id: GetHashCode
   parent: System.ComponentModel.DefaultValueAttribute
+  langs:
+  - csharp
+  - vb
   name: GetHashCode()
+  nameWithType: DefaultValueAttribute.GetHashCode()
   fullName: System.ComponentModel.DefaultValueAttribute.GetHashCode()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/ComponentModel/DefaultValueAttribute.cs
-    startLine: 178
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2538
   assemblies:
   - System.Runtime
   namespace: System.ComponentModel
@@ -345,257 +522,361 @@ items:
     return:
       type: System.Int32
   overridden: System.Attribute.GetHashCode
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.ComponentModel
+  commentId: N:System.ComponentModel
   isExternal: false
   name: System.ComponentModel
+  nameWithType: System.ComponentModel
   fullName: System.ComponentModel
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Attribute
+  commentId: T:System.Attribute
   parent: System
   isExternal: false
   name: Attribute
+  nameWithType: Attribute
   fullName: System.Attribute
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Byte
+  commentId: T:System.Byte
   parent: System
   isExternal: false
   name: Byte
+  nameWithType: Byte
   fullName: System.Byte
 - uid: System.Char
+  commentId: T:System.Char
   parent: System
   isExternal: false
   name: Char
+  nameWithType: Char
   fullName: System.Char
 - uid: System.Double
+  commentId: T:System.Double
   parent: System
   isExternal: false
   name: Double
+  nameWithType: Double
   fullName: System.Double
 - uid: System.Int16
+  commentId: T:System.Int16
   parent: System
   isExternal: false
   name: Int16
+  nameWithType: Int16
   fullName: System.Int16
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Int64
+  commentId: T:System.Int64
   parent: System
   isExternal: false
   name: Int64
+  nameWithType: Int64
   fullName: System.Int64
 - uid: System.Single
+  commentId: T:System.Single
   parent: System
   isExternal: false
   name: Single
+  nameWithType: Single
   fullName: System.Single
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type
 - uid: System.Attribute.Equals(System.Object)
+  commentId: M:System.Attribute.Equals(System.Object)
   parent: System.Attribute
   isExternal: false
   name: Equals(Object)
+  nameWithType: Attribute.Equals(Object)
   fullName: System.Attribute.Equals(System.Object)
   spec.csharp:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Attribute.GetHashCode
+  commentId: M:System.Attribute.GetHashCode
   parent: System.Attribute
   isExternal: false
   name: GetHashCode()
+  nameWithType: Attribute.GetHashCode()
   fullName: System.Attribute.GetHashCode()
   spec.csharp:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )

@@ -1,62 +1,85 @@
 items:
 - uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
   id: IFormatProvider
   parent: System
   children:
   - System.IFormatProvider.GetFormat(System.Type)
+  langs:
+  - csharp
+  - vb
   name: IFormatProvider
+  nameWithType: IFormatProvider
   fullName: System.IFormatProvider
   type: Interface
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/IFormatProvider.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/IFormatProvider.cs
-    startLine: 16
+      repo: https://github.com/dotnet/corefx.git
+    id: IFormatProvider
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 997
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Provides a mechanism for retrieving an object to control formatting.
   syntax:
     content: public interface IFormatProvider
     content.vb: Public Interface IFormatProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: System.IFormatProvider.GetFormat(System.Type)
+  commentId: M:System.IFormatProvider.GetFormat(System.Type)
   id: GetFormat(System.Type)
   parent: System.IFormatProvider
+  langs:
+  - csharp
+  - vb
   name: GetFormat(Type)
+  nameWithType: IFormatProvider.GetFormat(Type)
   fullName: System.IFormatProvider.GetFormat(System.Type)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IFormatProvider.cs
-    startLine: 20
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetFormat
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 999
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Returns an object that provides formatting services for the specified type.
   syntax:
     content: object GetFormat(Type formatType)
     content.vb: Function GetFormat(formatType As Type) As Object
     parameters:
     - id: formatType
       type: System.Type
-      description: An object that specifies the type of format object to return.
     return:
       type: System.Object
-      description: An instance of the object specified by *formatType*, if the <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> implementation can supply that type of object; otherwise, null.
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object

@@ -1,5 +1,6 @@
 items:
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  commentId: T:System.Collections.ObjectModel.ReadOnlyDictionary`2
   id: ReadOnlyDictionary`2
   parent: System.Collections.ObjectModel
   children:
@@ -12,25 +13,30 @@ items:
   - System.Collections.ObjectModel.ReadOnlyDictionary`2.Keys
   - System.Collections.ObjectModel.ReadOnlyDictionary`2.TryGetValue(`0,`1@)
   - System.Collections.ObjectModel.ReadOnlyDictionary`2.Values
+  langs:
+  - csharp
+  - vb
   name: ReadOnlyDictionary<TKey, TValue>
-  name.vb: ReadOnlyDictionary(Of TKey, TValue)
+  nameWithType: ReadOnlyDictionary<TKey, TValue>
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue)
   type: Class
   source:
-    remote: &o0
-      path: src/System.ObjectModel/src/System/Collections/ObjectModel/ReadOnlyDictionary.cs
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.ObjectModel/src/System/Collections/ObjectModel/ReadOnlyDictionary.cs
-    startLine: 12
+    id: ReadOnlyDictionary
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 45
   assemblies:
   - System.ObjectModel
   namespace: System.Collections.ObjectModel
-  summary: Represents a read-only, generic collection of key/value pairs.
   syntax:
     content: 'public class ReadOnlyDictionary<TKey, TValue> : Generic.ICollection<Generic.KeyValuePair<TKey, TValue>>, Generic.IDictionary<TKey, TValue>, Generic.IEnumerable<Generic.KeyValuePair<TKey, TValue>>, Generic.IReadOnlyCollection<Generic.KeyValuePair<TKey, TValue>>, Generic.IReadOnlyDictionary<TKey, TValue>, ICollection, IDictionary, IEnumerable'
-    content.vb: Public Class ReadOnlyDictionary(Of TKey, TValue) Inherits Generic.ICollection(Of Generic.KeyValuePair(Of TKey, TValue)) Implements Generic.IDictionary(Of TKey, TValue), Generic.IEnumerable(Of Generic.KeyValuePair(Of TKey, TValue)), Generic.IReadOnlyCollection(Of Generic.KeyValuePair(Of TKey, TValue)), Generic.IReadOnlyDictionary(Of TKey, TValue), ICollection, IDictionary, IEnumerable
+    content.vb: >-
+      Public Class ReadOnlyDictionary(Of TKey, TValue)
+          Inherits Generic.ICollection(Of Generic.KeyValuePair(Of TKey, TValue))
+          Implements Generic.IDictionary(Of TKey, TValue), Generic.IEnumerable(Of Generic.KeyValuePair(Of TKey, TValue)), Generic.IReadOnlyCollection(Of Generic.KeyValuePair(Of TKey, TValue)), Generic.IReadOnlyDictionary(Of TKey, TValue), ICollection, IDictionary, IEnumerable
     typeParameters:
     - id: TKey
     - id: TValue
@@ -44,689 +50,1015 @@ items:
   - System.Collections.ICollection
   - System.Collections.IDictionary
   - System.Collections.IEnumerable
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue)
+  name.vb: ReadOnlyDictionary(Of TKey, TValue)
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})
+  commentId: M:System.Collections.ObjectModel.ReadOnlyDictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})
   id: '#ctor(System.Collections.Generic.IDictionary{`0,`1})'
   parent: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  langs:
+  - csharp
+  - vb
   name: ReadOnlyDictionary(Generic.IDictionary<TKey, TValue>)
-  name.vb: ReadOnlyDictionary(Generic.IDictionary(Of TKey, TValue))
+  nameWithType: ReadOnlyDictionary<TKey, TValue>.ReadOnlyDictionary(Generic.IDictionary<TKey, TValue>)
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>.ReadOnlyDictionary(System.Collections.Generic.IDictionary<TKey, TValue>)
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).ReadOnlyDictionary(System.Collections.Generic.IDictionary(Of TKey, TValue))
   type: Constructor
   source:
     remote:
       path: src/System.ObjectModel/ref/System.ObjectModel.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.ObjectModel/ref/System.ObjectModel.cs
-    startLine: 44
+    startLine: 47
   assemblies:
   - System.ObjectModel
   namespace: System.Collections.ObjectModel
-  summary: Initializes a new instance of the <xref href="System.Collections.ObjectModel.ReadOnlyDictionary`2" data-throw-if-not-resolved="false"></xref> class that is a wrapper around the specified dictionary.
   syntax:
     content: public ReadOnlyDictionary(Generic.IDictionary<TKey, TValue> dictionary)
     content.vb: Public Sub New(dictionary As Generic.IDictionary(Of TKey, TValue))
     parameters:
     - id: dictionary
       type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
-      description: The dictionary to wrap.
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue).ReadOnlyDictionary(Generic.IDictionary(Of TKey, TValue))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).ReadOnlyDictionary(System.Collections.Generic.IDictionary(Of TKey, TValue))
+  name.vb: ReadOnlyDictionary(Generic.IDictionary(Of TKey, TValue))
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.Count
+  commentId: P:System.Collections.ObjectModel.ReadOnlyDictionary`2.Count
   id: Count
   parent: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  langs:
+  - csharp
+  - vb
   name: Count
+  nameWithType: ReadOnlyDictionary<TKey, TValue>.Count
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>.Count
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).Count
   type: Property
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/Collections/ObjectModel/ReadOnlyDictionary.cs
-    startLine: 124
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Count
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 48
   assemblies:
   - System.ObjectModel
   namespace: System.Collections.ObjectModel
-  summary: Gets the number of items in the dictionary.
   syntax:
     content: public int Count { get; }
     content.vb: Public ReadOnly Property Count As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The number of items in the dictionary.
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue).Count
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).Count
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.Dictionary
+  commentId: P:System.Collections.ObjectModel.ReadOnlyDictionary`2.Dictionary
   id: Dictionary
   parent: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  langs:
+  - csharp
+  - vb
   name: Dictionary
+  nameWithType: ReadOnlyDictionary<TKey, TValue>.Dictionary
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>.Dictionary
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).Dictionary
   type: Property
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/Collections/ObjectModel/ReadOnlyDictionary.cs
-    startLine: 31
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Dictionary
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 49
   assemblies:
   - System.ObjectModel
   namespace: System.Collections.ObjectModel
-  summary: Gets the dictionary that is wrapped by this <xref href="System.Collections.ObjectModel.ReadOnlyDictionary`2" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: protected Generic.IDictionary<TKey, TValue> Dictionary { get; }
     content.vb: Protected ReadOnly Property Dictionary As Generic.IDictionary(Of TKey, TValue)
     parameters: []
     return:
       type: System.Collections.Generic.IDictionary{{TKey},{TValue}}
-      description: The dictionary that is wrapped by this object.
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue).Dictionary
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).Dictionary
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.Item(`0)
+  commentId: P:System.Collections.ObjectModel.ReadOnlyDictionary`2.Item(`0)
   id: Item(`0)
   parent: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  langs:
+  - csharp
+  - vb
   name: Item[TKey]
-  name.vb: Item(TKey)
+  nameWithType: ReadOnlyDictionary<TKey, TValue>.Item[TKey]
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>.Item[TKey]
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).Item(TKey)
   type: Property
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/Collections/ObjectModel/ReadOnlyDictionary.cs
-    startLine: 90
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: this[]
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 50
   assemblies:
   - System.ObjectModel
   namespace: System.Collections.ObjectModel
-  summary: Gets the element that has the specified key.
   syntax:
     content: public TValue this[TKey key] { get; }
     content.vb: Public ReadOnly Property Item(key As TKey) As TValue
     parameters:
     - id: key
       type: '{TKey}'
-      description: The key of the element to get.
     return:
       type: '{TValue}'
-      description: The element that has the specified key.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*key* is null.'
-  - type: System.Collections.Generic.KeyNotFoundException
-    description: The property is retrieved and *key* is not found.
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue).Item(TKey)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).Item(TKey)
+  name.vb: Item(TKey)
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.Keys
+  commentId: P:System.Collections.ObjectModel.ReadOnlyDictionary`2.Keys
   id: Keys
   parent: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  langs:
+  - csharp
+  - vb
   name: Keys
+  nameWithType: ReadOnlyDictionary<TKey, TValue>.Keys
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>.Keys
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).Keys
   type: Property
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/Collections/ObjectModel/ReadOnlyDictionary.cs
-    startLine: 36
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Keys
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 51
   assemblies:
   - System.ObjectModel
   namespace: System.Collections.ObjectModel
-  summary: Gets a key collection that contains the keys of the dictionary.
   syntax:
     content: public ReadOnlyDictionary<TKey, TValue>.KeyCollection Keys { get; }
     content.vb: Public ReadOnly Property Keys As ReadOnlyDictionary(Of TKey, TValue).KeyCollection
     parameters: []
     return:
       type: System.Collections.ObjectModel.ReadOnlyDictionary`2.KeyCollection
-      description: A key collection that contains the keys of the dictionary.
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue).Keys
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).Keys
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.Values
+  commentId: P:System.Collections.ObjectModel.ReadOnlyDictionary`2.Values
   id: Values
   parent: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  langs:
+  - csharp
+  - vb
   name: Values
+  nameWithType: ReadOnlyDictionary<TKey, TValue>.Values
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>.Values
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).Values
   type: Property
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/Collections/ObjectModel/ReadOnlyDictionary.cs
-    startLine: 49
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Values
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 65
   assemblies:
   - System.ObjectModel
   namespace: System.Collections.ObjectModel
-  summary: Gets a collection that contains the values in the dictionary.
   syntax:
     content: public ReadOnlyDictionary<TKey, TValue>.ValueCollection Values { get; }
     content.vb: Public ReadOnly Property Values As ReadOnlyDictionary(Of TKey, TValue).ValueCollection
     parameters: []
     return:
       type: System.Collections.ObjectModel.ReadOnlyDictionary`2.ValueCollection
-      description: A collection that contains the values in the object that implements <xref href="System.Collections.ObjectModel.ReadOnlyDictionary`2" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue).Values
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).Values
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.ContainsKey(`0)
+  commentId: M:System.Collections.ObjectModel.ReadOnlyDictionary`2.ContainsKey(`0)
   id: ContainsKey(`0)
   parent: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  langs:
+  - csharp
+  - vb
   name: ContainsKey(TKey)
+  nameWithType: ReadOnlyDictionary<TKey, TValue>.ContainsKey(TKey)
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>.ContainsKey(TKey)
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).ContainsKey(TKey)
   type: Method
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/Collections/ObjectModel/ReadOnlyDictionary.cs
-    startLine: 64
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ContainsKey
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 66
   assemblies:
   - System.ObjectModel
   namespace: System.Collections.ObjectModel
-  summary: Determines whether the dictionary contains an element that has the specified key.
   syntax:
     content: public bool ContainsKey(TKey key)
     content.vb: Public Function ContainsKey(key As TKey) As Boolean
     parameters:
     - id: key
       type: '{TKey}'
-      description: The key to locate in the dictionary.
     return:
       type: System.Boolean
-      description: true if the dictionary contains an element that has the specified key; otherwise, false.
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue).ContainsKey(TKey)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).ContainsKey(TKey)
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.GetEnumerator
+  commentId: M:System.Collections.ObjectModel.ReadOnlyDictionary`2.GetEnumerator
   id: GetEnumerator
   parent: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  langs:
+  - csharp
+  - vb
   name: GetEnumerator()
+  nameWithType: ReadOnlyDictionary<TKey, TValue>.GetEnumerator()
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>.GetEnumerator()
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).GetEnumerator()
   type: Method
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/Collections/ObjectModel/ReadOnlyDictionary.cs
-    startLine: 163
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetEnumerator
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 67
   assemblies:
   - System.ObjectModel
   namespace: System.Collections.ObjectModel
-  summary: Returns an enumerator that iterates through the <xref href="System.Collections.ObjectModel.ReadOnlyDictionary`2" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public Generic.IEnumerator<Generic.KeyValuePair<TKey, TValue>> GetEnumerator()
     content.vb: Public Function GetEnumerator As Generic.IEnumerator(Of Generic.KeyValuePair(Of TKey, TValue))
     return:
       type: System.Collections.Generic.IEnumerator{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
-      description: An enumerator that can be used to iterate through the collection.
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue).GetEnumerator()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).GetEnumerator()
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.TryGetValue(`0,`1@)
+  commentId: M:System.Collections.ObjectModel.ReadOnlyDictionary`2.TryGetValue(`0,`1@)
   id: TryGetValue(`0,`1@)
   parent: System.Collections.ObjectModel.ReadOnlyDictionary`2
+  langs:
+  - csharp
+  - vb
   name: TryGetValue(TKey, out TValue)
-  name.vb: TryGetValue(TKey, ByRef TValue)
+  nameWithType: ReadOnlyDictionary<TKey, TValue>.TryGetValue(TKey, out TValue)
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>.TryGetValue(TKey, out TValue)
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).TryGetValue(TKey, ByRef TValue)
   type: Method
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/Collections/ObjectModel/ReadOnlyDictionary.cs
-    startLine: 77
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryGetValue
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 82
   assemblies:
   - System.ObjectModel
   namespace: System.Collections.ObjectModel
-  summary: Retrieves the value that is associated with the specified key.
   syntax:
     content: public bool TryGetValue(TKey key, out TValue value)
     content.vb: Public Function TryGetValue(key As TKey, ByRef value As TValue) As Boolean
     parameters:
     - id: key
       type: '{TKey}'
-      description: The key whose value will be retrieved.
     - id: value
       type: '{TValue}'
-      description: When this method returns, the value associated with the specified key, if the key is found; otherwise, the default value for the type of the *value* parameter. This parameter is passed uninitialized.
     return:
       type: System.Boolean
-      description: true if the object that implements <xref href="System.Collections.ObjectModel.ReadOnlyDictionary`2" data-throw-if-not-resolved="false"></xref> contains an element with the specified key; otherwise, false.
+  nameWithType.vb: ReadOnlyDictionary(Of TKey, TValue).TryGetValue(TKey, ByRef TValue)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary(Of TKey, TValue).TryGetValue(TKey, ByRef TValue)
+  name.vb: TryGetValue(TKey, ByRef TValue)
 references:
 - uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
   isExternal: false
   name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
   fullName: System.Collections.ObjectModel
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Collections.Generic.IDictionary{{TKey},{TValue}}
+  commentId: '!:System.Collections.Generic.IDictionary{`0,`1}'
   definition: System.Collections.Generic.IDictionary`2
-  name: IDictionary<TKey, TValue>
-  name.vb: IDictionary(Of TKey, TValue)
+  name: Generic.IDictionary<TKey, TValue>
+  nameWithType: Generic.IDictionary<TKey, TValue>
   fullName: System.Collections.Generic.IDictionary<TKey, TValue>
-  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  nameWithType.vb: Generic.IDictionary(Of TKey, TValue)
+  fullname.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: Generic.IDictionary(Of TKey, TValue)
   spec.csharp:
   - uid: System.Collections.Generic.IDictionary`2
-    name: IDictionary
+    name: Generic.IDictionary
+    nameWithType: Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TValue
+    nameWithType: TValue
     fullName: TValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IDictionary`2
-    name: IDictionary
+    name: Generic.IDictionary
+    nameWithType: Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TValue
+    nameWithType: TValue
     fullName: TValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}}'
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  name: IEnumerable<KeyValuePair<TKey, TValue>>
-  name.vb: IEnumerable(Of KeyValuePair(Of TKey, TValue))
+  name: Generic.IEnumerable<Generic.KeyValuePair<TKey, TValue>>
+  nameWithType: Generic.IEnumerable<Generic.KeyValuePair<TKey, TValue>>
   fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  nameWithType.vb: Generic.IEnumerable(Of Generic.KeyValuePair(Of TKey, TValue))
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: Generic.IEnumerable(Of Generic.KeyValuePair(Of TKey, TValue))
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
+    name: Generic.IEnumerable
+    nameWithType: Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Collections.Generic.KeyValuePair`2
-    name: KeyValuePair
+    name: Generic.KeyValuePair
+    nameWithType: Generic.KeyValuePair
     fullName: System.Collections.Generic.KeyValuePair
   - name: <
+    nameWithType: <
     fullName: <
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TValue
+    nameWithType: TValue
     fullName: TValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
+    name: Generic.IEnumerable
+    nameWithType: Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Collections.Generic.KeyValuePair`2
-    name: KeyValuePair
+    name: Generic.KeyValuePair
+    nameWithType: Generic.KeyValuePair
     fullName: System.Collections.Generic.KeyValuePair
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TValue
+    nameWithType: TValue
     fullName: TValue
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IReadOnlyCollection{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+  commentId: '!:System.Collections.Generic.IReadOnlyCollection{System.Collections.Generic.KeyValuePair{`0,`1}}'
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IReadOnlyCollection`1
-  name: IReadOnlyCollection<KeyValuePair<TKey, TValue>>
-  name.vb: IReadOnlyCollection(Of KeyValuePair(Of TKey, TValue))
+  name: Generic.IReadOnlyCollection<Generic.KeyValuePair<TKey, TValue>>
+  nameWithType: Generic.IReadOnlyCollection<Generic.KeyValuePair<TKey, TValue>>
   fullName: System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  nameWithType.vb: Generic.IReadOnlyCollection(Of Generic.KeyValuePair(Of TKey, TValue))
+  fullname.vb: System.Collections.Generic.IReadOnlyCollection(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: Generic.IReadOnlyCollection(Of Generic.KeyValuePair(Of TKey, TValue))
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
+    name: Generic.IReadOnlyCollection
+    nameWithType: Generic.IReadOnlyCollection
     fullName: System.Collections.Generic.IReadOnlyCollection
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Collections.Generic.KeyValuePair`2
-    name: KeyValuePair
+    name: Generic.KeyValuePair
+    nameWithType: Generic.KeyValuePair
     fullName: System.Collections.Generic.KeyValuePair
   - name: <
+    nameWithType: <
     fullName: <
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TValue
+    nameWithType: TValue
     fullName: TValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
+    name: Generic.IReadOnlyCollection
+    nameWithType: Generic.IReadOnlyCollection
     fullName: System.Collections.Generic.IReadOnlyCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Collections.Generic.KeyValuePair`2
-    name: KeyValuePair
+    name: Generic.KeyValuePair
+    nameWithType: Generic.KeyValuePair
     fullName: System.Collections.Generic.KeyValuePair
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TValue
+    nameWithType: TValue
     fullName: TValue
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IReadOnlyDictionary{{TKey},{TValue}}
+  commentId: '!:System.Collections.Generic.IReadOnlyDictionary{`0,`1}'
   definition: System.Collections.Generic.IReadOnlyDictionary`2
-  name: IReadOnlyDictionary<TKey, TValue>
-  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  name: Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType: Generic.IReadOnlyDictionary<TKey, TValue>
   fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
-  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  nameWithType.vb: Generic.IReadOnlyDictionary(Of TKey, TValue)
+  fullname.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: Generic.IReadOnlyDictionary(Of TKey, TValue)
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyDictionary`2
-    name: IReadOnlyDictionary
+    name: Generic.IReadOnlyDictionary
+    nameWithType: Generic.IReadOnlyDictionary
     fullName: System.Collections.Generic.IReadOnlyDictionary
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TValue
+    nameWithType: TValue
     fullName: TValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IReadOnlyDictionary`2
-    name: IReadOnlyDictionary
+    name: Generic.IReadOnlyDictionary
+    nameWithType: Generic.IReadOnlyDictionary
     fullName: System.Collections.Generic.IReadOnlyDictionary
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TValue
+    nameWithType: TValue
     fullName: TValue
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.ICollection
+  commentId: T:System.Collections.ICollection
   parent: System.Collections
   isExternal: false
   name: Collections.ICollection
+  nameWithType: Collections.ICollection
   fullName: System.Collections.ICollection
 - uid: System.Collections.IDictionary
+  commentId: T:System.Collections.IDictionary
   parent: System.Collections
   isExternal: false
   name: Collections.IDictionary
+  nameWithType: Collections.IDictionary
   fullName: System.Collections.IDictionary
 - uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
   parent: System.Collections
   isExternal: false
   name: Collections.IEnumerable
+  nameWithType: Collections.IEnumerable
   fullName: System.Collections.IEnumerable
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
   isExternal: false
-  name: Collections.Generic.IDictionary<, >
-  name.vb: Collections.Generic.IDictionary(Of , )
+  name: Generic.IDictionary<, >
+  nameWithType: Generic.IDictionary<, >
   fullName: System.Collections.Generic.IDictionary<, >
-  fullName.vb: System.Collections.Generic.IDictionary(Of , )
+  nameWithType.vb: Generic.IDictionary(Of , )
+  fullname.vb: System.Collections.Generic.IDictionary(Of , )
+  name.vb: Generic.IDictionary(Of , )
   spec.csharp:
   - uid: System.Collections.Generic.IDictionary`2
-    name: Collections.Generic.IDictionary
+    name: Generic.IDictionary
+    nameWithType: Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IDictionary`2
-    name: Collections.Generic.IDictionary
+    name: Generic.IDictionary
+    nameWithType: Generic.IDictionary
     fullName: System.Collections.Generic.IDictionary
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
   name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: System.Collections.Generic.IReadOnlyCollection`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
   isExternal: false
-  name: IReadOnlyCollection<>
-  name.vb: IReadOnlyCollection(Of )
+  name: Generic.IReadOnlyCollection<>
+  nameWithType: Generic.IReadOnlyCollection<>
   fullName: System.Collections.Generic.IReadOnlyCollection<>
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of )
+  nameWithType.vb: Generic.IReadOnlyCollection(Of )
+  fullname.vb: System.Collections.Generic.IReadOnlyCollection(Of )
+  name.vb: Generic.IReadOnlyCollection(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
+    name: Generic.IReadOnlyCollection
+    nameWithType: Generic.IReadOnlyCollection
     fullName: System.Collections.Generic.IReadOnlyCollection
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
+    name: Generic.IReadOnlyCollection
+    nameWithType: Generic.IReadOnlyCollection
     fullName: System.Collections.Generic.IReadOnlyCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
   isExternal: false
-  name: IReadOnlyDictionary<, >
-  name.vb: IReadOnlyDictionary(Of , )
+  name: Generic.IReadOnlyDictionary<, >
+  nameWithType: Generic.IReadOnlyDictionary<, >
   fullName: System.Collections.Generic.IReadOnlyDictionary<, >
-  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of , )
+  nameWithType.vb: Generic.IReadOnlyDictionary(Of , )
+  fullname.vb: System.Collections.Generic.IReadOnlyDictionary(Of , )
+  name.vb: Generic.IReadOnlyDictionary(Of , )
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyDictionary`2
-    name: IReadOnlyDictionary
+    name: Generic.IReadOnlyDictionary
+    nameWithType: Generic.IReadOnlyDictionary
     fullName: System.Collections.Generic.IReadOnlyDictionary
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IReadOnlyDictionary`2
-    name: IReadOnlyDictionary
+    name: Generic.IReadOnlyDictionary
+    nameWithType: Generic.IReadOnlyDictionary
     fullName: System.Collections.Generic.IReadOnlyDictionary
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: '{TKey}'
-  isExternal: false
+  commentId: '!:TKey'
+  definition: TKey
   name: TKey
+  nameWithType: TKey
   fullName: TKey
 - uid: '{TValue}'
+  commentId: '!:TValue'
+  definition: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: TKey
+  isExternal: false
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: TValue
   isExternal: false
   name: TValue
+  nameWithType: TValue
   fullName: TValue
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.KeyCollection
+  commentId: T:System.Collections.ObjectModel.ReadOnlyDictionary`2.KeyCollection
   parent: System.Collections.ObjectModel
   isExternal: false
   name: ReadOnlyDictionary.KeyCollection<>
-  name.vb: ReadOnlyDictionary.KeyCollection(Of )
+  nameWithType: ReadOnlyDictionary.KeyCollection<>
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary.KeyCollection<>
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary.KeyCollection(Of )
+  nameWithType.vb: ReadOnlyDictionary.KeyCollection(Of )
+  fullname.vb: System.Collections.ObjectModel.ReadOnlyDictionary.KeyCollection(Of )
+  name.vb: ReadOnlyDictionary.KeyCollection(Of )
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.KeyCollection
     name: ReadOnlyDictionary.KeyCollection
+    nameWithType: ReadOnlyDictionary.KeyCollection
     fullName: System.Collections.ObjectModel.ReadOnlyDictionary.KeyCollection
   - name: <
+    nameWithType: <
     fullName: <
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.KeyCollection
     name: ReadOnlyDictionary.KeyCollection
+    nameWithType: ReadOnlyDictionary.KeyCollection
     fullName: System.Collections.ObjectModel.ReadOnlyDictionary.KeyCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.ValueCollection
+  commentId: T:System.Collections.ObjectModel.ReadOnlyDictionary`2.ValueCollection
   parent: System.Collections.ObjectModel
   isExternal: false
   name: ReadOnlyDictionary.ValueCollection<>
-  name.vb: ReadOnlyDictionary.ValueCollection(Of )
+  nameWithType: ReadOnlyDictionary.ValueCollection<>
   fullName: System.Collections.ObjectModel.ReadOnlyDictionary.ValueCollection<>
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyDictionary.ValueCollection(Of )
+  nameWithType.vb: ReadOnlyDictionary.ValueCollection(Of )
+  fullname.vb: System.Collections.ObjectModel.ReadOnlyDictionary.ValueCollection(Of )
+  name.vb: ReadOnlyDictionary.ValueCollection(Of )
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.ValueCollection
     name: ReadOnlyDictionary.ValueCollection
+    nameWithType: ReadOnlyDictionary.ValueCollection
     fullName: System.Collections.ObjectModel.ReadOnlyDictionary.ValueCollection
   - name: <
+    nameWithType: <
     fullName: <
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyDictionary`2.ValueCollection
     name: ReadOnlyDictionary.ValueCollection
+    nameWithType: ReadOnlyDictionary.ValueCollection
     fullName: System.Collections.ObjectModel.ReadOnlyDictionary.ValueCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Collections.Generic.IEnumerator{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+  commentId: '!:System.Collections.Generic.IEnumerator{System.Collections.Generic.KeyValuePair{`0,`1}}'
   definition: System.Collections.Generic.IEnumerator`1
-  name: IEnumerator<KeyValuePair<TKey, TValue>>
-  name.vb: IEnumerator(Of KeyValuePair(Of TKey, TValue))
+  name: Generic.IEnumerator<Generic.KeyValuePair<TKey, TValue>>
+  nameWithType: Generic.IEnumerator<Generic.KeyValuePair<TKey, TValue>>
   fullName: System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<TKey, TValue>>
-  fullName.vb: System.Collections.Generic.IEnumerator(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  nameWithType.vb: Generic.IEnumerator(Of Generic.KeyValuePair(Of TKey, TValue))
+  fullname.vb: System.Collections.Generic.IEnumerator(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: Generic.IEnumerator(Of Generic.KeyValuePair(Of TKey, TValue))
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerator`1
-    name: IEnumerator
+    name: Generic.IEnumerator
+    nameWithType: Generic.IEnumerator
     fullName: System.Collections.Generic.IEnumerator
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Collections.Generic.KeyValuePair`2
-    name: KeyValuePair
+    name: Generic.KeyValuePair
+    nameWithType: Generic.KeyValuePair
     fullName: System.Collections.Generic.KeyValuePair
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TValue
+    nameWithType: TValue
     fullName: TValue
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerator`1
-    name: IEnumerator
+    name: Generic.IEnumerator
+    nameWithType: Generic.IEnumerator
     fullName: System.Collections.Generic.IEnumerator
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Collections.Generic.KeyValuePair`2
-    name: KeyValuePair
+    name: Generic.KeyValuePair
+    nameWithType: Generic.KeyValuePair
     fullName: System.Collections.Generic.KeyValuePair
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TValue
+    nameWithType: TValue
     fullName: TValue
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerator`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerator`1
   isExternal: false
-  name: Collections.Generic.IEnumerator<>
-  name.vb: Collections.Generic.IEnumerator(Of )
+  name: Generic.IEnumerator<>
+  nameWithType: Generic.IEnumerator<>
   fullName: System.Collections.Generic.IEnumerator<>
-  fullName.vb: System.Collections.Generic.IEnumerator(Of )
+  nameWithType.vb: Generic.IEnumerator(Of )
+  fullname.vb: System.Collections.Generic.IEnumerator(Of )
+  name.vb: Generic.IEnumerator(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerator`1
-    name: Collections.Generic.IEnumerator
+    name: Generic.IEnumerator
+    nameWithType: Generic.IEnumerator
     fullName: System.Collections.Generic.IEnumerator
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerator`1
-    name: Collections.Generic.IEnumerator
+    name: Generic.IEnumerator
+    nameWithType: Generic.IEnumerator
     fullName: System.Collections.Generic.IEnumerator
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.Collections.Generic.KeyNotFoundException
-  isExternal: false
-  name: KeyNotFoundException
-  fullName: System.Collections.Generic.KeyNotFoundException

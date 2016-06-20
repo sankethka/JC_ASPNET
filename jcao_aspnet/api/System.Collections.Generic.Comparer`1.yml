@@ -1,5 +1,6 @@
 items:
 - uid: System.Collections.Generic.Comparer`1
+  commentId: T:System.Collections.Generic.Comparer`1
   id: Comparer`1
   parent: System.Collections.Generic
   children:
@@ -7,244 +8,356 @@ items:
   - System.Collections.Generic.Comparer`1.Compare(`0,`0)
   - System.Collections.Generic.Comparer`1.Create(System.Comparison{`0})
   - System.Collections.Generic.Comparer`1.Default
+  langs:
+  - csharp
+  - vb
   name: Comparer<T>
-  name.vb: Comparer(Of T)
+  nameWithType: Comparer<T>
   fullName: System.Collections.Generic.Comparer<T>
-  fullName.vb: System.Collections.Generic.Comparer(Of T)
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Collections/Generic/Comparer.cs
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Collections/Generic/Comparer.cs
-    startLine: 15
+      repo: https://github.com/dotnet/corefx.git
+    id: Comparer
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 41
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Provides a base class for implementations of the <xref href="System.Collections.Generic.IComparer`1" data-throw-if-not-resolved="false"></xref> generic interface.
   syntax:
     content: 'public abstract class Comparer<T> : IComparer<T>, IComparer'
-    content.vb: Public MustInherit Class Comparer(Of T) Inherits IComparer(Of T) Implements IComparer
+    content.vb: >-
+      Public MustInherit Class Comparer(Of T)
+          Inherits IComparer(Of T)
+          Implements IComparer
     typeParameters:
     - id: T
   inheritance:
   - System.Object
   implements:
   - System.Collections.IComparer
+  nameWithType.vb: Comparer(Of T)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: System.Collections.Generic.Comparer(Of T)
+  name.vb: Comparer(Of T)
 - uid: System.Collections.Generic.Comparer`1.#ctor
+  commentId: M:System.Collections.Generic.Comparer`1.#ctor
   id: '#ctor'
   parent: System.Collections.Generic.Comparer`1
+  langs:
+  - csharp
+  - vb
   name: Comparer()
+  nameWithType: Comparer<T>.Comparer()
   fullName: System.Collections.Generic.Comparer<T>.Comparer()
-  fullName.vb: System.Collections.Generic.Comparer(Of T).Comparer()
   type: Constructor
   source:
     remote:
       path: src/System.Collections/ref/System.Collections.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Collections/ref/System.Collections.cs
-    startLine: 40
+    startLine: 43
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Initializes a new instance of the <xref href="System.Collections.Generic.Comparer`1" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: protected Comparer()
     content.vb: Protected Sub New
+  nameWithType.vb: Comparer(Of T).Comparer()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: System.Collections.Generic.Comparer(Of T).Comparer()
 - uid: System.Collections.Generic.Comparer`1.Default
+  commentId: P:System.Collections.Generic.Comparer`1.Default
   id: Default
   parent: System.Collections.Generic.Comparer`1
+  langs:
+  - csharp
+  - vb
   name: Default
+  nameWithType: Comparer<T>.Default
   fullName: System.Collections.Generic.Comparer<T>.Default
-  fullName.vb: System.Collections.Generic.Comparer(Of T).Default
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/Generic/Comparer.cs
-    startLine: 21
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Default
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 44
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Returns a default sort order comparer for the type specified by the generic argument.
   syntax:
     content: public static Comparer<T> Default { get; }
     content.vb: Public Shared ReadOnly Property Default As Comparer(Of T)
     parameters: []
     return:
       type: System.Collections.Generic.Comparer`1
-      description: An object that inherits <xref href="System.Collections.Generic.Comparer`1" data-throw-if-not-resolved="false"></xref> and serves as a sort order comparer for type *T*.
+  nameWithType.vb: Comparer(Of T).Default
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+  fullName.vb: System.Collections.Generic.Comparer(Of T).Default
 - uid: System.Collections.Generic.Comparer`1.Compare(`0,`0)
+  commentId: M:System.Collections.Generic.Comparer`1.Compare(`0,`0)
   id: Compare(`0,`0)
   parent: System.Collections.Generic.Comparer`1
+  langs:
+  - csharp
+  - vb
   name: Compare(T, T)
+  nameWithType: Comparer<T>.Compare(T, T)
   fullName: System.Collections.Generic.Comparer<T>.Compare(T, T)
-  fullName.vb: System.Collections.Generic.Comparer(Of T).Compare(T, T)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/Generic/Comparer.cs
-    startLine: 77
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Compare
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 45
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: When overridden in a derived class, performs a comparison of two objects of the same type and returns a value indicating whether one object is less than, equal to, or greater than the other.
   syntax:
     content: public abstract int Compare(T x, T y)
     content.vb: Public MustOverride Function Compare(x As T, y As T) As Integer
     parameters:
     - id: x
       type: '{T}'
-      description: The first object to compare.
     - id: y
       type: '{T}'
-      description: The second object to compare.
     return:
       type: System.Int32
-      description: A signed integer that indicates the relative values of *x* and *y*, as shown in the following table.Value Meaning Less than zero *x* is less than *y*.Zero *x* equals *y*.Greater than zero *x* is greater than *y*.
-  exceptions:
-  - type: System.ArgumentException
-    description: Type *T* does not implement either the <xref href="System.IComparable`1" data-throw-if-not-resolved="false"></xref> generic interface or the <xref href="System.IComparable" data-throw-if-not-resolved="false"></xref> interface.
+  nameWithType.vb: Comparer(Of T).Compare(T, T)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: System.Collections.Generic.Comparer(Of T).Compare(T, T)
 - uid: System.Collections.Generic.Comparer`1.Create(System.Comparison{`0})
+  commentId: M:System.Collections.Generic.Comparer`1.Create(System.Comparison{`0})
   id: Create(System.Comparison{`0})
   parent: System.Collections.Generic.Comparer`1
+  langs:
+  - csharp
+  - vb
   name: Create(Comparison<T>)
-  name.vb: Create(Comparison(Of T))
+  nameWithType: Comparer<T>.Create(Comparison<T>)
   fullName: System.Collections.Generic.Comparer<T>.Create(System.Comparison<T>)
-  fullName.vb: System.Collections.Generic.Comparer(Of T).Create(System.Comparison(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/Generic/Comparer.cs
-    startLine: 34
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 46
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Creates a comparer by using the specified comparison.
   syntax:
     content: public static Comparer<T> Create(Comparison<T> comparison)
     content.vb: Public Shared Function Create(comparison As Comparison(Of T)) As Comparer(Of T)
     parameters:
     - id: comparison
       type: System.Comparison{{T}}
-      description: The comparison to use.
     return:
       type: System.Collections.Generic.Comparer`1
-      description: The new comparer.
+  nameWithType.vb: Comparer(Of T).Create(Comparison(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Collections.Generic.Comparer(Of T).Create(System.Comparison(Of T))
+  name.vb: Create(Comparison(Of T))
 references:
 - uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
   name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Collections.IComparer
+  commentId: T:System.Collections.IComparer
   parent: System.Collections
   isExternal: false
-  name: IComparer
+  name: Collections.IComparer
+  nameWithType: Collections.IComparer
   fullName: System.Collections.IComparer
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
 - uid: System.Collections.Generic.Comparer`1
+  commentId: T:System.Collections.Generic.Comparer`1
   parent: System.Collections.Generic
   isExternal: false
   name: Comparer<T>
-  name.vb: Comparer(Of T)
+  nameWithType: Comparer<T>
   fullName: System.Collections.Generic.Comparer<T>
-  fullName.vb: System.Collections.Generic.Comparer(Of T)
+  nameWithType.vb: Comparer(Of T)
+  fullname.vb: System.Collections.Generic.Comparer(Of T)
+  name.vb: Comparer(Of T)
   spec.csharp:
   - uid: System.Collections.Generic.Comparer`1
     name: Comparer
+    nameWithType: Comparer
     fullName: System.Collections.Generic.Comparer
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.Comparer`1
     name: Comparer
+    nameWithType: Comparer
     fullName: System.Collections.Generic.Comparer
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T}'
-  isExternal: false
+  commentId: '!:T'
+  definition: T
   name: T
+  nameWithType: T
   fullName: T
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
 - uid: System.Comparison{{T}}
+  commentId: '!:System.Comparison{`0}'
   parent: System
   definition: System.Comparison`1
   name: Comparison<T>
-  name.vb: Comparison(Of T)
+  nameWithType: Comparison<T>
   fullName: System.Comparison<T>
-  fullName.vb: System.Comparison(Of T)
+  nameWithType.vb: Comparison(Of T)
+  fullname.vb: System.Comparison(Of T)
+  name.vb: Comparison(Of T)
   spec.csharp:
   - uid: System.Comparison`1
     name: Comparison
+    nameWithType: Comparison
     fullName: System.Comparison
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Comparison`1
     name: Comparison
+    nameWithType: Comparison
     fullName: System.Comparison
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Comparison`1
-  parent: System
+  commentId: T:System.Comparison`1
   isExternal: false
   name: Comparison<>
-  name.vb: Comparison(Of )
+  nameWithType: Comparison<>
   fullName: System.Comparison<>
-  fullName.vb: System.Comparison(Of )
+  nameWithType.vb: Comparison(Of )
+  fullname.vb: System.Comparison(Of )
+  name.vb: Comparison(Of )
   spec.csharp:
   - uid: System.Comparison`1
     name: Comparison
+    nameWithType: Comparison
     fullName: System.Comparison
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Comparison`1
     name: Comparison
+    nameWithType: Comparison
     fullName: System.Comparison
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

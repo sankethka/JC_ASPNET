@@ -1,44 +1,59 @@
 items:
 - uid: System.EventHandler
+  commentId: T:System.EventHandler
   id: EventHandler
   parent: System
   children: []
+  langs:
+  - csharp
+  - vb
   name: EventHandler
+  nameWithType: EventHandler
   fullName: System.EventHandler
   type: Delegate
   source:
     remote:
-      path: src/mscorlib/src/System/EventHandler.cs
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/EventHandler.cs
-    startLine: 7
+      repo: https://github.com/dotnet/corefx.git
+    id: EventHandler
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 834
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Represents the method that will handle an event that has no event data.
   syntax:
     content: public delegate void EventHandler(object sender, EventArgs e);
     content.vb: Public Delegate Sub EventHandler(sender As Object, e As EventArgs)
     parameters:
     - id: sender
       type: System.Object
-      description: The source of the event.
     - id: e
       type: System.EventArgs
-      description: An object that contains no event data.
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.EventArgs
+  commentId: T:System.EventArgs
   parent: System
   isExternal: false
   name: EventArgs
+  nameWithType: EventArgs
   fullName: System.EventArgs

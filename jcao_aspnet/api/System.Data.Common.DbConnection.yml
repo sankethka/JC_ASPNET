@@ -1,5 +1,6 @@
 items:
 - uid: System.Data.Common.DbConnection
+  commentId: T:System.Data.Common.DbConnection
   id: DbConnection
   parent: System.Data.Common
   children:
@@ -24,401 +25,673 @@ items:
   - System.Data.Common.DbConnection.ServerVersion
   - System.Data.Common.DbConnection.State
   - System.Data.Common.DbConnection.StateChange
+  - System.Data.Common.DbConnection.System#Data#IDbConnection#BeginTransaction
+  - System.Data.Common.DbConnection.System#Data#IDbConnection#BeginTransaction(System.Data.IsolationLevel)
+  - System.Data.Common.DbConnection.System#Data#IDbConnection#CreateCommand
+  langs:
+  - csharp
+  - vb
   name: DbConnection
+  nameWithType: DbConnection
   fullName: System.Data.Common.DbConnection
   type: Class
   source:
-    remote: &o0
-      path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 16
+    id: DbConnection
+    path: src/System.Data.Common/ref/System.Data.Common.Manual.cs
+    startLine: 15
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Represents a connection to a database.
   syntax:
-    content: 'public abstract class DbConnection : IDisposable, IDisposable'
-    content.vb: Public MustInherit Class DbConnection Inherits IDisposable Implements IDisposable
+    content: 'public abstract class DbConnection : IDisposable, IDbConnection, IDisposable'
+    content.vb: >-
+      Public MustInherit Class DbConnection
+          Inherits IDisposable
+          Implements IDbConnection, IDisposable
   inheritance:
   - System.Object
   implements:
+  - System.Data.IDbConnection
   - System.IDisposable
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Data.Common.DbConnection.#ctor
+  commentId: M:System.Data.Common.DbConnection.#ctor
   id: '#ctor'
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: DbConnection()
+  nameWithType: DbConnection.DbConnection()
   fullName: System.Data.Common.DbConnection.DbConnection()
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 21
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 258
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Initializes a new instance of the <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: protected DbConnection()
     content.vb: Protected Sub New
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Data.Common.DbConnection.ConnectionString
+  commentId: P:System.Data.Common.DbConnection.ConnectionString
   id: ConnectionString
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: ConnectionString
+  nameWithType: DbConnection.ConnectionString
   fullName: System.Data.Common.DbConnection.ConnectionString
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 25
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ConnectionString
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 259
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Gets or sets the string used to open the connection.
   syntax:
     content: public abstract string ConnectionString { get; set; }
     content.vb: Public MustOverride Property ConnectionString As String
     parameters: []
     return:
       type: System.String
-      description: The connection string used to establish the initial connection. The exact contents of the connection string depend on the specific data source for this connection. The default value is an empty string.
+  implements:
+  - System.Data.IDbConnection.ConnectionString
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - MustOverride
 - uid: System.Data.Common.DbConnection.ConnectionTimeout
+  commentId: P:System.Data.Common.DbConnection.ConnectionTimeout
   id: ConnectionTimeout
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: ConnectionTimeout
+  nameWithType: DbConnection.ConnectionTimeout
   fullName: System.Data.Common.DbConnection.ConnectionTimeout
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 31
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ConnectionTimeout
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 260
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Gets the time to wait while establishing a connection before terminating the attempt and generating an error.
   syntax:
     content: public virtual int ConnectionTimeout { get; }
     content.vb: Public Overridable ReadOnly Property ConnectionTimeout As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The time (in seconds) to wait for a connection to open. The default value is determined by the specific type of connection that you are using.
+  implements:
+  - System.Data.IDbConnection.ConnectionTimeout
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Data.Common.DbConnection.Database
+  commentId: P:System.Data.Common.DbConnection.Database
   id: Database
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: Database
+  nameWithType: DbConnection.Database
   fullName: System.Data.Common.DbConnection.Database
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 39
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Database
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 261
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Gets the name of the current database after a connection is opened, or the database name specified in the connection string before the connection is opened.
   syntax:
     content: public abstract string Database { get; }
     content.vb: Public MustOverride ReadOnly Property Database As String
     parameters: []
     return:
       type: System.String
-      description: The name of the current database or the name of the database to be used after a connection is opened. The default value is an empty string.
+  implements:
+  - System.Data.IDbConnection.Database
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Data.Common.DbConnection.DataSource
+  commentId: P:System.Data.Common.DbConnection.DataSource
   id: DataSource
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: DataSource
+  nameWithType: DbConnection.DataSource
   fullName: System.Data.Common.DbConnection.DataSource
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 44
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DataSource
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 262
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Gets the name of the database server to which to connect.
   syntax:
     content: public abstract string DataSource { get; }
     content.vb: Public MustOverride ReadOnly Property DataSource As String
     parameters: []
     return:
       type: System.String
-      description: The name of the database server to which to connect. The default value is an empty string.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Data.Common.DbConnection.ServerVersion
+  commentId: P:System.Data.Common.DbConnection.ServerVersion
   id: ServerVersion
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: ServerVersion
+  nameWithType: DbConnection.ServerVersion
   fullName: System.Data.Common.DbConnection.ServerVersion
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 51
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ServerVersion
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 263
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Gets a string that represents the version of the server to which the object is connected.
   syntax:
     content: public abstract string ServerVersion { get; }
     content.vb: Public MustOverride ReadOnly Property ServerVersion As String
     parameters: []
     return:
       type: System.String
-      description: The version of the database. The format of the string returned depends on the specific type of connection you are using.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: <xref href="System.Data.Common.DbConnection.ServerVersion" data-throw-if-not-resolved="false"></xref> was called while the returned Task was not completed and the connection was not opened after a call to <see cref="Overload:System.Data.Common.DbConnection.OpenAsync" />.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Data.Common.DbConnection.State
+  commentId: P:System.Data.Common.DbConnection.State
   id: State
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: State
+  nameWithType: DbConnection.State
   fullName: System.Data.Common.DbConnection.State
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 56
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: State
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 264
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Gets a string that describes the state of the connection.
   syntax:
     content: public abstract ConnectionState State { get; }
     content.vb: Public MustOverride ReadOnly Property State As ConnectionState
     parameters: []
     return:
       type: System.Data.ConnectionState
-      description: The state of the connection. The format of the string returned depends on the specific type of connection you are using.
+  implements:
+  - System.Data.IDbConnection.State
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Data.Common.DbConnection.StateChange
+  commentId: E:System.Data.Common.DbConnection.StateChange
   id: StateChange
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: StateChange
+  nameWithType: DbConnection.StateChange
   fullName: System.Data.Common.DbConnection.StateChange
   type: Event
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 61
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: StateChange
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 265
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Occurs when the state of the event changes.
   syntax:
     content: public virtual event StateChangeEventHandler StateChange
     content.vb: Public Overridable Event StateChange As StateChangeEventHandler
+    return:
+      type: System.Data.StateChangeEventHandler
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Data.Common.DbConnection.BeginDbTransaction(System.Data.IsolationLevel)
+  commentId: M:System.Data.Common.DbConnection.BeginDbTransaction(System.Data.IsolationLevel)
   id: BeginDbTransaction(System.Data.IsolationLevel)
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: BeginDbTransaction(IsolationLevel)
+  nameWithType: DbConnection.BeginDbTransaction(IsolationLevel)
   fullName: System.Data.Common.DbConnection.BeginDbTransaction(System.Data.IsolationLevel)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 73
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: BeginDbTransaction
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 266
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Starts a database transaction.
   syntax:
     content: protected abstract DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
     content.vb: Protected MustOverride Function BeginDbTransaction(isolationLevel As IsolationLevel) As DbTransaction
     parameters:
     - id: isolationLevel
       type: System.Data.IsolationLevel
-      description: Specifies the isolation level for the transaction.
     return:
       type: System.Data.Common.DbTransaction
-      description: An object representing the new transaction.
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
 - uid: System.Data.Common.DbConnection.BeginTransaction
+  commentId: M:System.Data.Common.DbConnection.BeginTransaction
   id: BeginTransaction
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: BeginTransaction()
+  nameWithType: DbConnection.BeginTransaction()
   fullName: System.Data.Common.DbConnection.BeginTransaction()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 75
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: BeginTransaction
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 267
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Starts a database transaction.
   syntax:
     content: public DbTransaction BeginTransaction()
     content.vb: Public Function BeginTransaction As DbTransaction
     return:
       type: System.Data.Common.DbTransaction
-      description: An object representing the new transaction.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Data.Common.DbConnection.BeginTransaction(System.Data.IsolationLevel)
+  commentId: M:System.Data.Common.DbConnection.BeginTransaction(System.Data.IsolationLevel)
   id: BeginTransaction(System.Data.IsolationLevel)
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: BeginTransaction(IsolationLevel)
+  nameWithType: DbConnection.BeginTransaction(IsolationLevel)
   fullName: System.Data.Common.DbConnection.BeginTransaction(System.Data.IsolationLevel)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 80
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: BeginTransaction
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 268
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Starts a database transaction with the specified isolation level.
   syntax:
     content: public DbTransaction BeginTransaction(IsolationLevel isolationLevel)
     content.vb: Public Function BeginTransaction(isolationLevel As IsolationLevel) As DbTransaction
     parameters:
     - id: isolationLevel
       type: System.Data.IsolationLevel
-      description: Specifies the isolation level for the transaction.
     return:
       type: System.Data.Common.DbTransaction
-      description: An object representing the new transaction.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Data.Common.DbConnection.ChangeDatabase(System.String)
+  commentId: M:System.Data.Common.DbConnection.ChangeDatabase(System.String)
   id: ChangeDatabase(System.String)
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: ChangeDatabase(String)
+  nameWithType: DbConnection.ChangeDatabase(String)
   fullName: System.Data.Common.DbConnection.ChangeDatabase(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 88
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ChangeDatabase
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 269
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Changes the current database for an open connection.
   syntax:
     content: public abstract void ChangeDatabase(string databaseName)
     content.vb: Public MustOverride Sub ChangeDatabase(databaseName As String)
     parameters:
     - id: databaseName
       type: System.String
-      description: Specifies the name of the database for the connection to use.
+  implements:
+  - System.Data.IDbConnection.ChangeDatabase(System.String)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
 - uid: System.Data.Common.DbConnection.Close
+  commentId: M:System.Data.Common.DbConnection.Close
   id: Close
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: Close()
+  nameWithType: DbConnection.Close()
   fullName: System.Data.Common.DbConnection.Close()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 86
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Close
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 270
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Closes the connection to the database. This is the preferred method of closing any open connection.
   syntax:
     content: public abstract void Close()
     content.vb: Public MustOverride Sub Close
-  exceptions:
-  - type: System.Data.Common.DbException
-    description: The connection-level error that occurred while opening the connection.
+  implements:
+  - System.Data.IDbConnection.Close
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
 - uid: System.Data.Common.DbConnection.CreateCommand
+  commentId: M:System.Data.Common.DbConnection.CreateCommand
   id: CreateCommand
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: CreateCommand()
+  nameWithType: DbConnection.CreateCommand()
   fullName: System.Data.Common.DbConnection.CreateCommand()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 90
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateCommand
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 271
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Creates and returns a <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref> object associated with the current connection.
   syntax:
     content: public DbCommand CreateCommand()
     content.vb: Public Function CreateCommand As DbCommand
     return:
       type: System.Data.Common.DbCommand
-      description: A <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Data.Common.DbConnection.CreateDbCommand
+  commentId: M:System.Data.Common.DbConnection.CreateDbCommand
   id: CreateDbCommand
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: CreateDbCommand()
+  nameWithType: DbConnection.CreateDbCommand()
   fullName: System.Data.Common.DbConnection.CreateDbCommand()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 96
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateDbCommand
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 272
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Creates and returns a <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref> object associated with the current connection.
   syntax:
     content: protected abstract DbCommand CreateDbCommand()
     content.vb: Protected MustOverride Function CreateDbCommand As DbCommand
     return:
       type: System.Data.Common.DbCommand
-      description: A <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
 - uid: System.Data.Common.DbConnection.OnStateChange(System.Data.StateChangeEventArgs)
+  commentId: M:System.Data.Common.DbConnection.OnStateChange(System.Data.StateChangeEventArgs)
   id: OnStateChange(System.Data.StateChangeEventArgs)
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: OnStateChange(StateChangeEventArgs)
+  nameWithType: DbConnection.OnStateChange(StateChangeEventArgs)
   fullName: System.Data.Common.DbConnection.OnStateChange(System.Data.StateChangeEventArgs)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 99
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OnStateChange
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 273
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Raises the <xref href="System.Data.Common.DbConnection.StateChange" data-throw-if-not-resolved="false"></xref> event.
   syntax:
     content: protected virtual void OnStateChange(StateChangeEventArgs stateChange)
     content.vb: Protected Overridable Sub OnStateChange(stateChange As StateChangeEventArgs)
     parameters:
     - id: stateChange
       type: System.Data.StateChangeEventArgs
-      description: A <xref href="System.Data.StateChangeEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data.
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
 - uid: System.Data.Common.DbConnection.Open
+  commentId: M:System.Data.Common.DbConnection.Open
   id: Open
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: Open()
+  nameWithType: DbConnection.Open()
   fullName: System.Data.Common.DbConnection.Open()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 109
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Open
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 274
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: Opens a database connection with the settings specified by the <xref href="System.Data.Common.DbConnection.ConnectionString" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public abstract void Open()
     content.vb: Public MustOverride Sub Open
+  implements:
+  - System.Data.IDbConnection.Open
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
 - uid: System.Data.Common.DbConnection.OpenAsync
+  commentId: M:System.Data.Common.DbConnection.OpenAsync
   id: OpenAsync
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: OpenAsync()
+  nameWithType: DbConnection.OpenAsync()
   fullName: System.Data.Common.DbConnection.OpenAsync()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 111
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OpenAsync
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 275
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: An asynchronous version of <xref href="System.Data.Common.DbConnection.Open" data-throw-if-not-resolved="false"></xref>, which opens a database connection with the settings specified by the <xref href="System.Data.Common.DbConnection.ConnectionString" data-throw-if-not-resolved="false"></xref>. This method invokes the virtual method <xref href="System.Data.Common.DbConnection.OpenAsync(System.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> with CancellationToken.None.
   syntax:
     content: public Threading.Tasks.Task OpenAsync()
     content.vb: Public Function OpenAsync As Threading.Tasks.Task
     return:
       type: System.Threading.Tasks.Task
-      description: A task representing the asynchronous operation.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Data.Common.DbConnection.OpenAsync(System.Threading.CancellationToken)
+  commentId: M:System.Data.Common.DbConnection.OpenAsync(System.Threading.CancellationToken)
   id: OpenAsync(System.Threading.CancellationToken)
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: OpenAsync(Threading.CancellationToken)
+  nameWithType: DbConnection.OpenAsync(Threading.CancellationToken)
   fullName: System.Data.Common.DbConnection.OpenAsync(System.Threading.CancellationToken)
   type: Method
   source:
@@ -426,48 +699,173 @@ items:
       path: src/System.Data.Common/ref/System.Data.Common.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: OpenAsync
     path: src/System.Data.Common/ref/System.Data.Common.cs
-    startLine: 161
+    startLine: 276
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
-  summary: This is the asynchronous version of <xref href="System.Data.Common.DbConnection.Open" data-throw-if-not-resolved="false"></xref>. Providers should override with an appropriate implementation. The cancellation token can optionally be honored.The default implementation invokes the synchronous <xref href="System.Data.Common.DbConnection.Open" data-throw-if-not-resolved="false"></xref> call and returns a completed task. The default implementation will return a cancelled task if passed an already cancelled cancellationToken. Exceptions thrown by Open will be communicated via the returned Task Exception property.Do not invoke other methods and properties of the DbConnection object until the returned Task is complete.
   syntax:
     content: public virtual Threading.Tasks.Task OpenAsync(Threading.CancellationToken cancellationToken)
     content.vb: Public Overridable Function OpenAsync(cancellationToken As Threading.CancellationToken) As Threading.Tasks.Task
     parameters:
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: The cancellation instruction.
     return:
       type: System.Threading.Tasks.Task
-      description: A task representing the asynchronous operation.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: System.Data.Common.DbConnection.System#Data#IDbConnection#BeginTransaction
+  commentId: M:System.Data.Common.DbConnection.System#Data#IDbConnection#BeginTransaction
+  id: System#Data#IDbConnection#BeginTransaction
+  isEii: true
+  parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
+  name: IDbConnection.BeginTransaction()
+  nameWithType: DbConnection.IDbConnection.BeginTransaction()
+  fullName: System.Data.Common.DbConnection.System.Data.IDbConnection.BeginTransaction()
+  type: Method
+  source:
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.Data.IDbConnection.BeginTransaction
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 277
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  syntax:
+    content: IDbTransaction IDbConnection.BeginTransaction()
+    content.vb: Function System.Data.IDbConnection.BeginTransaction As IDbTransaction Implements IDbConnection.BeginTransaction
+    return:
+      type: System.Data.IDbTransaction
+  implements:
+  - System.Data.IDbConnection.BeginTransaction
+  nameWithType.vb: DbConnection.System.Data.IDbConnection.BeginTransaction()
+  name.vb: System.Data.IDbConnection.BeginTransaction()
+- uid: System.Data.Common.DbConnection.System#Data#IDbConnection#BeginTransaction(System.Data.IsolationLevel)
+  commentId: M:System.Data.Common.DbConnection.System#Data#IDbConnection#BeginTransaction(System.Data.IsolationLevel)
+  id: System#Data#IDbConnection#BeginTransaction(System.Data.IsolationLevel)
+  isEii: true
+  parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
+  name: IDbConnection.BeginTransaction(IsolationLevel)
+  nameWithType: DbConnection.IDbConnection.BeginTransaction(IsolationLevel)
+  fullName: System.Data.Common.DbConnection.System.Data.IDbConnection.BeginTransaction(System.Data.IsolationLevel)
+  type: Method
+  source:
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.Data.IDbConnection.BeginTransaction
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 278
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  syntax:
+    content: IDbTransaction IDbConnection.BeginTransaction(IsolationLevel isolationLevel)
+    content.vb: Function System.Data.IDbConnection.BeginTransaction(isolationLevel As IsolationLevel) As IDbTransaction Implements IDbConnection.BeginTransaction
+    parameters:
+    - id: isolationLevel
+      type: System.Data.IsolationLevel
+    return:
+      type: System.Data.IDbTransaction
+  implements:
+  - System.Data.IDbConnection.BeginTransaction(System.Data.IsolationLevel)
+  nameWithType.vb: DbConnection.System.Data.IDbConnection.BeginTransaction(IsolationLevel)
+  name.vb: System.Data.IDbConnection.BeginTransaction(IsolationLevel)
+- uid: System.Data.Common.DbConnection.System#Data#IDbConnection#CreateCommand
+  commentId: M:System.Data.Common.DbConnection.System#Data#IDbConnection#CreateCommand
+  id: System#Data#IDbConnection#CreateCommand
+  isEii: true
+  parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
+  name: IDbConnection.CreateCommand()
+  nameWithType: DbConnection.IDbConnection.CreateCommand()
+  fullName: System.Data.Common.DbConnection.System.Data.IDbConnection.CreateCommand()
+  type: Method
+  source:
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.Data.IDbConnection.CreateCommand
+    path: src/System.Data.Common/ref/System.Data.Common.cs
+    startLine: 279
+  assemblies:
+  - System.Data.Common
+  namespace: System.Data.Common
+  syntax:
+    content: IDbCommand IDbConnection.CreateCommand()
+    content.vb: Function System.Data.IDbConnection.CreateCommand As IDbCommand Implements IDbConnection.CreateCommand
+    return:
+      type: System.Data.IDbCommand
+  implements:
+  - System.Data.IDbConnection.CreateCommand
+  nameWithType.vb: DbConnection.System.Data.IDbConnection.CreateCommand()
+  name.vb: System.Data.IDbConnection.CreateCommand()
 - uid: System.Data.Common.DbConnection.Dispose
+  commentId: M:System.Data.Common.DbConnection.Dispose
   id: Dispose
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: Dispose()
+  nameWithType: DbConnection.Dispose()
   fullName: System.Data.Common.DbConnection.Dispose()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 136
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Dispose
+    path: src/System.Data.Common/ref/System.Data.Common.Manual.cs
+    startLine: 18
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
   syntax:
     content: public void Dispose()
     content.vb: Public Sub Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Data.Common.DbConnection.Dispose(System.Boolean)
+  commentId: M:System.Data.Common.DbConnection.Dispose(System.Boolean)
   id: Dispose(System.Boolean)
   parent: System.Data.Common.DbConnection
+  langs:
+  - csharp
+  - vb
   name: Dispose(Boolean)
+  nameWithType: DbConnection.Dispose(Boolean)
   fullName: System.Data.Common.DbConnection.Dispose(System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.Common/src/System/Data/Common/DbConnection.cs
-    startLine: 141
+    remote:
+      path: src/System.Data.Common/ref/System.Data.Common.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Dispose
+    path: src/System.Data.Common/ref/System.Data.Common.Manual.cs
+    startLine: 19
   assemblies:
   - System.Data.Common
   namespace: System.Data.Common
@@ -477,93 +875,372 @@ items:
     parameters:
     - id: disposing
       type: System.Boolean
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
 references:
 - uid: System.Data.Common
+  commentId: N:System.Data.Common
   isExternal: false
   name: System.Data.Common
+  nameWithType: System.Data.Common
   fullName: System.Data.Common
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
+- uid: System.Data.IDbConnection
+  commentId: T:System.Data.IDbConnection
+  parent: System.Data
+  isExternal: false
+  name: IDbConnection
+  nameWithType: IDbConnection
+  fullName: System.Data.IDbConnection
 - uid: System.IDisposable
+  commentId: T:System.IDisposable
   parent: System
   isExternal: false
   name: IDisposable
+  nameWithType: IDisposable
   fullName: System.IDisposable
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: false
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
+- uid: System.Data.IDbConnection.ConnectionString
+  commentId: P:System.Data.IDbConnection.ConnectionString
+  parent: System.Data.IDbConnection
+  isExternal: false
+  name: ConnectionString
+  nameWithType: IDbConnection.ConnectionString
+  fullName: System.Data.IDbConnection.ConnectionString
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
+- uid: System.Data.IDbConnection.ConnectionTimeout
+  commentId: P:System.Data.IDbConnection.ConnectionTimeout
+  parent: System.Data.IDbConnection
+  isExternal: false
+  name: ConnectionTimeout
+  nameWithType: IDbConnection.ConnectionTimeout
+  fullName: System.Data.IDbConnection.ConnectionTimeout
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
+- uid: System.Data.IDbConnection.Database
+  commentId: P:System.Data.IDbConnection.Database
+  parent: System.Data.IDbConnection
+  isExternal: false
+  name: Database
+  nameWithType: IDbConnection.Database
+  fullName: System.Data.IDbConnection.Database
+- uid: System.Data.IDbConnection.State
+  commentId: P:System.Data.IDbConnection.State
+  parent: System.Data.IDbConnection
+  isExternal: false
+  name: State
+  nameWithType: IDbConnection.State
+  fullName: System.Data.IDbConnection.State
 - uid: System.Data.ConnectionState
+  commentId: T:System.Data.ConnectionState
   parent: System.Data
   isExternal: false
   name: ConnectionState
+  nameWithType: ConnectionState
   fullName: System.Data.ConnectionState
-- uid: System.Data
+- uid: System.Data.StateChangeEventHandler
+  commentId: T:System.Data.StateChangeEventHandler
+  parent: System.Data
   isExternal: false
-  name: System.Data
-  fullName: System.Data
+  name: StateChangeEventHandler
+  nameWithType: StateChangeEventHandler
+  fullName: System.Data.StateChangeEventHandler
 - uid: System.Data.IsolationLevel
+  commentId: T:System.Data.IsolationLevel
   parent: System.Data
   isExternal: false
   name: IsolationLevel
+  nameWithType: IsolationLevel
   fullName: System.Data.IsolationLevel
 - uid: System.Data.Common.DbTransaction
+  commentId: T:System.Data.Common.DbTransaction
   parent: System.Data.Common
   isExternal: false
   name: DbTransaction
+  nameWithType: DbTransaction
   fullName: System.Data.Common.DbTransaction
+- uid: System.Data.IDbConnection.ChangeDatabase(System.String)
+  commentId: M:System.Data.IDbConnection.ChangeDatabase(System.String)
+  parent: System.Data.IDbConnection
+  isExternal: true
+  name: ChangeDatabase(String)
+  nameWithType: IDbConnection.ChangeDatabase(String)
+  fullName: System.Data.IDbConnection.ChangeDatabase(System.String)
+  spec.csharp:
+  - uid: System.Data.IDbConnection.ChangeDatabase(System.String)
+    name: ChangeDatabase
+    nameWithType: IDbConnection.ChangeDatabase
+    fullName: System.Data.IDbConnection.ChangeDatabase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.IDbConnection.ChangeDatabase(System.String)
+    name: ChangeDatabase
+    nameWithType: IDbConnection.ChangeDatabase
+    fullName: System.Data.IDbConnection.ChangeDatabase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.IDbConnection.Close
+  commentId: M:System.Data.IDbConnection.Close
+  parent: System.Data.IDbConnection
+  isExternal: false
+  name: Close()
+  nameWithType: IDbConnection.Close()
+  fullName: System.Data.IDbConnection.Close()
+  spec.csharp:
+  - uid: System.Data.IDbConnection.Close
+    name: Close
+    nameWithType: IDbConnection.Close
+    fullName: System.Data.IDbConnection.Close
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.IDbConnection.Close
+    name: Close
+    nameWithType: IDbConnection.Close
+    fullName: System.Data.IDbConnection.Close
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Data.Common.DbCommand
+  commentId: T:System.Data.Common.DbCommand
   parent: System.Data.Common
   isExternal: false
   name: DbCommand
+  nameWithType: DbCommand
   fullName: System.Data.Common.DbCommand
 - uid: System.Data.StateChangeEventArgs
+  commentId: T:System.Data.StateChangeEventArgs
   parent: System.Data
   isExternal: false
   name: StateChangeEventArgs
+  nameWithType: StateChangeEventArgs
   fullName: System.Data.StateChangeEventArgs
+- uid: System.Data.IDbConnection.Open
+  commentId: M:System.Data.IDbConnection.Open
+  parent: System.Data.IDbConnection
+  isExternal: false
+  name: Open()
+  nameWithType: IDbConnection.Open()
+  fullName: System.Data.IDbConnection.Open()
+  spec.csharp:
+  - uid: System.Data.IDbConnection.Open
+    name: Open
+    nameWithType: IDbConnection.Open
+    fullName: System.Data.IDbConnection.Open
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.IDbConnection.Open
+    name: Open
+    nameWithType: IDbConnection.Open
+    fullName: System.Data.IDbConnection.Open
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks
   isExternal: false
   name: Threading.Tasks.Task
+  nameWithType: Threading.Tasks.Task
   fullName: System.Threading.Tasks.Task
 - uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
   isExternal: false
   name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
   fullName: System.Threading.Tasks
 - uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
   parent: System.Threading
   isExternal: false
   name: Threading.CancellationToken
+  nameWithType: Threading.CancellationToken
   fullName: System.Threading.CancellationToken
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
+- uid: System.Data.IDbConnection.BeginTransaction
+  commentId: M:System.Data.IDbConnection.BeginTransaction
+  parent: System.Data.IDbConnection
+  isExternal: false
+  name: BeginTransaction()
+  nameWithType: IDbConnection.BeginTransaction()
+  fullName: System.Data.IDbConnection.BeginTransaction()
+  spec.csharp:
+  - uid: System.Data.IDbConnection.BeginTransaction
+    name: BeginTransaction
+    nameWithType: IDbConnection.BeginTransaction
+    fullName: System.Data.IDbConnection.BeginTransaction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.IDbConnection.BeginTransaction
+    name: BeginTransaction
+    nameWithType: IDbConnection.BeginTransaction
+    fullName: System.Data.IDbConnection.BeginTransaction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.IDbTransaction
+  commentId: T:System.Data.IDbTransaction
+  parent: System.Data
+  isExternal: false
+  name: IDbTransaction
+  nameWithType: IDbTransaction
+  fullName: System.Data.IDbTransaction
+- uid: System.Data.IDbConnection.BeginTransaction(System.Data.IsolationLevel)
+  commentId: M:System.Data.IDbConnection.BeginTransaction(System.Data.IsolationLevel)
+  parent: System.Data.IDbConnection
+  isExternal: false
+  name: BeginTransaction(IsolationLevel)
+  nameWithType: IDbConnection.BeginTransaction(IsolationLevel)
+  fullName: System.Data.IDbConnection.BeginTransaction(System.Data.IsolationLevel)
+  spec.csharp:
+  - uid: System.Data.IDbConnection.BeginTransaction(System.Data.IsolationLevel)
+    name: BeginTransaction
+    nameWithType: IDbConnection.BeginTransaction
+    fullName: System.Data.IDbConnection.BeginTransaction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.IsolationLevel
+    name: IsolationLevel
+    nameWithType: IsolationLevel
+    fullName: System.Data.IsolationLevel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.IDbConnection.BeginTransaction(System.Data.IsolationLevel)
+    name: BeginTransaction
+    nameWithType: IDbConnection.BeginTransaction
+    fullName: System.Data.IDbConnection.BeginTransaction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.IsolationLevel
+    name: IsolationLevel
+    nameWithType: IsolationLevel
+    fullName: System.Data.IsolationLevel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.IDbConnection.CreateCommand
+  commentId: M:System.Data.IDbConnection.CreateCommand
+  parent: System.Data.IDbConnection
+  isExternal: false
+  name: CreateCommand()
+  nameWithType: IDbConnection.CreateCommand()
+  fullName: System.Data.IDbConnection.CreateCommand()
+  spec.csharp:
+  - uid: System.Data.IDbConnection.CreateCommand
+    name: CreateCommand
+    nameWithType: IDbConnection.CreateCommand
+    fullName: System.Data.IDbConnection.CreateCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.IDbConnection.CreateCommand
+    name: CreateCommand
+    nameWithType: IDbConnection.CreateCommand
+    fullName: System.Data.IDbConnection.CreateCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.IDbCommand
+  commentId: T:System.Data.IDbCommand
+  parent: System.Data
+  isExternal: false
+  name: IDbCommand
+  nameWithType: IDbCommand
+  fullName: System.Data.IDbCommand
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: System.Data.Common.DbException
-  isExternal: false
-  name: DbException
-  fullName: System.Data.Common.DbException

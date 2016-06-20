@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.InteropServices.CallingConvention
+  commentId: T:System.Runtime.InteropServices.CallingConvention
   id: CallingConvention
   parent: System.Runtime.InteropServices
   children:
@@ -7,93 +8,176 @@ items:
   - System.Runtime.InteropServices.CallingConvention.StdCall
   - System.Runtime.InteropServices.CallingConvention.ThisCall
   - System.Runtime.InteropServices.CallingConvention.Winapi
+  langs:
+  - csharp
+  - vb
   name: CallingConvention
+  nameWithType: CallingConvention
   fullName: System.Runtime.InteropServices.CallingConvention
   type: Enum
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/InteropServices/CallingConvention.cs
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/InteropServices/CallingConvention.cs
-    startLine: 10
+      repo: https://github.com/dotnet/corefx.git
+    id: CallingConvention
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 63
   assemblies:
-  - System.Runtime.InteropServices.PInvoke
+  - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: Specifies the calling convention required to call methods implemented in unmanaged code.
   syntax:
     content: 'public enum CallingConvention : int'
     content.vb: Public Enum CallingConvention As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
 - uid: System.Runtime.InteropServices.CallingConvention.Cdecl
+  commentId: F:System.Runtime.InteropServices.CallingConvention.Cdecl
   id: Cdecl
   parent: System.Runtime.InteropServices.CallingConvention
+  langs:
+  - csharp
+  - vb
   name: Cdecl
+  nameWithType: CallingConvention.Cdecl
   fullName: System.Runtime.InteropServices.CallingConvention.Cdecl
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/CallingConvention.cs
-    startLine: 15
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Cdecl
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 65
   assemblies:
-  - System.Runtime.InteropServices.PInvoke
+  - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: The caller cleans the stack. This enables calling functions with varargs, which makes it appropriate to use for methods that accept a variable number of parameters, such as Printf.
   syntax:
     content: Cdecl = null
     content.vb: Cdecl = Nothing
+    return:
+      type: System.Runtime.InteropServices.CallingConvention
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Runtime.InteropServices.CallingConvention.StdCall
+  commentId: F:System.Runtime.InteropServices.CallingConvention.StdCall
   id: StdCall
   parent: System.Runtime.InteropServices.CallingConvention
+  langs:
+  - csharp
+  - vb
   name: StdCall
+  nameWithType: CallingConvention.StdCall
   fullName: System.Runtime.InteropServices.CallingConvention.StdCall
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/CallingConvention.cs
-    startLine: 16
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: StdCall
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 66
   assemblies:
-  - System.Runtime.InteropServices.PInvoke
+  - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: The callee cleans the stack. This is the default convention for calling unmanaged functions with platform invoke.
   syntax:
     content: StdCall = null
     content.vb: StdCall = Nothing
+    return:
+      type: System.Runtime.InteropServices.CallingConvention
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Runtime.InteropServices.CallingConvention.ThisCall
+  commentId: F:System.Runtime.InteropServices.CallingConvention.ThisCall
   id: ThisCall
   parent: System.Runtime.InteropServices.CallingConvention
+  langs:
+  - csharp
+  - vb
   name: ThisCall
+  nameWithType: CallingConvention.ThisCall
   fullName: System.Runtime.InteropServices.CallingConvention.ThisCall
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/CallingConvention.cs
-    startLine: 17
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ThisCall
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 67
   assemblies:
-  - System.Runtime.InteropServices.PInvoke
+  - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: The first parameter is the this pointer and is stored in register ECX. Other parameters are pushed on the stack. This calling convention is used to call methods on classes exported from an unmanaged DLL.
   syntax:
     content: ThisCall = null
     content.vb: ThisCall = Nothing
+    return:
+      type: System.Runtime.InteropServices.CallingConvention
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Runtime.InteropServices.CallingConvention.Winapi
+  commentId: F:System.Runtime.InteropServices.CallingConvention.Winapi
   id: Winapi
   parent: System.Runtime.InteropServices.CallingConvention
+  langs:
+  - csharp
+  - vb
   name: Winapi
+  nameWithType: CallingConvention.Winapi
   fullName: System.Runtime.InteropServices.CallingConvention.Winapi
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/CallingConvention.cs
-    startLine: 14
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Winapi
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 68
   assemblies:
-  - System.Runtime.InteropServices.PInvoke
+  - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: This member is not actually a calling convention, but instead uses the default platform calling convention. For example, on Windows the default is <xref href="System.Runtime.InteropServices.CallingConvention.StdCall" data-throw-if-not-resolved="false"></xref> and on Windows CE.NET it is <xref href="System.Runtime.InteropServices.CallingConvention.Cdecl" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: Winapi = null
     content.vb: Winapi = Nothing
+    return:
+      type: System.Runtime.InteropServices.CallingConvention
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
   isExternal: false
   name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
+- uid: System.Runtime.InteropServices.CallingConvention
+  commentId: T:System.Runtime.InteropServices.CallingConvention
+  parent: System.Runtime.InteropServices
+  isExternal: false
+  name: CallingConvention
+  nameWithType: CallingConvention
+  fullName: System.Runtime.InteropServices.CallingConvention

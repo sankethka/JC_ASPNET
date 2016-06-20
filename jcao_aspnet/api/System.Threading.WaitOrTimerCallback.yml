@@ -1,48 +1,65 @@
 items:
 - uid: System.Threading.WaitOrTimerCallback
+  commentId: T:System.Threading.WaitOrTimerCallback
   id: WaitOrTimerCallback
   parent: System.Threading
   children: []
+  langs:
+  - csharp
+  - vb
   name: WaitOrTimerCallback
+  nameWithType: WaitOrTimerCallback
   fullName: System.Threading.WaitOrTimerCallback
   type: Delegate
   source:
     remote:
-      path: src/mscorlib/src/System/Threading/ThreadPool.cs
+      path: src/System.Threading.ThreadPool/ref/System.Threading.ThreadPool.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/ThreadPool.cs
-    startLine: 1133
+      repo: https://github.com/dotnet/corefx.git
+    id: WaitOrTimerCallback
+    path: src/System.Threading.ThreadPool/ref/System.Threading.ThreadPool.cs
+    startLine: 28
   assemblies:
   - System.Threading.ThreadPool
   namespace: System.Threading
-  summary: Represents a method to be called when a <xref href="System.Threading.WaitHandle" data-throw-if-not-resolved="false"></xref> is signaled or times out.
   syntax:
     content: public delegate void WaitOrTimerCallback(object state, bool timedOut);
     content.vb: Public Delegate Sub WaitOrTimerCallback(state As Object, timedOut As Boolean)
     parameters:
     - id: state
       type: System.Object
-      description: An object containing information to be used by the callback method each time it executes.
     - id: timedOut
       type: System.Boolean
-      description: true if the <xref href="System.Threading.WaitHandle" data-throw-if-not-resolved="false"></xref> timed out; false if it was signaled.
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
 references:
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System

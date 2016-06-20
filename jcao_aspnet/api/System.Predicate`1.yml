@@ -1,47 +1,68 @@
 items:
 - uid: System.Predicate`1
+  commentId: T:System.Predicate`1
   id: Predicate`1
   parent: System
   children: []
+  langs:
+  - csharp
+  - vb
   name: Predicate<T>
-  name.vb: Predicate(Of T)
+  nameWithType: Predicate<T>
   fullName: System.Predicate<T>
-  fullName.vb: System.Predicate(Of T)
   type: Delegate
   source:
     remote:
-      path: src/mscorlib/src/System/Action.cs
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Action.cs
-    startLine: 92
+      repo: https://github.com/dotnet/corefx.git
+    id: Predicate
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1360
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Represents the method that defines a set of criteria and determines whether the specified object meets those criteria.
   syntax:
     content: public delegate bool Predicate<in T>(T obj);
     content.vb: Public Delegate Function Predicate(Of In T)(obj As T) As Boolean
     parameters:
     - id: obj
       type: '{T}'
-      description: The object to compare against the criteria defined within the method represented by this delegate.
     typeParameters:
     - id: T
     return:
       type: System.Boolean
-      description: true if *obj* meets the criteria defined within the method represented by this delegate; otherwise, false.
+  nameWithType.vb: Predicate(Of T)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: '{T}'
-  isExternal: false
+  commentId: '!:T'
+  definition: T
   name: T
+  nameWithType: T
   fullName: T
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T

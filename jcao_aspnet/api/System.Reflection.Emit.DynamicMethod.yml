@@ -1,5 +1,6 @@
 items:
 - uid: System.Reflection.Emit.DynamicMethod
+  commentId: T:System.Reflection.Emit.DynamicMethod
   id: DynamicMethod
   parent: System.Reflection.Emit
   children:
@@ -25,656 +26,852 @@ items:
   - System.Reflection.Emit.DynamicMethod.ReturnParameter
   - System.Reflection.Emit.DynamicMethod.ReturnType
   - System.Reflection.Emit.DynamicMethod.ToString
+  langs:
+  - csharp
+  - vb
   name: DynamicMethod
+  nameWithType: DynamicMethod
   fullName: System.Reflection.Emit.DynamicMethod
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.Manual.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 20
+      repo: https://github.com/dotnet/corefx.git
+    id: DynamicMethod
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.Manual.cs
+    startLine: 10
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Defines and represents a dynamic method that can be compiled, executed, and discarded. Discarded methods are available for garbage collection.
   syntax:
     content: 'public sealed class DynamicMethod : MethodInfo, MethodInfo'
-    content.vb: Public NotInheritable Class DynamicMethod Inherits MethodInfo Implements MethodInfo
+    content.vb: >-
+      Public NotInheritable Class DynamicMethod
+          Inherits MethodInfo
+          Implements MethodInfo
   inheritance:
   - System.Object
   implements:
   - System.Reflection.MethodInfo
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Reflection.MethodAttributes,System.Reflection.CallingConventions,System.Type,System.Type[],System.Reflection.Module,System.Boolean)
+  commentId: M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Reflection.MethodAttributes,System.Reflection.CallingConventions,System.Type,System.Type[],System.Reflection.Module,System.Boolean)
   id: '#ctor(System.String,System.Reflection.MethodAttributes,System.Reflection.CallingConventions,System.Type,System.Type[],System.Reflection.Module,System.Boolean)'
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: DynamicMethod(String, MethodAttributes, CallingConventions, Type, Type[], Module, Boolean)
-  name.vb: DynamicMethod(String, MethodAttributes, CallingConventions, Type, Type(), Module, Boolean)
+  nameWithType: DynamicMethod.DynamicMethod(String, MethodAttributes, CallingConventions, Type, Type[], Module, Boolean)
   fullName: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Reflection.MethodAttributes, System.Reflection.CallingConventions, System.Type, System.Type[], System.Reflection.Module, System.Boolean)
-  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Reflection.MethodAttributes, System.Reflection.CallingConventions, System.Type, System.Type(), System.Reflection.Module, System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 165
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 12
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Creates a dynamic method that is global to a module, specifying the method name, attributes, calling convention, return type, parameter types, module, and whether just-in-time (JIT) visibility checks should be skipped for types and members accessed by the Microsoft intermediate language (MSIL) of the dynamic method.
   syntax:
     content: public DynamicMethod(string name, MethodAttributes attributes, CallingConventions callingConvention, Type returnType, Type[] parameterTypes, Module m, bool skipVisibility)
-    content.vb: Public Sub New(name As String, attributes As MethodAttributes, callingConvention As CallingConventions, returnType As Type, parameterTypes As Type(), m As Module, skipVisibility As Boolean)
+    content.vb: Public Sub New(name As String, attributes As MethodAttributes, callingConvention As CallingConventions, returnType As Type, parameterTypes As Type(), m As  Module, skipVisibility As Boolean)
     parameters:
     - id: name
       type: System.String
-      description: The name of the dynamic method. This can be a zero-length string, but it cannot be null.
     - id: attributes
       type: System.Reflection.MethodAttributes
-      description: A bitwise combination of <xref href="System.Reflection.MethodAttributes" data-throw-if-not-resolved="false"></xref> values that specifies the attributes of the dynamic method. The only combination allowed is <xref href="System.Reflection.MethodAttributes.Public" data-throw-if-not-resolved="false"></xref> and <xref href="System.Reflection.MethodAttributes.Static" data-throw-if-not-resolved="false"></xref>.
     - id: callingConvention
       type: System.Reflection.CallingConventions
-      description: The calling convention for the dynamic method. Must be <xref href="System.Reflection.CallingConventions.Standard" data-throw-if-not-resolved="false"></xref>.
     - id: returnType
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that specifies the return type of the dynamic method, or null if the method has no return type.
     - id: parameterTypes
       type: System.Type[]
-      description: An array of <xref href="System.Type" data-throw-if-not-resolved="false"></xref> objects specifying the types of the parameters of the dynamic method, or null if the method has no parameters.
     - id: m
       type: System.Reflection.Module
-      description: A <xref href="System.Reflection.Module" data-throw-if-not-resolved="false"></xref> representing the module with which the dynamic method is to be logically associated.
     - id: skipVisibility
       type: System.Boolean
-      description: true to skip JIT visibility checks on types and members accessed by the MSIL of the dynamic method; otherwise, false.
-  exceptions:
-  - type: System.ArgumentException
-    description: An element of *parameterTypes* is null or <xref href="System.Void" data-throw-if-not-resolved="false"></xref>.-or-*m* is a module that provides anonymous hosting for dynamic methods.
-  - type: System.ArgumentNullException
-    description: '*name* is null. -or-*m* is null.'
-  - type: System.NotSupportedException
-    description: '*attributes* is a combination of flags other than <xref href="System.Reflection.MethodAttributes.Public" data-throw-if-not-resolved="false"></xref> and <xref href="System.Reflection.MethodAttributes.Static" data-throw-if-not-resolved="false"></xref>.-or-*callingConvention* is not <xref href="System.Reflection.CallingConventions.Standard" data-throw-if-not-resolved="false"></xref>.-or-*returnType* is a type for which <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.'
+  nameWithType.vb: DynamicMethod.DynamicMethod(String, MethodAttributes, CallingConventions, Type, Type(), Module, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Reflection.MethodAttributes, System.Reflection.CallingConventions, System.Type, System.Type(), System.Reflection.Module, System.Boolean)
+  name.vb: DynamicMethod(String, MethodAttributes, CallingConventions, Type, Type(), Module, Boolean)
 - uid: System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Reflection.MethodAttributes,System.Reflection.CallingConventions,System.Type,System.Type[],System.Type,System.Boolean)
+  commentId: M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Reflection.MethodAttributes,System.Reflection.CallingConventions,System.Type,System.Type[],System.Type,System.Boolean)
   id: '#ctor(System.String,System.Reflection.MethodAttributes,System.Reflection.CallingConventions,System.Type,System.Type[],System.Type,System.Boolean)'
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: DynamicMethod(String, MethodAttributes, CallingConventions, Type, Type[], Type, Boolean)
-  name.vb: DynamicMethod(String, MethodAttributes, CallingConventions, Type, Type(), Type, Boolean)
+  nameWithType: DynamicMethod.DynamicMethod(String, MethodAttributes, CallingConventions, Type, Type[], Type, Boolean)
   fullName: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Reflection.MethodAttributes, System.Reflection.CallingConventions, System.Type, System.Type[], System.Type, System.Boolean)
-  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Reflection.MethodAttributes, System.Reflection.CallingConventions, System.Type, System.Type(), System.Type, System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 241
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 14
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Creates a dynamic method, specifying the method name, attributes, calling convention, return type, parameter types, the type with which the dynamic method is logically associated, and whether just-in-time (JIT) visibility checks should be skipped for types and members accessed by the Microsoft intermediate language (MSIL) of the dynamic method.
   syntax:
     content: public DynamicMethod(string name, MethodAttributes attributes, CallingConventions callingConvention, Type returnType, Type[] parameterTypes, Type owner, bool skipVisibility)
     content.vb: Public Sub New(name As String, attributes As MethodAttributes, callingConvention As CallingConventions, returnType As Type, parameterTypes As Type(), owner As Type, skipVisibility As Boolean)
     parameters:
     - id: name
       type: System.String
-      description: The name of the dynamic method. This can be a zero-length string, but it cannot be null.
     - id: attributes
       type: System.Reflection.MethodAttributes
-      description: A bitwise combination of <xref href="System.Reflection.MethodAttributes" data-throw-if-not-resolved="false"></xref> values that specifies the attributes of the dynamic method. The only combination allowed is <xref href="System.Reflection.MethodAttributes.Public" data-throw-if-not-resolved="false"></xref> and <xref href="System.Reflection.MethodAttributes.Static" data-throw-if-not-resolved="false"></xref>.
     - id: callingConvention
       type: System.Reflection.CallingConventions
-      description: The calling convention for the dynamic method. Must be <xref href="System.Reflection.CallingConventions.Standard" data-throw-if-not-resolved="false"></xref>.
     - id: returnType
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that specifies the return type of the dynamic method, or null if the method has no return type.
     - id: parameterTypes
       type: System.Type[]
-      description: An array of <xref href="System.Type" data-throw-if-not-resolved="false"></xref> objects specifying the types of the parameters of the dynamic method, or null if the method has no parameters.
     - id: owner
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> with which the dynamic method is logically associated. The dynamic method has access to all members of the type.
     - id: skipVisibility
       type: System.Boolean
-      description: true to skip JIT visibility checks on types and members accessed by the MSIL of the dynamic method; otherwise, false.
-  exceptions:
-  - type: System.ArgumentException
-    description: An element of *parameterTypes* is null or <xref href="System.Void" data-throw-if-not-resolved="false"></xref>. -or-*owner* is an interface, an array, an open generic type, or a type parameter of a generic type or method.
-  - type: System.ArgumentNullException
-    description: '*name* is null. -or-*owner* is null.'
-  - type: System.NotSupportedException
-    description: '*attributes* is a combination of flags other than <xref href="System.Reflection.MethodAttributes.Public" data-throw-if-not-resolved="false"></xref> and <xref href="System.Reflection.MethodAttributes.Static" data-throw-if-not-resolved="false"></xref>.-or-*callingConvention* is not <xref href="System.Reflection.CallingConventions.Standard" data-throw-if-not-resolved="false"></xref>.-or-*returnType* is a type for which <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.'
+  nameWithType.vb: DynamicMethod.DynamicMethod(String, MethodAttributes, CallingConventions, Type, Type(), Type, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Reflection.MethodAttributes, System.Reflection.CallingConventions, System.Type, System.Type(), System.Type, System.Boolean)
+  name.vb: DynamicMethod(String, MethodAttributes, CallingConventions, Type, Type(), Type, Boolean)
 - uid: System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[])
+  commentId: M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[])
   id: '#ctor(System.String,System.Type,System.Type[])'
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: DynamicMethod(String, Type, Type[])
-  name.vb: DynamicMethod(String, Type, Type())
+  nameWithType: DynamicMethod.DynamicMethod(String, Type, Type[])
   fullName: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type[])
-  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type())
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 74
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 16
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Initializes an anonymously hosted dynamic method, specifying the method name, return type, and parameter types.
   syntax:
     content: public DynamicMethod(string name, Type returnType, Type[] parameterTypes)
     content.vb: Public Sub New(name As String, returnType As Type, parameterTypes As Type())
     parameters:
     - id: name
       type: System.String
-      description: The name of the dynamic method. This can be a zero-length string, but it cannot be null.
     - id: returnType
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that specifies the return type of the dynamic method, or null if the method has no return type.
     - id: parameterTypes
       type: System.Type[]
-      description: An array of <xref href="System.Type" data-throw-if-not-resolved="false"></xref> objects specifying the types of the parameters of the dynamic method, or null if the method has no parameters.
-  exceptions:
-  - type: System.ArgumentException
-    description: An element of *parameterTypes* is null or <xref href="System.Void" data-throw-if-not-resolved="false"></xref>.
-  - type: System.ArgumentNullException
-    description: '*name* is null.'
-  - type: System.NotSupportedException
-    description: '*returnType* is a type for which <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.'
+  nameWithType.vb: DynamicMethod.DynamicMethod(String, Type, Type())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type())
+  name.vb: DynamicMethod(String, Type, Type())
 - uid: System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Boolean)
+  commentId: M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Boolean)
   id: '#ctor(System.String,System.Type,System.Type[],System.Boolean)'
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: DynamicMethod(String, Type, Type[], Boolean)
-  name.vb: DynamicMethod(String, Type, Type(), Boolean)
+  nameWithType: DynamicMethod.DynamicMethod(String, Type, Type[], Boolean)
   fullName: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type[], System.Boolean)
-  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type(), System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 94
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 18
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Initializes an anonymously hosted dynamic method, specifying the method name, return type, parameter types, and whether just-in-time (JIT) visibility checks should be skipped for types and members accessed by the Microsoft intermediate language (MSIL) of the dynamic method.
   syntax:
     content: public DynamicMethod(string name, Type returnType, Type[] parameterTypes, bool restrictedSkipVisibility)
     content.vb: Public Sub New(name As String, returnType As Type, parameterTypes As Type(), restrictedSkipVisibility As Boolean)
     parameters:
     - id: name
       type: System.String
-      description: The name of the dynamic method. This can be a zero-length string, but it cannot be null.
     - id: returnType
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that specifies the return type of the dynamic method, or null if the method has no return type.
     - id: parameterTypes
       type: System.Type[]
-      description: An array of <xref href="System.Type" data-throw-if-not-resolved="false"></xref> objects specifying the types of the parameters of the dynamic method, or null if the method has no parameters.
     - id: restrictedSkipVisibility
       type: System.Boolean
-      description: 'true to skip JIT visibility checks on types and members accessed by the MSIL of the dynamic method, with this restriction: the trust level of the assemblies that contain those types and members must be equal to or less than the trust level of the call stack that emits the dynamic method; otherwise, false.'
-  exceptions:
-  - type: System.ArgumentException
-    description: An element of *parameterTypes* is null or <xref href="System.Void" data-throw-if-not-resolved="false"></xref>.
-  - type: System.ArgumentNullException
-    description: '*name* is null.'
-  - type: System.NotSupportedException
-    description: '*returnType* is a type for which <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.'
+  nameWithType.vb: DynamicMethod.DynamicMethod(String, Type, Type(), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type(), System.Boolean)
+  name.vb: DynamicMethod(String, Type, Type(), Boolean)
 - uid: System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Reflection.Module)
+  commentId: M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Reflection.Module)
   id: '#ctor(System.String,System.Type,System.Type[],System.Reflection.Module)'
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: DynamicMethod(String, Type, Type[], Module)
-  name.vb: DynamicMethod(String, Type, Type(), Module)
+  nameWithType: DynamicMethod.DynamicMethod(String, Type, Type[], Module)
   fullName: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type[], System.Reflection.Module)
-  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type(), System.Reflection.Module)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 116
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 20
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Creates a dynamic method that is global to a module, specifying the method name, return type, parameter types, and module.
   syntax:
     content: public DynamicMethod(string name, Type returnType, Type[] parameterTypes, Module m)
-    content.vb: Public Sub New(name As String, returnType As Type, parameterTypes As Type(), m As Module)
+    content.vb: Public Sub New(name As String, returnType As Type, parameterTypes As Type(), m As  Module)
     parameters:
     - id: name
       type: System.String
-      description: The name of the dynamic method. This can be a zero-length string, but it cannot be null.
     - id: returnType
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that specifies the return type of the dynamic method, or null if the method has no return type.
     - id: parameterTypes
       type: System.Type[]
-      description: An array of <xref href="System.Type" data-throw-if-not-resolved="false"></xref> objects specifying the types of the parameters of the dynamic method, or null if the method has no parameters.
     - id: m
       type: System.Reflection.Module
-      description: A <xref href="System.Reflection.Module" data-throw-if-not-resolved="false"></xref> representing the module with which the dynamic method is to be logically associated.
-  exceptions:
-  - type: System.ArgumentException
-    description: An element of *parameterTypes* is null or <xref href="System.Void" data-throw-if-not-resolved="false"></xref>. -or-*m* is a module that provides anonymous hosting for dynamic methods.
-  - type: System.ArgumentNullException
-    description: '*name* is null. -or-*m* is null.'
-  - type: System.NotSupportedException
-    description: '*returnType* is a type for which <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.'
+  nameWithType.vb: DynamicMethod.DynamicMethod(String, Type, Type(), Module)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type(), System.Reflection.Module)
+  name.vb: DynamicMethod(String, Type, Type(), Module)
 - uid: System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Reflection.Module,System.Boolean)
+  commentId: M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Reflection.Module,System.Boolean)
   id: '#ctor(System.String,System.Type,System.Type[],System.Reflection.Module,System.Boolean)'
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: DynamicMethod(String, Type, Type[], Module, Boolean)
-  name.vb: DynamicMethod(String, Type, Type(), Module, Boolean)
+  nameWithType: DynamicMethod.DynamicMethod(String, Type, Type[], Module, Boolean)
   fullName: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type[], System.Reflection.Module, System.Boolean)
-  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type(), System.Reflection.Module, System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 140
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 22
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Creates a dynamic method that is global to a module, specifying the method name, return type, parameter types, module, and whether just-in-time (JIT) visibility checks should be skipped for types and members accessed by the Microsoft intermediate language (MSIL) of the dynamic method.
   syntax:
     content: public DynamicMethod(string name, Type returnType, Type[] parameterTypes, Module m, bool skipVisibility)
-    content.vb: Public Sub New(name As String, returnType As Type, parameterTypes As Type(), m As Module, skipVisibility As Boolean)
+    content.vb: Public Sub New(name As String, returnType As Type, parameterTypes As Type(), m As  Module, skipVisibility As Boolean)
     parameters:
     - id: name
       type: System.String
-      description: The name of the dynamic method. This can be a zero-length string, but it cannot be null.
     - id: returnType
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that specifies the return type of the dynamic method, or null if the method has no return type.
     - id: parameterTypes
       type: System.Type[]
-      description: An array of <xref href="System.Type" data-throw-if-not-resolved="false"></xref> objects specifying the types of the parameters of the dynamic method, or null if the method has no parameters.
     - id: m
       type: System.Reflection.Module
-      description: A <xref href="System.Reflection.Module" data-throw-if-not-resolved="false"></xref> representing the module with which the dynamic method is to be logically associated.
     - id: skipVisibility
       type: System.Boolean
-      description: true to skip JIT visibility checks on types and members accessed by the MSIL of the dynamic method.
-  exceptions:
-  - type: System.ArgumentException
-    description: An element of *parameterTypes* is null or <xref href="System.Void" data-throw-if-not-resolved="false"></xref>. -or-*m* is a module that provides anonymous hosting for dynamic methods.
-  - type: System.ArgumentNullException
-    description: '*name* is null. -or-*m* is null.'
-  - type: System.NotSupportedException
-    description: '*returnType* is a type for which <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.'
+  nameWithType.vb: DynamicMethod.DynamicMethod(String, Type, Type(), Module, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type(), System.Reflection.Module, System.Boolean)
+  name.vb: DynamicMethod(String, Type, Type(), Module, Boolean)
 - uid: System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Type)
+  commentId: M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Type)
   id: '#ctor(System.String,System.Type,System.Type[],System.Type)'
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: DynamicMethod(String, Type, Type[], Type)
-  name.vb: DynamicMethod(String, Type, Type(), Type)
+  nameWithType: DynamicMethod.DynamicMethod(String, Type, Type[], Type)
   fullName: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type[], System.Type)
-  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type(), System.Type)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 192
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 24
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Creates a dynamic method, specifying the method name, return type, parameter types, and the type with which the dynamic method is logically associated.
   syntax:
     content: public DynamicMethod(string name, Type returnType, Type[] parameterTypes, Type owner)
     content.vb: Public Sub New(name As String, returnType As Type, parameterTypes As Type(), owner As Type)
     parameters:
     - id: name
       type: System.String
-      description: The name of the dynamic method. This can be a zero-length string, but it cannot be null.
     - id: returnType
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that specifies the return type of the dynamic method, or null if the method has no return type.
     - id: parameterTypes
       type: System.Type[]
-      description: An array of <xref href="System.Type" data-throw-if-not-resolved="false"></xref> objects specifying the types of the parameters of the dynamic method, or null if the method has no parameters.
     - id: owner
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> with which the dynamic method is logically associated. The dynamic method has access to all members of the type.
-  exceptions:
-  - type: System.ArgumentException
-    description: An element of *parameterTypes* is null or <xref href="System.Void" data-throw-if-not-resolved="false"></xref>.-or- *owner* is an interface, an array, an open generic type, or a type parameter of a generic type or method.
-  - type: System.ArgumentNullException
-    description: '*name* is null. -or-*owner* is null.'
-  - type: System.NotSupportedException
-    description: '*returnType* is null, or is a type for which <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.'
+  nameWithType.vb: DynamicMethod.DynamicMethod(String, Type, Type(), Type)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type(), System.Type)
+  name.vb: DynamicMethod(String, Type, Type(), Type)
 - uid: System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Type,System.Boolean)
+  commentId: M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Type,System.Boolean)
   id: '#ctor(System.String,System.Type,System.Type[],System.Type,System.Boolean)'
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: DynamicMethod(String, Type, Type[], Type, Boolean)
-  name.vb: DynamicMethod(String, Type, Type(), Type, Boolean)
+  nameWithType: DynamicMethod.DynamicMethod(String, Type, Type[], Type, Boolean)
   fullName: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type[], System.Type, System.Boolean)
-  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type(), System.Type, System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 216
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 26
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Creates a dynamic method, specifying the method name, return type, parameter types, the type with which the dynamic method is logically associated, and whether just-in-time (JIT) visibility checks should be skipped for types and members accessed by the Microsoft intermediate language (MSIL) of the dynamic method.
   syntax:
     content: public DynamicMethod(string name, Type returnType, Type[] parameterTypes, Type owner, bool skipVisibility)
     content.vb: Public Sub New(name As String, returnType As Type, parameterTypes As Type(), owner As Type, skipVisibility As Boolean)
     parameters:
     - id: name
       type: System.String
-      description: The name of the dynamic method. This can be a zero-length string, but it cannot be null.
     - id: returnType
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object that specifies the return type of the dynamic method, or null if the method has no return type.
     - id: parameterTypes
       type: System.Type[]
-      description: An array of <xref href="System.Type" data-throw-if-not-resolved="false"></xref> objects specifying the types of the parameters of the dynamic method, or null if the method has no parameters.
     - id: owner
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> with which the dynamic method is logically associated. The dynamic method has access to all members of the type.
     - id: skipVisibility
       type: System.Boolean
-      description: true to skip JIT visibility checks on types and members accessed by the MSIL of the dynamic method; otherwise, false.
-  exceptions:
-  - type: System.ArgumentException
-    description: An element of *parameterTypes* is null or <xref href="System.Void" data-throw-if-not-resolved="false"></xref>.-or- *owner* is an interface, an array, an open generic type, or a type parameter of a generic type or method.
-  - type: System.ArgumentNullException
-    description: '*name* is null. -or-*owner* is null.'
-  - type: System.NotSupportedException
-    description: '*returnType* is null, or is a type for which <xref href="System.Type.IsByRef" data-throw-if-not-resolved="false"></xref> returns true.'
+  nameWithType.vb: DynamicMethod.DynamicMethod(String, Type, Type(), Type, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Reflection.Emit.DynamicMethod.DynamicMethod(System.String, System.Type, System.Type(), System.Type, System.Boolean)
+  name.vb: DynamicMethod(String, Type, Type(), Type, Boolean)
 - uid: System.Reflection.Emit.DynamicMethod.Attributes
+  commentId: P:System.Reflection.Emit.DynamicMethod.Attributes
   id: Attributes
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: Attributes
+  nameWithType: DynamicMethod.Attributes
   fullName: System.Reflection.Emit.DynamicMethod.Attributes
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 612
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Attributes
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 28
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Gets the attributes specified when the dynamic method was created.
   syntax:
     content: public override MethodAttributes Attributes { get; }
     content.vb: Public Overrides ReadOnly Property Attributes As MethodAttributes
     parameters: []
     return:
       type: System.Reflection.MethodAttributes
-      description: A bitwise combination of the <xref href="System.Reflection.MethodAttributes" data-throw-if-not-resolved="false"></xref> values representing the attributes for the method.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Reflection.Emit.DynamicMethod.CallingConvention
+  commentId: P:System.Reflection.Emit.DynamicMethod.CallingConvention
   id: CallingConvention
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: CallingConvention
+  nameWithType: DynamicMethod.CallingConvention
   fullName: System.Reflection.Emit.DynamicMethod.CallingConvention
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 614
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CallingConvention
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 29
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Gets the calling convention specified when the dynamic method was created.
   syntax:
     content: public override CallingConventions CallingConvention { get; }
     content.vb: Public Overrides ReadOnly Property CallingConvention As CallingConventions
     parameters: []
     return:
       type: System.Reflection.CallingConventions
-      description: One of the <xref href="System.Reflection.CallingConventions" data-throw-if-not-resolved="false"></xref> values that indicates the calling convention of the method.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Reflection.Emit.DynamicMethod.DeclaringType
+  commentId: P:System.Reflection.Emit.DynamicMethod.DeclaringType
   id: DeclaringType
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: DeclaringType
+  nameWithType: DynamicMethod.DeclaringType
   fullName: System.Reflection.Emit.DynamicMethod.DeclaringType
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 603
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DeclaringType
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 30
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Gets the type that declares the method, which is always null for dynamic methods.
   syntax:
     content: public override Type DeclaringType { get; }
     content.vb: Public Overrides ReadOnly Property DeclaringType As Type
     parameters: []
     return:
       type: System.Type
-      description: Always null.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Reflection.Emit.DynamicMethod.InitLocals
+  commentId: P:System.Reflection.Emit.DynamicMethod.InitLocals
   id: InitLocals
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: InitLocals
+  nameWithType: DynamicMethod.InitLocals
   fullName: System.Reflection.Emit.DynamicMethod.InitLocals
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 829
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: InitLocals
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 31
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Gets or sets a value indicating whether the local variables in the method are zero-initialized.
   syntax:
     content: public bool InitLocals { get; set; }
     content.vb: Public Property InitLocals As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the local variables in the method are zero-initialized; otherwise, false. The default is true.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Reflection.Emit.DynamicMethod.Name
+  commentId: P:System.Reflection.Emit.DynamicMethod.Name
   id: Name
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: Name
+  nameWithType: DynamicMethod.Name
   fullName: System.Reflection.Emit.DynamicMethod.Name
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 601
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Name
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 32
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Gets the name of the dynamic method.
   syntax:
     content: public override string Name { get; }
     content.vb: Public Overrides ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-      description: The simple name of the method.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Reflection.Emit.DynamicMethod.ReturnParameter
+  commentId: P:System.Reflection.Emit.DynamicMethod.ReturnParameter
   id: ReturnParameter
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: ReturnParameter
+  nameWithType: DynamicMethod.ReturnParameter
   fullName: System.Reflection.Emit.DynamicMethod.ReturnParameter
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 766
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReturnParameter
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 33
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Gets the return parameter of the dynamic method.
   syntax:
     content: public override ParameterInfo ReturnParameter { get; }
     content.vb: Public Overrides ReadOnly Property ReturnParameter As ParameterInfo
     parameters: []
     return:
       type: System.Reflection.ParameterInfo
-      description: Always null.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Reflection.Emit.DynamicMethod.ReturnType
+  commentId: P:System.Reflection.Emit.DynamicMethod.ReturnType
   id: ReturnType
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: ReturnType
+  nameWithType: DynamicMethod.ReturnType
   fullName: System.Reflection.Emit.DynamicMethod.ReturnType
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 764
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReturnType
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 34
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Gets the type of return value for the dynamic method.
   syntax:
     content: public override Type ReturnType { get; }
     content.vb: Public Overrides ReadOnly Property ReturnType As Type
     parameters: []
     return:
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> representing the type of the return value of the current method; <xref href="System.Void" data-throw-if-not-resolved="false"></xref> if the method has no return type.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type)
+  commentId: M:System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type)
   id: CreateDelegate(System.Type)
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: CreateDelegate(Type)
+  nameWithType: DynamicMethod.CreateDelegate(Type)
   fullName: System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 527
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateDelegate
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 35
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Completes the dynamic method and creates a delegate that can be used to execute it.
   syntax:
     content: public override sealed Delegate CreateDelegate(Type delegateType)
-    content.vb: Public NotOverridable Overrides Function CreateDelegate(delegateType As Type) As
+    content.vb: 'Public NotOverridable Overrides Function CreateDelegate(delegateType As Type) As '
     parameters:
     - id: delegateType
       type: System.Type
-      description: A delegate type whose signature matches that of the dynamic method.
     return:
       type: System.Delegate
-      description: A delegate of the specified type, which can be used to execute the dynamic method.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The dynamic method has no method body.
-  - type: System.ArgumentException
-    description: '*delegateType* has the wrong number of parameters or the wrong parameter types.'
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
 - uid: System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type,System.Object)
+  commentId: M:System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type,System.Object)
   id: CreateDelegate(System.Type,System.Object)
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: CreateDelegate(Type, Object)
+  nameWithType: DynamicMethod.CreateDelegate(Type, Object)
   fullName: System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type, System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 543
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateDelegate
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 37
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Completes the dynamic method and creates a delegate that can be used to execute it, specifying the delegate type and an object the delegate is bound to.
   syntax:
     content: public override sealed Delegate CreateDelegate(Type delegateType, object target)
-    content.vb: Public NotOverridable Overrides Function CreateDelegate(delegateType As Type, target As Object) As
+    content.vb: 'Public NotOverridable Overrides Function CreateDelegate(delegateType As Type, target As Object) As '
     parameters:
     - id: delegateType
       type: System.Type
-      description: A delegate type whose signature matches that of the dynamic method, minus the first parameter.
     - id: target
       type: System.Object
-      description: An object the delegate is bound to. Must be of the same type as the first parameter of the dynamic method.
     return:
       type: System.Delegate
-      description: A delegate of the specified type, which can be used to execute the dynamic method with the specified target object.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The dynamic method has no method body.
-  - type: System.ArgumentException
-    description: '*target* is not the same type as the first parameter of the dynamic method, and is not assignable to that type.-or-*delegateType* has the wrong number of parameters or the wrong parameter types.'
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
 - uid: System.Reflection.Emit.DynamicMethod.GetILGenerator
+  commentId: M:System.Reflection.Emit.DynamicMethod.GetILGenerator
   id: GetILGenerator
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: GetILGenerator()
+  nameWithType: DynamicMethod.GetILGenerator()
   fullName: System.Reflection.Emit.DynamicMethod.GetILGenerator()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 813
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetILGenerator
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 39
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Returns a Microsoft intermediate language (MSIL) generator for the method with a default MSIL stream size of 64 bytes.
   syntax:
     content: public ILGenerator GetILGenerator()
     content.vb: Public Function GetILGenerator As ILGenerator
     return:
       type: System.Reflection.Emit.ILGenerator
-      description: An <xref href="System.Reflection.Emit.ILGenerator" data-throw-if-not-resolved="false"></xref> object for the method.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Reflection.Emit.DynamicMethod.GetILGenerator(System.Int32)
+  commentId: M:System.Reflection.Emit.DynamicMethod.GetILGenerator(System.Int32)
   id: GetILGenerator(System.Int32)
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: GetILGenerator(Int32)
+  nameWithType: DynamicMethod.GetILGenerator(Int32)
   fullName: System.Reflection.Emit.DynamicMethod.GetILGenerator(System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 817
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetILGenerator
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 40
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Returns a Microsoft intermediate language (MSIL) generator for the method with the specified MSIL stream size.
   syntax:
     content: public ILGenerator GetILGenerator(int streamSize)
     content.vb: Public Function GetILGenerator(streamSize As Integer) As ILGenerator
     parameters:
     - id: streamSize
       type: System.Int32
-      description: The size of the MSIL stream, in bytes.
     return:
       type: System.Reflection.Emit.ILGenerator
-      description: An <xref href="System.Reflection.Emit.ILGenerator" data-throw-if-not-resolved="false"></xref> object for the method, with the specified MSIL stream size.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Reflection.Emit.DynamicMethod.GetParameters
+  commentId: M:System.Reflection.Emit.DynamicMethod.GetParameters
   id: GetParameters
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: GetParameters()
+  nameWithType: DynamicMethod.GetParameters()
   fullName: System.Reflection.Emit.DynamicMethod.GetParameters()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 618
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetParameters
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 42
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Returns the parameters of the dynamic method.
   syntax:
     content: public override ParameterInfo[] GetParameters()
     content.vb: Public Overrides Function GetParameters As ParameterInfo()
     return:
       type: System.Reflection.ParameterInfo[]
-      description: An array of <xref href="System.Reflection.ParameterInfo" data-throw-if-not-resolved="false"></xref> objects that represent the parameters of the dynamic method.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Reflection.Emit.DynamicMethod.ToString
+  commentId: M:System.Reflection.Emit.DynamicMethod.ToString
   id: ToString
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: ToString()
+  nameWithType: DynamicMethod.ToString()
   fullName: System.Reflection.Emit.DynamicMethod.ToString()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Emit/DynamicMethod.cs
-    startLine: 599
+    remote:
+      path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.cs
+    startLine: 43
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
-  summary: Returns the signature of the method, represented as a string.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: A string representing the method signature.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Reflection.Emit.DynamicMethod.MethodImplementationFlags
+  commentId: P:System.Reflection.Emit.DynamicMethod.MethodImplementationFlags
   id: MethodImplementationFlags
   parent: System.Reflection.Emit.DynamicMethod
+  langs:
+  - csharp
+  - vb
   name: MethodImplementationFlags
+  nameWithType: DynamicMethod.MethodImplementationFlags
   fullName: System.Reflection.Emit.DynamicMethod.MethodImplementationFlags
   type: Property
   source:
@@ -682,8 +879,9 @@ items:
       path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: MethodImplementationFlags
     path: src/System.Reflection.Emit.Lightweight/ref/System.Reflection.Emit.Lightweight.Manual.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - System.Reflection.Emit.Lightweight
   namespace: System.Reflection.Emit
@@ -693,134 +891,164 @@ items:
     parameters: []
     return:
       type: MethodImplAttributes
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 references:
 - uid: System.Reflection.Emit
+  commentId: N:System.Reflection.Emit
   isExternal: false
   name: System.Reflection.Emit
+  nameWithType: System.Reflection.Emit
   fullName: System.Reflection.Emit
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Reflection.MethodInfo
+  commentId: T:System.Reflection.MethodInfo
   parent: System.Reflection
   isExternal: false
   name: MethodInfo
+  nameWithType: MethodInfo
   fullName: System.Reflection.MethodInfo
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Reflection.MethodAttributes
+  commentId: T:System.Reflection.MethodAttributes
   parent: System.Reflection
   isExternal: false
   name: MethodAttributes
+  nameWithType: MethodAttributes
   fullName: System.Reflection.MethodAttributes
 - uid: System.Reflection.CallingConventions
+  commentId: T:System.Reflection.CallingConventions
   parent: System.Reflection
   isExternal: false
   name: CallingConventions
+  nameWithType: CallingConventions
   fullName: System.Reflection.CallingConventions
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type
 - uid: System.Type[]
-  isExternal: false
   name: Type[]
-  name.vb: Type()
+  nameWithType: Type[]
   fullName: System.Type[]
-  fullName.vb: System.Type()
+  nameWithType.vb: Type()
+  fullname.vb: System.Type()
+  name.vb: Type()
   spec.csharp:
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Reflection.Module
+  commentId: T:System.Reflection.Module
   parent: System.Reflection
   isExternal: false
   name: Module
+  nameWithType: Module
   fullName: System.Reflection.Module
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Reflection.ParameterInfo
+  commentId: T:System.Reflection.ParameterInfo
   parent: System.Reflection
   isExternal: false
   name: ParameterInfo
+  nameWithType: ParameterInfo
   fullName: System.Reflection.ParameterInfo
 - uid: System.Delegate
+  commentId: T:System.Delegate
   parent: System
   isExternal: false
   name: Delegate
+  nameWithType: Delegate
   fullName: System.Delegate
 - uid: System.Reflection.Emit.ILGenerator
+  commentId: T:System.Reflection.Emit.ILGenerator
   isExternal: false
   name: ILGenerator
+  nameWithType: ILGenerator
   fullName: System.Reflection.Emit.ILGenerator
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Reflection.ParameterInfo[]
-  isExternal: false
   name: ParameterInfo[]
-  name.vb: ParameterInfo()
+  nameWithType: ParameterInfo[]
   fullName: System.Reflection.ParameterInfo[]
-  fullName.vb: System.Reflection.ParameterInfo()
+  nameWithType.vb: ParameterInfo()
+  fullname.vb: System.Reflection.ParameterInfo()
+  name.vb: ParameterInfo()
   spec.csharp:
   - uid: System.Reflection.ParameterInfo
     name: ParameterInfo
+    nameWithType: ParameterInfo
     fullName: System.Reflection.ParameterInfo
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Reflection.ParameterInfo
     name: ParameterInfo
+    nameWithType: ParameterInfo
     fullName: System.Reflection.ParameterInfo
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: MethodImplAttributes
   isExternal: true
   name: MethodImplAttributes
+  nameWithType: MethodImplAttributes
   fullName: MethodImplAttributes
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.NotSupportedException
-  parent: System
-  isExternal: false
-  name: NotSupportedException
-  fullName: System.NotSupportedException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException

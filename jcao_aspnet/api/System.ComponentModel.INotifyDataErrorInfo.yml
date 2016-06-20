@@ -1,115 +1,243 @@
 items:
 - uid: System.ComponentModel.INotifyDataErrorInfo
+  commentId: T:System.ComponentModel.INotifyDataErrorInfo
   id: INotifyDataErrorInfo
   parent: System.ComponentModel
   children:
   - System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged
   - System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)
   - System.ComponentModel.INotifyDataErrorInfo.HasErrors
+  langs:
+  - csharp
+  - vb
   name: INotifyDataErrorInfo
+  nameWithType: INotifyDataErrorInfo
   fullName: System.ComponentModel.INotifyDataErrorInfo
   type: Interface
   source:
-    remote: &o0
-      path: src/System.ObjectModel/src/System/ComponentModel/INotifyDataErrorInfo.cs
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.ObjectModel/src/System/ComponentModel/INotifyDataErrorInfo.cs
-    startLine: 9
+    id: INotifyDataErrorInfo
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 169
   assemblies:
   - System.ObjectModel
   namespace: System.ComponentModel
-  summary: Defines members that data entity classes can implement to provide custom synchronous and asynchronous validation support.
   syntax:
     content: public interface INotifyDataErrorInfo
     content.vb: Public Interface INotifyDataErrorInfo
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: System.ComponentModel.INotifyDataErrorInfo.HasErrors
+  commentId: P:System.ComponentModel.INotifyDataErrorInfo.HasErrors
   id: HasErrors
   parent: System.ComponentModel.INotifyDataErrorInfo
+  langs:
+  - csharp
+  - vb
   name: HasErrors
+  nameWithType: INotifyDataErrorInfo.HasErrors
   fullName: System.ComponentModel.INotifyDataErrorInfo.HasErrors
   type: Property
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/ComponentModel/INotifyDataErrorInfo.cs
-    startLine: 11
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HasErrors
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 171
   assemblies:
   - System.ObjectModel
   namespace: System.ComponentModel
-  summary: Gets a value that indicates whether the entity has validation errors.
   syntax:
     content: bool HasErrors { get; }
     content.vb: ReadOnly Property HasErrors As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the entity currently has validation errors; otherwise, false.
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
 - uid: System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged
+  commentId: E:System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged
   id: ErrorsChanged
   parent: System.ComponentModel.INotifyDataErrorInfo
+  langs:
+  - csharp
+  - vb
   name: ErrorsChanged
+  nameWithType: INotifyDataErrorInfo.ErrorsChanged
   fullName: System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged
   type: Event
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/ComponentModel/INotifyDataErrorInfo.cs
-    startLine: 15
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ErrorsChanged
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 172
   assemblies:
   - System.ObjectModel
   namespace: System.ComponentModel
-  summary: Occurs when the validation errors have changed for a property or for the entire entity.
   syntax:
     content: event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged
     content.vb: Event ErrorsChanged As EventHandler(Of DataErrorsChangedEventArgs)
+    return:
+      type: System.EventHandler{System.ComponentModel.DataErrorsChangedEventArgs}
 - uid: System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)
+  commentId: M:System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)
   id: GetErrors(System.String)
   parent: System.ComponentModel.INotifyDataErrorInfo
+  langs:
+  - csharp
+  - vb
   name: GetErrors(String)
+  nameWithType: INotifyDataErrorInfo.GetErrors(String)
   fullName: System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/System.ObjectModel/src/System/ComponentModel/INotifyDataErrorInfo.cs
-    startLine: 13
+    remote:
+      path: src/System.ObjectModel/ref/System.ObjectModel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetErrors
+    path: src/System.ObjectModel/ref/System.ObjectModel.cs
+    startLine: 173
   assemblies:
   - System.ObjectModel
   namespace: System.ComponentModel
-  summary: Gets the validation errors for a specified property or for the entire entity.
   syntax:
     content: IEnumerable GetErrors(string propertyName)
     content.vb: Function GetErrors(propertyName As String) As IEnumerable
     parameters:
     - id: propertyName
       type: System.String
-      description: The name of the property to retrieve validation errors for; or null or <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>, to retrieve entity-level errors.
     return:
       type: System.Collections.IEnumerable
-      description: The validation errors for the property or entity.
 references:
 - uid: System.ComponentModel
+  commentId: N:System.ComponentModel
   isExternal: false
   name: System.ComponentModel
+  nameWithType: System.ComponentModel
   fullName: System.ComponentModel
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
+- uid: System.EventHandler{System.ComponentModel.DataErrorsChangedEventArgs}
+  commentId: '!:System.EventHandler{System.ComponentModel.DataErrorsChangedEventArgs}'
+  definition: System.EventHandler`1
+  name: EventHandler<DataErrorsChangedEventArgs>
+  nameWithType: EventHandler<DataErrorsChangedEventArgs>
+  fullName: System.EventHandler<System.ComponentModel.DataErrorsChangedEventArgs>
+  nameWithType.vb: EventHandler(Of DataErrorsChangedEventArgs)
+  fullname.vb: System.EventHandler(Of System.ComponentModel.DataErrorsChangedEventArgs)
+  name.vb: EventHandler(Of DataErrorsChangedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.ComponentModel.DataErrorsChangedEventArgs
+    name: DataErrorsChangedEventArgs
+    nameWithType: DataErrorsChangedEventArgs
+    fullName: System.ComponentModel.DataErrorsChangedEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.ComponentModel.DataErrorsChangedEventArgs
+    name: DataErrorsChangedEventArgs
+    nameWithType: DataErrorsChangedEventArgs
+    fullName: System.ComponentModel.DataErrorsChangedEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: false
+  name: EventHandler<>
+  nameWithType: EventHandler<>
+  fullName: System.EventHandler<>
+  nameWithType.vb: EventHandler(Of )
+  fullname.vb: System.EventHandler(Of )
+  name.vb: EventHandler(Of )
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
   parent: System.Collections
   isExternal: false
   name: Collections.IEnumerable
+  nameWithType: Collections.IEnumerable
   fullName: System.Collections.IEnumerable
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections

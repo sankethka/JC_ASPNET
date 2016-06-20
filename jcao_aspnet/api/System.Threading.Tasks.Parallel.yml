@@ -1,5 +1,6 @@
 items:
 - uid: System.Threading.Tasks.Parallel
+  commentId: T:System.Threading.Tasks.Parallel
   id: Parallel
   parent: System.Threading.Tasks
   children:
@@ -37,2487 +38,3000 @@ items:
   - System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
   - System.Threading.Tasks.Parallel.Invoke(System.Action[])
   - System.Threading.Tasks.Parallel.Invoke(System.Threading.Tasks.ParallelOptions,System.Action[])
+  langs:
+  - csharp
+  - vb
   name: Parallel
+  nameWithType: Parallel
   fullName: System.Threading.Tasks.Parallel
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 144
+      repo: https://github.com/dotnet/corefx.git
+    id: Parallel
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 10
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Provides support for parallel loops and regions.
   syntax:
     content: 'public class Parallel : object'
-    content.vb: Public Class Parallel Inherits Object
+    content.vb: >-
+      Public Class Parallel
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState})
+  commentId: M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState})
   id: For(System.Int32,System.Int32,System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For(Int32, Int32, Action<Int32, ParallelLoopState>)
-  name.vb: For(Int32, Int32, Action(Of Int32, ParallelLoopState))
+  nameWithType: Parallel.For(Int32, Int32, Action<Int32, ParallelLoopState>)
   fullName: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Action<System.Int32, System.Threading.Tasks.ParallelLoopState>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Action(Of System.Int32, System.Threading.Tasks.ParallelLoopState))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 588
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 12
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic) loop in which iterations may run in parallel and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult For(int fromInclusive, int toExclusive, Action<int, ParallelLoopState> body)
     content.vb: Public Shared Function For(fromInclusive As Integer, toExclusive As Integer, body As Action(Of Integer, ParallelLoopState)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int32
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int32
-      description: The end index, exclusive.
     - id: body
       type: System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState}
-      description: The delegate that is invoked once per iteration.
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A  structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.For(Int32, Int32, Action(Of Int32, ParallelLoopState))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Action(Of System.Int32, System.Threading.Tasks.ParallelLoopState))
+  name.vb: For(Int32, Int32, Action(Of Int32, ParallelLoopState))
 - uid: System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Action{System.Int32})
+  commentId: M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Action{System.Int32})
   id: For(System.Int32,System.Int32,System.Action{System.Int32})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For(Int32, Int32, Action<Int32>)
-  name.vb: For(Int32, Int32, Action(Of Int32))
+  nameWithType: Parallel.For(Int32, Int32, Action<Int32>)
   fullName: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Action<System.Int32>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Action(Of System.Int32))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 421
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 13
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic) loop in which iterations may run in parallel.
   syntax:
     content: public static ParallelLoopResult For(int fromInclusive, int toExclusive, Action<int> body)
     content.vb: Public Shared Function For(fromInclusive As Integer, toExclusive As Integer, body As Action(Of Integer)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int32
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int32
-      description: The end index, exclusive.
     - id: body
       type: System.Action{System.Int32}
-      description: The delegate that is invoked once per iteration.
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.For(Int32, Int32, Action(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Action(Of System.Int32))
+  name.vb: For(Int32, Int32, Action(Of Int32))
 - uid: System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState})
+  commentId: M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState})
   id: For(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For(Int32, Int32, ParallelOptions, Action<Int32, ParallelLoopState>)
-  name.vb: For(Int32, Int32, ParallelOptions, Action(Of Int32, ParallelLoopState))
+  nameWithType: Parallel.For(Int32, Int32, ParallelOptions, Action<Int32, ParallelLoopState>)
   fullName: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Threading.Tasks.ParallelOptions, System.Action<System.Int32, System.Threading.Tasks.ParallelLoopState>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Threading.Tasks.ParallelOptions, System.Action(Of System.Int32, System.Threading.Tasks.ParallelLoopState))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 659
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 14
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic) loop in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult For(int fromInclusive, int toExclusive, ParallelOptions parallelOptions, Action<int, ParallelLoopState> body)
     content.vb: Public Shared Function For(fromInclusive As Integer, toExclusive As Integer, parallelOptions As ParallelOptions, body As Action(Of Integer, ParallelLoopState)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int32
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int32
-      description: The end index, exclusive.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: body
       type: System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState}
-      description: The delegate that is invoked once per iteration.
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.-or-The *parallelOptions* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
+  nameWithType.vb: Parallel.For(Int32, Int32, ParallelOptions, Action(Of Int32, ParallelLoopState))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Threading.Tasks.ParallelOptions, System.Action(Of System.Int32, System.Threading.Tasks.ParallelLoopState))
+  name.vb: For(Int32, Int32, ParallelOptions, Action(Of Int32, ParallelLoopState))
 - uid: System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Action{System.Int32})
+  commentId: M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Action{System.Int32})
   id: For(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Action{System.Int32})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For(Int32, Int32, ParallelOptions, Action<Int32>)
-  name.vb: For(Int32, Int32, ParallelOptions, Action(Of Int32))
+  nameWithType: Parallel.For(Int32, Int32, ParallelOptions, Action<Int32>)
   fullName: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Threading.Tasks.ParallelOptions, System.Action<System.Int32>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Threading.Tasks.ParallelOptions, System.Action(Of System.Int32))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 489
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 15
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic) loop in which iterations may run in parallel and loop options can be configured.
   syntax:
     content: public static ParallelLoopResult For(int fromInclusive, int toExclusive, ParallelOptions parallelOptions, Action<int> body)
     content.vb: Public Shared Function For(fromInclusive As Integer, toExclusive As Integer, parallelOptions As ParallelOptions, body As Action(Of Integer)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int32
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int32
-      description: The end index, exclusive.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: body
       type: System.Action{System.Int32}
-      description: The delegate that is invoked once per iteration.
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A  structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.-or-The *parallelOptions* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
+  nameWithType.vb: Parallel.For(Int32, Int32, ParallelOptions, Action(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int32, System.Int32, System.Threading.Tasks.ParallelOptions, System.Action(Of System.Int32))
+  name.vb: For(Int32, Int32, ParallelOptions, Action(Of Int32))
 - uid: System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState})
+  commentId: M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState})
   id: For(System.Int64,System.Int64,System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For(Int64, Int64, Action<Int64, ParallelLoopState>)
-  name.vb: For(Int64, Int64, Action(Of Int64, ParallelLoopState))
+  nameWithType: Parallel.For(Int64, Int64, Action<Int64, ParallelLoopState>)
   fullName: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Action<System.Int64, System.Threading.Tasks.ParallelLoopState>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Action(Of System.Int64, System.Threading.Tasks.ParallelLoopState))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 618
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 16
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic) loop with 64-bit indexes in which iterations may run in parallel and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult For(long fromInclusive, long toExclusive, Action<long, ParallelLoopState> body)
     content.vb: Public Shared Function For(fromInclusive As Long, toExclusive As Long, body As Action(Of Long, ParallelLoopState)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int64
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int64
-      description: The end index, exclusive.
     - id: body
       type: System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState}
-      description: The delegate that is invoked once per iteration.
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A <xref href="System.Threading.Tasks.ParallelLoopResult" data-throw-if-not-resolved="false"></xref> structure that contains information on what portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.For(Int64, Int64, Action(Of Int64, ParallelLoopState))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Action(Of System.Int64, System.Threading.Tasks.ParallelLoopState))
+  name.vb: For(Int64, Int64, Action(Of Int64, ParallelLoopState))
 - uid: System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Action{System.Int64})
+  commentId: M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Action{System.Int64})
   id: For(System.Int64,System.Int64,System.Action{System.Int64})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For(Int64, Int64, Action<Int64>)
-  name.vb: For(Int64, Int64, Action(Of Int64))
+  nameWithType: Parallel.For(Int64, Int64, Action<Int64>)
   fullName: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Action<System.Int64>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Action(Of System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 450
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 17
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic) loop with 64-bit indexes in which iterations may run in parallel.
   syntax:
     content: public static ParallelLoopResult For(long fromInclusive, long toExclusive, Action<long> body)
     content.vb: Public Shared Function For(fromInclusive As Long, toExclusive As Long, body As Action(Of Long)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int64
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int64
-      description: The end index, exclusive.
     - id: body
       type: System.Action{System.Int64}
-      description: The delegate that is invoked once per iteration.
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.For(Int64, Int64, Action(Of Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Action(Of System.Int64))
+  name.vb: For(Int64, Int64, Action(Of Int64))
 - uid: System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState})
+  commentId: M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState})
   id: For(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For(Int64, Int64, ParallelOptions, Action<Int64, ParallelLoopState>)
-  name.vb: For(Int64, Int64, ParallelOptions, Action(Of Int64, ParallelLoopState))
+  nameWithType: Parallel.For(Int64, Int64, ParallelOptions, Action<Int64, ParallelLoopState>)
   fullName: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Threading.Tasks.ParallelOptions, System.Action<System.Int64, System.Threading.Tasks.ParallelLoopState>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Threading.Tasks.ParallelOptions, System.Action(Of System.Int64, System.Threading.Tasks.ParallelLoopState))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 704
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 18
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic)  loop with 64-bit indexes in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult For(long fromInclusive, long toExclusive, ParallelOptions parallelOptions, Action<long, ParallelLoopState> body)
     content.vb: Public Shared Function For(fromInclusive As Long, toExclusive As Long, parallelOptions As ParallelOptions, body As Action(Of Long, ParallelLoopState)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int64
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int64
-      description: The end index, exclusive.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: body
       type: System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState}
-      description: The delegate that is invoked once per iteration.
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.-or-The *parallelOptions* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
+  nameWithType.vb: Parallel.For(Int64, Int64, ParallelOptions, Action(Of Int64, ParallelLoopState))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Threading.Tasks.ParallelOptions, System.Action(Of System.Int64, System.Threading.Tasks.ParallelLoopState))
+  name.vb: For(Int64, Int64, ParallelOptions, Action(Of Int64, ParallelLoopState))
 - uid: System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Action{System.Int64})
+  commentId: M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Action{System.Int64})
   id: For(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Action{System.Int64})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For(Int64, Int64, ParallelOptions, Action<Int64>)
-  name.vb: For(Int64, Int64, ParallelOptions, Action(Of Int64))
+  nameWithType: Parallel.For(Int64, Int64, ParallelOptions, Action<Int64>)
   fullName: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Threading.Tasks.ParallelOptions, System.Action<System.Int64>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Threading.Tasks.ParallelOptions, System.Action(Of System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 532
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 19
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for  (For in Visual Basic) loop with 64-bit indexes in which iterations may run in parallel and loop options can be configured.
   syntax:
     content: public static ParallelLoopResult For(long fromInclusive, long toExclusive, ParallelOptions parallelOptions, Action<long> body)
     content.vb: Public Shared Function For(fromInclusive As Long, toExclusive As Long, parallelOptions As ParallelOptions, body As Action(Of Long)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int64
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int64
-      description: The end index, exclusive.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: body
       type: System.Action{System.Int64}
-      description: The delegate that is invoked once per iteration.
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.-or-The *parallelOptions* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
+  nameWithType.vb: Parallel.For(Int64, Int64, ParallelOptions, Action(Of Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(System.Int64, System.Int64, System.Threading.Tasks.ParallelOptions, System.Action(Of System.Int64))
+  name.vb: For(Int64, Int64, ParallelOptions, Action(Of Int64))
 - uid: System.Threading.Tasks.Parallel.For``1(System.Int32,System.Int32,System.Func{``0},System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
+  commentId: M:System.Threading.Tasks.Parallel.For``1(System.Int32,System.Int32,System.Func{``0},System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
   id: For``1(System.Int32,System.Int32,System.Func{``0},System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For<TLocal>(Int32, Int32, Func<TLocal>, Func<Int32, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
-  name.vb: For(Of TLocal)(Int32, Int32, Func(Of TLocal), Func(Of Int32, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.For<TLocal>(Int32, Int32, Func<TLocal>, Func<Int32, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.For<TLocal>(System.Int32, System.Int32, System.Func<TLocal>, System.Func<System.Int32, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(Of TLocal)(System.Int32, System.Int32, System.Func(Of TLocal), System.Func(Of System.Int32, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 759
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 20
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic) loop with thread-local data in which iterations may run in parallel, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult For<TLocal>(int fromInclusive, int toExclusive, Func<TLocal> localInit, Func<int, ParallelLoopState, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function For(Of TLocal)(fromInclusive As Integer, toExclusive As Integer, localInit As Func(Of TLocal), body As Func(Of Integer, ParallelLoopState, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int32
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int32
-      description: The end index, exclusive.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A  structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.For(Of TLocal)(Int32, Int32, Func(Of TLocal), Func(Of Int32, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(Of TLocal)(System.Int32, System.Int32, System.Func(Of TLocal), System.Func(Of System.Int32, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: For(Of TLocal)(Int32, Int32, Func(Of TLocal), Func(Of Int32, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.For``1(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Func{``0},System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
+  commentId: M:System.Threading.Tasks.Parallel.For``1(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Func{``0},System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
   id: For``1(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Func{``0},System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For<TLocal>(Int32, Int32, ParallelOptions, Func<TLocal>, Func<Int32, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
-  name.vb: For(Of TLocal)(Int32, Int32, ParallelOptions, Func(Of TLocal), Func(Of Int32, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.For<TLocal>(Int32, Int32, ParallelOptions, Func<TLocal>, Func<Int32, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.For<TLocal>(System.Int32, System.Int32, System.Threading.Tasks.ParallelOptions, System.Func<TLocal>, System.Func<System.Int32, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(Of TLocal)(System.Int32, System.Int32, System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of System.Int32, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 894
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 21
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic)  loop with thread-local data in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult For<TLocal>(int fromInclusive, int toExclusive, ParallelOptions parallelOptions, Func<TLocal> localInit, Func<int, ParallelLoopState, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function For(Of TLocal)(fromInclusive As Integer, toExclusive As Integer, parallelOptions As ParallelOptions, localInit As Func(Of TLocal), body As Func(Of Integer, ParallelLoopState, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int32
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int32
-      description: The end index, exclusive.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.-or-The *parallelOptions* argument is null.
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.For(Of TLocal)(Int32, Int32, ParallelOptions, Func(Of TLocal), Func(Of Int32, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(Of TLocal)(System.Int32, System.Int32, System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of System.Int32, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: For(Of TLocal)(Int32, Int32, ParallelOptions, Func(Of TLocal), Func(Of Int32, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.For``1(System.Int64,System.Int64,System.Func{``0},System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
+  commentId: M:System.Threading.Tasks.Parallel.For``1(System.Int64,System.Int64,System.Func{``0},System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
   id: For``1(System.Int64,System.Int64,System.Func{``0},System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For<TLocal>(Int64, Int64, Func<TLocal>, Func<Int64, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
-  name.vb: For(Of TLocal)(Int64, Int64, Func(Of TLocal), Func(Of Int64, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.For<TLocal>(Int64, Int64, Func<TLocal>, Func<Int64, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.For<TLocal>(System.Int64, System.Int64, System.Func<TLocal>, System.Func<System.Int64, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(Of TLocal)(System.Int64, System.Int64, System.Func(Of TLocal), System.Func(Of System.Int64, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 821
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 22
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic)  loop with 64-bit indexes and thread-local data in which iterations may run in parallel, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult For<TLocal>(long fromInclusive, long toExclusive, Func<TLocal> localInit, Func<long, ParallelLoopState, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function For(Of TLocal)(fromInclusive As Long, toExclusive As Long, localInit As Func(Of TLocal), body As Func(Of Long, ParallelLoopState, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int64
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int64
-      description: The end index, exclusive.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.For(Of TLocal)(Int64, Int64, Func(Of TLocal), Func(Of Int64, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(Of TLocal)(System.Int64, System.Int64, System.Func(Of TLocal), System.Func(Of System.Int64, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: For(Of TLocal)(Int64, Int64, Func(Of TLocal), Func(Of Int64, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.For``1(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Func{``0},System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
+  commentId: M:System.Threading.Tasks.Parallel.For``1(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Func{``0},System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
   id: For``1(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Func{``0},System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: For<TLocal>(Int64, Int64, ParallelOptions, Func<TLocal>, Func<Int64, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
-  name.vb: For(Of TLocal)(Int64, Int64, ParallelOptions, Func(Of TLocal), Func(Of Int64, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.For<TLocal>(Int64, Int64, ParallelOptions, Func<TLocal>, Func<Int64, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.For<TLocal>(System.Int64, System.Int64, System.Threading.Tasks.ParallelOptions, System.Func<TLocal>, System.Func<System.Int64, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.For(Of TLocal)(System.Int64, System.Int64, System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of System.Int64, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 971
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: For
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 23
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a for (For in Visual Basic) loop with 64-bit indexes and thread-local data in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult For<TLocal>(long fromInclusive, long toExclusive, ParallelOptions parallelOptions, Func<TLocal> localInit, Func<long, ParallelLoopState, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function For(Of TLocal)(fromInclusive As Long, toExclusive As Long, parallelOptions As ParallelOptions, localInit As Func(Of TLocal), body As Func(Of Long, ParallelLoopState, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: fromInclusive
       type: System.Int64
-      description: The start index, inclusive.
     - id: toExclusive
       type: System.Int64
-      description: The end index, exclusive.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each thread.
     - id: body
       type: System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each thread.
     typeParameters:
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.-or-The *parallelOptions* argument is null.
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.For(Of TLocal)(Int64, Int64, ParallelOptions, Func(Of TLocal), Func(Of Int64, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.For(Of TLocal)(System.Int64, System.Int64, System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of System.Int64, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: For(Of TLocal)(Int64, Int64, ParallelOptions, Func(Of TLocal), Func(Of Int64, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.OrderablePartitioner{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.OrderablePartitioner{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
   id: ForEach``1(System.Collections.Concurrent.OrderablePartitioner{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Concurrent.OrderablePartitioner<TSource>, Action<TSource, ParallelLoopState, Int64>)
-  name.vb: ForEach(Of TSource)(Collections.Concurrent.OrderablePartitioner(Of TSource), Action(Of TSource, ParallelLoopState, Int64))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Concurrent.OrderablePartitioner<TSource>, Action<TSource, ParallelLoopState, Int64>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Concurrent.OrderablePartitioner<TSource>, System.Action<TSource, System.Threading.Tasks.ParallelLoopState, System.Int64>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.OrderablePartitioner(Of TSource), System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2533
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 24
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation on a <xref href="System.Collections.Concurrent.OrderablePartitioner`1" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Concurrent.OrderablePartitioner<TSource> source, Action<TSource, ParallelLoopState, long> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Concurrent.OrderablePartitioner(Of TSource), body As Action(Of TSource, ParallelLoopState, Long)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Concurrent.OrderablePartitioner{{TSource}}
-      description: The orderable partitioner that contains the original data source.
     - id: body
       type: System.Action{{TSource},System.Threading.Tasks.ParallelLoopState,System.Int64}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *body* argument is null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" data-throw-if-not-resolved="false"></xref> property in the *source* orderable partitioner returns false.-or-The <xref href="System.Collections.Concurrent.OrderablePartitioner`1.KeysNormalized" data-throw-if-not-resolved="false"></xref> property in the source orderable partitioner returns false.-or-Any methods in the source orderable partitioner return null.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Concurrent.OrderablePartitioner(Of TSource), Action(Of TSource, ParallelLoopState, Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.OrderablePartitioner(Of TSource), System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64))
+  name.vb: ForEach(Of TSource)(Collections.Concurrent.OrderablePartitioner(Of TSource), Action(Of TSource, ParallelLoopState, Int64))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.OrderablePartitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.OrderablePartitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
   id: ForEach``1(System.Collections.Concurrent.OrderablePartitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Concurrent.OrderablePartitioner<TSource>, ParallelOptions, Action<TSource, ParallelLoopState, Int64>)
-  name.vb: ForEach(Of TSource)(Collections.Concurrent.OrderablePartitioner(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState, Int64))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Concurrent.OrderablePartitioner<TSource>, ParallelOptions, Action<TSource, ParallelLoopState, Int64>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Concurrent.OrderablePartitioner<TSource>, System.Threading.Tasks.ParallelOptions, System.Action<TSource, System.Threading.Tasks.ParallelLoopState, System.Int64>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.OrderablePartitioner(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2941
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 25
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation on a <xref href="System.Collections.Concurrent.OrderablePartitioner`1" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Concurrent.OrderablePartitioner<TSource> source, ParallelOptions parallelOptions, Action<TSource, ParallelLoopState, long> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Concurrent.OrderablePartitioner(Of TSource), parallelOptions As ParallelOptions, body As Action(Of TSource, ParallelLoopState, Long)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Concurrent.OrderablePartitioner{{TSource}}
-      description: The orderable partitioner that contains the original data source.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: body
       type: System.Action{{TSource},System.Threading.Tasks.ParallelLoopState,System.Int64}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled
-  - type: System.ArgumentNullException
-    description: The *source* argument is  null.-or-The *parallelOptions* argument is null.-or-The *body* argument is null.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" data-throw-if-not-resolved="false"></xref> property in the *source* orderable partitioner returns false.-or-The <xref href="System.Collections.Concurrent.OrderablePartitioner`1.KeysNormalized" data-throw-if-not-resolved="false"></xref> property in the *source* orderable partitioner returns false.-or-The exception that is thrown when any methods in the *source* orderable partitioner return null.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Concurrent.OrderablePartitioner(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState, Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.OrderablePartitioner(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64))
+  name.vb: ForEach(Of TSource)(Collections.Concurrent.OrderablePartitioner(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState, Int64))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState})
   id: ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Concurrent.Partitioner<TSource>, Action<TSource, ParallelLoopState>)
-  name.vb: ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), Action(Of TSource, ParallelLoopState))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Concurrent.Partitioner<TSource>, Action<TSource, ParallelLoopState>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Concurrent.Partitioner<TSource>, System.Action<TSource, System.Threading.Tasks.ParallelLoopState>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.Partitioner(Of TSource), System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2471
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 26
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation on a <xref href="System.Collections.Concurrent.Partitioner" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Concurrent.Partitioner<TSource> source, Action<TSource, ParallelLoopState> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Concurrent.Partitioner(Of TSource), body As Action(Of TSource, ParallelLoopState)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Concurrent.Partitioner{{TSource}}
-      description: The partitioner that contains the original data source.
     - id: body
       type: System.Action{{TSource},System.Threading.Tasks.ParallelLoopState}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *body* argument is null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" data-throw-if-not-resolved="false"></xref> property in the *source* partitioner returns false.-or-A method in the *source* partitioner returns null.-or-The <xref href="System.Collections.Concurrent.Partitioner`1.GetPartitions(System.Int32)" data-throw-if-not-resolved="false"></xref> method in the *source* partitioner does not return the correct number of partitions.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), Action(Of TSource, ParallelLoopState))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.Partitioner(Of TSource), System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState))
+  name.vb: ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), Action(Of TSource, ParallelLoopState))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0})
   id: ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Concurrent.Partitioner<TSource>, Action<TSource>)
-  name.vb: ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), Action(Of TSource))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Concurrent.Partitioner<TSource>, Action<TSource>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Concurrent.Partitioner<TSource>, System.Action<TSource>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.Partitioner(Of TSource), System.Action(Of TSource))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2412
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 27
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation on a <xref href="System.Collections.Concurrent.Partitioner" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Concurrent.Partitioner<TSource> source, Action<TSource> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Concurrent.Partitioner(Of TSource), body As Action(Of TSource)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Concurrent.Partitioner{{TSource}}
-      description: The partitioner that contains the original data source.
     - id: body
       type: System.Action{{TSource}}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is  null.-or-The *body* argument is null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" data-throw-if-not-resolved="false"></xref> property in the *source* partitioner returns false.-or-The exception that is thrown when any methods in the *source* partitioner return null.-or-The <xref href="System.Collections.Concurrent.Partitioner`1.GetPartitions(System.Int32)" data-throw-if-not-resolved="false"></xref> method in the *source* partitioner does not return the correct number of partitions.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), Action(Of TSource))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.Partitioner(Of TSource), System.Action(Of TSource))
+  name.vb: ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), Action(Of TSource))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState})
   id: ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Concurrent.Partitioner<TSource>, ParallelOptions, Action<TSource, ParallelLoopState>)
-  name.vb: ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Concurrent.Partitioner<TSource>, ParallelOptions, Action<TSource, ParallelLoopState>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Concurrent.Partitioner<TSource>, System.Threading.Tasks.ParallelOptions, System.Action<TSource, System.Threading.Tasks.ParallelLoopState>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.Partitioner(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2863
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 28
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation on a <xref href="System.Collections.Concurrent.Partitioner" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Concurrent.Partitioner<TSource> source, ParallelOptions parallelOptions, Action<TSource, ParallelLoopState> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Concurrent.Partitioner(Of TSource), parallelOptions As ParallelOptions, body As Action(Of TSource, ParallelLoopState)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Concurrent.Partitioner{{TSource}}
-      description: The partitioner that contains the original data source.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: body
       type: System.Action{{TSource},System.Threading.Tasks.ParallelLoopState}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A  structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *parallelOptions* argument is null.-or-The *body* argument is null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" data-throw-if-not-resolved="false"></xref> property in the *source* partitioner returns false.-or-The exception that is thrown when any methods in the *source* partitioner return null.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.Partitioner(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState))
+  name.vb: ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0})
   id: ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Concurrent.Partitioner<TSource>, ParallelOptions, Action<TSource>)
-  name.vb: ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), ParallelOptions, Action(Of TSource))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Concurrent.Partitioner<TSource>, ParallelOptions, Action<TSource>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Concurrent.Partitioner<TSource>, System.Threading.Tasks.ParallelOptions, System.Action<TSource>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.Partitioner(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2788
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 29
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation on a <xref href="System.Collections.Concurrent.Partitioner" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel and loop options can be configured.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Concurrent.Partitioner<TSource> source, ParallelOptions parallelOptions, Action<TSource> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Concurrent.Partitioner(Of TSource), parallelOptions As ParallelOptions, body As Action(Of TSource)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Concurrent.Partitioner{{TSource}}
-      description: The partitioner that contains the original data source.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: body
       type: System.Action{{TSource}}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *parallelOptions* argument is null.-or-The *body* argument is null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" data-throw-if-not-resolved="false"></xref> property in the *source* partitioner returns false.-or-The exception that is thrown when any methods in the *source* partitioner return null.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), ParallelOptions, Action(Of TSource))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Concurrent.Partitioner(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource))
+  name.vb: ForEach(Of TSource)(Collections.Concurrent.Partitioner(Of TSource), ParallelOptions, Action(Of TSource))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
   id: ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, Action<TSource, ParallelLoopState, Int64>)
-  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), Action(Of TSource, ParallelLoopState, Int64))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, Action<TSource, ParallelLoopState, Int64>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Generic.IEnumerable<TSource>, System.Action<TSource, System.Threading.Tasks.ParallelLoopState, System.Int64>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 1826
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 30
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation with 64-bit indexes on an <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Generic.IEnumerable<TSource> source, Action<TSource, ParallelLoopState, long> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Generic.IEnumerable(Of TSource), body As Action(Of TSource, ParallelLoopState, Long)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: An enumerable data source.
     - id: body
       type: System.Action{{TSource},System.Threading.Tasks.ParallelLoopState,System.Int64}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *body* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), Action(Of TSource, ParallelLoopState, Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64))
+  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), Action(Of TSource, ParallelLoopState, Int64))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState})
   id: ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, Action<TSource, ParallelLoopState>)
-  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), Action(Of TSource, ParallelLoopState))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, Action<TSource, ParallelLoopState>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Generic.IEnumerable<TSource>, System.Action<TSource, System.Threading.Tasks.ParallelLoopState>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 1739
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 31
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation on an <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Generic.IEnumerable<TSource> source, Action<TSource, ParallelLoopState> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Generic.IEnumerable(Of TSource), body As Action(Of TSource, ParallelLoopState)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: An enumerable data source.
     - id: body
       type: System.Action{{TSource},System.Threading.Tasks.ParallelLoopState}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *body* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), Action(Of TSource, ParallelLoopState))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState))
+  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), Action(Of TSource, ParallelLoopState))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
   id: ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, Action<TSource>)
-  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), Action(Of TSource))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, Action<TSource>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Generic.IEnumerable<TSource>, System.Action<TSource>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Action(Of TSource))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 1654
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 32
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation on an <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Generic.IEnumerable<TSource> source, Action<TSource> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Generic.IEnumerable(Of TSource), body As Action(Of TSource)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: An enumerable data source.
     - id: body
       type: System.Action{{TSource}}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *body* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), Action(Of TSource))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Action(Of TSource))
+  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), Action(Of TSource))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
   id: ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, ParallelOptions, Action<TSource, ParallelLoopState, Int64>)
-  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState, Int64))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, ParallelOptions, Action<TSource, ParallelLoopState, Int64>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Generic.IEnumerable<TSource>, System.Threading.Tasks.ParallelOptions, System.Action<TSource, System.Threading.Tasks.ParallelLoopState, System.Int64>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 1873
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 33
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation with 64-bit indexes on an <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Generic.IEnumerable<TSource> source, ParallelOptions parallelOptions, Action<TSource, ParallelLoopState, long> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Generic.IEnumerable(Of TSource), parallelOptions As ParallelOptions, body As Action(Of TSource, ParallelLoopState, Long)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: An enumerable data source.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: body
       type: System.Action{{TSource},System.Threading.Tasks.ParallelLoopState,System.Int64}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *parallelOptions* argument is null.-or-The *body* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState, Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64))
+  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState, Int64))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState})
   id: ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, ParallelOptions, Action<TSource, ParallelLoopState>)
-  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, ParallelOptions, Action<TSource, ParallelLoopState>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Generic.IEnumerable<TSource>, System.Threading.Tasks.ParallelOptions, System.Action<TSource, System.Threading.Tasks.ParallelLoopState>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 1786
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 34
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation on an <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Generic.IEnumerable<TSource> source, ParallelOptions parallelOptions, Action<TSource, ParallelLoopState> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Generic.IEnumerable(Of TSource), parallelOptions As ParallelOptions, body As Action(Of TSource, ParallelLoopState)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: An enumerable data source.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: body
       type: System.Action{{TSource},System.Threading.Tasks.ParallelLoopState}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *parallelOptions* argument is null.-or-The *body* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState))
+  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Action(Of TSource, ParallelLoopState))
 - uid: System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0})
   id: ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, ParallelOptions, Action<TSource>)
-  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Action(Of TSource))
+  nameWithType: Parallel.ForEach<TSource>(Collections.Generic.IEnumerable<TSource>, ParallelOptions, Action<TSource>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource>(System.Collections.Generic.IEnumerable<TSource>, System.Threading.Tasks.ParallelOptions, System.Action<TSource>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 1699
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 35
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation on an <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel and loop options can be configured.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource>(Collections.Generic.IEnumerable<TSource> source, ParallelOptions parallelOptions, Action<TSource> body)
     content.vb: Public Shared Function ForEach(Of TSource)(source As Collections.Generic.IEnumerable(Of TSource), parallelOptions As ParallelOptions, body As Action(Of TSource)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: An enumerable data source.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: body
       type: System.Action{{TSource}}
-      description: The delegate that is invoked once per iteration.
     typeParameters:
     - id: TSource
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *parallelOptions* argument is null.-or-The *body* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
+  nameWithType.vb: Parallel.ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Action(Of TSource))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource), System.Threading.Tasks.ParallelOptions, System.Action(Of TSource))
+  name.vb: ForEach(Of TSource)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Action(Of TSource))
 - uid: System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.OrderablePartitioner{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.OrderablePartitioner{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
   id: ForEach``2(System.Collections.Concurrent.OrderablePartitioner{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource, TLocal>(Collections.Concurrent.OrderablePartitioner<TSource>, Func<TLocal>, Func<TSource, ParallelLoopState, Int64, TLocal, TLocal>, Action<TLocal>)
-  name.vb: ForEach(Of TSource, TLocal)(Collections.Concurrent.OrderablePartitioner(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.ForEach<TSource, TLocal>(Collections.Concurrent.OrderablePartitioner<TSource>, Func<TLocal>, Func<TSource, ParallelLoopState, Int64, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource, TLocal>(System.Collections.Concurrent.OrderablePartitioner<TSource>, System.Func<TLocal>, System.Func<TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Concurrent.OrderablePartitioner(Of TSource), System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2705
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 36
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation with thread-local data on a <xref href="System.Collections.Concurrent.OrderablePartitioner`1" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource, TLocal>(Collections.Concurrent.OrderablePartitioner<TSource> source, Func<TLocal> localInit, Func<TSource, ParallelLoopState, long, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function ForEach(Of TSource, TLocal)(source As Collections.Concurrent.OrderablePartitioner(Of TSource), localInit As Func(Of TLocal), body As Func(Of TSource, ParallelLoopState, Long, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Concurrent.OrderablePartitioner{{TSource}}
-      description: The orderable partitioner that contains the original data source.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{{TSource},System.Threading.Tasks.ParallelLoopState,System.Int64,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TSource
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" data-throw-if-not-resolved="false"></xref> property in the *source*<xref href="System.Collections.Concurrent.Partitioner" data-throw-if-not-resolved="false"></xref> returns false or the partitioner returns null partitions.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.ForEach(Of TSource, TLocal)(Collections.Concurrent.OrderablePartitioner(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Concurrent.OrderablePartitioner(Of TSource), System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: ForEach(Of TSource, TLocal)(Collections.Concurrent.OrderablePartitioner(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.OrderablePartitioner{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.OrderablePartitioner{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
   id: ForEach``2(System.Collections.Concurrent.OrderablePartitioner{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource, TLocal>(Collections.Concurrent.OrderablePartitioner<TSource>, ParallelOptions, Func<TLocal>, Func<TSource, ParallelLoopState, Int64, TLocal, TLocal>, Action<TLocal>)
-  name.vb: ForEach(Of TSource, TLocal)(Collections.Concurrent.OrderablePartitioner(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.ForEach<TSource, TLocal>(Collections.Concurrent.OrderablePartitioner<TSource>, ParallelOptions, Func<TLocal>, Func<TSource, ParallelLoopState, Int64, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource, TLocal>(System.Collections.Concurrent.OrderablePartitioner<TSource>, System.Threading.Tasks.ParallelOptions, System.Func<TLocal>, System.Func<TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Concurrent.OrderablePartitioner(Of TSource), System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 3145
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 37
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation with 64-bit indexes and  with thread-local data on a <xref href="System.Collections.Concurrent.OrderablePartitioner`1" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel , loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource, TLocal>(Collections.Concurrent.OrderablePartitioner<TSource> source, ParallelOptions parallelOptions, Func<TLocal> localInit, Func<TSource, ParallelLoopState, long, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function ForEach(Of TSource, TLocal)(source As Collections.Concurrent.OrderablePartitioner(Of TSource), parallelOptions As ParallelOptions, localInit As Func(Of TLocal), body As Func(Of TSource, ParallelLoopState, Long, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Concurrent.OrderablePartitioner{{TSource}}
-      description: The orderable partitioner that contains the original data source.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{{TSource},System.Threading.Tasks.ParallelLoopState,System.Int64,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TSource
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *parallelOptions* argument is null.-or-The *body* argument is null.-or-The *localInit* or *localFinally* argument is null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" data-throw-if-not-resolved="false"></xref> property in the *source*<xref href="System.Collections.Concurrent.Partitioner" data-throw-if-not-resolved="false"></xref> returns false or the partitioner returns null  partitions.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
+  nameWithType.vb: Parallel.ForEach(Of TSource, TLocal)(Collections.Concurrent.OrderablePartitioner(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Concurrent.OrderablePartitioner(Of TSource), System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: ForEach(Of TSource, TLocal)(Collections.Concurrent.OrderablePartitioner(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.Partitioner{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.Partitioner{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
   id: ForEach``2(System.Collections.Concurrent.Partitioner{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource, TLocal>(Collections.Concurrent.Partitioner<TSource>, Func<TLocal>, Func<TSource, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
-  name.vb: ForEach(Of TSource, TLocal)(Collections.Concurrent.Partitioner(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.ForEach<TSource, TLocal>(Collections.Concurrent.Partitioner<TSource>, Func<TLocal>, Func<TSource, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource, TLocal>(System.Collections.Concurrent.Partitioner<TSource>, System.Func<TLocal>, System.Func<TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Concurrent.Partitioner(Of TSource), System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2615
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 38
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation with thread-local data on a <xref href="System.Collections.Concurrent.Partitioner" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource, TLocal>(Collections.Concurrent.Partitioner<TSource> source, Func<TLocal> localInit, Func<TSource, ParallelLoopState, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function ForEach(Of TSource, TLocal)(source As Collections.Concurrent.Partitioner(Of TSource), localInit As Func(Of TLocal), body As Func(Of TSource, ParallelLoopState, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Concurrent.Partitioner{{TSource}}
-      description: The partitioner that contains the original data source.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{{TSource},System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TSource
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" data-throw-if-not-resolved="false"></xref> property in the *source*<xref href="System.Collections.Concurrent.Partitioner" data-throw-if-not-resolved="false"></xref> returns false or the partitioner returns null partitions.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.ForEach(Of TSource, TLocal)(Collections.Concurrent.Partitioner(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Concurrent.Partitioner(Of TSource), System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: ForEach(Of TSource, TLocal)(Collections.Concurrent.Partitioner(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
   id: ForEach``2(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource, TLocal>(Collections.Concurrent.Partitioner<TSource>, ParallelOptions, Func<TLocal>, Func<TSource, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
-  name.vb: ForEach(Of TSource, TLocal)(Collections.Concurrent.Partitioner(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.ForEach<TSource, TLocal>(Collections.Concurrent.Partitioner<TSource>, ParallelOptions, Func<TLocal>, Func<TSource, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource, TLocal>(System.Collections.Concurrent.Partitioner<TSource>, System.Threading.Tasks.ParallelOptions, System.Func<TLocal>, System.Func<TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Concurrent.Partitioner(Of TSource), System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 3039
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 39
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation  with thread-local data on a <xref href="System.Collections.Concurrent.Partitioner" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource, TLocal>(Collections.Concurrent.Partitioner<TSource> source, ParallelOptions parallelOptions, Func<TLocal> localInit, Func<TSource, ParallelLoopState, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function ForEach(Of TSource, TLocal)(source As Collections.Concurrent.Partitioner(Of TSource), parallelOptions As ParallelOptions, localInit As Func(Of TLocal), body As Func(Of TSource, ParallelLoopState, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Concurrent.Partitioner{{TSource}}
-      description: The partitioner that contains the original data source.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{{TSource},System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TSource
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *parallelOptions* argument is null.-or-The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" data-throw-if-not-resolved="false"></xref> property in the *source*<xref href="System.Collections.Concurrent.Partitioner" data-throw-if-not-resolved="false"></xref> returns false or the partitioner returns null partitions.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
+  nameWithType.vb: Parallel.ForEach(Of TSource, TLocal)(Collections.Concurrent.Partitioner(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Concurrent.Partitioner(Of TSource), System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: ForEach(Of TSource, TLocal)(Collections.Concurrent.Partitioner(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
   id: ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource>, Func<TLocal>, Func<TSource, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
-  name.vb: ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource>, Func<TLocal>, Func<TSource, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource, TLocal>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TLocal>, System.Func<TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Generic.IEnumerable(Of TSource), System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 1933
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 40
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation with thread-local data on an <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource> source, Func<TLocal> localInit, Func<TSource, ParallelLoopState, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function ForEach(Of TSource, TLocal)(source As Collections.Generic.IEnumerable(Of TSource), localInit As Func(Of TLocal), body As Func(Of TSource, ParallelLoopState, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: An enumerable data source.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{{TSource},System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TSource
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Generic.IEnumerable(Of TSource), System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
   id: ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource>, Func<TLocal>, Func<TSource, ParallelLoopState, Int64, TLocal, TLocal>, Action<TLocal>)
-  name.vb: ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource>, Func<TLocal>, Func<TSource, ParallelLoopState, Int64, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource, TLocal>(System.Collections.Generic.IEnumerable<TSource>, System.Func<TLocal>, System.Func<TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Generic.IEnumerable(Of TSource), System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2079
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 41
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation with thread-local data on an <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource> source, Func<TLocal> localInit, Func<TSource, ParallelLoopState, long, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function ForEach(Of TSource, TLocal)(source As Collections.Generic.IEnumerable(Of TSource), localInit As Func(Of TLocal), body As Func(Of TSource, ParallelLoopState, Long, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: An enumerable data source.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{{TSource},System.Threading.Tasks.ParallelLoopState,System.Int64,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TSource
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Generic.IEnumerable(Of TSource), System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
   id: ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource>, ParallelOptions, Func<TLocal>, Func<TSource, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
-  name.vb: ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource>, ParallelOptions, Func<TLocal>, Func<TSource, ParallelLoopState, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource, TLocal>(System.Collections.Generic.IEnumerable<TSource>, System.Threading.Tasks.ParallelOptions, System.Func<TLocal>, System.Func<TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Generic.IEnumerable(Of TSource), System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2009
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 42
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation with thread-local data on an <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated..
   syntax:
     content: public static ParallelLoopResult ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource> source, ParallelOptions parallelOptions, Func<TLocal> localInit, Func<TSource, ParallelLoopState, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function ForEach(Of TSource, TLocal)(source As Collections.Generic.IEnumerable(Of TSource), parallelOptions As ParallelOptions, localInit As Func(Of TLocal), body As Func(Of TSource, ParallelLoopState, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: An enumerable data source.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{{TSource},System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TSource
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *parallelOptions* argument is null.-or-The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Generic.IEnumerable(Of TSource), System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
+  commentId: M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
   id: ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource>, ParallelOptions, Func<TLocal>, Func<TSource, ParallelLoopState, Int64, TLocal, TLocal>, Action<TLocal>)
-  name.vb: ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
+  nameWithType: Parallel.ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource>, ParallelOptions, Func<TLocal>, Func<TSource, ParallelLoopState, Int64, TLocal, TLocal>, Action<TLocal>)
   fullName: System.Threading.Tasks.Parallel.ForEach<TSource, TLocal>(System.Collections.Generic.IEnumerable<TSource>, System.Threading.Tasks.ParallelOptions, System.Func<TLocal>, System.Func<TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal>, System.Action<TLocal>)
-  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Generic.IEnumerable(Of TSource), System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal), System.Action(Of TLocal))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 2155
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ForEach
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 43
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes a foreach (For Each in Visual Basic) operation with thread-local data and 64-bit indexes on an <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> in which iterations may run in parallel, loop options can be configured, and the state of the loop can be monitored and manipulated.
   syntax:
     content: public static ParallelLoopResult ForEach<TSource, TLocal>(Collections.Generic.IEnumerable<TSource> source, ParallelOptions parallelOptions, Func<TLocal> localInit, Func<TSource, ParallelLoopState, long, TLocal, TLocal> body, Action<TLocal> localFinally)
     content.vb: Public Shared Function ForEach(Of TSource, TLocal)(source As Collections.Generic.IEnumerable(Of TSource), parallelOptions As ParallelOptions, localInit As Func(Of TLocal), body As Func(Of TSource, ParallelLoopState, Long, TLocal, TLocal), localFinally As Action(Of TLocal)) As ParallelLoopResult
     parameters:
     - id: source
       type: System.Collections.Generic.IEnumerable{{TSource}}
-      description: An enumerable data source.
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: localInit
       type: System.Func{{TLocal}}
-      description: The function delegate that returns the initial state of the local data for each task.
     - id: body
       type: System.Func{{TSource},System.Threading.Tasks.ParallelLoopState,System.Int64,{TLocal},{TLocal}}
-      description: The delegate that is invoked once per iteration.
     - id: localFinally
       type: System.Action{{TLocal}}
-      description: The delegate that performs a final action on the local state of each task.
     typeParameters:
     - id: TSource
     - id: TLocal
     return:
       type: System.Threading.Tasks.ParallelLoopResult
-      description: A structure that contains information about which portion of the loop completed.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *source* argument is null.-or-The *parallelOptions* argument is null.-or-The *body* argument is null.-or-The *localInit* argument is null.-or-The *localFinally* argument is null.
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* argument is canceled.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
-  - type: System.AggregateException
-    description: The exception that contains all the individual exceptions thrown on all threads.
+  nameWithType.vb: Parallel.ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.ForEach(Of TSource, TLocal)(System.Collections.Generic.IEnumerable(Of TSource), System.Threading.Tasks.ParallelOptions, System.Func(Of TLocal), System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal), System.Action(Of TLocal))
+  name.vb: ForEach(Of TSource, TLocal)(Collections.Generic.IEnumerable(Of TSource), ParallelOptions, Func(Of TLocal), Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal), Action(Of TLocal))
 - uid: System.Threading.Tasks.Parallel.Invoke(System.Action[])
+  commentId: M:System.Threading.Tasks.Parallel.Invoke(System.Action[])
   id: Invoke(System.Action[])
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: Invoke(Action[])
-  name.vb: Invoke(Action())
+  nameWithType: Parallel.Invoke(Action[])
   fullName: System.Threading.Tasks.Parallel.Invoke(System.Action[])
-  fullName.vb: System.Threading.Tasks.Parallel.Invoke(System.Action())
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 173
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Invoke
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 44
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes each of the provided actions, possibly in parallel.
   syntax:
     content: public static void Invoke(params Action[] actions)
     content.vb: Public Shared Sub Invoke(ParamArray actions As Action())
     parameters:
     - id: actions
       type: System.Action[]
-      description: An array of <xref href="System.Action" data-throw-if-not-resolved="false"></xref> to execute.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *actions* argument is null.
-  - type: System.AggregateException
-    description: The exception that is thrown when any action in the *actions* array throws an exception.
-  - type: System.ArgumentException
-    description: The *actions* array contains a null element.
+  nameWithType.vb: Parallel.Invoke(Action())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.Invoke(System.Action())
+  name.vb: Invoke(Action())
 - uid: System.Threading.Tasks.Parallel.Invoke(System.Threading.Tasks.ParallelOptions,System.Action[])
+  commentId: M:System.Threading.Tasks.Parallel.Invoke(System.Threading.Tasks.ParallelOptions,System.Action[])
   id: Invoke(System.Threading.Tasks.ParallelOptions,System.Action[])
   parent: System.Threading.Tasks.Parallel
+  langs:
+  - csharp
+  - vb
   name: Invoke(ParallelOptions, Action[])
-  name.vb: Invoke(ParallelOptions, Action())
+  nameWithType: Parallel.Invoke(ParallelOptions, Action[])
   fullName: System.Threading.Tasks.Parallel.Invoke(System.Threading.Tasks.ParallelOptions, System.Action[])
-  fullName.vb: System.Threading.Tasks.Parallel.Invoke(System.Threading.Tasks.ParallelOptions, System.Action())
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/Tasks/Parallel.cs
-    startLine: 206
+    remote:
+      path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Invoke
+    path: src/System.Threading.Tasks.Parallel/ref/System.Threading.Tasks.Parallel.cs
+    startLine: 45
   assemblies:
   - System.Threading.Tasks.Parallel
   namespace: System.Threading.Tasks
-  summary: Executes each of the provided actions, possibly in parallel, unless the operation is cancelled by the user.
   syntax:
     content: public static void Invoke(ParallelOptions parallelOptions, params Action[] actions)
     content.vb: Public Shared Sub Invoke(parallelOptions As ParallelOptions, ParamArray actions As Action())
     parameters:
     - id: parallelOptions
       type: System.Threading.Tasks.ParallelOptions
-      description: An object that configures the behavior of this operation.
     - id: actions
       type: System.Action[]
-      description: An array of actions to execute.
-  exceptions:
-  - type: System.OperationCanceledException
-    description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* is set.
-  - type: System.ArgumentNullException
-    description: The *actions* argument is null.-or-The *parallelOptions* argument is null.
-  - type: System.AggregateException
-    description: The exception that is thrown when any action in the *actions* array throws an exception.
-  - type: System.ArgumentException
-    description: The *actions* array contains a null element.
-  - type: System.ObjectDisposedException
-    description: The <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref> associated with the <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> in the *parallelOptions* has been disposed.
+  nameWithType.vb: Parallel.Invoke(ParallelOptions, Action())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.Tasks.Parallel.Invoke(System.Threading.Tasks.ParallelOptions, System.Action())
+  name.vb: Invoke(ParallelOptions, Action())
 references:
 - uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
   isExternal: false
   name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
   fullName: System.Threading.Tasks
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState}
+  commentId: '!:System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState}'
   definition: System.Action`2
   name: Action<Int32, ParallelLoopState>
-  name.vb: Action(Of Int32, ParallelLoopState)
+  nameWithType: Action<Int32, ParallelLoopState>
   fullName: System.Action<System.Int32, System.Threading.Tasks.ParallelLoopState>
-  fullName.vb: System.Action(Of System.Int32, System.Threading.Tasks.ParallelLoopState)
+  nameWithType.vb: Action(Of Int32, ParallelLoopState)
+  fullname.vb: System.Action(Of System.Int32, System.Threading.Tasks.ParallelLoopState)
+  name.vb: Action(Of Int32, ParallelLoopState)
   spec.csharp:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Threading.Tasks.ParallelLoopResult
+  commentId: T:System.Threading.Tasks.ParallelLoopResult
   parent: System.Threading.Tasks
   isExternal: false
   name: ParallelLoopResult
+  nameWithType: ParallelLoopResult
   fullName: System.Threading.Tasks.ParallelLoopResult
 - uid: System.Action`2
+  commentId: T:System.Action`2
   isExternal: false
-  name: Action<T1, T2>
-  name.vb: Action(Of T1, T2)
-  fullName: System.Action<T1, T2>
-  fullName.vb: System.Action(Of T1, T2)
+  name: Action<, >
+  nameWithType: Action<, >
+  fullName: System.Action<, >
+  nameWithType.vb: Action(Of , )
+  fullname.vb: System.Action(Of , )
+  name.vb: Action(Of , )
   spec.csharp:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
   - name: <
+    nameWithType: <
     fullName: <
-  - name: T1
-    fullName: T1
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T2
-    fullName: T2
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - name: T1
-    fullName: T1
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T2
-    fullName: T2
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Action{System.Int32}
+  commentId: '!:System.Action{System.Int32}'
   definition: System.Action`1
   name: Action<Int32>
-  name.vb: Action(Of Int32)
+  nameWithType: Action<Int32>
   fullName: System.Action<System.Int32>
-  fullName.vb: System.Action(Of System.Int32)
+  nameWithType.vb: Action(Of Int32)
+  fullname.vb: System.Action(Of System.Int32)
+  name.vb: Action(Of Int32)
   spec.csharp:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Action`1
+  commentId: T:System.Action`1
   isExternal: false
   name: Action<>
-  name.vb: Action(Of )
+  nameWithType: Action<>
   fullName: System.Action<>
-  fullName.vb: System.Action(Of )
+  nameWithType.vb: Action(Of )
+  fullname.vb: System.Action(Of )
+  name.vb: Action(Of )
   spec.csharp:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
     fullName: System.Action
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
     fullName: System.Action
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Threading.Tasks.ParallelOptions
+  commentId: T:System.Threading.Tasks.ParallelOptions
   parent: System.Threading.Tasks
   isExternal: false
   name: ParallelOptions
+  nameWithType: ParallelOptions
   fullName: System.Threading.Tasks.ParallelOptions
 - uid: System.Int64
+  commentId: T:System.Int64
   parent: System
   isExternal: false
   name: Int64
+  nameWithType: Int64
   fullName: System.Int64
 - uid: System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState}
+  commentId: '!:System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState}'
   definition: System.Action`2
   name: Action<Int64, ParallelLoopState>
-  name.vb: Action(Of Int64, ParallelLoopState)
+  nameWithType: Action<Int64, ParallelLoopState>
   fullName: System.Action<System.Int64, System.Threading.Tasks.ParallelLoopState>
-  fullName.vb: System.Action(Of System.Int64, System.Threading.Tasks.ParallelLoopState)
+  nameWithType.vb: Action(Of Int64, ParallelLoopState)
+  fullname.vb: System.Action(Of System.Int64, System.Threading.Tasks.ParallelLoopState)
+  name.vb: Action(Of Int64, ParallelLoopState)
   spec.csharp:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Action{System.Int64}
+  commentId: '!:System.Action{System.Int64}'
   definition: System.Action`1
   name: Action<Int64>
-  name.vb: Action(Of Int64)
+  nameWithType: Action<Int64>
   fullName: System.Action<System.Int64>
-  fullName.vb: System.Action(Of System.Int64)
+  nameWithType.vb: Action(Of Int64)
+  fullname.vb: System.Action(Of System.Int64)
+  name.vb: Action(Of Int64)
   spec.csharp:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func{{TLocal}}
+  commentId: '!:System.Func{``0}'
   definition: System.Func`1
   name: Func<TLocal>
-  name.vb: Func(Of TLocal)
+  nameWithType: Func<TLocal>
   fullName: System.Func<TLocal>
-  fullName.vb: System.Func(Of TLocal)
+  nameWithType.vb: Func(Of TLocal)
+  fullname.vb: System.Func(Of TLocal)
+  name.vb: Func(Of TLocal)
   spec.csharp:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
+  commentId: '!:System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0}'
   definition: System.Func`4
   name: Func<Int32, ParallelLoopState, TLocal, TLocal>
-  name.vb: Func(Of Int32, ParallelLoopState, TLocal, TLocal)
+  nameWithType: Func<Int32, ParallelLoopState, TLocal, TLocal>
   fullName: System.Func<System.Int32, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>
-  fullName.vb: System.Func(Of System.Int32, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal)
+  nameWithType.vb: Func(Of Int32, ParallelLoopState, TLocal, TLocal)
+  fullname.vb: System.Func(Of System.Int32, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal)
+  name.vb: Func(Of Int32, ParallelLoopState, TLocal, TLocal)
   spec.csharp:
   - uid: System.Func`4
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`4
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Action{{TLocal}}
+  commentId: '!:System.Action{``0}'
   definition: System.Action`1
   name: Action<TLocal>
-  name.vb: Action(Of TLocal)
+  nameWithType: Action<TLocal>
   fullName: System.Action<TLocal>
-  fullName.vb: System.Action(Of TLocal)
+  nameWithType.vb: Action(Of TLocal)
+  fullname.vb: System.Action(Of TLocal)
+  name.vb: Action(Of TLocal)
   spec.csharp:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func`1
-  parent: System
+  commentId: T:System.Func`1
   isExternal: false
   name: Func<>
-  name.vb: Func(Of )
+  nameWithType: Func<>
   fullName: System.Func<>
-  fullName.vb: System.Func(Of )
+  nameWithType.vb: Func(Of )
+  fullname.vb: System.Func(Of )
+  name.vb: Func(Of )
   spec.csharp:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func`4
+  commentId: T:System.Func`4
   isExternal: false
-  name: Func<T1, T2, T3, TResult>
-  name.vb: Func(Of T1, T2, T3, TResult)
-  fullName: System.Func<T1, T2, T3, TResult>
-  fullName.vb: System.Func(Of T1, T2, T3, TResult)
+  name: Func<, , , >
+  nameWithType: Func<, , , >
+  fullName: System.Func<, , , >
+  nameWithType.vb: Func(Of , , , )
+  fullname.vb: System.Func(Of , , , )
+  name.vb: Func(Of , , , )
   spec.csharp:
   - uid: System.Func`4
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - name: T1
-    fullName: T1
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T2
-    fullName: T2
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T3
-    fullName: T3
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: TResult
-    fullName: TResult
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`4
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - name: T1
-    fullName: T1
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T2
-    fullName: T2
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T3
-    fullName: T3
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: TResult
-    fullName: TResult
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
+  commentId: '!:System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0}'
   definition: System.Func`4
   name: Func<Int64, ParallelLoopState, TLocal, TLocal>
-  name.vb: Func(Of Int64, ParallelLoopState, TLocal, TLocal)
+  nameWithType: Func<Int64, ParallelLoopState, TLocal, TLocal>
   fullName: System.Func<System.Int64, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>
-  fullName.vb: System.Func(Of System.Int64, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal)
+  nameWithType.vb: Func(Of Int64, ParallelLoopState, TLocal, TLocal)
+  fullname.vb: System.Func(Of System.Int64, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal)
+  name.vb: Func(Of Int64, ParallelLoopState, TLocal, TLocal)
   spec.csharp:
   - uid: System.Func`4
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`4
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Concurrent.OrderablePartitioner{{TSource}}
+  commentId: T:System.Collections.Concurrent.OrderablePartitioner{``0}
   parent: System.Collections.Concurrent
   definition: System.Collections.Concurrent.OrderablePartitioner`1
-  name: Collections.Concurrent.OrderablePartitioner<TSource>
-  name.vb: Collections.Concurrent.OrderablePartitioner(Of TSource)
+  name: OrderablePartitioner<TSource>
+  nameWithType: OrderablePartitioner<TSource>
   fullName: System.Collections.Concurrent.OrderablePartitioner<TSource>
-  fullName.vb: System.Collections.Concurrent.OrderablePartitioner(Of TSource)
+  nameWithType.vb: OrderablePartitioner(Of TSource)
+  fullname.vb: System.Collections.Concurrent.OrderablePartitioner(Of TSource)
+  name.vb: OrderablePartitioner(Of TSource)
   spec.csharp:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
-    name: Collections.Concurrent.OrderablePartitioner
+    name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
-    name: Collections.Concurrent.OrderablePartitioner
+    name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Action{{TSource},System.Threading.Tasks.ParallelLoopState,System.Int64}
+  commentId: '!:System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64}'
   definition: System.Action`3
   name: Action<TSource, ParallelLoopState, Int64>
-  name.vb: Action(Of TSource, ParallelLoopState, Int64)
+  nameWithType: Action<TSource, ParallelLoopState, Int64>
   fullName: System.Action<TSource, System.Threading.Tasks.ParallelLoopState, System.Int64>
-  fullName.vb: System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64)
+  nameWithType.vb: Action(Of TSource, ParallelLoopState, Int64)
+  fullname.vb: System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64)
+  name.vb: Action(Of TSource, ParallelLoopState, Int64)
   spec.csharp:
   - uid: System.Action`3
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`3
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Concurrent.OrderablePartitioner`1
-  parent: System.Collections.Concurrent
+  commentId: T:System.Collections.Concurrent.OrderablePartitioner`1
   isExternal: false
-  name: Collections.Concurrent.OrderablePartitioner<>
-  name.vb: Collections.Concurrent.OrderablePartitioner(Of )
-  fullName: System.Collections.Concurrent.OrderablePartitioner<>
-  fullName.vb: System.Collections.Concurrent.OrderablePartitioner(Of )
+  name: OrderablePartitioner<TSource>
+  nameWithType: OrderablePartitioner<TSource>
+  fullName: System.Collections.Concurrent.OrderablePartitioner<TSource>
+  nameWithType.vb: OrderablePartitioner(Of TSource)
+  fullname.vb: System.Collections.Concurrent.OrderablePartitioner(Of TSource)
+  name.vb: OrderablePartitioner(Of TSource)
   spec.csharp:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
-    name: Collections.Concurrent.OrderablePartitioner
+    name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Concurrent.OrderablePartitioner`1
-    name: Collections.Concurrent.OrderablePartitioner
+    name: OrderablePartitioner
+    nameWithType: OrderablePartitioner
     fullName: System.Collections.Concurrent.OrderablePartitioner
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Concurrent
+  commentId: N:System.Collections.Concurrent
   isExternal: false
   name: System.Collections.Concurrent
+  nameWithType: System.Collections.Concurrent
   fullName: System.Collections.Concurrent
 - uid: System.Action`3
+  commentId: T:System.Action`3
   isExternal: false
-  name: Action<T1, T2, T3>
-  name.vb: Action(Of T1, T2, T3)
-  fullName: System.Action<T1, T2, T3>
-  fullName.vb: System.Action(Of T1, T2, T3)
+  name: Action<, , >
+  nameWithType: Action<, , >
+  fullName: System.Action<, , >
+  nameWithType.vb: Action(Of , , )
+  fullname.vb: System.Action(Of , , )
+  name.vb: Action(Of , , )
   spec.csharp:
   - uid: System.Action`3
     name: Action
+    nameWithType: Action
     fullName: System.Action
   - name: <
+    nameWithType: <
     fullName: <
-  - name: T1
-    fullName: T1
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T2
-    fullName: T2
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T3
-    fullName: T3
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`3
     name: Action
+    nameWithType: Action
     fullName: System.Action
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - name: T1
-    fullName: T1
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T2
-    fullName: T2
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - name: T3
-    fullName: T3
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Concurrent.Partitioner{{TSource}}
+  commentId: T:System.Collections.Concurrent.Partitioner{`0}
   parent: System.Collections.Concurrent
   definition: System.Collections.Concurrent.Partitioner`1
-  name: Collections.Concurrent.Partitioner<TSource>
-  name.vb: Collections.Concurrent.Partitioner(Of TSource)
+  name: Partitioner<TSource>
+  nameWithType: Partitioner<TSource>
   fullName: System.Collections.Concurrent.Partitioner<TSource>
-  fullName.vb: System.Collections.Concurrent.Partitioner(Of TSource)
+  nameWithType.vb: Partitioner(Of TSource)
+  fullname.vb: System.Collections.Concurrent.Partitioner(Of TSource)
+  name.vb: Partitioner(Of TSource)
   spec.csharp:
   - uid: System.Collections.Concurrent.Partitioner`1
-    name: Collections.Concurrent.Partitioner
+    name: Partitioner
+    nameWithType: Partitioner
     fullName: System.Collections.Concurrent.Partitioner
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Concurrent.Partitioner`1
-    name: Collections.Concurrent.Partitioner
+    name: Partitioner
+    nameWithType: Partitioner
     fullName: System.Collections.Concurrent.Partitioner
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Action{{TSource},System.Threading.Tasks.ParallelLoopState}
+  commentId: '!:System.Action{``0,System.Threading.Tasks.ParallelLoopState}'
   definition: System.Action`2
   name: Action<TSource, ParallelLoopState>
-  name.vb: Action(Of TSource, ParallelLoopState)
+  nameWithType: Action<TSource, ParallelLoopState>
   fullName: System.Action<TSource, System.Threading.Tasks.ParallelLoopState>
-  fullName.vb: System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState)
+  nameWithType.vb: Action(Of TSource, ParallelLoopState)
+  fullname.vb: System.Action(Of TSource, System.Threading.Tasks.ParallelLoopState)
+  name.vb: Action(Of TSource, ParallelLoopState)
   spec.csharp:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`2
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Concurrent.Partitioner`1
-  parent: System.Collections.Concurrent
+  commentId: T:System.Collections.Concurrent.Partitioner`1
   isExternal: false
-  name: Collections.Concurrent.Partitioner<>
-  name.vb: Collections.Concurrent.Partitioner(Of )
-  fullName: System.Collections.Concurrent.Partitioner<>
-  fullName.vb: System.Collections.Concurrent.Partitioner(Of )
+  name: Partitioner<TSource>
+  nameWithType: Partitioner<TSource>
+  fullName: System.Collections.Concurrent.Partitioner<TSource>
+  nameWithType.vb: Partitioner(Of TSource)
+  fullname.vb: System.Collections.Concurrent.Partitioner(Of TSource)
+  name.vb: Partitioner(Of TSource)
   spec.csharp:
   - uid: System.Collections.Concurrent.Partitioner`1
-    name: Collections.Concurrent.Partitioner
+    name: Partitioner
+    nameWithType: Partitioner
     fullName: System.Collections.Concurrent.Partitioner
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Concurrent.Partitioner`1
-    name: Collections.Concurrent.Partitioner
+    name: Partitioner
+    nameWithType: Partitioner
     fullName: System.Collections.Concurrent.Partitioner
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Action{{TSource}}
+  commentId: '!:System.Action{``0}'
   definition: System.Action`1
   name: Action<TSource>
-  name.vb: Action(Of TSource)
+  nameWithType: Action<TSource>
   fullName: System.Action<TSource>
-  fullName.vb: System.Action(Of TSource)
+  nameWithType.vb: Action(Of TSource)
+  fullname.vb: System.Action(Of TSource)
+  name.vb: Action(Of TSource)
   spec.csharp:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Action`1
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable{{TSource}}
+  commentId: '!:System.Collections.Generic.IEnumerable{`0}'
   definition: System.Collections.Generic.IEnumerable`1
-  name: Collections.Generic.IEnumerable<TSource>
-  name.vb: Collections.Generic.IEnumerable(Of TSource)
+  name: Generic.IEnumerable<TSource>
+  nameWithType: Generic.IEnumerable<TSource>
   fullName: System.Collections.Generic.IEnumerable<TSource>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of TSource)
+  nameWithType.vb: Generic.IEnumerable(Of TSource)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of TSource)
+  name.vb: Generic.IEnumerable(Of TSource)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
+    name: Generic.IEnumerable
+    nameWithType: Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
+    name: Generic.IEnumerable
+    nameWithType: Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: System.Func{{TSource},System.Threading.Tasks.ParallelLoopState,System.Int64,{TLocal},{TLocal}}
+  commentId: '!:System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1}'
   definition: System.Func`5
   name: Func<TSource, ParallelLoopState, Int64, TLocal, TLocal>
-  name.vb: Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal)
+  nameWithType: Func<TSource, ParallelLoopState, Int64, TLocal, TLocal>
   fullName: System.Func<TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal>
-  fullName.vb: System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal)
+  nameWithType.vb: Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal)
+  fullname.vb: System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, System.Int64, TLocal, TLocal)
+  name.vb: Func(Of TSource, ParallelLoopState, Int64, TLocal, TLocal)
   spec.csharp:
   - uid: System.Func`5
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`5
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func`5
+  commentId: T:System.Func`5
   isExternal: false
   name: Func<, , , , >
-  name.vb: Func(Of , , , , )
+  nameWithType: Func<, , , , >
   fullName: System.Func<, , , , >
-  fullName.vb: System.Func(Of , , , , )
+  nameWithType.vb: Func(Of , , , , )
+  fullname.vb: System.Func(Of , , , , )
+  name.vb: Func(Of , , , , )
   spec.csharp:
   - uid: System.Func`5
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`5
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func{{TSource},System.Threading.Tasks.ParallelLoopState,{TLocal},{TLocal}}
+  commentId: '!:System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1}'
   definition: System.Func`4
   name: Func<TSource, ParallelLoopState, TLocal, TLocal>
-  name.vb: Func(Of TSource, ParallelLoopState, TLocal, TLocal)
+  nameWithType: Func<TSource, ParallelLoopState, TLocal, TLocal>
   fullName: System.Func<TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal>
-  fullName.vb: System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal)
+  nameWithType.vb: Func(Of TSource, ParallelLoopState, TLocal, TLocal)
+  fullname.vb: System.Func(Of TSource, System.Threading.Tasks.ParallelLoopState, TLocal, TLocal)
+  name.vb: Func(Of TSource, ParallelLoopState, TLocal, TLocal)
   spec.csharp:
   - uid: System.Func`4
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`4
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TSource
+    nameWithType: TSource
     fullName: TSource
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Threading.Tasks.ParallelLoopState
     name: ParallelLoopState
+    nameWithType: ParallelLoopState
     fullName: System.Threading.Tasks.ParallelLoopState
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TLocal
+    nameWithType: TLocal
     fullName: TLocal
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Action[]
-  isExternal: true
   name: Action[]
-  name.vb: Action()
+  nameWithType: Action[]
   fullName: System.Action[]
-  fullName.vb: System.Action()
+  nameWithType.vb: Action()
+  fullname.vb: System.Action()
+  name.vb: Action()
   spec.csharp:
   - uid: System.Action
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Action
     name: Action
+    nameWithType: Action
     fullName: System.Action
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.AggregateException
-  parent: System
-  isExternal: false
-  name: AggregateException
-  fullName: System.AggregateException
-- uid: System.OperationCanceledException
-  parent: System
-  isExternal: false
-  name: OperationCanceledException
-  fullName: System.OperationCanceledException
-- uid: System.ObjectDisposedException
-  isExternal: false
-  name: ObjectDisposedException
-  fullName: System.ObjectDisposedException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

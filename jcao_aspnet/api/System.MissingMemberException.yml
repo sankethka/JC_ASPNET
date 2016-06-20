@@ -1,5 +1,6 @@
 items:
 - uid: System.MissingMemberException
+  commentId: T:System.MissingMemberException
   id: MissingMemberException
   parent: System
   children:
@@ -7,23 +8,29 @@ items:
   - System.MissingMemberException.#ctor(System.String)
   - System.MissingMemberException.#ctor(System.String,System.Exception)
   - System.MissingMemberException.Message
+  langs:
+  - csharp
+  - vb
   name: MissingMemberException
+  nameWithType: MissingMemberException
   fullName: System.MissingMemberException
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/MissingMemberException.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/MissingMemberException.cs
-    startLine: 24
+      repo: https://github.com/dotnet/corefx.git
+    id: MissingMemberException
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1242
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The exception that is thrown when there is an attempt to dynamically access a class member that does not exist.
   syntax:
     content: 'public class MissingMemberException : MemberAccessException'
-    content.vb: Public Class MissingMemberException Inherits MemberAccessException
+    content.vb: >-
+      Public Class MissingMemberException
+          Inherits MemberAccessException
   inheritance:
   - System.Object
   - System.Exception
@@ -43,353 +50,509 @@ items:
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.MissingMemberException.#ctor
+  commentId: M:System.MissingMemberException.#ctor
   id: '#ctor'
   parent: System.MissingMemberException
+  langs:
+  - csharp
+  - vb
   name: MissingMemberException()
+  nameWithType: MissingMemberException.MissingMemberException()
   fullName: System.MissingMemberException.MissingMemberException()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/MissingMemberException.cs
-    startLine: 26
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1244
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.MissingMemberException" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public MissingMemberException()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.MissingMemberException.#ctor(System.String)
+  commentId: M:System.MissingMemberException.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.MissingMemberException
+  langs:
+  - csharp
+  - vb
   name: MissingMemberException(String)
+  nameWithType: MissingMemberException.MissingMemberException(String)
   fullName: System.MissingMemberException.MissingMemberException(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/MissingMemberException.cs
-    startLine: 31
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1245
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.MissingMemberException" data-throw-if-not-resolved="false"></xref> class with a specified error message.
   syntax:
     content: public MissingMemberException(string message)
     content.vb: Public Sub New(message As String)
     parameters:
     - id: message
       type: System.String
-      description: The message that describes the error.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.MissingMemberException.#ctor(System.String,System.Exception)
+  commentId: M:System.MissingMemberException.#ctor(System.String,System.Exception)
   id: '#ctor(System.String,System.Exception)'
   parent: System.MissingMemberException
+  langs:
+  - csharp
+  - vb
   name: MissingMemberException(String, Exception)
+  nameWithType: MissingMemberException.MissingMemberException(String, Exception)
   fullName: System.MissingMemberException.MissingMemberException(System.String, System.Exception)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/MissingMemberException.cs
-    startLine: 36
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1246
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.MissingMemberException" data-throw-if-not-resolved="false"></xref> class with a specified error message and a reference to the inner exception that is the root cause of this exception.
   syntax:
     content: public MissingMemberException(string message, Exception inner)
     content.vb: Public Sub New(message As String, inner As Exception)
     parameters:
     - id: message
       type: System.String
-      description: The error message that explains the reason for the exception.
     - id: inner
       type: System.Exception
-      description: An instance of <xref href="System.Exception" data-throw-if-not-resolved="false"></xref> that is the cause of the current Exception. If *inner* is not a null reference (Nothing in Visual Basic), then the current Exception is raised in a catch block handling *inner*.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.MissingMemberException.Message
+  commentId: P:System.MissingMemberException.Message
   id: Message
   parent: System.MissingMemberException
+  langs:
+  - csharp
+  - vb
   name: Message
+  nameWithType: MissingMemberException.Message
   fullName: System.MissingMemberException.Message
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/MissingMemberException.cs
-    startLine: 47
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Message
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1247
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Gets the text string showing the class name, the member name, and the signature of the missing member.
   syntax:
     content: public override string Message { get; }
     content.vb: Public Overrides ReadOnly Property Message As String
     parameters: []
     return:
       type: System.String
-      description: The error message string.
   overridden: System.Exception.Message
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: false
   name: Exception
+  nameWithType: Exception
   fullName: System.Exception
 - uid: System.MemberAccessException
+  commentId: T:System.MemberAccessException
   parent: System
   isExternal: false
   name: MemberAccessException
+  nameWithType: MemberAccessException
   fullName: System.MemberAccessException
 - uid: System.Exception.Data
+  commentId: P:System.Exception.Data
   parent: System.Exception
   isExternal: false
   name: Data
+  nameWithType: Exception.Data
   fullName: System.Exception.Data
 - uid: System.Exception.HelpLink
+  commentId: P:System.Exception.HelpLink
   parent: System.Exception
   isExternal: false
   name: HelpLink
+  nameWithType: Exception.HelpLink
   fullName: System.Exception.HelpLink
 - uid: System.Exception.HResult
+  commentId: P:System.Exception.HResult
   parent: System.Exception
   isExternal: false
   name: HResult
+  nameWithType: Exception.HResult
   fullName: System.Exception.HResult
 - uid: System.Exception.InnerException
+  commentId: P:System.Exception.InnerException
   parent: System.Exception
   isExternal: false
   name: InnerException
+  nameWithType: Exception.InnerException
   fullName: System.Exception.InnerException
 - uid: System.Exception.Source
+  commentId: P:System.Exception.Source
   parent: System.Exception
   isExternal: false
   name: Source
+  nameWithType: Exception.Source
   fullName: System.Exception.Source
 - uid: System.Exception.StackTrace
+  commentId: P:System.Exception.StackTrace
   parent: System.Exception
   isExternal: false
   name: StackTrace
+  nameWithType: Exception.StackTrace
   fullName: System.Exception.StackTrace
 - uid: System.Exception.GetBaseException
+  commentId: M:System.Exception.GetBaseException
   parent: System.Exception
   isExternal: false
   name: GetBaseException()
+  nameWithType: Exception.GetBaseException()
   fullName: System.Exception.GetBaseException()
   spec.csharp:
   - uid: System.Exception.GetBaseException
     name: GetBaseException
+    nameWithType: Exception.GetBaseException
     fullName: System.Exception.GetBaseException
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Exception.GetBaseException
     name: GetBaseException
+    nameWithType: Exception.GetBaseException
     fullName: System.Exception.GetBaseException
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Exception.ToString
+  commentId: M:System.Exception.ToString
   parent: System.Exception
   isExternal: false
   name: ToString()
+  nameWithType: Exception.ToString()
   fullName: System.Exception.ToString()
   spec.csharp:
   - uid: System.Exception.ToString
     name: ToString
+    nameWithType: Exception.ToString
     fullName: System.Exception.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Exception.ToString
     name: ToString
+    nameWithType: Exception.ToString
     fullName: System.Exception.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object)
+  nameWithType: Object.Equals(Object)
   fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
   parent: System.Object
   isExternal: false
   name: GetHashCode()
+  nameWithType: Object.GetHashCode()
   fullName: System.Object.GetHashCode()
   spec.csharp:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Exception.Message
+  commentId: P:System.Exception.Message
   parent: System.Exception
   isExternal: false
   name: Message
+  nameWithType: Exception.Message
   fullName: System.Exception.Message

@@ -1,5 +1,6 @@
 items:
 - uid: System.Linq.IQueryProvider
+  commentId: T:System.Linq.IQueryProvider
   id: IQueryProvider
   parent: System.Linq
   children:
@@ -7,208 +8,286 @@ items:
   - System.Linq.IQueryProvider.CreateQuery``1(System.Linq.Expressions.Expression)
   - System.Linq.IQueryProvider.Execute(System.Linq.Expressions.Expression)
   - System.Linq.IQueryProvider.Execute``1(System.Linq.Expressions.Expression)
+  langs:
+  - csharp
+  - vb
   name: IQueryProvider
+  nameWithType: IQueryProvider
   fullName: System.Linq.IQueryProvider
   type: Interface
   source:
-    remote: &o0
-      path: src/System.Linq.Expressions/src/System/Linq/IQueryable.cs
+    remote:
+      path: src/System.Linq.Expressions/ref/System.Linq.Expressions.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Linq.Expressions/src/System/Linq/IQueryable.cs
-    startLine: 23
-  assemblies:
-  - System.Linq.Expressions
-  namespace: System.Linq
-  summary: Defines methods to create and execute queries that are described by an <xref href="System.Linq.IQueryable" data-throw-if-not-resolved="false"></xref> object.
-  syntax:
-    content: public interface IQueryProvider
-    content.vb: Public Interface IQueryProvider
-- uid: System.Linq.IQueryProvider.CreateQuery(System.Linq.Expressions.Expression)
-  id: CreateQuery(System.Linq.Expressions.Expression)
-  parent: System.Linq.IQueryProvider
-  name: CreateQuery(Expression)
-  fullName: System.Linq.IQueryProvider.CreateQuery(System.Linq.Expressions.Expression)
-  type: Method
-  source:
-    remote: *o0
-    path: src/System.Linq.Expressions/src/System/Linq/IQueryable.cs
+    id: IQueryProvider
+    path: src/System.Linq.Expressions/ref/System.Linq.Expressions.cs
     startLine: 25
   assemblies:
   - System.Linq.Expressions
   namespace: System.Linq
-  summary: Constructs an <xref href="System.Linq.IQueryable" data-throw-if-not-resolved="false"></xref> object that can evaluate the query represented by a specified expression tree.
+  syntax:
+    content: public interface IQueryProvider
+    content.vb: Public Interface IQueryProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: System.Linq.IQueryProvider.CreateQuery(System.Linq.Expressions.Expression)
+  commentId: M:System.Linq.IQueryProvider.CreateQuery(System.Linq.Expressions.Expression)
+  id: CreateQuery(System.Linq.Expressions.Expression)
+  parent: System.Linq.IQueryProvider
+  langs:
+  - csharp
+  - vb
+  name: CreateQuery(Expression)
+  nameWithType: IQueryProvider.CreateQuery(Expression)
+  fullName: System.Linq.IQueryProvider.CreateQuery(System.Linq.Expressions.Expression)
+  type: Method
+  source:
+    remote:
+      path: src/System.Linq.Expressions/ref/System.Linq.Expressions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateQuery
+    path: src/System.Linq.Expressions/ref/System.Linq.Expressions.cs
+    startLine: 27
+  assemblies:
+  - System.Linq.Expressions
+  namespace: System.Linq
   syntax:
     content: IQueryable CreateQuery(Expression expression)
     content.vb: Function CreateQuery(expression As Expression) As IQueryable
     parameters:
     - id: expression
       type: System.Linq.Expressions.Expression
-      description: An expression tree that represents a LINQ query.
     return:
       type: System.Linq.IQueryable
-      description: An <xref href="System.Linq.IQueryable" data-throw-if-not-resolved="false"></xref> that can evaluate the query represented by the specified expression tree.
 - uid: System.Linq.IQueryProvider.CreateQuery``1(System.Linq.Expressions.Expression)
+  commentId: M:System.Linq.IQueryProvider.CreateQuery``1(System.Linq.Expressions.Expression)
   id: CreateQuery``1(System.Linq.Expressions.Expression)
   parent: System.Linq.IQueryProvider
+  langs:
+  - csharp
+  - vb
   name: CreateQuery<TElement>(Expression)
-  name.vb: CreateQuery(Of TElement)(Expression)
+  nameWithType: IQueryProvider.CreateQuery<TElement>(Expression)
   fullName: System.Linq.IQueryProvider.CreateQuery<TElement>(System.Linq.Expressions.Expression)
-  fullName.vb: System.Linq.IQueryProvider.CreateQuery(Of TElement)(System.Linq.Expressions.Expression)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Linq.Expressions/src/System/Linq/IQueryable.cs
-    startLine: 27
+    remote:
+      path: src/System.Linq.Expressions/ref/System.Linq.Expressions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateQuery
+    path: src/System.Linq.Expressions/ref/System.Linq.Expressions.cs
+    startLine: 28
   assemblies:
   - System.Linq.Expressions
   namespace: System.Linq
-  summary: Constructs an <xref href="System.Linq.IQueryable`1" data-throw-if-not-resolved="false"></xref> object that can evaluate the query represented by a specified expression tree.
   syntax:
     content: IQueryable<TElement> CreateQuery<TElement>(Expression expression)
     content.vb: Function CreateQuery(Of TElement)(expression As Expression) As IQueryable(Of TElement)
     parameters:
     - id: expression
       type: System.Linq.Expressions.Expression
-      description: An expression tree that represents a LINQ query.
     typeParameters:
     - id: TElement
     return:
       type: System.Linq.IQueryable{{TElement}}
-      description: An <xref href="System.Linq.IQueryable`1" data-throw-if-not-resolved="false"></xref> that can evaluate the query represented by the specified expression tree.
+  nameWithType.vb: IQueryProvider.CreateQuery(Of TElement)(Expression)
+  fullName.vb: System.Linq.IQueryProvider.CreateQuery(Of TElement)(System.Linq.Expressions.Expression)
+  name.vb: CreateQuery(Of TElement)(Expression)
 - uid: System.Linq.IQueryProvider.Execute(System.Linq.Expressions.Expression)
+  commentId: M:System.Linq.IQueryProvider.Execute(System.Linq.Expressions.Expression)
   id: Execute(System.Linq.Expressions.Expression)
   parent: System.Linq.IQueryProvider
+  langs:
+  - csharp
+  - vb
   name: Execute(Expression)
+  nameWithType: IQueryProvider.Execute(Expression)
   fullName: System.Linq.IQueryProvider.Execute(System.Linq.Expressions.Expression)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Linq.Expressions/src/System/Linq/IQueryable.cs
+    remote:
+      path: src/System.Linq.Expressions/ref/System.Linq.Expressions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Execute
+    path: src/System.Linq.Expressions/ref/System.Linq.Expressions.cs
     startLine: 29
   assemblies:
   - System.Linq.Expressions
   namespace: System.Linq
-  summary: Executes the query represented by a specified expression tree.
   syntax:
     content: object Execute(Expression expression)
     content.vb: Function Execute(expression As Expression) As Object
     parameters:
     - id: expression
       type: System.Linq.Expressions.Expression
-      description: An expression tree that represents a LINQ query.
     return:
       type: System.Object
-      description: The value that results from executing the specified query.
 - uid: System.Linq.IQueryProvider.Execute``1(System.Linq.Expressions.Expression)
+  commentId: M:System.Linq.IQueryProvider.Execute``1(System.Linq.Expressions.Expression)
   id: Execute``1(System.Linq.Expressions.Expression)
   parent: System.Linq.IQueryProvider
+  langs:
+  - csharp
+  - vb
   name: Execute<TResult>(Expression)
-  name.vb: Execute(Of TResult)(Expression)
+  nameWithType: IQueryProvider.Execute<TResult>(Expression)
   fullName: System.Linq.IQueryProvider.Execute<TResult>(System.Linq.Expressions.Expression)
-  fullName.vb: System.Linq.IQueryProvider.Execute(Of TResult)(System.Linq.Expressions.Expression)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Linq.Expressions/src/System/Linq/IQueryable.cs
-    startLine: 31
+    remote:
+      path: src/System.Linq.Expressions/ref/System.Linq.Expressions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Execute
+    path: src/System.Linq.Expressions/ref/System.Linq.Expressions.cs
+    startLine: 30
   assemblies:
   - System.Linq.Expressions
   namespace: System.Linq
-  summary: Executes the strongly-typed query represented by a specified expression tree.
   syntax:
     content: TResult Execute<TResult>(Expression expression)
     content.vb: Function Execute(Of TResult)(expression As Expression) As TResult
     parameters:
     - id: expression
       type: System.Linq.Expressions.Expression
-      description: An expression tree that represents a LINQ query.
     typeParameters:
     - id: TResult
     return:
       type: '{TResult}'
-      description: The value that results from executing the specified query.
+  nameWithType.vb: IQueryProvider.Execute(Of TResult)(Expression)
+  fullName.vb: System.Linq.IQueryProvider.Execute(Of TResult)(System.Linq.Expressions.Expression)
+  name.vb: Execute(Of TResult)(Expression)
 references:
 - uid: System.Linq
+  commentId: N:System.Linq
   isExternal: false
   name: System.Linq
+  nameWithType: System.Linq
   fullName: System.Linq
 - uid: System.Linq.Expressions.Expression
+  commentId: T:System.Linq.Expressions.Expression
   parent: System.Linq.Expressions
   isExternal: false
-  name: Expression
+  name: Expressions.Expression
+  nameWithType: Expressions.Expression
   fullName: System.Linq.Expressions.Expression
 - uid: System.Linq.IQueryable
+  commentId: T:System.Linq.IQueryable
   parent: System.Linq
   isExternal: false
   name: IQueryable
+  nameWithType: IQueryable
   fullName: System.Linq.IQueryable
 - uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
   isExternal: false
   name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
   fullName: System.Linq.Expressions
 - uid: System.Linq.IQueryable{{TElement}}
+  commentId: '!:System.Linq.IQueryable{``0}'
   parent: System.Linq
   definition: System.Linq.IQueryable`1
   name: IQueryable<TElement>
-  name.vb: IQueryable(Of TElement)
+  nameWithType: IQueryable<TElement>
   fullName: System.Linq.IQueryable<TElement>
-  fullName.vb: System.Linq.IQueryable(Of TElement)
+  nameWithType.vb: IQueryable(Of TElement)
+  fullname.vb: System.Linq.IQueryable(Of TElement)
+  name.vb: IQueryable(Of TElement)
   spec.csharp:
   - uid: System.Linq.IQueryable`1
     name: IQueryable
+    nameWithType: IQueryable
     fullName: System.Linq.IQueryable
   - name: <
+    nameWithType: <
     fullName: <
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Linq.IQueryable`1
     name: IQueryable
+    nameWithType: IQueryable
     fullName: System.Linq.IQueryable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Linq.IQueryable`1
-  parent: System.Linq
+  commentId: T:System.Linq.IQueryable`1
   isExternal: false
   name: IQueryable<>
-  name.vb: IQueryable(Of )
+  nameWithType: IQueryable<>
   fullName: System.Linq.IQueryable<>
-  fullName.vb: System.Linq.IQueryable(Of )
+  nameWithType.vb: IQueryable(Of )
+  fullname.vb: System.Linq.IQueryable(Of )
+  name.vb: IQueryable(Of )
   spec.csharp:
   - uid: System.Linq.IQueryable`1
     name: IQueryable
+    nameWithType: IQueryable
     fullName: System.Linq.IQueryable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Linq.IQueryable`1
     name: IQueryable
+    nameWithType: IQueryable
     fullName: System.Linq.IQueryable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: '{TResult}'
+  commentId: '!:TResult'
+  definition: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: TResult
   isExternal: false
   name: TResult
+  nameWithType: TResult
   fullName: TResult

@@ -1,5 +1,6 @@
 items:
 - uid: System.Math
+  commentId: T:System.Math
   id: Math
   parent: System
   children:
@@ -72,1883 +73,2678 @@ items:
   - System.Math.Tanh(System.Double)
   - System.Math.Truncate(System.Decimal)
   - System.Math.Truncate(System.Double)
+  langs:
+  - csharp
+  - vb
   name: Math
+  nameWithType: Math
   fullName: System.Math
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Math.cs
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.Manual.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 22
+      repo: https://github.com/dotnet/corefx.git
+    id: Math
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.Manual.cs
+    startLine: 10
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Provides constants and static methods for trigonometric, logarithmic, and other common mathematical functions.To browse the .NET Framework source code for this type, see the Reference Source.
   syntax:
     content: 'public class Math : object'
-    content.vb: Public Class Math Inherits Object
+    content.vb: >-
+      Public Class Math
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Math.Abs(System.Decimal)
+  commentId: M:System.Math.Abs(System.Decimal)
   id: Abs(System.Decimal)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Abs(Decimal)
+  nameWithType: Math.Abs(Decimal)
   fullName: System.Math.Abs(System.Decimal)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 310
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Abs
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 453
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the absolute value of a <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> number.
   syntax:
     content: public static decimal Abs(decimal value)
     content.vb: Public Shared Function Abs(value As Decimal) As Decimal
     parameters:
     - id: value
       type: System.Decimal
-      description: A number that is greater than or equal to <xref href="System.Decimal.MinValue" data-throw-if-not-resolved="false"></xref>, but less than or equal to <xref href="System.Decimal.MaxValue" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Decimal
-      description: "A decimal number, x, such that 0 ≤ x ≤<xref href=\"System.Decimal.MaxValue\" data-throw-if-not-resolved=\"false\"></xref>."
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Abs(System.Double)
+  commentId: M:System.Math.Abs(System.Double)
   id: Abs(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Abs(Double)
+  nameWithType: Math.Abs(Double)
   fullName: System.Math.Abs(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Abs
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 454
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the absolute value of a double-precision floating-point number.
   syntax:
     content: public static double Abs(double value)
     content.vb: Public Shared Function Abs(value As Double) As Double
     parameters:
     - id: value
       type: System.Double
-      description: A number that is greater than or equal to <xref href="System.Double.MinValue" data-throw-if-not-resolved="false"></xref>, but less than or equal to <xref href="System.Double.MaxValue" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Double
-      description: "A double-precision floating-point number, x, such that 0 ≤ x ≤<xref href=\"System.Double.MaxValue\" data-throw-if-not-resolved=\"false\"></xref>."
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Abs(System.Int16)
+  commentId: M:System.Math.Abs(System.Int16)
   id: Abs(System.Int16)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Abs(Int16)
+  nameWithType: Math.Abs(Int16)
   fullName: System.Math.Abs(System.Int16)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 241
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Abs
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 455
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the absolute value of a 16-bit signed integer.
   syntax:
     content: public static short Abs(short value)
     content.vb: Public Shared Function Abs(value As Short) As Short
     parameters:
     - id: value
       type: System.Int16
-      description: A number that is greater than <xref href="System.Int16.MinValue" data-throw-if-not-resolved="false"></xref>, but less than or equal to <xref href="System.Int16.MaxValue" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Int16
-      description: "A 16-bit signed integer, x, such that 0 ≤ x ≤<xref href=\"System.Int16.MaxValue\" data-throw-if-not-resolved=\"false\"></xref>."
-  exceptions:
-  - type: System.OverflowException
-    description: '*value* equals <xref href="System.Int16.MinValue" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Abs(System.Int32)
+  commentId: M:System.Math.Abs(System.Int32)
   id: Abs(System.Int32)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Abs(Int32)
+  nameWithType: Math.Abs(Int32)
   fullName: System.Math.Abs(System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 256
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Abs
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 456
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the absolute value of a 32-bit signed integer.
   syntax:
     content: public static int Abs(int value)
     content.vb: Public Shared Function Abs(value As Integer) As Integer
     parameters:
     - id: value
       type: System.Int32
-      description: A number that is greater than <xref href="System.Int32.MinValue" data-throw-if-not-resolved="false"></xref>, but less than or equal to <xref href="System.Int32.MaxValue" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Int32
-      description: "A 32-bit signed integer, x, such that 0 ≤ x ≤<xref href=\"System.Int32.MaxValue\" data-throw-if-not-resolved=\"false\"></xref>."
-  exceptions:
-  - type: System.OverflowException
-    description: '*value* equals <xref href="System.Int32.MinValue" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Abs(System.Int64)
+  commentId: M:System.Math.Abs(System.Int64)
   id: Abs(System.Int64)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Abs(Int64)
+  nameWithType: Math.Abs(Int64)
   fullName: System.Math.Abs(System.Int64)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 271
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Abs
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 457
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the absolute value of a 64-bit signed integer.
   syntax:
     content: public static long Abs(long value)
     content.vb: Public Shared Function Abs(value As Long) As Long
     parameters:
     - id: value
       type: System.Int64
-      description: A number that is greater than <xref href="System.Int64.MinValue" data-throw-if-not-resolved="false"></xref>, but less than or equal to <xref href="System.Int64.MaxValue" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Int64
-      description: "A 64-bit signed integer, x, such that 0 ≤ x ≤<xref href=\"System.Int64.MaxValue\" data-throw-if-not-resolved=\"false\"></xref>."
-  exceptions:
-  - type: System.OverflowException
-    description: '*value* equals <xref href="System.Int64.MinValue" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Abs(System.SByte)
+  commentId: M:System.Math.Abs(System.SByte)
   id: Abs(System.SByte)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Abs(SByte)
+  nameWithType: Math.Abs(SByte)
   fullName: System.Math.Abs(System.SByte)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 224
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Abs
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 458
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the absolute value of an 8-bit signed integer.
   syntax:
     content: public static sbyte Abs(sbyte value)
     content.vb: Public Shared Function Abs(value As SByte) As SByte
     parameters:
     - id: value
       type: System.SByte
-      description: A number that is greater than <xref href="System.SByte.MinValue" data-throw-if-not-resolved="false"></xref>, but less than or equal to <xref href="System.SByte.MaxValue" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.SByte
-      description: "An 8-bit signed integer, x, such that 0 ≤ x ≤<xref href=\"System.SByte.MaxValue\" data-throw-if-not-resolved=\"false\"></xref>."
-  exceptions:
-  - type: System.OverflowException
-    description: '*value* equals <xref href="System.SByte.MinValue" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Abs(System.Single)
+  commentId: M:System.Math.Abs(System.Single)
   id: Abs(System.Single)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Abs(Single)
+  nameWithType: Math.Abs(Single)
   fullName: System.Math.Abs(System.Single)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Abs
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 460
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the absolute value of a single-precision floating-point number.
   syntax:
     content: public static float Abs(float value)
     content.vb: Public Shared Function Abs(value As Single) As Single
     parameters:
     - id: value
       type: System.Single
-      description: A number that is greater than or equal to <xref href="System.Single.MinValue" data-throw-if-not-resolved="false"></xref>, but less than or equal to <xref href="System.Single.MaxValue" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Single
-      description: "A single-precision floating-point number, x, such that 0 ≤ x ≤<xref href=\"System.Single.MaxValue\" data-throw-if-not-resolved=\"false\"></xref>."
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Acos(System.Double)
+  commentId: M:System.Math.Acos(System.Double)
   id: Acos(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Acos(Double)
+  nameWithType: Math.Acos(Double)
   fullName: System.Math.Acos(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Acos
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 461
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the angle whose cosine is the specified number.
   syntax:
     content: public static double Acos(double d)
     content.vb: Public Shared Function Acos(d As Double) As Double
     parameters:
     - id: d
       type: System.Double
-      description: A number representing a cosine, where *d* must be greater than or equal to -1, but less than or equal to 1.
     return:
       type: System.Double
-      description: "An angle, θ, measured in radians, such that 0 ≤θ≤π-or- <xref href=\"System.Double.NaN\" data-throw-if-not-resolved=\"false\"></xref> if *d* &lt; -1 or *d* &gt; 1 or *d* equals <xref href=\"System.Double.NaN\" data-throw-if-not-resolved=\"false\"></xref>."
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Asin(System.Double)
+  commentId: M:System.Math.Asin(System.Double)
   id: Asin(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Asin(Double)
+  nameWithType: Math.Asin(Double)
   fullName: System.Math.Asin(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Asin
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 462
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the angle whose sine is the specified number.
   syntax:
     content: public static double Asin(double d)
     content.vb: Public Shared Function Asin(d As Double) As Double
     parameters:
     - id: d
       type: System.Double
-      description: A number representing a sine, where *d* must be greater than or equal to -1, but less than or equal to 1.
     return:
       type: System.Double
-      description: "An angle, θ, measured in radians, such that -π/2 ≤θ≤π/2 -or- <xref href=\"System.Double.NaN\" data-throw-if-not-resolved=\"false\"></xref> if *d* &lt; -1 or *d* &gt; 1 or *d* equals <xref href=\"System.Double.NaN\" data-throw-if-not-resolved=\"false\"></xref>."
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Atan(System.Double)
+  commentId: M:System.Math.Atan(System.Double)
   id: Atan(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Atan(Double)
+  nameWithType: Math.Atan(Double)
   fullName: System.Math.Atan(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Atan
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 463
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the angle whose tangent is the specified number.
   syntax:
     content: public static double Atan(double d)
     content.vb: Public Shared Function Atan(d As Double) As Double
     parameters:
     - id: d
       type: System.Double
-      description: A number representing a tangent.
     return:
       type: System.Double
-      description: "An angle, θ, measured in radians, such that -π/2 ≤θ≤π/2.-or- <xref href=\"System.Double.NaN\" data-throw-if-not-resolved=\"false\"></xref> if *d* equals <xref href=\"System.Double.NaN\" data-throw-if-not-resolved=\"false\"></xref>, -π/2 rounded to double precision (-1.5707963267949) if *d* equals <xref href=\"System.Double.NegativeInfinity\" data-throw-if-not-resolved=\"false\"></xref>, or π/2 rounded to double precision (1.5707963267949) if *d* equals <xref href=\"System.Double.PositiveInfinity\" data-throw-if-not-resolved=\"false\"></xref>."
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Atan2(System.Double,System.Double)
+  commentId: M:System.Math.Atan2(System.Double,System.Double)
   id: Atan2(System.Double,System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Atan2(Double, Double)
+  nameWithType: Math.Atan2(Double, Double)
   fullName: System.Math.Atan2(System.Double, System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Atan2
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 464
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the angle whose tangent is the quotient of two specified numbers.
   syntax:
     content: public static double Atan2(double y, double x)
     content.vb: Public Shared Function Atan2(y As Double, x As Double) As Double
     parameters:
     - id: y
       type: System.Double
-      description: The y coordinate of a point.
     - id: x
       type: System.Double
-      description: The x coordinate of a point.
     return:
       type: System.Double
-      description: "An angle, θ, measured in radians, such that -π≤θ≤π, and tan(θ) = *y* / *x*, where (*x*, *y*) is a point in the Cartesian plane. Observe the following: For (*x*, *y*) in quadrant 1, 0 &lt; θ &lt; π/2.For (*x*, *y*) in quadrant 2, π/2 &lt; θ≤π.For (*x*, *y*) in quadrant 3, -π &lt; θ &lt; -π/2.For (*x*, *y*) in quadrant 4, -π/2 &lt; θ &lt; 0.For points on the boundaries of the quadrants, the return value is the following:If y is 0 and x is not negative, θ = 0.If y is 0 and x is negative, θ = π.If y is positive and x is 0, θ = π/2.If y is negative and x is 0, θ = -π/2.If y is 0 and x is 0, θ = 0. If *x* or *y* is <xref href=\"System.Double.NaN\" data-throw-if-not-resolved=\"false\"></xref>, or if *x* and *y* are either <xref href=\"System.Double.PositiveInfinity\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"System.Double.NegativeInfinity\" data-throw-if-not-resolved=\"false\"></xref>, the method returns <xref href=\"System.Double.NaN\" data-throw-if-not-resolved=\"false\"></xref>."
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Ceiling(System.Decimal)
+  commentId: M:System.Math.Ceiling(System.Decimal)
   id: Ceiling(System.Decimal)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Ceiling(Decimal)
+  nameWithType: Math.Ceiling(Decimal)
   fullName: System.Math.Ceiling(System.Decimal)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 50
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Ceiling
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 465
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smallest integral value that is greater than or equal to the specified decimal number.
   syntax:
     content: public static decimal Ceiling(decimal d)
     content.vb: Public Shared Function Ceiling(d As Decimal) As Decimal
     parameters:
     - id: d
       type: System.Decimal
-      description: A decimal number.
     return:
       type: System.Decimal
-      description: The smallest integral value that is greater than or equal to *d*. Note that this method returns a <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> instead of an integral type.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Ceiling(System.Double)
+  commentId: M:System.Math.Ceiling(System.Double)
   id: Ceiling(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Ceiling(Double)
+  nameWithType: Math.Ceiling(Double)
   fullName: System.Math.Ceiling(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Ceiling
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 466
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smallest integral value that is greater than or equal to the specified double-precision floating-point number.
   syntax:
     content: public static double Ceiling(double a)
     content.vb: Public Shared Function Ceiling(a As Double) As Double
     parameters:
     - id: a
       type: System.Double
-      description: A double-precision floating-point number.
     return:
       type: System.Double
-      description: The smallest integral value that is greater than or equal to *a*. If *a* is equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>, that value is returned. Note that this method returns a <xref href="System.Double" data-throw-if-not-resolved="false"></xref> instead of an integral type.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Cos(System.Double)
+  commentId: M:System.Math.Cos(System.Double)
   id: Cos(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Cos(Double)
+  nameWithType: Math.Cos(Double)
   fullName: System.Math.Cos(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Cos
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 467
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the cosine of the specified angle.
   syntax:
     content: public static double Cos(double d)
     content.vb: Public Shared Function Cos(d As Double) As Double
     parameters:
     - id: d
       type: System.Double
-      description: An angle, measured in radians.
     return:
       type: System.Double
-      description: The cosine of *d*. If *d* is equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>, this method returns <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Cosh(System.Double)
+  commentId: M:System.Math.Cosh(System.Double)
   id: Cosh(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Cosh(Double)
+  nameWithType: Math.Cosh(Double)
   fullName: System.Math.Cosh(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Cosh
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 468
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the hyperbolic cosine of the specified angle.
   syntax:
     content: public static double Cosh(double value)
     content.vb: Public Shared Function Cosh(value As Double) As Double
     parameters:
     - id: value
       type: System.Double
-      description: An angle, measured in radians.
     return:
       type: System.Double
-      description: The hyperbolic cosine of *value*. If *value* is equal to <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref> or <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref> is returned. If *value* is equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref> is returned.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Exp(System.Double)
+  commentId: M:System.Math.Exp(System.Double)
   id: Exp(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Exp(Double)
+  nameWithType: Math.Exp(Double)
   fullName: System.Math.Exp(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Exp
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 469
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns e raised to the specified power.
   syntax:
     content: public static double Exp(double d)
     content.vb: Public Shared Function Exp(d As Double) As Double
     parameters:
     - id: d
       type: System.Double
-      description: A number specifying a power.
     return:
       type: System.Double
-      description: The number e raised to the power *d*. If *d* equals <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref> or <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>, that value is returned. If *d* equals <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>, 0 is returned.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Floor(System.Decimal)
+  commentId: M:System.Math.Floor(System.Decimal)
   id: Floor(System.Decimal)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Floor(Decimal)
+  nameWithType: Math.Floor(Decimal)
   fullName: System.Math.Floor(System.Decimal)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 66
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Floor
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 470
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the largest integer less than or equal to the specified decimal number.
   syntax:
     content: public static decimal Floor(decimal d)
     content.vb: Public Shared Function Floor(d As Decimal) As Decimal
     parameters:
     - id: d
       type: System.Decimal
-      description: A decimal number.
     return:
       type: System.Decimal
-      description: The largest integer less than or equal to *d*.  Note that the method returns an integral value of type <xref href="System.Math" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Floor(System.Double)
+  commentId: M:System.Math.Floor(System.Double)
   id: Floor(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Floor(Double)
+  nameWithType: Math.Floor(Double)
   fullName: System.Math.Floor(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Floor
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 471
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the largest integer less than or equal to the specified double-precision floating-point number.
   syntax:
     content: public static double Floor(double d)
     content.vb: Public Shared Function Floor(d As Double) As Double
     parameters:
     - id: d
       type: System.Double
-      description: A double-precision floating-point number.
     return:
       type: System.Double
-      description: The largest integer less than or equal to *d*. If *d* is equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>, that value is returned.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.IEEERemainder(System.Double,System.Double)
+  commentId: M:System.Math.IEEERemainder(System.Double,System.Double)
   id: IEEERemainder(System.Double,System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: IEEERemainder(Double, Double)
+  nameWithType: Math.IEEERemainder(Double, Double)
   fullName: System.Math.IEEERemainder(System.Double, System.Double)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 184
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IEEERemainder
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 472
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the remainder resulting from the division of a specified number by another specified number.
   syntax:
     content: public static double IEEERemainder(double x, double y)
     content.vb: Public Shared Function IEEERemainder(x As Double, y As Double) As Double
     parameters:
     - id: x
       type: System.Double
-      description: A dividend.
     - id: y
       type: System.Double
-      description: A divisor.
     return:
       type: System.Double
-      description: A number equal to *x* - (*y* Q), where Q is the quotient of *x* / *y* rounded to the nearest integer (if *x* / *y* falls halfway between two integers, the even integer is returned).If *x* - (*y* Q) is zero, the value +0 is returned if *x* is positive, or -0 if *x* is negative.If *y* = 0, <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref> is returned.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Log(System.Double)
+  commentId: M:System.Math.Log(System.Double)
   id: Log(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Log(Double)
+  nameWithType: Math.Log(Double)
   fullName: System.Math.Log(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Log
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 473
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the natural (base e) logarithm of a specified number.
   syntax:
     content: public static double Log(double d)
     content.vb: Public Shared Function Log(d As Double) As Double
     parameters:
     - id: d
       type: System.Double
-      description: The number whose logarithm is to be found.
     return:
       type: System.Double
-      description: One of the values in the following table. *d* parameterReturn value Positive The natural logarithm of *d*; that is, ln *d*, or log e*d*Zero <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>Negative <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>Equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref><xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>Equal to <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref><xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Log(System.Double,System.Double)
+  commentId: M:System.Math.Log(System.Double,System.Double)
   id: Log(System.Double,System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Log(Double, Double)
+  nameWithType: Math.Log(Double, Double)
   fullName: System.Math.Log(System.Double, System.Double)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 482
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Log
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 474
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the logarithm of a specified number in a specified base.
   syntax:
     content: public static double Log(double a, double newBase)
     content.vb: Public Shared Function Log(a As Double, newBase As Double) As Double
     parameters:
     - id: a
       type: System.Double
-      description: The number whose logarithm is to be found.
     - id: newBase
       type: System.Double
-      description: The base of the logarithm.
     return:
       type: System.Double
-      description: One of the values in the following table. (+Infinity denotes <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>, -Infinity denotes <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>, and NaN denotes <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>.)*a**newBase*Return value*a*&gt; 0(0 &lt;*newBase*&lt; 1) -or-(*newBase*&gt; 1)lognewBase(a)*a*&lt; 0(any value)NaN(any value)*newBase*&lt; 0NaN*a* != 1*newBase* = 0NaN*a* != 1*newBase* = +InfinityNaN*a* = NaN(any value)NaN(any value)*newBase* = NaNNaN(any value)*newBase* = 1NaN*a* = 00 &lt;*newBase*&lt; 1 +Infinity*a* = 0*newBase*&gt; 1-Infinity*a* =  +Infinity0 &lt;*newBase*&lt; 1-Infinity*a* =  +Infinity*newBase*&gt; 1+Infinity*a* = 1*newBase* = 00*a* = 1*newBase* = +Infinity0
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Log10(System.Double)
+  commentId: M:System.Math.Log10(System.Double)
   id: Log10(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Log10(Double)
+  nameWithType: Math.Log10(Double)
   fullName: System.Math.Log10(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Log10
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 475
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the base 10 logarithm of a specified number.
   syntax:
     content: public static double Log10(double d)
     content.vb: Public Shared Function Log10(d As Double) As Double
     parameters:
     - id: d
       type: System.Double
-      description: A number whose logarithm is to be found.
     return:
       type: System.Double
-      description: One of the values in the following table. *d* parameter Return value Positive The base 10 log of *d*; that is, log 10*d*. Zero <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>Negative <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>Equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref><xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>Equal to <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref><xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.Byte,System.Byte)
+  commentId: M:System.Math.Max(System.Byte,System.Byte)
   id: Max(System.Byte,System.Byte)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(Byte, Byte)
+  nameWithType: Math.Max(Byte, Byte)
   fullName: System.Math.Max(System.Byte, System.Byte)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 325
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 476
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two 8-bit unsigned integers.
   syntax:
     content: public static byte Max(byte val1, byte val2)
     content.vb: Public Shared Function Max(val1 As Byte, val2 As Byte) As Byte
     parameters:
     - id: val1
       type: System.Byte
-      description: The first of two 8-bit unsigned integers to compare.
     - id: val2
       type: System.Byte
-      description: The second of two 8-bit unsigned integers to compare.
     return:
       type: System.Byte
-      description: Parameter *val1* or *val2*, whichever is larger.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.Decimal,System.Decimal)
+  commentId: M:System.Math.Max(System.Decimal,System.Decimal)
   id: Max(System.Decimal,System.Decimal)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(Decimal, Decimal)
+  nameWithType: Math.Max(Decimal, Decimal)
   fullName: System.Math.Max(System.Decimal, System.Decimal)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 392
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 477
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two decimal numbers.
   syntax:
     content: public static decimal Max(decimal val1, decimal val2)
     content.vb: Public Shared Function Max(val1 As Decimal, val2 As Decimal) As Decimal
     parameters:
     - id: val1
       type: System.Decimal
-      description: The first of two decimal numbers to compare.
     - id: val2
       type: System.Decimal
-      description: The second of two decimal numbers to compare.
     return:
       type: System.Decimal
-      description: Parameter *val1* or *val2*, whichever is larger.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.Double,System.Double)
+  commentId: M:System.Math.Max(System.Double,System.Double)
   id: Max(System.Double,System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(Double, Double)
+  nameWithType: Math.Max(Double, Double)
   fullName: System.Math.Max(System.Double, System.Double)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 381
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 478
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two double-precision floating-point numbers.
   syntax:
     content: public static double Max(double val1, double val2)
     content.vb: Public Shared Function Max(val1 As Double, val2 As Double) As Double
     parameters:
     - id: val1
       type: System.Double
-      description: The first of two double-precision floating-point numbers to compare.
     - id: val2
       type: System.Double
-      description: The second of two double-precision floating-point numbers to compare.
     return:
       type: System.Double
-      description: Parameter *val1* or *val2*, whichever is larger. If *val1*, *val2*, or both *val1* and *val2* are equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref> is returned.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.Int16,System.Int16)
+  commentId: M:System.Math.Max(System.Int16,System.Int16)
   id: Max(System.Int16,System.Int16)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(Int16, Int16)
+  nameWithType: Math.Max(Int16, Int16)
   fullName: System.Math.Max(System.Int16, System.Int16)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 331
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 479
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two 16-bit signed integers.
   syntax:
     content: public static short Max(short val1, short val2)
     content.vb: Public Shared Function Max(val1 As Short, val2 As Short) As Short
     parameters:
     - id: val1
       type: System.Int16
-      description: The first of two 16-bit signed integers to compare.
     - id: val2
       type: System.Int16
-      description: The second of two 16-bit signed integers to compare.
     return:
       type: System.Int16
-      description: Parameter *val1* or *val2*, whichever is larger.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.Int32,System.Int32)
+  commentId: M:System.Math.Max(System.Int32,System.Int32)
   id: Max(System.Int32,System.Int32)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(Int32, Int32)
+  nameWithType: Math.Max(Int32, Int32)
   fullName: System.Math.Max(System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 344
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 480
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two 32-bit signed integers.
   syntax:
     content: public static int Max(int val1, int val2)
     content.vb: Public Shared Function Max(val1 As Integer, val2 As Integer) As Integer
     parameters:
     - id: val1
       type: System.Int32
-      description: The first of two 32-bit signed integers to compare.
     - id: val2
       type: System.Int32
-      description: The second of two 32-bit signed integers to compare.
     return:
       type: System.Int32
-      description: Parameter *val1* or *val2*, whichever is larger.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.Int64,System.Int64)
+  commentId: M:System.Math.Max(System.Int64,System.Int64)
   id: Max(System.Int64,System.Int64)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(Int64, Int64)
+  nameWithType: Math.Max(Int64, Int64)
   fullName: System.Math.Max(System.Int64, System.Int64)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 357
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 481
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two 64-bit signed integers.
   syntax:
     content: public static long Max(long val1, long val2)
     content.vb: Public Shared Function Max(val1 As Long, val2 As Long) As Long
     parameters:
     - id: val1
       type: System.Int64
-      description: The first of two 64-bit signed integers to compare.
     - id: val2
       type: System.Int64
-      description: The second of two 64-bit signed integers to compare.
     return:
       type: System.Int64
-      description: Parameter *val1* or *val2*, whichever is larger.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.SByte,System.SByte)
+  commentId: M:System.Math.Max(System.SByte,System.SByte)
   id: Max(System.SByte,System.SByte)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(SByte, SByte)
+  nameWithType: Math.Max(SByte, SByte)
   fullName: System.Math.Max(System.SByte, System.SByte)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 318
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 482
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two 8-bit signed integers.
   syntax:
     content: public static sbyte Max(sbyte val1, sbyte val2)
     content.vb: Public Shared Function Max(val1 As SByte, val2 As SByte) As SByte
     parameters:
     - id: val1
       type: System.SByte
-      description: The first of two 8-bit signed integers to compare.
     - id: val2
       type: System.SByte
-      description: The second of two 8-bit signed integers to compare.
     return:
       type: System.SByte
-      description: Parameter *val1* or *val2*, whichever is larger.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.Single,System.Single)
+  commentId: M:System.Math.Max(System.Single,System.Single)
   id: Max(System.Single,System.Single)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(Single, Single)
+  nameWithType: Math.Max(Single, Single)
   fullName: System.Math.Max(System.Single, System.Single)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 370
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 484
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two single-precision floating-point numbers.
   syntax:
     content: public static float Max(float val1, float val2)
     content.vb: Public Shared Function Max(val1 As Single, val2 As Single) As Single
     parameters:
     - id: val1
       type: System.Single
-      description: The first of two single-precision floating-point numbers to compare.
     - id: val2
       type: System.Single
-      description: The second of two single-precision floating-point numbers to compare.
     return:
       type: System.Single
-      description: Parameter *val1* or *val2*, whichever is larger. If *val1*, or *val2*, or both *val1* and *val2* are equal to <xref href="System.Single.NaN" data-throw-if-not-resolved="false"></xref>, <xref href="System.Single.NaN" data-throw-if-not-resolved="false"></xref> is returned.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.UInt16,System.UInt16)
+  commentId: M:System.Math.Max(System.UInt16,System.UInt16)
   id: Max(System.UInt16,System.UInt16)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(UInt16, UInt16)
+  nameWithType: Math.Max(UInt16, UInt16)
   fullName: System.Math.Max(System.UInt16, System.UInt16)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 337
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 485
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two 16-bit unsigned integers.
   syntax:
     content: public static ushort Max(ushort val1, ushort val2)
     content.vb: Public Shared Function Max(val1 As UShort, val2 As UShort) As UShort
     parameters:
     - id: val1
       type: System.UInt16
-      description: The first of two 16-bit unsigned integers to compare.
     - id: val2
       type: System.UInt16
-      description: The second of two 16-bit unsigned integers to compare.
     return:
       type: System.UInt16
-      description: Parameter *val1* or *val2*, whichever is larger.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.UInt32,System.UInt32)
+  commentId: M:System.Math.Max(System.UInt32,System.UInt32)
   id: Max(System.UInt32,System.UInt32)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(UInt32, UInt32)
+  nameWithType: Math.Max(UInt32, UInt32)
   fullName: System.Math.Max(System.UInt32, System.UInt32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 350
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 487
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two 32-bit unsigned integers.
   syntax:
     content: public static uint Max(uint val1, uint val2)
     content.vb: Public Shared Function Max(val1 As UInteger, val2 As UInteger) As UInteger
     parameters:
     - id: val1
       type: System.UInt32
-      description: The first of two 32-bit unsigned integers to compare.
     - id: val2
       type: System.UInt32
-      description: The second of two 32-bit unsigned integers to compare.
     return:
       type: System.UInt32
-      description: Parameter *val1* or *val2*, whichever is larger.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Max(System.UInt64,System.UInt64)
+  commentId: M:System.Math.Max(System.UInt64,System.UInt64)
   id: Max(System.UInt64,System.UInt64)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Max(UInt64, UInt64)
+  nameWithType: Math.Max(UInt64, UInt64)
   fullName: System.Math.Max(System.UInt64, System.UInt64)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 363
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 489
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the larger of two 64-bit unsigned integers.
   syntax:
     content: public static ulong Max(ulong val1, ulong val2)
     content.vb: Public Shared Function Max(val1 As ULong, val2 As ULong) As ULong
     parameters:
     - id: val1
       type: System.UInt64
-      description: The first of two 64-bit unsigned integers to compare.
     - id: val2
       type: System.UInt64
-      description: The second of two 64-bit unsigned integers to compare.
     return:
       type: System.UInt64
-      description: Parameter *val1* or *val2*, whichever is larger.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.Byte,System.Byte)
+  commentId: M:System.Math.Min(System.Byte,System.Byte)
   id: Min(System.Byte,System.Byte)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(Byte, Byte)
+  nameWithType: Math.Min(Byte, Byte)
   fullName: System.Math.Min(System.Byte, System.Byte)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 407
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 491
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two 8-bit unsigned integers.
   syntax:
     content: public static byte Min(byte val1, byte val2)
     content.vb: Public Shared Function Min(val1 As Byte, val2 As Byte) As Byte
     parameters:
     - id: val1
       type: System.Byte
-      description: The first of two 8-bit unsigned integers to compare.
     - id: val2
       type: System.Byte
-      description: The second of two 8-bit unsigned integers to compare.
     return:
       type: System.Byte
-      description: Parameter *val1* or *val2*, whichever is smaller.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.Decimal,System.Decimal)
+  commentId: M:System.Math.Min(System.Decimal,System.Decimal)
   id: Min(System.Decimal,System.Decimal)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(Decimal, Decimal)
+  nameWithType: Math.Min(Decimal, Decimal)
   fullName: System.Math.Min(System.Decimal, System.Decimal)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 474
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 492
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two decimal numbers.
   syntax:
     content: public static decimal Min(decimal val1, decimal val2)
     content.vb: Public Shared Function Min(val1 As Decimal, val2 As Decimal) As Decimal
     parameters:
     - id: val1
       type: System.Decimal
-      description: The first of two decimal numbers to compare.
     - id: val2
       type: System.Decimal
-      description: The second of two decimal numbers to compare.
     return:
       type: System.Decimal
-      description: Parameter *val1* or *val2*, whichever is smaller.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.Double,System.Double)
+  commentId: M:System.Math.Min(System.Double,System.Double)
   id: Min(System.Double,System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(Double, Double)
+  nameWithType: Math.Min(Double, Double)
   fullName: System.Math.Min(System.Double, System.Double)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 463
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 493
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two double-precision floating-point numbers.
   syntax:
     content: public static double Min(double val1, double val2)
     content.vb: Public Shared Function Min(val1 As Double, val2 As Double) As Double
     parameters:
     - id: val1
       type: System.Double
-      description: The first of two double-precision floating-point numbers to compare.
     - id: val2
       type: System.Double
-      description: The second of two double-precision floating-point numbers to compare.
     return:
       type: System.Double
-      description: Parameter *val1* or *val2*, whichever is smaller. If *val1*, *val2*, or both *val1* and *val2* are equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref> is returned.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.Int16,System.Int16)
+  commentId: M:System.Math.Min(System.Int16,System.Int16)
   id: Min(System.Int16,System.Int16)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(Int16, Int16)
+  nameWithType: Math.Min(Int16, Int16)
   fullName: System.Math.Min(System.Int16, System.Int16)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 413
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 494
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two 16-bit signed integers.
   syntax:
     content: public static short Min(short val1, short val2)
     content.vb: Public Shared Function Min(val1 As Short, val2 As Short) As Short
     parameters:
     - id: val1
       type: System.Int16
-      description: The first of two 16-bit signed integers to compare.
     - id: val2
       type: System.Int16
-      description: The second of two 16-bit signed integers to compare.
     return:
       type: System.Int16
-      description: Parameter *val1* or *val2*, whichever is smaller.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.Int32,System.Int32)
+  commentId: M:System.Math.Min(System.Int32,System.Int32)
   id: Min(System.Int32,System.Int32)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(Int32, Int32)
+  nameWithType: Math.Min(Int32, Int32)
   fullName: System.Math.Min(System.Int32, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 426
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 495
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two 32-bit signed integers.
   syntax:
     content: public static int Min(int val1, int val2)
     content.vb: Public Shared Function Min(val1 As Integer, val2 As Integer) As Integer
     parameters:
     - id: val1
       type: System.Int32
-      description: The first of two 32-bit signed integers to compare.
     - id: val2
       type: System.Int32
-      description: The second of two 32-bit signed integers to compare.
     return:
       type: System.Int32
-      description: Parameter *val1* or *val2*, whichever is smaller.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.Int64,System.Int64)
+  commentId: M:System.Math.Min(System.Int64,System.Int64)
   id: Min(System.Int64,System.Int64)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(Int64, Int64)
+  nameWithType: Math.Min(Int64, Int64)
   fullName: System.Math.Min(System.Int64, System.Int64)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 439
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 496
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two 64-bit signed integers.
   syntax:
     content: public static long Min(long val1, long val2)
     content.vb: Public Shared Function Min(val1 As Long, val2 As Long) As Long
     parameters:
     - id: val1
       type: System.Int64
-      description: The first of two 64-bit signed integers to compare.
     - id: val2
       type: System.Int64
-      description: The second of two 64-bit signed integers to compare.
     return:
       type: System.Int64
-      description: Parameter *val1* or *val2*, whichever is smaller.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.SByte,System.SByte)
+  commentId: M:System.Math.Min(System.SByte,System.SByte)
   id: Min(System.SByte,System.SByte)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(SByte, SByte)
+  nameWithType: Math.Min(SByte, SByte)
   fullName: System.Math.Min(System.SByte, System.SByte)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 400
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 497
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two 8-bit signed integers.
   syntax:
     content: public static sbyte Min(sbyte val1, sbyte val2)
     content.vb: Public Shared Function Min(val1 As SByte, val2 As SByte) As SByte
     parameters:
     - id: val1
       type: System.SByte
-      description: The first of two 8-bit signed integers to compare.
     - id: val2
       type: System.SByte
-      description: The second of two 8-bit signed integers to compare.
     return:
       type: System.SByte
-      description: Parameter *val1* or *val2*, whichever is smaller.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.Single,System.Single)
+  commentId: M:System.Math.Min(System.Single,System.Single)
   id: Min(System.Single,System.Single)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(Single, Single)
+  nameWithType: Math.Min(Single, Single)
   fullName: System.Math.Min(System.Single, System.Single)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 452
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 499
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two single-precision floating-point numbers.
   syntax:
     content: public static float Min(float val1, float val2)
     content.vb: Public Shared Function Min(val1 As Single, val2 As Single) As Single
     parameters:
     - id: val1
       type: System.Single
-      description: The first of two single-precision floating-point numbers to compare.
     - id: val2
       type: System.Single
-      description: The second of two single-precision floating-point numbers to compare.
     return:
       type: System.Single
-      description: Parameter *val1* or *val2*, whichever is smaller. If *val1*, *val2*, or both *val1* and *val2* are equal to <xref href="System.Single.NaN" data-throw-if-not-resolved="false"></xref>, <xref href="System.Single.NaN" data-throw-if-not-resolved="false"></xref> is returned.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.UInt16,System.UInt16)
+  commentId: M:System.Math.Min(System.UInt16,System.UInt16)
   id: Min(System.UInt16,System.UInt16)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(UInt16, UInt16)
+  nameWithType: Math.Min(UInt16, UInt16)
   fullName: System.Math.Min(System.UInt16, System.UInt16)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 419
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 500
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two 16-bit unsigned integers.
   syntax:
     content: public static ushort Min(ushort val1, ushort val2)
     content.vb: Public Shared Function Min(val1 As UShort, val2 As UShort) As UShort
     parameters:
     - id: val1
       type: System.UInt16
-      description: The first of two 16-bit unsigned integers to compare.
     - id: val2
       type: System.UInt16
-      description: The second of two 16-bit unsigned integers to compare.
     return:
       type: System.UInt16
-      description: Parameter *val1* or *val2*, whichever is smaller.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.UInt32,System.UInt32)
+  commentId: M:System.Math.Min(System.UInt32,System.UInt32)
   id: Min(System.UInt32,System.UInt32)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(UInt32, UInt32)
+  nameWithType: Math.Min(UInt32, UInt32)
   fullName: System.Math.Min(System.UInt32, System.UInt32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 432
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 502
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two 32-bit unsigned integers.
   syntax:
     content: public static uint Min(uint val1, uint val2)
     content.vb: Public Shared Function Min(val1 As UInteger, val2 As UInteger) As UInteger
     parameters:
     - id: val1
       type: System.UInt32
-      description: The first of two 32-bit unsigned integers to compare.
     - id: val2
       type: System.UInt32
-      description: The second of two 32-bit unsigned integers to compare.
     return:
       type: System.UInt32
-      description: Parameter *val1* or *val2*, whichever is smaller.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Min(System.UInt64,System.UInt64)
+  commentId: M:System.Math.Min(System.UInt64,System.UInt64)
   id: Min(System.UInt64,System.UInt64)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Min(UInt64, UInt64)
+  nameWithType: Math.Min(UInt64, UInt64)
   fullName: System.Math.Min(System.UInt64, System.UInt64)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 445
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 504
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the smaller of two 64-bit unsigned integers.
   syntax:
     content: public static ulong Min(ulong val1, ulong val2)
     content.vb: Public Shared Function Min(val1 As ULong, val2 As ULong) As ULong
     parameters:
     - id: val1
       type: System.UInt64
-      description: The first of two 64-bit unsigned integers to compare.
     - id: val2
       type: System.UInt64
-      description: The second of two 64-bit unsigned integers to compare.
     return:
       type: System.UInt64
-      description: Parameter *val1* or *val2*, whichever is smaller.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Pow(System.Double,System.Double)
+  commentId: M:System.Math.Pow(System.Double,System.Double)
   id: Pow(System.Double,System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Pow(Double, Double)
+  nameWithType: Math.Pow(Double, Double)
   fullName: System.Math.Pow(System.Double, System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Pow
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 506
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns a specified number raised to the specified power.
   syntax:
     content: public static double Pow(double x, double y)
     content.vb: Public Shared Function Pow(x As Double, y As Double) As Double
     parameters:
     - id: x
       type: System.Double
-      description: A double-precision floating-point number to be raised to a power.
     - id: y
       type: System.Double
-      description: A double-precision floating-point number that specifies a power.
     return:
       type: System.Double
-      description: The number *x* raised to the power *y*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Round(System.Decimal)
+  commentId: M:System.Math.Round(System.Decimal)
   id: Round(System.Decimal)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Round(Decimal)
+  nameWithType: Math.Round(Decimal)
   fullName: System.Math.Round(System.Decimal)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 139
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Round
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 507
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Rounds a decimal value to the nearest integral value.
   syntax:
     content: public static decimal Round(decimal d)
     content.vb: Public Shared Function Round(d As Decimal) As Decimal
     parameters:
     - id: d
       type: System.Decimal
-      description: A decimal number to be rounded.
     return:
       type: System.Decimal
-      description: The integer nearest parameter *d*. If the fractional component of *d* is halfway between two integers, one of which is even and the other odd, the even number is returned. Note that this method returns a <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> instead of an integral type.
-  exceptions:
-  - type: System.OverflowException
-    description: The result is outside the range of a <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Round(System.Decimal,System.Int32)
+  commentId: M:System.Math.Round(System.Decimal,System.Int32)
   id: Round(System.Decimal,System.Int32)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Round(Decimal, Int32)
+  nameWithType: Math.Round(Decimal, Int32)
   fullName: System.Math.Round(System.Decimal, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 143
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Round
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 508
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Rounds a decimal value to a specified number of fractional digits.
   syntax:
     content: public static decimal Round(decimal d, int decimals)
     content.vb: Public Shared Function Round(d As Decimal, decimals As Integer) As Decimal
     parameters:
     - id: d
       type: System.Decimal
-      description: A decimal number to be rounded.
     - id: decimals
       type: System.Int32
-      description: The number of decimal places in the return value.
     return:
       type: System.Decimal
-      description: The number nearest to *d* that contains a number of fractional digits equal to *decimals*.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*decimals* is less than 0 or greater than 28.'
-  - type: System.OverflowException
-    description: The result is outside the range of a <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Round(System.Decimal,System.Int32,System.MidpointRounding)
+  commentId: M:System.Math.Round(System.Decimal,System.Int32,System.MidpointRounding)
   id: Round(System.Decimal,System.Int32,System.MidpointRounding)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Round(Decimal, Int32, MidpointRounding)
+  nameWithType: Math.Round(Decimal, Int32, MidpointRounding)
   fullName: System.Math.Round(System.Decimal, System.Int32, System.MidpointRounding)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 151
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Round
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 509
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Rounds a decimal value to a specified number of fractional digits. A parameter specifies how to round the value if it is midway between two numbers.
   syntax:
     content: public static decimal Round(decimal d, int decimals, MidpointRounding mode)
     content.vb: Public Shared Function Round(d As Decimal, decimals As Integer, mode As MidpointRounding) As Decimal
     parameters:
     - id: d
       type: System.Decimal
-      description: A decimal number to be rounded.
     - id: decimals
       type: System.Int32
-      description: The number of decimal places in the return value.
     - id: mode
       type: System.MidpointRounding
-      description: Specification for how to round *d* if it is midway between two other numbers.
     return:
       type: System.Decimal
-      description: The number nearest to *d* that contains a number of fractional digits equal to *decimals*. If *d* has fewer fractional digits than *decimals*, *d* is returned unchanged.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*decimals* is less than 0 or greater than 28.'
-  - type: System.ArgumentException
-    description: '*mode* is not a valid value of <xref href="System.MidpointRounding" data-throw-if-not-resolved="false"></xref>.'
-  - type: System.OverflowException
-    description: The result is outside the range of a <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Round(System.Decimal,System.MidpointRounding)
+  commentId: M:System.Math.Round(System.Decimal,System.MidpointRounding)
   id: Round(System.Decimal,System.MidpointRounding)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Round(Decimal, MidpointRounding)
+  nameWithType: Math.Round(Decimal, MidpointRounding)
   fullName: System.Math.Round(System.Decimal, System.MidpointRounding)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 147
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Round
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 510
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Rounds a decimal value to the nearest integer. A parameter specifies how to round the value if it is midway between two numbers.
   syntax:
     content: public static decimal Round(decimal d, MidpointRounding mode)
     content.vb: Public Shared Function Round(d As Decimal, mode As MidpointRounding) As Decimal
     parameters:
     - id: d
       type: System.Decimal
-      description: A decimal number to be rounded.
     - id: mode
       type: System.MidpointRounding
-      description: Specification for how to round *d* if it is midway between two other numbers.
     return:
       type: System.Decimal
-      description: The integer nearest *d*. If *d* is halfway between two numbers, one of which is even and the other odd, then *mode* determines which of the two is returned.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*mode* is not a valid value of <xref href="System.MidpointRounding" data-throw-if-not-resolved="false"></xref>.'
-  - type: System.OverflowException
-    description: The result is outside the range of a <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Round(System.Double)
+  commentId: M:System.Math.Round(System.Double)
   id: Round(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Round(Double)
+  nameWithType: Math.Round(Double)
   fullName: System.Math.Round(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Round
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 511
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Rounds a double-precision floating-point value to the nearest integral value.
   syntax:
     content: public static double Round(double a)
     content.vb: Public Shared Function Round(a As Double) As Double
     parameters:
     - id: a
       type: System.Double
-      description: A double-precision floating-point number to be rounded.
     return:
       type: System.Double
-      description: The integer nearest *a*. If the fractional component of *a* is halfway between two integers, one of which is even and the other odd, then the even number is returned. Note that this method returns a <xref href="System.Double" data-throw-if-not-resolved="false"></xref> instead of an integral type.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Round(System.Double,System.Int32)
+  commentId: M:System.Math.Round(System.Double,System.Int32)
   id: Round(System.Double,System.Int32)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Round(Double, Int32)
+  nameWithType: Math.Round(Double, Int32)
   fullName: System.Math.Round(System.Double, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 117
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Round
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 512
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Rounds a double-precision floating-point value to a specified number of fractional digits.
   syntax:
     content: public static double Round(double value, int digits)
     content.vb: Public Shared Function Round(value As Double, digits As Integer) As Double
     parameters:
     - id: value
       type: System.Double
-      description: A double-precision floating-point number to be rounded.
     - id: digits
       type: System.Int32
-      description: The number of fractional digits in the return value.
     return:
       type: System.Double
-      description: The number nearest to *value* that contains a number of fractional digits equal to *digits*.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*digits* is less than 0 or greater than 15.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Round(System.Double,System.Int32,System.MidpointRounding)
+  commentId: M:System.Math.Round(System.Double,System.Int32,System.MidpointRounding)
   id: Round(System.Double,System.Int32,System.MidpointRounding)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Round(Double, Int32, MidpointRounding)
+  nameWithType: Math.Round(Double, Int32, MidpointRounding)
   fullName: System.Math.Round(System.Double, System.Int32, System.MidpointRounding)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 129
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Round
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 513
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Rounds a double-precision floating-point value to a specified number of fractional digits. A parameter specifies how to round the value if it is midway between two numbers.
   syntax:
     content: public static double Round(double value, int digits, MidpointRounding mode)
     content.vb: Public Shared Function Round(value As Double, digits As Integer, mode As MidpointRounding) As Double
     parameters:
     - id: value
       type: System.Double
-      description: A double-precision floating-point number to be rounded.
     - id: digits
       type: System.Int32
-      description: The number of fractional digits in the return value.
     - id: mode
       type: System.MidpointRounding
-      description: Specification for how to round *value* if it is midway between two other numbers.
     return:
       type: System.Double
-      description: The number nearest to *value* that has a number of fractional digits equal to *digits*. If *value* has fewer fractional digits than *digits*, *value* is returned unchanged.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*digits* is less than 0 or greater than 15.'
-  - type: System.ArgumentException
-    description: '*mode* is not a valid value of <xref href="System.MidpointRounding" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Round(System.Double,System.MidpointRounding)
+  commentId: M:System.Math.Round(System.Double,System.MidpointRounding)
   id: Round(System.Double,System.MidpointRounding)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Round(Double, MidpointRounding)
+  nameWithType: Math.Round(Double, MidpointRounding)
   fullName: System.Math.Round(System.Double, System.MidpointRounding)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 125
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Round
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 514
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Rounds a double-precision floating-point value to the nearest integer. A parameter specifies how to round the value if it is midway between two numbers.
   syntax:
     content: public static double Round(double value, MidpointRounding mode)
     content.vb: Public Shared Function Round(value As Double, mode As MidpointRounding) As Double
     parameters:
     - id: value
       type: System.Double
-      description: A double-precision floating-point number to be rounded.
     - id: mode
       type: System.MidpointRounding
-      description: Specification for how to round *value* if it is midway between two other numbers.
     return:
       type: System.Double
-      description: The integer nearest *value*. If *value* is halfway between two integers, one of which is even and the other odd, then *mode* determines which of the two is returned.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*mode* is not a valid value of <xref href="System.MidpointRounding" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Sign(System.Decimal)
+  commentId: M:System.Math.Sign(System.Decimal)
   id: Sign(System.Decimal)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Sign(Decimal)
+  nameWithType: Math.Sign(Decimal)
   fullName: System.Math.Sign(System.Decimal)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 569
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sign
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 515
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns a value indicating the sign of a decimal number.
   syntax:
     content: public static int Sign(decimal value)
     content.vb: Public Shared Function Sign(value As Decimal) As Integer
     parameters:
     - id: value
       type: System.Decimal
-      description: A signed decimal number.
     return:
       type: System.Int32
-      description: A number that indicates the sign of *value*, as shown in the following table.Return value Meaning -1 *value* is less than zero. 0 *value* is equal to zero. 1 *value* is greater than zero.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Sign(System.Double)
+  commentId: M:System.Math.Sign(System.Double)
   id: Sign(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Sign(Double)
+  nameWithType: Math.Sign(Double)
   fullName: System.Math.Sign(System.Double)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 558
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sign
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 516
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns a value indicating the sign of a double-precision floating-point number.
   syntax:
     content: public static int Sign(double value)
     content.vb: Public Shared Function Sign(value As Double) As Integer
     parameters:
     - id: value
       type: System.Double
-      description: A signed number.
     return:
       type: System.Int32
-      description: A number that indicates the sign of *value*, as shown in the following table.Return value Meaning -1 *value* is less than zero. 0 *value* is equal to zero. 1 *value* is greater than zero.
-  exceptions:
-  - type: System.ArithmeticException
-    description: '*value* is equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Sign(System.Int16)
+  commentId: M:System.Math.Sign(System.Int16)
   id: Sign(System.Int16)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Sign(Int16)
+  nameWithType: Math.Sign(Int16)
   fullName: System.Math.Sign(System.Int16)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 515
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sign
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 517
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns a value indicating the sign of a 16-bit signed integer.
   syntax:
     content: public static int Sign(short value)
     content.vb: Public Shared Function Sign(value As Short) As Integer
     parameters:
     - id: value
       type: System.Int16
-      description: A signed number.
     return:
       type: System.Int32
-      description: A number that indicates the sign of *value*, as shown in the following table.Return value Meaning -1 *value* is less than zero. 0 *value* is equal to zero. 1 *value* is greater than zero.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Sign(System.Int32)
+  commentId: M:System.Math.Sign(System.Int32)
   id: Sign(System.Int32)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Sign(Int32)
+  nameWithType: Math.Sign(Int32)
   fullName: System.Math.Sign(System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 527
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sign
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 518
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns a value indicating the sign of a 32-bit signed integer.
   syntax:
     content: public static int Sign(int value)
     content.vb: Public Shared Function Sign(value As Integer) As Integer
     parameters:
     - id: value
       type: System.Int32
-      description: A signed number.
     return:
       type: System.Int32
-      description: A number that indicates the sign of *value*, as shown in the following table.Return value Meaning -1 *value* is less than zero. 0 *value* is equal to zero. 1 *value* is greater than zero.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Sign(System.Int64)
+  commentId: M:System.Math.Sign(System.Int64)
   id: Sign(System.Int64)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Sign(Int64)
+  nameWithType: Math.Sign(Int64)
   fullName: System.Math.Sign(System.Int64)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 537
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sign
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 519
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns a value indicating the sign of a 64-bit signed integer.
   syntax:
     content: public static int Sign(long value)
     content.vb: Public Shared Function Sign(value As Long) As Integer
     parameters:
     - id: value
       type: System.Int64
-      description: A signed number.
     return:
       type: System.Int32
-      description: A number that indicates the sign of *value*, as shown in the following table.Return value Meaning -1 *value* is less than zero. 0 *value* is equal to zero. 1 *value* is greater than zero.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Sign(System.SByte)
+  commentId: M:System.Math.Sign(System.SByte)
   id: Sign(System.SByte)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Sign(SByte)
+  nameWithType: Math.Sign(SByte)
   fullName: System.Math.Sign(System.SByte)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 501
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sign
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 520
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns a value indicating the sign of an 8-bit signed integer.
   syntax:
     content: public static int Sign(sbyte value)
     content.vb: Public Shared Function Sign(value As SByte) As Integer
     parameters:
     - id: value
       type: System.SByte
-      description: A signed number.
     return:
       type: System.Int32
-      description: A number that indicates the sign of *value*, as shown in the following table.Return value Meaning -1 *value* is less than zero. 0 *value* is equal to zero. 1 *value* is greater than zero.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Sign(System.Single)
+  commentId: M:System.Math.Sign(System.Single)
   id: Sign(System.Single)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Sign(Single)
+  nameWithType: Math.Sign(Single)
   fullName: System.Math.Sign(System.Single)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 547
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sign
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 522
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns a value indicating the sign of a single-precision floating-point number.
   syntax:
     content: public static int Sign(float value)
     content.vb: Public Shared Function Sign(value As Single) As Integer
     parameters:
     - id: value
       type: System.Single
-      description: A signed number.
     return:
       type: System.Int32
-      description: A number that indicates the sign of *value*, as shown in the following table.Return value Meaning -1 *value* is less than zero. 0 *value* is equal to zero. 1 *value* is greater than zero.
-  exceptions:
-  - type: System.ArithmeticException
-    description: '*value* is equal to <xref href="System.Single.NaN" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Sin(System.Double)
+  commentId: M:System.Math.Sin(System.Double)
   id: Sin(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Sin(Double)
+  nameWithType: Math.Sin(Double)
   fullName: System.Math.Sin(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sin
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 523
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the sine of the specified angle.
   syntax:
     content: public static double Sin(double a)
     content.vb: Public Shared Function Sin(a As Double) As Double
     parameters:
     - id: a
       type: System.Double
-      description: An angle, measured in radians.
     return:
       type: System.Double
-      description: The sine of *a*. If *a* is equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>, this method returns <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Sinh(System.Double)
+  commentId: M:System.Math.Sinh(System.Double)
   id: Sinh(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Sinh(Double)
+  nameWithType: Math.Sinh(Double)
   fullName: System.Math.Sinh(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sinh
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 524
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the hyperbolic sine of the specified angle.
   syntax:
     content: public static double Sinh(double value)
     content.vb: Public Shared Function Sinh(value As Double) As Double
     parameters:
     - id: value
       type: System.Double
-      description: An angle, measured in radians.
     return:
       type: System.Double
-      description: The hyperbolic sine of *value*. If *value* is equal to <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>, this method returns a <xref href="System.Double" data-throw-if-not-resolved="false"></xref> equal to *value*.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Sqrt(System.Double)
+  commentId: M:System.Math.Sqrt(System.Double)
   id: Sqrt(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Sqrt(Double)
+  nameWithType: Math.Sqrt(Double)
   fullName: System.Math.Sqrt(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Sqrt
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 525
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the square root of a specified number.
   syntax:
     content: public static double Sqrt(double d)
     content.vb: Public Shared Function Sqrt(d As Double) As Double
     parameters:
     - id: d
       type: System.Double
-      description: The number whose square root is to be found.
     return:
       type: System.Double
-      description: One of the values in the following table. *d* parameter Return value Zero or positive The positive square root of *d*. Negative <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>Equals <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref><xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>Equals <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref><xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Tan(System.Double)
+  commentId: M:System.Math.Tan(System.Double)
   id: Tan(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Tan(Double)
+  nameWithType: Math.Tan(Double)
   fullName: System.Math.Tan(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Tan
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 526
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the tangent of the specified angle.
   syntax:
     content: public static double Tan(double a)
     content.vb: Public Shared Function Tan(a As Double) As Double
     parameters:
     - id: a
       type: System.Double
-      description: An angle, measured in radians.
     return:
       type: System.Double
-      description: The tangent of *a*. If *a* is equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>, this method returns <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Tanh(System.Double)
+  commentId: M:System.Math.Tanh(System.Double)
   id: Tanh(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Tanh(Double)
+  nameWithType: Math.Tanh(Double)
   fullName: System.Math.Tanh(System.Double)
   type: Method
   source:
-    path: mscorlib
-    isExternal: true
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Tanh
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 527
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Returns the hyperbolic tangent of the specified angle.
   syntax:
     content: public static double Tanh(double value)
     content.vb: Public Shared Function Tanh(value As Double) As Double
     parameters:
     - id: value
       type: System.Double
-      description: An angle, measured in radians.
     return:
       type: System.Double
-      description: The hyperbolic tangent of *value*. If *value* is equal to <xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref>, this method returns -1. If value is equal to <xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>, this method returns 1. If *value* is equal to <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>, this method returns <xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Truncate(System.Decimal)
+  commentId: M:System.Math.Truncate(System.Decimal)
   id: Truncate(System.Decimal)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Truncate(Decimal)
+  nameWithType: Math.Truncate(Decimal)
   fullName: System.Math.Truncate(System.Decimal)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 159
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Truncate
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 528
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Calculates the integral part of a specified decimal number.
   syntax:
     content: public static decimal Truncate(decimal d)
     content.vb: Public Shared Function Truncate(d As Decimal) As Decimal
     parameters:
     - id: d
       type: System.Decimal
-      description: A number to truncate.
     return:
       type: System.Decimal
-      description: The integral part of *d*; that is, the number that remains after any fractional digits have been discarded.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.Truncate(System.Double)
+  commentId: M:System.Math.Truncate(System.Double)
   id: Truncate(System.Double)
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: Truncate(Double)
+  nameWithType: Math.Truncate(Double)
   fullName: System.Math.Truncate(System.Double)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 163
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Truncate
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.cs
+    startLine: 529
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Calculates the integral part of a specified double-precision floating-point number.
   syntax:
     content: public static double Truncate(double d)
     content.vb: Public Shared Function Truncate(d As Double) As Double
     parameters:
     - id: d
       type: System.Double
-      description: A number to truncate.
     return:
       type: System.Double
-      description: The integral part of *d*; that is, the number that remains after any fractional digits have been discarded, or one of the values listed in the following table. *d*Return value<xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref><xref href="System.Double.NaN" data-throw-if-not-resolved="false"></xref><xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref><xref href="System.Double.NegativeInfinity" data-throw-if-not-resolved="false"></xref><xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref><xref href="System.Double.PositiveInfinity" data-throw-if-not-resolved="false"></xref>
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Math.PI
+  commentId: F:System.Math.PI
   id: PI
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: PI
+  nameWithType: Math.PI
   fullName: System.Math.PI
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 34
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PI
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.Manual.cs
+    startLine: 12
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: "Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π."
   syntax:
-    content: public const double PI
+    content: public const double PI = null
     content.vb: Public Const PI As Double = Nothing
+    return:
+      type: System.Double
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Math.E
+  commentId: F:System.Math.E
   id: E
   parent: System.Math
+  langs:
+  - csharp
+  - vb
   name: E
+  nameWithType: Math.E
   fullName: System.Math.E
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Math.cs
-    startLine: 35
+    remote:
+      path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: E
+    path: src/System.Runtime.Extensions/ref/System.Runtime.Extensions.Manual.cs
+    startLine: 13
   assemblies:
   - System.Runtime.Extensions
   namespace: System
-  summary: Represents the natural logarithmic base, specified by the constant, e.
   syntax:
-    content: public const double E
+    content: public const double E = null
     content.vb: Public Const E As Double = Nothing
+    return:
+      type: System.Double
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Decimal
+  commentId: T:System.Decimal
   parent: System
   isExternal: false
   name: Decimal
+  nameWithType: Decimal
   fullName: System.Decimal
 - uid: System.Double
+  commentId: T:System.Double
   parent: System
   isExternal: false
   name: Double
+  nameWithType: Double
   fullName: System.Double
 - uid: System.Int16
+  commentId: T:System.Int16
   parent: System
   isExternal: false
   name: Int16
+  nameWithType: Int16
   fullName: System.Int16
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Int64
+  commentId: T:System.Int64
   parent: System
   isExternal: false
   name: Int64
+  nameWithType: Int64
   fullName: System.Int64
 - uid: System.SByte
+  commentId: T:System.SByte
   parent: System
   isExternal: false
   name: SByte
+  nameWithType: SByte
   fullName: System.SByte
 - uid: System.Single
+  commentId: T:System.Single
   parent: System
   isExternal: false
   name: Single
+  nameWithType: Single
   fullName: System.Single
 - uid: System.Byte
+  commentId: T:System.Byte
   parent: System
   isExternal: false
   name: Byte
+  nameWithType: Byte
   fullName: System.Byte
 - uid: System.UInt16
+  commentId: T:System.UInt16
   parent: System
   isExternal: false
   name: UInt16
+  nameWithType: UInt16
   fullName: System.UInt16
 - uid: System.UInt32
+  commentId: T:System.UInt32
   parent: System
   isExternal: false
   name: UInt32
+  nameWithType: UInt32
   fullName: System.UInt32
 - uid: System.UInt64
+  commentId: T:System.UInt64
   parent: System
   isExternal: false
   name: UInt64
+  nameWithType: UInt64
   fullName: System.UInt64
 - uid: System.MidpointRounding
+  commentId: T:System.MidpointRounding
   parent: System
   isExternal: false
   name: MidpointRounding
+  nameWithType: MidpointRounding
   fullName: System.MidpointRounding
-- uid: System.OverflowException
-  isExternal: false
-  name: OverflowException
-  fullName: System.OverflowException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.ArithmeticException
-  parent: System
-  isExternal: false
-  name: ArithmeticException
-  fullName: System.ArithmeticException

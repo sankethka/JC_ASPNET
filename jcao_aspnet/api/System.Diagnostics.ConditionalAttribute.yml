@@ -1,27 +1,39 @@
 items:
 - uid: System.Diagnostics.ConditionalAttribute
+  commentId: T:System.Diagnostics.ConditionalAttribute
   id: ConditionalAttribute
   parent: System.Diagnostics
   children:
   - System.Diagnostics.ConditionalAttribute.#ctor(System.String)
   - System.Diagnostics.ConditionalAttribute.ConditionString
+  langs:
+  - csharp
+  - vb
   name: ConditionalAttribute
+  nameWithType: ConditionalAttribute
   fullName: System.Diagnostics.ConditionalAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Diagnostics/ConditionalAttribute.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Diagnostics/ConditionalAttribute.cs
-    startLine: 7
+      repo: https://github.com/dotnet/corefx.git
+    id: ConditionalAttribute
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2557
   assemblies:
   - System.Runtime
   namespace: System.Diagnostics
-  summary: Indicates to compilers that a method call or attribute should be ignored unless a specified conditional compilation symbol is defined.
   syntax:
-    content: 'public sealed class ConditionalAttribute : Attribute'
-    content.vb: Public NotInheritable Class ConditionalAttribute Inherits Attribute
+    content: >-
+      [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
+
+      public sealed class ConditionalAttribute : Attribute
+    content.vb: >-
+      <AttributeUsage(AttributeTargets.Class Or AttributeTargets.Method, AllowMultiple:=True)>
+
+      Public NotInheritable Class ConditionalAttribute
+          Inherits Attribute
   inheritance:
   - System.Object
   - System.Attribute
@@ -33,254 +45,376 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  attributes:
+  - type: System.AttributeUsageAttribute
+    ctor: System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
+    arguments:
+    - type: System.AttributeTargets
+      value: 68
+    namedArguments:
+    - name: AllowMultiple
+      type: System.Boolean
+      value: true
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Diagnostics.ConditionalAttribute.#ctor(System.String)
+  commentId: M:System.Diagnostics.ConditionalAttribute.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.Diagnostics.ConditionalAttribute
+  langs:
+  - csharp
+  - vb
   name: ConditionalAttribute(String)
+  nameWithType: ConditionalAttribute.ConditionalAttribute(String)
   fullName: System.Diagnostics.ConditionalAttribute.ConditionalAttribute(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/ConditionalAttribute.cs
-    startLine: 12
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2560
   assemblies:
   - System.Runtime
   namespace: System.Diagnostics
-  summary: Initializes a new instance of the <xref href="System.Diagnostics.ConditionalAttribute" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public ConditionalAttribute(string conditionString)
     content.vb: Public Sub New(conditionString As String)
     parameters:
     - id: conditionString
       type: System.String
-      description: A string that specifies the case-sensitive conditional compilation symbol that is associated with the attribute.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Diagnostics.ConditionalAttribute.ConditionString
+  commentId: P:System.Diagnostics.ConditionalAttribute.ConditionString
   id: ConditionString
   parent: System.Diagnostics.ConditionalAttribute
+  langs:
+  - csharp
+  - vb
   name: ConditionString
+  nameWithType: ConditionalAttribute.ConditionString
   fullName: System.Diagnostics.ConditionalAttribute.ConditionString
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/ConditionalAttribute.cs
-    startLine: 17
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ConditionString
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2561
   assemblies:
   - System.Runtime
   namespace: System.Diagnostics
-  summary: Gets the conditional compilation symbol that is associated with the <xref href="System.Diagnostics.ConditionalAttribute" data-throw-if-not-resolved="false"></xref> attribute.
   syntax:
     content: public string ConditionString { get; }
     content.vb: Public ReadOnly Property ConditionString As String
     parameters: []
     return:
       type: System.String
-      description: A string that specifies the case-sensitive conditional compilation symbol that is associated with the <xref href="System.Diagnostics.ConditionalAttribute" data-throw-if-not-resolved="false"></xref> attribute.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Diagnostics
+  commentId: N:System.Diagnostics
   isExternal: false
   name: System.Diagnostics
+  nameWithType: System.Diagnostics
   fullName: System.Diagnostics
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Attribute
+  commentId: T:System.Attribute
   parent: System
   isExternal: false
   name: Attribute
+  nameWithType: Attribute
   fullName: System.Attribute
 - uid: System.Attribute.Equals(System.Object)
+  commentId: M:System.Attribute.Equals(System.Object)
   parent: System.Attribute
   isExternal: false
   name: Equals(Object)
+  nameWithType: Attribute.Equals(Object)
   fullName: System.Attribute.Equals(System.Object)
   spec.csharp:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Attribute.GetHashCode
+  commentId: M:System.Attribute.GetHashCode
   parent: System.Attribute
   isExternal: false
   name: GetHashCode()
+  nameWithType: Attribute.GetHashCode()
   fullName: System.Attribute.GetHashCode()
   spec.csharp:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String

@@ -1,5 +1,6 @@
 items:
 - uid: System.Numerics.Vector
+  commentId: T:System.Numerics.Vector
   id: Vector
   parent: System.Numerics
   children:
@@ -69,34 +70,56 @@ items:
   - System.Numerics.Vector.SquareRoot``1(System.Numerics.Vector{``0})
   - System.Numerics.Vector.Subtract``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   - System.Numerics.Vector.Xor``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  langs:
+  - csharp
+  - vb
   name: Vector
+  nameWithType: Vector
   fullName: System.Numerics.Vector
   type: Class
   source:
-    remote: &o0
-      path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 11
+    id: Vector
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 194
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
   syntax:
     content: 'public class Vector : object'
-    content.vb: Public Class Vector Inherits Object
+    content.vb: >-
+      Public Class Vector
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Numerics.Vector.IsHardwareAccelerated
+  commentId: P:System.Numerics.Vector.IsHardwareAccelerated
   id: IsHardwareAccelerated
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: IsHardwareAccelerated
+  nameWithType: Vector.IsHardwareAccelerated
   fullName: System.Numerics.Vector.IsHardwareAccelerated
   type: Property
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 526
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsHardwareAccelerated
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 196
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -106,18 +129,33 @@ items:
     parameters: []
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Numerics.Vector.Abs``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Abs``1(System.Numerics.Vector{``0})
   id: Abs``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Abs<T>(Vector<T>)
-  name.vb: Abs(Of T)(Vector(Of T))
+  nameWithType: Vector.Abs<T>(Vector<T>)
   fullName: System.Numerics.Vector.Abs<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Abs(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 544
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Abs
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 197
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -131,18 +169,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Abs(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Abs(Of T)(System.Numerics.Vector(Of T))
+  name.vb: Abs(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.Add``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Add``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: Add``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Add<T>(Vector<T>, Vector<T>)
-  name.vb: Add(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.Add<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.Add<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Add(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 607
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Add
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 198
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -158,18 +212,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Add(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Add(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: Add(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.AndNot``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AndNot``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: AndNot``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AndNot<T>(Vector<T>, Vector<T>)
-  name.vb: AndNot(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.AndNot<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.AndNot<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AndNot(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 740
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AndNot
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 199
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -185,18 +255,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.AndNot(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AndNot(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: AndNot(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.AsVectorByte``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AsVectorByte``1(System.Numerics.Vector{``0})
   id: AsVectorByte``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AsVectorByte<T>(Vector<T>)
-  name.vb: AsVectorByte(Of T)(Vector(Of T))
+  nameWithType: Vector.AsVectorByte<T>(Vector<T>)
   fullName: System.Numerics.Vector.AsVectorByte<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AsVectorByte(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 753
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AsVectorByte
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 200
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -210,18 +296,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{System.Byte}
+  nameWithType.vb: Vector.AsVectorByte(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AsVectorByte(Of T)(System.Numerics.Vector(Of T))
+  name.vb: AsVectorByte(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.AsVectorDouble``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AsVectorDouble``1(System.Numerics.Vector{``0})
   id: AsVectorDouble``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AsVectorDouble<T>(Vector<T>)
-  name.vb: AsVectorDouble(Of T)(Vector(Of T))
+  nameWithType: Vector.AsVectorDouble<T>(Vector<T>)
   fullName: System.Numerics.Vector.AsVectorDouble<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AsVectorDouble(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 857
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AsVectorDouble
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 201
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -235,18 +337,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{System.Double}
+  nameWithType.vb: Vector.AsVectorDouble(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AsVectorDouble(Of T)(System.Numerics.Vector(Of T))
+  name.vb: AsVectorDouble(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.AsVectorInt16``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AsVectorInt16``1(System.Numerics.Vector{``0})
   id: AsVectorInt16``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AsVectorInt16<T>(Vector<T>)
-  name.vb: AsVectorInt16(Of T)(Vector(Of T))
+  nameWithType: Vector.AsVectorInt16<T>(Vector<T>)
   fullName: System.Numerics.Vector.AsVectorInt16<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AsVectorInt16(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 788
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AsVectorInt16
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 202
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -260,18 +378,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{System.Int16}
+  nameWithType.vb: Vector.AsVectorInt16(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AsVectorInt16(Of T)(System.Numerics.Vector(Of T))
+  name.vb: AsVectorInt16(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.AsVectorInt32``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AsVectorInt32``1(System.Numerics.Vector{``0})
   id: AsVectorInt32``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AsVectorInt32<T>(Vector<T>)
-  name.vb: AsVectorInt32(Of T)(Vector(Of T))
+  nameWithType: Vector.AsVectorInt32<T>(Vector<T>)
   fullName: System.Numerics.Vector.AsVectorInt32<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AsVectorInt32(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 811
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AsVectorInt32
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 203
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -285,18 +419,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.AsVectorInt32(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AsVectorInt32(Of T)(System.Numerics.Vector(Of T))
+  name.vb: AsVectorInt32(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.AsVectorInt64``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AsVectorInt64``1(System.Numerics.Vector{``0})
   id: AsVectorInt64``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AsVectorInt64<T>(Vector<T>)
-  name.vb: AsVectorInt64(Of T)(Vector(Of T))
+  nameWithType: Vector.AsVectorInt64<T>(Vector<T>)
   fullName: System.Numerics.Vector.AsVectorInt64<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AsVectorInt64(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 835
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AsVectorInt64
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 204
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -310,18 +460,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.AsVectorInt64(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AsVectorInt64(Of T)(System.Numerics.Vector(Of T))
+  name.vb: AsVectorInt64(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.AsVectorSByte``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AsVectorSByte``1(System.Numerics.Vector{``0})
   id: AsVectorSByte``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AsVectorSByte<T>(Vector<T>)
-  name.vb: AsVectorSByte(Of T)(Vector(Of T))
+  nameWithType: Vector.AsVectorSByte<T>(Vector<T>)
   fullName: System.Numerics.Vector.AsVectorSByte<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AsVectorSByte(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 764
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AsVectorSByte
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 205
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -335,18 +501,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{System.SByte}
+  nameWithType.vb: Vector.AsVectorSByte(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AsVectorSByte(Of T)(System.Numerics.Vector(Of T))
+  name.vb: AsVectorSByte(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.AsVectorSingle``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AsVectorSingle``1(System.Numerics.Vector{``0})
   id: AsVectorSingle``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AsVectorSingle<T>(Vector<T>)
-  name.vb: AsVectorSingle(Of T)(Vector(Of T))
+  nameWithType: Vector.AsVectorSingle<T>(Vector<T>)
   fullName: System.Numerics.Vector.AsVectorSingle<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AsVectorSingle(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 846
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AsVectorSingle
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 207
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -360,18 +542,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{System.Single}
+  nameWithType.vb: Vector.AsVectorSingle(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AsVectorSingle(Of T)(System.Numerics.Vector(Of T))
+  name.vb: AsVectorSingle(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.AsVectorUInt16``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AsVectorUInt16``1(System.Numerics.Vector{``0})
   id: AsVectorUInt16``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AsVectorUInt16<T>(Vector<T>)
-  name.vb: AsVectorUInt16(Of T)(Vector(Of T))
+  nameWithType: Vector.AsVectorUInt16<T>(Vector<T>)
   fullName: System.Numerics.Vector.AsVectorUInt16<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AsVectorUInt16(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 776
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AsVectorUInt16
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 208
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -385,18 +583,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{System.UInt16}
+  nameWithType.vb: Vector.AsVectorUInt16(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AsVectorUInt16(Of T)(System.Numerics.Vector(Of T))
+  name.vb: AsVectorUInt16(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.AsVectorUInt32``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AsVectorUInt32``1(System.Numerics.Vector{``0})
   id: AsVectorUInt32``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AsVectorUInt32<T>(Vector<T>)
-  name.vb: AsVectorUInt32(Of T)(Vector(Of T))
+  nameWithType: Vector.AsVectorUInt32<T>(Vector<T>)
   fullName: System.Numerics.Vector.AsVectorUInt32<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AsVectorUInt32(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 799
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AsVectorUInt32
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 210
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -410,18 +624,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{System.UInt32}
+  nameWithType.vb: Vector.AsVectorUInt32(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AsVectorUInt32(Of T)(System.Numerics.Vector(Of T))
+  name.vb: AsVectorUInt32(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.AsVectorUInt64``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.AsVectorUInt64``1(System.Numerics.Vector{``0})
   id: AsVectorUInt64``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: AsVectorUInt64<T>(Vector<T>)
-  name.vb: AsVectorUInt64(Of T)(Vector(Of T))
+  nameWithType: Vector.AsVectorUInt64<T>(Vector<T>)
   fullName: System.Numerics.Vector.AsVectorUInt64<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.AsVectorUInt64(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 822
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AsVectorUInt64
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 212
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -435,18 +665,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{System.UInt64}
+  nameWithType.vb: Vector.AsVectorUInt64(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.AsVectorUInt64(Of T)(System.Numerics.Vector(Of T))
+  name.vb: AsVectorUInt64(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.BitwiseAnd``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.BitwiseAnd``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: BitwiseAnd``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: BitwiseAnd<T>(Vector<T>, Vector<T>)
-  name.vb: BitwiseAnd(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.BitwiseAnd<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.BitwiseAnd<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.BitwiseAnd(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 693
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: BitwiseAnd
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 214
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -462,18 +708,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.BitwiseAnd(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.BitwiseAnd(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: BitwiseAnd(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.BitwiseOr``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.BitwiseOr``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: BitwiseOr``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: BitwiseOr<T>(Vector<T>, Vector<T>)
-  name.vb: BitwiseOr(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.BitwiseOr<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.BitwiseOr<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.BitwiseOr(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 705
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: BitwiseOr
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 215
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -489,21 +751,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.BitwiseOr(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.BitwiseOr(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: BitwiseOr(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.ConditionalSelect(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
+  commentId: M:System.Numerics.Vector.ConditionalSelect(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   id: ConditionalSelect(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: ConditionalSelect(Vector<Int32>, Vector<Single>, Vector<Single>)
-  name.vb: ConditionalSelect(Vector(Of Int32), Vector(Of Single), Vector(Of Single))
+  nameWithType: Vector.ConditionalSelect(Vector<Int32>, Vector<Single>, Vector<Single>)
   fullName: System.Numerics.Vector.ConditionalSelect(System.Numerics.Vector<System.Int32>, System.Numerics.Vector<System.Single>, System.Numerics.Vector<System.Single>)
-  fullName.vb: System.Numerics.Vector.ConditionalSelect(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
   type: Method
   source:
-    remote: &o1
+    remote:
       path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ConditionalSelect
     path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
-    startLine: 213
+    startLine: 216
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -519,18 +794,34 @@ items:
       type: System.Numerics.Vector{System.Single}
     return:
       type: System.Numerics.Vector{System.Single}
+  nameWithType.vb: Vector.ConditionalSelect(Vector(Of Int32), Vector(Of Single), Vector(Of Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.ConditionalSelect(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
+  name.vb: ConditionalSelect(Vector(Of Int32), Vector(Of Single), Vector(Of Single))
 - uid: System.Numerics.Vector.ConditionalSelect(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
+  commentId: M:System.Numerics.Vector.ConditionalSelect(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   id: ConditionalSelect(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: ConditionalSelect(Vector<Int64>, Vector<Double>, Vector<Double>)
-  name.vb: ConditionalSelect(Vector(Of Int64), Vector(Of Double), Vector(Of Double))
+  nameWithType: Vector.ConditionalSelect(Vector<Int64>, Vector<Double>, Vector<Double>)
   fullName: System.Numerics.Vector.ConditionalSelect(System.Numerics.Vector<System.Int64>, System.Numerics.Vector<System.Double>, System.Numerics.Vector<System.Double>)
-  fullName.vb: System.Numerics.Vector.ConditionalSelect(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 36
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ConditionalSelect
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 217
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -546,18 +837,34 @@ items:
       type: System.Numerics.Vector{System.Double}
     return:
       type: System.Numerics.Vector{System.Double}
+  nameWithType.vb: Vector.ConditionalSelect(Vector(Of Int64), Vector(Of Double), Vector(Of Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.ConditionalSelect(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
+  name.vb: ConditionalSelect(Vector(Of Int64), Vector(Of Double), Vector(Of Double))
 - uid: System.Numerics.Vector.ConditionalSelect``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.ConditionalSelect``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: ConditionalSelect``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: ConditionalSelect<T>(Vector<T>, Vector<T>, Vector<T>)
-  name.vb: ConditionalSelect(Of T)(Vector(Of T), Vector(Of T), Vector(Of T))
+  nameWithType: Vector.ConditionalSelect<T>(Vector<T>, Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.ConditionalSelect<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.ConditionalSelect(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 49
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ConditionalSelect
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 218
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -575,18 +882,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.ConditionalSelect(Of T)(Vector(Of T), Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.ConditionalSelect(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: ConditionalSelect(Of T)(Vector(Of T), Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.Divide``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Divide``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: Divide``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Divide<T>(Vector<T>, Vector<T>)
-  name.vb: Divide(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.Divide<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.Divide<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Divide(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 668
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Divide
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 219
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -602,18 +925,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Divide(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Divide(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: Divide(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.Dot``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Dot``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: Dot``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Dot<T>(Vector<T>, Vector<T>)
-  name.vb: Dot(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.Dot<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.Dot<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Dot(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 582
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Dot
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 220
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -629,18 +968,34 @@ items:
     - id: T
     return:
       type: '{T}'
+  nameWithType.vb: Vector.Dot(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Dot(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: Dot(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.Equals(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
+  commentId: M:System.Numerics.Vector.Equals(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   id: Equals(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Equals(Vector<Double>, Vector<Double>)
-  name.vb: Equals(Vector(Of Double), Vector(Of Double))
+  nameWithType: Vector.Equals(Vector<Double>, Vector<Double>)
   fullName: System.Numerics.Vector.Equals(System.Numerics.Vector<System.Double>, System.Numerics.Vector<System.Double>)
-  fullName.vb: System.Numerics.Vector.Equals(System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 100
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 221
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -654,18 +1009,34 @@ items:
       type: System.Numerics.Vector{System.Double}
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.Equals(Vector(Of Double), Vector(Of Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Equals(System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
+  name.vb: Equals(Vector(Of Double), Vector(Of Double))
 - uid: System.Numerics.Vector.Equals(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
+  commentId: M:System.Numerics.Vector.Equals(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
   id: Equals(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Equals(Vector<Int32>, Vector<Int32>)
-  name.vb: Equals(Vector(Of Int32), Vector(Of Int32))
+  nameWithType: Vector.Equals(Vector<Int32>, Vector<Int32>)
   fullName: System.Numerics.Vector.Equals(System.Numerics.Vector<System.Int32>, System.Numerics.Vector<System.Int32>)
-  fullName.vb: System.Numerics.Vector.Equals(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Int32))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 88
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 222
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -679,18 +1050,34 @@ items:
       type: System.Numerics.Vector{System.Int32}
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.Equals(Vector(Of Int32), Vector(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Equals(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Int32))
+  name.vb: Equals(Vector(Of Int32), Vector(Of Int32))
 - uid: System.Numerics.Vector.Equals(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
+  commentId: M:System.Numerics.Vector.Equals(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
   id: Equals(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Equals(Vector<Int64>, Vector<Int64>)
-  name.vb: Equals(Vector(Of Int64), Vector(Of Int64))
+  nameWithType: Vector.Equals(Vector<Int64>, Vector<Int64>)
   fullName: System.Numerics.Vector.Equals(System.Numerics.Vector<System.Int64>, System.Numerics.Vector<System.Int64>)
-  fullName.vb: System.Numerics.Vector.Equals(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 112
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 223
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -704,18 +1091,34 @@ items:
       type: System.Numerics.Vector{System.Int64}
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.Equals(Vector(Of Int64), Vector(Of Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Equals(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Int64))
+  name.vb: Equals(Vector(Of Int64), Vector(Of Int64))
 - uid: System.Numerics.Vector.Equals(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
+  commentId: M:System.Numerics.Vector.Equals(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   id: Equals(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Equals(Vector<Single>, Vector<Single>)
-  name.vb: Equals(Vector(Of Single), Vector(Of Single))
+  nameWithType: Vector.Equals(Vector<Single>, Vector<Single>)
   fullName: System.Numerics.Vector.Equals(System.Numerics.Vector<System.Single>, System.Numerics.Vector<System.Single>)
-  fullName.vb: System.Numerics.Vector.Equals(System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
     path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
-    startLine: 221
+    startLine: 224
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -729,18 +1132,34 @@ items:
       type: System.Numerics.Vector{System.Single}
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.Equals(Vector(Of Single), Vector(Of Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Equals(System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
+  name.vb: Equals(Vector(Of Single), Vector(Of Single))
 - uid: System.Numerics.Vector.Equals``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Equals``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: Equals``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Equals<T>(Vector<T>, Vector<T>)
-  name.vb: Equals(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.Equals<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.Equals<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Equals(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 64
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 225
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -756,18 +1175,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Equals(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Equals(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: Equals(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.EqualsAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.EqualsAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: EqualsAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: EqualsAll<T>(Vector<T>, Vector<T>)
-  name.vb: EqualsAll(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.EqualsAll<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.EqualsAll<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.EqualsAll(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 124
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EqualsAll
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 226
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -783,18 +1218,34 @@ items:
     - id: T
     return:
       type: System.Boolean
+  nameWithType.vb: Vector.EqualsAll(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.EqualsAll(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: EqualsAll(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.EqualsAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.EqualsAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: EqualsAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: EqualsAny<T>(Vector<T>, Vector<T>)
-  name.vb: EqualsAny(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.EqualsAny<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.EqualsAny<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.EqualsAny(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 136
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EqualsAny
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 227
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -810,18 +1261,34 @@ items:
     - id: T
     return:
       type: System.Boolean
+  nameWithType.vb: Vector.EqualsAny(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.EqualsAny(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: EqualsAny(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.GreaterThan(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
+  commentId: M:System.Numerics.Vector.GreaterThan(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   id: GreaterThan(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThan(Vector<Double>, Vector<Double>)
-  name.vb: GreaterThan(Vector(Of Double), Vector(Of Double))
+  nameWithType: Vector.GreaterThan(Vector<Double>, Vector<Double>)
   fullName: System.Numerics.Vector.GreaterThan(System.Numerics.Vector<System.Double>, System.Numerics.Vector<System.Double>)
-  fullName.vb: System.Numerics.Vector.GreaterThan(System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 376
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThan
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 228
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -835,18 +1302,34 @@ items:
       type: System.Numerics.Vector{System.Double}
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.GreaterThan(Vector(Of Double), Vector(Of Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThan(System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
+  name.vb: GreaterThan(Vector(Of Double), Vector(Of Double))
 - uid: System.Numerics.Vector.GreaterThan(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
+  commentId: M:System.Numerics.Vector.GreaterThan(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
   id: GreaterThan(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThan(Vector<Int32>, Vector<Int32>)
-  name.vb: GreaterThan(Vector(Of Int32), Vector(Of Int32))
+  nameWithType: Vector.GreaterThan(Vector<Int32>, Vector<Int32>)
   fullName: System.Numerics.Vector.GreaterThan(System.Numerics.Vector<System.Int32>, System.Numerics.Vector<System.Int32>)
-  fullName.vb: System.Numerics.Vector.GreaterThan(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Int32))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 363
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThan
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 229
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -860,18 +1343,34 @@ items:
       type: System.Numerics.Vector{System.Int32}
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.GreaterThan(Vector(Of Int32), Vector(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThan(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Int32))
+  name.vb: GreaterThan(Vector(Of Int32), Vector(Of Int32))
 - uid: System.Numerics.Vector.GreaterThan(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
+  commentId: M:System.Numerics.Vector.GreaterThan(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
   id: GreaterThan(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThan(Vector<Int64>, Vector<Int64>)
-  name.vb: GreaterThan(Vector(Of Int64), Vector(Of Int64))
+  nameWithType: Vector.GreaterThan(Vector<Int64>, Vector<Int64>)
   fullName: System.Numerics.Vector.GreaterThan(System.Numerics.Vector<System.Int64>, System.Numerics.Vector<System.Int64>)
-  fullName.vb: System.Numerics.Vector.GreaterThan(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 389
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThan
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 230
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -885,18 +1384,34 @@ items:
       type: System.Numerics.Vector{System.Int64}
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.GreaterThan(Vector(Of Int64), Vector(Of Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThan(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Int64))
+  name.vb: GreaterThan(Vector(Of Int64), Vector(Of Int64))
 - uid: System.Numerics.Vector.GreaterThan(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
+  commentId: M:System.Numerics.Vector.GreaterThan(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   id: GreaterThan(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThan(Vector<Single>, Vector<Single>)
-  name.vb: GreaterThan(Vector(Of Single), Vector(Of Single))
+  nameWithType: Vector.GreaterThan(Vector<Single>, Vector<Single>)
   fullName: System.Numerics.Vector.GreaterThan(System.Numerics.Vector<System.Single>, System.Numerics.Vector<System.Single>)
-  fullName.vb: System.Numerics.Vector.GreaterThan(System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThan
     path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
-    startLine: 228
+    startLine: 231
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -910,18 +1425,34 @@ items:
       type: System.Numerics.Vector{System.Single}
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.GreaterThan(Vector(Of Single), Vector(Of Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThan(System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
+  name.vb: GreaterThan(Vector(Of Single), Vector(Of Single))
 - uid: System.Numerics.Vector.GreaterThan``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.GreaterThan``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: GreaterThan``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThan<T>(Vector<T>, Vector<T>)
-  name.vb: GreaterThan(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.GreaterThan<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.GreaterThan<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.GreaterThan(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 337
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThan
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 232
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -937,18 +1468,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.GreaterThan(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThan(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: GreaterThan(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.GreaterThanAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.GreaterThanAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: GreaterThanAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThanAll<T>(Vector<T>, Vector<T>)
-  name.vb: GreaterThanAll(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.GreaterThanAll<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.GreaterThanAll<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.GreaterThanAll(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 402
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThanAll
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 233
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -964,18 +1511,34 @@ items:
     - id: T
     return:
       type: System.Boolean
+  nameWithType.vb: Vector.GreaterThanAll(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThanAll(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: GreaterThanAll(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.GreaterThanAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.GreaterThanAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: GreaterThanAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThanAny<T>(Vector<T>, Vector<T>)
-  name.vb: GreaterThanAny(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.GreaterThanAny<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.GreaterThanAny<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.GreaterThanAny(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 415
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThanAny
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 234
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -991,18 +1554,34 @@ items:
     - id: T
     return:
       type: System.Boolean
+  nameWithType.vb: Vector.GreaterThanAny(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThanAny(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: GreaterThanAny(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
+  commentId: M:System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   id: GreaterThanOrEqual(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThanOrEqual(Vector<Double>, Vector<Double>)
-  name.vb: GreaterThanOrEqual(Vector(Of Double), Vector(Of Double))
+  nameWithType: Vector.GreaterThanOrEqual(Vector<Double>, Vector<Double>)
   fullName: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector<System.Double>, System.Numerics.Vector<System.Double>)
-  fullName.vb: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 483
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThanOrEqual
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 235
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1016,18 +1595,34 @@ items:
       type: System.Numerics.Vector{System.Double}
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.GreaterThanOrEqual(Vector(Of Double), Vector(Of Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
+  name.vb: GreaterThanOrEqual(Vector(Of Double), Vector(Of Double))
 - uid: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
+  commentId: M:System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
   id: GreaterThanOrEqual(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThanOrEqual(Vector<Int32>, Vector<Int32>)
-  name.vb: GreaterThanOrEqual(Vector(Of Int32), Vector(Of Int32))
+  nameWithType: Vector.GreaterThanOrEqual(Vector<Int32>, Vector<Int32>)
   fullName: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector<System.Int32>, System.Numerics.Vector<System.Int32>)
-  fullName.vb: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Int32))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 457
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThanOrEqual
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 236
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1041,18 +1636,34 @@ items:
       type: System.Numerics.Vector{System.Int32}
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.GreaterThanOrEqual(Vector(Of Int32), Vector(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Int32))
+  name.vb: GreaterThanOrEqual(Vector(Of Int32), Vector(Of Int32))
 - uid: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
+  commentId: M:System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
   id: GreaterThanOrEqual(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThanOrEqual(Vector<Int64>, Vector<Int64>)
-  name.vb: GreaterThanOrEqual(Vector(Of Int64), Vector(Of Int64))
+  nameWithType: Vector.GreaterThanOrEqual(Vector<Int64>, Vector<Int64>)
   fullName: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector<System.Int64>, System.Numerics.Vector<System.Int64>)
-  fullName.vb: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 470
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThanOrEqual
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 237
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1066,18 +1677,34 @@ items:
       type: System.Numerics.Vector{System.Int64}
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.GreaterThanOrEqual(Vector(Of Int64), Vector(Of Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Int64))
+  name.vb: GreaterThanOrEqual(Vector(Of Int64), Vector(Of Int64))
 - uid: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
+  commentId: M:System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   id: GreaterThanOrEqual(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThanOrEqual(Vector<Single>, Vector<Single>)
-  name.vb: GreaterThanOrEqual(Vector(Of Single), Vector(Of Single))
+  nameWithType: Vector.GreaterThanOrEqual(Vector<Single>, Vector<Single>)
   fullName: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector<System.Single>, System.Numerics.Vector<System.Single>)
-  fullName.vb: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThanOrEqual
     path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
-    startLine: 235
+    startLine: 238
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1091,18 +1718,34 @@ items:
       type: System.Numerics.Vector{System.Single}
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.GreaterThanOrEqual(Vector(Of Single), Vector(Of Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThanOrEqual(System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
+  name.vb: GreaterThanOrEqual(Vector(Of Single), Vector(Of Single))
 - uid: System.Numerics.Vector.GreaterThanOrEqual``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.GreaterThanOrEqual``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: GreaterThanOrEqual``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThanOrEqual<T>(Vector<T>, Vector<T>)
-  name.vb: GreaterThanOrEqual(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.GreaterThanOrEqual<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.GreaterThanOrEqual<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.GreaterThanOrEqual(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 431
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThanOrEqual
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 239
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1118,18 +1761,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.GreaterThanOrEqual(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThanOrEqual(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: GreaterThanOrEqual(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.GreaterThanOrEqualAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.GreaterThanOrEqualAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: GreaterThanOrEqualAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThanOrEqualAll<T>(Vector<T>, Vector<T>)
-  name.vb: GreaterThanOrEqualAll(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.GreaterThanOrEqualAll<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.GreaterThanOrEqualAll<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.GreaterThanOrEqualAll(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 496
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThanOrEqualAll
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 240
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1145,18 +1804,34 @@ items:
     - id: T
     return:
       type: System.Boolean
+  nameWithType.vb: Vector.GreaterThanOrEqualAll(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThanOrEqualAll(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: GreaterThanOrEqualAll(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.GreaterThanOrEqualAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.GreaterThanOrEqualAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: GreaterThanOrEqualAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: GreaterThanOrEqualAny<T>(Vector<T>, Vector<T>)
-  name.vb: GreaterThanOrEqualAny(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.GreaterThanOrEqualAny<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.GreaterThanOrEqualAny<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.GreaterThanOrEqualAny(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 509
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThanOrEqualAny
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 241
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1172,18 +1847,34 @@ items:
     - id: T
     return:
       type: System.Boolean
+  nameWithType.vb: Vector.GreaterThanOrEqualAny(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.GreaterThanOrEqualAny(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: GreaterThanOrEqualAny(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.LessThan(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
+  commentId: M:System.Numerics.Vector.LessThan(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   id: LessThan(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThan(Vector<Double>, Vector<Double>)
-  name.vb: LessThan(Vector(Of Double), Vector(Of Double))
+  nameWithType: Vector.LessThan(Vector<Double>, Vector<Double>)
   fullName: System.Numerics.Vector.LessThan(System.Numerics.Vector<System.Double>, System.Numerics.Vector<System.Double>)
-  fullName.vb: System.Numerics.Vector.LessThan(System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 190
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThan
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 242
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1197,18 +1888,34 @@ items:
       type: System.Numerics.Vector{System.Double}
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.LessThan(Vector(Of Double), Vector(Of Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThan(System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
+  name.vb: LessThan(Vector(Of Double), Vector(Of Double))
 - uid: System.Numerics.Vector.LessThan(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
+  commentId: M:System.Numerics.Vector.LessThan(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
   id: LessThan(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThan(Vector<Int32>, Vector<Int32>)
-  name.vb: LessThan(Vector(Of Int32), Vector(Of Int32))
+  nameWithType: Vector.LessThan(Vector<Int32>, Vector<Int32>)
   fullName: System.Numerics.Vector.LessThan(System.Numerics.Vector<System.Int32>, System.Numerics.Vector<System.Int32>)
-  fullName.vb: System.Numerics.Vector.LessThan(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Int32))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 177
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThan
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 243
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1222,18 +1929,34 @@ items:
       type: System.Numerics.Vector{System.Int32}
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.LessThan(Vector(Of Int32), Vector(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThan(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Int32))
+  name.vb: LessThan(Vector(Of Int32), Vector(Of Int32))
 - uid: System.Numerics.Vector.LessThan(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
+  commentId: M:System.Numerics.Vector.LessThan(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
   id: LessThan(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThan(Vector<Int64>, Vector<Int64>)
-  name.vb: LessThan(Vector(Of Int64), Vector(Of Int64))
+  nameWithType: Vector.LessThan(Vector<Int64>, Vector<Int64>)
   fullName: System.Numerics.Vector.LessThan(System.Numerics.Vector<System.Int64>, System.Numerics.Vector<System.Int64>)
-  fullName.vb: System.Numerics.Vector.LessThan(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 203
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThan
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 244
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1247,18 +1970,34 @@ items:
       type: System.Numerics.Vector{System.Int64}
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.LessThan(Vector(Of Int64), Vector(Of Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThan(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Int64))
+  name.vb: LessThan(Vector(Of Int64), Vector(Of Int64))
 - uid: System.Numerics.Vector.LessThan(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
+  commentId: M:System.Numerics.Vector.LessThan(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   id: LessThan(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThan(Vector<Single>, Vector<Single>)
-  name.vb: LessThan(Vector(Of Single), Vector(Of Single))
+  nameWithType: Vector.LessThan(Vector<Single>, Vector<Single>)
   fullName: System.Numerics.Vector.LessThan(System.Numerics.Vector<System.Single>, System.Numerics.Vector<System.Single>)
-  fullName.vb: System.Numerics.Vector.LessThan(System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThan
     path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
-    startLine: 242
+    startLine: 245
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1272,18 +2011,34 @@ items:
       type: System.Numerics.Vector{System.Single}
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.LessThan(Vector(Of Single), Vector(Of Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThan(System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
+  name.vb: LessThan(Vector(Of Single), Vector(Of Single))
 - uid: System.Numerics.Vector.LessThan``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.LessThan``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: LessThan``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThan<T>(Vector<T>, Vector<T>)
-  name.vb: LessThan(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.LessThan<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.LessThan<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.LessThan(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 151
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThan
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 246
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1299,18 +2054,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.LessThan(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThan(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: LessThan(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.LessThanAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.LessThanAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: LessThanAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThanAll<T>(Vector<T>, Vector<T>)
-  name.vb: LessThanAll(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.LessThanAll<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.LessThanAll<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.LessThanAll(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 215
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThanAll
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 247
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1326,18 +2097,34 @@ items:
     - id: T
     return:
       type: System.Boolean
+  nameWithType.vb: Vector.LessThanAll(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThanAll(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: LessThanAll(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.LessThanAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.LessThanAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: LessThanAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThanAny<T>(Vector<T>, Vector<T>)
-  name.vb: LessThanAny(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.LessThanAny<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.LessThanAny<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.LessThanAny(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 228
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThanAny
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 248
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1353,18 +2140,34 @@ items:
     - id: T
     return:
       type: System.Boolean
+  nameWithType.vb: Vector.LessThanAny(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThanAny(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: LessThanAny(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
+  commentId: M:System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   id: LessThanOrEqual(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThanOrEqual(Vector<Double>, Vector<Double>)
-  name.vb: LessThanOrEqual(Vector(Of Double), Vector(Of Double))
+  nameWithType: Vector.LessThanOrEqual(Vector<Double>, Vector<Double>)
   fullName: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector<System.Double>, System.Numerics.Vector<System.Double>)
-  fullName.vb: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 296
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThanOrEqual
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 249
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1378,18 +2181,34 @@ items:
       type: System.Numerics.Vector{System.Double}
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.LessThanOrEqual(Vector(Of Double), Vector(Of Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector(Of System.Double), System.Numerics.Vector(Of System.Double))
+  name.vb: LessThanOrEqual(Vector(Of Double), Vector(Of Double))
 - uid: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
+  commentId: M:System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
   id: LessThanOrEqual(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThanOrEqual(Vector<Int32>, Vector<Int32>)
-  name.vb: LessThanOrEqual(Vector(Of Int32), Vector(Of Int32))
+  nameWithType: Vector.LessThanOrEqual(Vector<Int32>, Vector<Int32>)
   fullName: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector<System.Int32>, System.Numerics.Vector<System.Int32>)
-  fullName.vb: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Int32))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 270
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThanOrEqual
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 250
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1403,18 +2222,34 @@ items:
       type: System.Numerics.Vector{System.Int32}
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.LessThanOrEqual(Vector(Of Int32), Vector(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector(Of System.Int32), System.Numerics.Vector(Of System.Int32))
+  name.vb: LessThanOrEqual(Vector(Of Int32), Vector(Of Int32))
 - uid: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
+  commentId: M:System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
   id: LessThanOrEqual(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThanOrEqual(Vector<Int64>, Vector<Int64>)
-  name.vb: LessThanOrEqual(Vector(Of Int64), Vector(Of Int64))
+  nameWithType: Vector.LessThanOrEqual(Vector<Int64>, Vector<Int64>)
   fullName: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector<System.Int64>, System.Numerics.Vector<System.Int64>)
-  fullName.vb: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Int64))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 283
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThanOrEqual
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 251
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1428,18 +2263,34 @@ items:
       type: System.Numerics.Vector{System.Int64}
     return:
       type: System.Numerics.Vector{System.Int64}
+  nameWithType.vb: Vector.LessThanOrEqual(Vector(Of Int64), Vector(Of Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector(Of System.Int64), System.Numerics.Vector(Of System.Int64))
+  name.vb: LessThanOrEqual(Vector(Of Int64), Vector(Of Int64))
 - uid: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
+  commentId: M:System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   id: LessThanOrEqual(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThanOrEqual(Vector<Single>, Vector<Single>)
-  name.vb: LessThanOrEqual(Vector(Of Single), Vector(Of Single))
+  nameWithType: Vector.LessThanOrEqual(Vector<Single>, Vector<Single>)
   fullName: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector<System.Single>, System.Numerics.Vector<System.Single>)
-  fullName.vb: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThanOrEqual
     path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
-    startLine: 249
+    startLine: 252
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1453,18 +2304,34 @@ items:
       type: System.Numerics.Vector{System.Single}
     return:
       type: System.Numerics.Vector{System.Int32}
+  nameWithType.vb: Vector.LessThanOrEqual(Vector(Of Single), Vector(Of Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThanOrEqual(System.Numerics.Vector(Of System.Single), System.Numerics.Vector(Of System.Single))
+  name.vb: LessThanOrEqual(Vector(Of Single), Vector(Of Single))
 - uid: System.Numerics.Vector.LessThanOrEqual``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.LessThanOrEqual``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: LessThanOrEqual``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThanOrEqual<T>(Vector<T>, Vector<T>)
-  name.vb: LessThanOrEqual(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.LessThanOrEqual<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.LessThanOrEqual<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.LessThanOrEqual(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 244
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThanOrEqual
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 253
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1480,18 +2347,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.LessThanOrEqual(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThanOrEqual(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: LessThanOrEqual(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.LessThanOrEqualAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.LessThanOrEqualAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: LessThanOrEqualAll``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThanOrEqualAll<T>(Vector<T>, Vector<T>)
-  name.vb: LessThanOrEqualAll(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.LessThanOrEqualAll<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.LessThanOrEqualAll<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.LessThanOrEqualAll(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 308
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThanOrEqualAll
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 254
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1507,18 +2390,34 @@ items:
     - id: T
     return:
       type: System.Boolean
+  nameWithType.vb: Vector.LessThanOrEqualAll(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThanOrEqualAll(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: LessThanOrEqualAll(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.LessThanOrEqualAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.LessThanOrEqualAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: LessThanOrEqualAny``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: LessThanOrEqualAny<T>(Vector<T>, Vector<T>)
-  name.vb: LessThanOrEqualAny(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.LessThanOrEqualAny<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.LessThanOrEqualAny<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.LessThanOrEqualAny(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 321
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThanOrEqualAny
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 255
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1534,18 +2433,34 @@ items:
     - id: T
     return:
       type: System.Boolean
+  nameWithType.vb: Vector.LessThanOrEqualAny(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.LessThanOrEqualAny(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: LessThanOrEqualAny(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.Max``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Max``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: Max``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Max<T>(Vector<T>, Vector<T>)
-  name.vb: Max(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.Max<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.Max<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Max(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 568
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Max
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 256
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1561,18 +2476,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Max(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Max(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: Max(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.Min``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Min``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: Min``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Min<T>(Vector<T>, Vector<T>)
-  name.vb: Min(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.Min<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.Min<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Min(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 556
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Min
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 257
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1588,18 +2519,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Min(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Min(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: Min(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.Multiply``1(``0,System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Multiply``1(``0,System.Numerics.Vector{``0})
   id: Multiply``1(``0,System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Multiply<T>(T, Vector<T>)
-  name.vb: Multiply(Of T)(T, Vector(Of T))
+  nameWithType: Vector.Multiply<T>(T, Vector<T>)
   fullName: System.Numerics.Vector.Multiply<T>(T, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Multiply(Of T)(T, System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 655
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Multiply
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 258
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1615,18 +2562,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Multiply(Of T)(T, Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Multiply(Of T)(T, System.Numerics.Vector(Of T))
+  name.vb: Multiply(Of T)(T, Vector(Of T))
 - uid: System.Numerics.Vector.Multiply``1(System.Numerics.Vector{``0},``0)
+  commentId: M:System.Numerics.Vector.Multiply``1(System.Numerics.Vector{``0},``0)
   id: Multiply``1(System.Numerics.Vector{``0},``0)
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Multiply<T>(Vector<T>, T)
-  name.vb: Multiply(Of T)(Vector(Of T), T)
+  nameWithType: Vector.Multiply<T>(Vector<T>, T)
   fullName: System.Numerics.Vector.Multiply<T>(System.Numerics.Vector<T>, T)
-  fullName.vb: System.Numerics.Vector.Multiply(Of T)(System.Numerics.Vector(Of T), T)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 643
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Multiply
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 259
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1642,18 +2605,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Multiply(Of T)(Vector(Of T), T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Multiply(Of T)(System.Numerics.Vector(Of T), T)
+  name.vb: Multiply(Of T)(Vector(Of T), T)
 - uid: System.Numerics.Vector.Multiply``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Multiply``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: Multiply``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Multiply<T>(Vector<T>, Vector<T>)
-  name.vb: Multiply(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.Multiply<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.Multiply<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Multiply(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 631
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Multiply
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 260
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1669,18 +2648,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Multiply(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Multiply(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: Multiply(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.Negate``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Negate``1(System.Numerics.Vector{``0})
   id: Negate``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Negate<T>(Vector<T>)
-  name.vb: Negate(Of T)(Vector(Of T))
+  nameWithType: Vector.Negate<T>(Vector<T>)
   fullName: System.Numerics.Vector.Negate<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Negate(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 679
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Negate
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 261
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1694,18 +2689,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Negate(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Negate(Of T)(System.Numerics.Vector(Of T))
+  name.vb: Negate(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.OnesComplement``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.OnesComplement``1(System.Numerics.Vector{``0})
   id: OnesComplement``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: OnesComplement<T>(Vector<T>)
-  name.vb: OnesComplement(Of T)(Vector(Of T))
+  nameWithType: Vector.OnesComplement<T>(Vector<T>)
   fullName: System.Numerics.Vector.OnesComplement<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.OnesComplement(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 716
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OnesComplement
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 262
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1719,18 +2730,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.OnesComplement(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.OnesComplement(Of T)(System.Numerics.Vector(Of T))
+  name.vb: OnesComplement(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.SquareRoot``1(System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.SquareRoot``1(System.Numerics.Vector{``0})
   id: SquareRoot``1(System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: SquareRoot<T>(Vector<T>)
-  name.vb: SquareRoot(Of T)(Vector(Of T))
+  nameWithType: Vector.SquareRoot<T>(Vector<T>)
   fullName: System.Numerics.Vector.SquareRoot<T>(System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.SquareRoot(Of T)(System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 593
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SquareRoot
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 263
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1744,18 +2771,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.SquareRoot(Of T)(Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.SquareRoot(Of T)(System.Numerics.Vector(Of T))
+  name.vb: SquareRoot(Of T)(Vector(Of T))
 - uid: System.Numerics.Vector.Subtract``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Subtract``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: Subtract``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Subtract<T>(Vector<T>, Vector<T>)
-  name.vb: Subtract(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.Subtract<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.Subtract<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Subtract(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 619
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Subtract
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 264
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1771,18 +2814,34 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Subtract(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Subtract(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: Subtract(Of T)(Vector(Of T), Vector(Of T))
 - uid: System.Numerics.Vector.Xor``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
+  commentId: M:System.Numerics.Vector.Xor``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   id: Xor``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})
   parent: System.Numerics.Vector
+  langs:
+  - csharp
+  - vb
   name: Xor<T>(Vector<T>, Vector<T>)
-  name.vb: Xor(Of T)(Vector(Of T), Vector(Of T))
+  nameWithType: Vector.Xor<T>(Vector<T>, Vector<T>)
   fullName: System.Numerics.Vector.Xor<T>(System.Numerics.Vector<T>, System.Numerics.Vector<T>)
-  fullName.vb: System.Numerics.Vector.Xor(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Numerics.Vectors/src/System/Numerics/Vector_Operations.cs
-    startLine: 728
+    remote:
+      path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Xor
+    path: src/System.Numerics.Vectors/ref/System.Numerics.Vectors.cs
+    startLine: 265
   assemblies:
   - System.Numerics.Vectors
   namespace: System.Numerics
@@ -1798,390 +2857,546 @@ items:
     - id: T
     return:
       type: System.Numerics.Vector{{T}}
+  nameWithType.vb: Vector.Xor(Of T)(Vector(Of T), Vector(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Numerics.Vector.Xor(Of T)(System.Numerics.Vector(Of T), System.Numerics.Vector(Of T))
+  name.vb: Xor(Of T)(Vector(Of T), Vector(Of T))
 references:
 - uid: System.Numerics
+  commentId: N:System.Numerics
   isExternal: false
   name: System.Numerics
+  nameWithType: System.Numerics
   fullName: System.Numerics
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Numerics.Vector{{T}}
+  commentId: T:System.Numerics.Vector{``0}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<T>
-  name.vb: Vector(Of T)
+  nameWithType: Vector<T>
   fullName: System.Numerics.Vector<T>
-  fullName.vb: System.Numerics.Vector(Of T)
+  nameWithType.vb: Vector(Of T)
+  fullname.vb: System.Numerics.Vector(Of T)
+  name.vb: Vector(Of T)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector`1
+  commentId: T:System.Numerics.Vector`1
   parent: System.Numerics
   isExternal: false
   name: Vector<T>
-  name.vb: Vector(Of T)
+  nameWithType: Vector<T>
   fullName: System.Numerics.Vector<T>
-  fullName.vb: System.Numerics.Vector(Of T)
+  nameWithType.vb: Vector(Of T)
+  fullname.vb: System.Numerics.Vector(Of T)
+  name.vb: Vector(Of T)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector{System.Byte}
+  commentId: T:System.Numerics.Vector{System.Byte}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<Byte>
-  name.vb: Vector(Of Byte)
+  nameWithType: Vector<Byte>
   fullName: System.Numerics.Vector<System.Byte>
-  fullName.vb: System.Numerics.Vector(Of System.Byte)
+  nameWithType.vb: Vector(Of Byte)
+  fullname.vb: System.Numerics.Vector(Of System.Byte)
+  name.vb: Vector(Of Byte)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector{System.Double}
+  commentId: T:System.Numerics.Vector{System.Double}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<Double>
-  name.vb: Vector(Of Double)
+  nameWithType: Vector<Double>
   fullName: System.Numerics.Vector<System.Double>
-  fullName.vb: System.Numerics.Vector(Of System.Double)
+  nameWithType.vb: Vector(Of Double)
+  fullname.vb: System.Numerics.Vector(Of System.Double)
+  name.vb: Vector(Of Double)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Double
     name: Double
+    nameWithType: Double
     fullName: System.Double
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Double
     name: Double
+    nameWithType: Double
     fullName: System.Double
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector{System.Int16}
+  commentId: T:System.Numerics.Vector{System.Int16}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<Int16>
-  name.vb: Vector(Of Int16)
+  nameWithType: Vector<Int16>
   fullName: System.Numerics.Vector<System.Int16>
-  fullName.vb: System.Numerics.Vector(Of System.Int16)
+  nameWithType.vb: Vector(Of Int16)
+  fullname.vb: System.Numerics.Vector(Of System.Int16)
+  name.vb: Vector(Of Int16)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int16
     name: Int16
+    nameWithType: Int16
     fullName: System.Int16
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int16
     name: Int16
+    nameWithType: Int16
     fullName: System.Int16
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector{System.Int32}
+  commentId: T:System.Numerics.Vector{System.Int32}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<Int32>
-  name.vb: Vector(Of Int32)
+  nameWithType: Vector<Int32>
   fullName: System.Numerics.Vector<System.Int32>
-  fullName.vb: System.Numerics.Vector(Of System.Int32)
+  nameWithType.vb: Vector(Of Int32)
+  fullname.vb: System.Numerics.Vector(Of System.Int32)
+  name.vb: Vector(Of Int32)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector{System.Int64}
+  commentId: T:System.Numerics.Vector{System.Int64}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<Int64>
-  name.vb: Vector(Of Int64)
+  nameWithType: Vector<Int64>
   fullName: System.Numerics.Vector<System.Int64>
-  fullName.vb: System.Numerics.Vector(Of System.Int64)
+  nameWithType.vb: Vector(Of Int64)
+  fullname.vb: System.Numerics.Vector(Of System.Int64)
+  name.vb: Vector(Of Int64)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector{System.SByte}
+  commentId: T:System.Numerics.Vector{System.SByte}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<SByte>
-  name.vb: Vector(Of SByte)
+  nameWithType: Vector<SByte>
   fullName: System.Numerics.Vector<System.SByte>
-  fullName.vb: System.Numerics.Vector(Of System.SByte)
+  nameWithType.vb: Vector(Of SByte)
+  fullname.vb: System.Numerics.Vector(Of System.SByte)
+  name.vb: Vector(Of SByte)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.SByte
     name: SByte
+    nameWithType: SByte
     fullName: System.SByte
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.SByte
     name: SByte
+    nameWithType: SByte
     fullName: System.SByte
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector{System.Single}
+  commentId: T:System.Numerics.Vector{System.Single}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<Single>
-  name.vb: Vector(Of Single)
+  nameWithType: Vector<Single>
   fullName: System.Numerics.Vector<System.Single>
-  fullName.vb: System.Numerics.Vector(Of System.Single)
+  nameWithType.vb: Vector(Of Single)
+  fullname.vb: System.Numerics.Vector(Of System.Single)
+  name.vb: Vector(Of Single)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Single
     name: Single
+    nameWithType: Single
     fullName: System.Single
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Single
     name: Single
+    nameWithType: Single
     fullName: System.Single
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector{System.UInt16}
+  commentId: T:System.Numerics.Vector{System.UInt16}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<UInt16>
-  name.vb: Vector(Of UInt16)
+  nameWithType: Vector<UInt16>
   fullName: System.Numerics.Vector<System.UInt16>
-  fullName.vb: System.Numerics.Vector(Of System.UInt16)
+  nameWithType.vb: Vector(Of UInt16)
+  fullname.vb: System.Numerics.Vector(Of System.UInt16)
+  name.vb: Vector(Of UInt16)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.UInt16
     name: UInt16
+    nameWithType: UInt16
     fullName: System.UInt16
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.UInt16
     name: UInt16
+    nameWithType: UInt16
     fullName: System.UInt16
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector{System.UInt32}
+  commentId: T:System.Numerics.Vector{System.UInt32}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<UInt32>
-  name.vb: Vector(Of UInt32)
+  nameWithType: Vector<UInt32>
   fullName: System.Numerics.Vector<System.UInt32>
-  fullName.vb: System.Numerics.Vector(Of System.UInt32)
+  nameWithType.vb: Vector(Of UInt32)
+  fullname.vb: System.Numerics.Vector(Of System.UInt32)
+  name.vb: Vector(Of UInt32)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.UInt32
     name: UInt32
+    nameWithType: UInt32
     fullName: System.UInt32
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.UInt32
     name: UInt32
+    nameWithType: UInt32
     fullName: System.UInt32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Numerics.Vector{System.UInt64}
+  commentId: T:System.Numerics.Vector{System.UInt64}
   parent: System.Numerics
   definition: System.Numerics.Vector`1
   name: Vector<UInt64>
-  name.vb: Vector(Of UInt64)
+  nameWithType: Vector<UInt64>
   fullName: System.Numerics.Vector<System.UInt64>
-  fullName.vb: System.Numerics.Vector(Of System.UInt64)
+  nameWithType.vb: Vector(Of UInt64)
+  fullname.vb: System.Numerics.Vector(Of System.UInt64)
+  name.vb: Vector(Of UInt64)
   spec.csharp:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.UInt64
     name: UInt64
+    nameWithType: UInt64
     fullName: System.UInt64
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Numerics.Vector`1
     name: Vector
+    nameWithType: Vector
     fullName: System.Numerics.Vector
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.UInt64
     name: UInt64
+    nameWithType: UInt64
     fullName: System.UInt64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
   isExternal: false
   name: T
+  nameWithType: T
   fullName: T

@@ -1,43 +1,70 @@
 items:
 - uid: System.Globalization.GlobalizationExtensions
+  commentId: T:System.Globalization.GlobalizationExtensions
   id: GlobalizationExtensions
   parent: System.Globalization
   children:
   - System.Globalization.GlobalizationExtensions.GetStringComparer(CompareInfo,CompareOptions)
+  langs:
+  - csharp
+  - vb
   name: GlobalizationExtensions
+  nameWithType: GlobalizationExtensions
   fullName: System.Globalization.GlobalizationExtensions
   type: Class
   source:
-    remote: &o0
-      path: src/System.Globalization.Extensions/src/System/Globalization/Extensions.cs
+    remote:
+      path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Globalization.Extensions/src/System/Globalization/Extensions.cs
-    startLine: 10
+    id: GlobalizationExtensions
+    path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+    startLine: 27
   assemblies:
   - System.Globalization.Extensions
   namespace: System.Globalization
   syntax:
     content: 'public class GlobalizationExtensions : object'
-    content.vb: Public Class GlobalizationExtensions Inherits Object
+    content.vb: >-
+      Public Class GlobalizationExtensions
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Globalization.GlobalizationExtensions.GetStringComparer(CompareInfo,CompareOptions)
+  commentId: M:System.Globalization.GlobalizationExtensions.GetStringComparer(CompareInfo,CompareOptions)
   id: GetStringComparer(CompareInfo,CompareOptions)
+  isExtensionMethod: true
   parent: System.Globalization.GlobalizationExtensions
+  langs:
+  - csharp
+  - vb
   name: GetStringComparer(CompareInfo, CompareOptions)
+  nameWithType: GlobalizationExtensions.GetStringComparer(CompareInfo, CompareOptions)
   fullName: System.Globalization.GlobalizationExtensions.GetStringComparer(CompareInfo, CompareOptions)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Globalization.Extensions/src/System/Globalization/Extensions.cs
-    startLine: 12
+    remote:
+      path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetStringComparer
+    path: src/System.Globalization.Extensions/ref/System.Globalization.Extensions.Manual.cs
+    startLine: 29
   assemblies:
   - System.Globalization.Extensions
   namespace: System.Globalization
   syntax:
-    content: public static StringComparer GetStringComparer(CompareInfo compareInfo, CompareOptions options)
-    content.vb: Public Shared Function GetStringComparer(compareInfo As CompareInfo, options As CompareOptions) As StringComparer
+    content: public static StringComparer GetStringComparer(this CompareInfo compareInfo, CompareOptions options)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetStringComparer(compareInfo As CompareInfo, options As CompareOptions) As StringComparer
     parameters:
     - id: compareInfo
       type: CompareInfo
@@ -45,29 +72,47 @@ items:
       type: CompareOptions
     return:
       type: StringComparer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Globalization
+  commentId: N:System.Globalization
   isExternal: false
   name: System.Globalization
+  nameWithType: System.Globalization
   fullName: System.Globalization
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: CompareInfo
+  commentId: '!:CompareInfo'
   isExternal: true
   name: CompareInfo
+  nameWithType: CompareInfo
   fullName: CompareInfo
 - uid: CompareOptions
+  commentId: '!:CompareOptions'
   isExternal: true
   name: CompareOptions
+  nameWithType: CompareOptions
   fullName: CompareOptions
 - uid: StringComparer
+  commentId: '!:StringComparer'
   isExternal: true
   name: StringComparer
+  nameWithType: StringComparer
   fullName: StringComparer

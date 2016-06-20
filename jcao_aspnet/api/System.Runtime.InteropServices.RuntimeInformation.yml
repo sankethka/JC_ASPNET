@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.InteropServices.RuntimeInformation
+  commentId: T:System.Runtime.InteropServices.RuntimeInformation
   id: RuntimeInformation
   parent: System.Runtime.InteropServices
   children:
@@ -8,37 +9,56 @@ items:
   - System.Runtime.InteropServices.RuntimeInformation.OSArchitecture
   - System.Runtime.InteropServices.RuntimeInformation.OSDescription
   - System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture
+  langs:
+  - csharp
+  - vb
   name: RuntimeInformation
+  nameWithType: RuntimeInformation
   fullName: System.Runtime.InteropServices.RuntimeInformation
   type: Class
   source:
-    remote: &o1
-      path: src/System.Runtime.InteropServices.RuntimeInformation/src/System/Runtime/InteropServices/RuntimeInformation/RuntimeInformation.cs
+    remote:
+      path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Runtime.InteropServices.RuntimeInformation/src/System/Runtime/InteropServices/RuntimeInformation/RuntimeInformation.cs
-    startLine: 9
+    id: RuntimeInformation
+    path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
+    startLine: 33
   assemblies:
   - System.Runtime.InteropServices.RuntimeInformation
   namespace: System.Runtime.InteropServices
   syntax:
     content: 'public class RuntimeInformation : object'
-    content.vb: Public Class RuntimeInformation Inherits Object
+    content.vb: >-
+      Public Class RuntimeInformation
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture
+  commentId: P:System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture
   id: ProcessArchitecture
   parent: System.Runtime.InteropServices.RuntimeInformation
+  langs:
+  - csharp
+  - vb
   name: ProcessArchitecture
+  nameWithType: RuntimeInformation.ProcessArchitecture
   fullName: System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture
   type: Property
   source:
-    remote: &o0
-      path: src/System.Runtime.InteropServices.RuntimeInformation/src/System/Runtime/InteropServices/RuntimeInformation/RuntimeInformation.Windows.cs
+    remote:
+      path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Runtime.InteropServices.RuntimeInformation/src/System/Runtime/InteropServices/RuntimeInformation/RuntimeInformation.Windows.cs
-    startLine: 70
+    id: ProcessArchitecture
+    path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
+    startLine: 35
   assemblies:
   - System.Runtime.InteropServices.RuntimeInformation
   namespace: System.Runtime.InteropServices
@@ -48,16 +68,33 @@ items:
     parameters: []
     return:
       type: System.Runtime.InteropServices.Architecture
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Runtime.InteropServices.RuntimeInformation.OSArchitecture
+  commentId: P:System.Runtime.InteropServices.RuntimeInformation.OSArchitecture
   id: OSArchitecture
   parent: System.Runtime.InteropServices.RuntimeInformation
+  langs:
+  - csharp
+  - vb
   name: OSArchitecture
+  nameWithType: RuntimeInformation.OSArchitecture
   fullName: System.Runtime.InteropServices.RuntimeInformation.OSArchitecture
   type: Property
   source:
-    remote: *o0
-    path: src/System.Runtime.InteropServices.RuntimeInformation/src/System/Runtime/InteropServices/RuntimeInformation/RuntimeInformation.Windows.cs
-    startLine: 38
+    remote:
+      path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OSArchitecture
+    path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
+    startLine: 36
   assemblies:
   - System.Runtime.InteropServices.RuntimeInformation
   namespace: System.Runtime.InteropServices
@@ -67,16 +104,33 @@ items:
     parameters: []
     return:
       type: System.Runtime.InteropServices.Architecture
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Runtime.InteropServices.RuntimeInformation.OSDescription
+  commentId: P:System.Runtime.InteropServices.RuntimeInformation.OSDescription
   id: OSDescription
   parent: System.Runtime.InteropServices.RuntimeInformation
+  langs:
+  - csharp
+  - vb
   name: OSDescription
+  nameWithType: RuntimeInformation.OSDescription
   fullName: System.Runtime.InteropServices.RuntimeInformation.OSDescription
   type: Property
   source:
-    remote: *o0
-    path: src/System.Runtime.InteropServices.RuntimeInformation/src/System/Runtime/InteropServices/RuntimeInformation/RuntimeInformation.Windows.cs
-    startLine: 21
+    remote:
+      path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OSDescription
+    path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
+    startLine: 37
   assemblies:
   - System.Runtime.InteropServices.RuntimeInformation
   namespace: System.Runtime.InteropServices
@@ -86,16 +140,33 @@ items:
     parameters: []
     return:
       type: System.String
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription
+  commentId: P:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription
   id: FrameworkDescription
   parent: System.Runtime.InteropServices.RuntimeInformation
+  langs:
+  - csharp
+  - vb
   name: FrameworkDescription
+  nameWithType: RuntimeInformation.FrameworkDescription
   fullName: System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription
   type: Property
   source:
-    remote: *o1
-    path: src/System.Runtime.InteropServices.RuntimeInformation/src/System/Runtime/InteropServices/RuntimeInformation/RuntimeInformation.cs
-    startLine: 19
+    remote:
+      path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FrameworkDescription
+    path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
+    startLine: 38
   assemblies:
   - System.Runtime.InteropServices.RuntimeInformation
   namespace: System.Runtime.InteropServices
@@ -105,16 +176,33 @@ items:
     parameters: []
     return:
       type: System.String
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform)
+  commentId: M:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform)
   id: IsOSPlatform(System.Runtime.InteropServices.OSPlatform)
   parent: System.Runtime.InteropServices.RuntimeInformation
+  langs:
+  - csharp
+  - vb
   name: IsOSPlatform(OSPlatform)
+  nameWithType: RuntimeInformation.IsOSPlatform(OSPlatform)
   fullName: System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Runtime.InteropServices.RuntimeInformation/src/System/Runtime/InteropServices/RuntimeInformation/RuntimeInformation.Windows.cs
-    startLine: 16
+    remote:
+      path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsOSPlatform
+    path: src/System.Runtime.InteropServices.RuntimeInformation/ref/System.Runtime.InteropServices.RuntimeInformation.cs
+    startLine: 39
   assemblies:
   - System.Runtime.InteropServices.RuntimeInformation
   namespace: System.Runtime.InteropServices
@@ -126,37 +214,57 @@ items:
       type: System.Runtime.InteropServices.OSPlatform
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
   isExternal: false
   name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Runtime.InteropServices.Architecture
+  commentId: T:System.Runtime.InteropServices.Architecture
   parent: System.Runtime.InteropServices
   isExternal: false
   name: Architecture
+  nameWithType: Architecture
   fullName: System.Runtime.InteropServices.Architecture
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Runtime.InteropServices.OSPlatform
+  commentId: T:System.Runtime.InteropServices.OSPlatform
   parent: System.Runtime.InteropServices
   isExternal: false
   name: OSPlatform
+  nameWithType: OSPlatform
   fullName: System.Runtime.InteropServices.OSPlatform
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean

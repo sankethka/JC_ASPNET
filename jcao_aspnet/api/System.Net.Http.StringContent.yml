@@ -1,28 +1,35 @@
 items:
 - uid: System.Net.Http.StringContent
+  commentId: T:System.Net.Http.StringContent
   id: StringContent
   parent: System.Net.Http
   children:
   - System.Net.Http.StringContent.#ctor(System.String)
   - System.Net.Http.StringContent.#ctor(System.String,System.Text.Encoding)
   - System.Net.Http.StringContent.#ctor(System.String,System.Text.Encoding,System.String)
+  langs:
+  - csharp
+  - vb
   name: StringContent
+  nameWithType: StringContent
   fullName: System.Net.Http.StringContent
   type: Class
   source:
-    remote: &o0
-      path: src/System.Net.Http/src/System/Net/Http/StringContent.cs
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Net.Http/src/System/Net/Http/StringContent.cs
-    startLine: 9
+    id: StringContent
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 235
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http
-  summary: Provides HTTP content based on a string.
   syntax:
     content: 'public class StringContent : ByteArrayContent'
-    content.vb: Public Class StringContent Inherits ByteArrayContent
+    content.vb: >-
+      Public Class StringContent
+          Inherits ByteArrayContent
   inheritance:
   - System.Object
   - System.Net.Http.HttpContent
@@ -41,445 +48,612 @@ items:
   - System.Net.Http.HttpContent.ReadAsByteArrayAsync
   - System.Net.Http.HttpContent.ReadAsStreamAsync
   - System.Net.Http.HttpContent.ReadAsStringAsync
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Net.Http.StringContent.#ctor(System.String)
+  commentId: M:System.Net.Http.StringContent.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.Net.Http.StringContent
+  langs:
+  - csharp
+  - vb
   name: StringContent(String)
+  nameWithType: StringContent.StringContent(String)
   fullName: System.Net.Http.StringContent.StringContent(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Net.Http/src/System/Net/Http/StringContent.cs
-    startLine: 13
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 237
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http
-  summary: Creates a new instance of the <xref href="System.Net.Http.StringContent" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public StringContent(string content)
     content.vb: Public Sub New(content As String)
     parameters:
     - id: content
       type: System.String
-      description: The content used to initialize the <xref href="System.Net.Http.StringContent" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.StringContent.#ctor(System.String,System.Text.Encoding)
+  commentId: M:System.Net.Http.StringContent.#ctor(System.String,System.Text.Encoding)
   id: '#ctor(System.String,System.Text.Encoding)'
   parent: System.Net.Http.StringContent
+  langs:
+  - csharp
+  - vb
   name: StringContent(String, Text.Encoding)
+  nameWithType: StringContent.StringContent(String, Text.Encoding)
   fullName: System.Net.Http.StringContent.StringContent(System.String, System.Text.Encoding)
   type: Constructor
   source:
-    remote: &o1
+    remote:
       path: src/System.Net.Http/ref/System.Net.Http.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Net.Http/ref/System.Net.Http.cs
-    startLine: 227
+    startLine: 238
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http
-  summary: Creates a new instance of the <xref href="System.Net.Http.StringContent" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public StringContent(string content, Text.Encoding encoding)
     content.vb: Public Sub New(content As String, encoding As Text.Encoding)
     parameters:
     - id: content
       type: System.String
-      description: The content used to initialize the <xref href="System.Net.Http.StringContent" data-throw-if-not-resolved="false"></xref>.
     - id: encoding
       type: System.Text.Encoding
-      description: The encoding to use for the content.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Net.Http.StringContent.#ctor(System.String,System.Text.Encoding,System.String)
+  commentId: M:System.Net.Http.StringContent.#ctor(System.String,System.Text.Encoding,System.String)
   id: '#ctor(System.String,System.Text.Encoding,System.String)'
   parent: System.Net.Http.StringContent
+  langs:
+  - csharp
+  - vb
   name: StringContent(String, Text.Encoding, String)
+  nameWithType: StringContent.StringContent(String, Text.Encoding, String)
   fullName: System.Net.Http.StringContent.StringContent(System.String, System.Text.Encoding, System.String)
   type: Constructor
   source:
-    remote: *o1
+    remote:
+      path: src/System.Net.Http/ref/System.Net.Http.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Net.Http/ref/System.Net.Http.cs
-    startLine: 228
+    startLine: 239
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http
-  summary: Creates a new instance of the <xref href="System.Net.Http.StringContent" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public StringContent(string content, Text.Encoding encoding, string mediaType)
     content.vb: Public Sub New(content As String, encoding As Text.Encoding, mediaType As String)
     parameters:
     - id: content
       type: System.String
-      description: The content used to initialize the <xref href="System.Net.Http.StringContent" data-throw-if-not-resolved="false"></xref>.
     - id: encoding
       type: System.Text.Encoding
-      description: The encoding to use for the content.
     - id: mediaType
       type: System.String
-      description: The media type to use for the content.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Net.Http
+  commentId: N:System.Net.Http
   isExternal: false
   name: System.Net.Http
+  nameWithType: System.Net.Http
   fullName: System.Net.Http
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Net.Http.HttpContent
+  commentId: T:System.Net.Http.HttpContent
   parent: System.Net.Http
   isExternal: false
   name: HttpContent
+  nameWithType: HttpContent
   fullName: System.Net.Http.HttpContent
 - uid: System.Net.Http.ByteArrayContent
+  commentId: T:System.Net.Http.ByteArrayContent
   parent: System.Net.Http
   isExternal: false
   name: ByteArrayContent
+  nameWithType: ByteArrayContent
   fullName: System.Net.Http.ByteArrayContent
 - uid: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
+  commentId: M:System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
   parent: System.Net.Http.ByteArrayContent
   isExternal: false
   name: CreateContentReadStreamAsync()
+  nameWithType: ByteArrayContent.CreateContentReadStreamAsync()
   fullName: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync()
   spec.csharp:
   - uid: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
     name: CreateContentReadStreamAsync
+    nameWithType: ByteArrayContent.CreateContentReadStreamAsync
     fullName: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
     name: CreateContentReadStreamAsync
+    nameWithType: ByteArrayContent.CreateContentReadStreamAsync
     fullName: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)
+  commentId: M:System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)
   parent: System.Net.Http.ByteArrayContent
   isExternal: true
   name: SerializeToStreamAsync(IO.Stream, TransportContext)
+  nameWithType: ByteArrayContent.SerializeToStreamAsync(IO.Stream, TransportContext)
   fullName: System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream, System.Net.TransportContext)
   spec.csharp:
   - uid: System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)
     name: SerializeToStreamAsync
+    nameWithType: ByteArrayContent.SerializeToStreamAsync
     fullName: System.Net.Http.ByteArrayContent.SerializeToStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Net.TransportContext
     name: TransportContext
+    nameWithType: TransportContext
     fullName: System.Net.TransportContext
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)
     name: SerializeToStreamAsync
+    nameWithType: ByteArrayContent.SerializeToStreamAsync
     fullName: System.Net.Http.ByteArrayContent.SerializeToStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Net.TransportContext
     name: TransportContext
+    nameWithType: TransportContext
     fullName: System.Net.TransportContext
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64@)
+  commentId: M:System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64@)
   parent: System.Net.Http.ByteArrayContent
   isExternal: true
   name: TryComputeLength(Int64)
+  nameWithType: ByteArrayContent.TryComputeLength(Int64)
   fullName: System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64)
   spec.csharp:
   - uid: System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64@)
     name: TryComputeLength
+    nameWithType: ByteArrayContent.TryComputeLength
     fullName: System.Net.Http.ByteArrayContent.TryComputeLength
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64@)
     name: TryComputeLength
+    nameWithType: ByteArrayContent.TryComputeLength
     fullName: System.Net.Http.ByteArrayContent.TryComputeLength
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.Headers
+  commentId: P:System.Net.Http.HttpContent.Headers
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: Headers
+  nameWithType: HttpContent.Headers
   fullName: System.Net.Http.HttpContent.Headers
 - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream)
+  commentId: M:System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream)
   parent: System.Net.Http.HttpContent
   isExternal: true
   name: CopyToAsync(IO.Stream)
+  nameWithType: HttpContent.CopyToAsync(IO.Stream)
   fullName: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream)
   spec.csharp:
   - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream)
     name: CopyToAsync
+    nameWithType: HttpContent.CopyToAsync
     fullName: System.Net.Http.HttpContent.CopyToAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream)
     name: CopyToAsync
+    nameWithType: HttpContent.CopyToAsync
     fullName: System.Net.Http.HttpContent.CopyToAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream,System.Net.TransportContext)
+  commentId: M:System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream,System.Net.TransportContext)
   parent: System.Net.Http.HttpContent
   isExternal: true
   name: CopyToAsync(IO.Stream, TransportContext)
+  nameWithType: HttpContent.CopyToAsync(IO.Stream, TransportContext)
   fullName: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream, System.Net.TransportContext)
   spec.csharp:
   - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream,System.Net.TransportContext)
     name: CopyToAsync
+    nameWithType: HttpContent.CopyToAsync
     fullName: System.Net.Http.HttpContent.CopyToAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Net.TransportContext
     name: TransportContext
+    nameWithType: TransportContext
     fullName: System.Net.TransportContext
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream,System.Net.TransportContext)
     name: CopyToAsync
+    nameWithType: HttpContent.CopyToAsync
     fullName: System.Net.Http.HttpContent.CopyToAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Net.TransportContext
     name: TransportContext
+    nameWithType: TransportContext
     fullName: System.Net.TransportContext
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.Dispose
+  commentId: M:System.Net.Http.HttpContent.Dispose
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: Dispose()
+  nameWithType: HttpContent.Dispose()
   fullName: System.Net.Http.HttpContent.Dispose()
   spec.csharp:
   - uid: System.Net.Http.HttpContent.Dispose
     name: Dispose
+    nameWithType: HttpContent.Dispose
     fullName: System.Net.Http.HttpContent.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.Dispose
     name: Dispose
+    nameWithType: HttpContent.Dispose
     fullName: System.Net.Http.HttpContent.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.Dispose(System.Boolean)
+  commentId: M:System.Net.Http.HttpContent.Dispose(System.Boolean)
   parent: System.Net.Http.HttpContent
   isExternal: true
   name: Dispose(Boolean)
+  nameWithType: HttpContent.Dispose(Boolean)
   fullName: System.Net.Http.HttpContent.Dispose(System.Boolean)
   spec.csharp:
   - uid: System.Net.Http.HttpContent.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: HttpContent.Dispose
     fullName: System.Net.Http.HttpContent.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: HttpContent.Dispose
     fullName: System.Net.Http.HttpContent.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync
+  commentId: M:System.Net.Http.HttpContent.LoadIntoBufferAsync
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: LoadIntoBufferAsync()
+  nameWithType: HttpContent.LoadIntoBufferAsync()
   fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync()
   spec.csharp:
   - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync
     name: LoadIntoBufferAsync
+    nameWithType: HttpContent.LoadIntoBufferAsync
     fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync
     name: LoadIntoBufferAsync
+    nameWithType: HttpContent.LoadIntoBufferAsync
     fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync(System.Int64)
+  commentId: M:System.Net.Http.HttpContent.LoadIntoBufferAsync(System.Int64)
   parent: System.Net.Http.HttpContent
   isExternal: true
   name: LoadIntoBufferAsync(Int64)
+  nameWithType: HttpContent.LoadIntoBufferAsync(Int64)
   fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync(System.Int64)
   spec.csharp:
   - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync(System.Int64)
     name: LoadIntoBufferAsync
+    nameWithType: HttpContent.LoadIntoBufferAsync
     fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync(System.Int64)
     name: LoadIntoBufferAsync
+    nameWithType: HttpContent.LoadIntoBufferAsync
     fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.ReadAsByteArrayAsync
+  commentId: M:System.Net.Http.HttpContent.ReadAsByteArrayAsync
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: ReadAsByteArrayAsync()
+  nameWithType: HttpContent.ReadAsByteArrayAsync()
   fullName: System.Net.Http.HttpContent.ReadAsByteArrayAsync()
   spec.csharp:
   - uid: System.Net.Http.HttpContent.ReadAsByteArrayAsync
     name: ReadAsByteArrayAsync
+    nameWithType: HttpContent.ReadAsByteArrayAsync
     fullName: System.Net.Http.HttpContent.ReadAsByteArrayAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.ReadAsByteArrayAsync
     name: ReadAsByteArrayAsync
+    nameWithType: HttpContent.ReadAsByteArrayAsync
     fullName: System.Net.Http.HttpContent.ReadAsByteArrayAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.ReadAsStreamAsync
+  commentId: M:System.Net.Http.HttpContent.ReadAsStreamAsync
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: ReadAsStreamAsync()
+  nameWithType: HttpContent.ReadAsStreamAsync()
   fullName: System.Net.Http.HttpContent.ReadAsStreamAsync()
   spec.csharp:
   - uid: System.Net.Http.HttpContent.ReadAsStreamAsync
     name: ReadAsStreamAsync
+    nameWithType: HttpContent.ReadAsStreamAsync
     fullName: System.Net.Http.HttpContent.ReadAsStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.ReadAsStreamAsync
     name: ReadAsStreamAsync
+    nameWithType: HttpContent.ReadAsStreamAsync
     fullName: System.Net.Http.HttpContent.ReadAsStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.ReadAsStringAsync
+  commentId: M:System.Net.Http.HttpContent.ReadAsStringAsync
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: ReadAsStringAsync()
+  nameWithType: HttpContent.ReadAsStringAsync()
   fullName: System.Net.Http.HttpContent.ReadAsStringAsync()
   spec.csharp:
   - uid: System.Net.Http.HttpContent.ReadAsStringAsync
     name: ReadAsStringAsync
+    nameWithType: HttpContent.ReadAsStringAsync
     fullName: System.Net.Http.HttpContent.ReadAsStringAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.ReadAsStringAsync
     name: ReadAsStringAsync
+    nameWithType: HttpContent.ReadAsStringAsync
     fullName: System.Net.Http.HttpContent.ReadAsStringAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Text.Encoding
+  commentId: T:System.Text.Encoding
   parent: System.Text
   isExternal: false
-  name: Text.Encoding
+  name: Encoding
+  nameWithType: Encoding
   fullName: System.Text.Encoding
 - uid: System.Text
+  commentId: N:System.Text
   isExternal: false
   name: System.Text
+  nameWithType: System.Text
   fullName: System.Text

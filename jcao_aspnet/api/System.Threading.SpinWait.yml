@@ -1,5 +1,6 @@
 items:
 - uid: System.Threading.SpinWait
+  commentId: T:System.Threading.SpinWait
   id: SpinWait
   parent: System.Threading
   children:
@@ -10,279 +11,389 @@ items:
   - System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean})
   - System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean},System.Int32)
   - System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean},System.TimeSpan)
+  langs:
+  - csharp
+  - vb
   name: SpinWait
+  nameWithType: SpinWait
   fullName: System.Threading.SpinWait
   type: Struct
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Threading/SpinWait.cs
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/SpinWait.cs
-    startLine: 71
+      repo: https://github.com/dotnet/corefx.git
+    id: SpinWait
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 298
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Provides support for spin-based waiting.
   syntax:
     content: public struct SpinWait
     content.vb: Public Structure SpinWait
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
 - uid: System.Threading.SpinWait.Count
+  commentId: P:System.Threading.SpinWait.Count
   id: Count
   parent: System.Threading.SpinWait
+  langs:
+  - csharp
+  - vb
   name: Count
+  nameWithType: SpinWait.Count
   fullName: System.Threading.SpinWait.Count
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SpinWait.cs
-    startLine: 89
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Count
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 301
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Gets the number of times <xref href="System.Threading.SpinWait.SpinOnce" data-throw-if-not-resolved="false"></xref> has been called on this instance.
   syntax:
     content: public int Count { get; }
     content.vb: Public ReadOnly Property Count As Integer
     parameters: []
     return:
       type: System.Int32
-      description: Returns an integer that represents the number of times <xref href="System.Threading.SpinWait.SpinOnce" data-throw-if-not-resolved="false"></xref> has been called on this instance.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Threading.SpinWait.NextSpinWillYield
+  commentId: P:System.Threading.SpinWait.NextSpinWillYield
   id: NextSpinWillYield
   parent: System.Threading.SpinWait
+  langs:
+  - csharp
+  - vb
   name: NextSpinWillYield
+  nameWithType: SpinWait.NextSpinWillYield
   fullName: System.Threading.SpinWait.NextSpinWillYield
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SpinWait.cs
-    startLine: 104
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NextSpinWillYield
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 302
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Gets whether the next call to <xref href="System.Threading.SpinWait.SpinOnce" data-throw-if-not-resolved="false"></xref> will yield the processor, triggering a forced context switch.
   syntax:
     content: public bool NextSpinWillYield { get; }
     content.vb: Public ReadOnly Property NextSpinWillYield As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: Whether the next call to <xref href="System.Threading.SpinWait.SpinOnce" data-throw-if-not-resolved="false"></xref> will yield the processor, triggering a forced context switch.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Threading.SpinWait.Reset
+  commentId: M:System.Threading.SpinWait.Reset
   id: Reset
   parent: System.Threading.SpinWait
+  langs:
+  - csharp
+  - vb
   name: Reset()
+  nameWithType: SpinWait.Reset()
   fullName: System.Threading.SpinWait.Reset()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SpinWait.cs
-    startLine: 181
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Reset
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 303
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Resets the spin counter.
   syntax:
     content: public void Reset()
     content.vb: Public Sub Reset
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Threading.SpinWait.SpinOnce
+  commentId: M:System.Threading.SpinWait.SpinOnce
   id: SpinOnce
   parent: System.Threading.SpinWait
+  langs:
+  - csharp
+  - vb
   name: SpinOnce()
+  nameWithType: SpinWait.SpinOnce()
   fullName: System.Threading.SpinWait.SpinOnce()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SpinWait.cs
-    startLine: 116
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SpinOnce
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 304
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Performs a single spin.
   syntax:
     content: public void SpinOnce()
     content.vb: Public Sub SpinOnce
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean})
+  commentId: M:System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean})
   id: SpinUntil(System.Func{System.Boolean})
   parent: System.Threading.SpinWait
+  langs:
+  - csharp
+  - vb
   name: SpinUntil(Func<Boolean>)
-  name.vb: SpinUntil(Func(Of Boolean))
+  nameWithType: SpinWait.SpinUntil(Func<Boolean>)
   fullName: System.Threading.SpinWait.SpinUntil(System.Func<System.Boolean>)
-  fullName.vb: System.Threading.SpinWait.SpinUntil(System.Func(Of System.Boolean))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SpinWait.cs
-    startLine: 192
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SpinUntil
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 305
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Spins until the specified condition is satisfied.
   syntax:
     content: public static void SpinUntil(Func<bool> condition)
     content.vb: Public Shared Sub SpinUntil(condition As Func(Of Boolean))
     parameters:
     - id: condition
       type: System.Func{System.Boolean}
-      description: A delegate to be executed over and over until it returns true.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *condition* argument is null.
+  nameWithType.vb: SpinWait.SpinUntil(Func(Of Boolean))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.SpinWait.SpinUntil(System.Func(Of System.Boolean))
+  name.vb: SpinUntil(Func(Of Boolean))
 - uid: System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean},System.Int32)
+  commentId: M:System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean},System.Int32)
   id: SpinUntil(System.Func{System.Boolean},System.Int32)
   parent: System.Threading.SpinWait
+  langs:
+  - csharp
+  - vb
   name: SpinUntil(Func<Boolean>, Int32)
-  name.vb: SpinUntil(Func(Of Boolean), Int32)
+  nameWithType: SpinWait.SpinUntil(Func<Boolean>, Int32)
   fullName: System.Threading.SpinWait.SpinUntil(System.Func<System.Boolean>, System.Int32)
-  fullName.vb: System.Threading.SpinWait.SpinUntil(System.Func(Of System.Boolean), System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SpinWait.cs
-    startLine: 239
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SpinUntil
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 306
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Spins until the specified condition is satisfied or until the specified timeout is expired.
   syntax:
     content: public static bool SpinUntil(Func<bool> condition, int millisecondsTimeout)
     content.vb: Public Shared Function SpinUntil(condition As Func(Of Boolean), millisecondsTimeout As Integer) As Boolean
     parameters:
     - id: condition
       type: System.Func{System.Boolean}
-      description: A delegate to be executed over and over until it returns true.
     - id: millisecondsTimeout
       type: System.Int32
-      description: The number of milliseconds to wait, or <xref href="System.Threading.Timeout.Infinite" data-throw-if-not-resolved="false"></xref> (-1) to wait indefinitely.
     return:
       type: System.Boolean
-      description: True if the condition is satisfied within the timeout; otherwise, false
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *condition* argument is null.
-  - type: System.ArgumentOutOfRangeException
-    description: '*millisecondsTimeout* is a negative number other than -1, which represents an infinite time-out.'
+  nameWithType.vb: SpinWait.SpinUntil(Func(Of Boolean), Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.SpinWait.SpinUntil(System.Func(Of System.Boolean), System.Int32)
+  name.vb: SpinUntil(Func(Of Boolean), Int32)
 - uid: System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean},System.TimeSpan)
+  commentId: M:System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean},System.TimeSpan)
   id: SpinUntil(System.Func{System.Boolean},System.TimeSpan)
   parent: System.Threading.SpinWait
+  langs:
+  - csharp
+  - vb
   name: SpinUntil(Func<Boolean>, TimeSpan)
-  name.vb: SpinUntil(Func(Of Boolean), TimeSpan)
+  nameWithType: SpinWait.SpinUntil(Func<Boolean>, TimeSpan)
   fullName: System.Threading.SpinWait.SpinUntil(System.Func<System.Boolean>, System.TimeSpan)
-  fullName.vb: System.Threading.SpinWait.SpinUntil(System.Func(Of System.Boolean), System.TimeSpan)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SpinWait.cs
-    startLine: 215
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SpinUntil
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 307
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Spins until the specified condition is satisfied or until the specified timeout is expired.
   syntax:
     content: public static bool SpinUntil(Func<bool> condition, TimeSpan timeout)
     content.vb: Public Shared Function SpinUntil(condition As Func(Of Boolean), timeout As TimeSpan) As Boolean
     parameters:
     - id: condition
       type: System.Func{System.Boolean}
-      description: A delegate to be executed over and over until it returns true.
     - id: timeout
       type: System.TimeSpan
-      description: A <xref href="System.TimeSpan" data-throw-if-not-resolved="false"></xref> that represents the number of milliseconds to wait, or a TimeSpan that represents -1 milliseconds to wait indefinitely.
     return:
       type: System.Boolean
-      description: True if the condition is satisfied within the timeout; otherwise, false
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *condition* argument is null.
-  - type: System.ArgumentOutOfRangeException
-    description: '*timeout* is a negative number other than -1 milliseconds, which represents an infinite time-out -or- timeout is greater than <xref href="System.Int32.MaxValue" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: SpinWait.SpinUntil(Func(Of Boolean), TimeSpan)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Threading.SpinWait.SpinUntil(System.Func(Of System.Boolean), System.TimeSpan)
+  name.vb: SpinUntil(Func(Of Boolean), TimeSpan)
 references:
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Func{System.Boolean}
+  commentId: '!:System.Func{System.Boolean}'
   definition: System.Func`1
   name: Func<Boolean>
-  name.vb: Func(Of Boolean)
+  nameWithType: Func<Boolean>
   fullName: System.Func<System.Boolean>
-  fullName.vb: System.Func(Of System.Boolean)
+  nameWithType.vb: Func(Of Boolean)
+  fullname.vb: System.Func(Of System.Boolean)
+  name.vb: Func(Of Boolean)
   spec.csharp:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func`1
-  parent: System
+  commentId: T:System.Func`1
   isExternal: false
   name: Func<>
-  name.vb: Func(Of )
+  nameWithType: Func<>
   fullName: System.Func<>
-  fullName.vb: System.Func(Of )
+  nameWithType.vb: Func(Of )
+  fullname.vb: System.Func(Of )
+  name.vb: Func(Of )
   spec.csharp:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`1
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.TimeSpan
+  commentId: T:System.TimeSpan
   parent: System
   isExternal: false
   name: TimeSpan
+  nameWithType: TimeSpan
   fullName: System.TimeSpan
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException

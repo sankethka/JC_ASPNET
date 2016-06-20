@@ -1,26 +1,33 @@
 items:
 - uid: System.Net.Http.FormUrlEncodedContent
+  commentId: T:System.Net.Http.FormUrlEncodedContent
   id: FormUrlEncodedContent
   parent: System.Net.Http
   children:
   - System.Net.Http.FormUrlEncodedContent.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  langs:
+  - csharp
+  - vb
   name: FormUrlEncodedContent
+  nameWithType: FormUrlEncodedContent
   fullName: System.Net.Http.FormUrlEncodedContent
   type: Class
   source:
     remote:
-      path: src/System.Net.Http/src/System/Net/Http/FormUrlEncodedContent.cs
+      path: src/System.Net.Http/ref/System.Net.Http.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Net.Http/src/System/Net/Http/FormUrlEncodedContent.cs
-    startLine: 13
+    id: FormUrlEncodedContent
+    path: src/System.Net.Http/ref/System.Net.Http.cs
+    startLine: 31
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http
-  summary: A container for name/value tuples encoded using application/x-www-form-urlencoded MIME type.
   syntax:
     content: 'public class FormUrlEncodedContent : ByteArrayContent'
-    content.vb: Public Class FormUrlEncodedContent Inherits ByteArrayContent
+    content.vb: >-
+      Public Class FormUrlEncodedContent
+          Inherits ByteArrayContent
   inheritance:
   - System.Object
   - System.Net.Http.HttpContent
@@ -39,471 +46,643 @@ items:
   - System.Net.Http.HttpContent.ReadAsByteArrayAsync
   - System.Net.Http.HttpContent.ReadAsStreamAsync
   - System.Net.Http.HttpContent.ReadAsStringAsync
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Net.Http.FormUrlEncodedContent.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  commentId: M:System.Net.Http.FormUrlEncodedContent.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
   id: '#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})'
   parent: System.Net.Http.FormUrlEncodedContent
+  langs:
+  - csharp
+  - vb
   name: FormUrlEncodedContent(Collections.Generic.IEnumerable<Collections.Generic.KeyValuePair<String, String>>)
-  name.vb: FormUrlEncodedContent(Collections.Generic.IEnumerable(Of Collections.Generic.KeyValuePair(Of String, String)))
+  nameWithType: FormUrlEncodedContent.FormUrlEncodedContent(Collections.Generic.IEnumerable<Collections.Generic.KeyValuePair<String, String>>)
   fullName: System.Net.Http.FormUrlEncodedContent.FormUrlEncodedContent(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
-  fullName.vb: System.Net.Http.FormUrlEncodedContent.FormUrlEncodedContent(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
   type: Constructor
   source:
     remote:
       path: src/System.Net.Http/ref/System.Net.Http.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Net.Http/ref/System.Net.Http.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - System.Net.Http
   namespace: System.Net.Http
-  summary: Initializes a new instance of the <xref href="System.Net.Http.FormUrlEncodedContent" data-throw-if-not-resolved="false"></xref> class with a specific collection of name/value pairs.
   syntax:
     content: public FormUrlEncodedContent(Collections.Generic.IEnumerable<Collections.Generic.KeyValuePair<string, string>> nameValueCollection)
     content.vb: Public Sub New(nameValueCollection As Collections.Generic.IEnumerable(Of Collections.Generic.KeyValuePair(Of String, String)))
     parameters:
     - id: nameValueCollection
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: A collection of name/value pairs.
+  nameWithType.vb: FormUrlEncodedContent.FormUrlEncodedContent(Collections.Generic.IEnumerable(Of Collections.Generic.KeyValuePair(Of String, String)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Net.Http.FormUrlEncodedContent.FormUrlEncodedContent(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  name.vb: FormUrlEncodedContent(Collections.Generic.IEnumerable(Of Collections.Generic.KeyValuePair(Of String, String)))
 references:
 - uid: System.Net.Http
+  commentId: N:System.Net.Http
   isExternal: false
   name: System.Net.Http
+  nameWithType: System.Net.Http
   fullName: System.Net.Http
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Net.Http.HttpContent
+  commentId: T:System.Net.Http.HttpContent
   parent: System.Net.Http
   isExternal: false
   name: HttpContent
+  nameWithType: HttpContent
   fullName: System.Net.Http.HttpContent
 - uid: System.Net.Http.ByteArrayContent
+  commentId: T:System.Net.Http.ByteArrayContent
   parent: System.Net.Http
   isExternal: false
   name: ByteArrayContent
+  nameWithType: ByteArrayContent
   fullName: System.Net.Http.ByteArrayContent
 - uid: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
+  commentId: M:System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
   parent: System.Net.Http.ByteArrayContent
   isExternal: false
   name: CreateContentReadStreamAsync()
+  nameWithType: ByteArrayContent.CreateContentReadStreamAsync()
   fullName: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync()
   spec.csharp:
   - uid: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
     name: CreateContentReadStreamAsync
+    nameWithType: ByteArrayContent.CreateContentReadStreamAsync
     fullName: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
     name: CreateContentReadStreamAsync
+    nameWithType: ByteArrayContent.CreateContentReadStreamAsync
     fullName: System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)
+  commentId: M:System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)
   parent: System.Net.Http.ByteArrayContent
   isExternal: true
   name: SerializeToStreamAsync(IO.Stream, TransportContext)
+  nameWithType: ByteArrayContent.SerializeToStreamAsync(IO.Stream, TransportContext)
   fullName: System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream, System.Net.TransportContext)
   spec.csharp:
   - uid: System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)
     name: SerializeToStreamAsync
+    nameWithType: ByteArrayContent.SerializeToStreamAsync
     fullName: System.Net.Http.ByteArrayContent.SerializeToStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Net.TransportContext
     name: TransportContext
+    nameWithType: TransportContext
     fullName: System.Net.TransportContext
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)
     name: SerializeToStreamAsync
+    nameWithType: ByteArrayContent.SerializeToStreamAsync
     fullName: System.Net.Http.ByteArrayContent.SerializeToStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Net.TransportContext
     name: TransportContext
+    nameWithType: TransportContext
     fullName: System.Net.TransportContext
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64@)
+  commentId: M:System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64@)
   parent: System.Net.Http.ByteArrayContent
   isExternal: true
   name: TryComputeLength(Int64)
+  nameWithType: ByteArrayContent.TryComputeLength(Int64)
   fullName: System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64)
   spec.csharp:
   - uid: System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64@)
     name: TryComputeLength
+    nameWithType: ByteArrayContent.TryComputeLength
     fullName: System.Net.Http.ByteArrayContent.TryComputeLength
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64@)
     name: TryComputeLength
+    nameWithType: ByteArrayContent.TryComputeLength
     fullName: System.Net.Http.ByteArrayContent.TryComputeLength
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.Headers
+  commentId: P:System.Net.Http.HttpContent.Headers
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: Headers
+  nameWithType: HttpContent.Headers
   fullName: System.Net.Http.HttpContent.Headers
 - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream)
+  commentId: M:System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream)
   parent: System.Net.Http.HttpContent
   isExternal: true
   name: CopyToAsync(IO.Stream)
+  nameWithType: HttpContent.CopyToAsync(IO.Stream)
   fullName: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream)
   spec.csharp:
   - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream)
     name: CopyToAsync
+    nameWithType: HttpContent.CopyToAsync
     fullName: System.Net.Http.HttpContent.CopyToAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream)
     name: CopyToAsync
+    nameWithType: HttpContent.CopyToAsync
     fullName: System.Net.Http.HttpContent.CopyToAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream,System.Net.TransportContext)
+  commentId: M:System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream,System.Net.TransportContext)
   parent: System.Net.Http.HttpContent
   isExternal: true
   name: CopyToAsync(IO.Stream, TransportContext)
+  nameWithType: HttpContent.CopyToAsync(IO.Stream, TransportContext)
   fullName: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream, System.Net.TransportContext)
   spec.csharp:
   - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream,System.Net.TransportContext)
     name: CopyToAsync
+    nameWithType: HttpContent.CopyToAsync
     fullName: System.Net.Http.HttpContent.CopyToAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Net.TransportContext
     name: TransportContext
+    nameWithType: TransportContext
     fullName: System.Net.TransportContext
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.CopyToAsync(System.IO.Stream,System.Net.TransportContext)
     name: CopyToAsync
+    nameWithType: HttpContent.CopyToAsync
     fullName: System.Net.Http.HttpContent.CopyToAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: IO.Stream
+    nameWithType: IO.Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Net.TransportContext
     name: TransportContext
+    nameWithType: TransportContext
     fullName: System.Net.TransportContext
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.Dispose
+  commentId: M:System.Net.Http.HttpContent.Dispose
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: Dispose()
+  nameWithType: HttpContent.Dispose()
   fullName: System.Net.Http.HttpContent.Dispose()
   spec.csharp:
   - uid: System.Net.Http.HttpContent.Dispose
     name: Dispose
+    nameWithType: HttpContent.Dispose
     fullName: System.Net.Http.HttpContent.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.Dispose
     name: Dispose
+    nameWithType: HttpContent.Dispose
     fullName: System.Net.Http.HttpContent.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.Dispose(System.Boolean)
+  commentId: M:System.Net.Http.HttpContent.Dispose(System.Boolean)
   parent: System.Net.Http.HttpContent
   isExternal: true
   name: Dispose(Boolean)
+  nameWithType: HttpContent.Dispose(Boolean)
   fullName: System.Net.Http.HttpContent.Dispose(System.Boolean)
   spec.csharp:
   - uid: System.Net.Http.HttpContent.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: HttpContent.Dispose
     fullName: System.Net.Http.HttpContent.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: HttpContent.Dispose
     fullName: System.Net.Http.HttpContent.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync
+  commentId: M:System.Net.Http.HttpContent.LoadIntoBufferAsync
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: LoadIntoBufferAsync()
+  nameWithType: HttpContent.LoadIntoBufferAsync()
   fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync()
   spec.csharp:
   - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync
     name: LoadIntoBufferAsync
+    nameWithType: HttpContent.LoadIntoBufferAsync
     fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync
     name: LoadIntoBufferAsync
+    nameWithType: HttpContent.LoadIntoBufferAsync
     fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync(System.Int64)
+  commentId: M:System.Net.Http.HttpContent.LoadIntoBufferAsync(System.Int64)
   parent: System.Net.Http.HttpContent
   isExternal: true
   name: LoadIntoBufferAsync(Int64)
+  nameWithType: HttpContent.LoadIntoBufferAsync(Int64)
   fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync(System.Int64)
   spec.csharp:
   - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync(System.Int64)
     name: LoadIntoBufferAsync
+    nameWithType: HttpContent.LoadIntoBufferAsync
     fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.LoadIntoBufferAsync(System.Int64)
     name: LoadIntoBufferAsync
+    nameWithType: HttpContent.LoadIntoBufferAsync
     fullName: System.Net.Http.HttpContent.LoadIntoBufferAsync
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int64
     name: Int64
+    nameWithType: Int64
     fullName: System.Int64
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.ReadAsByteArrayAsync
+  commentId: M:System.Net.Http.HttpContent.ReadAsByteArrayAsync
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: ReadAsByteArrayAsync()
+  nameWithType: HttpContent.ReadAsByteArrayAsync()
   fullName: System.Net.Http.HttpContent.ReadAsByteArrayAsync()
   spec.csharp:
   - uid: System.Net.Http.HttpContent.ReadAsByteArrayAsync
     name: ReadAsByteArrayAsync
+    nameWithType: HttpContent.ReadAsByteArrayAsync
     fullName: System.Net.Http.HttpContent.ReadAsByteArrayAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.ReadAsByteArrayAsync
     name: ReadAsByteArrayAsync
+    nameWithType: HttpContent.ReadAsByteArrayAsync
     fullName: System.Net.Http.HttpContent.ReadAsByteArrayAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.ReadAsStreamAsync
+  commentId: M:System.Net.Http.HttpContent.ReadAsStreamAsync
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: ReadAsStreamAsync()
+  nameWithType: HttpContent.ReadAsStreamAsync()
   fullName: System.Net.Http.HttpContent.ReadAsStreamAsync()
   spec.csharp:
   - uid: System.Net.Http.HttpContent.ReadAsStreamAsync
     name: ReadAsStreamAsync
+    nameWithType: HttpContent.ReadAsStreamAsync
     fullName: System.Net.Http.HttpContent.ReadAsStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.ReadAsStreamAsync
     name: ReadAsStreamAsync
+    nameWithType: HttpContent.ReadAsStreamAsync
     fullName: System.Net.Http.HttpContent.ReadAsStreamAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Net.Http.HttpContent.ReadAsStringAsync
+  commentId: M:System.Net.Http.HttpContent.ReadAsStringAsync
   parent: System.Net.Http.HttpContent
   isExternal: false
   name: ReadAsStringAsync()
+  nameWithType: HttpContent.ReadAsStringAsync()
   fullName: System.Net.Http.HttpContent.ReadAsStringAsync()
   spec.csharp:
   - uid: System.Net.Http.HttpContent.ReadAsStringAsync
     name: ReadAsStringAsync
+    nameWithType: HttpContent.ReadAsStringAsync
     fullName: System.Net.Http.HttpContent.ReadAsStringAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Net.Http.HttpContent.ReadAsStringAsync
     name: ReadAsStringAsync
+    nameWithType: HttpContent.ReadAsStringAsync
     fullName: System.Net.Http.HttpContent.ReadAsStringAsync
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<Collections.Generic.KeyValuePair<String, String>>
-  name.vb: Collections.Generic.IEnumerable(Of Collections.Generic.KeyValuePair(Of String, String))
+  nameWithType: Collections.Generic.IEnumerable<Collections.Generic.KeyValuePair<String, String>>
   fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String))
+  nameWithType.vb: Collections.Generic.IEnumerable(Of Collections.Generic.KeyValuePair(Of String, String))
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String))
+  name.vb: Collections.Generic.IEnumerable(Of Collections.Generic.KeyValuePair(Of String, String))
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Collections.Generic.KeyValuePair`2
     name: Collections.Generic.KeyValuePair
+    nameWithType: Collections.Generic.KeyValuePair
     fullName: System.Collections.Generic.KeyValuePair
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Collections.Generic.KeyValuePair`2
     name: Collections.Generic.KeyValuePair
+    nameWithType: Collections.Generic.KeyValuePair
     fullName: System.Collections.Generic.KeyValuePair
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic

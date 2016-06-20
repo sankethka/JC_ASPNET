@@ -1,141 +1,182 @@
 items:
 - uid: System.Xml.IXmlDictionary
+  commentId: T:System.Xml.IXmlDictionary
   id: IXmlDictionary
   parent: System.Xml
   children:
   - System.Xml.IXmlDictionary.TryLookup(System.Int32,System.Xml.XmlDictionaryString@)
   - System.Xml.IXmlDictionary.TryLookup(System.String,System.Xml.XmlDictionaryString@)
   - System.Xml.IXmlDictionary.TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString@)
+  langs:
+  - csharp
+  - vb
   name: IXmlDictionary
+  nameWithType: IXmlDictionary
   fullName: System.Xml.IXmlDictionary
   type: Interface
   source:
-    remote: &o0
-      path: src/System.Private.DataContractSerialization/src/System/Xml/IXmlDictionary.cs
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Private.DataContractSerialization/src/System/Xml/IXmlDictionary.cs
-    startLine: 6
+    id: IXmlDictionary
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 82
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Xml
-  summary: An interface that defines the contract that an Xml dictionary must implement to be used by <xref href="System.Xml.XmlDictionaryReader" data-throw-if-not-resolved="false"></xref> and <xref href="System.Xml.XmlDictionaryWriter" data-throw-if-not-resolved="false"></xref> implementations.
   syntax:
     content: public interface IXmlDictionary
     content.vb: Public Interface IXmlDictionary
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: System.Xml.IXmlDictionary.TryLookup(System.Int32,System.Xml.XmlDictionaryString@)
+  commentId: M:System.Xml.IXmlDictionary.TryLookup(System.Int32,System.Xml.XmlDictionaryString@)
   id: TryLookup(System.Int32,System.Xml.XmlDictionaryString@)
   parent: System.Xml.IXmlDictionary
+  langs:
+  - csharp
+  - vb
   name: TryLookup(Int32, out XmlDictionaryString)
-  name.vb: TryLookup(Int32, ByRef XmlDictionaryString)
+  nameWithType: IXmlDictionary.TryLookup(Int32, out XmlDictionaryString)
   fullName: System.Xml.IXmlDictionary.TryLookup(System.Int32, out System.Xml.XmlDictionaryString)
-  fullName.vb: System.Xml.IXmlDictionary.TryLookup(System.Int32, ByRef System.Xml.XmlDictionaryString)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Private.DataContractSerialization/src/System/Xml/IXmlDictionary.cs
-    startLine: 9
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryLookup
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 84
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Xml
-  summary: Attempts to look up an entry in the dictionary.
   syntax:
     content: bool TryLookup(int key, out XmlDictionaryString result)
     content.vb: Function TryLookup(key As Integer, ByRef result As XmlDictionaryString) As Boolean
     parameters:
     - id: key
       type: System.Int32
-      description: Key to look up.
     - id: result
       type: System.Xml.XmlDictionaryString
-      description: If *key* is defined, the <xref href="System.Xml.XmlDictionaryString" data-throw-if-not-resolved="false"></xref> that is mapped to the key; otherwise null.
     return:
       type: System.Boolean
-      description: true if key is in the dictionary, otherwise false.
+  nameWithType.vb: IXmlDictionary.TryLookup(Int32, ByRef XmlDictionaryString)
+  fullName.vb: System.Xml.IXmlDictionary.TryLookup(System.Int32, ByRef System.Xml.XmlDictionaryString)
+  name.vb: TryLookup(Int32, ByRef XmlDictionaryString)
 - uid: System.Xml.IXmlDictionary.TryLookup(System.String,System.Xml.XmlDictionaryString@)
+  commentId: M:System.Xml.IXmlDictionary.TryLookup(System.String,System.Xml.XmlDictionaryString@)
   id: TryLookup(System.String,System.Xml.XmlDictionaryString@)
   parent: System.Xml.IXmlDictionary
+  langs:
+  - csharp
+  - vb
   name: TryLookup(String, out XmlDictionaryString)
-  name.vb: TryLookup(String, ByRef XmlDictionaryString)
+  nameWithType: IXmlDictionary.TryLookup(String, out XmlDictionaryString)
   fullName: System.Xml.IXmlDictionary.TryLookup(System.String, out System.Xml.XmlDictionaryString)
-  fullName.vb: System.Xml.IXmlDictionary.TryLookup(System.String, ByRef System.Xml.XmlDictionaryString)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Private.DataContractSerialization/src/System/Xml/IXmlDictionary.cs
-    startLine: 8
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryLookup
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 85
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Xml
-  summary: Checks the dictionary for a specified string value.
   syntax:
     content: bool TryLookup(string value, out XmlDictionaryString result)
     content.vb: Function TryLookup(value As String, ByRef result As XmlDictionaryString) As Boolean
     parameters:
     - id: value
       type: System.String
-      description: String value being checked for.
     - id: result
       type: System.Xml.XmlDictionaryString
-      description: The corresponding <xref href="System.Xml.XmlDictionaryString" data-throw-if-not-resolved="false"></xref>, if found; otherwise null.
     return:
       type: System.Boolean
-      description: true if value is in the dictionary, otherwise false.
+  nameWithType.vb: IXmlDictionary.TryLookup(String, ByRef XmlDictionaryString)
+  fullName.vb: System.Xml.IXmlDictionary.TryLookup(System.String, ByRef System.Xml.XmlDictionaryString)
+  name.vb: TryLookup(String, ByRef XmlDictionaryString)
 - uid: System.Xml.IXmlDictionary.TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString@)
+  commentId: M:System.Xml.IXmlDictionary.TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString@)
   id: TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString@)
   parent: System.Xml.IXmlDictionary
+  langs:
+  - csharp
+  - vb
   name: TryLookup(XmlDictionaryString, out XmlDictionaryString)
-  name.vb: TryLookup(XmlDictionaryString, ByRef XmlDictionaryString)
+  nameWithType: IXmlDictionary.TryLookup(XmlDictionaryString, out XmlDictionaryString)
   fullName: System.Xml.IXmlDictionary.TryLookup(System.Xml.XmlDictionaryString, out System.Xml.XmlDictionaryString)
-  fullName.vb: System.Xml.IXmlDictionary.TryLookup(System.Xml.XmlDictionaryString, ByRef System.Xml.XmlDictionaryString)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Private.DataContractSerialization/src/System/Xml/IXmlDictionary.cs
-    startLine: 10
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryLookup
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 86
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Xml
-  summary: Checks the dictionary for a specified <xref href="System.Xml.XmlDictionaryString" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: bool TryLookup(XmlDictionaryString value, out XmlDictionaryString result)
     content.vb: Function TryLookup(value As XmlDictionaryString, ByRef result As XmlDictionaryString) As Boolean
     parameters:
     - id: value
       type: System.Xml.XmlDictionaryString
-      description: The <xref href="System.Xml.XmlDictionaryString" data-throw-if-not-resolved="false"></xref> being checked for.
     - id: result
       type: System.Xml.XmlDictionaryString
-      description: The matching <xref href="System.Xml.XmlDictionaryString" data-throw-if-not-resolved="false"></xref>, if found; otherwise null.
     return:
       type: System.Boolean
-      description: true if <xref href="System.Xml.XmlDictionaryString" data-throw-if-not-resolved="false"></xref> is in the dictionary, otherwise false.
+  nameWithType.vb: IXmlDictionary.TryLookup(XmlDictionaryString, ByRef XmlDictionaryString)
+  fullName.vb: System.Xml.IXmlDictionary.TryLookup(System.Xml.XmlDictionaryString, ByRef System.Xml.XmlDictionaryString)
+  name.vb: TryLookup(XmlDictionaryString, ByRef XmlDictionaryString)
 references:
 - uid: System.Xml
+  commentId: N:System.Xml
   isExternal: false
   name: System.Xml
+  nameWithType: System.Xml
   fullName: System.Xml
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Xml.XmlDictionaryString
+  commentId: T:System.Xml.XmlDictionaryString
   parent: System.Xml
   isExternal: false
   name: XmlDictionaryString
+  nameWithType: XmlDictionaryString
   fullName: System.Xml.XmlDictionaryString
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String

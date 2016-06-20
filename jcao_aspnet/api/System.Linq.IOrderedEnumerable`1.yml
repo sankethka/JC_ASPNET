@@ -1,227 +1,1167 @@
 items:
 - uid: System.Linq.IOrderedEnumerable`1
+  commentId: T:System.Linq.IOrderedEnumerable`1
   id: IOrderedEnumerable`1
   parent: System.Linq
   children:
   - System.Linq.IOrderedEnumerable`1.CreateOrderedEnumerable``1(System.Func{`0,``0},System.Collections.Generic.IComparer{``0},System.Boolean)
+  langs:
+  - csharp
+  - vb
   name: IOrderedEnumerable<TElement>
-  name.vb: IOrderedEnumerable(Of TElement)
+  nameWithType: IOrderedEnumerable<TElement>
   fullName: System.Linq.IOrderedEnumerable<TElement>
-  fullName.vb: System.Linq.IOrderedEnumerable(Of TElement)
   type: Interface
   source:
     remote:
-      path: src/System.Linq/src/System/Linq/Enumerable.cs
+      path: src/System.Linq/ref/System.Linq.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Linq/src/System/Linq/Enumerable.cs
-    startLine: 3379
+    id: IOrderedEnumerable
+    path: src/System.Linq/ref/System.Linq.cs
+    startLine: 200
   assemblies:
   - System.Linq
   namespace: System.Linq
-  summary: Represents a sorted sequence.
   syntax:
     content: 'public interface IOrderedEnumerable<TElement> : Collections.Generic.IEnumerable<TElement>, Collections.IEnumerable'
-    content.vb: Public Interface IOrderedEnumerable(Of TElement) Inherits Collections.Generic.IEnumerable(Of TElement), Collections.IEnumerable
+    content.vb: >-
+      Public Interface IOrderedEnumerable(Of TElement)
+          Inherits Collections.Generic.IEnumerable(Of TElement), Collections.IEnumerable
     typeParameters:
     - id: TElement
+  extensionMethods:
+  - System.Linq.IOrderedEnumerable`1.System.Linq.Enumerable.ThenBy``2(System.Func{{TElement},{TKey}})
+  - System.Linq.IOrderedEnumerable`1.System.Linq.Enumerable.ThenBy``2(System.Func{{TElement},{TKey}},System.Collections.Generic.IComparer{{TKey}})
+  - System.Linq.IOrderedEnumerable`1.System.Linq.Enumerable.ThenByDescending``2(System.Func{{TElement},{TKey}})
+  - System.Linq.IOrderedEnumerable`1.System.Linq.Enumerable.ThenByDescending``2(System.Func{{TElement},{TKey}},System.Collections.Generic.IComparer{{TKey}})
+  nameWithType.vb: IOrderedEnumerable(Of TElement)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: System.Linq.IOrderedEnumerable(Of TElement)
+  name.vb: IOrderedEnumerable(Of TElement)
 - uid: System.Linq.IOrderedEnumerable`1.CreateOrderedEnumerable``1(System.Func{`0,``0},System.Collections.Generic.IComparer{``0},System.Boolean)
+  commentId: M:System.Linq.IOrderedEnumerable`1.CreateOrderedEnumerable``1(System.Func{`0,``0},System.Collections.Generic.IComparer{``0},System.Boolean)
   id: CreateOrderedEnumerable``1(System.Func{`0,``0},System.Collections.Generic.IComparer{``0},System.Boolean)
   parent: System.Linq.IOrderedEnumerable`1
+  langs:
+  - csharp
+  - vb
   name: CreateOrderedEnumerable<TKey>(Func<TElement, TKey>, Collections.Generic.IComparer<TKey>, Boolean)
-  name.vb: CreateOrderedEnumerable(Of TKey)(Func(Of TElement, TKey), Collections.Generic.IComparer(Of TKey), Boolean)
+  nameWithType: IOrderedEnumerable<TElement>.CreateOrderedEnumerable<TKey>(Func<TElement, TKey>, Collections.Generic.IComparer<TKey>, Boolean)
   fullName: System.Linq.IOrderedEnumerable<TElement>.CreateOrderedEnumerable<TKey>(System.Func<TElement, TKey>, System.Collections.Generic.IComparer<TKey>, System.Boolean)
-  fullName.vb: System.Linq.IOrderedEnumerable(Of TElement).CreateOrderedEnumerable(Of TKey)(System.Func(Of TElement, TKey), System.Collections.Generic.IComparer(Of TKey), System.Boolean)
   type: Method
   source:
     remote:
       path: src/System.Linq/ref/System.Linq.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CreateOrderedEnumerable
     path: src/System.Linq/ref/System.Linq.cs
-    startLine: 197
+    startLine: 202
   assemblies:
   - System.Linq
   namespace: System.Linq
-  summary: Performs a subsequent ordering on the elements of an <xref href="System.Linq.IOrderedEnumerable`1" data-throw-if-not-resolved="false"></xref> according to a key.
   syntax:
     content: IOrderedEnumerable<TElement> CreateOrderedEnumerable<TKey>(Func<TElement, TKey> keySelector, Collections.Generic.IComparer<TKey> comparer, bool descending)
     content.vb: Function CreateOrderedEnumerable(Of TKey)(keySelector As Func(Of TElement, TKey), comparer As Collections.Generic.IComparer(Of TKey), descending As Boolean) As IOrderedEnumerable(Of TElement)
     parameters:
     - id: keySelector
       type: System.Func{{TElement},{TKey}}
-      description: The <xref href="System.Func`2" data-throw-if-not-resolved="false"></xref> used to extract the key for each element.
     - id: comparer
       type: System.Collections.Generic.IComparer{{TKey}}
-      description: The <xref href="System.Collections.Generic.IComparer`1" data-throw-if-not-resolved="false"></xref> used to compare keys for placement in the returned sequence.
     - id: descending
       type: System.Boolean
-      description: true to sort the elements in descending order; false to sort the elements in ascending order.
     typeParameters:
     - id: TKey
     return:
       type: System.Linq.IOrderedEnumerable`1
-      description: An <xref href="System.Linq.IOrderedEnumerable`1" data-throw-if-not-resolved="false"></xref> whose elements are sorted according to a key.
+  nameWithType.vb: IOrderedEnumerable(Of TElement).CreateOrderedEnumerable(Of TKey)(Func(Of TElement, TKey), Collections.Generic.IComparer(Of TKey), Boolean)
+  fullName.vb: System.Linq.IOrderedEnumerable(Of TElement).CreateOrderedEnumerable(Of TKey)(System.Func(Of TElement, TKey), System.Collections.Generic.IComparer(Of TKey), System.Boolean)
+  name.vb: CreateOrderedEnumerable(Of TKey)(Func(Of TElement, TKey), Collections.Generic.IComparer(Of TKey), Boolean)
 references:
 - uid: System.Linq
+  commentId: N:System.Linq
   isExternal: false
   name: System.Linq
+  nameWithType: System.Linq
   fullName: System.Linq
+- uid: System.Linq.IOrderedEnumerable`1.System.Linq.Enumerable.ThenBy``2(System.Func{{TElement},{TKey}})
+  commentId: M:System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+  parent: System.Linq.Enumerable
+  definition: System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+  name: ThenBy<TElement, TKey>(Func<TElement, TKey>)
+  nameWithType: Enumerable.ThenBy<TElement, TKey>(Func<TElement, TKey>)
+  fullName: System.Linq.Enumerable.ThenBy<TElement, TKey>(System.Func<TElement, TKey>)
+  nameWithType.vb: Enumerable.ThenBy(Of TElement, TKey)(Func(Of TElement, TKey))
+  fullname.vb: System.Linq.Enumerable.ThenBy(Of TElement, TKey)(System.Func(Of TElement, TKey))
+  name.vb: ThenBy(Of TElement, TKey)(Func(Of TElement, TKey))
+  spec.csharp:
+  - uid: System.Linq.Enumerable.ThenBy``2(System.Func{``0,``1})
+    name: ThenBy<TElement, TKey>
+    nameWithType: Enumerable.ThenBy<TElement, TKey>
+    fullName: System.Linq.Enumerable.ThenBy<TElement, TKey>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TElement
+    nameWithType: TElement
+    fullName: TElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Linq.Enumerable.ThenBy``2(System.Func{``0,``1})
+    name: ThenBy(Of TElement, TKey)
+    nameWithType: Enumerable.ThenBy(Of TElement, TKey)
+    fullName: System.Linq.Enumerable.ThenBy(Of TElement, TKey)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TElement
+    nameWithType: TElement
+    fullName: TElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.IOrderedEnumerable`1.System.Linq.Enumerable.ThenBy``2(System.Func{{TElement},{TKey}},System.Collections.Generic.IComparer{{TKey}})
+  commentId: M:System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  parent: System.Linq.Enumerable
+  definition: System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  name: ThenBy<TElement, TKey>(Func<TElement, TKey>, Collections.Generic.IComparer<TKey>)
+  nameWithType: Enumerable.ThenBy<TElement, TKey>(Func<TElement, TKey>, Collections.Generic.IComparer<TKey>)
+  fullName: System.Linq.Enumerable.ThenBy<TElement, TKey>(System.Func<TElement, TKey>, System.Collections.Generic.IComparer<TKey>)
+  nameWithType.vb: Enumerable.ThenBy(Of TElement, TKey)(Func(Of TElement, TKey), Collections.Generic.IComparer(Of TKey))
+  fullname.vb: System.Linq.Enumerable.ThenBy(Of TElement, TKey)(System.Func(Of TElement, TKey), System.Collections.Generic.IComparer(Of TKey))
+  name.vb: ThenBy(Of TElement, TKey)(Func(Of TElement, TKey), Collections.Generic.IComparer(Of TKey))
+  spec.csharp:
+  - uid: System.Linq.Enumerable.ThenBy``2(System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+    name: ThenBy<TElement, TKey>
+    nameWithType: Enumerable.ThenBy<TElement, TKey>
+    fullName: System.Linq.Enumerable.ThenBy<TElement, TKey>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TElement
+    nameWithType: TElement
+    fullName: TElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IComparer`1
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Linq.Enumerable.ThenBy``2(System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+    name: ThenBy(Of TElement, TKey)
+    nameWithType: Enumerable.ThenBy(Of TElement, TKey)
+    fullName: System.Linq.Enumerable.ThenBy(Of TElement, TKey)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TElement
+    nameWithType: TElement
+    fullName: TElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IComparer`1
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.IOrderedEnumerable`1.System.Linq.Enumerable.ThenByDescending``2(System.Func{{TElement},{TKey}})
+  commentId: M:System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+  parent: System.Linq.Enumerable
+  definition: System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+  name: ThenByDescending<TElement, TKey>(Func<TElement, TKey>)
+  nameWithType: Enumerable.ThenByDescending<TElement, TKey>(Func<TElement, TKey>)
+  fullName: System.Linq.Enumerable.ThenByDescending<TElement, TKey>(System.Func<TElement, TKey>)
+  nameWithType.vb: Enumerable.ThenByDescending(Of TElement, TKey)(Func(Of TElement, TKey))
+  fullname.vb: System.Linq.Enumerable.ThenByDescending(Of TElement, TKey)(System.Func(Of TElement, TKey))
+  name.vb: ThenByDescending(Of TElement, TKey)(Func(Of TElement, TKey))
+  spec.csharp:
+  - uid: System.Linq.Enumerable.ThenByDescending``2(System.Func{``0,``1})
+    name: ThenByDescending<TElement, TKey>
+    nameWithType: Enumerable.ThenByDescending<TElement, TKey>
+    fullName: System.Linq.Enumerable.ThenByDescending<TElement, TKey>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TElement
+    nameWithType: TElement
+    fullName: TElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Linq.Enumerable.ThenByDescending``2(System.Func{``0,``1})
+    name: ThenByDescending(Of TElement, TKey)
+    nameWithType: Enumerable.ThenByDescending(Of TElement, TKey)
+    fullName: System.Linq.Enumerable.ThenByDescending(Of TElement, TKey)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TElement
+    nameWithType: TElement
+    fullName: TElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.IOrderedEnumerable`1.System.Linq.Enumerable.ThenByDescending``2(System.Func{{TElement},{TKey}},System.Collections.Generic.IComparer{{TKey}})
+  commentId: M:System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  parent: System.Linq.Enumerable
+  definition: System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  name: ThenByDescending<TElement, TKey>(Func<TElement, TKey>, Collections.Generic.IComparer<TKey>)
+  nameWithType: Enumerable.ThenByDescending<TElement, TKey>(Func<TElement, TKey>, Collections.Generic.IComparer<TKey>)
+  fullName: System.Linq.Enumerable.ThenByDescending<TElement, TKey>(System.Func<TElement, TKey>, System.Collections.Generic.IComparer<TKey>)
+  nameWithType.vb: Enumerable.ThenByDescending(Of TElement, TKey)(Func(Of TElement, TKey), Collections.Generic.IComparer(Of TKey))
+  fullname.vb: System.Linq.Enumerable.ThenByDescending(Of TElement, TKey)(System.Func(Of TElement, TKey), System.Collections.Generic.IComparer(Of TKey))
+  name.vb: ThenByDescending(Of TElement, TKey)(Func(Of TElement, TKey), Collections.Generic.IComparer(Of TKey))
+  spec.csharp:
+  - uid: System.Linq.Enumerable.ThenByDescending``2(System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+    name: ThenByDescending<TElement, TKey>
+    nameWithType: Enumerable.ThenByDescending<TElement, TKey>
+    fullName: System.Linq.Enumerable.ThenByDescending<TElement, TKey>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TElement
+    nameWithType: TElement
+    fullName: TElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IComparer`1
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Linq.Enumerable.ThenByDescending``2(System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+    name: ThenByDescending(Of TElement, TKey)
+    nameWithType: Enumerable.ThenByDescending(Of TElement, TKey)
+    fullName: System.Linq.Enumerable.ThenByDescending(Of TElement, TKey)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TElement
+    nameWithType: TElement
+    fullName: TElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IComparer`1
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+  commentId: M:System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+  isExternal: true
+  name: ThenBy<TSource, TKey>(IOrderedEnumerable<TSource>, Func<TSource, TKey>)
+  nameWithType: Enumerable.ThenBy<TSource, TKey>(IOrderedEnumerable<TSource>, Func<TSource, TKey>)
+  fullName: System.Linq.Enumerable.ThenBy<TSource, TKey>(System.Linq.IOrderedEnumerable<TSource>, System.Func<TSource, TKey>)
+  nameWithType.vb: Enumerable.ThenBy(Of TSource, TKey)(IOrderedEnumerable(Of TSource), Func(Of TSource, TKey))
+  fullname.vb: System.Linq.Enumerable.ThenBy(Of TSource, TKey)(System.Linq.IOrderedEnumerable(Of TSource), System.Func(Of TSource, TKey))
+  name.vb: ThenBy(Of TSource, TKey)(IOrderedEnumerable(Of TSource), Func(Of TSource, TKey))
+  spec.csharp:
+  - uid: System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+    name: ThenBy<TSource, TKey>
+    nameWithType: Enumerable.ThenBy<TSource, TKey>
+    fullName: System.Linq.Enumerable.ThenBy<TSource, TKey>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.IOrderedEnumerable`1
+    name: IOrderedEnumerable
+    nameWithType: IOrderedEnumerable
+    fullName: System.Linq.IOrderedEnumerable
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+    name: ThenBy(Of TSource, TKey)
+    nameWithType: Enumerable.ThenBy(Of TSource, TKey)
+    fullName: System.Linq.Enumerable.ThenBy(Of TSource, TKey)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.IOrderedEnumerable`1
+    name: IOrderedEnumerable
+    nameWithType: IOrderedEnumerable
+    fullName: System.Linq.IOrderedEnumerable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Enumerable
+  commentId: T:System.Linq.Enumerable
+  parent: System.Linq
+  isExternal: false
+  name: Enumerable
+  nameWithType: Enumerable
+  fullName: System.Linq.Enumerable
+- uid: System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  commentId: M:System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  isExternal: true
+  name: ThenBy<TSource, TKey>(IOrderedEnumerable<TSource>, Func<TSource, TKey>, Collections.Generic.IComparer<TKey>)
+  nameWithType: Enumerable.ThenBy<TSource, TKey>(IOrderedEnumerable<TSource>, Func<TSource, TKey>, Collections.Generic.IComparer<TKey>)
+  fullName: System.Linq.Enumerable.ThenBy<TSource, TKey>(System.Linq.IOrderedEnumerable<TSource>, System.Func<TSource, TKey>, System.Collections.Generic.IComparer<TKey>)
+  nameWithType.vb: Enumerable.ThenBy(Of TSource, TKey)(IOrderedEnumerable(Of TSource), Func(Of TSource, TKey), Collections.Generic.IComparer(Of TKey))
+  fullname.vb: System.Linq.Enumerable.ThenBy(Of TSource, TKey)(System.Linq.IOrderedEnumerable(Of TSource), System.Func(Of TSource, TKey), System.Collections.Generic.IComparer(Of TKey))
+  name.vb: ThenBy(Of TSource, TKey)(IOrderedEnumerable(Of TSource), Func(Of TSource, TKey), Collections.Generic.IComparer(Of TKey))
+  spec.csharp:
+  - uid: System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+    name: ThenBy<TSource, TKey>
+    nameWithType: Enumerable.ThenBy<TSource, TKey>
+    fullName: System.Linq.Enumerable.ThenBy<TSource, TKey>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.IOrderedEnumerable`1
+    name: IOrderedEnumerable
+    nameWithType: IOrderedEnumerable
+    fullName: System.Linq.IOrderedEnumerable
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IComparer`1
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+    name: ThenBy(Of TSource, TKey)
+    nameWithType: Enumerable.ThenBy(Of TSource, TKey)
+    fullName: System.Linq.Enumerable.ThenBy(Of TSource, TKey)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.IOrderedEnumerable`1
+    name: IOrderedEnumerable
+    nameWithType: IOrderedEnumerable
+    fullName: System.Linq.IOrderedEnumerable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IComparer`1
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+  commentId: M:System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+  isExternal: true
+  name: ThenByDescending<TSource, TKey>(IOrderedEnumerable<TSource>, Func<TSource, TKey>)
+  nameWithType: Enumerable.ThenByDescending<TSource, TKey>(IOrderedEnumerable<TSource>, Func<TSource, TKey>)
+  fullName: System.Linq.Enumerable.ThenByDescending<TSource, TKey>(System.Linq.IOrderedEnumerable<TSource>, System.Func<TSource, TKey>)
+  nameWithType.vb: Enumerable.ThenByDescending(Of TSource, TKey)(IOrderedEnumerable(Of TSource), Func(Of TSource, TKey))
+  fullname.vb: System.Linq.Enumerable.ThenByDescending(Of TSource, TKey)(System.Linq.IOrderedEnumerable(Of TSource), System.Func(Of TSource, TKey))
+  name.vb: ThenByDescending(Of TSource, TKey)(IOrderedEnumerable(Of TSource), Func(Of TSource, TKey))
+  spec.csharp:
+  - uid: System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+    name: ThenByDescending<TSource, TKey>
+    nameWithType: Enumerable.ThenByDescending<TSource, TKey>
+    fullName: System.Linq.Enumerable.ThenByDescending<TSource, TKey>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.IOrderedEnumerable`1
+    name: IOrderedEnumerable
+    nameWithType: IOrderedEnumerable
+    fullName: System.Linq.IOrderedEnumerable
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})
+    name: ThenByDescending(Of TSource, TKey)
+    nameWithType: Enumerable.ThenByDescending(Of TSource, TKey)
+    fullName: System.Linq.Enumerable.ThenByDescending(Of TSource, TKey)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.IOrderedEnumerable`1
+    name: IOrderedEnumerable
+    nameWithType: IOrderedEnumerable
+    fullName: System.Linq.IOrderedEnumerable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  commentId: M:System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+  isExternal: true
+  name: ThenByDescending<TSource, TKey>(IOrderedEnumerable<TSource>, Func<TSource, TKey>, Collections.Generic.IComparer<TKey>)
+  nameWithType: Enumerable.ThenByDescending<TSource, TKey>(IOrderedEnumerable<TSource>, Func<TSource, TKey>, Collections.Generic.IComparer<TKey>)
+  fullName: System.Linq.Enumerable.ThenByDescending<TSource, TKey>(System.Linq.IOrderedEnumerable<TSource>, System.Func<TSource, TKey>, System.Collections.Generic.IComparer<TKey>)
+  nameWithType.vb: Enumerable.ThenByDescending(Of TSource, TKey)(IOrderedEnumerable(Of TSource), Func(Of TSource, TKey), Collections.Generic.IComparer(Of TKey))
+  fullname.vb: System.Linq.Enumerable.ThenByDescending(Of TSource, TKey)(System.Linq.IOrderedEnumerable(Of TSource), System.Func(Of TSource, TKey), System.Collections.Generic.IComparer(Of TKey))
+  name.vb: ThenByDescending(Of TSource, TKey)(IOrderedEnumerable(Of TSource), Func(Of TSource, TKey), Collections.Generic.IComparer(Of TKey))
+  spec.csharp:
+  - uid: System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+    name: ThenByDescending<TSource, TKey>
+    nameWithType: Enumerable.ThenByDescending<TSource, TKey>
+    fullName: System.Linq.Enumerable.ThenByDescending<TSource, TKey>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.IOrderedEnumerable`1
+    name: IOrderedEnumerable
+    nameWithType: IOrderedEnumerable
+    fullName: System.Linq.IOrderedEnumerable
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IComparer`1
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})
+    name: ThenByDescending(Of TSource, TKey)
+    nameWithType: Enumerable.ThenByDescending(Of TSource, TKey)
+    fullName: System.Linq.Enumerable.ThenByDescending(Of TSource, TKey)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.IOrderedEnumerable`1
+    name: IOrderedEnumerable
+    nameWithType: IOrderedEnumerable
+    fullName: System.Linq.IOrderedEnumerable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSource
+    nameWithType: TSource
+    fullName: TSource
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IComparer`1
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Func{{TElement},{TKey}}
+  commentId: '!:System.Func{`0,``0}'
   definition: System.Func`2
   name: Func<TElement, TKey>
-  name.vb: Func(Of TElement, TKey)
+  nameWithType: Func<TElement, TKey>
   fullName: System.Func<TElement, TKey>
-  fullName.vb: System.Func(Of TElement, TKey)
+  nameWithType.vb: Func(Of TElement, TKey)
+  fullname.vb: System.Func(Of TElement, TKey)
+  name.vb: Func(Of TElement, TKey)
   spec.csharp:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IComparer{{TKey}}
+  commentId: '!:System.Collections.Generic.IComparer{``1}'
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IComparer`1
-  name: IComparer<TKey>
-  name.vb: IComparer(Of TKey)
+  name: Collections.Generic.IComparer<TKey>
+  nameWithType: Collections.Generic.IComparer<TKey>
   fullName: System.Collections.Generic.IComparer<TKey>
-  fullName.vb: System.Collections.Generic.IComparer(Of TKey)
+  nameWithType.vb: Collections.Generic.IComparer(Of TKey)
+  fullname.vb: System.Collections.Generic.IComparer(Of TKey)
+  name.vb: Collections.Generic.IComparer(Of TKey)
   spec.csharp:
   - uid: System.Collections.Generic.IComparer`1
-    name: IComparer
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
     fullName: System.Collections.Generic.IComparer
   - name: <
+    nameWithType: <
     fullName: <
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IComparer`1
-    name: IComparer
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
     fullName: System.Collections.Generic.IComparer
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TKey
+    nameWithType: TKey
     fullName: TKey
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Linq.IOrderedEnumerable`1
+  commentId: T:System.Linq.IOrderedEnumerable`1
   parent: System.Linq
   isExternal: false
   name: IOrderedEnumerable<TElement>
-  name.vb: IOrderedEnumerable(Of TElement)
+  nameWithType: IOrderedEnumerable<TElement>
   fullName: System.Linq.IOrderedEnumerable<TElement>
-  fullName.vb: System.Linq.IOrderedEnumerable(Of TElement)
+  nameWithType.vb: IOrderedEnumerable(Of TElement)
+  fullname.vb: System.Linq.IOrderedEnumerable(Of TElement)
+  name.vb: IOrderedEnumerable(Of TElement)
   spec.csharp:
   - uid: System.Linq.IOrderedEnumerable`1
     name: IOrderedEnumerable
+    nameWithType: IOrderedEnumerable
     fullName: System.Linq.IOrderedEnumerable
   - name: <
+    nameWithType: <
     fullName: <
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Linq.IOrderedEnumerable`1
     name: IOrderedEnumerable
+    nameWithType: IOrderedEnumerable
     fullName: System.Linq.IOrderedEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: TElement
+    nameWithType: TElement
     fullName: TElement
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func`2
+  commentId: T:System.Func`2
   isExternal: false
   name: Func<, >
-  name.vb: Func(Of , )
+  nameWithType: Func<, >
   fullName: System.Func<, >
-  fullName.vb: System.Func(Of , )
+  nameWithType.vb: Func(Of , )
+  fullname.vb: System.Func(Of , )
+  name.vb: Func(Of , )
   spec.csharp:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IComparer`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IComparer`1
   isExternal: false
-  name: IComparer<>
-  name.vb: IComparer(Of )
+  name: Collections.Generic.IComparer<>
+  nameWithType: Collections.Generic.IComparer<>
   fullName: System.Collections.Generic.IComparer<>
-  fullName.vb: System.Collections.Generic.IComparer(Of )
+  nameWithType.vb: Collections.Generic.IComparer(Of )
+  fullname.vb: System.Collections.Generic.IComparer(Of )
+  name.vb: Collections.Generic.IComparer(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IComparer`1
-    name: IComparer
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
     fullName: System.Collections.Generic.IComparer
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IComparer`1
-    name: IComparer
+    name: Collections.Generic.IComparer
+    nameWithType: Collections.Generic.IComparer
     fullName: System.Collections.Generic.IComparer
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
   name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System

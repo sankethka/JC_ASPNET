@@ -1,76 +1,98 @@
 items:
 - uid: System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode
+  commentId: T:System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode
   id: NativeObjectSecurity.ExceptionFromErrorCode
   parent: System.Security.AccessControl
   children: []
+  langs:
+  - csharp
+  - vb
   name: NativeObjectSecurity.ExceptionFromErrorCode
+  nameWithType: NativeObjectSecurity.ExceptionFromErrorCode
   fullName: System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode
   type: Delegate
   source:
     remote:
-      path: src/System.Security.AccessControl/src/System/Security/AccessControl/NativeObjectSecurity.cs
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/NativeObjectSecurity.cs
-    startLine: 41
+    id: ExceptionFromErrorCode
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 335
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Provides a way for integrators to map numeric error codes to specific exceptions that they create.
   syntax:
     content: protected delegate Exception ExceptionFromErrorCode(int errorCode, string name, Runtime.InteropServices.SafeHandle handle, object context);
     content.vb: Protected Delegate Function ExceptionFromErrorCode(errorCode As Integer, name As String, handle As Runtime.InteropServices.SafeHandle, context As Object) As Exception
     parameters:
     - id: errorCode
       type: System.Int32
-      description: The numeric error code.
     - id: name
       type: System.String
-      description: The name of the securable object with which the <xref href="System.Security.AccessControl.NativeObjectSecurity" data-throw-if-not-resolved="false"></xref> object is associated.
     - id: handle
       type: System.Runtime.InteropServices.SafeHandle
-      description: The handle of the securable object with which the <xref href="System.Security.AccessControl.NativeObjectSecurity" data-throw-if-not-resolved="false"></xref> object is associated.
     - id: context
       type: System.Object
-      description: An object that contains contextual information about the source or destination of the exception.
     return:
       type: System.Exception
-      description: The <xref href="System.Exception" data-throw-if-not-resolved="false"></xref> this delegate creates.
+  modifiers.csharp:
+  - protected
+  - delegate
+  modifiers.vb:
+  - Protected
+  - Delegate
 references:
 - uid: System.Security.AccessControl
+  commentId: N:System.Security.AccessControl
   isExternal: false
   name: System.Security.AccessControl
+  nameWithType: System.Security.AccessControl
   fullName: System.Security.AccessControl
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Runtime.InteropServices.SafeHandle
+  commentId: T:System.Runtime.InteropServices.SafeHandle
   parent: System.Runtime.InteropServices
   isExternal: false
-  name: Runtime.InteropServices.SafeHandle
+  name: SafeHandle
+  nameWithType: SafeHandle
   fullName: System.Runtime.InteropServices.SafeHandle
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: false
   name: Exception
+  nameWithType: Exception
   fullName: System.Exception
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
   isExternal: false
   name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices

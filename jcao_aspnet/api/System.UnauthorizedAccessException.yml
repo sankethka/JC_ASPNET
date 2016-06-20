@@ -1,28 +1,35 @@
 items:
 - uid: System.UnauthorizedAccessException
+  commentId: T:System.UnauthorizedAccessException
   id: UnauthorizedAccessException
   parent: System
   children:
   - System.UnauthorizedAccessException.#ctor
   - System.UnauthorizedAccessException.#ctor(System.String)
   - System.UnauthorizedAccessException.#ctor(System.String,System.Exception)
+  langs:
+  - csharp
+  - vb
   name: UnauthorizedAccessException
+  nameWithType: UnauthorizedAccessException
   fullName: System.UnauthorizedAccessException
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/UnauthorizedAccessException.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/UnauthorizedAccessException.cs
-    startLine: 21
+      repo: https://github.com/dotnet/corefx.git
+    id: UnauthorizedAccessException
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2125
   assemblies:
   - System.Runtime
   namespace: System
-  summary: The exception that is thrown when the operating system denies access because of an I/O error or a specific type of security error.
   syntax:
     content: 'public class UnauthorizedAccessException : Exception'
-    content.vb: Public Class UnauthorizedAccessException Inherits Exception
+    content.vb: >-
+      Public Class UnauthorizedAccessException
+          Inherits Exception
   inheritance:
   - System.Object
   - System.Exception
@@ -42,326 +49,465 @@ items:
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.UnauthorizedAccessException.#ctor
+  commentId: M:System.UnauthorizedAccessException.#ctor
   id: '#ctor'
   parent: System.UnauthorizedAccessException
+  langs:
+  - csharp
+  - vb
   name: UnauthorizedAccessException()
+  nameWithType: UnauthorizedAccessException.UnauthorizedAccessException()
   fullName: System.UnauthorizedAccessException.UnauthorizedAccessException()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/UnauthorizedAccessException.cs
-    startLine: 24
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2127
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.UnauthorizedAccessException" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public UnauthorizedAccessException()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.UnauthorizedAccessException.#ctor(System.String)
+  commentId: M:System.UnauthorizedAccessException.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.UnauthorizedAccessException
+  langs:
+  - csharp
+  - vb
   name: UnauthorizedAccessException(String)
+  nameWithType: UnauthorizedAccessException.UnauthorizedAccessException(String)
   fullName: System.UnauthorizedAccessException.UnauthorizedAccessException(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/UnauthorizedAccessException.cs
-    startLine: 29
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2128
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.UnauthorizedAccessException" data-throw-if-not-resolved="false"></xref> class with a specified error message.
   syntax:
     content: public UnauthorizedAccessException(string message)
     content.vb: Public Sub New(message As String)
     parameters:
     - id: message
       type: System.String
-      description: The message that describes the error.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.UnauthorizedAccessException.#ctor(System.String,System.Exception)
+  commentId: M:System.UnauthorizedAccessException.#ctor(System.String,System.Exception)
   id: '#ctor(System.String,System.Exception)'
   parent: System.UnauthorizedAccessException
+  langs:
+  - csharp
+  - vb
   name: UnauthorizedAccessException(String, Exception)
+  nameWithType: UnauthorizedAccessException.UnauthorizedAccessException(String, Exception)
   fullName: System.UnauthorizedAccessException.UnauthorizedAccessException(System.String, System.Exception)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/UnauthorizedAccessException.cs
-    startLine: 34
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2129
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.UnauthorizedAccessException" data-throw-if-not-resolved="false"></xref> class with a specified error message and a reference to the inner exception that is the cause of this exception.
   syntax:
     content: public UnauthorizedAccessException(string message, Exception inner)
     content.vb: Public Sub New(message As String, inner As Exception)
     parameters:
     - id: message
       type: System.String
-      description: The error message that explains the reason for the exception.
     - id: inner
       type: System.Exception
-      description: The exception that is the cause of the current exception. If the *inner* parameter is not a null reference (Nothing in Visual Basic), the current exception is raised in a catch block that handles the inner exception.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: false
   name: Exception
+  nameWithType: Exception
   fullName: System.Exception
 - uid: System.Exception.Data
+  commentId: P:System.Exception.Data
   parent: System.Exception
   isExternal: false
   name: Data
+  nameWithType: Exception.Data
   fullName: System.Exception.Data
 - uid: System.Exception.HelpLink
+  commentId: P:System.Exception.HelpLink
   parent: System.Exception
   isExternal: false
   name: HelpLink
+  nameWithType: Exception.HelpLink
   fullName: System.Exception.HelpLink
 - uid: System.Exception.HResult
+  commentId: P:System.Exception.HResult
   parent: System.Exception
   isExternal: false
   name: HResult
+  nameWithType: Exception.HResult
   fullName: System.Exception.HResult
 - uid: System.Exception.InnerException
+  commentId: P:System.Exception.InnerException
   parent: System.Exception
   isExternal: false
   name: InnerException
+  nameWithType: Exception.InnerException
   fullName: System.Exception.InnerException
 - uid: System.Exception.Message
+  commentId: P:System.Exception.Message
   parent: System.Exception
   isExternal: false
   name: Message
+  nameWithType: Exception.Message
   fullName: System.Exception.Message
 - uid: System.Exception.Source
+  commentId: P:System.Exception.Source
   parent: System.Exception
   isExternal: false
   name: Source
+  nameWithType: Exception.Source
   fullName: System.Exception.Source
 - uid: System.Exception.StackTrace
+  commentId: P:System.Exception.StackTrace
   parent: System.Exception
   isExternal: false
   name: StackTrace
+  nameWithType: Exception.StackTrace
   fullName: System.Exception.StackTrace
 - uid: System.Exception.GetBaseException
+  commentId: M:System.Exception.GetBaseException
   parent: System.Exception
   isExternal: false
   name: GetBaseException()
+  nameWithType: Exception.GetBaseException()
   fullName: System.Exception.GetBaseException()
   spec.csharp:
   - uid: System.Exception.GetBaseException
     name: GetBaseException
+    nameWithType: Exception.GetBaseException
     fullName: System.Exception.GetBaseException
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Exception.GetBaseException
     name: GetBaseException
+    nameWithType: Exception.GetBaseException
     fullName: System.Exception.GetBaseException
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Exception.ToString
+  commentId: M:System.Exception.ToString
   parent: System.Exception
   isExternal: false
   name: ToString()
+  nameWithType: Exception.ToString()
   fullName: System.Exception.ToString()
   spec.csharp:
   - uid: System.Exception.ToString
     name: ToString
+    nameWithType: Exception.ToString
     fullName: System.Exception.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Exception.ToString
     name: ToString
+    nameWithType: Exception.ToString
     fullName: System.Exception.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object)
+  nameWithType: Object.Equals(Object)
   fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
   parent: System.Object
   isExternal: false
   name: GetHashCode()
+  nameWithType: Object.GetHashCode()
   fullName: System.Object.GetHashCode()
   spec.csharp:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String

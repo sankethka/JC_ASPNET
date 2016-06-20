@@ -1,5 +1,6 @@
 items:
 - uid: System.AggregateException
+  commentId: T:System.AggregateException
   id: AggregateException
   parent: System
   children:
@@ -15,564 +16,767 @@ items:
   - System.AggregateException.Handle(System.Func{System.Exception,System.Boolean})
   - System.AggregateException.InnerExceptions
   - System.AggregateException.ToString
+  langs:
+  - csharp
+  - vb
   name: AggregateException
+  nameWithType: AggregateException
   fullName: System.AggregateException
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/AggregateException.cs
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 31
+      repo: https://github.com/dotnet/corefx.git
+    id: AggregateException
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 10
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Represents one or more errors that occur during application execution.
   syntax:
     content: 'public class AggregateException : Exception'
-    content.vb: Public Class AggregateException Inherits Exception
+    content.vb: >-
+      Public Class AggregateException
+          Inherits Exception
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.AggregateException.#ctor
+  commentId: M:System.AggregateException.#ctor
   id: '#ctor'
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: AggregateException()
+  nameWithType: AggregateException.AggregateException()
   fullName: System.AggregateException.AggregateException()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 41
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 12
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> class with a system-supplied message that describes the error.
   syntax:
     content: public AggregateException()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.AggregateException.#ctor(System.Collections.Generic.IEnumerable{System.Exception})
+  commentId: M:System.AggregateException.#ctor(System.Collections.Generic.IEnumerable{System.Exception})
   id: '#ctor(System.Collections.Generic.IEnumerable{System.Exception})'
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: AggregateException(Collections.Generic.IEnumerable<Exception>)
-  name.vb: AggregateException(Collections.Generic.IEnumerable(Of Exception))
+  nameWithType: AggregateException.AggregateException(Collections.Generic.IEnumerable<Exception>)
   fullName: System.AggregateException.AggregateException(System.Collections.Generic.IEnumerable<System.Exception>)
-  fullName.vb: System.AggregateException.AggregateException(System.Collections.Generic.IEnumerable(Of System.Exception))
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 86
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 13
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> class with references to the inner exceptions that are the cause of this exception.
   syntax:
     content: public AggregateException(Collections.Generic.IEnumerable<Exception> innerExceptions)
     content.vb: Public Sub New(innerExceptions As Collections.Generic.IEnumerable(Of Exception))
     parameters:
     - id: innerExceptions
       type: System.Collections.Generic.IEnumerable{System.Exception}
-      description: The exceptions that are the cause of the current exception.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *innerExceptions* argument is null.
-  - type: System.ArgumentException
-    description: An element of *innerExceptions* is null.
+  nameWithType.vb: AggregateException.AggregateException(Collections.Generic.IEnumerable(Of Exception))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.AggregateException.AggregateException(System.Collections.Generic.IEnumerable(Of System.Exception))
+  name.vb: AggregateException(Collections.Generic.IEnumerable(Of Exception))
 - uid: System.AggregateException.#ctor(System.Exception[])
+  commentId: M:System.AggregateException.#ctor(System.Exception[])
   id: '#ctor(System.Exception[])'
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: AggregateException(Exception[])
-  name.vb: AggregateException(Exception())
+  nameWithType: AggregateException.AggregateException(Exception[])
   fullName: System.AggregateException.AggregateException(System.Exception[])
-  fullName.vb: System.AggregateException.AggregateException(System.Exception())
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 100
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 14
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> class with references to the inner exceptions that are the cause of this exception.
   syntax:
     content: public AggregateException(params Exception[] innerExceptions)
     content.vb: Public Sub New(ParamArray innerExceptions As Exception())
     parameters:
     - id: innerExceptions
       type: System.Exception[]
-      description: The exceptions that are the cause of the current exception.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *innerExceptions* argument is null.
-  - type: System.ArgumentException
-    description: An element of *innerExceptions* is null.
+  nameWithType.vb: AggregateException.AggregateException(Exception())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.AggregateException.AggregateException(System.Exception())
+  name.vb: AggregateException(Exception())
 - uid: System.AggregateException.#ctor(System.String)
+  commentId: M:System.AggregateException.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: AggregateException(String)
+  nameWithType: AggregateException.AggregateException(String)
   fullName: System.AggregateException.AggregateException(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 52
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 15
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> class with a specified message that describes the error.
   syntax:
     content: public AggregateException(string message)
     content.vb: Public Sub New(message As String)
     parameters:
     - id: message
       type: System.String
-      description: The message that describes the exception. The caller of this constructor is required to ensure that this string has been localized for the current system culture.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.AggregateException.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Exception})
+  commentId: M:System.AggregateException.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Exception})
   id: '#ctor(System.String,System.Collections.Generic.IEnumerable{System.Exception})'
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: AggregateException(String, Collections.Generic.IEnumerable<Exception>)
-  name.vb: AggregateException(String, Collections.Generic.IEnumerable(Of Exception))
+  nameWithType: AggregateException.AggregateException(String, Collections.Generic.IEnumerable<Exception>)
   fullName: System.AggregateException.AggregateException(System.String, System.Collections.Generic.IEnumerable<System.Exception>)
-  fullName.vb: System.AggregateException.AggregateException(System.String, System.Collections.Generic.IEnumerable(Of System.Exception))
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 115
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 16
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> class with a specified error message and references to the inner exceptions that are the cause of this exception.
   syntax:
     content: public AggregateException(string message, Collections.Generic.IEnumerable<Exception> innerExceptions)
     content.vb: Public Sub New(message As String, innerExceptions As Collections.Generic.IEnumerable(Of Exception))
     parameters:
     - id: message
       type: System.String
-      description: The error message that explains the reason for the exception.
     - id: innerExceptions
       type: System.Collections.Generic.IEnumerable{System.Exception}
-      description: The exceptions that are the cause of the current exception.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *innerExceptions* argument is null.
-  - type: System.ArgumentException
-    description: An element of *innerExceptions* is null.
+  nameWithType.vb: AggregateException.AggregateException(String, Collections.Generic.IEnumerable(Of Exception))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.AggregateException.AggregateException(System.String, System.Collections.Generic.IEnumerable(Of System.Exception))
+  name.vb: AggregateException(String, Collections.Generic.IEnumerable(Of Exception))
 - uid: System.AggregateException.#ctor(System.String,System.Exception)
+  commentId: M:System.AggregateException.#ctor(System.String,System.Exception)
   id: '#ctor(System.String,System.Exception)'
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: AggregateException(String, Exception)
+  nameWithType: AggregateException.AggregateException(String, Exception)
   fullName: System.AggregateException.AggregateException(System.String, System.Exception)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 66
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 17
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> class with a specified error message and a reference to the inner exception that is the cause of this exception.
   syntax:
     content: public AggregateException(string message, Exception innerException)
     content.vb: Public Sub New(message As String, innerException As Exception)
     parameters:
     - id: message
       type: System.String
-      description: The message that describes the exception. The caller of this constructor is required to ensure that this string has been localized for the current system culture.
     - id: innerException
       type: System.Exception
-      description: The exception that is the cause of the current exception. If the *innerException* parameter is not null, the current exception is raised in a catch block that handles the inner exception.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *innerException* argument is null.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.AggregateException.#ctor(System.String,System.Exception[])
+  commentId: M:System.AggregateException.#ctor(System.String,System.Exception[])
   id: '#ctor(System.String,System.Exception[])'
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: AggregateException(String, Exception[])
-  name.vb: AggregateException(String, Exception())
+  nameWithType: AggregateException.AggregateException(String, Exception[])
   fullName: System.AggregateException.AggregateException(System.String, System.Exception[])
-  fullName.vb: System.AggregateException.AggregateException(System.String, System.Exception())
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 132
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 18
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Initializes a new instance of the <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> class with a specified error message and references to the inner exceptions that are the cause of this exception.
   syntax:
     content: public AggregateException(string message, params Exception[] innerExceptions)
     content.vb: Public Sub New(message As String, ParamArray innerExceptions As Exception())
     parameters:
     - id: message
       type: System.String
-      description: The error message that explains the reason for the exception.
     - id: innerExceptions
       type: System.Exception[]
-      description: The exceptions that are the cause of the current exception.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *innerExceptions* argument is null.
-  - type: System.ArgumentException
-    description: An element of *innerExceptions* is null.
+  nameWithType.vb: AggregateException.AggregateException(String, Exception())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.AggregateException.AggregateException(System.String, System.Exception())
+  name.vb: AggregateException(String, Exception())
 - uid: System.AggregateException.InnerExceptions
+  commentId: P:System.AggregateException.InnerExceptions
   id: InnerExceptions
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: InnerExceptions
+  nameWithType: AggregateException.InnerExceptions
   fullName: System.AggregateException.InnerExceptions
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 324
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: InnerExceptions
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 19
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Gets a read-only collection of the <xref href="System.Exception" data-throw-if-not-resolved="false"></xref> instances that caused the current exception.
   syntax:
     content: public Collections.ObjectModel.ReadOnlyCollection<Exception> InnerExceptions { get; }
     content.vb: Public ReadOnly Property InnerExceptions As Collections.ObjectModel.ReadOnlyCollection(Of Exception)
     parameters: []
     return:
       type: System.Collections.ObjectModel.ReadOnlyCollection{System.Exception}
-      description: Returns a read-only collection of the <xref href="System.Exception" data-throw-if-not-resolved="false"></xref> instances that caused the current exception.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.AggregateException.Flatten
+  commentId: M:System.AggregateException.Flatten
   id: Flatten
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: Flatten()
+  nameWithType: AggregateException.Flatten()
   fullName: System.AggregateException.Flatten()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 391
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Flatten
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 20
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Flattens an <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> instances into a single, new instance.
   syntax:
     content: public AggregateException Flatten()
     content.vb: Public Function Flatten As AggregateException
     return:
       type: System.AggregateException
-      description: A new, flattened <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.AggregateException.GetBaseException
+  commentId: M:System.AggregateException.GetBaseException
   id: GetBaseException
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: GetBaseException()
+  nameWithType: AggregateException.GetBaseException()
   fullName: System.AggregateException.GetBaseException()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 305
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetBaseException
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 21
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Returns the <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> that is the root cause of this exception.
   syntax:
     content: public override Exception GetBaseException()
     content.vb: Public Overrides Function GetBaseException As Exception
     return:
       type: System.Exception
-      description: Returns the <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> that is the root cause of this exception.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.AggregateException.Handle(System.Func{System.Exception,System.Boolean})
+  commentId: M:System.AggregateException.Handle(System.Func{System.Exception,System.Boolean})
   id: Handle(System.Func{System.Exception,System.Boolean})
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: Handle(Func<Exception, Boolean>)
-  name.vb: Handle(Func(Of Exception, Boolean))
+  nameWithType: AggregateException.Handle(Func<Exception, Boolean>)
   fullName: System.AggregateException.Handle(System.Func<System.Exception, System.Boolean>)
-  fullName.vb: System.AggregateException.Handle(System.Func(Of System.Exception, System.Boolean))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 349
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Handle
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 22
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Invokes a handler on each <xref href="System.Exception" data-throw-if-not-resolved="false"></xref> contained by this <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void Handle(Func<Exception, bool> predicate)
     content.vb: Public Sub Handle(predicate As Func(Of Exception, Boolean))
     parameters:
     - id: predicate
       type: System.Func{System.Exception,System.Boolean}
-      description: The predicate to execute for each exception. The predicate accepts as an argument the <xref href="System.Exception" data-throw-if-not-resolved="false"></xref> to be processed and returns a Boolean to indicate whether the exception was handled.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The *predicate* argument is null.
-  - type: System.AggregateException
-    description: An exception contained by this <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref> was not handled.
+  nameWithType.vb: AggregateException.Handle(Func(Of Exception, Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.AggregateException.Handle(System.Func(Of System.Exception, System.Boolean))
+  name.vb: Handle(Func(Of Exception, Boolean))
 - uid: System.AggregateException.ToString
+  commentId: M:System.AggregateException.ToString
   id: ToString
   parent: System.AggregateException
+  langs:
+  - csharp
+  - vb
   name: ToString()
+  nameWithType: AggregateException.ToString()
   fullName: System.AggregateException.ToString()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/AggregateException.cs
-    startLine: 463
+    remote:
+      path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Threading.Tasks/ref/System.Threading.Tasks.cs
+    startLine: 23
   assemblies:
   - System.Threading.Tasks
   namespace: System
-  summary: Creates and returns a string representation of the current <xref href="System.AggregateException" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: A string representation of the current exception.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Collections.Generic.IEnumerable{System.Exception}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Exception}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<Exception>
-  name.vb: Collections.Generic.IEnumerable(Of Exception)
+  nameWithType: Collections.Generic.IEnumerable<Exception>
   fullName: System.Collections.Generic.IEnumerable<System.Exception>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Exception)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of Exception)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Exception)
+  name.vb: Collections.Generic.IEnumerable(Of Exception)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Exception
     name: Exception
+    nameWithType: Exception
     fullName: System.Exception
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Exception
     name: Exception
+    nameWithType: Exception
     fullName: System.Exception
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: System.Exception[]
-  isExternal: true
   name: Exception[]
-  name.vb: Exception()
+  nameWithType: Exception[]
   fullName: System.Exception[]
-  fullName.vb: System.Exception()
+  nameWithType.vb: Exception()
+  fullname.vb: System.Exception()
+  name.vb: Exception()
   spec.csharp:
   - uid: System.Exception
     name: Exception
+    nameWithType: Exception
     fullName: System.Exception
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Exception
     name: Exception
+    nameWithType: Exception
     fullName: System.Exception
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: false
   name: Exception
+  nameWithType: Exception
   fullName: System.Exception
 - uid: System.Collections.ObjectModel.ReadOnlyCollection{System.Exception}
+  commentId: '!:System.Collections.ObjectModel.ReadOnlyCollection{System.Exception}'
   definition: System.Collections.ObjectModel.ReadOnlyCollection`1
   name: Collections.ObjectModel.ReadOnlyCollection<Exception>
-  name.vb: Collections.ObjectModel.ReadOnlyCollection(Of Exception)
+  nameWithType: Collections.ObjectModel.ReadOnlyCollection<Exception>
   fullName: System.Collections.ObjectModel.ReadOnlyCollection<System.Exception>
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of System.Exception)
+  nameWithType.vb: Collections.ObjectModel.ReadOnlyCollection(Of Exception)
+  fullname.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of System.Exception)
+  name.vb: Collections.ObjectModel.ReadOnlyCollection(Of Exception)
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: Collections.ObjectModel.ReadOnlyCollection
+    nameWithType: Collections.ObjectModel.ReadOnlyCollection
     fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Exception
     name: Exception
+    nameWithType: Exception
     fullName: System.Exception
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: Collections.ObjectModel.ReadOnlyCollection
+    nameWithType: Collections.ObjectModel.ReadOnlyCollection
     fullName: System.Collections.ObjectModel.ReadOnlyCollection
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Exception
     name: Exception
+    nameWithType: Exception
     fullName: System.Exception
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
-  parent: System.Collections.ObjectModel
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
   isExternal: false
   name: Collections.ObjectModel.ReadOnlyCollection<>
-  name.vb: Collections.ObjectModel.ReadOnlyCollection(Of )
+  nameWithType: Collections.ObjectModel.ReadOnlyCollection<>
   fullName: System.Collections.ObjectModel.ReadOnlyCollection<>
-  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of )
+  nameWithType.vb: Collections.ObjectModel.ReadOnlyCollection(Of )
+  fullname.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of )
+  name.vb: Collections.ObjectModel.ReadOnlyCollection(Of )
   spec.csharp:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: Collections.ObjectModel.ReadOnlyCollection
+    nameWithType: Collections.ObjectModel.ReadOnlyCollection
     fullName: System.Collections.ObjectModel.ReadOnlyCollection
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
     name: Collections.ObjectModel.ReadOnlyCollection
+    nameWithType: Collections.ObjectModel.ReadOnlyCollection
     fullName: System.Collections.ObjectModel.ReadOnlyCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.ObjectModel
-  isExternal: false
-  name: System.Collections.ObjectModel
-  fullName: System.Collections.ObjectModel
 - uid: System.AggregateException
+  commentId: T:System.AggregateException
   parent: System
   isExternal: false
   name: AggregateException
+  nameWithType: AggregateException
   fullName: System.AggregateException
 - uid: System.Func{System.Exception,System.Boolean}
+  commentId: '!:System.Func{System.Exception,System.Boolean}'
   definition: System.Func`2
   name: Func<Exception, Boolean>
-  name.vb: Func(Of Exception, Boolean)
+  nameWithType: Func<Exception, Boolean>
   fullName: System.Func<System.Exception, System.Boolean>
-  fullName.vb: System.Func(Of System.Exception, System.Boolean)
+  nameWithType.vb: Func(Of Exception, Boolean)
+  fullname.vb: System.Func(Of System.Exception, System.Boolean)
+  name.vb: Func(Of Exception, Boolean)
   spec.csharp:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Exception
     name: Exception
+    nameWithType: Exception
     fullName: System.Exception
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Exception
     name: Exception
+    nameWithType: Exception
     fullName: System.Exception
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Func`2
+  commentId: T:System.Func`2
   isExternal: false
   name: Func<, >
-  name.vb: Func(Of , )
+  nameWithType: Func<, >
   fullName: System.Func<, >
-  fullName.vb: System.Func(Of , )
+  nameWithType.vb: Func(Of , )
+  fullname.vb: System.Func(Of , )
+  name.vb: Func(Of , )
   spec.csharp:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Func`2
     name: Func
+    nameWithType: Func
     fullName: System.Func
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

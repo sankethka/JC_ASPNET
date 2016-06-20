@@ -1,117 +1,161 @@
 items:
 - uid: System.IObservable`1
+  commentId: T:System.IObservable`1
   id: IObservable`1
   parent: System
   children:
   - System.IObservable`1.Subscribe(System.IObserver{`0})
+  langs:
+  - csharp
+  - vb
   name: IObservable<T>
-  name.vb: IObservable(Of T)
+  nameWithType: IObservable<T>
   fullName: System.IObservable<T>
-  fullName.vb: System.IObservable(Of T)
   type: Interface
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/IObservable.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/IObservable.cs
-    startLine: 18
+      repo: https://github.com/dotnet/corefx.git
+    id: IObservable
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1187
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Defines a provider for push-based notification.
   syntax:
     content: public interface IObservable<out T>
     content.vb: Public Interface IObservable(Of Out T)
     typeParameters:
     - id: T
+  nameWithType.vb: IObservable(Of T)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: System.IObservable(Of T)
+  name.vb: IObservable(Of T)
 - uid: System.IObservable`1.Subscribe(System.IObserver{`0})
+  commentId: M:System.IObservable`1.Subscribe(System.IObserver{`0})
   id: Subscribe(System.IObserver{`0})
   parent: System.IObservable`1
+  langs:
+  - csharp
+  - vb
   name: Subscribe(IObserver<T>)
-  name.vb: Subscribe(IObserver(Of T))
+  nameWithType: IObservable<T>.Subscribe(IObserver<T>)
   fullName: System.IObservable<T>.Subscribe(System.IObserver<T>)
-  fullName.vb: System.IObservable(Of T).Subscribe(System.IObserver(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IObservable.cs
-    startLine: 20
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Subscribe
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1189
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Notifies the provider that an observer is to receive notifications.
   syntax:
     content: IDisposable Subscribe(IObserver<T> observer)
     content.vb: Function Subscribe(observer As IObserver(Of T)) As IDisposable
     parameters:
     - id: observer
       type: System.IObserver{{T}}
-      description: The object that is to receive notifications.
     return:
       type: System.IDisposable
-      description: A reference to an interface that allows observers to stop receiving notifications before the provider has finished sending them.
+  nameWithType.vb: IObservable(Of T).Subscribe(IObserver(Of T))
+  fullName.vb: System.IObservable(Of T).Subscribe(System.IObserver(Of T))
+  name.vb: Subscribe(IObserver(Of T))
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.IObserver{{T}}
+  commentId: T:System.IObserver{`0}
   parent: System
   definition: System.IObserver`1
   name: IObserver<T>
-  name.vb: IObserver(Of T)
+  nameWithType: IObserver<T>
   fullName: System.IObserver<T>
-  fullName.vb: System.IObserver(Of T)
+  nameWithType.vb: IObserver(Of T)
+  fullname.vb: System.IObserver(Of T)
+  name.vb: IObserver(Of T)
   spec.csharp:
   - uid: System.IObserver`1
     name: IObserver
+    nameWithType: IObserver
     fullName: System.IObserver
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.IObserver`1
     name: IObserver
+    nameWithType: IObserver
     fullName: System.IObserver
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IDisposable
+  commentId: T:System.IDisposable
   parent: System
   isExternal: false
   name: IDisposable
+  nameWithType: IDisposable
   fullName: System.IDisposable
 - uid: System.IObserver`1
-  parent: System
+  commentId: T:System.IObserver`1
   isExternal: false
-  name: IObserver<T>
-  name.vb: IObserver(Of T)
-  fullName: System.IObserver<T>
-  fullName.vb: System.IObserver(Of T)
+  name: IObserver<>
+  nameWithType: IObserver<>
+  fullName: System.IObserver<>
+  nameWithType.vb: IObserver(Of )
+  fullname.vb: System.IObserver(Of )
+  name.vb: IObserver(Of )
   spec.csharp:
   - uid: System.IObserver`1
     name: IObserver
+    nameWithType: IObserver
     fullName: System.IObserver
   - name: <
+    nameWithType: <
     fullName: <
-  - name: T
-    fullName: T
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.IObserver`1
     name: IObserver
+    nameWithType: IObserver
     fullName: System.IObserver
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    fullName: T
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )

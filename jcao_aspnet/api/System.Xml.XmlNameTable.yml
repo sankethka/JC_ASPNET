@@ -1,5 +1,6 @@
 items:
 - uid: System.Xml.XmlNameTable
+  commentId: T:System.Xml.XmlNameTable
   id: XmlNameTable
   parent: System.Xml
   children:
@@ -12,6 +13,7 @@ items:
   - csharp
   - vb
   name: XmlNameTable
+  nameWithType: XmlNameTable
   fullName: System.Xml.XmlNameTable
   type: Class
   source:
@@ -19,24 +21,36 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: XmlNameTable
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 164
+    startLine: 167
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Table of atomized string objects.
   syntax:
     content: 'public abstract class XmlNameTable : object'
-    content.vb: Public MustInherit Class XmlNameTable Inherits Object
+    content.vb: >-
+      Public MustInherit Class XmlNameTable
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Xml.XmlNameTable.#ctor
+  commentId: M:System.Xml.XmlNameTable.#ctor
   id: '#ctor'
   parent: System.Xml.XmlNameTable
   langs:
   - csharp
   - vb
   name: XmlNameTable()
+  nameWithType: XmlNameTable.XmlNameTable()
   fullName: System.Xml.XmlNameTable.XmlNameTable()
   type: Constructor
   source:
@@ -44,65 +58,71 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 166
+    startLine: 169
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: Initializes a new instance of the <xref href="System.Xml.XmlNameTable" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: protected XmlNameTable()
     content.vb: Protected Sub New
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Xml.XmlNameTable.Add(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.Xml.XmlNameTable.Add(System.Char[],System.Int32,System.Int32)
   id: Add(System.Char[],System.Int32,System.Int32)
   parent: System.Xml.XmlNameTable
   langs:
   - csharp
   - vb
   name: Add(Char[], Int32, Int32)
-  name.vb: Add(Char(), Int32, Int32)
+  nameWithType: XmlNameTable.Add(Char[], Int32, Int32)
   fullName: System.Xml.XmlNameTable.Add(System.Char[], System.Int32, System.Int32)
-  fullName.vb: System.Xml.XmlNameTable.Add(System.Char(), System.Int32, System.Int32)
   type: Method
   source:
     remote:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Add
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 167
+    startLine: 170
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: When overridden in a derived class, atomizes the specified string and adds it to the XmlNameTable.
   syntax:
     content: public abstract string Add(char[] array, int offset, int length)
     content.vb: Public MustOverride Function Add(array As Char(), offset As Integer, length As Integer) As String
     parameters:
     - id: array
       type: System.Char[]
-      description: The character array containing the name to add.
     - id: offset
       type: System.Int32
-      description: Zero-based index into the array specifying the first character of the name.
     - id: length
       type: System.Int32
-      description: The number of characters in the name.
     return:
       type: System.String
-      description: The new atomized string or the existing one if it already exists. If length is zero, String.Empty is returned.
-  exceptions:
-  - type: System.IndexOutOfRangeException
-    description: 0 &gt; *offset*-or- *offset* &gt;= *array*.Length -or- *length* &gt; *array*.Length The above conditions do not cause an exception to be thrown if *length* =0.
-  - type: System.ArgumentOutOfRangeException
-    description: '*length* &lt; 0.'
+  nameWithType.vb: XmlNameTable.Add(Char(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: System.Xml.XmlNameTable.Add(System.Char(), System.Int32, System.Int32)
+  name.vb: Add(Char(), Int32, Int32)
 - uid: System.Xml.XmlNameTable.Add(System.String)
+  commentId: M:System.Xml.XmlNameTable.Add(System.String)
   id: Add(System.String)
   parent: System.Xml.XmlNameTable
   langs:
   - csharp
   - vb
   name: Add(String)
+  nameWithType: XmlNameTable.Add(String)
   fullName: System.Xml.XmlNameTable.Add(System.String)
   type: Method
   source:
@@ -110,75 +130,78 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Add
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 168
+    startLine: 171
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: When overridden in a derived class, atomizes the specified string and adds it to the XmlNameTable.
   syntax:
     content: public abstract string Add(string array)
     content.vb: Public MustOverride Function Add(array As String) As String
     parameters:
     - id: array
       type: System.String
-      description: The name to add.
     return:
       type: System.String
-      description: The new atomized string or the existing one if it already exists.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*array* is null.'
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
 - uid: System.Xml.XmlNameTable.Get(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.Xml.XmlNameTable.Get(System.Char[],System.Int32,System.Int32)
   id: Get(System.Char[],System.Int32,System.Int32)
   parent: System.Xml.XmlNameTable
   langs:
   - csharp
   - vb
   name: Get(Char[], Int32, Int32)
-  name.vb: Get(Char(), Int32, Int32)
+  nameWithType: XmlNameTable.Get(Char[], Int32, Int32)
   fullName: System.Xml.XmlNameTable.Get(System.Char[], System.Int32, System.Int32)
-  fullName.vb: System.Xml.XmlNameTable.Get(System.Char(), System.Int32, System.Int32)
   type: Method
   source:
     remote:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Get
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 169
+    startLine: 172
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: When overridden in a derived class, gets the atomized string containing the same characters as the specified range of characters in the given array.
   syntax:
     content: public abstract string Get(char[] array, int offset, int length)
     content.vb: Public MustOverride Function Get(array As Char(), offset As Integer, length As Integer) As String
     parameters:
     - id: array
       type: System.Char[]
-      description: The character array containing the name to look up.
     - id: offset
       type: System.Int32
-      description: The zero-based index into the array specifying the first character of the name.
     - id: length
       type: System.Int32
-      description: The number of characters in the name.
     return:
       type: System.String
-      description: The atomized string or null if the string has not already been atomized. If *length* is zero, String.Empty is returned.
-  exceptions:
-  - type: System.IndexOutOfRangeException
-    description: 0 &gt; *offset*-or- *offset* &gt;= *array*.Length -or- *length* &gt; *array*.Length The above conditions do not cause an exception to be thrown if *length* =0.
-  - type: System.ArgumentOutOfRangeException
-    description: '*length* &lt; 0.'
+  nameWithType.vb: XmlNameTable.Get(Char(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: System.Xml.XmlNameTable.Get(System.Char(), System.Int32, System.Int32)
+  name.vb: Get(Char(), Int32, Int32)
 - uid: System.Xml.XmlNameTable.Get(System.String)
+  commentId: M:System.Xml.XmlNameTable.Get(System.String)
   id: Get(System.String)
   parent: System.Xml.XmlNameTable
   langs:
   - csharp
   - vb
   name: Get(String)
+  nameWithType: XmlNameTable.Get(String)
   fullName: System.Xml.XmlNameTable.Get(System.String)
   type: Method
   source:
@@ -186,76 +209,80 @@ items:
       path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: Get
     path: src/System.Xml.ReaderWriter/ref/System.Xml.ReaderWriter.cs
-    startLine: 170
+    startLine: 173
   assemblies:
   - System.Xml.ReaderWriter
   namespace: System.Xml
-  summary: When overridden in a derived class, gets the atomized string containing the same value as the specified string.
   syntax:
     content: public abstract string Get(string array)
     content.vb: Public MustOverride Function Get(array As String) As String
     parameters:
     - id: array
       type: System.String
-      description: The name to look up.
     return:
       type: System.String
-      description: The atomized string or null if the string has not already been atomized.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*array* is null.'
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
 references:
 - uid: System.Xml
+  commentId: N:System.Xml
   isExternal: false
   name: System.Xml
+  nameWithType: System.Xml
   fullName: System.Xml
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Char[]
-  isExternal: false
   name: Char[]
+  nameWithType: Char[]
   fullName: System.Char[]
+  nameWithType.vb: Char()
   fullname.vb: System.Char()
   name.vb: Char()
   spec.csharp:
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Char
     name: Char
+    nameWithType: Char
     fullName: System.Char
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
-- uid: System.IndexOutOfRangeException
-  isExternal: false
-  name: IndexOutOfRangeException
-  fullName: System.IndexOutOfRangeException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException

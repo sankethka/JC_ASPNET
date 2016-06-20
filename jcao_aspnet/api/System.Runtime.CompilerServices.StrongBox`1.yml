@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.CompilerServices.StrongBox`1
+  commentId: T:System.Runtime.CompilerServices.StrongBox`1
   id: StrongBox`1
   parent: System.Runtime.CompilerServices
   children:
@@ -7,25 +8,29 @@ items:
   - System.Runtime.CompilerServices.StrongBox`1.#ctor(`0)
   - System.Runtime.CompilerServices.StrongBox`1.System#Runtime#CompilerServices#IStrongBox#Value
   - System.Runtime.CompilerServices.StrongBox`1.Value
+  langs:
+  - csharp
+  - vb
   name: StrongBox<T>
-  name.vb: StrongBox(Of T)
+  nameWithType: StrongBox<T>
   fullName: System.Runtime.CompilerServices.StrongBox<T>
-  fullName.vb: System.Runtime.CompilerServices.StrongBox(Of T)
   type: Class
   source:
-    remote: &o0
-      path: src/System.Runtime/src/System/Runtime/CompilerServices/StrongBox.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Runtime/src/System/Runtime/CompilerServices/StrongBox.cs
-    startLine: 10
+    id: StrongBox
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2981
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Holds a reference to a value.
   syntax:
     content: 'public class StrongBox<T> : IStrongBox'
-    content.vb: Public Class StrongBox(Of T) Implements IStrongBox
+    content.vb: >-
+      Public Class StrongBox(Of T)
+          Implements IStrongBox
     typeParameters:
     - id: T
   inheritance:
@@ -40,292 +45,447 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  nameWithType.vb: StrongBox(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: System.Runtime.CompilerServices.StrongBox(Of T)
+  name.vb: StrongBox(Of T)
 - uid: System.Runtime.CompilerServices.StrongBox`1.Value
+  commentId: F:System.Runtime.CompilerServices.StrongBox`1.Value
   id: Value
   parent: System.Runtime.CompilerServices.StrongBox`1
+  langs:
+  - csharp
+  - vb
   name: Value
+  nameWithType: StrongBox<T>.Value
   fullName: System.Runtime.CompilerServices.StrongBox<T>.Value
-  fullName.vb: System.Runtime.CompilerServices.StrongBox(Of T).Value
   type: Field
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/Runtime/CompilerServices/StrongBox.cs
-    startLine: 17
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Value
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2983
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Represents the value that the <xref href="System.Runtime.CompilerServices.StrongBox`1" data-throw-if-not-resolved="false"></xref> references.
   syntax:
     content: public T Value
     content.vb: Public Value As T
+    return:
+      type: '{T}'
+  nameWithType.vb: StrongBox(Of T).Value
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.CompilerServices.StrongBox(Of T).Value
 - uid: System.Runtime.CompilerServices.StrongBox`1.#ctor
+  commentId: M:System.Runtime.CompilerServices.StrongBox`1.#ctor
   id: '#ctor'
   parent: System.Runtime.CompilerServices.StrongBox`1
+  langs:
+  - csharp
+  - vb
   name: StrongBox()
+  nameWithType: StrongBox<T>.StrongBox()
   fullName: System.Runtime.CompilerServices.StrongBox<T>.StrongBox()
-  fullName.vb: System.Runtime.CompilerServices.StrongBox(Of T).StrongBox()
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/Runtime/CompilerServices/StrongBox.cs
-    startLine: 22
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2984
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Initializes a new StrongBox which can receive a value when used in a reference call.
   syntax:
     content: public StrongBox()
     content.vb: Public Sub New
+  nameWithType.vb: StrongBox(Of T).StrongBox()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.CompilerServices.StrongBox(Of T).StrongBox()
 - uid: System.Runtime.CompilerServices.StrongBox`1.#ctor(`0)
+  commentId: M:System.Runtime.CompilerServices.StrongBox`1.#ctor(`0)
   id: '#ctor(`0)'
   parent: System.Runtime.CompilerServices.StrongBox`1
+  langs:
+  - csharp
+  - vb
   name: StrongBox(T)
+  nameWithType: StrongBox<T>.StrongBox(T)
   fullName: System.Runtime.CompilerServices.StrongBox<T>.StrongBox(T)
-  fullName.vb: System.Runtime.CompilerServices.StrongBox(Of T).StrongBox(T)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/Runtime/CompilerServices/StrongBox.cs
-    startLine: 30
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2985
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Initializes a new instance of the <xref href="System.Runtime.CompilerServices.StrongBox`1" data-throw-if-not-resolved="false"></xref> class by using the supplied value.
   syntax:
     content: public StrongBox(T value)
     content.vb: Public Sub New(value As T)
     parameters:
     - id: value
       type: '{T}'
-      description: A value that the <xref href="System.Runtime.CompilerServices.StrongBox`1" data-throw-if-not-resolved="false"></xref> will reference.
+  nameWithType.vb: StrongBox(Of T).StrongBox(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.CompilerServices.StrongBox(Of T).StrongBox(T)
 - uid: System.Runtime.CompilerServices.StrongBox`1.System#Runtime#CompilerServices#IStrongBox#Value
+  commentId: P:System.Runtime.CompilerServices.StrongBox`1.System#Runtime#CompilerServices#IStrongBox#Value
   id: System#Runtime#CompilerServices#IStrongBox#Value
+  isEii: true
   parent: System.Runtime.CompilerServices.StrongBox`1
+  langs:
+  - csharp
+  - vb
   name: IStrongBox.Value
-  name.vb: System.Runtime.CompilerServices.IStrongBox.Value
+  nameWithType: StrongBox<T>.IStrongBox.Value
   fullName: System.Runtime.CompilerServices.StrongBox<T>.System.Runtime.CompilerServices.IStrongBox.Value
-  fullName.vb: System.Runtime.CompilerServices.StrongBox(Of T).System.Runtime.CompilerServices.IStrongBox.Value
   type: Property
   source:
-    remote: *o0
-    path: src/System.Runtime/src/System/Runtime/CompilerServices/StrongBox.cs
-    startLine: 35
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: System.Runtime.CompilerServices.IStrongBox.Value
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2986
   assemblies:
   - System.Runtime
   namespace: System.Runtime.CompilerServices
-  summary: Gets or sets the value that the <xref href="System.Runtime.CompilerServices.StrongBox`1" data-throw-if-not-resolved="false"></xref> references.
   syntax:
     content: object IStrongBox.Value { get; set; }
     content.vb: ReadOnly WriteOnly Property System.Runtime.CompilerServices.IStrongBox.Value As Object Implements IStrongBox.Value
     parameters: []
     return:
       type: System.Object
-      description: The value that the <xref href="System.Runtime.CompilerServices.StrongBox`1" data-throw-if-not-resolved="false"></xref> references.
+  implements:
+  - System.Runtime.CompilerServices.IStrongBox.Value
+  nameWithType.vb: StrongBox(Of T).System.Runtime.CompilerServices.IStrongBox.Value
+  modifiers.csharp:
+  - get
+  - set
+  fullName.vb: System.Runtime.CompilerServices.StrongBox(Of T).System.Runtime.CompilerServices.IStrongBox.Value
+  name.vb: System.Runtime.CompilerServices.IStrongBox.Value
 references:
 - uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
   isExternal: false
   name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
   fullName: System.Runtime.CompilerServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Runtime.CompilerServices.IStrongBox
+  commentId: T:System.Runtime.CompilerServices.IStrongBox
   parent: System.Runtime.CompilerServices
   isExternal: false
   name: IStrongBox
+  nameWithType: IStrongBox
   fullName: System.Runtime.CompilerServices.IStrongBox
 - uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object)
+  nameWithType: Object.Equals(Object)
   fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
   parent: System.Object
   isExternal: false
   name: GetHashCode()
+  nameWithType: Object.GetHashCode()
   fullName: System.Object.GetHashCode()
   spec.csharp:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
   isExternal: false
   name: T
+  nameWithType: T
   fullName: T
+- uid: System.Runtime.CompilerServices.IStrongBox.Value
+  commentId: P:System.Runtime.CompilerServices.IStrongBox.Value
+  parent: System.Runtime.CompilerServices.IStrongBox
+  isExternal: false
+  name: Value
+  nameWithType: IStrongBox.Value
+  fullName: System.Runtime.CompilerServices.IStrongBox.Value

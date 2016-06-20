@@ -1,41 +1,66 @@
 items:
 - uid: Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle
+  commentId: T:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle
   id: SafeMemoryMappedFileHandle
   parent: Microsoft.Win32.SafeHandles
   children:
   - Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle.IsInvalid
   - Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle.ReleaseHandle
+  langs:
+  - csharp
+  - vb
   name: SafeMemoryMappedFileHandle
+  nameWithType: SafeMemoryMappedFileHandle
   fullName: Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle
   type: Class
   source:
-    remote: &o0
-      path: src/System.IO.MemoryMappedFiles/src/Microsoft/Win32/SafeMemoryMappedFileHandle.Windows.cs
+    remote:
+      path: src/System.IO.MemoryMappedFiles/ref/System.IO.MemoryMappedFiles.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.IO.MemoryMappedFiles/src/Microsoft/Win32/SafeMemoryMappedFileHandle.Windows.cs
-    startLine: 10
+    id: SafeMemoryMappedFileHandle
+    path: src/System.IO.MemoryMappedFiles/ref/System.IO.MemoryMappedFiles.Manual.cs
+    startLine: 11
   assemblies:
   - System.IO.MemoryMappedFiles
   namespace: Microsoft.Win32.SafeHandles
-  summary: Provides a safe handle that represents a memory-mapped file for sequential access.
   syntax:
     content: 'public sealed class SafeMemoryMappedFileHandle : Runtime.InteropServices.SafeHandle, Runtime.InteropServices.SafeHandle'
-    content.vb: Public NotInheritable Class SafeMemoryMappedFileHandle Inherits Runtime.InteropServices.SafeHandle Implements Runtime.InteropServices.SafeHandle
+    content.vb: >-
+      Public NotInheritable Class SafeMemoryMappedFileHandle
+          Inherits Runtime.InteropServices.SafeHandle
+          Implements Runtime.InteropServices.SafeHandle
   inheritance:
   - System.Object
   implements:
   - System.Runtime.InteropServices.SafeHandle
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle.ReleaseHandle
+  commentId: M:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle.ReleaseHandle
   id: ReleaseHandle
   parent: Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle
+  langs:
+  - csharp
+  - vb
   name: ReleaseHandle()
+  nameWithType: SafeMemoryMappedFileHandle.ReleaseHandle()
   fullName: Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle.ReleaseHandle()
   type: Method
   source:
-    remote: *o0
-    path: src/System.IO.MemoryMappedFiles/src/Microsoft/Win32/SafeMemoryMappedFileHandle.Windows.cs
-    startLine: 17
+    remote:
+      path: src/System.IO.MemoryMappedFiles/ref/System.IO.MemoryMappedFiles.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReleaseHandle
+    path: src/System.IO.MemoryMappedFiles/ref/System.IO.MemoryMappedFiles.cs
+    startLine: 13
   assemblies:
   - System.IO.MemoryMappedFiles
   namespace: Microsoft.Win32.SafeHandles
@@ -44,16 +69,31 @@ items:
     content.vb: Protected Overrides Function ReleaseHandle As Boolean
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle.IsInvalid
+  commentId: P:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle.IsInvalid
   id: IsInvalid
   parent: Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle
+  langs:
+  - csharp
+  - vb
   name: IsInvalid
+  nameWithType: SafeMemoryMappedFileHandle.IsInvalid
   fullName: Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle.IsInvalid
   type: Property
   source:
-    remote: *o0
-    path: src/System.IO.MemoryMappedFiles/src/Microsoft/Win32/SafeMemoryMappedFileHandle.Windows.cs
-    startLine: 22
+    remote:
+      path: src/System.IO.MemoryMappedFiles/ref/System.IO.MemoryMappedFiles.Manual.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsInvalid
+    path: src/System.IO.MemoryMappedFiles/ref/System.IO.MemoryMappedFiles.Manual.cs
+    startLine: 13
   assemblies:
   - System.IO.MemoryMappedFiles
   namespace: Microsoft.Win32.SafeHandles
@@ -63,31 +103,51 @@ items:
     parameters: []
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 references:
 - uid: Microsoft.Win32.SafeHandles
+  commentId: N:Microsoft.Win32.SafeHandles
   isExternal: false
   name: Microsoft.Win32.SafeHandles
+  nameWithType: Microsoft.Win32.SafeHandles
   fullName: Microsoft.Win32.SafeHandles
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Runtime.InteropServices.SafeHandle
+  commentId: T:System.Runtime.InteropServices.SafeHandle
   parent: System.Runtime.InteropServices
   isExternal: false
-  name: Runtime.InteropServices.SafeHandle
+  name: SafeHandle
+  nameWithType: SafeHandle
   fullName: System.Runtime.InteropServices.SafeHandle
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
   isExternal: false
   name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean

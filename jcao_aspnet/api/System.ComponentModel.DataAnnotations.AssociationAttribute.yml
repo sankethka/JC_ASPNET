@@ -1,5 +1,6 @@
 items:
 - uid: System.ComponentModel.DataAnnotations.AssociationAttribute
+  commentId: T:System.ComponentModel.DataAnnotations.AssociationAttribute
   id: AssociationAttribute
   parent: System.ComponentModel.DataAnnotations
   children:
@@ -10,257 +11,393 @@ items:
   - System.ComponentModel.DataAnnotations.AssociationAttribute.OtherKeyMembers
   - System.ComponentModel.DataAnnotations.AssociationAttribute.ThisKey
   - System.ComponentModel.DataAnnotations.AssociationAttribute.ThisKeyMembers
+  langs:
+  - csharp
+  - vb
   name: AssociationAttribute
+  nameWithType: AssociationAttribute
   fullName: System.ComponentModel.DataAnnotations.AssociationAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/AssociationAttribute.cs
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/AssociationAttribute.cs
-    startLine: 11
+    id: AssociationAttribute
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 10
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Specifies that an entity member represents a data relationship, such as a foreign key relationship.
   syntax:
     content: 'public sealed class AssociationAttribute : Attribute'
-    content.vb: Public NotInheritable Class AssociationAttribute Inherits Attribute
+    content.vb: >-
+      Public NotInheritable Class AssociationAttribute
+          Inherits Attribute
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.ComponentModel.DataAnnotations.AssociationAttribute.#ctor(System.String,System.String,System.String)
+  commentId: M:System.ComponentModel.DataAnnotations.AssociationAttribute.#ctor(System.String,System.String,System.String)
   id: '#ctor(System.String,System.String,System.String)'
   parent: System.ComponentModel.DataAnnotations.AssociationAttribute
+  langs:
+  - csharp
+  - vb
   name: AssociationAttribute(String, String, String)
+  nameWithType: AssociationAttribute.AssociationAttribute(String, String, String)
   fullName: System.ComponentModel.DataAnnotations.AssociationAttribute.AssociationAttribute(System.String, System.String, System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/AssociationAttribute.cs
-    startLine: 30
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 14
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Initializes a new instance of the <xref href="System.ComponentModel.DataAnnotations.AssociationAttribute" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public AssociationAttribute(string name, string thisKey, string otherKey)
     content.vb: Public Sub New(name As String, thisKey As String, otherKey As String)
     parameters:
     - id: name
       type: System.String
-      description: The name of the association.
     - id: thisKey
       type: System.String
-      description: A comma-separated list of the property names of the key values on the *thisKey* side of the association.
     - id: otherKey
       type: System.String
-      description: A comma-separated list of the property names of the key values on the *otherKey* side of the association.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DataAnnotations.AssociationAttribute.IsForeignKey
+  commentId: P:System.ComponentModel.DataAnnotations.AssociationAttribute.IsForeignKey
   id: IsForeignKey
   parent: System.ComponentModel.DataAnnotations.AssociationAttribute
+  langs:
+  - csharp
+  - vb
   name: IsForeignKey
+  nameWithType: AssociationAttribute.IsForeignKey
   fullName: System.ComponentModel.DataAnnotations.AssociationAttribute.IsForeignKey
   type: Property
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/AssociationAttribute.cs
-    startLine: 68
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsForeignKey
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 15
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Gets or sets a value that indicates whether the association member represents a foreign key.
   syntax:
     content: public bool IsForeignKey { get; set; }
     content.vb: Public Property IsForeignKey As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the association represents a foreign key; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.ComponentModel.DataAnnotations.AssociationAttribute.Name
+  commentId: P:System.ComponentModel.DataAnnotations.AssociationAttribute.Name
   id: Name
   parent: System.ComponentModel.DataAnnotations.AssociationAttribute
+  langs:
+  - csharp
+  - vb
   name: Name
+  nameWithType: AssociationAttribute.Name
   fullName: System.ComponentModel.DataAnnotations.AssociationAttribute.Name
   type: Property
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/AssociationAttribute.cs
-    startLine: 41
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Name
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 16
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Gets the name of the association.
   syntax:
     content: public string Name { get; }
     content.vb: Public ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-      description: The name of the association.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ComponentModel.DataAnnotations.AssociationAttribute.OtherKey
+  commentId: P:System.ComponentModel.DataAnnotations.AssociationAttribute.OtherKey
   id: OtherKey
   parent: System.ComponentModel.DataAnnotations.AssociationAttribute
+  langs:
+  - csharp
+  - vb
   name: OtherKey
+  nameWithType: AssociationAttribute.OtherKey
   fullName: System.ComponentModel.DataAnnotations.AssociationAttribute.OtherKey
   type: Property
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/AssociationAttribute.cs
-    startLine: 59
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OtherKey
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 17
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Gets the property names of the key values on the OtherKey side of the association.
   syntax:
     content: public string OtherKey { get; }
     content.vb: Public ReadOnly Property OtherKey As String
     parameters: []
     return:
       type: System.String
-      description: A comma-separated list of the property names that represent the key values on the OtherKey side of the association.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ComponentModel.DataAnnotations.AssociationAttribute.OtherKeyMembers
+  commentId: P:System.ComponentModel.DataAnnotations.AssociationAttribute.OtherKeyMembers
   id: OtherKeyMembers
   parent: System.ComponentModel.DataAnnotations.AssociationAttribute
+  langs:
+  - csharp
+  - vb
   name: OtherKeyMembers
+  nameWithType: AssociationAttribute.OtherKeyMembers
   fullName: System.ComponentModel.DataAnnotations.AssociationAttribute.OtherKeyMembers
   type: Property
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/AssociationAttribute.cs
-    startLine: 88
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OtherKeyMembers
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 18
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Gets a collection of individual key members that are specified in the <xref href="System.ComponentModel.DataAnnotations.AssociationAttribute.OtherKey" data-throw-if-not-resolved="false"></xref> property.
   syntax:
     content: public Collections.Generic.IEnumerable<string> OtherKeyMembers { get; }
     content.vb: Public ReadOnly Property OtherKeyMembers As Collections.Generic.IEnumerable(Of String)
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: A collection of individual key members that are specified in the <xref href="System.ComponentModel.DataAnnotations.AssociationAttribute.OtherKey" data-throw-if-not-resolved="false"></xref> property.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ComponentModel.DataAnnotations.AssociationAttribute.ThisKey
+  commentId: P:System.ComponentModel.DataAnnotations.AssociationAttribute.ThisKey
   id: ThisKey
   parent: System.ComponentModel.DataAnnotations.AssociationAttribute
+  langs:
+  - csharp
+  - vb
   name: ThisKey
+  nameWithType: AssociationAttribute.ThisKey
   fullName: System.ComponentModel.DataAnnotations.AssociationAttribute.ThisKey
   type: Property
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/AssociationAttribute.cs
-    startLine: 50
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ThisKey
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 19
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Gets the property names of the key values on the ThisKey side of the association.
   syntax:
     content: public string ThisKey { get; }
     content.vb: Public ReadOnly Property ThisKey As String
     parameters: []
     return:
       type: System.String
-      description: A comma-separated list of the property names that represent the key values on the ThisKey side of the association.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.ComponentModel.DataAnnotations.AssociationAttribute.ThisKeyMembers
+  commentId: P:System.ComponentModel.DataAnnotations.AssociationAttribute.ThisKeyMembers
   id: ThisKeyMembers
   parent: System.ComponentModel.DataAnnotations.AssociationAttribute
+  langs:
+  - csharp
+  - vb
   name: ThisKeyMembers
+  nameWithType: AssociationAttribute.ThisKeyMembers
   fullName: System.ComponentModel.DataAnnotations.AssociationAttribute.ThisKeyMembers
   type: Property
   source:
-    remote: *o0
-    path: src/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/AssociationAttribute.cs
-    startLine: 77
+    remote:
+      path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ThisKeyMembers
+    path: src/System.ComponentModel.Annotations/ref/System.ComponentModel.Annotations.cs
+    startLine: 20
   assemblies:
   - System.ComponentModel.Annotations
   namespace: System.ComponentModel.DataAnnotations
-  summary: Gets a collection of individual key members that are specified in the <xref href="System.ComponentModel.DataAnnotations.AssociationAttribute.ThisKey" data-throw-if-not-resolved="false"></xref> property.
   syntax:
     content: public Collections.Generic.IEnumerable<string> ThisKeyMembers { get; }
     content.vb: Public ReadOnly Property ThisKeyMembers As Collections.Generic.IEnumerable(Of String)
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: A collection of individual key members that are specified in the <xref href="System.ComponentModel.DataAnnotations.AssociationAttribute.ThisKey" data-throw-if-not-resolved="false"></xref> property.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.ComponentModel.DataAnnotations
+  commentId: N:System.ComponentModel.DataAnnotations
   isExternal: false
   name: System.ComponentModel.DataAnnotations
+  nameWithType: System.ComponentModel.DataAnnotations
   fullName: System.ComponentModel.DataAnnotations
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<String>
-  name.vb: Collections.Generic.IEnumerable(Of String)
+  nameWithType: Collections.Generic.IEnumerable<String>
   fullName: System.Collections.Generic.IEnumerable<System.String>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of String)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: Collections.Generic.IEnumerable(Of String)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
   name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic

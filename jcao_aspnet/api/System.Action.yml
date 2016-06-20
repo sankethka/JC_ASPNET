@@ -1,27 +1,40 @@
 items:
 - uid: System.Action
+  commentId: T:System.Action
   id: Action
   parent: System
   children: []
+  langs:
+  - csharp
+  - vb
   name: Action
+  nameWithType: Action
   fullName: System.Action
   type: Delegate
   source:
     remote:
-      path: src/mscorlib/src/System/Action.cs
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Action.cs
-    startLine: 15
+      repo: https://github.com/dotnet/corefx.git
+    id: Action
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 10
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Encapsulates a method that has no parameters and does not return a value.
   syntax:
     content: public delegate void Action();
     content.vb: Public Delegate Sub Action
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System

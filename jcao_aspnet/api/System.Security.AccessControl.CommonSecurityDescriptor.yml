@@ -1,5 +1,6 @@
 items:
 - uid: System.Security.AccessControl.CommonSecurityDescriptor
+  commentId: T:System.Security.AccessControl.CommonSecurityDescriptor
   id: CommonSecurityDescriptor
   parent: System.Security.AccessControl
   children:
@@ -22,23 +23,29 @@ items:
   - System.Security.AccessControl.CommonSecurityDescriptor.SetDiscretionaryAclProtection(System.Boolean,System.Boolean)
   - System.Security.AccessControl.CommonSecurityDescriptor.SetSystemAclProtection(System.Boolean,System.Boolean)
   - System.Security.AccessControl.CommonSecurityDescriptor.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: CommonSecurityDescriptor
+  nameWithType: CommonSecurityDescriptor
   fullName: System.Security.AccessControl.CommonSecurityDescriptor
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 825
+    id: CommonSecurityDescriptor
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 180
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Represents a security descriptor. A security descriptor includes an owner, a primary group, a Discretionary Access Control List (DACL), and a System Access Control List (SACL).
   syntax:
     content: 'public sealed class CommonSecurityDescriptor : GenericSecurityDescriptor'
-    content.vb: Public NotInheritable Class CommonSecurityDescriptor Inherits GenericSecurityDescriptor
+    content.vb: >-
+      Public NotInheritable Class CommonSecurityDescriptor
+          Inherits GenericSecurityDescriptor
   inheritance:
   - System.Object
   - System.Security.AccessControl.GenericSecurityDescriptor
@@ -48,667 +55,967 @@ items:
   - System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm(System.Byte[],System.Int32)
   - System.Security.AccessControl.GenericSecurityDescriptor.GetSddlForm(System.Security.AccessControl.AccessControlSections)
   - System.Security.AccessControl.GenericSecurityDescriptor.IsSddlConversionSupported
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.Byte[],System.Int32)
+  commentId: M:System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.Byte[],System.Int32)
   id: '#ctor(System.Boolean,System.Boolean,System.Byte[],System.Int32)'
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: CommonSecurityDescriptor(Boolean, Boolean, Byte[], Int32)
-  name.vb: CommonSecurityDescriptor(Boolean, Boolean, Byte(), Int32)
+  nameWithType: CommonSecurityDescriptor.CommonSecurityDescriptor(Boolean, Boolean, Byte[], Int32)
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.CommonSecurityDescriptor(System.Boolean, System.Boolean, System.Byte[], System.Int32)
-  fullName.vb: System.Security.AccessControl.CommonSecurityDescriptor.CommonSecurityDescriptor(System.Boolean, System.Boolean, System.Byte(), System.Int32)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 979
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 182
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> class from the specified array of byte values.
   syntax:
     content: public CommonSecurityDescriptor(bool isContainer, bool isDS, byte[] binaryForm, int offset)
     content.vb: Public Sub New(isContainer As Boolean, isDS As Boolean, binaryForm As Byte(), offset As Integer)
     parameters:
     - id: isContainer
       type: System.Boolean
-      description: true if the new security descriptor is associated with a container object.
     - id: isDS
       type: System.Boolean
-      description: true if the new security descriptor is associated with a directory object.
     - id: binaryForm
       type: System.Byte[]
-      description: The array of byte values from which to create the new <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
     - id: offset
       type: System.Int32
-      description: The offset in the *binaryForm* array at which to begin copying.
+  nameWithType.vb: CommonSecurityDescriptor.CommonSecurityDescriptor(Boolean, Boolean, Byte(), Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.AccessControl.CommonSecurityDescriptor.CommonSecurityDescriptor(System.Boolean, System.Boolean, System.Byte(), System.Int32)
+  name.vb: CommonSecurityDescriptor(Boolean, Boolean, Byte(), Int32)
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.ControlFlags,System.Security.Principal.SecurityIdentifier,System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.SystemAcl,System.Security.AccessControl.DiscretionaryAcl)
+  commentId: M:System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.ControlFlags,System.Security.Principal.SecurityIdentifier,System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.SystemAcl,System.Security.AccessControl.DiscretionaryAcl)
   id: '#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.ControlFlags,System.Security.Principal.SecurityIdentifier,System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.SystemAcl,System.Security.AccessControl.DiscretionaryAcl)'
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: CommonSecurityDescriptor(Boolean, Boolean, ControlFlags, Principal.SecurityIdentifier, Principal.SecurityIdentifier, SystemAcl, DiscretionaryAcl)
+  nameWithType: CommonSecurityDescriptor.CommonSecurityDescriptor(Boolean, Boolean, ControlFlags, Principal.SecurityIdentifier, Principal.SecurityIdentifier, SystemAcl, DiscretionaryAcl)
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.CommonSecurityDescriptor(System.Boolean, System.Boolean, System.Security.AccessControl.ControlFlags, System.Security.Principal.SecurityIdentifier, System.Security.Principal.SecurityIdentifier, System.Security.AccessControl.SystemAcl, System.Security.AccessControl.DiscretionaryAcl)
   type: Constructor
   source:
-    remote: &o1
+    remote:
       path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 180
+    startLine: 183
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> class from the specified information.
   syntax:
     content: public CommonSecurityDescriptor(bool isContainer, bool isDS, ControlFlags flags, Principal.SecurityIdentifier owner, Principal.SecurityIdentifier group, SystemAcl systemAcl, DiscretionaryAcl discretionaryAcl)
     content.vb: Public Sub New(isContainer As Boolean, isDS As Boolean, flags As ControlFlags, owner As Principal.SecurityIdentifier, group As Principal.SecurityIdentifier, systemAcl As SystemAcl, discretionaryAcl As DiscretionaryAcl)
     parameters:
     - id: isContainer
       type: System.Boolean
-      description: true if the new security descriptor is associated with a container object.
     - id: isDS
       type: System.Boolean
-      description: true if the new security descriptor is associated with a directory object.
     - id: flags
       type: System.Security.AccessControl.ControlFlags
-      description: Flags that specify behavior of the new <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
     - id: owner
       type: System.Security.Principal.SecurityIdentifier
-      description: The owner for the new <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
     - id: group
       type: System.Security.Principal.SecurityIdentifier
-      description: The primary group for the new <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
     - id: systemAcl
       type: System.Security.AccessControl.SystemAcl
-      description: The System Access Control List (SACL) for the new <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
     - id: discretionaryAcl
       type: System.Security.AccessControl.DiscretionaryAcl
-      description: The Discretionary Access Control List (DACL) for the new <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.RawSecurityDescriptor)
+  commentId: M:System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.RawSecurityDescriptor)
   id: '#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.RawSecurityDescriptor)'
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: CommonSecurityDescriptor(Boolean, Boolean, RawSecurityDescriptor)
+  nameWithType: CommonSecurityDescriptor.CommonSecurityDescriptor(Boolean, Boolean, RawSecurityDescriptor)
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.CommonSecurityDescriptor(System.Boolean, System.Boolean, System.Security.AccessControl.RawSecurityDescriptor)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 943
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 184
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> class from the specified <xref href="System.Security.AccessControl.RawSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public CommonSecurityDescriptor(bool isContainer, bool isDS, RawSecurityDescriptor rawSecurityDescriptor)
     content.vb: Public Sub New(isContainer As Boolean, isDS As Boolean, rawSecurityDescriptor As RawSecurityDescriptor)
     parameters:
     - id: isContainer
       type: System.Boolean
-      description: true if the new security descriptor is associated with a container object.
     - id: isDS
       type: System.Boolean
-      description: true if the new security descriptor is associated with a directory object.
     - id: rawSecurityDescriptor
       type: System.Security.AccessControl.RawSecurityDescriptor
-      description: The <xref href="System.Security.AccessControl.RawSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object from which to create the new <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.String)
+  commentId: M:System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.String)
   id: '#ctor(System.Boolean,System.Boolean,System.String)'
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: CommonSecurityDescriptor(Boolean, Boolean, String)
+  nameWithType: CommonSecurityDescriptor.CommonSecurityDescriptor(Boolean, Boolean, String)
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.CommonSecurityDescriptor(System.Boolean, System.Boolean, System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 970
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 185
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> class from the specified Security Descriptor Definition Language (SDDL) string.
   syntax:
     content: public CommonSecurityDescriptor(bool isContainer, bool isDS, string sddlForm)
     content.vb: Public Sub New(isContainer As Boolean, isDS As Boolean, sddlForm As String)
     parameters:
     - id: isContainer
       type: System.Boolean
-      description: true if the new security descriptor is associated with a container object.
     - id: isDS
       type: System.Boolean
-      description: true if the new security descriptor is associated with a directory object.
     - id: sddlForm
       type: System.String
-      description: The SDDL string from which to create the new <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.ControlFlags
+  commentId: P:System.Security.AccessControl.CommonSecurityDescriptor.ControlFlags
   id: ControlFlags
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: ControlFlags
+  nameWithType: CommonSecurityDescriptor.ControlFlags
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.ControlFlags
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1017
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ControlFlags
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 186
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets values that specify behavior of the <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public override ControlFlags ControlFlags { get; }
     content.vb: Public Overrides ReadOnly Property ControlFlags As ControlFlags
     parameters: []
     return:
       type: System.Security.AccessControl.ControlFlags
-      description: One or more values of the <xref href="System.Security.AccessControl.ControlFlags" data-throw-if-not-resolved="false"></xref> enumeration combined with a logical OR operation.
   overridden: System.Security.AccessControl.GenericSecurityDescriptor.ControlFlags
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.DiscretionaryAcl
+  commentId: P:System.Security.AccessControl.CommonSecurityDescriptor.DiscretionaryAcl
   id: DiscretionaryAcl
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: DiscretionaryAcl
+  nameWithType: CommonSecurityDescriptor.DiscretionaryAcl
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.DiscretionaryAcl
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1109
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DiscretionaryAcl
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 187
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets or sets the discretionary access control list (DACL) for this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object. The DACL contains access rules.
   syntax:
     content: public DiscretionaryAcl DiscretionaryAcl { get; set; }
     content.vb: Public Property DiscretionaryAcl As DiscretionaryAcl
     parameters: []
     return:
       type: System.Security.AccessControl.DiscretionaryAcl
-      description: The DACL for this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.Group
+  commentId: P:System.Security.AccessControl.CommonSecurityDescriptor.Group
   id: Group
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: Group
+  nameWithType: CommonSecurityDescriptor.Group
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.Group
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1046
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Group
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 188
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets or sets the primary group for this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public override Principal.SecurityIdentifier Group { get; set; }
     content.vb: Public Overrides Property Group As Principal.SecurityIdentifier
     parameters: []
     return:
       type: System.Security.Principal.SecurityIdentifier
-      description: The primary group for this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
   overridden: System.Security.AccessControl.GenericSecurityDescriptor.Group
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.IsContainer
+  commentId: P:System.Security.AccessControl.CommonSecurityDescriptor.IsContainer
   id: IsContainer
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: IsContainer
+  nameWithType: CommonSecurityDescriptor.IsContainer
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.IsContainer
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1002
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsContainer
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 189
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets a Boolean value that specifies whether the object associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object is a container object.
   syntax:
     content: public bool IsContainer { get; }
     content.vb: Public ReadOnly Property IsContainer As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the object associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object is a container object; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.IsDiscretionaryAclCanonical
+  commentId: P:System.Security.AccessControl.CommonSecurityDescriptor.IsDiscretionaryAclCanonical
   id: IsDiscretionaryAclCanonical
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: IsDiscretionaryAclCanonical
+  nameWithType: CommonSecurityDescriptor.IsDiscretionaryAclCanonical
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.IsDiscretionaryAclCanonical
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1162
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsDiscretionaryAclCanonical
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 190
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets a Boolean value that specifies whether the Discretionary Access Control List (DACL) associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object is in canonical order.
   syntax:
     content: public bool IsDiscretionaryAclCanonical { get; }
     content.vb: Public ReadOnly Property IsDiscretionaryAclCanonical As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the DACL associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object is in canonical order; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.IsDS
+  commentId: P:System.Security.AccessControl.CommonSecurityDescriptor.IsDS
   id: IsDS
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: IsDS
+  nameWithType: CommonSecurityDescriptor.IsDS
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.IsDS
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1007
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsDS
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 191
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets a Boolean value that specifies whether the object associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object is a directory object.
   syntax:
     content: public bool IsDS { get; }
     content.vb: Public ReadOnly Property IsDS As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the object associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object is a directory object; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.IsSystemAclCanonical
+  commentId: P:System.Security.AccessControl.CommonSecurityDescriptor.IsSystemAclCanonical
   id: IsSystemAclCanonical
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: IsSystemAclCanonical
+  nameWithType: CommonSecurityDescriptor.IsSystemAclCanonical
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.IsSystemAclCanonical
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1157
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsSystemAclCanonical
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 192
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets a Boolean value that specifies whether the System Access Control List (SACL) associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object is in canonical order.
   syntax:
     content: public bool IsSystemAclCanonical { get; }
     content.vb: Public ReadOnly Property IsSystemAclCanonical As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the SACL associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object is in canonical order; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.Owner
+  commentId: P:System.Security.AccessControl.CommonSecurityDescriptor.Owner
   id: Owner
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: Owner
+  nameWithType: CommonSecurityDescriptor.Owner
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.Owner
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1029
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Owner
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 193
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets or sets the owner of the object associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public override Principal.SecurityIdentifier Owner { get; set; }
     content.vb: Public Overrides Property Owner As Principal.SecurityIdentifier
     parameters: []
     return:
       type: System.Security.Principal.SecurityIdentifier
-      description: The owner of the object associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
   overridden: System.Security.AccessControl.GenericSecurityDescriptor.Owner
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.SystemAcl
+  commentId: P:System.Security.AccessControl.CommonSecurityDescriptor.SystemAcl
   id: SystemAcl
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: SystemAcl
+  nameWithType: CommonSecurityDescriptor.SystemAcl
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.SystemAcl
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1060
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SystemAcl
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 194
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets or sets the System Access Control List (SACL) for this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object. The SACL contains audit rules.
   syntax:
     content: public SystemAcl SystemAcl { get; set; }
     content.vb: Public Property SystemAcl As SystemAcl
     parameters: []
     return:
       type: System.Security.AccessControl.SystemAcl
-      description: The SACL for this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.AddDiscretionaryAcl(System.Byte,System.Int32)
+  commentId: M:System.Security.AccessControl.CommonSecurityDescriptor.AddDiscretionaryAcl(System.Byte,System.Int32)
   id: AddDiscretionaryAcl(System.Byte,System.Int32)
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: AddDiscretionaryAcl(Byte, Int32)
+  nameWithType: CommonSecurityDescriptor.AddDiscretionaryAcl(Byte, Int32)
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.AddDiscretionaryAcl(System.Byte, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1237
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddDiscretionaryAcl
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 195
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Sets the <xref href="System.Security.AccessControl.CommonSecurityDescriptor.DiscretionaryAcl" data-throw-if-not-resolved="false"></xref> property for this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> instance and sets the <xref href="System.Security.AccessControl.ControlFlags.DiscretionaryAclPresent" data-throw-if-not-resolved="false"></xref> flag.
   syntax:
     content: public void AddDiscretionaryAcl(byte revision, int trusted)
     content.vb: Public Sub AddDiscretionaryAcl(revision As Byte, trusted As Integer)
     parameters:
     - id: revision
       type: System.Byte
-      description: The revision level of the new <xref href="System.Security.AccessControl.DiscretionaryAcl" data-throw-if-not-resolved="false"></xref> object.
     - id: trusted
       type: System.Int32
-      description: The number of Access Control Entries (ACEs) this <xref href="System.Security.AccessControl.DiscretionaryAcl" data-throw-if-not-resolved="false"></xref> object can contain. This number is to be used only as a hint.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.AddSystemAcl(System.Byte,System.Int32)
+  commentId: M:System.Security.AccessControl.CommonSecurityDescriptor.AddSystemAcl(System.Byte,System.Int32)
   id: AddSystemAcl(System.Byte,System.Int32)
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: AddSystemAcl(Byte, Int32)
+  nameWithType: CommonSecurityDescriptor.AddSystemAcl(Byte, Int32)
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.AddSystemAcl(System.Byte, System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1243
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddSystemAcl
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 196
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Sets the <xref href="System.Security.AccessControl.CommonSecurityDescriptor.SystemAcl" data-throw-if-not-resolved="false"></xref> property for this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> instance and sets the <xref href="System.Security.AccessControl.ControlFlags.SystemAclPresent" data-throw-if-not-resolved="false"></xref> flag.
   syntax:
     content: public void AddSystemAcl(byte revision, int trusted)
     content.vb: Public Sub AddSystemAcl(revision As Byte, trusted As Integer)
     parameters:
     - id: revision
       type: System.Byte
-      description: The revision level of the new <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object.
     - id: trusted
       type: System.Int32
-      description: The number of Access Control Entries (ACEs) this <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object can contain. This number is to be used only as a hint.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.PurgeAccessControl(System.Security.Principal.SecurityIdentifier)
+  commentId: M:System.Security.AccessControl.CommonSecurityDescriptor.PurgeAccessControl(System.Security.Principal.SecurityIdentifier)
   id: PurgeAccessControl(System.Security.Principal.SecurityIdentifier)
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: PurgeAccessControl(Principal.SecurityIdentifier)
+  nameWithType: CommonSecurityDescriptor.PurgeAccessControl(Principal.SecurityIdentifier)
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.PurgeAccessControl(System.Security.Principal.SecurityIdentifier)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PurgeAccessControl
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 194
+    startLine: 197
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Removes all access rules for the specified security identifier from the Discretionary Access Control List (DACL) associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public void PurgeAccessControl(Principal.SecurityIdentifier sid)
     content.vb: Public Sub PurgeAccessControl(sid As Principal.SecurityIdentifier)
     parameters:
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The security identifier for which to remove access rules.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.PurgeAudit(System.Security.Principal.SecurityIdentifier)
+  commentId: M:System.Security.AccessControl.CommonSecurityDescriptor.PurgeAudit(System.Security.Principal.SecurityIdentifier)
   id: PurgeAudit(System.Security.Principal.SecurityIdentifier)
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: PurgeAudit(Principal.SecurityIdentifier)
+  nameWithType: CommonSecurityDescriptor.PurgeAudit(Principal.SecurityIdentifier)
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.PurgeAudit(System.Security.Principal.SecurityIdentifier)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PurgeAudit
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 195
+    startLine: 198
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Removes all audit rules for the specified security identifier from the System Access Control List (SACL) associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public void PurgeAudit(Principal.SecurityIdentifier sid)
     content.vb: Public Sub PurgeAudit(sid As Principal.SecurityIdentifier)
     parameters:
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The security identifier for which to remove audit rules.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.SetDiscretionaryAclProtection(System.Boolean,System.Boolean)
+  commentId: M:System.Security.AccessControl.CommonSecurityDescriptor.SetDiscretionaryAclProtection(System.Boolean,System.Boolean)
   id: SetDiscretionaryAclProtection(System.Boolean,System.Boolean)
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: SetDiscretionaryAclProtection(Boolean, Boolean)
+  nameWithType: CommonSecurityDescriptor.SetDiscretionaryAclProtection(Boolean, Boolean)
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.SetDiscretionaryAclProtection(System.Boolean, System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1188
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetDiscretionaryAclProtection
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 199
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Sets the inheritance protection for the Discretionary Access Control List (DACL) associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object. DACLs that are protected do not inherit access rules from parent containers.
   syntax:
     content: public void SetDiscretionaryAclProtection(bool isProtected, bool preserveInheritance)
     content.vb: Public Sub SetDiscretionaryAclProtection(isProtected As Boolean, preserveInheritance As Boolean)
     parameters:
     - id: isProtected
       type: System.Boolean
-      description: true to protect the DACL from inheritance.
     - id: preserveInheritance
       type: System.Boolean
-      description: true to keep inherited access rules in the DACL; false to remove inherited access rules from the DACL.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.CommonSecurityDescriptor.SetSystemAclProtection(System.Boolean,System.Boolean)
+  commentId: M:System.Security.AccessControl.CommonSecurityDescriptor.SetSystemAclProtection(System.Boolean,System.Boolean)
   id: SetSystemAclProtection(System.Boolean,System.Boolean)
   parent: System.Security.AccessControl.CommonSecurityDescriptor
+  langs:
+  - csharp
+  - vb
   name: SetSystemAclProtection(Boolean, Boolean)
+  nameWithType: CommonSecurityDescriptor.SetSystemAclProtection(Boolean, Boolean)
   fullName: System.Security.AccessControl.CommonSecurityDescriptor.SetSystemAclProtection(System.Boolean, System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/SecurityDescriptor.cs
-    startLine: 1171
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetSystemAclProtection
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 200
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Sets the inheritance protection for the System Access Control List (SACL) associated with this <xref href="System.Security.AccessControl.CommonSecurityDescriptor" data-throw-if-not-resolved="false"></xref> object. SACLs that are protected do not inherit audit rules from parent containers.
   syntax:
     content: public void SetSystemAclProtection(bool isProtected, bool preserveInheritance)
     content.vb: Public Sub SetSystemAclProtection(isProtected As Boolean, preserveInheritance As Boolean)
     parameters:
     - id: isProtected
       type: System.Boolean
-      description: true to protect the SACL from inheritance.
     - id: preserveInheritance
       type: System.Boolean
-      description: true to keep inherited audit rules in the SACL; false to remove inherited audit rules from the SACL.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Security.AccessControl
+  commentId: N:System.Security.AccessControl
   isExternal: false
   name: System.Security.AccessControl
+  nameWithType: System.Security.AccessControl
   fullName: System.Security.AccessControl
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Security.AccessControl.GenericSecurityDescriptor
+  commentId: T:System.Security.AccessControl.GenericSecurityDescriptor
   parent: System.Security.AccessControl
   isExternal: false
   name: GenericSecurityDescriptor
+  nameWithType: GenericSecurityDescriptor
   fullName: System.Security.AccessControl.GenericSecurityDescriptor
 - uid: System.Security.AccessControl.GenericSecurityDescriptor.BinaryLength
+  commentId: P:System.Security.AccessControl.GenericSecurityDescriptor.BinaryLength
   parent: System.Security.AccessControl.GenericSecurityDescriptor
   isExternal: false
   name: BinaryLength
+  nameWithType: GenericSecurityDescriptor.BinaryLength
   fullName: System.Security.AccessControl.GenericSecurityDescriptor.BinaryLength
 - uid: System.Security.AccessControl.GenericSecurityDescriptor.Revision
+  commentId: P:System.Security.AccessControl.GenericSecurityDescriptor.Revision
   parent: System.Security.AccessControl.GenericSecurityDescriptor
   isExternal: false
   name: Revision
+  nameWithType: GenericSecurityDescriptor.Revision
   fullName: System.Security.AccessControl.GenericSecurityDescriptor.Revision
 - uid: System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm(System.Byte[],System.Int32)
+  commentId: M:System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm(System.Byte[],System.Int32)
   parent: System.Security.AccessControl.GenericSecurityDescriptor
   isExternal: true
   name: GetBinaryForm(Byte[], Int32)
-  name.vb: GetBinaryForm(Byte(), Int32)
+  nameWithType: GenericSecurityDescriptor.GetBinaryForm(Byte[], Int32)
   fullName: System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm(System.Byte[], System.Int32)
-  fullName.vb: System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm(System.Byte(), System.Int32)
+  nameWithType.vb: GenericSecurityDescriptor.GetBinaryForm(Byte(), Int32)
+  fullname.vb: System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm(System.Byte(), System.Int32)
+  name.vb: GetBinaryForm(Byte(), Int32)
   spec.csharp:
   - uid: System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm(System.Byte[],System.Int32)
     name: GetBinaryForm
+    nameWithType: GenericSecurityDescriptor.GetBinaryForm
     fullName: System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm(System.Byte[],System.Int32)
     name: GetBinaryForm
+    nameWithType: GenericSecurityDescriptor.GetBinaryForm
     fullName: System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.AccessControl.GenericSecurityDescriptor.GetSddlForm(System.Security.AccessControl.AccessControlSections)
+  commentId: M:System.Security.AccessControl.GenericSecurityDescriptor.GetSddlForm(System.Security.AccessControl.AccessControlSections)
   parent: System.Security.AccessControl.GenericSecurityDescriptor
   isExternal: false
   name: GetSddlForm(AccessControlSections)
+  nameWithType: GenericSecurityDescriptor.GetSddlForm(AccessControlSections)
   fullName: System.Security.AccessControl.GenericSecurityDescriptor.GetSddlForm(System.Security.AccessControl.AccessControlSections)
   spec.csharp:
   - uid: System.Security.AccessControl.GenericSecurityDescriptor.GetSddlForm(System.Security.AccessControl.AccessControlSections)
     name: GetSddlForm
+    nameWithType: GenericSecurityDescriptor.GetSddlForm
     fullName: System.Security.AccessControl.GenericSecurityDescriptor.GetSddlForm
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.AccessControl.AccessControlSections
     name: AccessControlSections
+    nameWithType: AccessControlSections
     fullName: System.Security.AccessControl.AccessControlSections
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.GenericSecurityDescriptor.GetSddlForm(System.Security.AccessControl.AccessControlSections)
     name: GetSddlForm
+    nameWithType: GenericSecurityDescriptor.GetSddlForm
     fullName: System.Security.AccessControl.GenericSecurityDescriptor.GetSddlForm
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.AccessControl.AccessControlSections
     name: AccessControlSections
+    nameWithType: AccessControlSections
     fullName: System.Security.AccessControl.AccessControlSections
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.AccessControl.GenericSecurityDescriptor.IsSddlConversionSupported
+  commentId: M:System.Security.AccessControl.GenericSecurityDescriptor.IsSddlConversionSupported
   parent: System.Security.AccessControl.GenericSecurityDescriptor
   isExternal: false
   name: IsSddlConversionSupported()
+  nameWithType: GenericSecurityDescriptor.IsSddlConversionSupported()
   fullName: System.Security.AccessControl.GenericSecurityDescriptor.IsSddlConversionSupported()
   spec.csharp:
   - uid: System.Security.AccessControl.GenericSecurityDescriptor.IsSddlConversionSupported
     name: IsSddlConversionSupported
+    nameWithType: GenericSecurityDescriptor.IsSddlConversionSupported
     fullName: System.Security.AccessControl.GenericSecurityDescriptor.IsSddlConversionSupported
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.GenericSecurityDescriptor.IsSddlConversionSupported
     name: IsSddlConversionSupported
+    nameWithType: GenericSecurityDescriptor.IsSddlConversionSupported
     fullName: System.Security.AccessControl.GenericSecurityDescriptor.IsSddlConversionSupported
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Byte[]
-  isExternal: false
   name: Byte[]
-  name.vb: Byte()
+  nameWithType: Byte[]
   fullName: System.Byte[]
-  fullName.vb: System.Byte()
+  nameWithType.vb: Byte()
+  fullname.vb: System.Byte()
+  name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Security.AccessControl.ControlFlags
+  commentId: T:System.Security.AccessControl.ControlFlags
   parent: System.Security.AccessControl
   isExternal: false
   name: ControlFlags
+  nameWithType: ControlFlags
   fullName: System.Security.AccessControl.ControlFlags
 - uid: System.Security.Principal.SecurityIdentifier
+  commentId: T:System.Security.Principal.SecurityIdentifier
   parent: System.Security.Principal
   isExternal: false
   name: SecurityIdentifier
+  nameWithType: SecurityIdentifier
   fullName: System.Security.Principal.SecurityIdentifier
 - uid: System.Security.AccessControl.SystemAcl
+  commentId: T:System.Security.AccessControl.SystemAcl
   parent: System.Security.AccessControl
   isExternal: false
   name: SystemAcl
+  nameWithType: SystemAcl
   fullName: System.Security.AccessControl.SystemAcl
 - uid: System.Security.AccessControl.DiscretionaryAcl
+  commentId: T:System.Security.AccessControl.DiscretionaryAcl
   parent: System.Security.AccessControl
   isExternal: false
   name: DiscretionaryAcl
+  nameWithType: DiscretionaryAcl
   fullName: System.Security.AccessControl.DiscretionaryAcl
 - uid: System.Security.Principal
+  commentId: N:System.Security.Principal
   isExternal: false
   name: System.Security.Principal
+  nameWithType: System.Security.Principal
   fullName: System.Security.Principal
 - uid: System.Security.AccessControl.RawSecurityDescriptor
+  commentId: T:System.Security.AccessControl.RawSecurityDescriptor
   parent: System.Security.AccessControl
   isExternal: false
   name: RawSecurityDescriptor
+  nameWithType: RawSecurityDescriptor
   fullName: System.Security.AccessControl.RawSecurityDescriptor
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Security.AccessControl.GenericSecurityDescriptor.ControlFlags
+  commentId: P:System.Security.AccessControl.GenericSecurityDescriptor.ControlFlags
   parent: System.Security.AccessControl.GenericSecurityDescriptor
   isExternal: false
   name: ControlFlags
+  nameWithType: GenericSecurityDescriptor.ControlFlags
   fullName: System.Security.AccessControl.GenericSecurityDescriptor.ControlFlags
 - uid: System.Security.AccessControl.GenericSecurityDescriptor.Group
+  commentId: P:System.Security.AccessControl.GenericSecurityDescriptor.Group
   parent: System.Security.AccessControl.GenericSecurityDescriptor
   isExternal: false
   name: Group
+  nameWithType: GenericSecurityDescriptor.Group
   fullName: System.Security.AccessControl.GenericSecurityDescriptor.Group
 - uid: System.Security.AccessControl.GenericSecurityDescriptor.Owner
+  commentId: P:System.Security.AccessControl.GenericSecurityDescriptor.Owner
   parent: System.Security.AccessControl.GenericSecurityDescriptor
   isExternal: false
   name: Owner
+  nameWithType: GenericSecurityDescriptor.Owner
   fullName: System.Security.AccessControl.GenericSecurityDescriptor.Owner
 - uid: System.Byte
+  commentId: T:System.Byte
   parent: System
   isExternal: false
   name: Byte
+  nameWithType: Byte
   fullName: System.Byte

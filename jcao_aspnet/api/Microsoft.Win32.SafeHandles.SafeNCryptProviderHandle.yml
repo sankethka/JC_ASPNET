@@ -1,65 +1,96 @@
 items:
 - uid: Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle
+  commentId: T:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle
   id: SafeNCryptProviderHandle
   parent: Microsoft.Win32.SafeHandles
   children:
   - Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle.#ctor
   - Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle.ReleaseNativeHandle
+  langs:
+  - csharp
+  - vb
   name: SafeNCryptProviderHandle
+  nameWithType: SafeNCryptProviderHandle
   fullName: Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.Cryptography.Cng/src/Microsoft/Win32/SafeHandles/NCryptSafeHandles.cs
+    remote:
+      path: src/System.Security.Cryptography.Cng/ref/4.0/System.Security.Cryptography.Cng.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.Cryptography.Cng/src/Microsoft/Win32/SafeHandles/NCryptSafeHandles.cs
-    startLine: 335
+    id: SafeNCryptProviderHandle
+    path: src/System.Security.Cryptography.Cng/ref/4.0/System.Security.Cryptography.Cng.cs
+    startLine: 22
   assemblies:
   - System.Security.Cryptography.Cng
   namespace: Microsoft.Win32.SafeHandles
-  summary: Provides a safe handle that represents a key storage provider (NCRYPT_PROV_HANDLE).
   syntax:
-    content: 'public sealed class SafeNCryptProviderHandle : SafeNCryptHandle, Runtime.InteropServices.SafeHandle'
-    content.vb: Public NotInheritable Class SafeNCryptProviderHandle Inherits SafeNCryptHandle Implements Runtime.InteropServices.SafeHandle
+    content: 'public sealed class SafeNCryptProviderHandle : SafeNCryptHandle'
+    content.vb: >-
+      Public NotInheritable Class SafeNCryptProviderHandle
+          Inherits SafeNCryptHandle
   inheritance:
   - System.Object
   - Microsoft.Win32.SafeHandles.SafeNCryptHandle
-  implements:
-  - System.Runtime.InteropServices.SafeHandle
   inheritedMembers:
   - Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseHandle
   - Microsoft.Win32.SafeHandles.SafeNCryptHandle.IsInvalid
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle.#ctor
+  commentId: M:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle.#ctor
   id: '#ctor'
   parent: Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle
+  langs:
+  - csharp
+  - vb
   name: SafeNCryptProviderHandle()
+  nameWithType: SafeNCryptProviderHandle.SafeNCryptProviderHandle()
   fullName: Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle.SafeNCryptProviderHandle()
   type: Constructor
   source:
     remote:
-      path: src/System.Security.Cryptography.Cng/ref/System.Security.Cryptography.Cng.cs
+      path: src/System.Security.Cryptography.Cng/ref/4.0/System.Security.Cryptography.Cng.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.Cryptography.Cng/ref/System.Security.Cryptography.Cng.cs
-    startLine: 20
+    id: .ctor
+    path: src/System.Security.Cryptography.Cng/ref/4.0/System.Security.Cryptography.Cng.cs
+    startLine: 24
   assemblies:
   - System.Security.Cryptography.Cng
   namespace: Microsoft.Win32.SafeHandles
-  summary: Initializes a new instance of the <xref href="Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public SafeNCryptProviderHandle()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle.ReleaseNativeHandle
+  commentId: M:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle.ReleaseNativeHandle
   id: ReleaseNativeHandle
   parent: Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle
+  langs:
+  - csharp
+  - vb
   name: ReleaseNativeHandle()
+  nameWithType: SafeNCryptProviderHandle.ReleaseNativeHandle()
   fullName: Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle.ReleaseNativeHandle()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.Cng/src/Microsoft/Win32/SafeHandles/NCryptSafeHandles.cs
-    startLine: 351
+    remote:
+      path: src/System.Security.Cryptography.Cng/ref/4.0/System.Security.Cryptography.Cng.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReleaseNativeHandle
+    path: src/System.Security.Cryptography.Cng/ref/4.0/System.Security.Cryptography.Cng.cs
+    startLine: 25
   assemblies:
   - System.Security.Cryptography.Cng
   namespace: Microsoft.Win32.SafeHandles
@@ -69,83 +100,108 @@ items:
     return:
       type: System.Boolean
   overridden: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseNativeHandle
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 references:
 - uid: Microsoft.Win32.SafeHandles
+  commentId: N:Microsoft.Win32.SafeHandles
   isExternal: false
   name: Microsoft.Win32.SafeHandles
+  nameWithType: Microsoft.Win32.SafeHandles
   fullName: Microsoft.Win32.SafeHandles
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: Microsoft.Win32.SafeHandles.SafeNCryptHandle
+  commentId: T:Microsoft.Win32.SafeHandles.SafeNCryptHandle
   parent: Microsoft.Win32.SafeHandles
   isExternal: false
   name: SafeNCryptHandle
+  nameWithType: SafeNCryptHandle
   fullName: Microsoft.Win32.SafeHandles.SafeNCryptHandle
-- uid: System.Runtime.InteropServices.SafeHandle
-  parent: System.Runtime.InteropServices
-  isExternal: false
-  name: Runtime.InteropServices.SafeHandle
-  fullName: System.Runtime.InteropServices.SafeHandle
 - uid: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseHandle
+  commentId: M:Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseHandle
   parent: Microsoft.Win32.SafeHandles.SafeNCryptHandle
   isExternal: false
   name: ReleaseHandle()
+  nameWithType: SafeNCryptHandle.ReleaseHandle()
   fullName: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseHandle()
   spec.csharp:
   - uid: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseHandle
     name: ReleaseHandle
+    nameWithType: SafeNCryptHandle.ReleaseHandle
     fullName: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseHandle
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseHandle
     name: ReleaseHandle
+    nameWithType: SafeNCryptHandle.ReleaseHandle
     fullName: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseHandle
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: Microsoft.Win32.SafeHandles.SafeNCryptHandle.IsInvalid
+  commentId: P:Microsoft.Win32.SafeHandles.SafeNCryptHandle.IsInvalid
   parent: Microsoft.Win32.SafeHandles.SafeNCryptHandle
   isExternal: false
   name: IsInvalid
+  nameWithType: SafeNCryptHandle.IsInvalid
   fullName: Microsoft.Win32.SafeHandles.SafeNCryptHandle.IsInvalid
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
-- uid: System.Runtime.InteropServices
-  isExternal: false
-  name: System.Runtime.InteropServices
-  fullName: System.Runtime.InteropServices
 - uid: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseNativeHandle
+  commentId: M:Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseNativeHandle
   parent: Microsoft.Win32.SafeHandles.SafeNCryptHandle
   isExternal: false
   name: ReleaseNativeHandle()
+  nameWithType: SafeNCryptHandle.ReleaseNativeHandle()
   fullName: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseNativeHandle()
   spec.csharp:
   - uid: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseNativeHandle
     name: ReleaseNativeHandle
+    nameWithType: SafeNCryptHandle.ReleaseNativeHandle
     fullName: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseNativeHandle
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseNativeHandle
     name: ReleaseNativeHandle
+    nameWithType: SafeNCryptHandle.ReleaseNativeHandle
     fullName: Microsoft.Win32.SafeHandles.SafeNCryptHandle.ReleaseNativeHandle
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean

@@ -1,5 +1,6 @@
 items:
 - uid: System.IO.Packaging.ZipPackage
+  commentId: T:System.IO.Packaging.ZipPackage
   id: ZipPackage
   parent: System.IO.Packaging
   children:
@@ -9,23 +10,29 @@ items:
   - System.IO.Packaging.ZipPackage.FlushCore
   - System.IO.Packaging.ZipPackage.GetPartCore(System.Uri)
   - System.IO.Packaging.ZipPackage.GetPartsCore
+  langs:
+  - csharp
+  - vb
   name: ZipPackage
+  nameWithType: ZipPackage
   fullName: System.IO.Packaging.ZipPackage
   type: Class
   source:
-    remote: &o1
-      path: src/System.IO.Packaging/src/System/IO/Packaging/ZipPackage.cs
+    remote:
+      path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.IO.Packaging/src/System/IO/Packaging/ZipPackage.cs
-    startLine: 25
+    id: ZipPackage
+    path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
+    startLine: 169
   assemblies:
   - System.IO.Packaging
   namespace: System.IO.Packaging
-  summary: "Implements a derived subclass of the abstract <xref href=\"System.IO.Packaging.Package\" data-throw-if-not-resolved=\"false\"></xref> base class—the <xref href=\"System.IO.Packaging.ZipPackage\" data-throw-if-not-resolved=\"false\"></xref> class uses a ZIP archive as the container store. This class cannot be inherited."
   syntax:
     content: 'public sealed class ZipPackage : Package'
-    content.vb: Public NotInheritable Class ZipPackage Inherits Package
+    content.vb: >-
+      Public NotInheritable Class ZipPackage
+          Inherits Package
   inheritance:
   - System.Object
   - System.IO.Packaging.Package
@@ -54,19 +61,33 @@ items:
   - System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
   - System.IO.Packaging.Package.PartExists(System.Uri)
   - System.IO.Packaging.Package.RelationshipExists(System.String)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.IO.Packaging.ZipPackage.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)
+  commentId: M:System.IO.Packaging.ZipPackage.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)
   id: CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)
   parent: System.IO.Packaging.ZipPackage
+  langs:
+  - csharp
+  - vb
   name: CreatePartCore(Uri, String, CompressionOption)
+  nameWithType: ZipPackage.CreatePartCore(Uri, String, CompressionOption)
   fullName: System.IO.Packaging.ZipPackage.CreatePartCore(System.Uri, System.String, System.IO.Packaging.CompressionOption)
   type: Method
   source:
-    remote: &o0
+    remote:
       path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CreatePartCore
     path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
-    startLine: 175
+    startLine: 172
   assemblies:
   - System.IO.Packaging
   namespace: System.IO.Packaging
@@ -83,16 +104,31 @@ items:
     return:
       type: System.IO.Packaging.PackagePart
   overridden: System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: System.IO.Packaging.ZipPackage.DeletePartCore(System.Uri)
+  commentId: M:System.IO.Packaging.ZipPackage.DeletePartCore(System.Uri)
   id: DeletePartCore(System.Uri)
   parent: System.IO.Packaging.ZipPackage
+  langs:
+  - csharp
+  - vb
   name: DeletePartCore(Uri)
+  nameWithType: ZipPackage.DeletePartCore(Uri)
   fullName: System.IO.Packaging.ZipPackage.DeletePartCore(System.Uri)
   type: Method
   source:
-    remote: *o0
+    remote:
+      path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DeletePartCore
     path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
-    startLine: 176
+    startLine: 173
   assemblies:
   - System.IO.Packaging
   namespace: System.IO.Packaging
@@ -103,16 +139,31 @@ items:
     - id: partUri
       type: System.Uri
   overridden: System.IO.Packaging.Package.DeletePartCore(System.Uri)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: System.IO.Packaging.ZipPackage.Dispose(System.Boolean)
+  commentId: M:System.IO.Packaging.ZipPackage.Dispose(System.Boolean)
   id: Dispose(System.Boolean)
   parent: System.IO.Packaging.ZipPackage
+  langs:
+  - csharp
+  - vb
   name: Dispose(Boolean)
+  nameWithType: ZipPackage.Dispose(Boolean)
   fullName: System.IO.Packaging.ZipPackage.Dispose(System.Boolean)
   type: Method
   source:
-    remote: *o1
-    path: src/System.IO.Packaging/src/System/IO/Packaging/ZipPackage.cs
-    startLine: 232
+    remote:
+      path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Dispose
+    path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
+    startLine: 174
   assemblies:
   - System.IO.Packaging
   namespace: System.IO.Packaging
@@ -123,16 +174,31 @@ items:
     - id: disposing
       type: System.Boolean
   overridden: System.IO.Packaging.Package.Dispose(System.Boolean)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: System.IO.Packaging.ZipPackage.FlushCore
+  commentId: M:System.IO.Packaging.ZipPackage.FlushCore
   id: FlushCore
   parent: System.IO.Packaging.ZipPackage
+  langs:
+  - csharp
+  - vb
   name: FlushCore()
+  nameWithType: ZipPackage.FlushCore()
   fullName: System.IO.Packaging.ZipPackage.FlushCore()
   type: Method
   source:
-    remote: *o1
-    path: src/System.IO.Packaging/src/System/IO/Packaging/ZipPackage.cs
-    startLine: 222
+    remote:
+      path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FlushCore
+    path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
+    startLine: 175
   assemblies:
   - System.IO.Packaging
   namespace: System.IO.Packaging
@@ -140,16 +206,31 @@ items:
     content: protected override void FlushCore()
     content.vb: Protected Overrides Sub FlushCore
   overridden: System.IO.Packaging.Package.FlushCore
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: System.IO.Packaging.ZipPackage.GetPartCore(System.Uri)
+  commentId: M:System.IO.Packaging.ZipPackage.GetPartCore(System.Uri)
   id: GetPartCore(System.Uri)
   parent: System.IO.Packaging.ZipPackage
+  langs:
+  - csharp
+  - vb
   name: GetPartCore(Uri)
+  nameWithType: ZipPackage.GetPartCore(Uri)
   fullName: System.IO.Packaging.ZipPackage.GetPartCore(System.Uri)
   type: Method
   source:
-    remote: *o0
+    remote:
+      path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetPartCore
     path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
-    startLine: 179
+    startLine: 176
   assemblies:
   - System.IO.Packaging
   namespace: System.IO.Packaging
@@ -162,16 +243,31 @@ items:
     return:
       type: System.IO.Packaging.PackagePart
   overridden: System.IO.Packaging.Package.GetPartCore(System.Uri)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: System.IO.Packaging.ZipPackage.GetPartsCore
+  commentId: M:System.IO.Packaging.ZipPackage.GetPartsCore
   id: GetPartsCore
   parent: System.IO.Packaging.ZipPackage
+  langs:
+  - csharp
+  - vb
   name: GetPartsCore()
+  nameWithType: ZipPackage.GetPartsCore()
   fullName: System.IO.Packaging.ZipPackage.GetPartsCore()
   type: Method
   source:
-    remote: *o1
-    path: src/System.IO.Packaging/src/System/IO/Packaging/ZipPackage.cs
-    startLine: 171
+    remote:
+      path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetPartsCore
+    path: src/System.IO.Packaging/ref/System.IO.Packaging.cs
+    startLine: 177
   assemblies:
   - System.IO.Packaging
   namespace: System.IO.Packaging
@@ -181,1059 +277,1436 @@ items:
     return:
       type: System.IO.Packaging.PackagePart[]
   overridden: System.IO.Packaging.Package.GetPartsCore
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 references:
 - uid: System.IO.Packaging
+  commentId: N:System.IO.Packaging
   isExternal: false
   name: System.IO.Packaging
+  nameWithType: System.IO.Packaging
   fullName: System.IO.Packaging
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.IO.Packaging.Package
+  commentId: T:System.IO.Packaging.Package
   parent: System.IO.Packaging
   isExternal: false
   name: Package
+  nameWithType: Package
   fullName: System.IO.Packaging.Package
 - uid: System.IO.Packaging.Package.FileOpenAccess
+  commentId: P:System.IO.Packaging.Package.FileOpenAccess
   parent: System.IO.Packaging.Package
   isExternal: false
   name: FileOpenAccess
+  nameWithType: Package.FileOpenAccess
   fullName: System.IO.Packaging.Package.FileOpenAccess
 - uid: System.IO.Packaging.Package.PackageProperties
+  commentId: P:System.IO.Packaging.Package.PackageProperties
   parent: System.IO.Packaging.Package
   isExternal: false
   name: PackageProperties
+  nameWithType: Package.PackageProperties
   fullName: System.IO.Packaging.Package.PackageProperties
 - uid: System.IO.Packaging.Package.Close
+  commentId: M:System.IO.Packaging.Package.Close
   parent: System.IO.Packaging.Package
   isExternal: false
   name: Close()
+  nameWithType: Package.Close()
   fullName: System.IO.Packaging.Package.Close()
   spec.csharp:
   - uid: System.IO.Packaging.Package.Close
     name: Close
+    nameWithType: Package.Close
     fullName: System.IO.Packaging.Package.Close
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.Close
     name: Close
+    nameWithType: Package.Close
     fullName: System.IO.Packaging.Package.Close
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.CreatePart(System.Uri,System.String)
+  commentId: M:System.IO.Packaging.Package.CreatePart(System.Uri,System.String)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: CreatePart(Uri, String)
+  nameWithType: Package.CreatePart(Uri, String)
   fullName: System.IO.Packaging.Package.CreatePart(System.Uri, System.String)
   spec.csharp:
   - uid: System.IO.Packaging.Package.CreatePart(System.Uri,System.String)
     name: CreatePart
+    nameWithType: Package.CreatePart
     fullName: System.IO.Packaging.Package.CreatePart
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.CreatePart(System.Uri,System.String)
     name: CreatePart
+    nameWithType: Package.CreatePart
     fullName: System.IO.Packaging.Package.CreatePart
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.CreatePart(System.Uri,System.String,System.IO.Packaging.CompressionOption)
+  commentId: M:System.IO.Packaging.Package.CreatePart(System.Uri,System.String,System.IO.Packaging.CompressionOption)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: CreatePart(Uri, String, CompressionOption)
+  nameWithType: Package.CreatePart(Uri, String, CompressionOption)
   fullName: System.IO.Packaging.Package.CreatePart(System.Uri, System.String, System.IO.Packaging.CompressionOption)
   spec.csharp:
   - uid: System.IO.Packaging.Package.CreatePart(System.Uri,System.String,System.IO.Packaging.CompressionOption)
     name: CreatePart
+    nameWithType: Package.CreatePart
     fullName: System.IO.Packaging.Package.CreatePart
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.Packaging.CompressionOption
     name: CompressionOption
+    nameWithType: CompressionOption
     fullName: System.IO.Packaging.CompressionOption
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.CreatePart(System.Uri,System.String,System.IO.Packaging.CompressionOption)
     name: CreatePart
+    nameWithType: Package.CreatePart
     fullName: System.IO.Packaging.Package.CreatePart
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.Packaging.CompressionOption
     name: CompressionOption
+    nameWithType: CompressionOption
     fullName: System.IO.Packaging.CompressionOption
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String)
+  commentId: M:System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: CreateRelationship(Uri, TargetMode, String)
+  nameWithType: Package.CreateRelationship(Uri, TargetMode, String)
   fullName: System.IO.Packaging.Package.CreateRelationship(System.Uri, System.IO.Packaging.TargetMode, System.String)
   spec.csharp:
   - uid: System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String)
     name: CreateRelationship
+    nameWithType: Package.CreateRelationship
     fullName: System.IO.Packaging.Package.CreateRelationship
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.Packaging.TargetMode
     name: TargetMode
+    nameWithType: TargetMode
     fullName: System.IO.Packaging.TargetMode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String)
     name: CreateRelationship
+    nameWithType: Package.CreateRelationship
     fullName: System.IO.Packaging.Package.CreateRelationship
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.Packaging.TargetMode
     name: TargetMode
+    nameWithType: TargetMode
     fullName: System.IO.Packaging.TargetMode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String,System.String)
+  commentId: M:System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String,System.String)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: CreateRelationship(Uri, TargetMode, String, String)
+  nameWithType: Package.CreateRelationship(Uri, TargetMode, String, String)
   fullName: System.IO.Packaging.Package.CreateRelationship(System.Uri, System.IO.Packaging.TargetMode, System.String, System.String)
   spec.csharp:
   - uid: System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String,System.String)
     name: CreateRelationship
+    nameWithType: Package.CreateRelationship
     fullName: System.IO.Packaging.Package.CreateRelationship
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.Packaging.TargetMode
     name: TargetMode
+    nameWithType: TargetMode
     fullName: System.IO.Packaging.TargetMode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String,System.String)
     name: CreateRelationship
+    nameWithType: Package.CreateRelationship
     fullName: System.IO.Packaging.Package.CreateRelationship
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.Packaging.TargetMode
     name: TargetMode
+    nameWithType: TargetMode
     fullName: System.IO.Packaging.TargetMode
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.DeletePart(System.Uri)
+  commentId: M:System.IO.Packaging.Package.DeletePart(System.Uri)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: DeletePart(Uri)
+  nameWithType: Package.DeletePart(Uri)
   fullName: System.IO.Packaging.Package.DeletePart(System.Uri)
   spec.csharp:
   - uid: System.IO.Packaging.Package.DeletePart(System.Uri)
     name: DeletePart
+    nameWithType: Package.DeletePart
     fullName: System.IO.Packaging.Package.DeletePart
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.DeletePart(System.Uri)
     name: DeletePart
+    nameWithType: Package.DeletePart
     fullName: System.IO.Packaging.Package.DeletePart
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.DeleteRelationship(System.String)
+  commentId: M:System.IO.Packaging.Package.DeleteRelationship(System.String)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: DeleteRelationship(String)
+  nameWithType: Package.DeleteRelationship(String)
   fullName: System.IO.Packaging.Package.DeleteRelationship(System.String)
   spec.csharp:
   - uid: System.IO.Packaging.Package.DeleteRelationship(System.String)
     name: DeleteRelationship
+    nameWithType: Package.DeleteRelationship
     fullName: System.IO.Packaging.Package.DeleteRelationship
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.DeleteRelationship(System.String)
     name: DeleteRelationship
+    nameWithType: Package.DeleteRelationship
     fullName: System.IO.Packaging.Package.DeleteRelationship
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.Flush
+  commentId: M:System.IO.Packaging.Package.Flush
   parent: System.IO.Packaging.Package
   isExternal: false
   name: Flush()
+  nameWithType: Package.Flush()
   fullName: System.IO.Packaging.Package.Flush()
   spec.csharp:
   - uid: System.IO.Packaging.Package.Flush
     name: Flush
+    nameWithType: Package.Flush
     fullName: System.IO.Packaging.Package.Flush
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.Flush
     name: Flush
+    nameWithType: Package.Flush
     fullName: System.IO.Packaging.Package.Flush
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.GetPart(System.Uri)
+  commentId: M:System.IO.Packaging.Package.GetPart(System.Uri)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: GetPart(Uri)
+  nameWithType: Package.GetPart(Uri)
   fullName: System.IO.Packaging.Package.GetPart(System.Uri)
   spec.csharp:
   - uid: System.IO.Packaging.Package.GetPart(System.Uri)
     name: GetPart
+    nameWithType: Package.GetPart
     fullName: System.IO.Packaging.Package.GetPart
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.GetPart(System.Uri)
     name: GetPart
+    nameWithType: Package.GetPart
     fullName: System.IO.Packaging.Package.GetPart
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.GetParts
+  commentId: M:System.IO.Packaging.Package.GetParts
   parent: System.IO.Packaging.Package
   isExternal: false
   name: GetParts()
+  nameWithType: Package.GetParts()
   fullName: System.IO.Packaging.Package.GetParts()
   spec.csharp:
   - uid: System.IO.Packaging.Package.GetParts
     name: GetParts
+    nameWithType: Package.GetParts
     fullName: System.IO.Packaging.Package.GetParts
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.GetParts
     name: GetParts
+    nameWithType: Package.GetParts
     fullName: System.IO.Packaging.Package.GetParts
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.GetRelationship(System.String)
+  commentId: M:System.IO.Packaging.Package.GetRelationship(System.String)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: GetRelationship(String)
+  nameWithType: Package.GetRelationship(String)
   fullName: System.IO.Packaging.Package.GetRelationship(System.String)
   spec.csharp:
   - uid: System.IO.Packaging.Package.GetRelationship(System.String)
     name: GetRelationship
+    nameWithType: Package.GetRelationship
     fullName: System.IO.Packaging.Package.GetRelationship
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.GetRelationship(System.String)
     name: GetRelationship
+    nameWithType: Package.GetRelationship
     fullName: System.IO.Packaging.Package.GetRelationship
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.GetRelationships
+  commentId: M:System.IO.Packaging.Package.GetRelationships
   parent: System.IO.Packaging.Package
   isExternal: false
   name: GetRelationships()
+  nameWithType: Package.GetRelationships()
   fullName: System.IO.Packaging.Package.GetRelationships()
   spec.csharp:
   - uid: System.IO.Packaging.Package.GetRelationships
     name: GetRelationships
+    nameWithType: Package.GetRelationships
     fullName: System.IO.Packaging.Package.GetRelationships
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.GetRelationships
     name: GetRelationships
+    nameWithType: Package.GetRelationships
     fullName: System.IO.Packaging.Package.GetRelationships
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.GetRelationshipsByType(System.String)
+  commentId: M:System.IO.Packaging.Package.GetRelationshipsByType(System.String)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: GetRelationshipsByType(String)
+  nameWithType: Package.GetRelationshipsByType(String)
   fullName: System.IO.Packaging.Package.GetRelationshipsByType(System.String)
   spec.csharp:
   - uid: System.IO.Packaging.Package.GetRelationshipsByType(System.String)
     name: GetRelationshipsByType
+    nameWithType: Package.GetRelationshipsByType
     fullName: System.IO.Packaging.Package.GetRelationshipsByType
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.GetRelationshipsByType(System.String)
     name: GetRelationshipsByType
+    nameWithType: Package.GetRelationshipsByType
     fullName: System.IO.Packaging.Package.GetRelationshipsByType
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.Open(System.IO.Stream)
+  commentId: M:System.IO.Packaging.Package.Open(System.IO.Stream)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: Open(Stream)
+  nameWithType: Package.Open(Stream)
   fullName: System.IO.Packaging.Package.Open(System.IO.Stream)
   spec.csharp:
   - uid: System.IO.Packaging.Package.Open(System.IO.Stream)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: Stream
+    nameWithType: Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.Open(System.IO.Stream)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: Stream
+    nameWithType: Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.Open(System.IO.Stream,System.IO.FileMode)
+  commentId: M:System.IO.Packaging.Package.Open(System.IO.Stream,System.IO.FileMode)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: Open(Stream, FileMode)
+  nameWithType: Package.Open(Stream, FileMode)
   fullName: System.IO.Packaging.Package.Open(System.IO.Stream, System.IO.FileMode)
   spec.csharp:
   - uid: System.IO.Packaging.Package.Open(System.IO.Stream,System.IO.FileMode)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: Stream
+    nameWithType: Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileMode
     name: FileMode
+    nameWithType: FileMode
     fullName: System.IO.FileMode
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.Open(System.IO.Stream,System.IO.FileMode)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: Stream
+    nameWithType: Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileMode
     name: FileMode
+    nameWithType: FileMode
     fullName: System.IO.FileMode
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.Open(System.IO.Stream,System.IO.FileMode,System.IO.FileAccess)
+  commentId: M:System.IO.Packaging.Package.Open(System.IO.Stream,System.IO.FileMode,System.IO.FileAccess)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: Open(Stream, FileMode, FileAccess)
+  nameWithType: Package.Open(Stream, FileMode, FileAccess)
   fullName: System.IO.Packaging.Package.Open(System.IO.Stream, System.IO.FileMode, System.IO.FileAccess)
   spec.csharp:
   - uid: System.IO.Packaging.Package.Open(System.IO.Stream,System.IO.FileMode,System.IO.FileAccess)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: Stream
+    nameWithType: Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileMode
     name: FileMode
+    nameWithType: FileMode
     fullName: System.IO.FileMode
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileAccess
     name: FileAccess
+    nameWithType: FileAccess
     fullName: System.IO.FileAccess
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.Open(System.IO.Stream,System.IO.FileMode,System.IO.FileAccess)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.IO.Stream
     name: Stream
+    nameWithType: Stream
     fullName: System.IO.Stream
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileMode
     name: FileMode
+    nameWithType: FileMode
     fullName: System.IO.FileMode
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileAccess
     name: FileAccess
+    nameWithType: FileAccess
     fullName: System.IO.FileAccess
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.Open(System.String)
+  commentId: M:System.IO.Packaging.Package.Open(System.String)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: Open(String)
+  nameWithType: Package.Open(String)
   fullName: System.IO.Packaging.Package.Open(System.String)
   spec.csharp:
   - uid: System.IO.Packaging.Package.Open(System.String)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.Open(System.String)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.Open(System.String,System.IO.FileMode)
+  commentId: M:System.IO.Packaging.Package.Open(System.String,System.IO.FileMode)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: Open(String, FileMode)
+  nameWithType: Package.Open(String, FileMode)
   fullName: System.IO.Packaging.Package.Open(System.String, System.IO.FileMode)
   spec.csharp:
   - uid: System.IO.Packaging.Package.Open(System.String,System.IO.FileMode)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileMode
     name: FileMode
+    nameWithType: FileMode
     fullName: System.IO.FileMode
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.Open(System.String,System.IO.FileMode)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileMode
     name: FileMode
+    nameWithType: FileMode
     fullName: System.IO.FileMode
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess)
+  commentId: M:System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: Open(String, FileMode, FileAccess)
+  nameWithType: Package.Open(String, FileMode, FileAccess)
   fullName: System.IO.Packaging.Package.Open(System.String, System.IO.FileMode, System.IO.FileAccess)
   spec.csharp:
   - uid: System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileMode
     name: FileMode
+    nameWithType: FileMode
     fullName: System.IO.FileMode
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileAccess
     name: FileAccess
+    nameWithType: FileAccess
     fullName: System.IO.FileAccess
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileMode
     name: FileMode
+    nameWithType: FileMode
     fullName: System.IO.FileMode
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileAccess
     name: FileAccess
+    nameWithType: FileAccess
     fullName: System.IO.FileAccess
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  commentId: M:System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: Open(String, FileMode, FileAccess, FileShare)
+  nameWithType: Package.Open(String, FileMode, FileAccess, FileShare)
   fullName: System.IO.Packaging.Package.Open(System.String, System.IO.FileMode, System.IO.FileAccess, System.IO.FileShare)
   spec.csharp:
   - uid: System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileMode
     name: FileMode
+    nameWithType: FileMode
     fullName: System.IO.FileMode
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileAccess
     name: FileAccess
+    nameWithType: FileAccess
     fullName: System.IO.FileAccess
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileShare
     name: FileShare
+    nameWithType: FileShare
     fullName: System.IO.FileShare
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.Open(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
     name: Open
+    nameWithType: Package.Open
     fullName: System.IO.Packaging.Package.Open
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileMode
     name: FileMode
+    nameWithType: FileMode
     fullName: System.IO.FileMode
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileAccess
     name: FileAccess
+    nameWithType: FileAccess
     fullName: System.IO.FileAccess
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.FileShare
     name: FileShare
+    nameWithType: FileShare
     fullName: System.IO.FileShare
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.PartExists(System.Uri)
+  commentId: M:System.IO.Packaging.Package.PartExists(System.Uri)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: PartExists(Uri)
+  nameWithType: Package.PartExists(Uri)
   fullName: System.IO.Packaging.Package.PartExists(System.Uri)
   spec.csharp:
   - uid: System.IO.Packaging.Package.PartExists(System.Uri)
     name: PartExists
+    nameWithType: Package.PartExists
     fullName: System.IO.Packaging.Package.PartExists
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.PartExists(System.Uri)
     name: PartExists
+    nameWithType: Package.PartExists
     fullName: System.IO.Packaging.Package.PartExists
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.RelationshipExists(System.String)
+  commentId: M:System.IO.Packaging.Package.RelationshipExists(System.String)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: RelationshipExists(String)
+  nameWithType: Package.RelationshipExists(String)
   fullName: System.IO.Packaging.Package.RelationshipExists(System.String)
   spec.csharp:
   - uid: System.IO.Packaging.Package.RelationshipExists(System.String)
     name: RelationshipExists
+    nameWithType: Package.RelationshipExists
     fullName: System.IO.Packaging.Package.RelationshipExists
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.RelationshipExists(System.String)
     name: RelationshipExists
+    nameWithType: Package.RelationshipExists
     fullName: System.IO.Packaging.Package.RelationshipExists
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)
+  commentId: M:System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: CreatePartCore(Uri, String, CompressionOption)
+  nameWithType: Package.CreatePartCore(Uri, String, CompressionOption)
   fullName: System.IO.Packaging.Package.CreatePartCore(System.Uri, System.String, System.IO.Packaging.CompressionOption)
   spec.csharp:
   - uid: System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)
     name: CreatePartCore
+    nameWithType: Package.CreatePartCore
     fullName: System.IO.Packaging.Package.CreatePartCore
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.Packaging.CompressionOption
     name: CompressionOption
+    nameWithType: CompressionOption
     fullName: System.IO.Packaging.CompressionOption
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)
     name: CreatePartCore
+    nameWithType: Package.CreatePartCore
     fullName: System.IO.Packaging.Package.CreatePartCore
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.String
     name: String
+    nameWithType: String
     fullName: System.String
     isExternal: true
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.IO.Packaging.CompressionOption
     name: CompressionOption
+    nameWithType: CompressionOption
     fullName: System.IO.Packaging.CompressionOption
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Uri
+  commentId: T:System.Uri
   parent: System
   isExternal: false
   name: Uri
+  nameWithType: Uri
   fullName: System.Uri
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.IO.Packaging.CompressionOption
+  commentId: T:System.IO.Packaging.CompressionOption
   parent: System.IO.Packaging
   isExternal: false
   name: CompressionOption
+  nameWithType: CompressionOption
   fullName: System.IO.Packaging.CompressionOption
 - uid: System.IO.Packaging.PackagePart
+  commentId: T:System.IO.Packaging.PackagePart
   parent: System.IO.Packaging
   isExternal: false
   name: PackagePart
+  nameWithType: PackagePart
   fullName: System.IO.Packaging.PackagePart
 - uid: System.IO.Packaging.Package.DeletePartCore(System.Uri)
+  commentId: M:System.IO.Packaging.Package.DeletePartCore(System.Uri)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: DeletePartCore(Uri)
+  nameWithType: Package.DeletePartCore(Uri)
   fullName: System.IO.Packaging.Package.DeletePartCore(System.Uri)
   spec.csharp:
   - uid: System.IO.Packaging.Package.DeletePartCore(System.Uri)
     name: DeletePartCore
+    nameWithType: Package.DeletePartCore
     fullName: System.IO.Packaging.Package.DeletePartCore
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.DeletePartCore(System.Uri)
     name: DeletePartCore
+    nameWithType: Package.DeletePartCore
     fullName: System.IO.Packaging.Package.DeletePartCore
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.Dispose(System.Boolean)
+  commentId: M:System.IO.Packaging.Package.Dispose(System.Boolean)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: Dispose(Boolean)
+  nameWithType: Package.Dispose(Boolean)
   fullName: System.IO.Packaging.Package.Dispose(System.Boolean)
   spec.csharp:
   - uid: System.IO.Packaging.Package.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: Package.Dispose
     fullName: System.IO.Packaging.Package.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.Dispose(System.Boolean)
     name: Dispose
+    nameWithType: Package.Dispose
     fullName: System.IO.Packaging.Package.Dispose
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.IO.Packaging.Package.FlushCore
+  commentId: M:System.IO.Packaging.Package.FlushCore
   parent: System.IO.Packaging.Package
   isExternal: false
   name: FlushCore()
+  nameWithType: Package.FlushCore()
   fullName: System.IO.Packaging.Package.FlushCore()
   spec.csharp:
   - uid: System.IO.Packaging.Package.FlushCore
     name: FlushCore
+    nameWithType: Package.FlushCore
     fullName: System.IO.Packaging.Package.FlushCore
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.FlushCore
     name: FlushCore
+    nameWithType: Package.FlushCore
     fullName: System.IO.Packaging.Package.FlushCore
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.GetPartCore(System.Uri)
+  commentId: M:System.IO.Packaging.Package.GetPartCore(System.Uri)
   parent: System.IO.Packaging.Package
   isExternal: true
   name: GetPartCore(Uri)
+  nameWithType: Package.GetPartCore(Uri)
   fullName: System.IO.Packaging.Package.GetPartCore(System.Uri)
   spec.csharp:
   - uid: System.IO.Packaging.Package.GetPartCore(System.Uri)
     name: GetPartCore
+    nameWithType: Package.GetPartCore
     fullName: System.IO.Packaging.Package.GetPartCore
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.GetPartCore(System.Uri)
     name: GetPartCore
+    nameWithType: Package.GetPartCore
     fullName: System.IO.Packaging.Package.GetPartCore
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Uri
     name: Uri
+    nameWithType: Uri
     fullName: System.Uri
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.Package.GetPartsCore
+  commentId: M:System.IO.Packaging.Package.GetPartsCore
   parent: System.IO.Packaging.Package
   isExternal: false
   name: GetPartsCore()
+  nameWithType: Package.GetPartsCore()
   fullName: System.IO.Packaging.Package.GetPartsCore()
   spec.csharp:
   - uid: System.IO.Packaging.Package.GetPartsCore
     name: GetPartsCore
+    nameWithType: Package.GetPartsCore
     fullName: System.IO.Packaging.Package.GetPartsCore
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IO.Packaging.Package.GetPartsCore
     name: GetPartsCore
+    nameWithType: Package.GetPartsCore
     fullName: System.IO.Packaging.Package.GetPartsCore
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.Packaging.PackagePart[]
-  isExternal: false
   name: PackagePart[]
-  name.vb: PackagePart()
+  nameWithType: PackagePart[]
   fullName: System.IO.Packaging.PackagePart[]
-  fullName.vb: System.IO.Packaging.PackagePart()
+  nameWithType.vb: PackagePart()
+  fullname.vb: System.IO.Packaging.PackagePart()
+  name.vb: PackagePart()
   spec.csharp:
   - uid: System.IO.Packaging.PackagePart
     name: PackagePart
+    nameWithType: PackagePart
     fullName: System.IO.Packaging.PackagePart
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.IO.Packaging.PackagePart
     name: PackagePart
+    nameWithType: PackagePart
     fullName: System.IO.Packaging.PackagePart
   - name: ()
+    nameWithType: ()
     fullName: ()

@@ -1,5 +1,6 @@
 items:
 - uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  commentId: T:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
   id: SafeAccessTokenHandle
   parent: Microsoft.Win32.SafeHandles
   children:
@@ -7,29 +8,48 @@ items:
   - Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.InvalidHandle
   - Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.IsInvalid
   - Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
+  langs:
+  - csharp
+  - vb
   name: SafeAccessTokenHandle
+  nameWithType: SafeAccessTokenHandle
   fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.Principal.Windows/src/Microsoft/Win32/SafeHandles/SafeAccessTokenHandle.cs
+    remote:
+      path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.Principal.Windows/src/Microsoft/Win32/SafeHandles/SafeAccessTokenHandle.cs
+    id: SafeAccessTokenHandle
+    path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
     startLine: 10
   assemblies:
   - System.Security.Principal.Windows
   namespace: Microsoft.Win32.SafeHandles
-  summary: Provides a safe handle to a Windows thread or process access token. For more information see Access Tokens
   syntax:
     content: 'public sealed class SafeAccessTokenHandle : Runtime.InteropServices.SafeHandle'
-    content.vb: Public NotInheritable Class SafeAccessTokenHandle Inherits Runtime.InteropServices.SafeHandle
+    content.vb: >-
+      Public NotInheritable Class SafeAccessTokenHandle
+          Inherits Runtime.InteropServices.SafeHandle
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor(System.IntPtr)
+  commentId: M:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor(System.IntPtr)
   id: '#ctor(System.IntPtr)'
   parent: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  langs:
+  - csharp
+  - vb
   name: SafeAccessTokenHandle(IntPtr)
+  nameWithType: SafeAccessTokenHandle.SafeAccessTokenHandle(IntPtr)
   fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.SafeAccessTokenHandle(System.IntPtr)
   type: Constructor
   source:
@@ -37,71 +57,113 @@ items:
       path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - System.Security.Principal.Windows
   namespace: Microsoft.Win32.SafeHandles
-  summary: Initializes a new instance of the <xref href="Microsoft.Win32.SafeHandles.SafeAccessTokenHandle" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public SafeAccessTokenHandle(IntPtr handle)
     content.vb: Public Sub New(handle As IntPtr)
     parameters:
     - id: handle
       type: System.IntPtr
-      description: An <xref href="System.IntPtr" data-throw-if-not-resolved="false"></xref> object that represents the pre-existing handle to use. Using <xref href="System.IntPtr.Zero" data-throw-if-not-resolved="false"></xref> returns an invalid handle.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.InvalidHandle
+  commentId: P:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.InvalidHandle
   id: InvalidHandle
   parent: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  langs:
+  - csharp
+  - vb
   name: InvalidHandle
+  nameWithType: SafeAccessTokenHandle.InvalidHandle
   fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.InvalidHandle
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Principal.Windows/src/Microsoft/Win32/SafeHandles/SafeAccessTokenHandle.cs
-    startLine: 17
+    remote:
+      path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: InvalidHandle
+    path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
+    startLine: 14
   assemblies:
   - System.Security.Principal.Windows
   namespace: Microsoft.Win32.SafeHandles
-  summary: Returns an invalid handle by instantiating a <xref href="Microsoft.Win32.SafeHandles.SafeAccessTokenHandle" data-throw-if-not-resolved="false"></xref> object with <xref href="System.IntPtr.Zero" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public static SafeAccessTokenHandle InvalidHandle { get; }
     content.vb: Public Shared ReadOnly Property InvalidHandle As SafeAccessTokenHandle
     parameters: []
     return:
       type: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
-      description: Returns a<xref href="Microsoft.Win32.SafeHandles.SafeAccessTokenHandle" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.IsInvalid
+  commentId: P:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.IsInvalid
   id: IsInvalid
   parent: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  langs:
+  - csharp
+  - vb
   name: IsInvalid
+  nameWithType: SafeAccessTokenHandle.IsInvalid
   fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.IsInvalid
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Principal.Windows/src/Microsoft/Win32/SafeHandles/SafeAccessTokenHandle.cs
-    startLine: 25
+    remote:
+      path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsInvalid
+    path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
+    startLine: 15
   assemblies:
   - System.Security.Principal.Windows
   namespace: Microsoft.Win32.SafeHandles
-  summary: Gets a value that indicates whether the handle is invalid.
   syntax:
     content: public override bool IsInvalid { get; }
     content.vb: Public Overrides ReadOnly Property IsInvalid As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the handle is not valid; otherwise, false.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
+  commentId: M:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
   id: ReleaseHandle
   parent: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  langs:
+  - csharp
+  - vb
   name: ReleaseHandle()
+  nameWithType: SafeAccessTokenHandle.ReleaseHandle()
   fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Principal.Windows/src/Microsoft/Win32/SafeHandles/SafeAccessTokenHandle.cs
-    startLine: 33
+    remote:
+      path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReleaseHandle
+    path: src/System.Security.Principal.Windows/ref/System.Security.Principal.Windows.cs
+    startLine: 16
   assemblies:
   - System.Security.Principal.Windows
   namespace: Microsoft.Win32.SafeHandles
@@ -110,32 +172,50 @@ items:
     content.vb: Protected Overrides Function ReleaseHandle As Boolean
     return:
       type: System.Boolean
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 references:
 - uid: Microsoft.Win32.SafeHandles
+  commentId: N:Microsoft.Win32.SafeHandles
   isExternal: false
   name: Microsoft.Win32.SafeHandles
+  nameWithType: Microsoft.Win32.SafeHandles
   fullName: Microsoft.Win32.SafeHandles
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.IntPtr
+  commentId: T:System.IntPtr
   parent: System
   isExternal: false
   name: IntPtr
+  nameWithType: IntPtr
   fullName: System.IntPtr
 - uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  commentId: T:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
   parent: Microsoft.Win32.SafeHandles
   isExternal: false
   name: SafeAccessTokenHandle
+  nameWithType: SafeAccessTokenHandle
   fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean

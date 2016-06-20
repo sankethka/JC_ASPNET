@@ -1,5 +1,6 @@
 items:
 - uid: System.Text.DecoderFallback
+  commentId: T:System.Text.DecoderFallback
   id: DecoderFallback
   parent: System.Text
   children:
@@ -8,29 +9,48 @@ items:
   - System.Text.DecoderFallback.ExceptionFallback
   - System.Text.DecoderFallback.MaxCharCount
   - System.Text.DecoderFallback.ReplacementFallback
+  langs:
+  - csharp
+  - vb
   name: DecoderFallback
+  nameWithType: DecoderFallback
   fullName: System.Text.DecoderFallback
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Text/DecoderFallback.cs
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Text/DecoderFallback.cs
-    startLine: 13
+      repo: https://github.com/dotnet/corefx.git
+    id: DecoderFallback
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 30
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: Provides a failure-handling mechanism, called a fallback, for an encoded input byte sequence that cannot be converted to an output character.
   syntax:
     content: 'public abstract class DecoderFallback : object'
-    content.vb: Public MustInherit Class DecoderFallback Inherits Object
+    content.vb: >-
+      Public MustInherit Class DecoderFallback
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
 - uid: System.Text.DecoderFallback.#ctor
+  commentId: M:System.Text.DecoderFallback.#ctor
   id: '#ctor'
   parent: System.Text.DecoderFallback
+  langs:
+  - csharp
+  - vb
   name: DecoderFallback()
+  nameWithType: DecoderFallback.DecoderFallback()
   fullName: System.Text.DecoderFallback.DecoderFallback()
   type: Constructor
   source:
@@ -38,124 +58,198 @@ items:
       path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
-    startLine: 29
+    startLine: 32
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: Initializes a new instance of the <xref href="System.Text.DecoderFallback" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: protected DecoderFallback()
     content.vb: Protected Sub New
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Text.DecoderFallback.ExceptionFallback
+  commentId: P:System.Text.DecoderFallback.ExceptionFallback
   id: ExceptionFallback
   parent: System.Text.DecoderFallback
+  langs:
+  - csharp
+  - vb
   name: ExceptionFallback
+  nameWithType: DecoderFallback.ExceptionFallback
   fullName: System.Text.DecoderFallback.ExceptionFallback
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/DecoderFallback.cs
-    startLine: 52
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ExceptionFallback
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 33
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: Gets an object that throws an exception when an input byte sequence cannot be decoded.
   syntax:
     content: public static DecoderFallback ExceptionFallback { get; }
     content.vb: Public Shared ReadOnly Property ExceptionFallback As DecoderFallback
     parameters: []
     return:
       type: System.Text.DecoderFallback
-      description: A type derived from the <xref href="System.Text.DecoderFallback" data-throw-if-not-resolved="false"></xref> class. The default value is a <xref href="System.Text.DecoderExceptionFallback" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Text.DecoderFallback.MaxCharCount
+  commentId: P:System.Text.DecoderFallback.MaxCharCount
   id: MaxCharCount
   parent: System.Text.DecoderFallback
+  langs:
+  - csharp
+  - vb
   name: MaxCharCount
+  nameWithType: DecoderFallback.MaxCharCount
   fullName: System.Text.DecoderFallback.MaxCharCount
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/DecoderFallback.cs
-    startLine: 75
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MaxCharCount
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 34
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: When overridden in a derived class, gets the maximum number of characters the current <xref href="System.Text.DecoderFallback" data-throw-if-not-resolved="false"></xref> object can return.
   syntax:
     content: public abstract int MaxCharCount { get; }
     content.vb: Public MustOverride ReadOnly Property MaxCharCount As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The maximum number of characters the current <xref href="System.Text.DecoderFallback" data-throw-if-not-resolved="false"></xref> object can return.
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
 - uid: System.Text.DecoderFallback.ReplacementFallback
+  commentId: P:System.Text.DecoderFallback.ReplacementFallback
   id: ReplacementFallback
   parent: System.Text.DecoderFallback
+  langs:
+  - csharp
+  - vb
   name: ReplacementFallback
+  nameWithType: DecoderFallback.ReplacementFallback
   fullName: System.Text.DecoderFallback.ReplacementFallback
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/DecoderFallback.cs
-    startLine: 38
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReplacementFallback
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 35
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: Gets an object that outputs a substitute string in place of an input byte sequence that cannot be decoded.
   syntax:
     content: public static DecoderFallback ReplacementFallback { get; }
     content.vb: Public Shared ReadOnly Property ReplacementFallback As DecoderFallback
     parameters: []
     return:
       type: System.Text.DecoderFallback
-      description: A type derived from the <xref href="System.Text.DecoderFallback" data-throw-if-not-resolved="false"></xref> class. The default value is a <xref href="System.Text.DecoderReplacementFallback" data-throw-if-not-resolved="false"></xref> object that emits the QUESTION MARK character ("?", U+003F) in place of unknown byte sequences.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Text.DecoderFallback.CreateFallbackBuffer
+  commentId: M:System.Text.DecoderFallback.CreateFallbackBuffer
   id: CreateFallbackBuffer
   parent: System.Text.DecoderFallback
+  langs:
+  - csharp
+  - vb
   name: CreateFallbackBuffer()
+  nameWithType: DecoderFallback.CreateFallbackBuffer()
   fullName: System.Text.DecoderFallback.CreateFallbackBuffer()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Text/DecoderFallback.cs
-    startLine: 71
+    remote:
+      path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateFallbackBuffer
+    path: src/System.Text.Encoding/ref/System.Text.Encoding.cs
+    startLine: 36
   assemblies:
   - System.Text.Encoding
   namespace: System.Text
-  summary: When overridden in a derived class, initializes a new instance of the <xref href="System.Text.DecoderFallbackBuffer" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public abstract DecoderFallbackBuffer CreateFallbackBuffer()
     content.vb: Public MustOverride Function CreateFallbackBuffer As DecoderFallbackBuffer
     return:
       type: System.Text.DecoderFallbackBuffer
-      description: An object that provides a fallback buffer for a decoder.
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
 references:
 - uid: System.Text
+  commentId: N:System.Text
   isExternal: false
   name: System.Text
+  nameWithType: System.Text
   fullName: System.Text
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Text.DecoderFallback
+  commentId: T:System.Text.DecoderFallback
   parent: System.Text
   isExternal: false
   name: DecoderFallback
+  nameWithType: DecoderFallback
   fullName: System.Text.DecoderFallback
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Text.DecoderFallbackBuffer
+  commentId: T:System.Text.DecoderFallbackBuffer
   parent: System.Text
   isExternal: false
   name: DecoderFallbackBuffer
+  nameWithType: DecoderFallbackBuffer
   fullName: System.Text.DecoderFallbackBuffer

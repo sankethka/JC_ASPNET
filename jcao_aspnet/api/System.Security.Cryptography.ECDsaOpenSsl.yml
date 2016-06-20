@@ -1,64 +1,107 @@
 items:
 - uid: System.Security.Cryptography.ECDsaOpenSsl
+  commentId: T:System.Security.Cryptography.ECDsaOpenSsl
   id: ECDsaOpenSsl
   parent: System.Security.Cryptography
   children:
   - System.Security.Cryptography.ECDsaOpenSsl.#ctor
   - System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.Int32)
   - System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.IntPtr)
+  - System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.Security.Cryptography.ECCurve)
   - System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.Security.Cryptography.SafeEvpPKeyHandle)
   - System.Security.Cryptography.ECDsaOpenSsl.Dispose(System.Boolean)
   - System.Security.Cryptography.ECDsaOpenSsl.DuplicateKeyHandle
+  - System.Security.Cryptography.ECDsaOpenSsl.ExportExplicitParameters(System.Boolean)
+  - System.Security.Cryptography.ECDsaOpenSsl.ExportParameters(System.Boolean)
+  - System.Security.Cryptography.ECDsaOpenSsl.GenerateKey(System.Security.Cryptography.ECCurve)
   - System.Security.Cryptography.ECDsaOpenSsl.HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
   - System.Security.Cryptography.ECDsaOpenSsl.HashData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)
+  - System.Security.Cryptography.ECDsaOpenSsl.ImportParameters(System.Security.Cryptography.ECParameters)
   - System.Security.Cryptography.ECDsaOpenSsl.KeySize
   - System.Security.Cryptography.ECDsaOpenSsl.LegalKeySizes
   - System.Security.Cryptography.ECDsaOpenSsl.SignHash(System.Byte[])
   - System.Security.Cryptography.ECDsaOpenSsl.VerifyHash(System.Byte[],System.Byte[])
+  langs:
+  - csharp
+  - vb
   name: ECDsaOpenSsl
+  nameWithType: ECDsaOpenSsl
   fullName: System.Security.Cryptography.ECDsaOpenSsl
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
-    startLine: 12
+    id: ECDsaOpenSsl
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 9
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
   syntax:
     content: 'public sealed class ECDsaOpenSsl : ECDsa'
-    content.vb: Public NotInheritable Class ECDsaOpenSsl Inherits ECDsa
+    content.vb: >-
+      Public NotInheritable Class ECDsaOpenSsl
+          Inherits ECDsa
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Security.Cryptography.ECDsaOpenSsl.#ctor
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.#ctor
   id: '#ctor'
   parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
   name: ECDsaOpenSsl()
+  nameWithType: ECDsaOpenSsl.ECDsaOpenSsl()
   fullName: System.Security.Cryptography.ECDsaOpenSsl.ECDsaOpenSsl()
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
-    startLine: 14
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 11
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
   syntax:
     content: public ECDsaOpenSsl()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.Int32)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.Int32)
   id: '#ctor(System.Int32)'
   parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
   name: ECDsaOpenSsl(Int32)
+  nameWithType: ECDsaOpenSsl.ECDsaOpenSsl(Int32)
   fullName: System.Security.Cryptography.ECDsaOpenSsl.ECDsaOpenSsl(System.Int32)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
-    startLine: 19
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 12
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
@@ -68,19 +111,29 @@ items:
     parameters:
     - id: keySize
       type: System.Int32
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.IntPtr)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.IntPtr)
   id: '#ctor(System.IntPtr)'
   parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
   name: ECDsaOpenSsl(IntPtr)
+  nameWithType: ECDsaOpenSsl.ECDsaOpenSsl(IntPtr)
   fullName: System.Security.Cryptography.ECDsaOpenSsl.ECDsaOpenSsl(System.IntPtr)
   type: Constructor
   source:
-    remote: &o1
+    remote:
       path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
@@ -90,16 +143,61 @@ items:
     parameters:
     - id: handle
       type: System.IntPtr
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.Security.Cryptography.ECCurve)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.Security.Cryptography.ECCurve)
+  id: '#ctor(System.Security.Cryptography.ECCurve)'
+  parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
+  name: ECDsaOpenSsl(ECCurve)
+  nameWithType: ECDsaOpenSsl.ECDsaOpenSsl(ECCurve)
+  fullName: System.Security.Cryptography.ECDsaOpenSsl.ECDsaOpenSsl(System.Security.Cryptography.ECCurve)
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 14
+  assemblies:
+  - System.Security.Cryptography.OpenSsl
+  namespace: System.Security.Cryptography
+  syntax:
+    content: public ECDsaOpenSsl(ECCurve curve)
+    content.vb: Public Sub New(curve As ECCurve)
+    parameters:
+    - id: curve
+      type: System.Security.Cryptography.ECCurve
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.Security.Cryptography.SafeEvpPKeyHandle)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.#ctor(System.Security.Cryptography.SafeEvpPKeyHandle)
   id: '#ctor(System.Security.Cryptography.SafeEvpPKeyHandle)'
   parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
   name: ECDsaOpenSsl(SafeEvpPKeyHandle)
+  nameWithType: ECDsaOpenSsl.ECDsaOpenSsl(SafeEvpPKeyHandle)
   fullName: System.Security.Cryptography.ECDsaOpenSsl.ECDsaOpenSsl(System.Security.Cryptography.SafeEvpPKeyHandle)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
-    startLine: 55
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 15
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
@@ -109,35 +207,65 @@ items:
     parameters:
     - id: pkeyHandle
       type: System.Security.Cryptography.SafeEvpPKeyHandle
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Cryptography.ECDsaOpenSsl.KeySize
+  commentId: P:System.Security.Cryptography.ECDsaOpenSsl.KeySize
   id: KeySize
   parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
   name: KeySize
+  nameWithType: ECDsaOpenSsl.KeySize
   fullName: System.Security.Cryptography.ECDsaOpenSsl.KeySize
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
-    startLine: 104
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: KeySize
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 16
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
   syntax:
-    content: public override int KeySize { set; }
-    content.vb: Public Overrides WriteOnly Property KeySize As Integer
+    content: public override int KeySize { get; set; }
+    content.vb: Public Overrides Property KeySize As Integer
     parameters: []
     return:
       type: System.Int32
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Security.Cryptography.ECDsaOpenSsl.LegalKeySizes
+  commentId: P:System.Security.Cryptography.ECDsaOpenSsl.LegalKeySizes
   id: LegalKeySizes
   parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
   name: LegalKeySizes
+  nameWithType: ECDsaOpenSsl.LegalKeySizes
   fullName: System.Security.Cryptography.ECDsaOpenSsl.LegalKeySizes
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
-    startLine: 119
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LegalKeySizes
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 17
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
@@ -147,16 +275,33 @@ items:
     parameters: []
     return:
       type: System.Security.Cryptography.KeySizes[]
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 - uid: System.Security.Cryptography.ECDsaOpenSsl.Dispose(System.Boolean)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.Dispose(System.Boolean)
   id: Dispose(System.Boolean)
   parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
   name: Dispose(Boolean)
+  nameWithType: ECDsaOpenSsl.Dispose(Boolean)
   fullName: System.Security.Cryptography.ECDsaOpenSsl.Dispose(System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
-    startLine: 185
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Dispose
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 18
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
@@ -166,16 +311,31 @@ items:
     parameters:
     - id: disposing
       type: System.Boolean
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: System.Security.Cryptography.ECDsaOpenSsl.DuplicateKeyHandle
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.DuplicateKeyHandle
   id: DuplicateKeyHandle
   parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
   name: DuplicateKeyHandle()
+  nameWithType: ECDsaOpenSsl.DuplicateKeyHandle()
   fullName: System.Security.Cryptography.ECDsaOpenSsl.DuplicateKeyHandle()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
-    startLine: 80
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DuplicateKeyHandle
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 19
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
@@ -184,18 +344,135 @@ items:
     content.vb: Public Function DuplicateKeyHandle As SafeEvpPKeyHandle
     return:
       type: System.Security.Cryptography.SafeEvpPKeyHandle
-- uid: System.Security.Cryptography.ECDsaOpenSsl.HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
-  id: HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: System.Security.Cryptography.ECDsaOpenSsl.ExportExplicitParameters(System.Boolean)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.ExportExplicitParameters(System.Boolean)
+  id: ExportExplicitParameters(System.Boolean)
   parent: System.Security.Cryptography.ECDsaOpenSsl
-  name: HashData(Byte[], Int32, Int32, HashAlgorithmName)
-  name.vb: HashData(Byte(), Int32, Int32, HashAlgorithmName)
-  fullName: System.Security.Cryptography.ECDsaOpenSsl.HashData(System.Byte[], System.Int32, System.Int32, System.Security.Cryptography.HashAlgorithmName)
-  fullName.vb: System.Security.Cryptography.ECDsaOpenSsl.HashData(System.Byte(), System.Int32, System.Int32, System.Security.Cryptography.HashAlgorithmName)
+  langs:
+  - csharp
+  - vb
+  name: ExportExplicitParameters(Boolean)
+  nameWithType: ECDsaOpenSsl.ExportExplicitParameters(Boolean)
+  fullName: System.Security.Cryptography.ECDsaOpenSsl.ExportExplicitParameters(System.Boolean)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ExportExplicitParameters
     path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
-    startLine: 16
+    startLine: 20
+  assemblies:
+  - System.Security.Cryptography.OpenSsl
+  namespace: System.Security.Cryptography
+  syntax:
+    content: public override ECParameters ExportExplicitParameters(bool includePrivateParameters)
+    content.vb: Public Overrides Function ExportExplicitParameters(includePrivateParameters As Boolean) As ECParameters
+    parameters:
+    - id: includePrivateParameters
+      type: System.Boolean
+    return:
+      type: System.Security.Cryptography.ECParameters
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: System.Security.Cryptography.ECDsaOpenSsl.ExportParameters(System.Boolean)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.ExportParameters(System.Boolean)
+  id: ExportParameters(System.Boolean)
+  parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
+  name: ExportParameters(Boolean)
+  nameWithType: ECDsaOpenSsl.ExportParameters(Boolean)
+  fullName: System.Security.Cryptography.ECDsaOpenSsl.ExportParameters(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ExportParameters
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 21
+  assemblies:
+  - System.Security.Cryptography.OpenSsl
+  namespace: System.Security.Cryptography
+  syntax:
+    content: public override ECParameters ExportParameters(bool includePrivateParameters)
+    content.vb: Public Overrides Function ExportParameters(includePrivateParameters As Boolean) As ECParameters
+    parameters:
+    - id: includePrivateParameters
+      type: System.Boolean
+    return:
+      type: System.Security.Cryptography.ECParameters
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: System.Security.Cryptography.ECDsaOpenSsl.GenerateKey(System.Security.Cryptography.ECCurve)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.GenerateKey(System.Security.Cryptography.ECCurve)
+  id: GenerateKey(System.Security.Cryptography.ECCurve)
+  parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
+  name: GenerateKey(ECCurve)
+  nameWithType: ECDsaOpenSsl.GenerateKey(ECCurve)
+  fullName: System.Security.Cryptography.ECDsaOpenSsl.GenerateKey(System.Security.Cryptography.ECCurve)
+  type: Method
+  source:
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GenerateKey
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 22
+  assemblies:
+  - System.Security.Cryptography.OpenSsl
+  namespace: System.Security.Cryptography
+  syntax:
+    content: public override void GenerateKey(ECCurve curve)
+    content.vb: Public Overrides Sub GenerateKey(curve As ECCurve)
+    parameters:
+    - id: curve
+      type: System.Security.Cryptography.ECCurve
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: System.Security.Cryptography.ECDsaOpenSsl.HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  id: HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)
+  parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
+  name: HashData(Byte[], Int32, Int32, HashAlgorithmName)
+  nameWithType: ECDsaOpenSsl.HashData(Byte[], Int32, Int32, HashAlgorithmName)
+  fullName: System.Security.Cryptography.ECDsaOpenSsl.HashData(System.Byte[], System.Int32, System.Int32, System.Security.Cryptography.HashAlgorithmName)
+  type: Method
+  source:
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HashData
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 23
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
@@ -213,16 +490,34 @@ items:
       type: System.Security.Cryptography.HashAlgorithmName
     return:
       type: System.Byte[]
+  nameWithType.vb: ECDsaOpenSsl.HashData(Byte(), Int32, Int32, HashAlgorithmName)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: System.Security.Cryptography.ECDsaOpenSsl.HashData(System.Byte(), System.Int32, System.Int32, System.Security.Cryptography.HashAlgorithmName)
+  name.vb: HashData(Byte(), Int32, Int32, HashAlgorithmName)
 - uid: System.Security.Cryptography.ECDsaOpenSsl.HashData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.HashData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)
   id: HashData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)
   parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
   name: HashData(IO.Stream, HashAlgorithmName)
+  nameWithType: ECDsaOpenSsl.HashData(IO.Stream, HashAlgorithmName)
   fullName: System.Security.Cryptography.ECDsaOpenSsl.HashData(System.IO.Stream, System.Security.Cryptography.HashAlgorithmName)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HashData
     path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
-    startLine: 17
+    startLine: 24
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
@@ -236,18 +531,65 @@ items:
       type: System.Security.Cryptography.HashAlgorithmName
     return:
       type: System.Byte[]
-- uid: System.Security.Cryptography.ECDsaOpenSsl.SignHash(System.Byte[])
-  id: SignHash(System.Byte[])
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: System.Security.Cryptography.ECDsaOpenSsl.ImportParameters(System.Security.Cryptography.ECParameters)
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.ImportParameters(System.Security.Cryptography.ECParameters)
+  id: ImportParameters(System.Security.Cryptography.ECParameters)
   parent: System.Security.Cryptography.ECDsaOpenSsl
-  name: SignHash(Byte[])
-  name.vb: SignHash(Byte())
-  fullName: System.Security.Cryptography.ECDsaOpenSsl.SignHash(System.Byte[])
-  fullName.vb: System.Security.Cryptography.ECDsaOpenSsl.SignHash(System.Byte())
+  langs:
+  - csharp
+  - vb
+  name: ImportParameters(ECParameters)
+  nameWithType: ECDsaOpenSsl.ImportParameters(ECParameters)
+  fullName: System.Security.Cryptography.ECDsaOpenSsl.ImportParameters(System.Security.Cryptography.ECParameters)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
-    startLine: 133
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ImportParameters
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 25
+  assemblies:
+  - System.Security.Cryptography.OpenSsl
+  namespace: System.Security.Cryptography
+  syntax:
+    content: public override void ImportParameters(ECParameters parameters)
+    content.vb: Public Overrides Sub ImportParameters(parameters As ECParameters)
+    parameters:
+    - id: parameters
+      type: System.Security.Cryptography.ECParameters
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: System.Security.Cryptography.ECDsaOpenSsl.SignHash(System.Byte[])
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.SignHash(System.Byte[])
+  id: SignHash(System.Byte[])
+  parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
+  name: SignHash(Byte[])
+  nameWithType: ECDsaOpenSsl.SignHash(Byte[])
+  fullName: System.Security.Cryptography.ECDsaOpenSsl.SignHash(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SignHash
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 26
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
@@ -259,18 +601,34 @@ items:
       type: System.Byte[]
     return:
       type: System.Byte[]
+  nameWithType.vb: ECDsaOpenSsl.SignHash(Byte())
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.Security.Cryptography.ECDsaOpenSsl.SignHash(System.Byte())
+  name.vb: SignHash(Byte())
 - uid: System.Security.Cryptography.ECDsaOpenSsl.VerifyHash(System.Byte[],System.Byte[])
+  commentId: M:System.Security.Cryptography.ECDsaOpenSsl.VerifyHash(System.Byte[],System.Byte[])
   id: VerifyHash(System.Byte[],System.Byte[])
   parent: System.Security.Cryptography.ECDsaOpenSsl
+  langs:
+  - csharp
+  - vb
   name: VerifyHash(Byte[], Byte[])
-  name.vb: VerifyHash(Byte(), Byte())
+  nameWithType: ECDsaOpenSsl.VerifyHash(Byte[], Byte[])
   fullName: System.Security.Cryptography.ECDsaOpenSsl.VerifyHash(System.Byte[], System.Byte[])
-  fullName.vb: System.Security.Cryptography.ECDsaOpenSsl.VerifyHash(System.Byte(), System.Byte())
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Cryptography.OpenSsl/src/System/Security/Cryptography/ECDsaOpenSsl.cs
-    startLine: 149
+    remote:
+      path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: VerifyHash
+    path: src/System.Security.Cryptography.OpenSsl/ref/System.Security.Cryptography.OpenSsl.cs
+    startLine: 27
   assemblies:
   - System.Security.Cryptography.OpenSsl
   namespace: System.Security.Cryptography
@@ -284,87 +642,140 @@ items:
       type: System.Byte[]
     return:
       type: System.Boolean
+  nameWithType.vb: ECDsaOpenSsl.VerifyHash(Byte(), Byte())
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: System.Security.Cryptography.ECDsaOpenSsl.VerifyHash(System.Byte(), System.Byte())
+  name.vb: VerifyHash(Byte(), Byte())
 references:
 - uid: System.Security.Cryptography
+  commentId: N:System.Security.Cryptography
   isExternal: false
   name: System.Security.Cryptography
+  nameWithType: System.Security.Cryptography
   fullName: System.Security.Cryptography
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.IntPtr
+  commentId: T:System.IntPtr
   parent: System
   isExternal: false
   name: IntPtr
+  nameWithType: IntPtr
   fullName: System.IntPtr
+- uid: System.Security.Cryptography.ECCurve
+  commentId: T:System.Security.Cryptography.ECCurve
+  parent: System.Security.Cryptography
+  isExternal: false
+  name: ECCurve
+  nameWithType: ECCurve
+  fullName: System.Security.Cryptography.ECCurve
 - uid: System.Security.Cryptography.SafeEvpPKeyHandle
+  commentId: T:System.Security.Cryptography.SafeEvpPKeyHandle
   parent: System.Security.Cryptography
   isExternal: false
   name: SafeEvpPKeyHandle
+  nameWithType: SafeEvpPKeyHandle
   fullName: System.Security.Cryptography.SafeEvpPKeyHandle
 - uid: System.Security.Cryptography.KeySizes[]
-  isExternal: false
   name: KeySizes[]
-  name.vb: KeySizes()
+  nameWithType: KeySizes[]
   fullName: System.Security.Cryptography.KeySizes[]
-  fullName.vb: System.Security.Cryptography.KeySizes()
+  nameWithType.vb: KeySizes()
+  fullname.vb: System.Security.Cryptography.KeySizes()
+  name.vb: KeySizes()
   spec.csharp:
   - uid: System.Security.Cryptography.KeySizes
     name: KeySizes
+    nameWithType: KeySizes
     fullName: System.Security.Cryptography.KeySizes
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Security.Cryptography.KeySizes
     name: KeySizes
+    nameWithType: KeySizes
     fullName: System.Security.Cryptography.KeySizes
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
-- uid: System.Byte[]
+- uid: System.Security.Cryptography.ECParameters
+  commentId: T:System.Security.Cryptography.ECParameters
+  parent: System.Security.Cryptography
   isExternal: false
+  name: ECParameters
+  nameWithType: ECParameters
+  fullName: System.Security.Cryptography.ECParameters
+- uid: System.Byte[]
   name: Byte[]
-  name.vb: Byte()
+  nameWithType: Byte[]
   fullName: System.Byte[]
-  fullName.vb: System.Byte()
+  nameWithType.vb: Byte()
+  fullname.vb: System.Byte()
+  name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Security.Cryptography.HashAlgorithmName
+  commentId: T:System.Security.Cryptography.HashAlgorithmName
   parent: System.Security.Cryptography
   isExternal: false
   name: HashAlgorithmName
+  nameWithType: HashAlgorithmName
   fullName: System.Security.Cryptography.HashAlgorithmName
 - uid: System.IO.Stream
+  commentId: T:System.IO.Stream
   parent: System.IO
   isExternal: false
   name: IO.Stream
+  nameWithType: IO.Stream
   fullName: System.IO.Stream
 - uid: System.IO
+  commentId: N:System.IO
   isExternal: false
   name: System.IO
+  nameWithType: System.IO
   fullName: System.IO

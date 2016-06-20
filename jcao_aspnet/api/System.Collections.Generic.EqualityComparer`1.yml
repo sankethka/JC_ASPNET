@@ -1,5 +1,6 @@
 items:
 - uid: System.Collections.Generic.EqualityComparer`1
+  commentId: T:System.Collections.Generic.EqualityComparer`1
   id: EqualityComparer`1
   parent: System.Collections.Generic
   children:
@@ -7,195 +8,287 @@ items:
   - System.Collections.Generic.EqualityComparer`1.Default
   - System.Collections.Generic.EqualityComparer`1.Equals(`0,`0)
   - System.Collections.Generic.EqualityComparer`1.GetHashCode(`0)
+  langs:
+  - csharp
+  - vb
   name: EqualityComparer<T>
-  name.vb: EqualityComparer(Of T)
+  nameWithType: EqualityComparer<T>
   fullName: System.Collections.Generic.EqualityComparer<T>
-  fullName.vb: System.Collections.Generic.EqualityComparer(Of T)
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Collections/Generic/EqualityComparer.cs
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Collections/Generic/EqualityComparer.cs
-    startLine: 17
+      repo: https://github.com/dotnet/corefx.git
+    id: EqualityComparer
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 157
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Provides a base class for implementations of the <xref href="System.Collections.Generic.IEqualityComparer`1" data-throw-if-not-resolved="false"></xref> generic interface.
   syntax:
     content: 'public abstract class EqualityComparer<T> : IEqualityComparer<T>, IEqualityComparer'
-    content.vb: Public MustInherit Class EqualityComparer(Of T) Inherits IEqualityComparer(Of T) Implements IEqualityComparer
+    content.vb: >-
+      Public MustInherit Class EqualityComparer(Of T)
+          Inherits IEqualityComparer(Of T)
+          Implements IEqualityComparer
     typeParameters:
     - id: T
   inheritance:
   - System.Object
   implements:
   - System.Collections.IEqualityComparer
+  nameWithType.vb: EqualityComparer(Of T)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: System.Collections.Generic.EqualityComparer(Of T)
+  name.vb: EqualityComparer(Of T)
 - uid: System.Collections.Generic.EqualityComparer`1.#ctor
+  commentId: M:System.Collections.Generic.EqualityComparer`1.#ctor
   id: '#ctor'
   parent: System.Collections.Generic.EqualityComparer`1
+  langs:
+  - csharp
+  - vb
   name: EqualityComparer()
+  nameWithType: EqualityComparer<T>.EqualityComparer()
   fullName: System.Collections.Generic.EqualityComparer<T>.EqualityComparer()
-  fullName.vb: System.Collections.Generic.EqualityComparer(Of T).EqualityComparer()
   type: Constructor
   source:
     remote:
       path: src/System.Collections/ref/System.Collections.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Collections/ref/System.Collections.cs
-    startLine: 156
+    startLine: 159
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Initializes a new instance of the <xref href="System.Collections.Generic.EqualityComparer`1" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: protected EqualityComparer()
     content.vb: Protected Sub New
+  nameWithType.vb: EqualityComparer(Of T).EqualityComparer()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: System.Collections.Generic.EqualityComparer(Of T).EqualityComparer()
 - uid: System.Collections.Generic.EqualityComparer`1.Default
+  commentId: P:System.Collections.Generic.EqualityComparer`1.Default
   id: Default
   parent: System.Collections.Generic.EqualityComparer`1
+  langs:
+  - csharp
+  - vb
   name: Default
+  nameWithType: EqualityComparer<T>.Default
   fullName: System.Collections.Generic.EqualityComparer<T>.Default
-  fullName.vb: System.Collections.Generic.EqualityComparer(Of T).Default
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/Generic/EqualityComparer.cs
-    startLine: 23
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Default
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 160
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Returns a default equality comparer for the type specified by the generic argument.
   syntax:
     content: public static EqualityComparer<T> Default { get; }
     content.vb: Public Shared ReadOnly Property Default As EqualityComparer(Of T)
     parameters: []
     return:
       type: System.Collections.Generic.EqualityComparer`1
-      description: The default instance of the <xref href="System.Collections.Generic.EqualityComparer`1" data-throw-if-not-resolved="false"></xref> class for type *T*.
+  nameWithType.vb: EqualityComparer(Of T).Default
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+  fullName.vb: System.Collections.Generic.EqualityComparer(Of T).Default
 - uid: System.Collections.Generic.EqualityComparer`1.Equals(`0,`0)
+  commentId: M:System.Collections.Generic.EqualityComparer`1.Equals(`0,`0)
   id: Equals(`0,`0)
   parent: System.Collections.Generic.EqualityComparer`1
+  langs:
+  - csharp
+  - vb
   name: Equals(T, T)
+  nameWithType: EqualityComparer<T>.Equals(T, T)
   fullName: System.Collections.Generic.EqualityComparer<T>.Equals(T, T)
-  fullName.vb: System.Collections.Generic.EqualityComparer(Of T).Equals(T, T)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/Generic/EqualityComparer.cs
-    startLine: 87
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 161
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: When overridden in a derived class, determines whether two objects of type *T* are equal.
   syntax:
     content: public abstract bool Equals(T x, T y)
     content.vb: Public MustOverride Function Equals(x As T, y As T) As Boolean
     parameters:
     - id: x
       type: '{T}'
-      description: The first object to compare.
     - id: y
       type: '{T}'
-      description: The second object to compare.
     return:
       type: System.Boolean
-      description: true if the specified objects are equal; otherwise, false.
+  nameWithType.vb: EqualityComparer(Of T).Equals(T, T)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: System.Collections.Generic.EqualityComparer(Of T).Equals(T, T)
 - uid: System.Collections.Generic.EqualityComparer`1.GetHashCode(`0)
+  commentId: M:System.Collections.Generic.EqualityComparer`1.GetHashCode(`0)
   id: GetHashCode(`0)
   parent: System.Collections.Generic.EqualityComparer`1
+  langs:
+  - csharp
+  - vb
   name: GetHashCode(T)
+  nameWithType: EqualityComparer<T>.GetHashCode(T)
   fullName: System.Collections.Generic.EqualityComparer<T>.GetHashCode(T)
-  fullName.vb: System.Collections.Generic.EqualityComparer(Of T).GetHashCode(T)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/Generic/EqualityComparer.cs
-    startLine: 89
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 162
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: When overridden in a derived class, serves as a hash function for the specified object for hashing algorithms and data structures, such as a hash table.
   syntax:
     content: public abstract int GetHashCode(T obj)
     content.vb: Public MustOverride Function GetHashCode(obj As T) As Integer
     parameters:
     - id: obj
       type: '{T}'
-      description: The object for which to get a hash code.
     return:
       type: System.Int32
-      description: A hash code for the specified object.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The type of *obj* is a reference type and *obj* is null.
+  nameWithType.vb: EqualityComparer(Of T).GetHashCode(T)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: System.Collections.Generic.EqualityComparer(Of T).GetHashCode(T)
 references:
 - uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
   name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Collections.IEqualityComparer
+  commentId: T:System.Collections.IEqualityComparer
   parent: System.Collections
   isExternal: false
-  name: IEqualityComparer
+  name: Collections.IEqualityComparer
+  nameWithType: Collections.IEqualityComparer
   fullName: System.Collections.IEqualityComparer
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
 - uid: System.Collections.Generic.EqualityComparer`1
+  commentId: T:System.Collections.Generic.EqualityComparer`1
   parent: System.Collections.Generic
   isExternal: false
   name: EqualityComparer<T>
-  name.vb: EqualityComparer(Of T)
+  nameWithType: EqualityComparer<T>
   fullName: System.Collections.Generic.EqualityComparer<T>
-  fullName.vb: System.Collections.Generic.EqualityComparer(Of T)
+  nameWithType.vb: EqualityComparer(Of T)
+  fullname.vb: System.Collections.Generic.EqualityComparer(Of T)
+  name.vb: EqualityComparer(Of T)
   spec.csharp:
   - uid: System.Collections.Generic.EqualityComparer`1
     name: EqualityComparer
+    nameWithType: EqualityComparer
     fullName: System.Collections.Generic.EqualityComparer
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.EqualityComparer`1
     name: EqualityComparer
+    nameWithType: EqualityComparer
     fullName: System.Collections.Generic.EqualityComparer
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T}'
-  isExternal: false
+  commentId: '!:T'
+  definition: T
   name: T
+  nameWithType: T
   fullName: T
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException

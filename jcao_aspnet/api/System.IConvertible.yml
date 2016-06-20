@@ -1,5 +1,6 @@
 items:
 - uid: System.IConvertible
+  commentId: T:System.IConvertible
   id: IConvertible
   parent: System
   children:
@@ -20,527 +21,691 @@ items:
   - System.IConvertible.ToUInt16(System.IFormatProvider)
   - System.IConvertible.ToUInt32(System.IFormatProvider)
   - System.IConvertible.ToUInt64(System.IFormatProvider)
+  langs:
+  - csharp
+  - vb
   name: IConvertible
+  nameWithType: IConvertible
   fullName: System.IConvertible
   type: Interface
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/IConvertible.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 24
+      repo: https://github.com/dotnet/corefx.git
+    id: IConvertible
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 964
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Defines methods that convert the value of the implementing reference or value type to a common language runtime type that has an equivalent value.
   syntax:
-    content: public interface IConvertible
-    content.vb: Public Interface IConvertible
+    content: >-
+      [CLSCompliant(false)]
+
+      public interface IConvertible
+    content.vb: >-
+      <CLSCompliant(False)>
+
+      Public Interface IConvertible
+  attributes:
+  - type: System.CLSCompliantAttribute
+    ctor: System.CLSCompliantAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
 - uid: System.IConvertible.GetTypeCode
+  commentId: M:System.IConvertible.GetTypeCode
   id: GetTypeCode
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: GetTypeCode()
+  nameWithType: IConvertible.GetTypeCode()
   fullName: System.IConvertible.GetTypeCode()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 41
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetTypeCode
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 967
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Returns the <xref href="System.TypeCode" data-throw-if-not-resolved="false"></xref> for this instance.
   syntax:
     content: TypeCode GetTypeCode()
     content.vb: Function GetTypeCode As TypeCode
     return:
       type: System.TypeCode
-      description: The enumerated constant that is the <xref href="System.TypeCode" data-throw-if-not-resolved="false"></xref> of the class or value type that implements this interface.
 - uid: System.IConvertible.ToBoolean(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToBoolean(System.IFormatProvider)
   id: ToBoolean(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToBoolean(IFormatProvider)
+  nameWithType: IConvertible.ToBoolean(IFormatProvider)
   fullName: System.IConvertible.ToBoolean(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 51
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToBoolean
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 968
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent Boolean value using the specified culture-specific formatting information.
   syntax:
     content: bool ToBoolean(IFormatProvider provider)
     content.vb: Function ToBoolean(provider As IFormatProvider) As Boolean
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.Boolean
-      description: A Boolean value equivalent to the value of this instance.
 - uid: System.IConvertible.ToByte(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToByte(System.IFormatProvider)
   id: ToByte(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToByte(IFormatProvider)
+  nameWithType: IConvertible.ToByte(IFormatProvider)
   fullName: System.IConvertible.ToByte(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 54
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToByte
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 969
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent 8-bit unsigned integer using the specified culture-specific formatting information.
   syntax:
     content: byte ToByte(IFormatProvider provider)
     content.vb: Function ToByte(provider As IFormatProvider) As Byte
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.Byte
-      description: An 8-bit unsigned integer equivalent to the value of this instance.
 - uid: System.IConvertible.ToChar(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToChar(System.IFormatProvider)
   id: ToChar(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToChar(IFormatProvider)
+  nameWithType: IConvertible.ToChar(IFormatProvider)
   fullName: System.IConvertible.ToChar(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 52
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToChar
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 970
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent Unicode character using the specified culture-specific formatting information.
   syntax:
     content: char ToChar(IFormatProvider provider)
     content.vb: Function ToChar(provider As IFormatProvider) As Char
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.Char
-      description: A Unicode character equivalent to the value of this instance.
 - uid: System.IConvertible.ToDateTime(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToDateTime(System.IFormatProvider)
   id: ToDateTime(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToDateTime(IFormatProvider)
+  nameWithType: IConvertible.ToDateTime(IFormatProvider)
   fullName: System.IConvertible.ToDateTime(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 64
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToDateTime
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 971
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> using the specified culture-specific formatting information.
   syntax:
     content: DateTime ToDateTime(IFormatProvider provider)
     content.vb: Function ToDateTime(provider As IFormatProvider) As Date
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.DateTime
-      description: A <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> instance equivalent to the value of this instance.
 - uid: System.IConvertible.ToDecimal(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToDecimal(System.IFormatProvider)
   id: ToDecimal(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToDecimal(IFormatProvider)
+  nameWithType: IConvertible.ToDecimal(IFormatProvider)
   fullName: System.IConvertible.ToDecimal(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 63
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToDecimal
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 972
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> number using the specified culture-specific formatting information.
   syntax:
     content: decimal ToDecimal(IFormatProvider provider)
     content.vb: Function ToDecimal(provider As IFormatProvider) As Decimal
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.Decimal
-      description: A <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref> number equivalent to the value of this instance.
 - uid: System.IConvertible.ToDouble(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToDouble(System.IFormatProvider)
   id: ToDouble(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToDouble(IFormatProvider)
+  nameWithType: IConvertible.ToDouble(IFormatProvider)
   fullName: System.IConvertible.ToDouble(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 62
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToDouble
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 973
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent double-precision floating-point number using the specified culture-specific formatting information.
   syntax:
     content: double ToDouble(IFormatProvider provider)
     content.vb: Function ToDouble(provider As IFormatProvider) As Double
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.Double
-      description: A double-precision floating-point number equivalent to the value of this instance.
 - uid: System.IConvertible.ToInt16(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToInt16(System.IFormatProvider)
   id: ToInt16(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToInt16(IFormatProvider)
+  nameWithType: IConvertible.ToInt16(IFormatProvider)
   fullName: System.IConvertible.ToInt16(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 55
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToInt16
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 974
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent 16-bit signed integer using the specified culture-specific formatting information.
   syntax:
     content: short ToInt16(IFormatProvider provider)
     content.vb: Function ToInt16(provider As IFormatProvider) As Short
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.Int16
-      description: An 16-bit signed integer equivalent to the value of this instance.
 - uid: System.IConvertible.ToInt32(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToInt32(System.IFormatProvider)
   id: ToInt32(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToInt32(IFormatProvider)
+  nameWithType: IConvertible.ToInt32(IFormatProvider)
   fullName: System.IConvertible.ToInt32(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 57
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToInt32
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 975
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent 32-bit signed integer using the specified culture-specific formatting information.
   syntax:
     content: int ToInt32(IFormatProvider provider)
     content.vb: Function ToInt32(provider As IFormatProvider) As Integer
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.Int32
-      description: An 32-bit signed integer equivalent to the value of this instance.
 - uid: System.IConvertible.ToInt64(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToInt64(System.IFormatProvider)
   id: ToInt64(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToInt64(IFormatProvider)
+  nameWithType: IConvertible.ToInt64(IFormatProvider)
   fullName: System.IConvertible.ToInt64(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 59
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToInt64
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 976
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent 64-bit signed integer using the specified culture-specific formatting information.
   syntax:
     content: long ToInt64(IFormatProvider provider)
     content.vb: Function ToInt64(provider As IFormatProvider) As Long
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.Int64
-      description: An 64-bit signed integer equivalent to the value of this instance.
 - uid: System.IConvertible.ToSByte(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToSByte(System.IFormatProvider)
   id: ToSByte(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToSByte(IFormatProvider)
+  nameWithType: IConvertible.ToSByte(IFormatProvider)
   fullName: System.IConvertible.ToSByte(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 53
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToSByte
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 977
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent 8-bit signed integer using the specified culture-specific formatting information.
   syntax:
     content: sbyte ToSByte(IFormatProvider provider)
     content.vb: Function ToSByte(provider As IFormatProvider) As SByte
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.SByte
-      description: An 8-bit signed integer equivalent to the value of this instance.
 - uid: System.IConvertible.ToSingle(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToSingle(System.IFormatProvider)
   id: ToSingle(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToSingle(IFormatProvider)
+  nameWithType: IConvertible.ToSingle(IFormatProvider)
   fullName: System.IConvertible.ToSingle(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 61
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToSingle
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 978
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent single-precision floating-point number using the specified culture-specific formatting information.
   syntax:
     content: float ToSingle(IFormatProvider provider)
     content.vb: Function ToSingle(provider As IFormatProvider) As Single
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.Single
-      description: A single-precision floating-point number equivalent to the value of this instance.
 - uid: System.IConvertible.ToString(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToString(System.IFormatProvider)
   id: ToString(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToString(IFormatProvider)
+  nameWithType: IConvertible.ToString(IFormatProvider)
   fullName: System.IConvertible.ToString(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 65
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 979
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent <xref href="System.String" data-throw-if-not-resolved="false"></xref> using the specified culture-specific formatting information.
   syntax:
     content: string ToString(IFormatProvider provider)
     content.vb: Function ToString(provider As IFormatProvider) As String
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.String
-      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> instance equivalent to the value of this instance.
 - uid: System.IConvertible.ToType(System.Type,System.IFormatProvider)
+  commentId: M:System.IConvertible.ToType(System.Type,System.IFormatProvider)
   id: ToType(System.Type,System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToType(Type, IFormatProvider)
+  nameWithType: IConvertible.ToType(Type, IFormatProvider)
   fullName: System.IConvertible.ToType(System.Type, System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 66
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToType
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 980
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an <xref href="System.Object" data-throw-if-not-resolved="false"></xref> of the specified <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that has an equivalent value, using the specified culture-specific formatting information.
   syntax:
     content: object ToType(Type conversionType, IFormatProvider provider)
     content.vb: Function ToType(conversionType As Type, provider As IFormatProvider) As Object
     parameters:
     - id: conversionType
       type: System.Type
-      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> to which the value of this instance is converted.
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.Object
-      description: An <xref href="System.Object" data-throw-if-not-resolved="false"></xref> instance of type *conversionType* whose value is equivalent to the value of this instance.
 - uid: System.IConvertible.ToUInt16(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToUInt16(System.IFormatProvider)
   id: ToUInt16(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToUInt16(IFormatProvider)
+  nameWithType: IConvertible.ToUInt16(IFormatProvider)
   fullName: System.IConvertible.ToUInt16(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 56
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToUInt16
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 981
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent 16-bit unsigned integer using the specified culture-specific formatting information.
   syntax:
     content: ushort ToUInt16(IFormatProvider provider)
     content.vb: Function ToUInt16(provider As IFormatProvider) As UShort
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.UInt16
-      description: An 16-bit unsigned integer equivalent to the value of this instance.
 - uid: System.IConvertible.ToUInt32(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToUInt32(System.IFormatProvider)
   id: ToUInt32(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToUInt32(IFormatProvider)
+  nameWithType: IConvertible.ToUInt32(IFormatProvider)
   fullName: System.IConvertible.ToUInt32(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 58
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToUInt32
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 982
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent 32-bit unsigned integer using the specified culture-specific formatting information.
   syntax:
     content: uint ToUInt32(IFormatProvider provider)
     content.vb: Function ToUInt32(provider As IFormatProvider) As UInteger
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.UInt32
-      description: An 32-bit unsigned integer equivalent to the value of this instance.
 - uid: System.IConvertible.ToUInt64(System.IFormatProvider)
+  commentId: M:System.IConvertible.ToUInt64(System.IFormatProvider)
   id: ToUInt64(System.IFormatProvider)
   parent: System.IConvertible
+  langs:
+  - csharp
+  - vb
   name: ToUInt64(IFormatProvider)
+  nameWithType: IConvertible.ToUInt64(IFormatProvider)
   fullName: System.IConvertible.ToUInt64(System.IFormatProvider)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/IConvertible.cs
-    startLine: 60
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToUInt64
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 983
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Converts the value of this instance to an equivalent 64-bit unsigned integer using the specified culture-specific formatting information.
   syntax:
     content: ulong ToUInt64(IFormatProvider provider)
     content.vb: Function ToUInt64(provider As IFormatProvider) As ULong
     parameters:
     - id: provider
       type: System.IFormatProvider
-      description: An <xref href="System.IFormatProvider" data-throw-if-not-resolved="false"></xref> interface implementation that supplies culture-specific formatting information.
     return:
       type: System.UInt64
-      description: An 64-bit unsigned integer equivalent to the value of this instance.
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.TypeCode
+  commentId: T:System.TypeCode
   parent: System
   isExternal: false
   name: TypeCode
+  nameWithType: TypeCode
   fullName: System.TypeCode
 - uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
   parent: System
   isExternal: false
   name: IFormatProvider
+  nameWithType: IFormatProvider
   fullName: System.IFormatProvider
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Byte
+  commentId: T:System.Byte
   parent: System
   isExternal: false
   name: Byte
+  nameWithType: Byte
   fullName: System.Byte
 - uid: System.Char
+  commentId: T:System.Char
   parent: System
   isExternal: false
   name: Char
+  nameWithType: Char
   fullName: System.Char
 - uid: System.DateTime
+  commentId: T:System.DateTime
   parent: System
   isExternal: false
   name: DateTime
+  nameWithType: DateTime
   fullName: System.DateTime
 - uid: System.Decimal
+  commentId: T:System.Decimal
   parent: System
   isExternal: false
   name: Decimal
+  nameWithType: Decimal
   fullName: System.Decimal
 - uid: System.Double
+  commentId: T:System.Double
   parent: System
   isExternal: false
   name: Double
+  nameWithType: Double
   fullName: System.Double
 - uid: System.Int16
+  commentId: T:System.Int16
   parent: System
   isExternal: false
   name: Int16
+  nameWithType: Int16
   fullName: System.Int16
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Int64
+  commentId: T:System.Int64
   parent: System
   isExternal: false
   name: Int64
+  nameWithType: Int64
   fullName: System.Int64
 - uid: System.SByte
+  commentId: T:System.SByte
   parent: System
   isExternal: false
   name: SByte
+  nameWithType: SByte
   fullName: System.SByte
 - uid: System.Single
+  commentId: T:System.Single
   parent: System
   isExternal: false
   name: Single
+  nameWithType: Single
   fullName: System.Single
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.UInt16
+  commentId: T:System.UInt16
   parent: System
   isExternal: false
   name: UInt16
+  nameWithType: UInt16
   fullName: System.UInt16
 - uid: System.UInt32
+  commentId: T:System.UInt32
   parent: System
   isExternal: false
   name: UInt32
+  nameWithType: UInt32
   fullName: System.UInt32
 - uid: System.UInt64
+  commentId: T:System.UInt64
   parent: System
   isExternal: false
   name: UInt64
+  nameWithType: UInt64
   fullName: System.UInt64

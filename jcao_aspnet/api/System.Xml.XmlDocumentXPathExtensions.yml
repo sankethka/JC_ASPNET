@@ -1,5 +1,6 @@
 items:
 - uid: System.Xml.XmlDocumentXPathExtensions
+  commentId: T:System.Xml.XmlDocumentXPathExtensions
   id: XmlDocumentXPathExtensions
   parent: System.Xml
   children:
@@ -15,6 +16,7 @@ items:
   - csharp
   - vb
   name: XmlDocumentXPathExtensions
+  nameWithType: XmlDocumentXPathExtensions
   fullName: System.Xml.XmlDocumentXPathExtensions
   type: Class
   source:
@@ -22,23 +24,35 @@ items:
       path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: XmlDocumentXPathExtensions
     path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - System.Xml.XPath.XmlDocument
   namespace: System.Xml
   syntax:
     content: 'public class XmlDocumentXPathExtensions : object'
-    content.vb: Public Class XmlDocumentXPathExtensions Inherits Object
+    content.vb: >-
+      Public Class XmlDocumentXPathExtensions
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Xml.XmlDocumentXPathExtensions.SelectNodes(XmlNode,System.String)
+  commentId: M:System.Xml.XmlDocumentXPathExtensions.SelectNodes(XmlNode,System.String)
   id: SelectNodes(XmlNode,System.String)
+  isExtensionMethod: true
   parent: System.Xml.XmlDocumentXPathExtensions
   langs:
   - csharp
   - vb
   name: SelectNodes(XmlNode, String)
+  nameWithType: XmlDocumentXPathExtensions.SelectNodes(XmlNode, String)
   fullName: System.Xml.XmlDocumentXPathExtensions.SelectNodes(XmlNode, System.String)
   type: Method
   source:
@@ -46,14 +60,18 @@ items:
       path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: SelectNodes
     path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - System.Xml.XPath.XmlDocument
   namespace: System.Xml
   syntax:
-    content: public static XmlNodeList SelectNodes(XmlNode node, string xpath)
-    content.vb: Public Shared Function SelectNodes(node As XmlNode, xpath As String) As XmlNodeList
+    content: public static XmlNodeList SelectNodes(this XmlNode node, string xpath)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SelectNodes(node As XmlNode, xpath As String) As XmlNodeList
     parameters:
     - id: node
       type: XmlNode
@@ -61,13 +79,22 @@ items:
       type: System.String
     return:
       type: System.Xml.XmlNodeList
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Xml.XmlDocumentXPathExtensions.SelectNodes(XmlNode,System.String,System.Xml.XmlNamespaceManager)
+  commentId: M:System.Xml.XmlDocumentXPathExtensions.SelectNodes(XmlNode,System.String,System.Xml.XmlNamespaceManager)
   id: SelectNodes(XmlNode,System.String,System.Xml.XmlNamespaceManager)
+  isExtensionMethod: true
   parent: System.Xml.XmlDocumentXPathExtensions
   langs:
   - csharp
   - vb
   name: SelectNodes(XmlNode, String, XmlNamespaceManager)
+  nameWithType: XmlDocumentXPathExtensions.SelectNodes(XmlNode, String, XmlNamespaceManager)
   fullName: System.Xml.XmlDocumentXPathExtensions.SelectNodes(XmlNode, System.String, System.Xml.XmlNamespaceManager)
   type: Method
   source:
@@ -75,14 +102,18 @@ items:
       path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: SelectNodes
     path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - System.Xml.XPath.XmlDocument
   namespace: System.Xml
   syntax:
-    content: public static XmlNodeList SelectNodes(XmlNode node, string xpath, XmlNamespaceManager nsmgr)
-    content.vb: Public Shared Function SelectNodes(node As XmlNode, xpath As String, nsmgr As XmlNamespaceManager) As XmlNodeList
+    content: public static XmlNodeList SelectNodes(this XmlNode node, string xpath, XmlNamespaceManager nsmgr)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SelectNodes(node As XmlNode, xpath As String, nsmgr As XmlNamespaceManager) As XmlNodeList
     parameters:
     - id: node
       type: XmlNode
@@ -92,13 +123,22 @@ items:
       type: System.Xml.XmlNamespaceManager
     return:
       type: System.Xml.XmlNodeList
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Xml.XmlDocumentXPathExtensions.SelectSingleNode(XmlNode,System.String)
+  commentId: M:System.Xml.XmlDocumentXPathExtensions.SelectSingleNode(XmlNode,System.String)
   id: SelectSingleNode(XmlNode,System.String)
+  isExtensionMethod: true
   parent: System.Xml.XmlDocumentXPathExtensions
   langs:
   - csharp
   - vb
   name: SelectSingleNode(XmlNode, String)
+  nameWithType: XmlDocumentXPathExtensions.SelectSingleNode(XmlNode, String)
   fullName: System.Xml.XmlDocumentXPathExtensions.SelectSingleNode(XmlNode, System.String)
   type: Method
   source:
@@ -106,14 +146,18 @@ items:
       path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: SelectSingleNode
     path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - System.Xml.XPath.XmlDocument
   namespace: System.Xml
   syntax:
-    content: public static XmlNode SelectSingleNode(XmlNode node, string xpath)
-    content.vb: Public Shared Function SelectSingleNode(node As XmlNode, xpath As String) As XmlNode
+    content: public static XmlNode SelectSingleNode(this XmlNode node, string xpath)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SelectSingleNode(node As XmlNode, xpath As String) As XmlNode
     parameters:
     - id: node
       type: XmlNode
@@ -121,13 +165,22 @@ items:
       type: System.String
     return:
       type: System.Xml.XmlNode
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Xml.XmlDocumentXPathExtensions.SelectSingleNode(XmlNode,System.String,System.Xml.XmlNamespaceManager)
+  commentId: M:System.Xml.XmlDocumentXPathExtensions.SelectSingleNode(XmlNode,System.String,System.Xml.XmlNamespaceManager)
   id: SelectSingleNode(XmlNode,System.String,System.Xml.XmlNamespaceManager)
+  isExtensionMethod: true
   parent: System.Xml.XmlDocumentXPathExtensions
   langs:
   - csharp
   - vb
   name: SelectSingleNode(XmlNode, String, XmlNamespaceManager)
+  nameWithType: XmlDocumentXPathExtensions.SelectSingleNode(XmlNode, String, XmlNamespaceManager)
   fullName: System.Xml.XmlDocumentXPathExtensions.SelectSingleNode(XmlNode, System.String, System.Xml.XmlNamespaceManager)
   type: Method
   source:
@@ -135,14 +188,18 @@ items:
       path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: SelectSingleNode
     path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - System.Xml.XPath.XmlDocument
   namespace: System.Xml
   syntax:
-    content: public static XmlNode SelectSingleNode(XmlNode node, string xpath, XmlNamespaceManager nsmgr)
-    content.vb: Public Shared Function SelectSingleNode(node As XmlNode, xpath As String, nsmgr As XmlNamespaceManager) As XmlNode
+    content: public static XmlNode SelectSingleNode(this XmlNode node, string xpath, XmlNamespaceManager nsmgr)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SelectSingleNode(node As XmlNode, xpath As String, nsmgr As XmlNamespaceManager) As XmlNode
     parameters:
     - id: node
       type: XmlNode
@@ -152,13 +209,22 @@ items:
       type: System.Xml.XmlNamespaceManager
     return:
       type: System.Xml.XmlNode
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Xml.XmlDocumentXPathExtensions.CreateNavigator(XmlNode)
+  commentId: M:System.Xml.XmlDocumentXPathExtensions.CreateNavigator(XmlNode)
   id: CreateNavigator(XmlNode)
+  isExtensionMethod: true
   parent: System.Xml.XmlDocumentXPathExtensions
   langs:
   - csharp
   - vb
   name: CreateNavigator(XmlNode)
+  nameWithType: XmlDocumentXPathExtensions.CreateNavigator(XmlNode)
   fullName: System.Xml.XmlDocumentXPathExtensions.CreateNavigator(XmlNode)
   type: Method
   source:
@@ -166,26 +232,39 @@ items:
       path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CreateNavigator
     path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - System.Xml.XPath.XmlDocument
   namespace: System.Xml
   syntax:
-    content: public static XPath.XPathNavigator CreateNavigator(XmlNode node)
-    content.vb: Public Shared Function CreateNavigator(node As XmlNode) As XPath.XPathNavigator
+    content: public static XPath.XPathNavigator CreateNavigator(this XmlNode node)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CreateNavigator(node As XmlNode) As XPath.XPathNavigator
     parameters:
     - id: node
       type: XmlNode
     return:
       type: System.Xml.XPath.XPathNavigator
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Xml.XmlDocumentXPathExtensions.ToXPathNavigable(XmlNode)
+  commentId: M:System.Xml.XmlDocumentXPathExtensions.ToXPathNavigable(XmlNode)
   id: ToXPathNavigable(XmlNode)
+  isExtensionMethod: true
   parent: System.Xml.XmlDocumentXPathExtensions
   langs:
   - csharp
   - vb
   name: ToXPathNavigable(XmlNode)
+  nameWithType: XmlDocumentXPathExtensions.ToXPathNavigable(XmlNode)
   fullName: System.Xml.XmlDocumentXPathExtensions.ToXPathNavigable(XmlNode)
   type: Method
   source:
@@ -193,26 +272,39 @@ items:
       path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ToXPathNavigable
     path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - System.Xml.XPath.XmlDocument
   namespace: System.Xml
   syntax:
-    content: public static XPath.IXPathNavigable ToXPathNavigable(XmlNode node)
-    content.vb: Public Shared Function ToXPathNavigable(node As XmlNode) As XPath.IXPathNavigable
+    content: public static XPath.IXPathNavigable ToXPathNavigable(this XmlNode node)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToXPathNavigable(node As XmlNode) As XPath.IXPathNavigable
     parameters:
     - id: node
       type: XmlNode
     return:
       type: System.Xml.XPath.IXPathNavigable
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Xml.XmlDocumentXPathExtensions.CreateNavigator(XmlDocument)
+  commentId: M:System.Xml.XmlDocumentXPathExtensions.CreateNavigator(XmlDocument)
   id: CreateNavigator(XmlDocument)
+  isExtensionMethod: true
   parent: System.Xml.XmlDocumentXPathExtensions
   langs:
   - csharp
   - vb
   name: CreateNavigator(XmlDocument)
+  nameWithType: XmlDocumentXPathExtensions.CreateNavigator(XmlDocument)
   fullName: System.Xml.XmlDocumentXPathExtensions.CreateNavigator(XmlDocument)
   type: Method
   source:
@@ -220,26 +312,39 @@ items:
       path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CreateNavigator
     path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - System.Xml.XPath.XmlDocument
   namespace: System.Xml
   syntax:
-    content: public static XPath.XPathNavigator CreateNavigator(XmlDocument document)
-    content.vb: Public Shared Function CreateNavigator(document As XmlDocument) As XPath.XPathNavigator
+    content: public static XPath.XPathNavigator CreateNavigator(this XmlDocument document)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CreateNavigator(document As XmlDocument) As XPath.XPathNavigator
     parameters:
     - id: document
       type: XmlDocument
     return:
       type: System.Xml.XPath.XPathNavigator
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Xml.XmlDocumentXPathExtensions.CreateNavigator(XmlDocument,System.Xml.XmlNode)
+  commentId: M:System.Xml.XmlDocumentXPathExtensions.CreateNavigator(XmlDocument,System.Xml.XmlNode)
   id: CreateNavigator(XmlDocument,System.Xml.XmlNode)
+  isExtensionMethod: true
   parent: System.Xml.XmlDocumentXPathExtensions
   langs:
   - csharp
   - vb
   name: CreateNavigator(XmlDocument, XmlNode)
+  nameWithType: XmlDocumentXPathExtensions.CreateNavigator(XmlDocument, XmlNode)
   fullName: System.Xml.XmlDocumentXPathExtensions.CreateNavigator(XmlDocument, System.Xml.XmlNode)
   type: Method
   source:
@@ -247,14 +352,18 @@ items:
       path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CreateNavigator
     path: src/System.Xml.XPath.XmlDocument/ref/System.Xml.XPath.XmlDocument.Manual.cs
-    startLine: 18
+    startLine: 21
   assemblies:
   - System.Xml.XPath.XmlDocument
   namespace: System.Xml
   syntax:
-    content: public static XPath.XPathNavigator CreateNavigator(XmlDocument document, XmlNode node)
-    content.vb: Public Shared Function CreateNavigator(document As XmlDocument, node As XmlNode) As XPath.XPathNavigator
+    content: public static XPath.XPathNavigator CreateNavigator(this XmlDocument document, XmlNode node)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CreateNavigator(document As XmlDocument, node As XmlNode) As XPath.XPathNavigator
     parameters:
     - id: document
       type: XmlDocument
@@ -262,59 +371,87 @@ items:
       type: System.Xml.XmlNode
     return:
       type: System.Xml.XPath.XPathNavigator
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Xml
+  commentId: N:System.Xml
   isExternal: false
   name: System.Xml
+  nameWithType: System.Xml
   fullName: System.Xml
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: XmlNode
   isExternal: true
   name: XmlNode
+  nameWithType: XmlNode
   fullName: XmlNode
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Xml.XmlNodeList
+  commentId: T:System.Xml.XmlNodeList
   parent: System.Xml
   isExternal: false
   name: XmlNodeList
+  nameWithType: XmlNodeList
   fullName: System.Xml.XmlNodeList
 - uid: System.Xml.XmlNamespaceManager
+  commentId: T:System.Xml.XmlNamespaceManager
   parent: System.Xml
   isExternal: false
   name: XmlNamespaceManager
+  nameWithType: XmlNamespaceManager
   fullName: System.Xml.XmlNamespaceManager
 - uid: System.Xml.XmlNode
+  commentId: T:System.Xml.XmlNode
   parent: System.Xml
   isExternal: false
   name: XmlNode
+  nameWithType: XmlNode
   fullName: System.Xml.XmlNode
 - uid: System.Xml.XPath.XPathNavigator
+  commentId: T:System.Xml.XPath.XPathNavigator
   parent: System.Xml.XPath
   isExternal: false
-  name: XPath.XPathNavigator
+  name: XPathNavigator
+  nameWithType: XPathNavigator
   fullName: System.Xml.XPath.XPathNavigator
 - uid: System.Xml.XPath
+  commentId: N:System.Xml.XPath
   isExternal: false
   name: System.Xml.XPath
+  nameWithType: System.Xml.XPath
   fullName: System.Xml.XPath
 - uid: System.Xml.XPath.IXPathNavigable
+  commentId: T:System.Xml.XPath.IXPathNavigable
   parent: System.Xml.XPath
   isExternal: false
-  name: XPath.IXPathNavigable
+  name: IXPathNavigable
+  nameWithType: IXPathNavigable
   fullName: System.Xml.XPath.IXPathNavigable
 - uid: XmlDocument
   isExternal: true
   name: XmlDocument
+  nameWithType: XmlDocument
   fullName: XmlDocument

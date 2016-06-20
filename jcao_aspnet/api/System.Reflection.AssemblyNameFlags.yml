@@ -1,78 +1,156 @@
 items:
 - uid: System.Reflection.AssemblyNameFlags
+  commentId: T:System.Reflection.AssemblyNameFlags
   id: AssemblyNameFlags
   parent: System.Reflection
   children:
   - System.Reflection.AssemblyNameFlags.None
   - System.Reflection.AssemblyNameFlags.PublicKey
   - System.Reflection.AssemblyNameFlags.Retargetable
+  langs:
+  - csharp
+  - vb
   name: AssemblyNameFlags
+  nameWithType: AssemblyNameFlags
   fullName: System.Reflection.AssemblyNameFlags
   type: Enum
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Reflection/AssemblyNameFlags.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Reflection/AssemblyNameFlags.cs
-    startLine: 19
+      repo: https://github.com/dotnet/corefx.git
+    id: AssemblyNameFlags
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2747
   assemblies:
   - System.Runtime
   namespace: System.Reflection
-  summary: Provides information about an <xref href="System.Reflection.Assembly" data-throw-if-not-resolved="false"></xref> reference.
   syntax:
-    content: public enum AssemblyNameFlags
-    content.vb: Public Enum AssemblyNameFlags
+    content: >-
+      [Flags]
+
+      public enum AssemblyNameFlags
+    content.vb: >-
+      <Flags>
+
+      Public Enum AssemblyNameFlags
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
 - uid: System.Reflection.AssemblyNameFlags.None
+  commentId: F:System.Reflection.AssemblyNameFlags.None
   id: None
   parent: System.Reflection.AssemblyNameFlags
+  langs:
+  - csharp
+  - vb
   name: None
+  nameWithType: AssemblyNameFlags.None
   fullName: System.Reflection.AssemblyNameFlags.None
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/AssemblyNameFlags.cs
-    startLine: 24
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: None
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2750
   assemblies:
   - System.Runtime
   namespace: System.Reflection
-  summary: Specifies that no flags are in effect.
   syntax:
     content: None = 0
+    return:
+      type: System.Reflection.AssemblyNameFlags
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Reflection.AssemblyNameFlags.PublicKey
+  commentId: F:System.Reflection.AssemblyNameFlags.PublicKey
   id: PublicKey
   parent: System.Reflection.AssemblyNameFlags
+  langs:
+  - csharp
+  - vb
   name: PublicKey
+  nameWithType: AssemblyNameFlags.PublicKey
   fullName: System.Reflection.AssemblyNameFlags.PublicKey
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/AssemblyNameFlags.cs
-    startLine: 27
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PublicKey
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2751
   assemblies:
   - System.Runtime
   namespace: System.Reflection
-  summary: Specifies that a public key is formed from the full public key rather than the public key token.
   syntax:
     content: PublicKey = 1
+    return:
+      type: System.Reflection.AssemblyNameFlags
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Reflection.AssemblyNameFlags.Retargetable
+  commentId: F:System.Reflection.AssemblyNameFlags.Retargetable
   id: Retargetable
   parent: System.Reflection.AssemblyNameFlags
+  langs:
+  - csharp
+  - vb
   name: Retargetable
+  nameWithType: AssemblyNameFlags.Retargetable
   fullName: System.Reflection.AssemblyNameFlags.Retargetable
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/AssemblyNameFlags.cs
-    startLine: 32
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Retargetable
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2752
   assemblies:
   - System.Runtime
   namespace: System.Reflection
-  summary: Specifies that the assembly can be retargeted at runtime to an assembly from a different publisher. This value supports the .NET Framework infrastructure and is not intended to be used directly from your code.
   syntax:
     content: Retargetable = 256
+    return:
+      type: System.Reflection.AssemblyNameFlags
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection
+- uid: System.Reflection.AssemblyNameFlags
+  commentId: T:System.Reflection.AssemblyNameFlags
+  parent: System.Reflection
+  isExternal: false
+  name: AssemblyNameFlags
+  nameWithType: AssemblyNameFlags
+  fullName: System.Reflection.AssemblyNameFlags

@@ -1,286 +1,134 @@
 items:
 - uid: System.Runtime.InteropServices.CoClassAttribute
+  commentId: T:System.Runtime.InteropServices.CoClassAttribute
   id: CoClassAttribute
   parent: System.Runtime.InteropServices
   children:
   - System.Runtime.InteropServices.CoClassAttribute.#ctor(System.Type)
   - System.Runtime.InteropServices.CoClassAttribute.CoClass
+  langs:
+  - csharp
+  - vb
   name: CoClassAttribute
+  nameWithType: CoClassAttribute
   fullName: System.Runtime.InteropServices.CoClassAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
-    startLine: 1006
+      repo: https://github.com/dotnet/corefx.git
+    id: CoClassAttribute
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 87
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: Specifies the class identifier of a coclass imported from a type library.
   syntax:
     content: 'public sealed class CoClassAttribute : Attribute'
-    content.vb: Public NotInheritable Class CoClassAttribute Inherits Attribute
+    content.vb: >-
+      Public NotInheritable Class CoClassAttribute
+          Inherits Attribute
   inheritance:
   - System.Object
-  - System.Attribute
-  inheritedMembers:
-  - System.Attribute.Equals(System.Object)
-  - System.Attribute.GetHashCode
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Runtime.InteropServices.CoClassAttribute.#ctor(System.Type)
+  commentId: M:System.Runtime.InteropServices.CoClassAttribute.#ctor(System.Type)
   id: '#ctor(System.Type)'
   parent: System.Runtime.InteropServices.CoClassAttribute
+  langs:
+  - csharp
+  - vb
   name: CoClassAttribute(Type)
+  nameWithType: CoClassAttribute.CoClassAttribute(Type)
   fullName: System.Runtime.InteropServices.CoClassAttribute.CoClassAttribute(System.Type)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
-    startLine: 1012
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 90
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: Initializes new instance of the <xref href="System.Runtime.InteropServices.CoClassAttribute" data-throw-if-not-resolved="false"></xref> with the class identifier of the original coclass.
   syntax:
     content: public CoClassAttribute(Type coClass)
     content.vb: Public Sub New(coClass As Type)
     parameters:
     - id: coClass
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that contains the class identifier of the original coclass.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.InteropServices.CoClassAttribute.CoClass
+  commentId: P:System.Runtime.InteropServices.CoClassAttribute.CoClass
   id: CoClass
   parent: System.Runtime.InteropServices.CoClassAttribute
+  langs:
+  - csharp
+  - vb
   name: CoClass
+  nameWithType: CoClassAttribute.CoClass
   fullName: System.Runtime.InteropServices.CoClassAttribute.CoClass
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/Attributes.cs
-    startLine: 1017
+    remote:
+      path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CoClass
+    path: src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs
+    startLine: 91
   assemblies:
   - System.Runtime.InteropServices
   namespace: System.Runtime.InteropServices
-  summary: Gets the class identifier of the original coclass.
   syntax:
     content: public Type CoClass { get; }
     content.vb: Public ReadOnly Property CoClass As Type
     parameters: []
     return:
       type: System.Type
-      description: A <xref href="System.Type" data-throw-if-not-resolved="false"></xref> containing the class identifier of the original coclass.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
   isExternal: false
   name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
-- uid: System.Attribute
-  parent: System
-  isExternal: false
-  name: Attribute
-  fullName: System.Attribute
-- uid: System.Attribute.Equals(System.Object)
-  parent: System.Attribute
-  isExternal: false
-  name: Equals(Object)
-  fullName: System.Attribute.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Attribute.Equals(System.Object)
-    name: Equals
-    fullName: System.Attribute.Equals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Attribute.Equals(System.Object)
-    name: Equals
-    fullName: System.Attribute.Equals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-- uid: System.Attribute.GetHashCode
-  parent: System.Attribute
-  isExternal: false
-  name: GetHashCode()
-  fullName: System.Attribute.GetHashCode()
-  spec.csharp:
-  - uid: System.Attribute.GetHashCode
-    name: GetHashCode
-    fullName: System.Attribute.GetHashCode
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Attribute.GetHashCode
-    name: GetHashCode
-    fullName: System.Attribute.GetHashCode
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: false
-  name: Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    fullName: System.Object.Equals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    fullName: System.Object.Equals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-- uid: System.Object.GetType
-  parent: System.Object
-  isExternal: false
-  name: GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    fullName: System.Object.GetType
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    fullName: System.Object.GetType
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: false
-  name: MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: false
-  name: ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-  - name: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    fullName: System.Object
-  - name: )
-    fullName: )
-- uid: System.Object.ToString
-  parent: System.Object
-  isExternal: false
-  name: ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    fullName: System.Object.ToString
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    fullName: System.Object.ToString
-  - name: (
-    fullName: (
-  - name: )
-    fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type

@@ -1,5 +1,6 @@
 items:
 - uid: System.Tuple
+  commentId: T:System.Tuple
   id: Tuple
   parent: System
   children:
@@ -11,20 +12,24 @@ items:
   - System.Tuple.Create``6(``0,``1,``2,``3,``4,``5)
   - System.Tuple.Create``7(``0,``1,``2,``3,``4,``5,``6)
   - System.Tuple.Create``8(``0,``1,``2,``3,``4,``5,``6,``7)
+  langs:
+  - csharp
+  - vb
   name: Tuple
+  nameWithType: Tuple
   fullName: System.Tuple
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Tuple.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Tuple.cs
-    startLine: 21
+      repo: https://github.com/dotnet/corefx.git
+    id: Tuple
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1747
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Provides static methods for creating tuple objects. To browse the .NET Framework source code for this type, see the Reference Source.
   syntax:
     content: public class Tuple
     content.vb: Public Class Tuple
@@ -38,134 +43,178 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Tuple.Create``1(``0)
+  commentId: M:System.Tuple.Create``1(``0)
   id: Create``1(``0)
   parent: System.Tuple
+  langs:
+  - csharp
+  - vb
   name: Create<T1>(T1)
-  name.vb: Create(Of T1)(T1)
+  nameWithType: Tuple.Create<T1>(T1)
   fullName: System.Tuple.Create<T1>(T1)
-  fullName.vb: System.Tuple.Create(Of T1)(T1)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Tuple.cs
-    startLine: 22
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1749
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Creates a new 1-tuple, or singleton.
   syntax:
     content: public static Tuple<T1> Create<T1>(T1 item1)
     content.vb: Public Shared Function Create(Of T1)(item1 As T1) As Tuple(Of T1)
     parameters:
     - id: item1
       type: '{T1}'
-      description: The value of the only component of the tuple.
     typeParameters:
     - id: T1
     return:
       type: System.Tuple{{T1}}
-      description: A tuple whose value is (*item1*).
+  nameWithType.vb: Tuple.Create(Of T1)(T1)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Tuple.Create(Of T1)(T1)
+  name.vb: Create(Of T1)(T1)
 - uid: System.Tuple.Create``2(``0,``1)
+  commentId: M:System.Tuple.Create``2(``0,``1)
   id: Create``2(``0,``1)
   parent: System.Tuple
+  langs:
+  - csharp
+  - vb
   name: Create<T1, T2>(T1, T2)
-  name.vb: Create(Of T1, T2)(T1, T2)
+  nameWithType: Tuple.Create<T1, T2>(T1, T2)
   fullName: System.Tuple.Create<T1, T2>(T1, T2)
-  fullName.vb: System.Tuple.Create(Of T1, T2)(T1, T2)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Tuple.cs
-    startLine: 26
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1750
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Creates a new 2-tuple, or pair.
   syntax:
     content: public static Tuple<T1, T2> Create<T1, T2>(T1 item1, T2 item2)
     content.vb: Public Shared Function Create(Of T1, T2)(item1 As T1, item2 As T2) As Tuple(Of T1, T2)
     parameters:
     - id: item1
       type: '{T1}'
-      description: The value of the first component of the tuple.
     - id: item2
       type: '{T2}'
-      description: The value of the second component of the tuple.
     typeParameters:
     - id: T1
     - id: T2
     return:
       type: System.Tuple{{T1},{T2}}
-      description: A 2-tuple whose value is (*item1*, *item2*).
+  nameWithType.vb: Tuple.Create(Of T1, T2)(T1, T2)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Tuple.Create(Of T1, T2)(T1, T2)
+  name.vb: Create(Of T1, T2)(T1, T2)
 - uid: System.Tuple.Create``3(``0,``1,``2)
+  commentId: M:System.Tuple.Create``3(``0,``1,``2)
   id: Create``3(``0,``1,``2)
   parent: System.Tuple
+  langs:
+  - csharp
+  - vb
   name: Create<T1, T2, T3>(T1, T2, T3)
-  name.vb: Create(Of T1, T2, T3)(T1, T2, T3)
+  nameWithType: Tuple.Create<T1, T2, T3>(T1, T2, T3)
   fullName: System.Tuple.Create<T1, T2, T3>(T1, T2, T3)
-  fullName.vb: System.Tuple.Create(Of T1, T2, T3)(T1, T2, T3)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Tuple.cs
-    startLine: 30
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1751
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Creates a new 3-tuple, or triple.
   syntax:
     content: public static Tuple<T1, T2, T3> Create<T1, T2, T3>(T1 item1, T2 item2, T3 item3)
     content.vb: Public Shared Function Create(Of T1, T2, T3)(item1 As T1, item2 As T2, item3 As T3) As Tuple(Of T1, T2, T3)
     parameters:
     - id: item1
       type: '{T1}'
-      description: The value of the first component of the tuple.
     - id: item2
       type: '{T2}'
-      description: The value of the second component of the tuple.
     - id: item3
       type: '{T3}'
-      description: The value of the third component of the tuple.
     typeParameters:
     - id: T1
     - id: T2
     - id: T3
     return:
       type: System.Tuple{{T1},{T2},{T3}}
-      description: A 3-tuple whose value is (*item1*, *item2*, *item3*).
+  nameWithType.vb: Tuple.Create(Of T1, T2, T3)(T1, T2, T3)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Tuple.Create(Of T1, T2, T3)(T1, T2, T3)
+  name.vb: Create(Of T1, T2, T3)(T1, T2, T3)
 - uid: System.Tuple.Create``4(``0,``1,``2,``3)
+  commentId: M:System.Tuple.Create``4(``0,``1,``2,``3)
   id: Create``4(``0,``1,``2,``3)
   parent: System.Tuple
+  langs:
+  - csharp
+  - vb
   name: Create<T1, T2, T3, T4>(T1, T2, T3, T4)
-  name.vb: Create(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+  nameWithType: Tuple.Create<T1, T2, T3, T4>(T1, T2, T3, T4)
   fullName: System.Tuple.Create<T1, T2, T3, T4>(T1, T2, T3, T4)
-  fullName.vb: System.Tuple.Create(Of T1, T2, T3, T4)(T1, T2, T3, T4)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Tuple.cs
-    startLine: 34
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1752
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Creates a new 4-tuple, or quadruple.
   syntax:
     content: public static Tuple<T1, T2, T3, T4> Create<T1, T2, T3, T4>(T1 item1, T2 item2, T3 item3, T4 item4)
     content.vb: Public Shared Function Create(Of T1, T2, T3, T4)(item1 As T1, item2 As T2, item3 As T3, item4 As T4) As Tuple(Of T1, T2, T3, T4)
     parameters:
     - id: item1
       type: '{T1}'
-      description: The value of the first component of the tuple.
     - id: item2
       type: '{T2}'
-      description: The value of the second component of the tuple.
     - id: item3
       type: '{T3}'
-      description: The value of the third component of the tuple.
     - id: item4
       type: '{T4}'
-      description: The value of the fourth component of the tuple.
     typeParameters:
     - id: T1
     - id: T2
@@ -173,42 +222,51 @@ items:
     - id: T4
     return:
       type: System.Tuple{{T1},{T2},{T3},{T4}}
-      description: A 4-tuple whose value is (*item1*, *item2*, *item3*, *item4*).
+  nameWithType.vb: Tuple.Create(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Tuple.Create(Of T1, T2, T3, T4)(T1, T2, T3, T4)
+  name.vb: Create(Of T1, T2, T3, T4)(T1, T2, T3, T4)
 - uid: System.Tuple.Create``5(``0,``1,``2,``3,``4)
+  commentId: M:System.Tuple.Create``5(``0,``1,``2,``3,``4)
   id: Create``5(``0,``1,``2,``3,``4)
   parent: System.Tuple
+  langs:
+  - csharp
+  - vb
   name: Create<T1, T2, T3, T4, T5>(T1, T2, T3, T4, T5)
-  name.vb: Create(Of T1, T2, T3, T4, T5)(T1, T2, T3, T4, T5)
+  nameWithType: Tuple.Create<T1, T2, T3, T4, T5>(T1, T2, T3, T4, T5)
   fullName: System.Tuple.Create<T1, T2, T3, T4, T5>(T1, T2, T3, T4, T5)
-  fullName.vb: System.Tuple.Create(Of T1, T2, T3, T4, T5)(T1, T2, T3, T4, T5)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Tuple.cs
-    startLine: 38
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1753
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Creates a new 5-tuple, or quintuple.
   syntax:
     content: public static Tuple<T1, T2, T3, T4, T5> Create<T1, T2, T3, T4, T5>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5)
     content.vb: Public Shared Function Create(Of T1, T2, T3, T4, T5)(item1 As T1, item2 As T2, item3 As T3, item4 As T4, item5 As T5) As Tuple(Of T1, T2, T3, T4, T5)
     parameters:
     - id: item1
       type: '{T1}'
-      description: The value of the first component of the tuple.
     - id: item2
       type: '{T2}'
-      description: The value of the second component of the tuple.
     - id: item3
       type: '{T3}'
-      description: The value of the third component of the tuple.
     - id: item4
       type: '{T4}'
-      description: The value of the fourth component of the tuple.
     - id: item5
       type: '{T5}'
-      description: The value of the fifth component of the tuple.
     typeParameters:
     - id: T1
     - id: T2
@@ -217,45 +275,53 @@ items:
     - id: T5
     return:
       type: System.Tuple{{T1},{T2},{T3},{T4},{T5}}
-      description: A 5-tuple whose value is (*item1*, *item2*, *item3*, *item4*, *item5*).
+  nameWithType.vb: Tuple.Create(Of T1, T2, T3, T4, T5)(T1, T2, T3, T4, T5)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Tuple.Create(Of T1, T2, T3, T4, T5)(T1, T2, T3, T4, T5)
+  name.vb: Create(Of T1, T2, T3, T4, T5)(T1, T2, T3, T4, T5)
 - uid: System.Tuple.Create``6(``0,``1,``2,``3,``4,``5)
+  commentId: M:System.Tuple.Create``6(``0,``1,``2,``3,``4,``5)
   id: Create``6(``0,``1,``2,``3,``4,``5)
   parent: System.Tuple
+  langs:
+  - csharp
+  - vb
   name: Create<T1, T2, T3, T4, T5, T6>(T1, T2, T3, T4, T5, T6)
-  name.vb: Create(Of T1, T2, T3, T4, T5, T6)(T1, T2, T3, T4, T5, T6)
+  nameWithType: Tuple.Create<T1, T2, T3, T4, T5, T6>(T1, T2, T3, T4, T5, T6)
   fullName: System.Tuple.Create<T1, T2, T3, T4, T5, T6>(T1, T2, T3, T4, T5, T6)
-  fullName.vb: System.Tuple.Create(Of T1, T2, T3, T4, T5, T6)(T1, T2, T3, T4, T5, T6)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Tuple.cs
-    startLine: 42
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1754
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Creates a new 6-tuple, or sextuple.
   syntax:
     content: public static Tuple<T1, T2, T3, T4, T5, T6> Create<T1, T2, T3, T4, T5, T6>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6)
     content.vb: Public Shared Function Create(Of T1, T2, T3, T4, T5, T6)(item1 As T1, item2 As T2, item3 As T3, item4 As T4, item5 As T5, item6 As T6) As Tuple(Of T1, T2, T3, T4, T5, T6)
     parameters:
     - id: item1
       type: '{T1}'
-      description: The value of the first component of the tuple.
     - id: item2
       type: '{T2}'
-      description: The value of the second component of the tuple.
     - id: item3
       type: '{T3}'
-      description: The value of the third component of the tuple.
     - id: item4
       type: '{T4}'
-      description: The value of the fourth component of the tuple.
     - id: item5
       type: '{T5}'
-      description: The value of the fifth component of the tuple.
     - id: item6
       type: '{T6}'
-      description: The value of the sixth component of the tuple.
     typeParameters:
     - id: T1
     - id: T2
@@ -265,48 +331,55 @@ items:
     - id: T6
     return:
       type: System.Tuple{{T1},{T2},{T3},{T4},{T5},{T6}}
-      description: A 6-tuple whose value is (*item1*, *item2*, *item3*, *item4*, *item5*, *item6*).
+  nameWithType.vb: Tuple.Create(Of T1, T2, T3, T4, T5, T6)(T1, T2, T3, T4, T5, T6)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Tuple.Create(Of T1, T2, T3, T4, T5, T6)(T1, T2, T3, T4, T5, T6)
+  name.vb: Create(Of T1, T2, T3, T4, T5, T6)(T1, T2, T3, T4, T5, T6)
 - uid: System.Tuple.Create``7(``0,``1,``2,``3,``4,``5,``6)
+  commentId: M:System.Tuple.Create``7(``0,``1,``2,``3,``4,``5,``6)
   id: Create``7(``0,``1,``2,``3,``4,``5,``6)
   parent: System.Tuple
+  langs:
+  - csharp
+  - vb
   name: Create<T1, T2, T3, T4, T5, T6, T7>(T1, T2, T3, T4, T5, T6, T7)
-  name.vb: Create(Of T1, T2, T3, T4, T5, T6, T7)(T1, T2, T3, T4, T5, T6, T7)
+  nameWithType: Tuple.Create<T1, T2, T3, T4, T5, T6, T7>(T1, T2, T3, T4, T5, T6, T7)
   fullName: System.Tuple.Create<T1, T2, T3, T4, T5, T6, T7>(T1, T2, T3, T4, T5, T6, T7)
-  fullName.vb: System.Tuple.Create(Of T1, T2, T3, T4, T5, T6, T7)(T1, T2, T3, T4, T5, T6, T7)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Tuple.cs
-    startLine: 46
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1755
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Creates a new 7-tuple, or septuple.
   syntax:
     content: public static Tuple<T1, T2, T3, T4, T5, T6, T7> Create<T1, T2, T3, T4, T5, T6, T7>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7)
     content.vb: Public Shared Function Create(Of T1, T2, T3, T4, T5, T6, T7)(item1 As T1, item2 As T2, item3 As T3, item4 As T4, item5 As T5, item6 As T6, item7 As T7) As Tuple(Of T1, T2, T3, T4, T5, T6, T7)
     parameters:
     - id: item1
       type: '{T1}'
-      description: The value of the first component of the tuple.
     - id: item2
       type: '{T2}'
-      description: The value of the second component of the tuple.
     - id: item3
       type: '{T3}'
-      description: The value of the third component of the tuple.
     - id: item4
       type: '{T4}'
-      description: The value of the fourth component of the tuple.
     - id: item5
       type: '{T5}'
-      description: The value of the fifth component of the tuple.
     - id: item6
       type: '{T6}'
-      description: The value of the sixth component of the tuple.
     - id: item7
       type: '{T7}'
-      description: The value of the seventh component of the tuple.
     typeParameters:
     - id: T1
     - id: T2
@@ -317,51 +390,57 @@ items:
     - id: T7
     return:
       type: System.Tuple{{T1},{T2},{T3},{T4},{T5},{T6},{T7}}
-      description: A 7-tuple whose value is (*item1*, *item2*, *item3*, *item4*, *item5*, *item6*, *item7*).
+  nameWithType.vb: Tuple.Create(Of T1, T2, T3, T4, T5, T6, T7)(T1, T2, T3, T4, T5, T6, T7)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Tuple.Create(Of T1, T2, T3, T4, T5, T6, T7)(T1, T2, T3, T4, T5, T6, T7)
+  name.vb: Create(Of T1, T2, T3, T4, T5, T6, T7)(T1, T2, T3, T4, T5, T6, T7)
 - uid: System.Tuple.Create``8(``0,``1,``2,``3,``4,``5,``6,``7)
+  commentId: M:System.Tuple.Create``8(``0,``1,``2,``3,``4,``5,``6,``7)
   id: Create``8(``0,``1,``2,``3,``4,``5,``6,``7)
   parent: System.Tuple
+  langs:
+  - csharp
+  - vb
   name: Create<T1, T2, T3, T4, T5, T6, T7, T8>(T1, T2, T3, T4, T5, T6, T7, T8)
-  name.vb: Create(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1, T2, T3, T4, T5, T6, T7, T8)
+  nameWithType: Tuple.Create<T1, T2, T3, T4, T5, T6, T7, T8>(T1, T2, T3, T4, T5, T6, T7, T8)
   fullName: System.Tuple.Create<T1, T2, T3, T4, T5, T6, T7, T8>(T1, T2, T3, T4, T5, T6, T7, T8)
-  fullName.vb: System.Tuple.Create(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1, T2, T3, T4, T5, T6, T7, T8)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Tuple.cs
-    startLine: 50
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Create
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 1756
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Creates a new 8-tuple, or octuple.
   syntax:
     content: public static Tuple<T1, T2, T3, T4, T5, T6, T7, Tuple<T8>> Create<T1, T2, T3, T4, T5, T6, T7, T8>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8)
     content.vb: Public Shared Function Create(Of T1, T2, T3, T4, T5, T6, T7, T8)(item1 As T1, item2 As T2, item3 As T3, item4 As T4, item5 As T5, item6 As T6, item7 As T7, item8 As T8) As Tuple(Of T1, T2, T3, T4, T5, T6, T7, Tuple(Of T8))
     parameters:
     - id: item1
       type: '{T1}'
-      description: The value of the first component of the tuple.
     - id: item2
       type: '{T2}'
-      description: The value of the second component of the tuple.
     - id: item3
       type: '{T3}'
-      description: The value of the third component of the tuple.
     - id: item4
       type: '{T4}'
-      description: The value of the fourth component of the tuple.
     - id: item5
       type: '{T5}'
-      description: The value of the fifth component of the tuple.
     - id: item6
       type: '{T6}'
-      description: The value of the sixth component of the tuple.
     - id: item7
       type: '{T7}'
-      description: The value of the seventh component of the tuple.
     - id: item8
       type: '{T8}'
-      description: The value of the eighth component of the tuple.
     typeParameters:
     - id: T1
     - id: T2
@@ -373,1125 +452,1661 @@ items:
     - id: T8
     return:
       type: System.Tuple{{T1},{T2},{T3},{T4},{T5},{T6},{T7},System.Tuple{{T8}}}
-      description: An 8-tuple (octuple) whose value is (*item1*, *item2*, *item3*, *item4*, *item5*, *item6*, *item7*, *item8*).
+  nameWithType.vb: Tuple.Create(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1, T2, T3, T4, T5, T6, T7, T8)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Tuple.Create(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1, T2, T3, T4, T5, T6, T7, T8)
+  name.vb: Create(Of T1, T2, T3, T4, T5, T6, T7, T8)(T1, T2, T3, T4, T5, T6, T7, T8)
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object)
+  nameWithType: Object.Equals(Object)
   fullName: System.Object.Equals(System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
   parent: System.Object
   isExternal: false
   name: GetHashCode()
+  nameWithType: Object.GetHashCode()
   fullName: System.Object.GetHashCode()
   spec.csharp:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetHashCode
     name: GetHashCode
+    nameWithType: Object.GetHashCode
     fullName: System.Object.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T1}'
-  isExternal: false
+  commentId: '!:T1'
+  definition: T1
   name: T1
+  nameWithType: T1
   fullName: T1
 - uid: System.Tuple{{T1}}
+  commentId: T:System.Tuple{``0}
   parent: System
   definition: System.Tuple`1
   name: Tuple<T1>
-  name.vb: Tuple(Of T1)
+  nameWithType: Tuple<T1>
   fullName: System.Tuple<T1>
-  fullName.vb: System.Tuple(Of T1)
+  nameWithType.vb: Tuple(Of T1)
+  fullname.vb: System.Tuple(Of T1)
+  name.vb: Tuple(Of T1)
   spec.csharp:
   - uid: System.Tuple`1
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`1
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: )
+    nameWithType: )
     fullName: )
+- uid: T1
+  isExternal: false
+  name: T1
+  nameWithType: T1
+  fullName: T1
 - uid: System.Tuple`1
-  parent: System
+  commentId: T:System.Tuple`1
   isExternal: false
   name: Tuple<T1>
-  name.vb: Tuple(Of T1)
+  nameWithType: Tuple<T1>
   fullName: System.Tuple<T1>
-  fullName.vb: System.Tuple(Of T1)
+  nameWithType.vb: Tuple(Of T1)
+  fullname.vb: System.Tuple(Of T1)
+  name.vb: Tuple(Of T1)
   spec.csharp:
   - uid: System.Tuple`1
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`1
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T2}'
-  isExternal: false
+  commentId: '!:T2'
+  definition: T2
   name: T2
+  nameWithType: T2
   fullName: T2
 - uid: System.Tuple{{T1},{T2}}
+  commentId: T:System.Tuple{``0,``1}
   parent: System
   definition: System.Tuple`2
   name: Tuple<T1, T2>
-  name.vb: Tuple(Of T1, T2)
+  nameWithType: Tuple<T1, T2>
   fullName: System.Tuple<T1, T2>
-  fullName.vb: System.Tuple(Of T1, T2)
+  nameWithType.vb: Tuple(Of T1, T2)
+  fullname.vb: System.Tuple(Of T1, T2)
+  name.vb: Tuple(Of T1, T2)
   spec.csharp:
   - uid: System.Tuple`2
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`2
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: )
+    nameWithType: )
     fullName: )
+- uid: T2
+  isExternal: false
+  name: T2
+  nameWithType: T2
+  fullName: T2
 - uid: System.Tuple`2
-  parent: System
+  commentId: T:System.Tuple`2
   isExternal: false
   name: Tuple<T1, T2>
-  name.vb: Tuple(Of T1, T2)
+  nameWithType: Tuple<T1, T2>
   fullName: System.Tuple<T1, T2>
-  fullName.vb: System.Tuple(Of T1, T2)
+  nameWithType.vb: Tuple(Of T1, T2)
+  fullname.vb: System.Tuple(Of T1, T2)
+  name.vb: Tuple(Of T1, T2)
   spec.csharp:
   - uid: System.Tuple`2
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`2
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T3}'
-  isExternal: false
+  commentId: '!:T3'
+  definition: T3
   name: T3
+  nameWithType: T3
   fullName: T3
 - uid: System.Tuple{{T1},{T2},{T3}}
+  commentId: T:System.Tuple{``0,``1,``2}
   parent: System
   definition: System.Tuple`3
   name: Tuple<T1, T2, T3>
-  name.vb: Tuple(Of T1, T2, T3)
+  nameWithType: Tuple<T1, T2, T3>
   fullName: System.Tuple<T1, T2, T3>
-  fullName.vb: System.Tuple(Of T1, T2, T3)
+  nameWithType.vb: Tuple(Of T1, T2, T3)
+  fullname.vb: System.Tuple(Of T1, T2, T3)
+  name.vb: Tuple(Of T1, T2, T3)
   spec.csharp:
   - uid: System.Tuple`3
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`3
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: )
+    nameWithType: )
     fullName: )
+- uid: T3
+  isExternal: false
+  name: T3
+  nameWithType: T3
+  fullName: T3
 - uid: System.Tuple`3
-  parent: System
+  commentId: T:System.Tuple`3
   isExternal: false
   name: Tuple<T1, T2, T3>
-  name.vb: Tuple(Of T1, T2, T3)
+  nameWithType: Tuple<T1, T2, T3>
   fullName: System.Tuple<T1, T2, T3>
-  fullName.vb: System.Tuple(Of T1, T2, T3)
+  nameWithType.vb: Tuple(Of T1, T2, T3)
+  fullname.vb: System.Tuple(Of T1, T2, T3)
+  name.vb: Tuple(Of T1, T2, T3)
   spec.csharp:
   - uid: System.Tuple`3
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`3
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T4}'
-  isExternal: false
+  commentId: '!:T4'
+  definition: T4
   name: T4
+  nameWithType: T4
   fullName: T4
 - uid: System.Tuple{{T1},{T2},{T3},{T4}}
+  commentId: T:System.Tuple{``0,``1,``2,``3}
   parent: System
   definition: System.Tuple`4
   name: Tuple<T1, T2, T3, T4>
-  name.vb: Tuple(Of T1, T2, T3, T4)
+  nameWithType: Tuple<T1, T2, T3, T4>
   fullName: System.Tuple<T1, T2, T3, T4>
-  fullName.vb: System.Tuple(Of T1, T2, T3, T4)
+  nameWithType.vb: Tuple(Of T1, T2, T3, T4)
+  fullname.vb: System.Tuple(Of T1, T2, T3, T4)
+  name.vb: Tuple(Of T1, T2, T3, T4)
   spec.csharp:
   - uid: System.Tuple`4
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`4
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: )
+    nameWithType: )
     fullName: )
+- uid: T4
+  isExternal: false
+  name: T4
+  nameWithType: T4
+  fullName: T4
 - uid: System.Tuple`4
-  parent: System
+  commentId: T:System.Tuple`4
   isExternal: false
   name: Tuple<T1, T2, T3, T4>
-  name.vb: Tuple(Of T1, T2, T3, T4)
+  nameWithType: Tuple<T1, T2, T3, T4>
   fullName: System.Tuple<T1, T2, T3, T4>
-  fullName.vb: System.Tuple(Of T1, T2, T3, T4)
+  nameWithType.vb: Tuple(Of T1, T2, T3, T4)
+  fullname.vb: System.Tuple(Of T1, T2, T3, T4)
+  name.vb: Tuple(Of T1, T2, T3, T4)
   spec.csharp:
   - uid: System.Tuple`4
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`4
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T5}'
-  isExternal: false
+  commentId: '!:T5'
+  definition: T5
   name: T5
+  nameWithType: T5
   fullName: T5
 - uid: System.Tuple{{T1},{T2},{T3},{T4},{T5}}
+  commentId: T:System.Tuple{``0,``1,``2,``3,``4}
   parent: System
   definition: System.Tuple`5
   name: Tuple<T1, T2, T3, T4, T5>
-  name.vb: Tuple(Of T1, T2, T3, T4, T5)
+  nameWithType: Tuple<T1, T2, T3, T4, T5>
   fullName: System.Tuple<T1, T2, T3, T4, T5>
-  fullName.vb: System.Tuple(Of T1, T2, T3, T4, T5)
+  nameWithType.vb: Tuple(Of T1, T2, T3, T4, T5)
+  fullname.vb: System.Tuple(Of T1, T2, T3, T4, T5)
+  name.vb: Tuple(Of T1, T2, T3, T4, T5)
   spec.csharp:
   - uid: System.Tuple`5
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`5
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: )
+    nameWithType: )
     fullName: )
+- uid: T5
+  isExternal: false
+  name: T5
+  nameWithType: T5
+  fullName: T5
 - uid: System.Tuple`5
-  parent: System
+  commentId: T:System.Tuple`5
   isExternal: false
   name: Tuple<T1, T2, T3, T4, T5>
-  name.vb: Tuple(Of T1, T2, T3, T4, T5)
+  nameWithType: Tuple<T1, T2, T3, T4, T5>
   fullName: System.Tuple<T1, T2, T3, T4, T5>
-  fullName.vb: System.Tuple(Of T1, T2, T3, T4, T5)
+  nameWithType.vb: Tuple(Of T1, T2, T3, T4, T5)
+  fullname.vb: System.Tuple(Of T1, T2, T3, T4, T5)
+  name.vb: Tuple(Of T1, T2, T3, T4, T5)
   spec.csharp:
   - uid: System.Tuple`5
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`5
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T6}'
-  isExternal: false
+  commentId: '!:T6'
+  definition: T6
   name: T6
+  nameWithType: T6
   fullName: T6
 - uid: System.Tuple{{T1},{T2},{T3},{T4},{T5},{T6}}
+  commentId: T:System.Tuple{``0,``1,``2,``3,``4,``5}
   parent: System
   definition: System.Tuple`6
   name: Tuple<T1, T2, T3, T4, T5, T6>
-  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6)
+  nameWithType: Tuple<T1, T2, T3, T4, T5, T6>
   fullName: System.Tuple<T1, T2, T3, T4, T5, T6>
-  fullName.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6)
+  nameWithType.vb: Tuple(Of T1, T2, T3, T4, T5, T6)
+  fullname.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6)
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6)
   spec.csharp:
   - uid: System.Tuple`6
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`6
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: )
+    nameWithType: )
     fullName: )
+- uid: T6
+  isExternal: false
+  name: T6
+  nameWithType: T6
+  fullName: T6
 - uid: System.Tuple`6
-  parent: System
+  commentId: T:System.Tuple`6
   isExternal: false
   name: Tuple<T1, T2, T3, T4, T5, T6>
-  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6)
+  nameWithType: Tuple<T1, T2, T3, T4, T5, T6>
   fullName: System.Tuple<T1, T2, T3, T4, T5, T6>
-  fullName.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6)
+  nameWithType.vb: Tuple(Of T1, T2, T3, T4, T5, T6)
+  fullname.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6)
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6)
   spec.csharp:
   - uid: System.Tuple`6
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`6
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T7}'
-  isExternal: false
+  commentId: '!:T7'
+  definition: T7
   name: T7
+  nameWithType: T7
   fullName: T7
 - uid: System.Tuple{{T1},{T2},{T3},{T4},{T5},{T6},{T7}}
+  commentId: T:System.Tuple{``0,``1,``2,``3,``4,``5,``6}
   parent: System
   definition: System.Tuple`7
   name: Tuple<T1, T2, T3, T4, T5, T6, T7>
-  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7)
+  nameWithType: Tuple<T1, T2, T3, T4, T5, T6, T7>
   fullName: System.Tuple<T1, T2, T3, T4, T5, T6, T7>
-  fullName.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6, T7)
+  nameWithType.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7)
+  fullname.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6, T7)
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7)
   spec.csharp:
   - uid: System.Tuple`7
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T7
+    nameWithType: T7
     fullName: T7
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`7
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T7
+    nameWithType: T7
     fullName: T7
   - name: )
+    nameWithType: )
     fullName: )
+- uid: T7
+  isExternal: false
+  name: T7
+  nameWithType: T7
+  fullName: T7
 - uid: System.Tuple`7
-  parent: System
+  commentId: T:System.Tuple`7
   isExternal: false
   name: Tuple<T1, T2, T3, T4, T5, T6, T7>
-  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7)
+  nameWithType: Tuple<T1, T2, T3, T4, T5, T6, T7>
   fullName: System.Tuple<T1, T2, T3, T4, T5, T6, T7>
-  fullName.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6, T7)
+  nameWithType.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7)
+  fullname.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6, T7)
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7)
   spec.csharp:
   - uid: System.Tuple`7
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T7
+    nameWithType: T7
     fullName: T7
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`7
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T7
+    nameWithType: T7
     fullName: T7
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T8}'
-  isExternal: false
+  commentId: '!:T8'
+  definition: T8
   name: T8
+  nameWithType: T8
   fullName: T8
 - uid: System.Tuple{{T1},{T2},{T3},{T4},{T5},{T6},{T7},System.Tuple{{T8}}}
+  commentId: T:System.Tuple{``0,``1,``2,``3,``4,``5,``6,System.Tuple{``7}}
   parent: System
   definition: System.Tuple`8
   name: Tuple<T1, T2, T3, T4, T5, T6, T7, Tuple<T8>>
-  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7, Tuple(Of T8))
+  nameWithType: Tuple<T1, T2, T3, T4, T5, T6, T7, Tuple<T8>>
   fullName: System.Tuple<T1, T2, T3, T4, T5, T6, T7, System.Tuple<T8>>
-  fullName.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6, T7, System.Tuple(Of T8))
+  nameWithType.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7, Tuple(Of T8))
+  fullname.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6, T7, System.Tuple(Of T8))
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7, Tuple(Of T8))
   spec.csharp:
   - uid: System.Tuple`8
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T7
+    nameWithType: T7
     fullName: T7
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Tuple`1
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T8
+    nameWithType: T8
     fullName: T8
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`8
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T7
+    nameWithType: T7
     fullName: T7
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Tuple`1
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T8
+    nameWithType: T8
     fullName: T8
   - name: )
+    nameWithType: )
     fullName: )
   - name: )
+    nameWithType: )
     fullName: )
+- uid: T8
+  isExternal: false
+  name: T8
+  nameWithType: T8
+  fullName: T8
 - uid: System.Tuple`8
-  parent: System
+  commentId: T:System.Tuple`8
   isExternal: false
   name: Tuple<T1, T2, T3, T4, T5, T6, T7, TRest>
-  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7, TRest)
+  nameWithType: Tuple<T1, T2, T3, T4, T5, T6, T7, TRest>
   fullName: System.Tuple<T1, T2, T3, T4, T5, T6, T7, TRest>
-  fullName.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6, T7, TRest)
+  nameWithType.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7, TRest)
+  fullname.vb: System.Tuple(Of T1, T2, T3, T4, T5, T6, T7, TRest)
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7, TRest)
   spec.csharp:
   - uid: System.Tuple`8
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: <
+    nameWithType: <
     fullName: <
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T7
+    nameWithType: T7
     fullName: T7
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TRest
+    nameWithType: TRest
     fullName: TRest
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Tuple`8
     name: Tuple
+    nameWithType: Tuple
     fullName: System.Tuple
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T1
+    nameWithType: T1
     fullName: T1
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T2
+    nameWithType: T2
     fullName: T2
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T3
+    nameWithType: T3
     fullName: T3
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T4
+    nameWithType: T4
     fullName: T4
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T5
+    nameWithType: T5
     fullName: T5
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T6
+    nameWithType: T6
     fullName: T6
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: T7
+    nameWithType: T7
     fullName: T7
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - name: TRest
+    nameWithType: TRest
     fullName: TRest
   - name: )
+    nameWithType: )
     fullName: )

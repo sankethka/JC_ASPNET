@@ -1,5 +1,6 @@
 items:
 - uid: System.Security.Claims.ClaimsIdentity
+  commentId: T:System.Security.Claims.ClaimsIdentity
   id: ClaimsIdentity
   parent: System.Security.Claims
   children:
@@ -41,187 +42,297 @@ items:
   - System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)
   - System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)
   - System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter,System.Byte[])
+  langs:
+  - csharp
+  - vb
   name: ClaimsIdentity
+  nameWithType: ClaimsIdentity
   fullName: System.Security.Claims.ClaimsIdentity
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-      branch: master
-      repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 17
-  assemblies:
-  - System.Security.Claims
-  namespace: System.Security.Claims
-  summary: Represents a claims-based identity.
-  syntax:
-    content: 'public class ClaimsIdentity : IIdentity'
-    content.vb: Public Class ClaimsIdentity Inherits IIdentity
-  inheritance:
-  - System.Object
-- uid: System.Security.Claims.ClaimsIdentity.DefaultIssuer
-  id: DefaultIssuer
-  parent: System.Security.Claims.ClaimsIdentity
-  name: DefaultIssuer
-  fullName: System.Security.Claims.ClaimsIdentity.DefaultIssuer
-  type: Field
-  source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 42
-  assemblies:
-  - System.Security.Claims
-  namespace: System.Security.Claims
-  summary: "The default issuer; “LOCAL AUTHORITY”."
-  syntax:
-    content: public const string DefaultIssuer
-    content.vb: Public Const DefaultIssuer As String = Nothing
-- uid: System.Security.Claims.ClaimsIdentity.DefaultNameClaimType
-  id: DefaultNameClaimType
-  parent: System.Security.Claims.ClaimsIdentity
-  name: DefaultNameClaimType
-  fullName: System.Security.Claims.ClaimsIdentity.DefaultNameClaimType
-  type: Field
-  source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 43
-  assemblies:
-  - System.Security.Claims
-  namespace: System.Security.Claims
-  summary: The default name claim type; <xref href="System.Security.Claims.ClaimTypes.Name" data-throw-if-not-resolved="false"></xref>.
-  syntax:
-    content: public const string DefaultNameClaimType
-    content.vb: Public Const DefaultNameClaimType As String = Nothing
-- uid: System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType
-  id: DefaultRoleClaimType
-  parent: System.Security.Claims.ClaimsIdentity
-  name: DefaultRoleClaimType
-  fullName: System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType
-  type: Field
-  source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 44
-  assemblies:
-  - System.Security.Claims
-  namespace: System.Security.Claims
-  summary: The default role claim type; <xref href="System.Security.Claims.ClaimTypes.Role" data-throw-if-not-resolved="false"></xref>.
-  syntax:
-    content: public const string DefaultRoleClaimType
-    content.vb: Public Const DefaultRoleClaimType As String = Nothing
-- uid: System.Security.Claims.ClaimsIdentity.#ctor
-  id: '#ctor'
-  parent: System.Security.Claims.ClaimsIdentity
-  name: ClaimsIdentity()
-  fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity()
-  type: Constructor
-  source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 54
-  assemblies:
-  - System.Security.Claims
-  namespace: System.Security.Claims
-  summary: Initializes a new instance of the <xref href="System.Security.Claims.ClaimsIdentity" data-throw-if-not-resolved="false"></xref> class with an empty claims collection.
-  syntax:
-    content: public ClaimsIdentity()
-    content.vb: Public Sub New
-- uid: System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
-  id: '#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})'
-  parent: System.Security.Claims.ClaimsIdentity
-  name: ClaimsIdentity(Collections.Generic.IEnumerable<Claim>)
-  name.vb: ClaimsIdentity(Collections.Generic.IEnumerable(Of Claim))
-  fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim))
-  type: Constructor
-  source:
-    remote: &o1
+    remote:
       path: src/System.Security.Claims/ref/System.Security.Claims.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: ClaimsIdentity
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 35
+  assemblies:
+  - System.Security.Claims
+  namespace: System.Security.Claims
+  syntax:
+    content: 'public class ClaimsIdentity : IIdentity'
+    content.vb: >-
+      Public Class ClaimsIdentity
+          Inherits IIdentity
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: System.Security.Claims.ClaimsIdentity.DefaultIssuer
+  commentId: F:System.Security.Claims.ClaimsIdentity.DefaultIssuer
+  id: DefaultIssuer
+  parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
+  name: DefaultIssuer
+  nameWithType: ClaimsIdentity.DefaultIssuer
+  fullName: System.Security.Claims.ClaimsIdentity.DefaultIssuer
+  type: Field
+  source:
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DefaultIssuer
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 37
+  assemblies:
+  - System.Security.Claims
+  namespace: System.Security.Claims
+  syntax:
+    content: public const string DefaultIssuer = null
+    content.vb: Public Const DefaultIssuer As String = Nothing
+    return:
+      type: System.String
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Security.Claims.ClaimsIdentity.DefaultNameClaimType
+  commentId: F:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType
+  id: DefaultNameClaimType
+  parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
+  name: DefaultNameClaimType
+  nameWithType: ClaimsIdentity.DefaultNameClaimType
+  fullName: System.Security.Claims.ClaimsIdentity.DefaultNameClaimType
+  type: Field
+  source:
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DefaultNameClaimType
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
     startLine: 38
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Initializes a new instance of the <xref href="System.Security.Claims.ClaimsIdentity" data-throw-if-not-resolved="false"></xref> class using an enumerated collection of <xref href="System.Security.Claims.Claim" data-throw-if-not-resolved="false"></xref> objects.
+  syntax:
+    content: public const string DefaultNameClaimType = null
+    content.vb: Public Const DefaultNameClaimType As String = Nothing
+    return:
+      type: System.String
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType
+  commentId: F:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType
+  id: DefaultRoleClaimType
+  parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
+  name: DefaultRoleClaimType
+  nameWithType: ClaimsIdentity.DefaultRoleClaimType
+  fullName: System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType
+  type: Field
+  source:
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DefaultRoleClaimType
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 39
+  assemblies:
+  - System.Security.Claims
+  namespace: System.Security.Claims
+  syntax:
+    content: public const string DefaultRoleClaimType = null
+    content.vb: Public Const DefaultRoleClaimType As String = Nothing
+    return:
+      type: System.String
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Security.Claims.ClaimsIdentity.#ctor
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor
+  id: '#ctor'
+  parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
+  name: ClaimsIdentity()
+  nameWithType: ClaimsIdentity.ClaimsIdentity()
+  fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity()
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 40
+  assemblies:
+  - System.Security.Claims
+  namespace: System.Security.Claims
+  syntax:
+    content: public ClaimsIdentity()
+    content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})'
+  parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
+  name: ClaimsIdentity(Collections.Generic.IEnumerable<Claim>)
+  nameWithType: ClaimsIdentity.ClaimsIdentity(Collections.Generic.IEnumerable<Claim>)
+  fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>)
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 41
+  assemblies:
+  - System.Security.Claims
+  namespace: System.Security.Claims
   syntax:
     content: public ClaimsIdentity(Collections.Generic.IEnumerable<Claim> claims)
     content.vb: Public Sub New(claims As Collections.Generic.IEnumerable(Of Claim))
     parameters:
     - id: claims
       type: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-      description: The claims with which to populate the claims identity.
+  nameWithType.vb: ClaimsIdentity.ClaimsIdentity(Collections.Generic.IEnumerable(Of Claim))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim))
+  name.vb: ClaimsIdentity(Collections.Generic.IEnumerable(Of Claim))
 - uid: System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String)
   id: '#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String)'
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: ClaimsIdentity(Collections.Generic.IEnumerable<Claim>, String)
-  name.vb: ClaimsIdentity(Collections.Generic.IEnumerable(Of Claim), String)
+  nameWithType: ClaimsIdentity.ClaimsIdentity(Collections.Generic.IEnumerable<Claim>, String)
   fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>, System.String)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim), System.String)
   type: Constructor
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 39
+    startLine: 42
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Initializes a new instance of the <xref href="System.Security.Claims.ClaimsIdentity" data-throw-if-not-resolved="false"></xref> class with the specified claims and authentication type.
   syntax:
     content: public ClaimsIdentity(Collections.Generic.IEnumerable<Claim> claims, string authenticationType)
     content.vb: Public Sub New(claims As Collections.Generic.IEnumerable(Of Claim), authenticationType As String)
     parameters:
     - id: claims
       type: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-      description: The claims with which to populate the claims identity.
     - id: authenticationType
       type: System.String
-      description: The type of authentication used.
+  nameWithType.vb: ClaimsIdentity.ClaimsIdentity(Collections.Generic.IEnumerable(Of Claim), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim), System.String)
+  name.vb: ClaimsIdentity(Collections.Generic.IEnumerable(Of Claim), String)
 - uid: System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)
   id: '#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)'
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: ClaimsIdentity(Collections.Generic.IEnumerable<Claim>, String, String, String)
-  name.vb: ClaimsIdentity(Collections.Generic.IEnumerable(Of Claim), String, String, String)
+  nameWithType: ClaimsIdentity.ClaimsIdentity(Collections.Generic.IEnumerable<Claim>, String, String, String)
   fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>, System.String, System.String, System.String)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim), System.String, System.String, System.String)
   type: Constructor
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 40
+    startLine: 43
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Initializes a new instance of the <xref href="System.Security.Claims.ClaimsIdentity" data-throw-if-not-resolved="false"></xref> class with the specified, claims, authentication type, name claim type, and role claim type.
   syntax:
     content: public ClaimsIdentity(Collections.Generic.IEnumerable<Claim> claims, string authenticationType, string nameType, string roleType)
     content.vb: Public Sub New(claims As Collections.Generic.IEnumerable(Of Claim), authenticationType As String, nameType As String, roleType As String)
     parameters:
     - id: claims
       type: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-      description: The claims with which to populate the claims identity.
     - id: authenticationType
       type: System.String
-      description: The type of authentication used.
     - id: nameType
       type: System.String
-      description: The claim type to use for name claims.
     - id: roleType
       type: System.String
-      description: The claim type to use for role claims.
+  nameWithType.vb: ClaimsIdentity.ClaimsIdentity(Collections.Generic.IEnumerable(Of Claim), String, String, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim), System.String, System.String, System.String)
+  name.vb: ClaimsIdentity(Collections.Generic.IEnumerable(Of Claim), String, String, String)
 - uid: System.Security.Claims.ClaimsIdentity.#ctor(System.IO.BinaryReader)
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor(System.IO.BinaryReader)
   id: '#ctor(System.IO.BinaryReader)'
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: ClaimsIdentity(IO.BinaryReader)
+  nameWithType: ClaimsIdentity.ClaimsIdentity(IO.BinaryReader)
   fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.IO.BinaryReader)
   type: Constructor
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 41
+    startLine: 44
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
@@ -231,16 +342,29 @@ items:
     parameters:
     - id: reader
       type: System.IO.BinaryReader
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Claims.ClaimsIdentity)
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Claims.ClaimsIdentity)
   id: '#ctor(System.Security.Claims.ClaimsIdentity)'
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: ClaimsIdentity(ClaimsIdentity)
+  nameWithType: ClaimsIdentity.ClaimsIdentity(ClaimsIdentity)
   fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Security.Claims.ClaimsIdentity)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 215
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 45
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
@@ -250,233 +374,349 @@ items:
     parameters:
     - id: other
       type: System.Security.Claims.ClaimsIdentity
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity)
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity)
   id: '#ctor(System.Security.Principal.IIdentity)'
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: ClaimsIdentity(IIdentity)
+  nameWithType: ClaimsIdentity.ClaimsIdentity(IIdentity)
   fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Security.Principal.IIdentity)
   type: Constructor
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 43
+    startLine: 46
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Initializes a new instance of the <xref href="System.Security.Claims.ClaimsIdentity" data-throw-if-not-resolved="false"></xref> class using the name and authentication type from the specified <xref href="System.Security.Principal.IIdentity" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public ClaimsIdentity(IIdentity identity)
     content.vb: Public Sub New(identity As IIdentity)
     parameters:
     - id: identity
       type: System.Security.Principal.IIdentity
-      description: The identity from which to base the new claims identity.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
   id: '#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})'
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: ClaimsIdentity(IIdentity, Collections.Generic.IEnumerable<Claim>)
-  name.vb: ClaimsIdentity(IIdentity, Collections.Generic.IEnumerable(Of Claim))
+  nameWithType: ClaimsIdentity.ClaimsIdentity(IIdentity, Collections.Generic.IEnumerable<Claim>)
   fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Security.Principal.IIdentity, System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Security.Principal.IIdentity, System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim))
   type: Constructor
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 44
+    startLine: 47
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Initializes a new instance of the <xref href="System.Security.Claims.ClaimsIdentity" data-throw-if-not-resolved="false"></xref> class using the specified claims and the specified <xref href="System.Security.Principal.IIdentity" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public ClaimsIdentity(IIdentity identity, Collections.Generic.IEnumerable<Claim> claims)
     content.vb: Public Sub New(identity As IIdentity, claims As Collections.Generic.IEnumerable(Of Claim))
     parameters:
     - id: identity
       type: System.Security.Principal.IIdentity
-      description: The identity from which to base the new claims identity.
     - id: claims
       type: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-      description: The claims with which to populate the claims identity.
+  nameWithType.vb: ClaimsIdentity.ClaimsIdentity(IIdentity, Collections.Generic.IEnumerable(Of Claim))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Security.Principal.IIdentity, System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim))
+  name.vb: ClaimsIdentity(IIdentity, Collections.Generic.IEnumerable(Of Claim))
 - uid: System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)
   id: '#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)'
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: ClaimsIdentity(IIdentity, Collections.Generic.IEnumerable<Claim>, String, String, String)
-  name.vb: ClaimsIdentity(IIdentity, Collections.Generic.IEnumerable(Of Claim), String, String, String)
+  nameWithType: ClaimsIdentity.ClaimsIdentity(IIdentity, Collections.Generic.IEnumerable<Claim>, String, String, String)
   fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Security.Principal.IIdentity, System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>, System.String, System.String, System.String)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Security.Principal.IIdentity, System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim), System.String, System.String, System.String)
   type: Constructor
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 45
+    startLine: 48
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Initializes a new instance of the <xref href="System.Security.Claims.ClaimsIdentity" data-throw-if-not-resolved="false"></xref> class from the specified <xref href="System.Security.Principal.IIdentity" data-throw-if-not-resolved="false"></xref> using the specified claims, authentication type, name claim type, and role claim type.
   syntax:
     content: public ClaimsIdentity(IIdentity identity, Collections.Generic.IEnumerable<Claim> claims, string authenticationType, string nameType, string roleType)
     content.vb: Public Sub New(identity As IIdentity, claims As Collections.Generic.IEnumerable(Of Claim), authenticationType As String, nameType As String, roleType As String)
     parameters:
     - id: identity
       type: System.Security.Principal.IIdentity
-      description: The identity from which to base the new claims identity.
     - id: claims
       type: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-      description: The claims with which to populate the new claims identity.
     - id: authenticationType
       type: System.String
-      description: The type of authentication used.
     - id: nameType
       type: System.String
-      description: The claim type to use for name claims.
     - id: roleType
       type: System.String
-      description: The claim type to use for role claims.
+  nameWithType.vb: ClaimsIdentity.ClaimsIdentity(IIdentity, Collections.Generic.IEnumerable(Of Claim), String, String, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.Security.Principal.IIdentity, System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim), System.String, System.String, System.String)
+  name.vb: ClaimsIdentity(IIdentity, Collections.Generic.IEnumerable(Of Claim), String, String, String)
 - uid: System.Security.Claims.ClaimsIdentity.#ctor(System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: ClaimsIdentity(String)
+  nameWithType: ClaimsIdentity.ClaimsIdentity(String)
   fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 85
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 49
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Initializes a new instance of the <xref href="System.Security.Claims.ClaimsIdentity" data-throw-if-not-resolved="false"></xref> class with an empty claims collection and the specified authentication type.
   syntax:
     content: public ClaimsIdentity(string authenticationType)
     content.vb: Public Sub New(authenticationType As String)
     parameters:
     - id: authenticationType
       type: System.String
-      description: The type of authentication used.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Claims.ClaimsIdentity.#ctor(System.String,System.String,System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.#ctor(System.String,System.String,System.String)
   id: '#ctor(System.String,System.String,System.String)'
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: ClaimsIdentity(String, String, String)
+  nameWithType: ClaimsIdentity.ClaimsIdentity(String, String, String)
   fullName: System.Security.Claims.ClaimsIdentity.ClaimsIdentity(System.String, System.String, System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 119
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 50
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Initializes a new instance of the <xref href="System.Security.Claims.ClaimsIdentity" data-throw-if-not-resolved="false"></xref> class with the specified authentication type, name claim type, and role claim type.
   syntax:
     content: public ClaimsIdentity(string authenticationType, string nameType, string roleType)
     content.vb: Public Sub New(authenticationType As String, nameType As String, roleType As String)
     parameters:
     - id: authenticationType
       type: System.String
-      description: The type of authentication used.
     - id: nameType
       type: System.String
-      description: The claim type to use for name claims.
     - id: roleType
       type: System.String
-      description: The claim type to use for role claims.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.Claims.ClaimsIdentity.Actor
+  commentId: P:System.Security.Claims.ClaimsIdentity.Actor
   id: Actor
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: Actor
+  nameWithType: ClaimsIdentity.Actor
   fullName: System.Security.Claims.ClaimsIdentity.Actor
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 260
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Actor
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 51
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Gets or sets the identity of the calling party that was granted delegation rights.
   syntax:
     content: public ClaimsIdentity Actor { get; set; }
     content.vb: Public Property Actor As ClaimsIdentity
     parameters: []
     return:
       type: System.Security.Claims.ClaimsIdentity
-      description: The calling party that was granted delegation rights.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: An attempt to set the property to the current instance occurs.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Security.Claims.ClaimsIdentity.AuthenticationType
+  commentId: P:System.Security.Claims.ClaimsIdentity.AuthenticationType
   id: AuthenticationType
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: AuthenticationType
+  nameWithType: ClaimsIdentity.AuthenticationType
   fullName: System.Security.Claims.ClaimsIdentity.AuthenticationType
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 243
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AuthenticationType
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 52
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Gets the authentication type.
   syntax:
     content: public virtual string AuthenticationType { get; }
     content.vb: Public Overridable ReadOnly Property AuthenticationType As String
     parameters: []
     return:
       type: System.String
-      description: The authentication type.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Security.Claims.ClaimsIdentity.BootstrapContext
+  commentId: P:System.Security.Claims.ClaimsIdentity.BootstrapContext
   id: BootstrapContext
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: BootstrapContext
+  nameWithType: ClaimsIdentity.BootstrapContext
   fullName: System.Security.Claims.ClaimsIdentity.BootstrapContext
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 279
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: BootstrapContext
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 53
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Gets or sets the token that was used to create this claims identity.
   syntax:
     content: public object BootstrapContext { get; set; }
     content.vb: Public Property BootstrapContext As Object
     parameters: []
     return:
       type: System.Object
-      description: The bootstrap context.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Security.Claims.ClaimsIdentity.Claims
+  commentId: P:System.Security.Claims.ClaimsIdentity.Claims
   id: Claims
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: Claims
+  nameWithType: ClaimsIdentity.Claims
   fullName: System.Security.Claims.ClaimsIdentity.Claims
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 291
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Claims
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 54
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Gets the claims associated with this claims identity.
   syntax:
     content: public virtual Collections.Generic.IEnumerable<Claim> Claims { get; }
     content.vb: Public Overridable ReadOnly Property Claims As Collections.Generic.IEnumerable(Of Claim)
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-      description: The collection of claims associated with this claims identity.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Security.Claims.ClaimsIdentity.CustomSerializationData
+  commentId: P:System.Security.Claims.ClaimsIdentity.CustomSerializationData
   id: CustomSerializationData
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: CustomSerializationData
+  nameWithType: ClaimsIdentity.CustomSerializationData
   fullName: System.Security.Claims.ClaimsIdentity.CustomSerializationData
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 319
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CustomSerializationData
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 55
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
@@ -486,191 +726,311 @@ items:
     parameters: []
     return:
       type: System.Byte[]
+  modifiers.csharp:
+  - protected
+  - virtual
+  - get
+  modifiers.vb:
+  - Protected
+  - Overridable
+  - ReadOnly
 - uid: System.Security.Claims.ClaimsIdentity.IsAuthenticated
+  commentId: P:System.Security.Claims.ClaimsIdentity.IsAuthenticated
   id: IsAuthenticated
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: IsAuthenticated
+  nameWithType: ClaimsIdentity.IsAuthenticated
   fullName: System.Security.Claims.ClaimsIdentity.IsAuthenticated
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 251
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsAuthenticated
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 56
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Gets a value that indicates whether the identity has been authenticated.
   syntax:
     content: public virtual bool IsAuthenticated { get; }
     content.vb: Public Overridable ReadOnly Property IsAuthenticated As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the identity has been authenticated; otherwise, false.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Security.Claims.ClaimsIdentity.Label
+  commentId: P:System.Security.Claims.ClaimsIdentity.Label
   id: Label
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: Label
+  nameWithType: ClaimsIdentity.Label
   fullName: System.Security.Claims.ClaimsIdentity.Label
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 339
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Label
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 57
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Gets or sets the label for this claims identity.
   syntax:
     content: public string Label { get; set; }
     content.vb: Public Property Label As String
     parameters: []
     return:
       type: System.String
-      description: The label.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Security.Claims.ClaimsIdentity.Name
+  commentId: P:System.Security.Claims.ClaimsIdentity.Name
   id: Name
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: Name
+  nameWithType: ClaimsIdentity.Name
   fullName: System.Security.Claims.ClaimsIdentity.Name
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 349
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Name
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 58
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Gets the name of this claims identity.
   syntax:
     content: public virtual string Name { get; }
     content.vb: Public Overridable ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-      description: The name or null.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Security.Claims.ClaimsIdentity.NameClaimType
+  commentId: P:System.Security.Claims.ClaimsIdentity.NameClaimType
   id: NameClaimType
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: NameClaimType
+  nameWithType: ClaimsIdentity.NameClaimType
   fullName: System.Security.Claims.ClaimsIdentity.NameClaimType
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 367
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NameClaimType
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 59
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Gets the claim type that is used to determine which claims provide the value for the <xref href="System.Security.Claims.ClaimsIdentity.Name" data-throw-if-not-resolved="false"></xref> property of this claims identity.
   syntax:
     content: public string NameClaimType { get; }
     content.vb: Public ReadOnly Property NameClaimType As String
     parameters: []
     return:
       type: System.String
-      description: The name claim type.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Claims.ClaimsIdentity.RoleClaimType
+  commentId: P:System.Security.Claims.ClaimsIdentity.RoleClaimType
   id: RoleClaimType
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: RoleClaimType
+  nameWithType: ClaimsIdentity.RoleClaimType
   fullName: System.Security.Claims.ClaimsIdentity.RoleClaimType
   type: Property
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 375
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RoleClaimType
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 60
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Gets the claim type that will be interpreted as a .NET Framework role among the claims in this claims identity.
   syntax:
     content: public string RoleClaimType { get; }
     content.vb: Public ReadOnly Property RoleClaimType As String
     parameters: []
     return:
       type: System.String
-      description: The role claim type.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Security.Claims.ClaimsIdentity.AddClaim(System.Security.Claims.Claim)
+  commentId: M:System.Security.Claims.ClaimsIdentity.AddClaim(System.Security.Claims.Claim)
   id: AddClaim(System.Security.Claims.Claim)
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: AddClaim(Claim)
+  nameWithType: ClaimsIdentity.AddClaim(Claim)
   fullName: System.Security.Claims.ClaimsIdentity.AddClaim(System.Security.Claims.Claim)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 394
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddClaim
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 61
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Adds a single claim to this claims identity.
   syntax:
     content: public virtual void AddClaim(Claim claim)
     content.vb: Public Overridable Sub AddClaim(claim As Claim)
     parameters:
     - id: claim
       type: System.Security.Claims.Claim
-      description: The claim to add.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*claim* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
+  commentId: M:System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
   id: AddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: AddClaims(Collections.Generic.IEnumerable<Claim>)
-  name.vb: AddClaims(Collections.Generic.IEnumerable(Of Claim))
+  nameWithType: ClaimsIdentity.AddClaims(Collections.Generic.IEnumerable<Claim>)
   fullName: System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddClaims
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 60
+    startLine: 63
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Adds a list of claims to this claims identity.
   syntax:
     content: public virtual void AddClaims(Collections.Generic.IEnumerable<Claim> claims)
     content.vb: Public Overridable Sub AddClaims(claims As Collections.Generic.IEnumerable(Of Claim))
     parameters:
     - id: claims
       type: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-      description: The claims to add.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*claims* is null.'
+  nameWithType.vb: ClaimsIdentity.AddClaims(Collections.Generic.IEnumerable(Of Claim))
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim))
+  name.vb: AddClaims(Collections.Generic.IEnumerable(Of Claim))
 - uid: System.Security.Claims.ClaimsIdentity.Clone
+  commentId: M:System.Security.Claims.ClaimsIdentity.Clone
   id: Clone
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: Clone()
+  nameWithType: ClaimsIdentity.Clone()
   fullName: System.Security.Claims.ClaimsIdentity.Clone()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 383
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Clone
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 65
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Returns a new <xref href="System.Security.Claims.ClaimsIdentity" data-throw-if-not-resolved="false"></xref> copied from this claims identity.
   syntax:
     content: public virtual ClaimsIdentity Clone()
     content.vb: Public Overridable Function Clone As ClaimsIdentity
     return:
       type: System.Security.Claims.ClaimsIdentity
-      description: A copy of the current instance.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Security.Claims.ClaimsIdentity.CreateClaim(System.IO.BinaryReader)
+  commentId: M:System.Security.Claims.ClaimsIdentity.CreateClaim(System.IO.BinaryReader)
   id: CreateClaim(System.IO.BinaryReader)
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: CreateClaim(IO.BinaryReader)
+  nameWithType: ClaimsIdentity.CreateClaim(IO.BinaryReader)
   fullName: System.Security.Claims.ClaimsIdentity.CreateClaim(System.IO.BinaryReader)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateClaim
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 63
+    startLine: 66
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
@@ -682,235 +1042,328 @@ items:
       type: System.IO.BinaryReader
     return:
       type: System.Security.Claims.Claim
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
 - uid: System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate{System.Security.Claims.Claim})
+  commentId: M:System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate{System.Security.Claims.Claim})
   id: FindAll(System.Predicate{System.Security.Claims.Claim})
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: FindAll(Predicate<Claim>)
-  name.vb: FindAll(Predicate(Of Claim))
+  nameWithType: ClaimsIdentity.FindAll(Predicate<Claim>)
   fullName: System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate<System.Security.Claims.Claim>)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate(Of System.Security.Claims.Claim))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FindAll
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 64
+    startLine: 67
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Retrieves all of the claims that are matched by the specified predicate.
   syntax:
     content: public virtual Collections.Generic.IEnumerable<Claim> FindAll(Predicate<Claim> match)
     content.vb: Public Overridable Function FindAll(match As Predicate(Of Claim)) As Collections.Generic.IEnumerable(Of Claim)
     parameters:
     - id: match
       type: System.Predicate{System.Security.Claims.Claim}
-      description: The function that performs the matching logic.
     return:
       type: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-      description: The matching claims. The list is read-only.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*match* is null.'
+  nameWithType.vb: ClaimsIdentity.FindAll(Predicate(Of Claim))
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate(Of System.Security.Claims.Claim))
+  name.vb: FindAll(Predicate(Of Claim))
 - uid: System.Security.Claims.ClaimsIdentity.FindAll(System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.FindAll(System.String)
   id: FindAll(System.String)
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: FindAll(String)
+  nameWithType: ClaimsIdentity.FindAll(String)
   fullName: System.Security.Claims.ClaimsIdentity.FindAll(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 566
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FindAll
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 68
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Retrieves all of the claims that have the specified claim type.
   syntax:
     content: public virtual Collections.Generic.IEnumerable<Claim> FindAll(string type)
     content.vb: Public Overridable Function FindAll(type As String) As Collections.Generic.IEnumerable(Of Claim)
     parameters:
     - id: type
       type: System.String
-      description: The claim type against which to match claims.
     return:
       type: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-      description: The matching claims. The list is read-only.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*type* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate{System.Security.Claims.Claim})
+  commentId: M:System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate{System.Security.Claims.Claim})
   id: FindFirst(System.Predicate{System.Security.Claims.Claim})
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: FindFirst(Predicate<Claim>)
-  name.vb: FindFirst(Predicate(Of Claim))
+  nameWithType: ClaimsIdentity.FindFirst(Predicate<Claim>)
   fullName: System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate<System.Security.Claims.Claim>)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate(Of System.Security.Claims.Claim))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FindFirst
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 66
+    startLine: 69
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Retrieves the first claim that is matched by the specified predicate.
   syntax:
     content: public virtual Claim FindFirst(Predicate<Claim> match)
     content.vb: Public Overridable Function FindFirst(match As Predicate(Of Claim)) As Claim
     parameters:
     - id: match
       type: System.Predicate{System.Security.Claims.Claim}
-      description: The function that performs the matching logic.
     return:
       type: System.Security.Claims.Claim
-      description: The first matching claim or null if no match is found.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*match* is null.'
+  nameWithType.vb: ClaimsIdentity.FindFirst(Predicate(Of Claim))
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate(Of System.Security.Claims.Claim))
+  name.vb: FindFirst(Predicate(Of Claim))
 - uid: System.Security.Claims.ClaimsIdentity.FindFirst(System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.FindFirst(System.String)
   id: FindFirst(System.String)
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: FindFirst(String)
+  nameWithType: ClaimsIdentity.FindFirst(String)
   fullName: System.Security.Claims.ClaimsIdentity.FindFirst(System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 620
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FindFirst
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 70
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Retrieves the first claim with the specified claim type.
   syntax:
     content: public virtual Claim FindFirst(string type)
     content.vb: Public Overridable Function FindFirst(type As String) As Claim
     parameters:
     - id: type
       type: System.String
-      description: The claim type to match.
     return:
       type: System.Security.Claims.Claim
-      description: The first matching claim or null if no match is found.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*type* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate{System.Security.Claims.Claim})
+  commentId: M:System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate{System.Security.Claims.Claim})
   id: HasClaim(System.Predicate{System.Security.Claims.Claim})
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: HasClaim(Predicate<Claim>)
-  name.vb: HasClaim(Predicate(Of Claim))
+  nameWithType: ClaimsIdentity.HasClaim(Predicate<Claim>)
   fullName: System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate<System.Security.Claims.Claim>)
-  fullName.vb: System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate(Of System.Security.Claims.Claim))
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HasClaim
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 68
+    startLine: 71
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Determines whether this claims identity has a claim that is matched by the specified predicate.
   syntax:
     content: public virtual bool HasClaim(Predicate<Claim> match)
     content.vb: Public Overridable Function HasClaim(match As Predicate(Of Claim)) As Boolean
     parameters:
     - id: match
       type: System.Predicate{System.Security.Claims.Claim}
-      description: The function that performs the matching logic.
     return:
       type: System.Boolean
-      description: true if a matching claim exists; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*match* is null.'
+  nameWithType.vb: ClaimsIdentity.HasClaim(Predicate(Of Claim))
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate(Of System.Security.Claims.Claim))
+  name.vb: HasClaim(Predicate(Of Claim))
 - uid: System.Security.Claims.ClaimsIdentity.HasClaim(System.String,System.String)
+  commentId: M:System.Security.Claims.ClaimsIdentity.HasClaim(System.String,System.String)
   id: HasClaim(System.String,System.String)
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: HasClaim(String, String)
+  nameWithType: ClaimsIdentity.HasClaim(String, String)
   fullName: System.Security.Claims.ClaimsIdentity.HasClaim(System.String, System.String)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 678
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HasClaim
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 72
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Determines whether this claims identity has a claim with the specified claim type and value.
   syntax:
     content: public virtual bool HasClaim(string type, string value)
     content.vb: Public Overridable Function HasClaim(type As String, value As String) As Boolean
     parameters:
     - id: type
       type: System.String
-      description: The type of the claim to match.
     - id: value
       type: System.String
-      description: The value of the claim to match.
     return:
       type: System.Boolean
-      description: true if a match is found; otherwise, false.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*type* is null.-or-*value* is null.'
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Security.Claims.ClaimsIdentity.RemoveClaim(System.Security.Claims.Claim)
+  commentId: M:System.Security.Claims.ClaimsIdentity.RemoveClaim(System.Security.Claims.Claim)
   id: RemoveClaim(System.Security.Claims.Claim)
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: RemoveClaim(Claim)
+  nameWithType: ClaimsIdentity.RemoveClaim(Claim)
   fullName: System.Security.Claims.ClaimsIdentity.RemoveClaim(System.Security.Claims.Claim)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 482
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveClaim
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 73
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Attempts to remove a claim from the claims identity.
   syntax:
     content: public virtual void RemoveClaim(Claim claim)
     content.vb: Public Overridable Sub RemoveClaim(claim As Claim)
     parameters:
     - id: claim
       type: System.Security.Claims.Claim
-      description: The claim to remove.
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The claim cannot be removed.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)
+  commentId: M:System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)
   id: TryRemoveClaim(System.Security.Claims.Claim)
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: TryRemoveClaim(Claim)
+  nameWithType: ClaimsIdentity.TryRemoveClaim(Claim)
   fullName: System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Security.Claims/src/System/Security/Claims/ClaimsIdentity.cs
-    startLine: 453
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryRemoveClaim
+    path: src/System.Security.Claims/ref/System.Security.Claims.cs
+    startLine: 75
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
-  summary: Attempts to remove a claim from the claims identity.
   syntax:
     content: public virtual bool TryRemoveClaim(Claim claim)
     content.vb: Public Overridable Function TryRemoveClaim(claim As Claim) As Boolean
     parameters:
     - id: claim
       type: System.Security.Claims.Claim
-      description: The claim to remove.
     return:
       type: System.Boolean
-      description: true if the claim was successfully removed; otherwise, false.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)
+  commentId: M:System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)
   id: WriteTo(System.IO.BinaryWriter)
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: WriteTo(IO.BinaryWriter)
+  nameWithType: ClaimsIdentity.WriteTo(IO.BinaryWriter)
   fullName: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: WriteTo
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 74
+    startLine: 77
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
@@ -920,18 +1373,31 @@ items:
     parameters:
     - id: writer
       type: System.IO.BinaryWriter
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter,System.Byte[])
+  commentId: M:System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter,System.Byte[])
   id: WriteTo(System.IO.BinaryWriter,System.Byte[])
   parent: System.Security.Claims.ClaimsIdentity
+  langs:
+  - csharp
+  - vb
   name: WriteTo(IO.BinaryWriter, Byte[])
-  name.vb: WriteTo(IO.BinaryWriter, Byte())
+  nameWithType: ClaimsIdentity.WriteTo(IO.BinaryWriter, Byte[])
   fullName: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter, System.Byte[])
-  fullName.vb: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter, System.Byte())
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.Claims/ref/System.Security.Claims.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: WriteTo
     path: src/System.Security.Claims/ref/System.Security.Claims.cs
-    startLine: 75
+    startLine: 78
   assemblies:
   - System.Security.Claims
   namespace: System.Security.Claims
@@ -943,200 +1409,271 @@ items:
       type: System.IO.BinaryWriter
     - id: userData
       type: System.Byte[]
+  nameWithType.vb: ClaimsIdentity.WriteTo(IO.BinaryWriter, Byte())
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+  fullName.vb: System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter, System.Byte())
+  name.vb: WriteTo(IO.BinaryWriter, Byte())
 references:
 - uid: System.Security.Claims
+  commentId: N:System.Security.Claims
   isExternal: false
   name: System.Security.Claims
+  nameWithType: System.Security.Claims
   fullName: System.Security.Claims
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
-- uid: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
-  definition: System.Collections.Generic.IEnumerable`1
-  name: Collections.Generic.IEnumerable<Claims.Claim>
-  name.vb: Collections.Generic.IEnumerable(Of Claims.Claim)
-  fullName: System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim)
-  spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: <
-    fullName: <
-  - uid: System.Security.Claims.Claim
-    name: Claims.Claim
-    fullName: System.Security.Claims.Claim
-  - name: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: '(Of '
-    fullName: '(Of '
-  - uid: System.Security.Claims.Claim
-    name: Claims.Claim
-    fullName: System.Security.Claims.Claim
-  - name: )
-    fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
-  isExternal: false
-  name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
-  fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
-  spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-  - name: <
-    fullName: <
-  - {}
-  - name: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-  - name: '(Of '
-    fullName: '(Of '
-  - {}
-  - name: )
-    fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Security.Claims.Claim}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: Collections.Generic.IEnumerable<Claims.Claim>
+  nameWithType: Collections.Generic.IEnumerable<Claims.Claim>
+  fullName: System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>
+  nameWithType.vb: Collections.Generic.IEnumerable(Of Claims.Claim)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Security.Claims.Claim)
+  name.vb: Collections.Generic.IEnumerable(Of Claims.Claim)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Security.Claims.Claim
+    name: Claims.Claim
+    nameWithType: Claims.Claim
+    fullName: System.Security.Claims.Claim
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Security.Claims.Claim
+    name: Claims.Claim
+    nameWithType: Claims.Claim
+    fullName: System.Security.Claims.Claim
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: false
+  name: Collections.Generic.IEnumerable<>
+  nameWithType: Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: 
+    nameWithType: 
+    fullName: 
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IO.BinaryReader
+  commentId: T:System.IO.BinaryReader
   isExternal: false
   name: BinaryReader
+  nameWithType: BinaryReader
   fullName: System.IO.BinaryReader
 - uid: System.Security.Claims.ClaimsIdentity
+  commentId: T:System.Security.Claims.ClaimsIdentity
   parent: System.Security.Claims
   isExternal: false
   name: Claims.ClaimsIdentity
+  nameWithType: Claims.ClaimsIdentity
   fullName: System.Security.Claims.ClaimsIdentity
 - uid: System.Security.Principal.IIdentity
+  commentId: T:System.Security.Principal.IIdentity
   parent: System.Security.Principal
   isExternal: false
-  name: Principal.IIdentity
+  name: IIdentity
+  nameWithType: IIdentity
   fullName: System.Security.Principal.IIdentity
 - uid: System.Security.Principal
+  commentId: N:System.Security.Principal
   isExternal: false
   name: System.Security.Principal
+  nameWithType: System.Security.Principal
   fullName: System.Security.Principal
 - uid: System.Byte[]
-  isExternal: false
   name: Byte[]
-  name.vb: Byte()
+  nameWithType: Byte[]
   fullName: System.Byte[]
-  fullName.vb: System.Byte()
+  nameWithType.vb: Byte()
+  fullname.vb: System.Byte()
+  name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Security.Claims.Claim
+  commentId: T:System.Security.Claims.Claim
   parent: System.Security.Claims
   isExternal: false
   name: Claim
+  nameWithType: Claim
   fullName: System.Security.Claims.Claim
 - uid: System.Predicate{System.Security.Claims.Claim}
+  commentId: '!:System.Predicate{System.Security.Claims.Claim}'
   definition: System.Predicate`1
   name: Predicate<Claim>
-  name.vb: Predicate(Of Claim)
+  nameWithType: Predicate<Claim>
   fullName: System.Predicate<System.Security.Claims.Claim>
-  fullName.vb: System.Predicate(Of System.Security.Claims.Claim)
+  nameWithType.vb: Predicate(Of Claim)
+  fullname.vb: System.Predicate(Of System.Security.Claims.Claim)
+  name.vb: Predicate(Of Claim)
   spec.csharp:
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Security.Claims.Claim
     name: Claim
+    nameWithType: Claim
     fullName: System.Security.Claims.Claim
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Predicate`1
-  parent: System
+  commentId: T:System.Predicate`1
   isExternal: false
   name: Predicate<>
-  name.vb: Predicate(Of )
+  nameWithType: Predicate<>
   fullName: System.Predicate<>
-  fullName.vb: System.Predicate(Of )
+  nameWithType.vb: Predicate(Of )
+  fullname.vb: System.Predicate(Of )
+  name.vb: Predicate(Of )
   spec.csharp:
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Predicate`1
     name: Predicate
+    nameWithType: Predicate
     fullName: System.Predicate
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.IO.BinaryWriter
+  commentId: T:System.IO.BinaryWriter
   parent: System.IO
   isExternal: false
   name: BinaryWriter
+  nameWithType: BinaryWriter
   fullName: System.IO.BinaryWriter
 - uid: System.IO
+  commentId: N:System.IO
   isExternal: false
   name: System.IO
+  nameWithType: System.IO
   fullName: System.IO
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException

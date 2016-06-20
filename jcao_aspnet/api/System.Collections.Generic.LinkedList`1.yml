@@ -1,5 +1,6 @@
 items:
 - uid: System.Collections.Generic.LinkedList`1
+  commentId: T:System.Collections.Generic.LinkedList`1
   id: LinkedList`1
   parent: System.Collections.Generic
   children:
@@ -26,25 +27,30 @@ items:
   - System.Collections.Generic.LinkedList`1.Remove(System.Collections.Generic.LinkedListNode{`0})
   - System.Collections.Generic.LinkedList`1.RemoveFirst
   - System.Collections.Generic.LinkedList`1.RemoveLast
+  langs:
+  - csharp
+  - vb
   name: LinkedList<T>
-  name.vb: LinkedList(Of T)
+  nameWithType: LinkedList<T>
   fullName: System.Collections.Generic.LinkedList<T>
-  fullName.vb: System.Collections.Generic.LinkedList(Of T)
   type: Class
   source:
-    remote: &o0
-      path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 10
+    id: LinkedList
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 208
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Represents a doubly linked list.
   syntax:
     content: 'public class LinkedList<T> : ICollection<T>, IEnumerable<T>, IReadOnlyCollection<T>, ICollection, IEnumerable'
-    content.vb: Public Class LinkedList(Of T) Inherits ICollection(Of T) Implements IEnumerable(Of T), IReadOnlyCollection(Of T), ICollection, IEnumerable
+    content.vb: >-
+      Public Class LinkedList(Of T)
+          Inherits ICollection(Of T)
+          Implements IEnumerable(Of T), IReadOnlyCollection(Of T), ICollection, IEnumerable
     typeParameters:
     - id: T
   inheritance:
@@ -54,851 +60,1166 @@ items:
   - System.Collections.Generic.IReadOnlyCollection{{T}}
   - System.Collections.ICollection
   - System.Collections.IEnumerable
+  nameWithType.vb: LinkedList(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: System.Collections.Generic.LinkedList(Of T)
+  name.vb: LinkedList(Of T)
 - uid: System.Collections.Generic.LinkedList`1.#ctor
+  commentId: M:System.Collections.Generic.LinkedList`1.#ctor
   id: '#ctor'
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: LinkedList()
+  nameWithType: LinkedList<T>.LinkedList()
   fullName: System.Collections.Generic.LinkedList<T>.LinkedList()
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).LinkedList()
-  type: Constructor
-  source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 20
-  assemblies:
-  - System.Collections
-  namespace: System.Collections.Generic
-  summary: Initializes a new instance of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref> class that is empty.
-  syntax:
-    content: public LinkedList()
-    content.vb: Public Sub New
-- uid: System.Collections.Generic.LinkedList`1.#ctor(System.Collections.Generic.IEnumerable{`0})
-  id: '#ctor(System.Collections.Generic.IEnumerable{`0})'
-  parent: System.Collections.Generic.LinkedList`1
-  name: LinkedList(IEnumerable<T>)
-  name.vb: LinkedList(IEnumerable(Of T))
-  fullName: System.Collections.Generic.LinkedList<T>.LinkedList(System.Collections.Generic.IEnumerable<T>)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).LinkedList(System.Collections.Generic.IEnumerable(Of T))
   type: Constructor
   source:
     remote:
       path: src/System.Collections/ref/System.Collections.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Collections/ref/System.Collections.cs
-    startLine: 208
+    startLine: 210
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Initializes a new instance of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref> class that contains elements copied from the specified <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> and has sufficient capacity to accommodate the number of elements copied.
+  syntax:
+    content: public LinkedList()
+    content.vb: Public Sub New
+  nameWithType.vb: LinkedList(Of T).LinkedList()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).LinkedList()
+- uid: System.Collections.Generic.LinkedList`1.#ctor(System.Collections.Generic.IEnumerable{`0})
+  commentId: M:System.Collections.Generic.LinkedList`1.#ctor(System.Collections.Generic.IEnumerable{`0})
+  id: '#ctor(System.Collections.Generic.IEnumerable{`0})'
+  parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
+  name: LinkedList(IEnumerable<T>)
+  nameWithType: LinkedList<T>.LinkedList(IEnumerable<T>)
+  fullName: System.Collections.Generic.LinkedList<T>.LinkedList(System.Collections.Generic.IEnumerable<T>)
+  type: Constructor
+  source:
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 211
+  assemblies:
+  - System.Collections
+  namespace: System.Collections.Generic
   syntax:
     content: public LinkedList(IEnumerable<T> collection)
     content.vb: Public Sub New(collection As IEnumerable(Of T))
     parameters:
     - id: collection
       type: System.Collections.Generic.IEnumerable{{T}}
-      description: The <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> whose elements are copied to the new <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*collection* is null.'
+  nameWithType.vb: LinkedList(Of T).LinkedList(IEnumerable(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).LinkedList(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: LinkedList(IEnumerable(Of T))
 - uid: System.Collections.Generic.LinkedList`1.Count
+  commentId: P:System.Collections.Generic.LinkedList`1.Count
   id: Count
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: Count
+  nameWithType: LinkedList<T>.Count
   fullName: System.Collections.Generic.LinkedList<T>.Count
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).Count
   type: Property
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 37
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Count
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 212
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Gets the number of nodes actually contained in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public int Count { get; }
     content.vb: Public ReadOnly Property Count As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The number of nodes actually contained in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: LinkedList(Of T).Count
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).Count
 - uid: System.Collections.Generic.LinkedList`1.First
+  commentId: P:System.Collections.Generic.LinkedList`1.First
   id: First
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: First
+  nameWithType: LinkedList<T>.First
   fullName: System.Collections.Generic.LinkedList<T>.First
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).First
   type: Property
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 42
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: First
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 213
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Gets the first node of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public LinkedListNode<T> First { get; }
     content.vb: Public ReadOnly Property First As LinkedListNode(Of T)
     parameters: []
     return:
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The first <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: LinkedList(Of T).First
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).First
 - uid: System.Collections.Generic.LinkedList`1.Last
+  commentId: P:System.Collections.Generic.LinkedList`1.Last
   id: Last
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: Last
+  nameWithType: LinkedList<T>.Last
   fullName: System.Collections.Generic.LinkedList<T>.Last
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).Last
   type: Property
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 47
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Last
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 214
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Gets the last node of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public LinkedListNode<T> Last { get; }
     content.vb: Public ReadOnly Property Last As LinkedListNode(Of T)
     parameters: []
     return:
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The last <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: LinkedList(Of T).Last
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).Last
 - uid: System.Collections.Generic.LinkedList`1.AddAfter(System.Collections.Generic.LinkedListNode{`0},`0)
+  commentId: M:System.Collections.Generic.LinkedList`1.AddAfter(System.Collections.Generic.LinkedListNode{`0},`0)
   id: AddAfter(System.Collections.Generic.LinkedListNode{`0},`0)
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: AddAfter(LinkedListNode<T>, T)
-  name.vb: AddAfter(LinkedListNode(Of T), T)
+  nameWithType: LinkedList<T>.AddAfter(LinkedListNode<T>, T)
   fullName: System.Collections.Generic.LinkedList<T>.AddAfter(System.Collections.Generic.LinkedListNode<T>, T)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddAfter(System.Collections.Generic.LinkedListNode(Of T), T)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 62
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddAfter
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 218
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Adds a new node containing the specified value after the specified existing node in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public LinkedListNode<T> AddAfter(LinkedListNode<T> node, T value)
     content.vb: Public Function AddAfter(node As LinkedListNode(Of T), value As T) As LinkedListNode(Of T)
     parameters:
     - id: node
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> after which to insert a new <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> containing *value*.
     - id: value
       type: '{T}'
-      description: The value to add to the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The new <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> containing *value*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*node* is null.'
-  - type: System.InvalidOperationException
-    description: '*node* is not in the current <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: LinkedList(Of T).AddAfter(LinkedListNode(Of T), T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddAfter(System.Collections.Generic.LinkedListNode(Of T), T)
+  name.vb: AddAfter(LinkedListNode(Of T), T)
 - uid: System.Collections.Generic.LinkedList`1.AddAfter(System.Collections.Generic.LinkedListNode{`0},System.Collections.Generic.LinkedListNode{`0})
+  commentId: M:System.Collections.Generic.LinkedList`1.AddAfter(System.Collections.Generic.LinkedListNode{`0},System.Collections.Generic.LinkedListNode{`0})
   id: AddAfter(System.Collections.Generic.LinkedListNode{`0},System.Collections.Generic.LinkedListNode{`0})
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: AddAfter(LinkedListNode<T>, LinkedListNode<T>)
-  name.vb: AddAfter(LinkedListNode(Of T), LinkedListNode(Of T))
+  nameWithType: LinkedList<T>.AddAfter(LinkedListNode<T>, LinkedListNode<T>)
   fullName: System.Collections.Generic.LinkedList<T>.AddAfter(System.Collections.Generic.LinkedListNode<T>, System.Collections.Generic.LinkedListNode<T>)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddAfter(System.Collections.Generic.LinkedListNode(Of T), System.Collections.Generic.LinkedListNode(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 70
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddAfter
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 219
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Adds the specified new node after the specified existing node in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void AddAfter(LinkedListNode<T> node, LinkedListNode<T> newNode)
     content.vb: Public Sub AddAfter(node As LinkedListNode(Of T), newNode As LinkedListNode(Of T))
     parameters:
     - id: node
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> after which to insert *newNode*.
     - id: newNode
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The new <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> to add to the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*node* is null.-or-*newNode* is null.'
-  - type: System.InvalidOperationException
-    description: '*node* is not in the current <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.-or-*newNode* belongs to another <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: LinkedList(Of T).AddAfter(LinkedListNode(Of T), LinkedListNode(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddAfter(System.Collections.Generic.LinkedListNode(Of T), System.Collections.Generic.LinkedListNode(Of T))
+  name.vb: AddAfter(LinkedListNode(Of T), LinkedListNode(Of T))
 - uid: System.Collections.Generic.LinkedList`1.AddBefore(System.Collections.Generic.LinkedListNode{`0},`0)
+  commentId: M:System.Collections.Generic.LinkedList`1.AddBefore(System.Collections.Generic.LinkedListNode{`0},`0)
   id: AddBefore(System.Collections.Generic.LinkedListNode{`0},`0)
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: AddBefore(LinkedListNode<T>, T)
-  name.vb: AddBefore(LinkedListNode(Of T), T)
+  nameWithType: LinkedList<T>.AddBefore(LinkedListNode<T>, T)
   fullName: System.Collections.Generic.LinkedList<T>.AddBefore(System.Collections.Generic.LinkedListNode<T>, T)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddBefore(System.Collections.Generic.LinkedListNode(Of T), T)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 78
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddBefore
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 220
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Adds a new node containing the specified value before the specified existing node in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public LinkedListNode<T> AddBefore(LinkedListNode<T> node, T value)
     content.vb: Public Function AddBefore(node As LinkedListNode(Of T), value As T) As LinkedListNode(Of T)
     parameters:
     - id: node
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> before which to insert a new <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> containing *value*.
     - id: value
       type: '{T}'
-      description: The value to add to the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The new <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> containing *value*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*node* is null.'
-  - type: System.InvalidOperationException
-    description: '*node* is not in the current <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: LinkedList(Of T).AddBefore(LinkedListNode(Of T), T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddBefore(System.Collections.Generic.LinkedListNode(Of T), T)
+  name.vb: AddBefore(LinkedListNode(Of T), T)
 - uid: System.Collections.Generic.LinkedList`1.AddBefore(System.Collections.Generic.LinkedListNode{`0},System.Collections.Generic.LinkedListNode{`0})
+  commentId: M:System.Collections.Generic.LinkedList`1.AddBefore(System.Collections.Generic.LinkedListNode{`0},System.Collections.Generic.LinkedListNode{`0})
   id: AddBefore(System.Collections.Generic.LinkedListNode{`0},System.Collections.Generic.LinkedListNode{`0})
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: AddBefore(LinkedListNode<T>, LinkedListNode<T>)
-  name.vb: AddBefore(LinkedListNode(Of T), LinkedListNode(Of T))
+  nameWithType: LinkedList<T>.AddBefore(LinkedListNode<T>, LinkedListNode<T>)
   fullName: System.Collections.Generic.LinkedList<T>.AddBefore(System.Collections.Generic.LinkedListNode<T>, System.Collections.Generic.LinkedListNode<T>)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddBefore(System.Collections.Generic.LinkedListNode(Of T), System.Collections.Generic.LinkedListNode(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 90
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddBefore
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 221
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Adds the specified new node before the specified existing node in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void AddBefore(LinkedListNode<T> node, LinkedListNode<T> newNode)
     content.vb: Public Sub AddBefore(node As LinkedListNode(Of T), newNode As LinkedListNode(Of T))
     parameters:
     - id: node
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> before which to insert *newNode*.
     - id: newNode
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The new <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> to add to the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*node* is null.-or-*newNode* is null.'
-  - type: System.InvalidOperationException
-    description: '*node* is not in the current <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.-or-*newNode* belongs to another <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: LinkedList(Of T).AddBefore(LinkedListNode(Of T), LinkedListNode(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddBefore(System.Collections.Generic.LinkedListNode(Of T), System.Collections.Generic.LinkedListNode(Of T))
+  name.vb: AddBefore(LinkedListNode(Of T), LinkedListNode(Of T))
 - uid: System.Collections.Generic.LinkedList`1.AddFirst(`0)
+  commentId: M:System.Collections.Generic.LinkedList`1.AddFirst(`0)
   id: AddFirst(`0)
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: AddFirst(T)
+  nameWithType: LinkedList<T>.AddFirst(T)
   fullName: System.Collections.Generic.LinkedList<T>.AddFirst(T)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddFirst(T)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 102
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddFirst
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 222
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Adds a new node containing the specified value at the start of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public LinkedListNode<T> AddFirst(T value)
     content.vb: Public Function AddFirst(value As T) As LinkedListNode(Of T)
     parameters:
     - id: value
       type: '{T}'
-      description: The value to add at the start of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The new <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> containing *value*.
+  nameWithType.vb: LinkedList(Of T).AddFirst(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddFirst(T)
 - uid: System.Collections.Generic.LinkedList`1.AddFirst(System.Collections.Generic.LinkedListNode{`0})
+  commentId: M:System.Collections.Generic.LinkedList`1.AddFirst(System.Collections.Generic.LinkedListNode{`0})
   id: AddFirst(System.Collections.Generic.LinkedListNode{`0})
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: AddFirst(LinkedListNode<T>)
-  name.vb: AddFirst(LinkedListNode(Of T))
+  nameWithType: LinkedList<T>.AddFirst(LinkedListNode<T>)
   fullName: System.Collections.Generic.LinkedList<T>.AddFirst(System.Collections.Generic.LinkedListNode<T>)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddFirst(System.Collections.Generic.LinkedListNode(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 117
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddFirst
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 223
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Adds the specified new node at the start of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void AddFirst(LinkedListNode<T> node)
     content.vb: Public Sub AddFirst(node As LinkedListNode(Of T))
     parameters:
     - id: node
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The new <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> to add at the start of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*node* is null.'
-  - type: System.InvalidOperationException
-    description: '*node* belongs to another <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: LinkedList(Of T).AddFirst(LinkedListNode(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddFirst(System.Collections.Generic.LinkedListNode(Of T))
+  name.vb: AddFirst(LinkedListNode(Of T))
 - uid: System.Collections.Generic.LinkedList`1.AddLast(`0)
+  commentId: M:System.Collections.Generic.LinkedList`1.AddLast(`0)
   id: AddLast(`0)
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: AddLast(T)
+  nameWithType: LinkedList<T>.AddLast(T)
   fullName: System.Collections.Generic.LinkedList<T>.AddLast(T)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddLast(T)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 133
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddLast
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 224
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Adds a new node containing the specified value at the end of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public LinkedListNode<T> AddLast(T value)
     content.vb: Public Function AddLast(value As T) As LinkedListNode(Of T)
     parameters:
     - id: value
       type: '{T}'
-      description: The value to add at the end of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The new <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> containing *value*.
+  nameWithType.vb: LinkedList(Of T).AddLast(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddLast(T)
 - uid: System.Collections.Generic.LinkedList`1.AddLast(System.Collections.Generic.LinkedListNode{`0})
+  commentId: M:System.Collections.Generic.LinkedList`1.AddLast(System.Collections.Generic.LinkedListNode{`0})
   id: AddLast(System.Collections.Generic.LinkedListNode{`0})
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: AddLast(LinkedListNode<T>)
-  name.vb: AddLast(LinkedListNode(Of T))
+  nameWithType: LinkedList<T>.AddLast(LinkedListNode<T>)
   fullName: System.Collections.Generic.LinkedList<T>.AddLast(System.Collections.Generic.LinkedListNode<T>)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddLast(System.Collections.Generic.LinkedListNode(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 147
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddLast
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 225
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Adds the specified new node at the end of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void AddLast(LinkedListNode<T> node)
     content.vb: Public Sub AddLast(node As LinkedListNode(Of T))
     parameters:
     - id: node
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The new <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> to add at the end of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*node* is null.'
-  - type: System.InvalidOperationException
-    description: '*node* belongs to another <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: LinkedList(Of T).AddLast(LinkedListNode(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).AddLast(System.Collections.Generic.LinkedListNode(Of T))
+  name.vb: AddLast(LinkedListNode(Of T))
 - uid: System.Collections.Generic.LinkedList`1.Clear
+  commentId: M:System.Collections.Generic.LinkedList`1.Clear
   id: Clear
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: Clear()
+  nameWithType: LinkedList<T>.Clear()
   fullName: System.Collections.Generic.LinkedList<T>.Clear()
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).Clear()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 162
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Clear
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 226
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Removes all nodes from the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void Clear()
     content.vb: Public Sub Clear
+  nameWithType.vb: LinkedList(Of T).Clear()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).Clear()
 - uid: System.Collections.Generic.LinkedList`1.Contains(`0)
+  commentId: M:System.Collections.Generic.LinkedList`1.Contains(`0)
   id: Contains(`0)
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: Contains(T)
+  nameWithType: LinkedList<T>.Contains(T)
   fullName: System.Collections.Generic.LinkedList<T>.Contains(T)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).Contains(T)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 177
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Contains
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 227
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Determines whether a value is in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public bool Contains(T value)
     content.vb: Public Function Contains(value As T) As Boolean
     parameters:
     - id: value
       type: '{T}'
-      description: The value to locate in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>. The value can be null for reference types.
     return:
       type: System.Boolean
-      description: true if *value* is found in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>; otherwise, false.
+  nameWithType.vb: LinkedList(Of T).Contains(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).Contains(T)
 - uid: System.Collections.Generic.LinkedList`1.CopyTo(`0[],System.Int32)
+  commentId: M:System.Collections.Generic.LinkedList`1.CopyTo(`0[],System.Int32)
   id: CopyTo(`0[],System.Int32)
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: CopyTo(T[], Int32)
-  name.vb: CopyTo(T(), Int32)
+  nameWithType: LinkedList<T>.CopyTo(T[], Int32)
   fullName: System.Collections.Generic.LinkedList<T>.CopyTo(T[], System.Int32)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).CopyTo(T(), System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 182
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CopyTo
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 228
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Copies the entire <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref> to a compatible one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref>, starting at the specified index of the target array.
   syntax:
     content: public void CopyTo(T[] array, int index)
     content.vb: Public Sub CopyTo(array As T(), index As Integer)
     parameters:
     - id: array
       type: '{T}[]'
-      description: The one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref> that is the destination of the elements copied from <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>. The <xref href="System.Array" data-throw-if-not-resolved="false"></xref> must have zero-based indexing.
     - id: index
       type: System.Int32
-      description: The zero-based index in *array* at which copying begins.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*array* is null.'
-  - type: System.ArgumentOutOfRangeException
-    description: '*index* is less than zero.'
-  - type: System.ArgumentException
-    description: The number of elements in the source <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref> is greater than the available space from *index* to the end of the destination *array*.
+  nameWithType.vb: LinkedList(Of T).CopyTo(T(), Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).CopyTo(T(), System.Int32)
+  name.vb: CopyTo(T(), Int32)
 - uid: System.Collections.Generic.LinkedList`1.Find(`0)
+  commentId: M:System.Collections.Generic.LinkedList`1.Find(`0)
   id: Find(`0)
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: Find(T)
+  nameWithType: LinkedList<T>.Find(T)
   fullName: System.Collections.Generic.LinkedList<T>.Find(T)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).Find(T)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 210
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Find
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 229
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Finds the first node that contains the specified value.
   syntax:
     content: public LinkedListNode<T> Find(T value)
     content.vb: Public Function Find(value As T) As LinkedListNode(Of T)
     parameters:
     - id: value
       type: '{T}'
-      description: The value to locate in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The first <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> that contains the specified value, if found; otherwise, null.
+  nameWithType.vb: LinkedList(Of T).Find(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).Find(T)
 - uid: System.Collections.Generic.LinkedList`1.FindLast(`0)
+  commentId: M:System.Collections.Generic.LinkedList`1.FindLast(`0)
   id: FindLast(`0)
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: FindLast(T)
+  nameWithType: LinkedList<T>.FindLast(T)
   fullName: System.Collections.Generic.LinkedList<T>.FindLast(T)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).FindLast(T)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 242
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FindLast
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 230
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Finds the last node that contains the specified value.
   syntax:
     content: public LinkedListNode<T> FindLast(T value)
     content.vb: Public Function FindLast(value As T) As LinkedListNode(Of T)
     parameters:
     - id: value
       type: '{T}'
-      description: The value to locate in the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The last <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> that contains the specified value, if found; otherwise, null.
+  nameWithType.vb: LinkedList(Of T).FindLast(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).FindLast(T)
 - uid: System.Collections.Generic.LinkedList`1.GetEnumerator
+  commentId: M:System.Collections.Generic.LinkedList`1.GetEnumerator
   id: GetEnumerator
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: GetEnumerator()
+  nameWithType: LinkedList<T>.GetEnumerator()
   fullName: System.Collections.Generic.LinkedList<T>.GetEnumerator()
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).GetEnumerator()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 278
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetEnumerator
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 231
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Returns an enumerator that iterates through the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public LinkedList<T>.Enumerator GetEnumerator()
     content.vb: Public Function GetEnumerator As LinkedList(Of T).Enumerator
     return:
       type: System.Collections.Generic.LinkedList`1.Enumerator
-      description: An <xref href="System.Collections.Generic.LinkedList`1.Enumerator" data-throw-if-not-resolved="false"></xref> for the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: LinkedList(Of T).GetEnumerator()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).GetEnumerator()
 - uid: System.Collections.Generic.LinkedList`1.Remove(`0)
+  commentId: M:System.Collections.Generic.LinkedList`1.Remove(`0)
   id: Remove(`0)
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: Remove(T)
+  nameWithType: LinkedList<T>.Remove(T)
   fullName: System.Collections.Generic.LinkedList<T>.Remove(T)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).Remove(T)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 288
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Remove
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 232
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Removes the first occurrence of the specified value from the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public bool Remove(T value)
     content.vb: Public Function Remove(value As T) As Boolean
     parameters:
     - id: value
       type: '{T}'
-      description: The value to remove from the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Boolean
-      description: true if the element containing *value* is successfully removed; otherwise, false.  This method also returns false if *value* was not found in the original <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: LinkedList(Of T).Remove(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).Remove(T)
 - uid: System.Collections.Generic.LinkedList`1.Remove(System.Collections.Generic.LinkedListNode{`0})
+  commentId: M:System.Collections.Generic.LinkedList`1.Remove(System.Collections.Generic.LinkedListNode{`0})
   id: Remove(System.Collections.Generic.LinkedListNode{`0})
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: Remove(LinkedListNode<T>)
-  name.vb: Remove(LinkedListNode(Of T))
+  nameWithType: LinkedList<T>.Remove(LinkedListNode<T>)
   fullName: System.Collections.Generic.LinkedList<T>.Remove(System.Collections.Generic.LinkedListNode<T>)
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).Remove(System.Collections.Generic.LinkedListNode(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 299
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Remove
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 233
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Removes the specified node from the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void Remove(LinkedListNode<T> node)
     content.vb: Public Sub Remove(node As LinkedListNode(Of T))
     parameters:
     - id: node
       type: System.Collections.Generic.LinkedListNode{{T}}
-      description: The <xref href="System.Collections.Generic.LinkedListNode`1" data-throw-if-not-resolved="false"></xref> to remove from the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*node* is null.'
-  - type: System.InvalidOperationException
-    description: '*node* is not in the current <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: LinkedList(Of T).Remove(LinkedListNode(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).Remove(System.Collections.Generic.LinkedListNode(Of T))
+  name.vb: Remove(LinkedListNode(Of T))
 - uid: System.Collections.Generic.LinkedList`1.RemoveFirst
+  commentId: M:System.Collections.Generic.LinkedList`1.RemoveFirst
   id: RemoveFirst
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: RemoveFirst()
+  nameWithType: LinkedList<T>.RemoveFirst()
   fullName: System.Collections.Generic.LinkedList<T>.RemoveFirst()
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).RemoveFirst()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 305
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveFirst
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 234
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Removes the node at the start of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void RemoveFirst()
     content.vb: Public Sub RemoveFirst
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref> is empty.
+  nameWithType.vb: LinkedList(Of T).RemoveFirst()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).RemoveFirst()
 - uid: System.Collections.Generic.LinkedList`1.RemoveLast
+  commentId: M:System.Collections.Generic.LinkedList`1.RemoveLast
   id: RemoveLast
   parent: System.Collections.Generic.LinkedList`1
+  langs:
+  - csharp
+  - vb
   name: RemoveLast()
+  nameWithType: LinkedList<T>.RemoveLast()
   fullName: System.Collections.Generic.LinkedList<T>.RemoveLast()
-  fullName.vb: System.Collections.Generic.LinkedList(Of T).RemoveLast()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Collections/src/System/Collections/Generic/LinkedList.cs
-    startLine: 311
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveLast
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 235
   assemblies:
   - System.Collections
   namespace: System.Collections.Generic
-  summary: Removes the node at the end of the <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public void RemoveLast()
     content.vb: Public Sub RemoveLast
-  exceptions:
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Collections.Generic.LinkedList`1" data-throw-if-not-resolved="false"></xref> is empty.
+  nameWithType.vb: LinkedList(Of T).RemoveLast()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.Generic.LinkedList(Of T).RemoveLast()
 references:
 - uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
   name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: '!:System.Collections.Generic.IEnumerable{`0}'
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  name: Collections.Generic.IEnumerable<T>
-  name.vb: Collections.Generic.IEnumerable(Of T)
+  name: Generic.IEnumerable<T>
+  nameWithType: Generic.IEnumerable<T>
   fullName: System.Collections.Generic.IEnumerable<T>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  nameWithType.vb: Generic.IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: Generic.IEnumerable(Of T)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
+    name: Generic.IEnumerable
+    nameWithType: Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
-    name: Collections.Generic.IEnumerable
+    name: Generic.IEnumerable
+    nameWithType: Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IReadOnlyCollection{{T}}
+  commentId: '!:System.Collections.Generic.IReadOnlyCollection{`0}'
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IReadOnlyCollection`1
-  name: IReadOnlyCollection<T>
-  name.vb: IReadOnlyCollection(Of T)
+  name: Generic.IReadOnlyCollection<T>
+  nameWithType: Generic.IReadOnlyCollection<T>
   fullName: System.Collections.Generic.IReadOnlyCollection<T>
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  nameWithType.vb: Generic.IReadOnlyCollection(Of T)
+  fullname.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: Generic.IReadOnlyCollection(Of T)
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
+    name: Generic.IReadOnlyCollection
+    nameWithType: Generic.IReadOnlyCollection
     fullName: System.Collections.Generic.IReadOnlyCollection
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
+    name: Generic.IReadOnlyCollection
+    nameWithType: Generic.IReadOnlyCollection
     fullName: System.Collections.Generic.IReadOnlyCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.ICollection
+  commentId: T:System.Collections.ICollection
   parent: System.Collections
   isExternal: false
   name: Collections.ICollection
+  nameWithType: Collections.ICollection
   fullName: System.Collections.ICollection
 - uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
   parent: System.Collections
   isExternal: false
   name: Collections.IEnumerable
+  nameWithType: Collections.IEnumerable
   fullName: System.Collections.IEnumerable
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IReadOnlyCollection`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
   isExternal: false
-  name: IReadOnlyCollection<>
-  name.vb: IReadOnlyCollection(Of )
+  name: Generic.IReadOnlyCollection<>
+  nameWithType: Generic.IReadOnlyCollection<>
   fullName: System.Collections.Generic.IReadOnlyCollection<>
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of )
+  nameWithType.vb: Generic.IReadOnlyCollection(Of )
+  fullname.vb: System.Collections.Generic.IReadOnlyCollection(Of )
+  name.vb: Generic.IReadOnlyCollection(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
+    name: Generic.IReadOnlyCollection
+    nameWithType: Generic.IReadOnlyCollection
     fullName: System.Collections.Generic.IReadOnlyCollection
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
+    name: Generic.IReadOnlyCollection
+    nameWithType: Generic.IReadOnlyCollection
     fullName: System.Collections.Generic.IReadOnlyCollection
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Collections.Generic.LinkedListNode{{T}}
+  commentId: T:System.Collections.Generic.LinkedListNode{`0}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.LinkedListNode`1
   name: LinkedListNode<T>
-  name.vb: LinkedListNode(Of T)
+  nameWithType: LinkedListNode<T>
   fullName: System.Collections.Generic.LinkedListNode<T>
-  fullName.vb: System.Collections.Generic.LinkedListNode(Of T)
+  nameWithType.vb: LinkedListNode(Of T)
+  fullname.vb: System.Collections.Generic.LinkedListNode(Of T)
+  name.vb: LinkedListNode(Of T)
   spec.csharp:
   - uid: System.Collections.Generic.LinkedListNode`1
     name: LinkedListNode
+    nameWithType: LinkedListNode
     fullName: System.Collections.Generic.LinkedListNode
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.LinkedListNode`1
     name: LinkedListNode
+    nameWithType: LinkedListNode
     fullName: System.Collections.Generic.LinkedListNode
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.LinkedListNode`1
+  commentId: T:System.Collections.Generic.LinkedListNode`1
   parent: System.Collections.Generic
   isExternal: false
   name: LinkedListNode<T>
-  name.vb: LinkedListNode(Of T)
+  nameWithType: LinkedListNode<T>
   fullName: System.Collections.Generic.LinkedListNode<T>
-  fullName.vb: System.Collections.Generic.LinkedListNode(Of T)
+  nameWithType.vb: LinkedListNode(Of T)
+  fullname.vb: System.Collections.Generic.LinkedListNode(Of T)
+  name.vb: LinkedListNode(Of T)
   spec.csharp:
   - uid: System.Collections.Generic.LinkedListNode`1
     name: LinkedListNode
+    nameWithType: LinkedListNode
     fullName: System.Collections.Generic.LinkedListNode
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.LinkedListNode`1
     name: LinkedListNode
+    nameWithType: LinkedListNode
     fullName: System.Collections.Generic.LinkedListNode
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
 - uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
   isExternal: false
   name: T
+  nameWithType: T
   fullName: T
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: '{T}[]'
-  isExternal: false
   name: T[]
-  name.vb: T()
+  nameWithType: T[]
   fullName: T[]
-  fullName.vb: T()
+  nameWithType.vb: T()
+  fullname.vb: T()
+  name.vb: T()
   spec.csharp:
   - name: T
+    nameWithType: T
     fullName: T
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - name: T
+    nameWithType: T
     fullName: T
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Collections.Generic.LinkedList`1.Enumerator
+  commentId: T:System.Collections.Generic.LinkedList`1.Enumerator
   parent: System.Collections.Generic
   isExternal: false
   name: LinkedList.Enumerator<>
-  name.vb: LinkedList.Enumerator(Of )
+  nameWithType: LinkedList.Enumerator<>
   fullName: System.Collections.Generic.LinkedList.Enumerator<>
-  fullName.vb: System.Collections.Generic.LinkedList.Enumerator(Of )
+  nameWithType.vb: LinkedList.Enumerator(Of )
+  fullname.vb: System.Collections.Generic.LinkedList.Enumerator(Of )
+  name.vb: LinkedList.Enumerator(Of )
   spec.csharp:
   - uid: System.Collections.Generic.LinkedList`1.Enumerator
     name: LinkedList.Enumerator
+    nameWithType: LinkedList.Enumerator
     fullName: System.Collections.Generic.LinkedList.Enumerator
   - name: <
+    nameWithType: <
     fullName: <
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.LinkedList`1.Enumerator
     name: LinkedList.Enumerator
+    nameWithType: LinkedList.Enumerator
     fullName: System.Collections.Generic.LinkedList.Enumerator
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

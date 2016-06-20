@@ -1,45 +1,70 @@
 items:
 - uid: System.Reflection.Metadata.AssemblyExtensions
+  commentId: T:System.Reflection.Metadata.AssemblyExtensions
   id: AssemblyExtensions
   parent: System.Reflection.Metadata
   children:
   - System.Reflection.Metadata.AssemblyExtensions.TryGetRawMetadata(System.Reflection.Assembly,System.Byte*@,System.Int32@)
+  langs:
+  - csharp
+  - vb
   name: AssemblyExtensions
+  nameWithType: AssemblyExtensions
   fullName: System.Reflection.Metadata.AssemblyExtensions
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Reflection/Metadata/AssemblyExtensions.cs
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Reflection/Metadata/AssemblyExtensions.cs
+      repo: https://github.com/dotnet/corefx.git
+    id: AssemblyExtensions
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
     startLine: 10
   assemblies:
   - System.Runtime.Loader
   namespace: System.Reflection.Metadata
   syntax:
     content: 'public class AssemblyExtensions : object'
-    content.vb: Public Class AssemblyExtensions Inherits Object
+    content.vb: >-
+      Public Class AssemblyExtensions
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Reflection.Metadata.AssemblyExtensions.TryGetRawMetadata(System.Reflection.Assembly,System.Byte*@,System.Int32@)
+  commentId: M:System.Reflection.Metadata.AssemblyExtensions.TryGetRawMetadata(System.Reflection.Assembly,System.Byte*@,System.Int32@)
   id: TryGetRawMetadata(System.Reflection.Assembly,System.Byte*@,System.Int32@)
+  isExtensionMethod: true
   parent: System.Reflection.Metadata.AssemblyExtensions
+  langs:
+  - csharp
+  - vb
   name: TryGetRawMetadata(Assembly, out Byte*, out Int32)
-  name.vb: TryGetRawMetadata(Assembly, ByRef Byte*, ByRef Int32)
+  nameWithType: AssemblyExtensions.TryGetRawMetadata(Assembly, out Byte*, out Int32)
   fullName: System.Reflection.Metadata.AssemblyExtensions.TryGetRawMetadata(System.Reflection.Assembly, out System.Byte*, out System.Int32)
-  fullName.vb: System.Reflection.Metadata.AssemblyExtensions.TryGetRawMetadata(System.Reflection.Assembly, ByRef System.Byte*, ByRef System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/Metadata/AssemblyExtensions.cs
-    startLine: 25
+    remote:
+      path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TryGetRawMetadata
+    path: src/System.Runtime.Loader/ref/System.Runtime.Loader.cs
+    startLine: 12
   assemblies:
   - System.Runtime.Loader
   namespace: System.Reflection.Metadata
   syntax:
-    content: public static bool TryGetRawMetadata(Assembly assembly, out byte *blob, out int length)
-    content.vb: Public Shared Function TryGetRawMetadata(assembly As Assembly, ByRef blob As Byte *, ByRef length As Integer) As Boolean
+    content: public static bool TryGetRawMetadata(this Assembly assembly, out byte *blob, out int length)
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function TryGetRawMetadata(assembly As Assembly, ByRef blob As Byte *, ByRef length As Integer) As Boolean
     parameters:
     - id: assembly
       type: System.Reflection.Assembly
@@ -49,54 +74,81 @@ items:
       type: System.Int32
     return:
       type: System.Boolean
+  nameWithType.vb: AssemblyExtensions.TryGetRawMetadata(Assembly, ByRef Byte*, ByRef Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Reflection.Metadata.AssemblyExtensions.TryGetRawMetadata(System.Reflection.Assembly, ByRef System.Byte*, ByRef System.Int32)
+  name.vb: TryGetRawMetadata(Assembly, ByRef Byte*, ByRef Int32)
 references:
 - uid: System.Reflection.Metadata
+  commentId: N:System.Reflection.Metadata
   isExternal: false
   name: System.Reflection.Metadata
+  nameWithType: System.Reflection.Metadata
   fullName: System.Reflection.Metadata
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
   parent: System.Reflection
   isExternal: false
-  name: Reflection.Assembly
+  name: Assembly
+  nameWithType: Assembly
   fullName: System.Reflection.Assembly
 - uid: System.Byte*
-  isExternal: true
   name: Byte*
+  nameWithType: Byte*
   fullName: System.Byte*
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: '*'
+    nameWithType: '*'
     fullName: '*'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: '*'
+    nameWithType: '*'
     fullName: '*'
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection

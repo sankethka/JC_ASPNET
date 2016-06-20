@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
+  commentId: T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
   id: EventRegistrationTokenTable`1
   parent: System.Runtime.InteropServices.WindowsRuntime
   children:
@@ -9,219 +10,327 @@ items:
   - System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.InvocationList
   - System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.RemoveEventHandler(`0)
   - System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)
+  langs:
+  - csharp
+  - vb
   name: EventRegistrationTokenTable<T>
-  name.vb: EventRegistrationTokenTable(Of T)
+  nameWithType: EventRegistrationTokenTable<T>
   fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>
-  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T)
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/EventRegistrationTokenTable.cs
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/EventRegistrationTokenTable.cs
-    startLine: 15
-  assemblies:
-  - System.Runtime.InteropServices.WindowsRuntime
-  namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Stores mappings between delegates and event tokens, to support the implementation of a Windows Runtime event in managed code.
-  syntax:
-    content: 'public sealed class EventRegistrationTokenTable<T> : object where T : class'
-    content.vb: Public NotInheritable Class EventRegistrationTokenTable(Of T As Class) Inherits Object
-    typeParameters:
-    - id: T
-  inheritance:
-  - System.Object
-- uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.#ctor
-  id: '#ctor'
-  parent: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
-  name: EventRegistrationTokenTable()
-  fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>.EventRegistrationTokenTable()
-  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).EventRegistrationTokenTable()
-  type: Constructor
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/EventRegistrationTokenTable.cs
+      repo: https://github.com/dotnet/corefx.git
+    id: EventRegistrationTokenTable
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
     startLine: 24
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Initializes a new instance of the <xref href="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1" data-throw-if-not-resolved="false"></xref> class.
   syntax:
-    content: public EventRegistrationTokenTable()
-    content.vb: Public Sub New
-  exceptions:
-  - type: System.InvalidOperationException
-    description: '*T* is not a delegate type.'
-- uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.InvocationList
-  id: InvocationList
+    content: 'public sealed class EventRegistrationTokenTable<T> : object where T : class'
+    content.vb: >-
+      Public NotInheritable Class EventRegistrationTokenTable(Of T As Class)
+          Inherits Object
+    typeParameters:
+    - id: T
+  inheritance:
+  - System.Object
+  nameWithType.vb: EventRegistrationTokenTable(Of T)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T)
+  name.vb: EventRegistrationTokenTable(Of T)
+- uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.#ctor
+  commentId: M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.#ctor
+  id: '#ctor'
   parent: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
-  name: InvocationList
-  fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>.InvocationList
-  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).InvocationList
-  type: Property
+  langs:
+  - csharp
+  - vb
+  name: EventRegistrationTokenTable()
+  nameWithType: EventRegistrationTokenTable<T>.EventRegistrationTokenTable()
+  fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>.EventRegistrationTokenTable()
+  type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/EventRegistrationTokenTable.cs
-    startLine: 36
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 26
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Gets or sets a delegate of type *T* whose invocation list includes all the event handler delegates that have been added, and that have not yet been removed. Invoking this delegate invokes all the event handlers.
+  syntax:
+    content: public EventRegistrationTokenTable()
+    content.vb: Public Sub New
+  nameWithType.vb: EventRegistrationTokenTable(Of T).EventRegistrationTokenTable()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).EventRegistrationTokenTable()
+- uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.InvocationList
+  commentId: P:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.InvocationList
+  id: InvocationList
+  parent: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
+  langs:
+  - csharp
+  - vb
+  name: InvocationList
+  nameWithType: EventRegistrationTokenTable<T>.InvocationList
+  fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>.InvocationList
+  type: Property
+  source:
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: InvocationList
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 27
+  assemblies:
+  - System.Runtime.InteropServices.WindowsRuntime
+  namespace: System.Runtime.InteropServices.WindowsRuntime
   syntax:
     content: public T InvocationList { get; set; }
     content.vb: Public Property InvocationList As T
     parameters: []
     return:
       type: '{T}'
-      description: A delegate of type *T* that represents all the event handler delegates that are currently registered for an event.
+  nameWithType.vb: EventRegistrationTokenTable(Of T).InvocationList
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).InvocationList
 - uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.AddEventHandler(`0)
+  commentId: M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.AddEventHandler(`0)
   id: AddEventHandler(`0)
   parent: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
+  langs:
+  - csharp
+  - vb
   name: AddEventHandler(T)
+  nameWithType: EventRegistrationTokenTable<T>.AddEventHandler(T)
   fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>.AddEventHandler(T)
-  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).AddEventHandler(T)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/EventRegistrationTokenTable.cs
-    startLine: 59
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddEventHandler
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 28
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Adds the specified event handler to the table and to the invocation list, and returns a token that can be used to remove the event handler.
   syntax:
     content: public EventRegistrationToken AddEventHandler(T handler)
     content.vb: Public Function AddEventHandler(handler As T) As EventRegistrationToken
     parameters:
     - id: handler
       type: '{T}'
-      description: The event handler to add.
     return:
       type: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken
-      description: A token that can be used to remove the event handler from the table and the invocation list.
+  nameWithType.vb: EventRegistrationTokenTable(Of T).AddEventHandler(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).AddEventHandler(T)
 - uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.GetOrCreateEventRegistrationTokenTable(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable{`0}@)
+  commentId: M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.GetOrCreateEventRegistrationTokenTable(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable{`0}@)
   id: GetOrCreateEventRegistrationTokenTable(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable{`0}@)
   parent: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
+  langs:
+  - csharp
+  - vb
   name: GetOrCreateEventRegistrationTokenTable(ref EventRegistrationTokenTable<T>)
-  name.vb: GetOrCreateEventRegistrationTokenTable(ByRef EventRegistrationTokenTable(Of T))
+  nameWithType: EventRegistrationTokenTable<T>.GetOrCreateEventRegistrationTokenTable(ref EventRegistrationTokenTable<T>)
   fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>.GetOrCreateEventRegistrationTokenTable(ref System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>)
-  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).GetOrCreateEventRegistrationTokenTable(ByRef System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T))
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/EventRegistrationTokenTable.cs
-    startLine: 245
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetOrCreateEventRegistrationTokenTable
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 29
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Returns the specified event registration token table, if it is not null; otherwise, returns a new event registration token table.
   syntax:
     content: public static EventRegistrationTokenTable<T> GetOrCreateEventRegistrationTokenTable(ref EventRegistrationTokenTable<T> refEventTable)
     content.vb: Public Shared Function GetOrCreateEventRegistrationTokenTable(ByRef refEventTable As EventRegistrationTokenTable(Of T)) As EventRegistrationTokenTable(Of T)
     parameters:
     - id: refEventTable
       type: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
-      description: An event registration token table, passed by reference.
     return:
       type: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
-      description: The event registration token table that is specified by *refEventTable*, if it is not null; otherwise, a new event registration token table.
+  nameWithType.vb: EventRegistrationTokenTable(Of T).GetOrCreateEventRegistrationTokenTable(ByRef EventRegistrationTokenTable(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).GetOrCreateEventRegistrationTokenTable(ByRef System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T))
+  name.vb: GetOrCreateEventRegistrationTokenTable(ByRef EventRegistrationTokenTable(Of T))
 - uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.RemoveEventHandler(`0)
+  commentId: M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.RemoveEventHandler(`0)
   id: RemoveEventHandler(`0)
   parent: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
+  langs:
+  - csharp
+  - vb
   name: RemoveEventHandler(T)
+  nameWithType: EventRegistrationTokenTable<T>.RemoveEventHandler(T)
   fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>.RemoveEventHandler(T)
-  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).RemoveEventHandler(T)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/EventRegistrationTokenTable.cs
-    startLine: 185
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveEventHandler
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 30
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Removes the specified event handler delegate from the table and the invocation list.
   syntax:
     content: public void RemoveEventHandler(T handler)
     content.vb: Public Sub RemoveEventHandler(handler As T)
     parameters:
     - id: handler
       type: '{T}'
-      description: The event handler to remove.
+  nameWithType.vb: EventRegistrationTokenTable(Of T).RemoveEventHandler(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).RemoveEventHandler(T)
 - uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)
+  commentId: M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)
   id: RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)
   parent: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
+  langs:
+  - csharp
+  - vb
   name: RemoveEventHandler(EventRegistrationToken)
+  nameWithType: EventRegistrationTokenTable<T>.RemoveEventHandler(EventRegistrationToken)
   fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>.RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)
-  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Runtime/InteropServices/WindowsRuntime/EventRegistrationTokenTable.cs
-    startLine: 171
+    remote:
+      path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveEventHandler
+    path: src/System.Runtime.InteropServices.WindowsRuntime/ref/System.Runtime.InteropServices.WindowsRuntime.cs
+    startLine: 31
   assemblies:
   - System.Runtime.InteropServices.WindowsRuntime
   namespace: System.Runtime.InteropServices.WindowsRuntime
-  summary: Removes the event handler that is associated with the specified token from the table and the invocation list.
   syntax:
     content: public void RemoveEventHandler(EventRegistrationToken token)
     content.vb: Public Sub RemoveEventHandler(token As EventRegistrationToken)
     parameters:
     - id: token
       type: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken
-      description: The token that was returned when the event handler was added.
+  nameWithType.vb: EventRegistrationTokenTable(Of T).RemoveEventHandler(EventRegistrationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T).RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)
 references:
 - uid: System.Runtime.InteropServices.WindowsRuntime
+  commentId: N:System.Runtime.InteropServices.WindowsRuntime
   isExternal: false
   name: System.Runtime.InteropServices.WindowsRuntime
+  nameWithType: System.Runtime.InteropServices.WindowsRuntime
   fullName: System.Runtime.InteropServices.WindowsRuntime
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
   isExternal: false
   name: T
+  nameWithType: T
   fullName: T
 - uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken
+  commentId: T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken
   parent: System.Runtime.InteropServices.WindowsRuntime
   isExternal: false
   name: EventRegistrationToken
+  nameWithType: EventRegistrationToken
   fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken
 - uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
+  commentId: T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
   parent: System.Runtime.InteropServices.WindowsRuntime
   isExternal: false
   name: EventRegistrationTokenTable<T>
-  name.vb: EventRegistrationTokenTable(Of T)
+  nameWithType: EventRegistrationTokenTable<T>
   fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>
-  fullName.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T)
+  nameWithType.vb: EventRegistrationTokenTable(Of T)
+  fullname.vb: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable(Of T)
+  name.vb: EventRegistrationTokenTable(Of T)
   spec.csharp:
   - uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
     name: EventRegistrationTokenTable
+    nameWithType: EventRegistrationTokenTable
     fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable
   - name: <
+    nameWithType: <
     fullName: <
   - name: T
+    nameWithType: T
     fullName: T
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
     name: EventRegistrationTokenTable
+    nameWithType: EventRegistrationTokenTable
     fullName: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - name: T
+    nameWithType: T
     fullName: T
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException

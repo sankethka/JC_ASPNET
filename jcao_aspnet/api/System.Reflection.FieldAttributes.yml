@@ -1,5 +1,6 @@
 items:
 - uid: System.Reflection.FieldAttributes
+  commentId: T:System.Reflection.FieldAttributes
   id: FieldAttributes
   parent: System.Reflection
   children:
@@ -21,331 +22,638 @@ items:
   - System.Reflection.FieldAttributes.RTSpecialName
   - System.Reflection.FieldAttributes.SpecialName
   - System.Reflection.FieldAttributes.Static
+  langs:
+  - csharp
+  - vb
   name: FieldAttributes
+  nameWithType: FieldAttributes
   fullName: System.Reflection.FieldAttributes
   type: Enum
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 8
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies flags that describe the attributes of a field.
-  syntax:
-    content: 'public enum FieldAttributes : int'
-    content.vb: Public Enum FieldAttributes As Integer
-- uid: System.Reflection.FieldAttributes.Assembly
-  id: Assembly
-  parent: System.Reflection.FieldAttributes
-  name: Assembly
-  fullName: System.Reflection.FieldAttributes.Assembly
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 18
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field is accessible throughout the assembly.
-  syntax:
-    content: Assembly = null
-    content.vb: Assembly = Nothing
-- uid: System.Reflection.FieldAttributes.FamANDAssem
-  id: FamANDAssem
-  parent: System.Reflection.FieldAttributes
-  name: FamANDAssem
-  fullName: System.Reflection.FieldAttributes.FamANDAssem
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 17
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field is accessible only by subtypes in this assembly.
-  syntax:
-    content: FamANDAssem = null
-    content.vb: FamANDAssem = Nothing
-- uid: System.Reflection.FieldAttributes.Family
-  id: Family
-  parent: System.Reflection.FieldAttributes
-  name: Family
-  fullName: System.Reflection.FieldAttributes.Family
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 19
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field is accessible only by type and subtypes.
-  syntax:
-    content: Family = null
-    content.vb: Family = Nothing
-- uid: System.Reflection.FieldAttributes.FamORAssem
-  id: FamORAssem
-  parent: System.Reflection.FieldAttributes
-  name: FamORAssem
-  fullName: System.Reflection.FieldAttributes.FamORAssem
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 20
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field is accessible by subtypes anywhere, as well as throughout this assembly.
-  syntax:
-    content: FamORAssem = null
-    content.vb: FamORAssem = Nothing
-- uid: System.Reflection.FieldAttributes.FieldAccessMask
-  id: FieldAccessMask
-  parent: System.Reflection.FieldAttributes
-  name: FieldAccessMask
-  fullName: System.Reflection.FieldAttributes.FieldAccessMask
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 14
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies the access level of a given field.
-  syntax:
-    content: FieldAccessMask = null
-    content.vb: FieldAccessMask = Nothing
-- uid: System.Reflection.FieldAttributes.HasDefault
-  id: HasDefault
-  parent: System.Reflection.FieldAttributes
-  name: HasDefault
-  fullName: System.Reflection.FieldAttributes.HasDefault
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 39
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field has a default value.
-  syntax:
-    content: HasDefault = null
-    content.vb: HasDefault = Nothing
-- uid: System.Reflection.FieldAttributes.HasFieldMarshal
-  id: HasFieldMarshal
-  parent: System.Reflection.FieldAttributes
-  name: HasFieldMarshal
-  fullName: System.Reflection.FieldAttributes.HasFieldMarshal
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 38
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field has marshaling information.
-  syntax:
-    content: HasFieldMarshal = null
-    content.vb: HasFieldMarshal = Nothing
-- uid: System.Reflection.FieldAttributes.HasFieldRVA
-  id: HasFieldRVA
-  parent: System.Reflection.FieldAttributes
-  name: HasFieldRVA
-  fullName: System.Reflection.FieldAttributes.HasFieldRVA
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 40
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field has a relative virtual address (RVA). The RVA is the location of the method body in the current image, as an address relative to the start of the image file in which it is located.
-  syntax:
-    content: HasFieldRVA = null
-    content.vb: HasFieldRVA = Nothing
-- uid: System.Reflection.FieldAttributes.InitOnly
-  id: InitOnly
-  parent: System.Reflection.FieldAttributes
-  name: InitOnly
-  fullName: System.Reflection.FieldAttributes.InitOnly
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
+      repo: https://github.com/dotnet/corefx.git
+    id: FieldAttributes
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
     startLine: 26
   assemblies:
   - System.Reflection.Primitives
   namespace: System.Reflection
-  summary: Specifies that the field is initialized only, and can be set only in the body of a constructor.
   syntax:
-    content: InitOnly = null
-    content.vb: InitOnly = Nothing
-- uid: System.Reflection.FieldAttributes.Literal
-  id: Literal
+    content: 'public enum FieldAttributes : int'
+    content.vb: Public Enum FieldAttributes As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: System.Reflection.FieldAttributes.Assembly
+  commentId: F:System.Reflection.FieldAttributes.Assembly
+  id: Assembly
   parent: System.Reflection.FieldAttributes
-  name: Literal
-  fullName: System.Reflection.FieldAttributes.Literal
+  langs:
+  - csharp
+  - vb
+  name: Assembly
+  nameWithType: FieldAttributes.Assembly
+  fullName: System.Reflection.FieldAttributes.Assembly
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 27
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Assembly
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 29
   assemblies:
   - System.Reflection.Primitives
   namespace: System.Reflection
-  summary: Specifies that the field's value is a compile-time (static or early bound) constant. Any attempt to set it throws a <xref href="System.FieldAccessException" data-throw-if-not-resolved="false"></xref>.
   syntax:
-    content: Literal = null
-    content.vb: Literal = Nothing
-- uid: System.Reflection.FieldAttributes.NotSerialized
-  id: NotSerialized
+    content: Assembly = null
+    content.vb: Assembly = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.FamANDAssem
+  commentId: F:System.Reflection.FieldAttributes.FamANDAssem
+  id: FamANDAssem
   parent: System.Reflection.FieldAttributes
-  name: NotSerialized
-  fullName: System.Reflection.FieldAttributes.NotSerialized
+  langs:
+  - csharp
+  - vb
+  name: FamANDAssem
+  nameWithType: FieldAttributes.FamANDAssem
+  fullName: System.Reflection.FieldAttributes.FamANDAssem
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 28
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field does not have to be serialized when the type is remoted.
-  syntax:
-    content: NotSerialized = null
-    content.vb: NotSerialized = Nothing
-- uid: System.Reflection.FieldAttributes.PinvokeImpl
-  id: PinvokeImpl
-  parent: System.Reflection.FieldAttributes
-  name: PinvokeImpl
-  fullName: System.Reflection.FieldAttributes.PinvokeImpl
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 33
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Reserved for future use.
-  syntax:
-    content: PinvokeImpl = null
-    content.vb: PinvokeImpl = Nothing
-- uid: System.Reflection.FieldAttributes.Private
-  id: Private
-  parent: System.Reflection.FieldAttributes
-  name: Private
-  fullName: System.Reflection.FieldAttributes.Private
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 16
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field is accessible only by the parent type.
-  syntax:
-    content: Private = null
-    content.vb: Private = Nothing
-- uid: System.Reflection.FieldAttributes.PrivateScope
-  id: PrivateScope
-  parent: System.Reflection.FieldAttributes
-  name: PrivateScope
-  fullName: System.Reflection.FieldAttributes.PrivateScope
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 15
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field cannot be referenced.
-  syntax:
-    content: PrivateScope = null
-    content.vb: PrivateScope = Nothing
-- uid: System.Reflection.FieldAttributes.Public
-  id: Public
-  parent: System.Reflection.FieldAttributes
-  name: Public
-  fullName: System.Reflection.FieldAttributes.Public
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 21
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the field is accessible by any member for whom this scope is visible.
-  syntax:
-    content: Public = null
-    content.vb: Public = Nothing
-- uid: System.Reflection.FieldAttributes.RTSpecialName
-  id: RTSpecialName
-  parent: System.Reflection.FieldAttributes
-  name: RTSpecialName
-  fullName: System.Reflection.FieldAttributes.RTSpecialName
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 37
-  assemblies:
-  - System.Reflection.Primitives
-  namespace: System.Reflection
-  summary: Specifies that the common language runtime (metadata internal APIs) should check the name encoding.
-  syntax:
-    content: RTSpecialName = null
-    content.vb: RTSpecialName = Nothing
-- uid: System.Reflection.FieldAttributes.SpecialName
-  id: SpecialName
-  parent: System.Reflection.FieldAttributes
-  name: SpecialName
-  fullName: System.Reflection.FieldAttributes.SpecialName
-  type: Field
-  source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FamANDAssem
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
     startLine: 30
   assemblies:
   - System.Reflection.Primitives
   namespace: System.Reflection
-  summary: Specifies a special method, with the name describing how the method is special.
   syntax:
-    content: SpecialName = null
-    content.vb: SpecialName = Nothing
-- uid: System.Reflection.FieldAttributes.Static
-  id: Static
+    content: FamANDAssem = null
+    content.vb: FamANDAssem = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.Family
+  commentId: F:System.Reflection.FieldAttributes.Family
+  id: Family
   parent: System.Reflection.FieldAttributes
-  name: Static
-  fullName: System.Reflection.FieldAttributes.Static
+  langs:
+  - csharp
+  - vb
+  name: Family
+  nameWithType: FieldAttributes.Family
+  fullName: System.Reflection.FieldAttributes.Family
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/FieldAttributes.cs
-    startLine: 25
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Family
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 31
   assemblies:
   - System.Reflection.Primitives
   namespace: System.Reflection
-  summary: Specifies that the field represents the defined type, or else it is per-instance.
+  syntax:
+    content: Family = null
+    content.vb: Family = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.FamORAssem
+  commentId: F:System.Reflection.FieldAttributes.FamORAssem
+  id: FamORAssem
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: FamORAssem
+  nameWithType: FieldAttributes.FamORAssem
+  fullName: System.Reflection.FieldAttributes.FamORAssem
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FamORAssem
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 32
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: FamORAssem = null
+    content.vb: FamORAssem = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.FieldAccessMask
+  commentId: F:System.Reflection.FieldAttributes.FieldAccessMask
+  id: FieldAccessMask
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: FieldAccessMask
+  nameWithType: FieldAttributes.FieldAccessMask
+  fullName: System.Reflection.FieldAttributes.FieldAccessMask
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: FieldAccessMask
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 33
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: FieldAccessMask = null
+    content.vb: FieldAccessMask = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.HasDefault
+  commentId: F:System.Reflection.FieldAttributes.HasDefault
+  id: HasDefault
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: HasDefault
+  nameWithType: FieldAttributes.HasDefault
+  fullName: System.Reflection.FieldAttributes.HasDefault
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HasDefault
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 34
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: HasDefault = null
+    content.vb: HasDefault = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.HasFieldMarshal
+  commentId: F:System.Reflection.FieldAttributes.HasFieldMarshal
+  id: HasFieldMarshal
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: HasFieldMarshal
+  nameWithType: FieldAttributes.HasFieldMarshal
+  fullName: System.Reflection.FieldAttributes.HasFieldMarshal
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HasFieldMarshal
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 35
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: HasFieldMarshal = null
+    content.vb: HasFieldMarshal = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.HasFieldRVA
+  commentId: F:System.Reflection.FieldAttributes.HasFieldRVA
+  id: HasFieldRVA
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: HasFieldRVA
+  nameWithType: FieldAttributes.HasFieldRVA
+  fullName: System.Reflection.FieldAttributes.HasFieldRVA
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: HasFieldRVA
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 36
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: HasFieldRVA = null
+    content.vb: HasFieldRVA = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.InitOnly
+  commentId: F:System.Reflection.FieldAttributes.InitOnly
+  id: InitOnly
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: InitOnly
+  nameWithType: FieldAttributes.InitOnly
+  fullName: System.Reflection.FieldAttributes.InitOnly
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: InitOnly
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 37
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: InitOnly = null
+    content.vb: InitOnly = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.Literal
+  commentId: F:System.Reflection.FieldAttributes.Literal
+  id: Literal
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: Literal
+  nameWithType: FieldAttributes.Literal
+  fullName: System.Reflection.FieldAttributes.Literal
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Literal
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 38
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: Literal = null
+    content.vb: Literal = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.NotSerialized
+  commentId: F:System.Reflection.FieldAttributes.NotSerialized
+  id: NotSerialized
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: NotSerialized
+  nameWithType: FieldAttributes.NotSerialized
+  fullName: System.Reflection.FieldAttributes.NotSerialized
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NotSerialized
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 39
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: NotSerialized = null
+    content.vb: NotSerialized = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.PinvokeImpl
+  commentId: F:System.Reflection.FieldAttributes.PinvokeImpl
+  id: PinvokeImpl
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: PinvokeImpl
+  nameWithType: FieldAttributes.PinvokeImpl
+  fullName: System.Reflection.FieldAttributes.PinvokeImpl
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PinvokeImpl
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 40
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: PinvokeImpl = null
+    content.vb: PinvokeImpl = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.Private
+  commentId: F:System.Reflection.FieldAttributes.Private
+  id: Private
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: Private
+  nameWithType: FieldAttributes.Private
+  fullName: System.Reflection.FieldAttributes.Private
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Private
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 41
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: Private = null
+    content.vb: Private = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.PrivateScope
+  commentId: F:System.Reflection.FieldAttributes.PrivateScope
+  id: PrivateScope
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: PrivateScope
+  nameWithType: FieldAttributes.PrivateScope
+  fullName: System.Reflection.FieldAttributes.PrivateScope
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PrivateScope
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 42
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: PrivateScope = null
+    content.vb: PrivateScope = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.Public
+  commentId: F:System.Reflection.FieldAttributes.Public
+  id: Public
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: Public
+  nameWithType: FieldAttributes.Public
+  fullName: System.Reflection.FieldAttributes.Public
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Public
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 43
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: Public = null
+    content.vb: Public = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.RTSpecialName
+  commentId: F:System.Reflection.FieldAttributes.RTSpecialName
+  id: RTSpecialName
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: RTSpecialName
+  nameWithType: FieldAttributes.RTSpecialName
+  fullName: System.Reflection.FieldAttributes.RTSpecialName
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RTSpecialName
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 44
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: RTSpecialName = null
+    content.vb: RTSpecialName = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.SpecialName
+  commentId: F:System.Reflection.FieldAttributes.SpecialName
+  id: SpecialName
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: SpecialName
+  nameWithType: FieldAttributes.SpecialName
+  fullName: System.Reflection.FieldAttributes.SpecialName
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SpecialName
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 45
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
+  syntax:
+    content: SpecialName = null
+    content.vb: SpecialName = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: System.Reflection.FieldAttributes.Static
+  commentId: F:System.Reflection.FieldAttributes.Static
+  id: Static
+  parent: System.Reflection.FieldAttributes
+  langs:
+  - csharp
+  - vb
+  name: Static
+  nameWithType: FieldAttributes.Static
+  fullName: System.Reflection.FieldAttributes.Static
+  type: Field
+  source:
+    remote:
+      path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Static
+    path: src/System.Reflection.Primitives/ref/System.Reflection.Primitives.cs
+    startLine: 46
+  assemblies:
+  - System.Reflection.Primitives
+  namespace: System.Reflection
   syntax:
     content: Static = null
     content.vb: Static = Nothing
+    return:
+      type: System.Reflection.FieldAttributes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection
+- uid: System.Reflection.FieldAttributes
+  commentId: T:System.Reflection.FieldAttributes
+  parent: System.Reflection
+  isExternal: false
+  name: FieldAttributes
+  nameWithType: FieldAttributes
+  fullName: System.Reflection.FieldAttributes

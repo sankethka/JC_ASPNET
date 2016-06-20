@@ -1,5 +1,6 @@
 items:
 - uid: System.Threading.SynchronizationContext
+  commentId: T:System.Threading.SynchronizationContext
   id: SynchronizationContext
   parent: System.Threading
   children:
@@ -11,215 +12,334 @@ items:
   - System.Threading.SynchronizationContext.Post(System.Threading.SendOrPostCallback,System.Object)
   - System.Threading.SynchronizationContext.Send(System.Threading.SendOrPostCallback,System.Object)
   - System.Threading.SynchronizationContext.SetSynchronizationContext(System.Threading.SynchronizationContext)
+  langs:
+  - csharp
+  - vb
   name: SynchronizationContext
+  nameWithType: SynchronizationContext
   fullName: System.Threading.SynchronizationContext
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Threading/SynchronizationContext.cs
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Threading/SynchronizationContext.cs
-    startLine: 56
+      repo: https://github.com/dotnet/corefx.git
+    id: SynchronizationContext
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 309
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Provides the basic functionality for propagating a synchronization context in various synchronization models.
   syntax:
     content: 'public class SynchronizationContext : object'
-    content.vb: Public Class SynchronizationContext Inherits Object
+    content.vb: >-
+      Public Class SynchronizationContext
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Threading.SynchronizationContext.#ctor
+  commentId: M:System.Threading.SynchronizationContext.#ctor
   id: '#ctor'
   parent: System.Threading.SynchronizationContext
+  langs:
+  - csharp
+  - vb
   name: SynchronizationContext()
+  nameWithType: SynchronizationContext.SynchronizationContext()
   fullName: System.Threading.SynchronizationContext.SynchronizationContext()
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SynchronizationContext.cs
-    startLine: 62
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 311
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Creates a new instance of the <xref href="System.Threading.SynchronizationContext" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public SynchronizationContext()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Threading.SynchronizationContext.Current
+  commentId: P:System.Threading.SynchronizationContext.Current
   id: Current
   parent: System.Threading.SynchronizationContext
+  langs:
+  - csharp
+  - vb
   name: Current
+  nameWithType: SynchronizationContext.Current
   fullName: System.Threading.SynchronizationContext.Current
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SynchronizationContext.cs
-    startLine: 196
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Current
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 312
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Gets the synchronization context for the current thread.
   syntax:
     content: public static SynchronizationContext Current { get; }
     content.vb: Public Shared ReadOnly Property Current As SynchronizationContext
     parameters: []
     return:
       type: System.Threading.SynchronizationContext
-      description: A <xref href="System.Threading.SynchronizationContext" data-throw-if-not-resolved="false"></xref> object representing the current synchronization context.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Threading.SynchronizationContext.CreateCopy
+  commentId: M:System.Threading.SynchronizationContext.CreateCopy
   id: CreateCopy
   parent: System.Threading.SynchronizationContext
+  langs:
+  - csharp
+  - vb
   name: CreateCopy()
+  nameWithType: SynchronizationContext.CreateCopy()
   fullName: System.Threading.SynchronizationContext.CreateCopy()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SynchronizationContext.cs
-    startLine: 328
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CreateCopy
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 313
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: When overridden in a derived class, creates a copy of the synchronization context.
   syntax:
     content: public virtual SynchronizationContext CreateCopy()
     content.vb: Public Overridable Function CreateCopy As SynchronizationContext
     return:
       type: System.Threading.SynchronizationContext
-      description: A new <xref href="System.Threading.SynchronizationContext" data-throw-if-not-resolved="false"></xref> object.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Threading.SynchronizationContext.OperationCompleted
+  commentId: M:System.Threading.SynchronizationContext.OperationCompleted
   id: OperationCompleted
   parent: System.Threading.SynchronizationContext
+  langs:
+  - csharp
+  - vb
   name: OperationCompleted()
+  nameWithType: SynchronizationContext.OperationCompleted()
   fullName: System.Threading.SynchronizationContext.OperationCompleted()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SynchronizationContext.cs
-    startLine: 140
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OperationCompleted
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 314
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: When overridden in a derived class, responds to the notification that an operation has completed.
   syntax:
     content: public virtual void OperationCompleted()
     content.vb: Public Overridable Sub OperationCompleted
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Threading.SynchronizationContext.OperationStarted
+  commentId: M:System.Threading.SynchronizationContext.OperationStarted
   id: OperationStarted
   parent: System.Threading.SynchronizationContext
+  langs:
+  - csharp
+  - vb
   name: OperationStarted()
+  nameWithType: SynchronizationContext.OperationStarted()
   fullName: System.Threading.SynchronizationContext.OperationStarted()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SynchronizationContext.cs
-    startLine: 133
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OperationStarted
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 315
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: When overridden in a derived class, responds to the notification that an operation has started.
   syntax:
     content: public virtual void OperationStarted()
     content.vb: Public Overridable Sub OperationStarted
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Threading.SynchronizationContext.Post(System.Threading.SendOrPostCallback,System.Object)
+  commentId: M:System.Threading.SynchronizationContext.Post(System.Threading.SendOrPostCallback,System.Object)
   id: Post(System.Threading.SendOrPostCallback,System.Object)
   parent: System.Threading.SynchronizationContext
+  langs:
+  - csharp
+  - vb
   name: Post(SendOrPostCallback, Object)
+  nameWithType: SynchronizationContext.Post(SendOrPostCallback, Object)
   fullName: System.Threading.SynchronizationContext.Post(System.Threading.SendOrPostCallback, System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SynchronizationContext.cs
-    startLine: 124
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Post
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 316
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: When overridden in a derived class, dispatches an asynchronous message to a synchronization context.
   syntax:
     content: public virtual void Post(SendOrPostCallback d, object state)
     content.vb: Public Overridable Sub Post(d As SendOrPostCallback, state As Object)
     parameters:
     - id: d
       type: System.Threading.SendOrPostCallback
-      description: The <xref href="System.Threading.SendOrPostCallback" data-throw-if-not-resolved="false"></xref> delegate to call.
     - id: state
       type: System.Object
-      description: The object passed to the delegate.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Threading.SynchronizationContext.Send(System.Threading.SendOrPostCallback,System.Object)
+  commentId: M:System.Threading.SynchronizationContext.Send(System.Threading.SendOrPostCallback,System.Object)
   id: Send(System.Threading.SendOrPostCallback,System.Object)
   parent: System.Threading.SynchronizationContext
+  langs:
+  - csharp
+  - vb
   name: Send(SendOrPostCallback, Object)
+  nameWithType: SynchronizationContext.Send(SendOrPostCallback, Object)
   fullName: System.Threading.SynchronizationContext.Send(System.Threading.SendOrPostCallback, System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SynchronizationContext.cs
-    startLine: 119
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Send
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 317
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: When overridden in a derived class, dispatches a synchronous message to a synchronization context.
   syntax:
     content: public virtual void Send(SendOrPostCallback d, object state)
     content.vb: Public Overridable Sub Send(d As SendOrPostCallback, state As Object)
     parameters:
     - id: d
       type: System.Threading.SendOrPostCallback
-      description: The <xref href="System.Threading.SendOrPostCallback" data-throw-if-not-resolved="false"></xref> delegate to call.
     - id: state
       type: System.Object
-      description: The object passed to the delegate.
-  exceptions:
-  - type: System.NotSupportedException
-    description: The method was called in a Windows Store app. The implementation of <xref href="System.Threading.SynchronizationContext" data-throw-if-not-resolved="false"></xref> for Windows Store apps does not support the <xref href="System.Threading.SynchronizationContext.Send(System.Threading.SendOrPostCallback,System.Object)" data-throw-if-not-resolved="false"></xref> method.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Threading.SynchronizationContext.SetSynchronizationContext(System.Threading.SynchronizationContext)
+  commentId: M:System.Threading.SynchronizationContext.SetSynchronizationContext(System.Threading.SynchronizationContext)
   id: SetSynchronizationContext(System.Threading.SynchronizationContext)
   parent: System.Threading.SynchronizationContext
+  langs:
+  - csharp
+  - vb
   name: SetSynchronizationContext(SynchronizationContext)
+  nameWithType: SynchronizationContext.SetSynchronizationContext(SynchronizationContext)
   fullName: System.Threading.SynchronizationContext.SetSynchronizationContext(System.Threading.SynchronizationContext)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Threading/SynchronizationContext.cs
-    startLine: 178
+    remote:
+      path: src/System.Threading/ref/System.Threading.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetSynchronizationContext
+    path: src/System.Threading/ref/System.Threading.cs
+    startLine: 318
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Sets the current synchronization context.
   syntax:
     content: public static void SetSynchronizationContext(SynchronizationContext syncContext)
     content.vb: Public Shared Sub SetSynchronizationContext(syncContext As SynchronizationContext)
     parameters:
     - id: syncContext
       type: System.Threading.SynchronizationContext
-      description: The <xref href="System.Threading.SynchronizationContext" data-throw-if-not-resolved="false"></xref> object to be set.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Threading.SynchronizationContext
+  commentId: T:System.Threading.SynchronizationContext
   parent: System.Threading
   isExternal: false
   name: SynchronizationContext
+  nameWithType: SynchronizationContext
   fullName: System.Threading.SynchronizationContext
 - uid: System.Threading.SendOrPostCallback
+  commentId: T:System.Threading.SendOrPostCallback
   parent: System.Threading
   isExternal: false
   name: SendOrPostCallback
+  nameWithType: SendOrPostCallback
   fullName: System.Threading.SendOrPostCallback
-- uid: System.NotSupportedException
-  parent: System
-  isExternal: false
-  name: NotSupportedException
-  fullName: System.NotSupportedException

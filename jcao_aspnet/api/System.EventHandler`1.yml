@@ -1,47 +1,69 @@
 items:
 - uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
   id: EventHandler`1
   parent: System
   children: []
+  langs:
+  - csharp
+  - vb
   name: EventHandler<TEventArgs>
-  name.vb: EventHandler(Of TEventArgs)
+  nameWithType: EventHandler<TEventArgs>
   fullName: System.EventHandler<TEventArgs>
-  fullName.vb: System.EventHandler(Of TEventArgs)
   type: Delegate
   source:
     remote:
-      path: src/mscorlib/src/System/EventHandler.cs
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/EventHandler.cs
-    startLine: 11
+      repo: https://github.com/dotnet/corefx.git
+    id: EventHandler
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 835
   assemblies:
   - System.Runtime
   namespace: System
-  summary: Represents the method that will handle an event when the event provides data.
   syntax:
     content: public delegate void EventHandler<TEventArgs>(object sender, TEventArgs e);
     content.vb: Public Delegate Sub EventHandler(Of TEventArgs)(sender As Object, e As TEventArgs)
     parameters:
     - id: sender
       type: System.Object
-      description: The source of the event.
     - id: e
       type: '{TEventArgs}'
-      description: An object that contains the event data.
     typeParameters:
     - id: TEventArgs
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: '{TEventArgs}'
+  commentId: '!:TEventArgs'
+  definition: TEventArgs
+  name: TEventArgs
+  nameWithType: TEventArgs
+  fullName: TEventArgs
+- uid: TEventArgs
+  commentId: '!:TEventArgs'
   isExternal: false
   name: TEventArgs
+  nameWithType: TEventArgs
   fullName: TEventArgs

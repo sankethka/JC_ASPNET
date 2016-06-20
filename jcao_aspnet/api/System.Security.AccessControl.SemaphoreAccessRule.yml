@@ -1,5 +1,6 @@
 items:
 - uid: System.Security.AccessControl.SemaphoreAccessRule
+  commentId: T:System.Security.AccessControl.SemaphoreAccessRule
   id: SemaphoreAccessRule
   parent: System.Security.AccessControl
   children:
@@ -10,6 +11,7 @@ items:
   - csharp
   - vb
   name: SemaphoreAccessRule
+  nameWithType: SemaphoreAccessRule
   fullName: System.Security.AccessControl.SemaphoreAccessRule
   type: Class
   source:
@@ -17,24 +19,36 @@ items:
       path: src/System.Threading.AccessControl/ref/System.Threading.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: SemaphoreAccessRule
     path: src/System.Threading.AccessControl/ref/System.Threading.AccessControl.cs
-    startLine: 67
+    startLine: 70
   assemblies:
   - System.Threading.AccessControl
   namespace: System.Security.AccessControl
-  summary: Represents a set of access rights allowed or denied for a user or group. This class cannot be inherited.
   syntax:
     content: 'public sealed class SemaphoreAccessRule : AccessRule'
-    content.vb: Public NotInheritable Class SemaphoreAccessRule Inherits AccessRule
+    content.vb: >-
+      Public NotInheritable Class SemaphoreAccessRule
+          Inherits AccessRule
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Security.AccessControl.SemaphoreAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.SemaphoreRights,System.Security.AccessControl.AccessControlType)
+  commentId: M:System.Security.AccessControl.SemaphoreAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.SemaphoreRights,System.Security.AccessControl.AccessControlType)
   id: '#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.SemaphoreRights,System.Security.AccessControl.AccessControlType)'
   parent: System.Security.AccessControl.SemaphoreAccessRule
   langs:
   - csharp
   - vb
   name: SemaphoreAccessRule(Principal.IdentityReference, SemaphoreRights, AccessControlType)
+  nameWithType: SemaphoreAccessRule.SemaphoreAccessRule(Principal.IdentityReference, SemaphoreRights, AccessControlType)
   fullName: System.Security.AccessControl.SemaphoreAccessRule.SemaphoreAccessRule(System.Security.Principal.IdentityReference, System.Security.AccessControl.SemaphoreRights, System.Security.AccessControl.AccessControlType)
   type: Constructor
   source:
@@ -42,39 +56,35 @@ items:
       path: src/System.Threading.AccessControl/ref/System.Threading.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Threading.AccessControl/ref/System.Threading.AccessControl.cs
-    startLine: 70
+    startLine: 73
   assemblies:
   - System.Threading.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.SemaphoreAccessRule" data-throw-if-not-resolved="false"></xref> class, specifying the user or group the rule applies to, the access rights, and whether the specified access rights are allowed or denied.
   syntax:
     content: public SemaphoreAccessRule(Principal.IdentityReference identity, SemaphoreRights eventRights, AccessControlType type)
     content.vb: Public Sub New(identity As Principal.IdentityReference, eventRights As SemaphoreRights, type As AccessControlType)
     parameters:
     - id: identity
       type: System.Security.Principal.IdentityReference
-      description: The user or group the rule applies to. Must be of type <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> or a type such as <xref href="System.Security.Principal.NTAccount" data-throw-if-not-resolved="false"></xref> that can be converted to type <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref>.
     - id: eventRights
       type: System.Security.AccessControl.SemaphoreRights
-      description: A bitwise combination of <xref href="System.Security.AccessControl.SemaphoreRights" data-throw-if-not-resolved="false"></xref> values specifying the rights allowed or denied.
     - id: type
       type: System.Security.AccessControl.AccessControlType
-      description: One of the <xref href="System.Security.AccessControl.AccessControlType" data-throw-if-not-resolved="false"></xref> values specifying whether the rights are allowed or denied.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*eventRights* specifies an invalid value.-or-*type* specifies an invalid value.'
-  - type: System.ArgumentNullException
-    description: '*identity* is null. -or-*eventRights* is zero.'
-  - type: System.ArgumentException
-    description: '*identity* is neither of type <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> nor of a type such as <xref href="System.Security.Principal.NTAccount" data-throw-if-not-resolved="false"></xref> that can be converted to type <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SemaphoreAccessRule.#ctor(System.String,System.Security.AccessControl.SemaphoreRights,System.Security.AccessControl.AccessControlType)
+  commentId: M:System.Security.AccessControl.SemaphoreAccessRule.#ctor(System.String,System.Security.AccessControl.SemaphoreRights,System.Security.AccessControl.AccessControlType)
   id: '#ctor(System.String,System.Security.AccessControl.SemaphoreRights,System.Security.AccessControl.AccessControlType)'
   parent: System.Security.AccessControl.SemaphoreAccessRule
   langs:
   - csharp
   - vb
   name: SemaphoreAccessRule(String, SemaphoreRights, AccessControlType)
+  nameWithType: SemaphoreAccessRule.SemaphoreAccessRule(String, SemaphoreRights, AccessControlType)
   fullName: System.Security.AccessControl.SemaphoreAccessRule.SemaphoreAccessRule(System.String, System.Security.AccessControl.SemaphoreRights, System.Security.AccessControl.AccessControlType)
   type: Constructor
   source:
@@ -82,39 +92,35 @@ items:
       path: src/System.Threading.AccessControl/ref/System.Threading.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Threading.AccessControl/ref/System.Threading.AccessControl.cs
-    startLine: 71
+    startLine: 74
   assemblies:
   - System.Threading.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.SemaphoreAccessRule" data-throw-if-not-resolved="false"></xref> class, specifying the name of the user or group the rule applies to, the access rights, and whether the specified access rights are allowed or denied.
   syntax:
     content: public SemaphoreAccessRule(string identity, SemaphoreRights eventRights, AccessControlType type)
     content.vb: Public Sub New(identity As String, eventRights As SemaphoreRights, type As AccessControlType)
     parameters:
     - id: identity
       type: System.String
-      description: The name of the user or group the rule applies to.
     - id: eventRights
       type: System.Security.AccessControl.SemaphoreRights
-      description: A bitwise combination of <xref href="System.Security.AccessControl.SemaphoreRights" data-throw-if-not-resolved="false"></xref> values specifying the rights allowed or denied.
     - id: type
       type: System.Security.AccessControl.AccessControlType
-      description: One of the <xref href="System.Security.AccessControl.AccessControlType" data-throw-if-not-resolved="false"></xref> values specifying whether the rights are allowed or denied.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*eventRights* specifies an invalid value.-or-*type* specifies an invalid value.'
-  - type: System.ArgumentNullException
-    description: '*eventRights* is zero.'
-  - type: System.ArgumentException
-    description: '*identity* is null.-or-*identity* is a zero-length string.-or-*identity* is longer than 512 characters.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SemaphoreAccessRule.SemaphoreRights
+  commentId: P:System.Security.AccessControl.SemaphoreAccessRule.SemaphoreRights
   id: SemaphoreRights
   parent: System.Security.AccessControl.SemaphoreAccessRule
   langs:
   - csharp
   - vb
   name: SemaphoreRights
+  nameWithType: SemaphoreAccessRule.SemaphoreRights
   fullName: System.Security.AccessControl.SemaphoreAccessRule.SemaphoreRights
   type: Property
   source:
@@ -122,67 +128,75 @@ items:
       path: src/System.Threading.AccessControl/ref/System.Threading.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: SemaphoreRights
     path: src/System.Threading.AccessControl/ref/System.Threading.AccessControl.cs
-    startLine: 72
+    startLine: 75
   assemblies:
   - System.Threading.AccessControl
   namespace: System.Security.AccessControl
-  summary: Gets the rights allowed or denied by the access rule.
   syntax:
     content: public SemaphoreRights SemaphoreRights { get; }
     content.vb: Public ReadOnly Property SemaphoreRights As SemaphoreRights
     parameters: []
     return:
       type: System.Security.AccessControl.SemaphoreRights
-      description: A bitwise combination of <xref href="System.Security.AccessControl.SemaphoreRights" data-throw-if-not-resolved="false"></xref> values indicating the rights allowed or denied by the access rule.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Security.AccessControl
+  commentId: N:System.Security.AccessControl
   isExternal: false
   name: System.Security.AccessControl
+  nameWithType: System.Security.AccessControl
   fullName: System.Security.AccessControl
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Security.Principal.IdentityReference
+  commentId: T:System.Security.Principal.IdentityReference
   parent: System.Security.Principal
   isExternal: false
-  name: Principal.IdentityReference
+  name: IdentityReference
+  nameWithType: IdentityReference
   fullName: System.Security.Principal.IdentityReference
 - uid: System.Security.AccessControl.SemaphoreRights
+  commentId: T:System.Security.AccessControl.SemaphoreRights
   parent: System.Security.AccessControl
   isExternal: false
   name: SemaphoreRights
+  nameWithType: SemaphoreRights
   fullName: System.Security.AccessControl.SemaphoreRights
 - uid: System.Security.AccessControl.AccessControlType
+  commentId: T:System.Security.AccessControl.AccessControlType
   parent: System.Security.AccessControl
   isExternal: false
   name: AccessControlType
+  nameWithType: AccessControlType
   fullName: System.Security.AccessControl.AccessControlType
 - uid: System.Security.Principal
+  commentId: N:System.Security.Principal
   isExternal: false
   name: System.Security.Principal
+  nameWithType: System.Security.Principal
   fullName: System.Security.Principal
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

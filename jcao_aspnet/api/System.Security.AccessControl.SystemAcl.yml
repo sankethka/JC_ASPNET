@@ -1,5 +1,6 @@
 items:
 - uid: System.Security.AccessControl.SystemAcl
+  commentId: T:System.Security.AccessControl.SystemAcl
   id: SystemAcl
   parent: System.Security.AccessControl
   children:
@@ -18,23 +19,30 @@ items:
   - System.Security.AccessControl.SystemAcl.SetAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
   - System.Security.AccessControl.SystemAcl.SetAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
   - System.Security.AccessControl.SystemAcl.SetAudit(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
+  langs:
+  - csharp
+  - vb
   name: SystemAcl
+  nameWithType: SystemAcl
   fullName: System.Security.AccessControl.SystemAcl
   type: Class
   source:
-    remote: &o0
-      path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2941
+    id: SystemAcl
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 513
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Represents a System Access Control List (SACL).
   syntax:
     content: 'public sealed class SystemAcl : CommonAcl, Collections.IEnumerable'
-    content.vb: Public NotInheritable Class SystemAcl Inherits CommonAcl Implements Collections.IEnumerable
+    content.vb: >-
+      Public NotInheritable Class SystemAcl
+          Inherits CommonAcl
+          Implements Collections.IEnumerable
   inheritance:
   - System.Object
   - System.Security.AccessControl.GenericAcl
@@ -59,836 +67,1079 @@ items:
   - System.Security.AccessControl.GenericAcl.SyncRoot
   - System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[],System.Int32)
   - System.Security.AccessControl.GenericAcl.GetEnumerator
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Security.AccessControl.SystemAcl.#ctor(System.Boolean,System.Boolean,System.Byte,System.Int32)
+  commentId: M:System.Security.AccessControl.SystemAcl.#ctor(System.Boolean,System.Boolean,System.Byte,System.Int32)
   id: '#ctor(System.Boolean,System.Boolean,System.Byte,System.Int32)'
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: SystemAcl(Boolean, Boolean, Byte, Int32)
+  nameWithType: SystemAcl.SystemAcl(Boolean, Boolean, Byte, Int32)
   fullName: System.Security.AccessControl.SystemAcl.SystemAcl(System.Boolean, System.Boolean, System.Byte, System.Int32)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2954
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 515
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> class with the specified values.
   syntax:
     content: public SystemAcl(bool isContainer, bool isDS, byte revision, int capacity)
     content.vb: Public Sub New(isContainer As Boolean, isDS As Boolean, revision As Byte, capacity As Integer)
     parameters:
     - id: isContainer
       type: System.Boolean
-      description: true if the new <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object is a container.
     - id: isDS
       type: System.Boolean
-      description: true if the new <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object is a directory object Access Control List (ACL).
     - id: revision
       type: System.Byte
-      description: The revision level of the new <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object.
     - id: capacity
       type: System.Int32
-      description: The number of Access Control Entries (ACEs) this <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object can contain. This number is to be used only as a hint.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.#ctor(System.Boolean,System.Boolean,System.Int32)
+  commentId: M:System.Security.AccessControl.SystemAcl.#ctor(System.Boolean,System.Boolean,System.Int32)
   id: '#ctor(System.Boolean,System.Boolean,System.Int32)'
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: SystemAcl(Boolean, Boolean, Int32)
+  nameWithType: SystemAcl.SystemAcl(Boolean, Boolean, Int32)
   fullName: System.Security.AccessControl.SystemAcl.SystemAcl(System.Boolean, System.Boolean, System.Int32)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2949
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 516
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> class with the specified values.
   syntax:
     content: public SystemAcl(bool isContainer, bool isDS, int capacity)
     content.vb: Public Sub New(isContainer As Boolean, isDS As Boolean, capacity As Integer)
     parameters:
     - id: isContainer
       type: System.Boolean
-      description: true if the new <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object is a container.
     - id: isDS
       type: System.Boolean
-      description: true if the new <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object is a directory object Access Control List (ACL).
     - id: capacity
       type: System.Int32
-      description: The number of Access Control Entries (ACEs) this <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object can contain. This number is to be used only as a hint.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.RawAcl)
+  commentId: M:System.Security.AccessControl.SystemAcl.#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.RawAcl)
   id: '#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.RawAcl)'
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: SystemAcl(Boolean, Boolean, RawAcl)
+  nameWithType: SystemAcl.SystemAcl(Boolean, Boolean, RawAcl)
   fullName: System.Security.AccessControl.SystemAcl.SystemAcl(System.Boolean, System.Boolean, System.Security.AccessControl.RawAcl)
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Security.AccessControl/src/System/Security/AccessControl/ACL.cs
-    startLine: 2964
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+    startLine: 517
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Initializes a new instance of the <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> class with the specified values from the specified <xref href="System.Security.AccessControl.RawAcl" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public SystemAcl(bool isContainer, bool isDS, RawAcl rawAcl)
     content.vb: Public Sub New(isContainer As Boolean, isDS As Boolean, rawAcl As RawAcl)
     parameters:
     - id: isContainer
       type: System.Boolean
-      description: true if the new <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object is a container.
     - id: isDS
       type: System.Boolean
-      description: true if the new <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object is a directory object Access Control List (ACL).
     - id: rawAcl
       type: System.Security.AccessControl.RawAcl
-      description: The underlying <xref href="System.Security.AccessControl.RawAcl" data-throw-if-not-resolved="false"></xref> object for the new <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object. Specify null to create an empty ACL.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.AddAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
+  commentId: M:System.Security.AccessControl.SystemAcl.AddAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
   id: AddAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: AddAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags)
+  nameWithType: SystemAcl.AddAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags)
   fullName: System.Security.AccessControl.SystemAcl.AddAudit(System.Security.AccessControl.AuditFlags, System.Security.Principal.SecurityIdentifier, System.Int32, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags)
   type: Method
   source:
-    remote: &o1
+    remote:
       path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: AddAudit
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 515
+    startLine: 518
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Adds an audit rule to the current <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public void AddAudit(AuditFlags auditFlags, Principal.SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags)
     content.vb: Public Sub AddAudit(auditFlags As AuditFlags, sid As Principal.SecurityIdentifier, accessMask As Integer, inheritanceFlags As InheritanceFlags, propagationFlags As PropagationFlags)
     parameters:
     - id: auditFlags
       type: System.Security.AccessControl.AuditFlags
-      description: The type of audit rule to add.
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to add an audit rule.
     - id: accessMask
       type: System.Int32
-      description: The access mask for the new audit rule.
     - id: inheritanceFlags
       type: System.Security.AccessControl.InheritanceFlags
-      description: Flags that specify the inheritance properties of the new audit rule.
     - id: propagationFlags
       type: System.Security.AccessControl.PropagationFlags
-      description: Flags that specify the inheritance propagation properties for the new audit rule.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.AddAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
+  commentId: M:System.Security.AccessControl.SystemAcl.AddAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
   id: AddAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: AddAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags, ObjectAceFlags, Guid, Guid)
+  nameWithType: SystemAcl.AddAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags, ObjectAceFlags, Guid, Guid)
   fullName: System.Security.AccessControl.SystemAcl.AddAudit(System.Security.AccessControl.AuditFlags, System.Security.Principal.SecurityIdentifier, System.Int32, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.ObjectAceFlags, System.Guid, System.Guid)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddAudit
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 516
+    startLine: 519
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Adds an audit rule with the specified settings to the current <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type for the new audit rule.
   syntax:
     content: public void AddAudit(AuditFlags auditFlags, Principal.SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType)
     content.vb: Public Sub AddAudit(auditFlags As AuditFlags, sid As Principal.SecurityIdentifier, accessMask As Integer, inheritanceFlags As InheritanceFlags, propagationFlags As PropagationFlags, objectFlags As ObjectAceFlags, objectType As Guid, inheritedObjectType As Guid)
     parameters:
     - id: auditFlags
       type: System.Security.AccessControl.AuditFlags
-      description: The type of audit rule to add.
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to add an audit rule.
     - id: accessMask
       type: System.Int32
-      description: The access mask for the new audit rule.
     - id: inheritanceFlags
       type: System.Security.AccessControl.InheritanceFlags
-      description: Flags that specify the inheritance properties of the new audit rule.
     - id: propagationFlags
       type: System.Security.AccessControl.PropagationFlags
-      description: Flags that specify the inheritance propagation properties for the new audit rule.
     - id: objectFlags
       type: System.Security.AccessControl.ObjectAceFlags
-      description: Flags that specify if the *objectType* and *inheritedObjectType* parameters contain non-null values.
     - id: objectType
       type: System.Guid
-      description: The identity of the class of objects to which the new audit rule applies.
     - id: inheritedObjectType
       type: System.Guid
-      description: The identity of the class of child objects which can inherit the new audit rule.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.AddAudit(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
+  commentId: M:System.Security.AccessControl.SystemAcl.AddAudit(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
   id: AddAudit(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: AddAudit(Principal.SecurityIdentifier, ObjectAuditRule)
+  nameWithType: SystemAcl.AddAudit(Principal.SecurityIdentifier, ObjectAuditRule)
   fullName: System.Security.AccessControl.SystemAcl.AddAudit(System.Security.Principal.SecurityIdentifier, System.Security.AccessControl.ObjectAuditRule)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: AddAudit
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 517
+    startLine: 520
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Adds an audit rule to the current <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public void AddAudit(Principal.SecurityIdentifier sid, ObjectAuditRule rule)
     content.vb: Public Sub AddAudit(sid As Principal.SecurityIdentifier, rule As ObjectAuditRule)
     parameters:
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to add an audit rule.
     - id: rule
       type: System.Security.AccessControl.ObjectAuditRule
-      description: The <xref href="System.Security.AccessControl.ObjectAuditRule" data-throw-if-not-resolved="false"></xref>for the new audit rule.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.RemoveAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
+  commentId: M:System.Security.AccessControl.SystemAcl.RemoveAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
   id: RemoveAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: RemoveAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags)
+  nameWithType: SystemAcl.RemoveAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags)
   fullName: System.Security.AccessControl.SystemAcl.RemoveAudit(System.Security.AccessControl.AuditFlags, System.Security.Principal.SecurityIdentifier, System.Int32, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveAudit
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 518
+    startLine: 521
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Removes the specified audit rule from the current <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public bool RemoveAudit(AuditFlags auditFlags, Principal.SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags)
     content.vb: Public Function RemoveAudit(auditFlags As AuditFlags, sid As Principal.SecurityIdentifier, accessMask As Integer, inheritanceFlags As InheritanceFlags, propagationFlags As PropagationFlags) As Boolean
     parameters:
     - id: auditFlags
       type: System.Security.AccessControl.AuditFlags
-      description: The type of audit rule to remove.
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to remove an audit rule.
     - id: accessMask
       type: System.Int32
-      description: The access mask for the rule to be removed.
     - id: inheritanceFlags
       type: System.Security.AccessControl.InheritanceFlags
-      description: Flags that specify the inheritance properties of the rule to be removed.
     - id: propagationFlags
       type: System.Security.AccessControl.PropagationFlags
-      description: Flags that specify the inheritance propagation properties for the rule to be removed.
     return:
       type: System.Boolean
-      description: true if this method successfully removes the specified audit rule; otherwise, false.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.RemoveAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
+  commentId: M:System.Security.AccessControl.SystemAcl.RemoveAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
   id: RemoveAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: RemoveAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags, ObjectAceFlags, Guid, Guid)
+  nameWithType: SystemAcl.RemoveAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags, ObjectAceFlags, Guid, Guid)
   fullName: System.Security.AccessControl.SystemAcl.RemoveAudit(System.Security.AccessControl.AuditFlags, System.Security.Principal.SecurityIdentifier, System.Int32, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.ObjectAceFlags, System.Guid, System.Guid)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveAudit
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 519
+    startLine: 522
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Removes the specified audit rule from the current <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type.
   syntax:
     content: public bool RemoveAudit(AuditFlags auditFlags, Principal.SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType)
     content.vb: Public Function RemoveAudit(auditFlags As AuditFlags, sid As Principal.SecurityIdentifier, accessMask As Integer, inheritanceFlags As InheritanceFlags, propagationFlags As PropagationFlags, objectFlags As ObjectAceFlags, objectType As Guid, inheritedObjectType As Guid) As Boolean
     parameters:
     - id: auditFlags
       type: System.Security.AccessControl.AuditFlags
-      description: The type of audit rule to remove.
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to remove an audit rule.
     - id: accessMask
       type: System.Int32
-      description: The access mask for the rule to be removed.
     - id: inheritanceFlags
       type: System.Security.AccessControl.InheritanceFlags
-      description: Flags that specify the inheritance properties of the rule to be removed.
     - id: propagationFlags
       type: System.Security.AccessControl.PropagationFlags
-      description: Flags that specify the inheritance propagation properties for the rule to be removed.
     - id: objectFlags
       type: System.Security.AccessControl.ObjectAceFlags
-      description: Flags that specify if the *objectType* and *inheritedObjectType* parameters contain non-null values.
     - id: objectType
       type: System.Guid
-      description: The identity of the class of objects to which the removed audit control rule applies.
     - id: inheritedObjectType
       type: System.Guid
-      description: The identity of the class of child objects which can inherit the removed audit rule.
     return:
       type: System.Boolean
-      description: true if this method successfully removes the specified audit rule; otherwise, false.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.RemoveAudit(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
+  commentId: M:System.Security.AccessControl.SystemAcl.RemoveAudit(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
   id: RemoveAudit(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: RemoveAudit(Principal.SecurityIdentifier, ObjectAuditRule)
+  nameWithType: SystemAcl.RemoveAudit(Principal.SecurityIdentifier, ObjectAuditRule)
   fullName: System.Security.AccessControl.SystemAcl.RemoveAudit(System.Security.Principal.SecurityIdentifier, System.Security.AccessControl.ObjectAuditRule)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveAudit
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 520
+    startLine: 523
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Removes the specified audit rule from the current <xref href="System.Security.AccessControl.SystemAcl" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public bool RemoveAudit(Principal.SecurityIdentifier sid, ObjectAuditRule rule)
     content.vb: Public Function RemoveAudit(sid As Principal.SecurityIdentifier, rule As ObjectAuditRule) As Boolean
     parameters:
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to remove an audit rule.
     - id: rule
       type: System.Security.AccessControl.ObjectAuditRule
-      description: The <xref href="System.Security.AccessControl.ObjectAuditRule" data-throw-if-not-resolved="false"></xref> for which to remove an audit rule.
     return:
       type: System.Boolean
-      description: true if this method successfully removes the specified audit rule; otherwise, false.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.RemoveAuditSpecific(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
+  commentId: M:System.Security.AccessControl.SystemAcl.RemoveAuditSpecific(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
   id: RemoveAuditSpecific(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: RemoveAuditSpecific(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags)
+  nameWithType: SystemAcl.RemoveAuditSpecific(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags)
   fullName: System.Security.AccessControl.SystemAcl.RemoveAuditSpecific(System.Security.AccessControl.AuditFlags, System.Security.Principal.SecurityIdentifier, System.Int32, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveAuditSpecific
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 521
+    startLine: 524
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Removes the specified audit rule from the current <xref href="System.Security.AccessControl.DiscretionaryAcl" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public void RemoveAuditSpecific(AuditFlags auditFlags, Principal.SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags)
     content.vb: Public Sub RemoveAuditSpecific(auditFlags As AuditFlags, sid As Principal.SecurityIdentifier, accessMask As Integer, inheritanceFlags As InheritanceFlags, propagationFlags As PropagationFlags)
     parameters:
     - id: auditFlags
       type: System.Security.AccessControl.AuditFlags
-      description: The type of audit rule to remove.
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to remove an audit rule.
     - id: accessMask
       type: System.Int32
-      description: The access mask for the rule to be removed.
     - id: inheritanceFlags
       type: System.Security.AccessControl.InheritanceFlags
-      description: Flags that specify the inheritance properties of the rule to be removed.
     - id: propagationFlags
       type: System.Security.AccessControl.PropagationFlags
-      description: Flags that specify the inheritance propagation properties for the rule to be removed.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.RemoveAuditSpecific(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
+  commentId: M:System.Security.AccessControl.SystemAcl.RemoveAuditSpecific(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
   id: RemoveAuditSpecific(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: RemoveAuditSpecific(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags, ObjectAceFlags, Guid, Guid)
+  nameWithType: SystemAcl.RemoveAuditSpecific(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags, ObjectAceFlags, Guid, Guid)
   fullName: System.Security.AccessControl.SystemAcl.RemoveAuditSpecific(System.Security.AccessControl.AuditFlags, System.Security.Principal.SecurityIdentifier, System.Int32, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.ObjectAceFlags, System.Guid, System.Guid)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveAuditSpecific
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 522
+    startLine: 525
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Removes the specified audit rule from the current <xref href="System.Security.AccessControl.DiscretionaryAcl" data-throw-if-not-resolved="false"></xref> object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type.
   syntax:
     content: public void RemoveAuditSpecific(AuditFlags auditFlags, Principal.SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType)
     content.vb: Public Sub RemoveAuditSpecific(auditFlags As AuditFlags, sid As Principal.SecurityIdentifier, accessMask As Integer, inheritanceFlags As InheritanceFlags, propagationFlags As PropagationFlags, objectFlags As ObjectAceFlags, objectType As Guid, inheritedObjectType As Guid)
     parameters:
     - id: auditFlags
       type: System.Security.AccessControl.AuditFlags
-      description: The type of audit rule to remove.
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to remove an audit rule.
     - id: accessMask
       type: System.Int32
-      description: The access mask for the rule to be removed.
     - id: inheritanceFlags
       type: System.Security.AccessControl.InheritanceFlags
-      description: Flags that specify the inheritance properties of the rule to be removed.
     - id: propagationFlags
       type: System.Security.AccessControl.PropagationFlags
-      description: Flags that specify the inheritance propagation properties for the rule to be removed.
     - id: objectFlags
       type: System.Security.AccessControl.ObjectAceFlags
-      description: Flags that specify if the *objectType* and *inheritedObjectType* parameters contain non-null values.
     - id: objectType
       type: System.Guid
-      description: The identity of the class of objects to which the removed audit control rule applies.
     - id: inheritedObjectType
       type: System.Guid
-      description: The identity of the class of child objects which can inherit the removed audit rule.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.RemoveAuditSpecific(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
+  commentId: M:System.Security.AccessControl.SystemAcl.RemoveAuditSpecific(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
   id: RemoveAuditSpecific(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: RemoveAuditSpecific(Principal.SecurityIdentifier, ObjectAuditRule)
+  nameWithType: SystemAcl.RemoveAuditSpecific(Principal.SecurityIdentifier, ObjectAuditRule)
   fullName: System.Security.AccessControl.SystemAcl.RemoveAuditSpecific(System.Security.Principal.SecurityIdentifier, System.Security.AccessControl.ObjectAuditRule)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RemoveAuditSpecific
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 523
+    startLine: 526
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Removes the specified audit rule from the current <xref href="System.Security.AccessControl.DiscretionaryAcl" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public void RemoveAuditSpecific(Principal.SecurityIdentifier sid, ObjectAuditRule rule)
     content.vb: Public Sub RemoveAuditSpecific(sid As Principal.SecurityIdentifier, rule As ObjectAuditRule)
     parameters:
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to remove an audit rule.
     - id: rule
       type: System.Security.AccessControl.ObjectAuditRule
-      description: The <xref href="System.Security.AccessControl.ObjectAuditRule" data-throw-if-not-resolved="false"></xref> for the rule to be removed.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.SetAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
+  commentId: M:System.Security.AccessControl.SystemAcl.SetAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
   id: SetAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: SetAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags)
+  nameWithType: SystemAcl.SetAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags)
   fullName: System.Security.AccessControl.SystemAcl.SetAudit(System.Security.AccessControl.AuditFlags, System.Security.Principal.SecurityIdentifier, System.Int32, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetAudit
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 524
+    startLine: 527
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Sets the specified audit rule for the specified <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public void SetAudit(AuditFlags auditFlags, Principal.SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags)
     content.vb: Public Sub SetAudit(auditFlags As AuditFlags, sid As Principal.SecurityIdentifier, accessMask As Integer, inheritanceFlags As InheritanceFlags, propagationFlags As PropagationFlags)
     parameters:
     - id: auditFlags
       type: System.Security.AccessControl.AuditFlags
-      description: The audit condition to set.
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to set an audit rule.
     - id: accessMask
       type: System.Int32
-      description: The access mask for the new audit rule.
     - id: inheritanceFlags
       type: System.Security.AccessControl.InheritanceFlags
-      description: Flags that specify the inheritance properties of the new audit rule.
     - id: propagationFlags
       type: System.Security.AccessControl.PropagationFlags
-      description: Flags that specify the inheritance propagation properties for the new audit rule.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.SetAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
+  commentId: M:System.Security.AccessControl.SystemAcl.SetAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
   id: SetAudit(System.Security.AccessControl.AuditFlags,System.Security.Principal.SecurityIdentifier,System.Int32,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.ObjectAceFlags,System.Guid,System.Guid)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: SetAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags, ObjectAceFlags, Guid, Guid)
+  nameWithType: SystemAcl.SetAudit(AuditFlags, Principal.SecurityIdentifier, Int32, InheritanceFlags, PropagationFlags, ObjectAceFlags, Guid, Guid)
   fullName: System.Security.AccessControl.SystemAcl.SetAudit(System.Security.AccessControl.AuditFlags, System.Security.Principal.SecurityIdentifier, System.Int32, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.ObjectAceFlags, System.Guid, System.Guid)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetAudit
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 525
+    startLine: 528
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Sets the specified audit rule for the specified <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type.
   syntax:
     content: public void SetAudit(AuditFlags auditFlags, Principal.SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType)
     content.vb: Public Sub SetAudit(auditFlags As AuditFlags, sid As Principal.SecurityIdentifier, accessMask As Integer, inheritanceFlags As InheritanceFlags, propagationFlags As PropagationFlags, objectFlags As ObjectAceFlags, objectType As Guid, inheritedObjectType As Guid)
     parameters:
     - id: auditFlags
       type: System.Security.AccessControl.AuditFlags
-      description: The audit condition to set.
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to set an audit rule.
     - id: accessMask
       type: System.Int32
-      description: The access mask for the new audit rule.
     - id: inheritanceFlags
       type: System.Security.AccessControl.InheritanceFlags
-      description: Flags that specify the inheritance properties of the new audit rule.
     - id: propagationFlags
       type: System.Security.AccessControl.PropagationFlags
-      description: Flags that specify the inheritance propagation properties for the new audit rule.
     - id: objectFlags
       type: System.Security.AccessControl.ObjectAceFlags
-      description: Flags that specify if the *objectType* and *inheritedObjectType* parameters contain non-null values.
     - id: objectType
       type: System.Guid
-      description: The identity of the class of objects to which the new audit rule applies.
     - id: inheritedObjectType
       type: System.Guid
-      description: The identity of the class of child objects which can inherit the new audit rule.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Security.AccessControl.SystemAcl.SetAudit(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
+  commentId: M:System.Security.AccessControl.SystemAcl.SetAudit(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
   id: SetAudit(System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.ObjectAuditRule)
   parent: System.Security.AccessControl.SystemAcl
+  langs:
+  - csharp
+  - vb
   name: SetAudit(Principal.SecurityIdentifier, ObjectAuditRule)
+  nameWithType: SystemAcl.SetAudit(Principal.SecurityIdentifier, ObjectAuditRule)
   fullName: System.Security.AccessControl.SystemAcl.SetAudit(System.Security.Principal.SecurityIdentifier, System.Security.AccessControl.ObjectAuditRule)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetAudit
     path: src/System.Security.AccessControl/ref/System.Security.AccessControl.cs
-    startLine: 526
+    startLine: 529
   assemblies:
   - System.Security.AccessControl
   namespace: System.Security.AccessControl
-  summary: Sets the specified audit rule for the specified <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public void SetAudit(Principal.SecurityIdentifier sid, ObjectAuditRule rule)
     content.vb: Public Sub SetAudit(sid As Principal.SecurityIdentifier, rule As ObjectAuditRule)
     parameters:
     - id: sid
       type: System.Security.Principal.SecurityIdentifier
-      description: The <xref href="System.Security.Principal.SecurityIdentifier" data-throw-if-not-resolved="false"></xref> for which to set an audit rule.
     - id: rule
       type: System.Security.AccessControl.ObjectAuditRule
-      description: The <xref href="System.Security.AccessControl.ObjectAuditRule" data-throw-if-not-resolved="false"></xref>for which to set an audit rule.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Security.AccessControl
+  commentId: N:System.Security.AccessControl
   isExternal: false
   name: System.Security.AccessControl
+  nameWithType: System.Security.AccessControl
   fullName: System.Security.AccessControl
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Security.AccessControl.GenericAcl
+  commentId: T:System.Security.AccessControl.GenericAcl
   parent: System.Security.AccessControl
   isExternal: false
   name: GenericAcl
+  nameWithType: GenericAcl
   fullName: System.Security.AccessControl.GenericAcl
 - uid: System.Security.AccessControl.CommonAcl
+  commentId: T:System.Security.AccessControl.CommonAcl
   parent: System.Security.AccessControl
   isExternal: false
   name: CommonAcl
+  nameWithType: CommonAcl
   fullName: System.Security.AccessControl.CommonAcl
 - uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
   parent: System.Collections
   isExternal: false
   name: Collections.IEnumerable
+  nameWithType: Collections.IEnumerable
   fullName: System.Collections.IEnumerable
 - uid: System.Security.AccessControl.CommonAcl.BinaryLength
+  commentId: P:System.Security.AccessControl.CommonAcl.BinaryLength
   parent: System.Security.AccessControl.CommonAcl
   isExternal: false
   name: BinaryLength
+  nameWithType: CommonAcl.BinaryLength
   fullName: System.Security.AccessControl.CommonAcl.BinaryLength
 - uid: System.Security.AccessControl.CommonAcl.Count
+  commentId: P:System.Security.AccessControl.CommonAcl.Count
   parent: System.Security.AccessControl.CommonAcl
   isExternal: false
   name: Count
+  nameWithType: CommonAcl.Count
   fullName: System.Security.AccessControl.CommonAcl.Count
 - uid: System.Security.AccessControl.CommonAcl.IsCanonical
+  commentId: P:System.Security.AccessControl.CommonAcl.IsCanonical
   parent: System.Security.AccessControl.CommonAcl
   isExternal: false
   name: IsCanonical
+  nameWithType: CommonAcl.IsCanonical
   fullName: System.Security.AccessControl.CommonAcl.IsCanonical
 - uid: System.Security.AccessControl.CommonAcl.IsContainer
+  commentId: P:System.Security.AccessControl.CommonAcl.IsContainer
   parent: System.Security.AccessControl.CommonAcl
   isExternal: false
   name: IsContainer
+  nameWithType: CommonAcl.IsContainer
   fullName: System.Security.AccessControl.CommonAcl.IsContainer
 - uid: System.Security.AccessControl.CommonAcl.IsDS
+  commentId: P:System.Security.AccessControl.CommonAcl.IsDS
   parent: System.Security.AccessControl.CommonAcl
   isExternal: false
   name: IsDS
+  nameWithType: CommonAcl.IsDS
   fullName: System.Security.AccessControl.CommonAcl.IsDS
 - uid: System.Security.AccessControl.CommonAcl.Item(System.Int32)
+  commentId: P:System.Security.AccessControl.CommonAcl.Item(System.Int32)
   parent: System.Security.AccessControl.CommonAcl
   isExternal: true
   name: Item[Int32]
-  name.vb: Item(Int32)
+  nameWithType: CommonAcl.Item[Int32]
   fullName: System.Security.AccessControl.CommonAcl.Item[System.Int32]
-  fullName.vb: System.Security.AccessControl.CommonAcl.Item(System.Int32)
+  nameWithType.vb: CommonAcl.Item(Int32)
+  fullname.vb: System.Security.AccessControl.CommonAcl.Item(System.Int32)
+  name.vb: Item(Int32)
   spec.csharp:
   - uid: System.Security.AccessControl.CommonAcl.Item(System.Int32)
     name: Item
+    nameWithType: CommonAcl.Item
     fullName: System.Security.AccessControl.CommonAcl.Item
   - name: '['
+    nameWithType: '['
     fullName: '['
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: ']'
+    nameWithType: ']'
     fullName: ']'
   spec.vb:
   - uid: System.Security.AccessControl.CommonAcl.Item(System.Int32)
     name: Item
+    nameWithType: CommonAcl.Item
     fullName: System.Security.AccessControl.CommonAcl.Item
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.AccessControl.CommonAcl.Revision
+  commentId: P:System.Security.AccessControl.CommonAcl.Revision
   parent: System.Security.AccessControl.CommonAcl
   isExternal: false
   name: Revision
+  nameWithType: CommonAcl.Revision
   fullName: System.Security.AccessControl.CommonAcl.Revision
 - uid: System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte[],System.Int32)
+  commentId: M:System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte[],System.Int32)
   parent: System.Security.AccessControl.CommonAcl
   isExternal: true
   name: GetBinaryForm(Byte[], Int32)
-  name.vb: GetBinaryForm(Byte(), Int32)
+  nameWithType: CommonAcl.GetBinaryForm(Byte[], Int32)
   fullName: System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte[], System.Int32)
-  fullName.vb: System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte(), System.Int32)
+  nameWithType.vb: CommonAcl.GetBinaryForm(Byte(), Int32)
+  fullname.vb: System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte(), System.Int32)
+  name.vb: GetBinaryForm(Byte(), Int32)
   spec.csharp:
   - uid: System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte[],System.Int32)
     name: GetBinaryForm
+    nameWithType: CommonAcl.GetBinaryForm
     fullName: System.Security.AccessControl.CommonAcl.GetBinaryForm
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.CommonAcl.GetBinaryForm(System.Byte[],System.Int32)
     name: GetBinaryForm
+    nameWithType: CommonAcl.GetBinaryForm
     fullName: System.Security.AccessControl.CommonAcl.GetBinaryForm
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.AccessControl.CommonAcl.Purge(System.Security.Principal.SecurityIdentifier)
+  commentId: M:System.Security.AccessControl.CommonAcl.Purge(System.Security.Principal.SecurityIdentifier)
   parent: System.Security.AccessControl.CommonAcl
   isExternal: true
   name: Purge(Principal.SecurityIdentifier)
+  nameWithType: CommonAcl.Purge(Principal.SecurityIdentifier)
   fullName: System.Security.AccessControl.CommonAcl.Purge(System.Security.Principal.SecurityIdentifier)
   spec.csharp:
   - uid: System.Security.AccessControl.CommonAcl.Purge(System.Security.Principal.SecurityIdentifier)
     name: Purge
+    nameWithType: CommonAcl.Purge
     fullName: System.Security.AccessControl.CommonAcl.Purge
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Principal.SecurityIdentifier
     name: Principal.SecurityIdentifier
+    nameWithType: Principal.SecurityIdentifier
     fullName: System.Security.Principal.SecurityIdentifier
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.CommonAcl.Purge(System.Security.Principal.SecurityIdentifier)
     name: Purge
+    nameWithType: CommonAcl.Purge
     fullName: System.Security.AccessControl.CommonAcl.Purge
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.Principal.SecurityIdentifier
     name: Principal.SecurityIdentifier
+    nameWithType: Principal.SecurityIdentifier
     fullName: System.Security.Principal.SecurityIdentifier
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.AccessControl.CommonAcl.RemoveInheritedAces
+  commentId: M:System.Security.AccessControl.CommonAcl.RemoveInheritedAces
   parent: System.Security.AccessControl.CommonAcl
   isExternal: false
   name: RemoveInheritedAces()
+  nameWithType: CommonAcl.RemoveInheritedAces()
   fullName: System.Security.AccessControl.CommonAcl.RemoveInheritedAces()
   spec.csharp:
   - uid: System.Security.AccessControl.CommonAcl.RemoveInheritedAces
     name: RemoveInheritedAces
+    nameWithType: CommonAcl.RemoveInheritedAces
     fullName: System.Security.AccessControl.CommonAcl.RemoveInheritedAces
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.CommonAcl.RemoveInheritedAces
     name: RemoveInheritedAces
+    nameWithType: CommonAcl.RemoveInheritedAces
     fullName: System.Security.AccessControl.CommonAcl.RemoveInheritedAces
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.AccessControl.GenericAcl.AclRevision
+  commentId: F:System.Security.AccessControl.GenericAcl.AclRevision
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: AclRevision
+  nameWithType: GenericAcl.AclRevision
   fullName: System.Security.AccessControl.GenericAcl.AclRevision
 - uid: System.Security.AccessControl.GenericAcl.AclRevisionDS
+  commentId: F:System.Security.AccessControl.GenericAcl.AclRevisionDS
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: AclRevisionDS
+  nameWithType: GenericAcl.AclRevisionDS
   fullName: System.Security.AccessControl.GenericAcl.AclRevisionDS
 - uid: System.Security.AccessControl.GenericAcl.MaxBinaryLength
+  commentId: F:System.Security.AccessControl.GenericAcl.MaxBinaryLength
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: MaxBinaryLength
+  nameWithType: GenericAcl.MaxBinaryLength
   fullName: System.Security.AccessControl.GenericAcl.MaxBinaryLength
 - uid: System.Security.AccessControl.GenericAcl.IsSynchronized
+  commentId: P:System.Security.AccessControl.GenericAcl.IsSynchronized
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: IsSynchronized
+  nameWithType: GenericAcl.IsSynchronized
   fullName: System.Security.AccessControl.GenericAcl.IsSynchronized
 - uid: System.Security.AccessControl.GenericAcl.SyncRoot
+  commentId: P:System.Security.AccessControl.GenericAcl.SyncRoot
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: SyncRoot
+  nameWithType: GenericAcl.SyncRoot
   fullName: System.Security.AccessControl.GenericAcl.SyncRoot
 - uid: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[],System.Int32)
+  commentId: M:System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[],System.Int32)
   parent: System.Security.AccessControl.GenericAcl
   isExternal: true
   name: CopyTo(GenericAce[], Int32)
-  name.vb: CopyTo(GenericAce(), Int32)
+  nameWithType: GenericAcl.CopyTo(GenericAce[], Int32)
   fullName: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[], System.Int32)
-  fullName.vb: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce(), System.Int32)
+  nameWithType.vb: GenericAcl.CopyTo(GenericAce(), Int32)
+  fullname.vb: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce(), System.Int32)
+  name.vb: CopyTo(GenericAce(), Int32)
   spec.csharp:
   - uid: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[],System.Int32)
     name: CopyTo
+    nameWithType: GenericAcl.CopyTo
     fullName: System.Security.AccessControl.GenericAcl.CopyTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.AccessControl.GenericAce
     name: GenericAce
+    nameWithType: GenericAce
     fullName: System.Security.AccessControl.GenericAce
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.GenericAcl.CopyTo(System.Security.AccessControl.GenericAce[],System.Int32)
     name: CopyTo
+    nameWithType: GenericAcl.CopyTo
     fullName: System.Security.AccessControl.GenericAcl.CopyTo
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Security.AccessControl.GenericAce
     name: GenericAce
+    nameWithType: GenericAce
     fullName: System.Security.AccessControl.GenericAce
   - name: ()
+    nameWithType: ()
     fullName: ()
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Security.AccessControl.GenericAcl.GetEnumerator
+  commentId: M:System.Security.AccessControl.GenericAcl.GetEnumerator
   parent: System.Security.AccessControl.GenericAcl
   isExternal: false
   name: GetEnumerator()
+  nameWithType: GenericAcl.GetEnumerator()
   fullName: System.Security.AccessControl.GenericAcl.GetEnumerator()
   spec.csharp:
   - uid: System.Security.AccessControl.GenericAcl.GetEnumerator
     name: GetEnumerator
+    nameWithType: GenericAcl.GetEnumerator
     fullName: System.Security.AccessControl.GenericAcl.GetEnumerator
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Security.AccessControl.GenericAcl.GetEnumerator
     name: GetEnumerator
+    nameWithType: GenericAcl.GetEnumerator
     fullName: System.Security.AccessControl.GenericAcl.GetEnumerator
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Byte
+  commentId: T:System.Byte
   parent: System
   isExternal: false
   name: Byte
+  nameWithType: Byte
   fullName: System.Byte
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Security.AccessControl.RawAcl
+  commentId: T:System.Security.AccessControl.RawAcl
   parent: System.Security.AccessControl
   isExternal: false
   name: RawAcl
+  nameWithType: RawAcl
   fullName: System.Security.AccessControl.RawAcl
 - uid: System.Security.AccessControl.AuditFlags
+  commentId: T:System.Security.AccessControl.AuditFlags
   parent: System.Security.AccessControl
   isExternal: false
   name: AuditFlags
+  nameWithType: AuditFlags
   fullName: System.Security.AccessControl.AuditFlags
 - uid: System.Security.Principal.SecurityIdentifier
+  commentId: T:System.Security.Principal.SecurityIdentifier
   parent: System.Security.Principal
   isExternal: false
   name: SecurityIdentifier
+  nameWithType: SecurityIdentifier
   fullName: System.Security.Principal.SecurityIdentifier
 - uid: System.Security.AccessControl.InheritanceFlags
+  commentId: T:System.Security.AccessControl.InheritanceFlags
   parent: System.Security.AccessControl
   isExternal: false
   name: InheritanceFlags
+  nameWithType: InheritanceFlags
   fullName: System.Security.AccessControl.InheritanceFlags
 - uid: System.Security.AccessControl.PropagationFlags
+  commentId: T:System.Security.AccessControl.PropagationFlags
   parent: System.Security.AccessControl
   isExternal: false
   name: PropagationFlags
+  nameWithType: PropagationFlags
   fullName: System.Security.AccessControl.PropagationFlags
 - uid: System.Security.Principal
+  commentId: N:System.Security.Principal
   isExternal: false
   name: System.Security.Principal
+  nameWithType: System.Security.Principal
   fullName: System.Security.Principal
 - uid: System.Security.AccessControl.ObjectAceFlags
+  commentId: T:System.Security.AccessControl.ObjectAceFlags
   parent: System.Security.AccessControl
   isExternal: false
   name: ObjectAceFlags
+  nameWithType: ObjectAceFlags
   fullName: System.Security.AccessControl.ObjectAceFlags
 - uid: System.Guid
+  commentId: T:System.Guid
   parent: System
   isExternal: false
   name: Guid
+  nameWithType: Guid
   fullName: System.Guid
 - uid: System.Security.AccessControl.ObjectAuditRule
+  commentId: T:System.Security.AccessControl.ObjectAuditRule
   parent: System.Security.AccessControl
   isExternal: false
   name: ObjectAuditRule
+  nameWithType: ObjectAuditRule
   fullName: System.Security.AccessControl.ObjectAuditRule

@@ -1,5 +1,6 @@
 items:
 - uid: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+  commentId: T:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
   id: SuppressMessageAttribute
   parent: System.Diagnostics.CodeAnalysis
   children:
@@ -10,191 +11,301 @@ items:
   - System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.MessageId
   - System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope
   - System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Target
+  langs:
+  - csharp
+  - vb
   name: SuppressMessageAttribute
+  nameWithType: SuppressMessageAttribute
   fullName: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Diagnostics/CodeAnalysis/SuppressMessageAttribute.cs
+    remote:
+      path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Diagnostics/CodeAnalysis/SuppressMessageAttribute.cs
-    startLine: 19
+      repo: https://github.com/dotnet/corefx.git
+    id: SuppressMessageAttribute
+    path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+    startLine: 20
   assemblies:
   - System.Diagnostics.Tools
   namespace: System.Diagnostics.CodeAnalysis
-  summary: Suppresses reporting of a specific static analysis tool rule violation, allowing multiple suppressions on a single code artifact.
   syntax:
     content: 'public sealed class SuppressMessageAttribute : Attribute'
-    content.vb: Public NotInheritable Class SuppressMessageAttribute Inherits Attribute
+    content.vb: >-
+      Public NotInheritable Class SuppressMessageAttribute
+          Inherits Attribute
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+  commentId: M:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
   id: '#ctor(System.String,System.String)'
   parent: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+  langs:
+  - csharp
+  - vb
   name: SuppressMessageAttribute(String, String)
+  nameWithType: SuppressMessageAttribute.SuppressMessageAttribute(String, String)
   fullName: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.SuppressMessageAttribute(System.String, System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/CodeAnalysis/SuppressMessageAttribute.cs
-    startLine: 35
+    remote:
+      path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+    startLine: 24
   assemblies:
   - System.Diagnostics.Tools
   namespace: System.Diagnostics.CodeAnalysis
-  summary: Initializes a new instance of the <xref href="System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" data-throw-if-not-resolved="false"></xref> class, specifying the category of the static analysis tool and the identifier for an analysis rule.
   syntax:
     content: public SuppressMessageAttribute(string category, string checkId)
     content.vb: Public Sub New(category As String, checkId As String)
     parameters:
     - id: category
       type: System.String
-      description: The category for the attribute.
     - id: checkId
       type: System.String
-      description: The identifier of the analysis tool rule the attribute applies to.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Category
+  commentId: P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Category
   id: Category
   parent: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+  langs:
+  - csharp
+  - vb
   name: Category
+  nameWithType: SuppressMessageAttribute.Category
   fullName: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Category
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/CodeAnalysis/SuppressMessageAttribute.cs
-    startLine: 41
+    remote:
+      path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Category
+    path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+    startLine: 25
   assemblies:
   - System.Diagnostics.Tools
   namespace: System.Diagnostics.CodeAnalysis
-  summary: Gets the category identifying the classification of the attribute.
   syntax:
     content: public string Category { get; }
     content.vb: Public ReadOnly Property Category As String
     parameters: []
     return:
       type: System.String
-      description: The category identifying the attribute.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.CheckId
+  commentId: P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.CheckId
   id: CheckId
   parent: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+  langs:
+  - csharp
+  - vb
   name: CheckId
+  nameWithType: SuppressMessageAttribute.CheckId
   fullName: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.CheckId
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/CodeAnalysis/SuppressMessageAttribute.cs
-    startLine: 46
+    remote:
+      path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CheckId
+    path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+    startLine: 26
   assemblies:
   - System.Diagnostics.Tools
   namespace: System.Diagnostics.CodeAnalysis
-  summary: Gets the identifier of the static analysis tool rule to be suppressed.
   syntax:
     content: public string CheckId { get; }
     content.vb: Public ReadOnly Property CheckId As String
     parameters: []
     return:
       type: System.String
-      description: The identifier of the static analysis tool rule to be suppressed.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Justification
+  commentId: P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Justification
   id: Justification
   parent: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+  langs:
+  - csharp
+  - vb
   name: Justification
+  nameWithType: SuppressMessageAttribute.Justification
   fullName: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Justification
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/CodeAnalysis/SuppressMessageAttribute.cs
-    startLine: 69
+    remote:
+      path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Justification
+    path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+    startLine: 27
   assemblies:
   - System.Diagnostics.Tools
   namespace: System.Diagnostics.CodeAnalysis
-  summary: Gets or sets the justification for suppressing the code analysis message.
   syntax:
     content: public string Justification { get; set; }
     content.vb: Public Property Justification As String
     parameters: []
     return:
       type: System.String
-      description: The justification for suppressing the message.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.MessageId
+  commentId: P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.MessageId
   id: MessageId
   parent: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+  langs:
+  - csharp
+  - vb
   name: MessageId
+  nameWithType: SuppressMessageAttribute.MessageId
   fullName: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.MessageId
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/CodeAnalysis/SuppressMessageAttribute.cs
-    startLine: 63
+    remote:
+      path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MessageId
+    path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+    startLine: 28
   assemblies:
   - System.Diagnostics.Tools
   namespace: System.Diagnostics.CodeAnalysis
-  summary: Gets or sets an optional argument expanding on exclusion criteria.
   syntax:
     content: public string MessageId { get; set; }
     content.vb: Public Property MessageId As String
     parameters: []
     return:
       type: System.String
-      description: A string containing the expanded exclusion criteria.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope
+  commentId: P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope
   id: Scope
   parent: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+  langs:
+  - csharp
+  - vb
   name: Scope
+  nameWithType: SuppressMessageAttribute.Scope
   fullName: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/CodeAnalysis/SuppressMessageAttribute.cs
-    startLine: 51
+    remote:
+      path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Scope
+    path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+    startLine: 29
   assemblies:
   - System.Diagnostics.Tools
   namespace: System.Diagnostics.CodeAnalysis
-  summary: Gets or sets the scope of the code that is relevant for the attribute.
   syntax:
     content: public string Scope { get; set; }
     content.vb: Public Property Scope As String
     parameters: []
     return:
       type: System.String
-      description: The scope of the code that is relevant for the attribute.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Target
+  commentId: P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Target
   id: Target
   parent: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+  langs:
+  - csharp
+  - vb
   name: Target
+  nameWithType: SuppressMessageAttribute.Target
   fullName: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Target
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/CodeAnalysis/SuppressMessageAttribute.cs
-    startLine: 57
+    remote:
+      path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Target
+    path: src/System.Diagnostics.Tools/ref/System.Diagnostics.Tools.cs
+    startLine: 30
   assemblies:
   - System.Diagnostics.Tools
   namespace: System.Diagnostics.CodeAnalysis
-  summary: Gets or sets a fully qualified path that represents the target of the attribute.
   syntax:
     content: public string Target { get; set; }
     content.vb: Public Property Target As String
     parameters: []
     return:
       type: System.String
-      description: A fully qualified path that represents the target of the attribute.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Diagnostics.CodeAnalysis
+  commentId: N:System.Diagnostics.CodeAnalysis
   isExternal: false
   name: System.Diagnostics.CodeAnalysis
+  nameWithType: System.Diagnostics.CodeAnalysis
   fullName: System.Diagnostics.CodeAnalysis
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String

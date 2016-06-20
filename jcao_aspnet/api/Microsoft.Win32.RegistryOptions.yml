@@ -1,63 +1,115 @@
 items:
 - uid: Microsoft.Win32.RegistryOptions
+  commentId: T:Microsoft.Win32.RegistryOptions
   id: RegistryOptions
   parent: Microsoft.Win32
   children:
   - Microsoft.Win32.RegistryOptions.None
   - Microsoft.Win32.RegistryOptions.Volatile
+  langs:
+  - csharp
+  - vb
   name: RegistryOptions
+  nameWithType: RegistryOptions
   fullName: Microsoft.Win32.RegistryOptions
   type: Enum
   source:
-    remote: &o0
-      path: src/mscorlib/src/Microsoft/Win32/RegistryOptions.cs
+    remote:
+      path: src/Microsoft.Win32.Registry/ref/Microsoft.Win32.Registry.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/Microsoft/Win32/RegistryOptions.cs
-    startLine: 13
+      repo: https://github.com/dotnet/corefx.git
+    id: RegistryOptions
+    path: src/Microsoft.Win32.Registry/ref/Microsoft.Win32.Registry.cs
+    startLine: 68
   assemblies:
   - Microsoft.Win32.Registry
   namespace: Microsoft.Win32
-  summary: Specifies options to use when creating a registry key.
   syntax:
     content: 'public enum RegistryOptions : int'
     content.vb: Public Enum RegistryOptions As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
 - uid: Microsoft.Win32.RegistryOptions.None
+  commentId: F:Microsoft.Win32.RegistryOptions.None
   id: None
   parent: Microsoft.Win32.RegistryOptions
+  langs:
+  - csharp
+  - vb
   name: None
+  nameWithType: RegistryOptions.None
   fullName: Microsoft.Win32.RegistryOptions.None
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/Microsoft/Win32/RegistryOptions.cs
-    startLine: 15
+    remote:
+      path: src/Microsoft.Win32.Registry/ref/Microsoft.Win32.Registry.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: None
+    path: src/Microsoft.Win32.Registry/ref/Microsoft.Win32.Registry.cs
+    startLine: 71
   assemblies:
   - Microsoft.Win32.Registry
   namespace: Microsoft.Win32
-  summary: A non-volatile key. This is the default.
   syntax:
     content: None = null
     content.vb: None = Nothing
+    return:
+      type: Microsoft.Win32.RegistryOptions
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: Microsoft.Win32.RegistryOptions.Volatile
+  commentId: F:Microsoft.Win32.RegistryOptions.Volatile
   id: Volatile
   parent: Microsoft.Win32.RegistryOptions
+  langs:
+  - csharp
+  - vb
   name: Volatile
+  nameWithType: RegistryOptions.Volatile
   fullName: Microsoft.Win32.RegistryOptions.Volatile
   type: Field
   source:
-    remote: *o0
-    path: src/mscorlib/src/Microsoft/Win32/RegistryOptions.cs
-    startLine: 16
+    remote:
+      path: src/Microsoft.Win32.Registry/ref/Microsoft.Win32.Registry.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Volatile
+    path: src/Microsoft.Win32.Registry/ref/Microsoft.Win32.Registry.cs
+    startLine: 72
   assemblies:
   - Microsoft.Win32.Registry
   namespace: Microsoft.Win32
-  summary: A volatile key. The information is stored in memory and is not preserved when the corresponding registry hive is unloaded.
   syntax:
     content: Volatile = null
     content.vb: Volatile = Nothing
+    return:
+      type: Microsoft.Win32.RegistryOptions
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: Microsoft.Win32
+  commentId: N:Microsoft.Win32
   isExternal: false
   name: Microsoft.Win32
+  nameWithType: Microsoft.Win32
   fullName: Microsoft.Win32
+- uid: Microsoft.Win32.RegistryOptions
+  commentId: T:Microsoft.Win32.RegistryOptions
+  parent: Microsoft.Win32
+  isExternal: false
+  name: RegistryOptions
+  nameWithType: RegistryOptions
+  fullName: Microsoft.Win32.RegistryOptions

@@ -1,5 +1,6 @@
 items:
 - uid: System.Data.SqlTypes.SqlBinary
+  commentId: T:System.Data.SqlTypes.SqlBinary
   id: SqlBinary
   parent: System.Data.SqlTypes
   children:
@@ -33,858 +34,1249 @@ items:
   - System.Data.SqlTypes.SqlBinary.ToSqlGuid
   - System.Data.SqlTypes.SqlBinary.ToString
   - System.Data.SqlTypes.SqlBinary.Value
+  langs:
+  - csharp
+  - vb
   name: SqlBinary
+  nameWithType: SqlBinary
   fullName: System.Data.SqlTypes.SqlBinary
   type: Struct
   source:
-    remote: &o0
-      path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 17
+    id: SqlBinary
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 600
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Represents a variable-length stream of binary data to be stored in or retrieved from a database.
   syntax:
     content: 'public struct SqlBinary : INullable, IComparable'
-    content.vb: Public Structure SqlBinary Implements INullable, IComparable
+    content.vb: >-
+      Public Structure SqlBinary
+          Implements INullable, IComparable
   implements:
   - System.Data.SqlTypes.INullable
   - System.IComparable
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
 - uid: System.Data.SqlTypes.SqlBinary.Null
+  commentId: F:System.Data.SqlTypes.SqlBinary.Null
+  id: Null
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
+  name: Null
+  nameWithType: SqlBinary.Null
   fullName: System.Data.SqlTypes.SqlBinary.Null
   type: Field
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 499
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Null
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 603
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Represents a <xref href="System.DBNull" data-throw-if-not-resolved="false"></xref> that can be assigned to this instance of the <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
   syntax:
     content: public static readonly SqlBinary Null
     content.vb: Public Shared ReadOnly Null As SqlBinary
+    return:
+      type: System.Data.SqlTypes.SqlBinary
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Data.SqlTypes.SqlBinary.#ctor(System.Byte[])
+  commentId: M:System.Data.SqlTypes.SqlBinary.#ctor(System.Byte[])
   id: '#ctor(System.Byte[])'
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: SqlBinary(Byte[])
-  name.vb: SqlBinary(Byte())
+  nameWithType: SqlBinary.SqlBinary(Byte[])
   fullName: System.Data.SqlTypes.SqlBinary.SqlBinary(System.Byte[])
-  fullName.vb: System.Data.SqlTypes.SqlBinary.SqlBinary(System.Byte())
   type: Constructor
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 33
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 604
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Initializes a new instance of the <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure, setting the <xref href="System.Data.SqlTypes.SqlBinary.Value" data-throw-if-not-resolved="false"></xref> property to the contents of the supplied byte array.
   syntax:
     content: public SqlBinary(byte[] value)
     content.vb: Public Sub New(value As Byte())
     parameters:
     - id: value
       type: System.Byte[]
-      description: The byte array to be stored or retrieved.
+  nameWithType.vb: SqlBinary.SqlBinary(Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Data.SqlTypes.SqlBinary.SqlBinary(System.Byte())
+  name.vb: SqlBinary(Byte())
 - uid: System.Data.SqlTypes.SqlBinary.IsNull
+  commentId: P:System.Data.SqlTypes.SqlBinary.IsNull
   id: IsNull
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: IsNull
+  nameWithType: SqlBinary.IsNull
   fullName: System.Data.SqlTypes.SqlBinary.IsNull
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 67
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsNull
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 605
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Indicates whether this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure is null. This property is read-only.
   syntax:
     content: public bool IsNull { get; }
     content.vb: Public ReadOnly Property IsNull As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if null. Otherwise false.
+  implements:
+  - System.Data.SqlTypes.INullable.IsNull
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Data.SqlTypes.SqlBinary.Item(System.Int32)
+  commentId: P:System.Data.SqlTypes.SqlBinary.Item(System.Int32)
   id: Item(System.Int32)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Item[Int32]
-  name.vb: Item(Int32)
+  nameWithType: SqlBinary.Item[Int32]
   fullName: System.Data.SqlTypes.SqlBinary.Item[System.Int32]
-  fullName.vb: System.Data.SqlTypes.SqlBinary.Item(System.Int32)
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 96
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: this[]
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 606
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Gets the single byte from the <xref href="System.Data.SqlTypes.SqlBinary.Value" data-throw-if-not-resolved="false"></xref> property located at the position indicated by the integer parameter, *index*. If *index* indicates a position beyond the end of the byte array, a <xref href="System.Data.SqlTypes.SqlNullValueException" data-throw-if-not-resolved="false"></xref> will be raised. This property is read-only.
   syntax:
     content: public byte this[int index] { get; }
     content.vb: Public ReadOnly Property Item(index As Integer) As Byte
     parameters:
     - id: index
       type: System.Int32
-      description: The position of the byte to be retrieved.
     return:
       type: System.Byte
-      description: The byte located at the position indicated by the integer parameter.
-  exceptions:
-  - type: System.Data.SqlTypes.SqlNullValueException
-    description: The property is read when the <xref href="System.Data.SqlTypes.SqlBinary.Value" data-throw-if-not-resolved="false"></xref> property contains <xref href="System.Data.SqlTypes.SqlBinary.Null" data-throw-if-not-resolved="false"></xref>- or - The *index* parameter indicates a position byond the length of the byte array as indicated by the <xref href="System.Data.SqlTypes.SqlBinary.Length" data-throw-if-not-resolved="false"></xref> property.
+  nameWithType.vb: SqlBinary.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: System.Data.SqlTypes.SqlBinary.Item(System.Int32)
+  name.vb: Item(Int32)
 - uid: System.Data.SqlTypes.SqlBinary.Length
+  commentId: P:System.Data.SqlTypes.SqlBinary.Length
   id: Length
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Length
+  nameWithType: SqlBinary.Length
   fullName: System.Data.SqlTypes.SqlBinary.Length
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 113
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Length
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 607
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Gets the length in bytes of the <xref href="System.Data.SqlTypes.SqlBinary.Value" data-throw-if-not-resolved="false"></xref> property. This property is read-only.
   syntax:
     content: public int Length { get; }
     content.vb: Public ReadOnly Property Length As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The length of the binary data in the <xref href="System.Data.SqlTypes.SqlBinary.Value" data-throw-if-not-resolved="false"></xref> property.
-  exceptions:
-  - type: System.Data.SqlTypes.SqlNullValueException
-    description: The <xref href="System.Data.SqlTypes.SqlBinary.Length" data-throw-if-not-resolved="false"></xref> property is read when the <xref href="System.Data.SqlTypes.SqlBinary.Value" data-throw-if-not-resolved="false"></xref> property contains <xref href="System.Data.SqlTypes.SqlBinary.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Data.SqlTypes.SqlBinary.Value
+  commentId: P:System.Data.SqlTypes.SqlBinary.Value
   id: Value
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Value
+  nameWithType: SqlBinary.Value
   fullName: System.Data.SqlTypes.SqlBinary.Value
   type: Property
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 80
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Value
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 608
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Gets the value of the <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure. This property is read-only.
   syntax:
     content: public byte[] Value { get; }
     content.vb: Public ReadOnly Property Value As Byte()
     parameters: []
     return:
       type: System.Byte[]
-      description: The value of the <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
-  exceptions:
-  - type: System.Data.SqlTypes.SqlNullValueException
-    description: The <xref href="System.Data.SqlTypes.SqlBinary.Value" data-throw-if-not-resolved="false"></xref> property is read when the property contains <xref href="System.Data.SqlTypes.SqlBinary.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Data.SqlTypes.SqlBinary.Add(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.Add(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: Add(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Add(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.Add(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.Add(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 339
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Add
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 609
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Concatenates two specified <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> values to create a new <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
   syntax:
     content: public static SqlBinary Add(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Function Add(x As SqlBinary, y As SqlBinary) As SqlBinary
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref>.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> that is the concatenated value of x and y.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.CompareTo(System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.CompareTo(System.Data.SqlTypes.SqlBinary)
   id: CompareTo(System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: CompareTo(SqlBinary)
+  nameWithType: SqlBinary.CompareTo(SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.CompareTo(System.Data.SqlTypes.SqlBinary)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 412
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CompareTo
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 610
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object to the supplied <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object and returns an indication of their relative values.
   syntax:
     content: public int CompareTo(SqlBinary value)
     content.vb: Public Function CompareTo(value As SqlBinary) As Integer
     parameters:
     - id: value
       type: System.Data.SqlTypes.SqlBinary
-      description: The <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object to be compared to this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     return:
       type: System.Int32
-      description: A signed number that indicates the relative values of this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure and the object.Return value Condition Less than zero The value of this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object is less than the object. Zero This <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object is the same as object. Greater than zero This <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object is greater than object.-or- The object is a null reference.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Data.SqlTypes.SqlBinary.CompareTo(System.Object)
+  commentId: M:System.Data.SqlTypes.SqlBinary.CompareTo(System.Object)
   id: CompareTo(System.Object)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: CompareTo(Object)
+  nameWithType: SqlBinary.CompareTo(Object)
   fullName: System.Data.SqlTypes.SqlBinary.CompareTo(System.Object)
   type: Method
   source:
-    remote: &o1
+    remote:
       path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: CompareTo
     path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
-    startLine: 543
+    startLine: 611
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object to the supplied object and returns an indication of their relative values.
   syntax:
     content: public int CompareTo(object value)
     content.vb: Public Function CompareTo(value As Object) As Integer
     parameters:
     - id: value
       type: System.Object
-      description: The object to be compared to this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     return:
       type: System.Int32
-      description: A signed number that indicates the relative values of this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure and the object.Return value Condition Less than zero The value of this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object is less than the object. Zero This <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object is the same as object. Greater than zero This <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object is greater than object.-or- The object is a null reference.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Data.SqlTypes.SqlBinary.Concat(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.Concat(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: Concat(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Concat(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.Concat(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.Concat(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 344
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Concat
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 612
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Concatenates two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to create a new <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
   syntax:
     content: public static SqlBinary Concat(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Function Concat(x As SqlBinary, y As SqlBinary) As SqlBinary
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     return:
       type: System.Data.SqlTypes.SqlBinary
-      description: The concatenated values of the *x* and *y* parameters.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.Equals(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.Equals(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: Equals(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Equals(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.Equals(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.Equals(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 350
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 613
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether they are equal.
   syntax:
     content: public static SqlBoolean Equals(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Function Equals(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: true if the two values are equal. Otherwise, false. If either instance is null, then the SqlBinary will be null.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.Equals(System.Object)
+  commentId: M:System.Data.SqlTypes.SqlBinary.Equals(System.Object)
   id: Equals(System.Object)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Equals(Object)
+  nameWithType: SqlBinary.Equals(Object)
   fullName: System.Data.SqlTypes.SqlBinary.Equals(System.Object)
   type: Method
   source:
-    remote: *o1
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
     path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
-    startLine: 546
+    startLine: 614
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares the supplied object parameter to the <xref href="System.Data.SqlTypes.SqlBinary.Value" data-throw-if-not-resolved="false"></xref> property of the <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public override bool Equals(object value)
     content.vb: Public Overrides Function Equals(value As Object) As Boolean
     parameters:
     - id: value
       type: System.Object
-      description: The object to be compared.
     return:
       type: System.Boolean
-      description: true if object is an instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> and the two are equal; otherwise false.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Data.SqlTypes.SqlBinary.GetHashCode
+  commentId: M:System.Data.SqlTypes.SqlBinary.GetHashCode
   id: GetHashCode
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: GetHashCode()
+  nameWithType: SqlBinary.GetHashCode()
   fullName: System.Data.SqlTypes.SqlBinary.GetHashCode()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 478
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 615
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Returns the hash code for this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
   syntax:
     content: public override int GetHashCode()
     content.vb: Public Overrides Function GetHashCode As Integer
     return:
       type: System.Int32
-      description: A 32-bit signed integer hash code.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Data.SqlTypes.SqlBinary.GreaterThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.GreaterThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: GreaterThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: GreaterThan(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.GreaterThan(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.GreaterThan(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 368
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThan
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 616
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether the first is greater than the second.
   syntax:
     content: public static SqlBoolean GreaterThan(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Function GreaterThan(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the first instance is greater than the second instance. Otherwise <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref>. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.GreaterThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.GreaterThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: GreaterThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: GreaterThanOrEqual(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.GreaterThanOrEqual(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.GreaterThanOrEqual(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 380
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GreaterThanOrEqual
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 617
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether the first is greater than or equal to the second.
   syntax:
     content: public static SqlBoolean GreaterThanOrEqual(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Function GreaterThanOrEqual(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the first instance is greater than or equal to the second instance. Otherwise <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref>. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.LessThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.LessThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: LessThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: LessThan(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.LessThan(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.LessThan(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 362
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThan
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 618
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether the first is less than the second.
   syntax:
     content: public static SqlBoolean LessThan(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Function LessThan(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the first instance is less than the second instance. Otherwise <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref>. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.LessThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.LessThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: LessThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: LessThanOrEqual(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.LessThanOrEqual(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.LessThanOrEqual(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 374
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: LessThanOrEqual
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 619
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether the first is less than or equal to the second.
   syntax:
     content: public static SqlBoolean LessThanOrEqual(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Function LessThanOrEqual(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the first instance is less than or equal to the second instance. Otherwise <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref>. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.NotEquals(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.NotEquals(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: NotEquals(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: NotEquals(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.NotEquals(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.NotEquals(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 356
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NotEquals
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 620
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether they are not equal.
   syntax:
     content: public static SqlBoolean NotEquals(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Function NotEquals(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the two instances are not equal or <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref> if the two instances are equal. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.op_Addition(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.op_Addition(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: op_Addition(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Addition(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.Addition(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.Addition(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Operator
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 170
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Addition
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 621
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Concatenates the two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> parameters to create a new <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
   syntax:
     content: public static SqlBinary operator +(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Operator +(x As SqlBinary, y As SqlBinary) As SqlBinary
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     return:
       type: System.Data.SqlTypes.SqlBinary
-      description: The concatenated values of the *x* and *y* parameters.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.op_Equality(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.op_Equality(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: op_Equality(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Equality(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.Equality(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.Equality(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Operator
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 260
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Equality
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 622
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether they are equal.
   syntax:
     content: public static SqlBoolean operator ==(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Operator =(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the two instances are equal or <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref> if the two instances are not equal. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.op_Explicit(System.Data.SqlTypes.SqlBinary)~System.Byte[]
+  commentId: M:System.Data.SqlTypes.SqlBinary.op_Explicit(System.Data.SqlTypes.SqlBinary)~System.Byte[]
   id: op_Explicit(System.Data.SqlTypes.SqlBinary)~System.Byte[]
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Explicit(SqlBinary to Byte[])
-  name.vb: Narrowing(SqlBinary to Byte())
+  nameWithType: SqlBinary.Explicit(SqlBinary to Byte[])
   fullName: System.Data.SqlTypes.SqlBinary.Explicit(System.Data.SqlTypes.SqlBinary to System.Byte[])
-  fullName.vb: System.Data.SqlTypes.SqlBinary.Narrowing(System.Data.SqlTypes.SqlBinary to System.Byte())
   type: Operator
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 143
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Explicit
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 623
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Converts a <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure to a <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array.
   syntax:
     content: public static explicit operator byte[](SqlBinary x)
     content.vb: Public Shared Narrowing Operator CType(x As SqlBinary) As Byte()
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: The <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure to be converted.
     return:
       type: System.Byte[]
-      description: A <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array.
+  nameWithType.vb: SqlBinary.Narrowing(SqlBinary to Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Data.SqlTypes.SqlBinary.Narrowing(System.Data.SqlTypes.SqlBinary to System.Byte())
+  name.vb: Narrowing(SqlBinary to Byte())
 - uid: System.Data.SqlTypes.SqlBinary.op_Explicit(System.Data.SqlTypes.SqlGuid)~System.Data.SqlTypes.SqlBinary
+  commentId: M:System.Data.SqlTypes.SqlBinary.op_Explicit(System.Data.SqlTypes.SqlGuid)~System.Data.SqlTypes.SqlBinary
   id: op_Explicit(System.Data.SqlTypes.SqlGuid)~System.Data.SqlTypes.SqlBinary
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Explicit(SqlGuid to SqlBinary)
-  name.vb: Narrowing(SqlGuid to SqlBinary)
+  nameWithType: SqlBinary.Explicit(SqlGuid to SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.Explicit(System.Data.SqlTypes.SqlGuid to System.Data.SqlTypes.SqlBinary)
-  fullName.vb: System.Data.SqlTypes.SqlBinary.Narrowing(System.Data.SqlTypes.SqlGuid to System.Data.SqlTypes.SqlBinary)
   type: Operator
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 246
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Explicit
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 624
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Converts a <xref href="System.Data.SqlTypes.SqlGuid" data-throw-if-not-resolved="false"></xref> structure to a <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
   syntax:
     content: public static explicit operator SqlBinary(SqlGuid x)
     content.vb: Public Shared Narrowing Operator CType(x As SqlGuid) As SqlBinary
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlGuid
-      description: The <xref href="System.Data.SqlTypes.SqlGuid" data-throw-if-not-resolved="false"></xref> structure to be converted.
     return:
       type: System.Data.SqlTypes.SqlBinary
-      description: The <xref href="System.Data.SqlTypes.SqlGuid" data-throw-if-not-resolved="false"></xref> structure to be converted.
+  nameWithType.vb: SqlBinary.Narrowing(SqlGuid to SqlBinary)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Data.SqlTypes.SqlBinary.Narrowing(System.Data.SqlTypes.SqlGuid to System.Data.SqlTypes.SqlBinary)
+  name.vb: Narrowing(SqlGuid to SqlBinary)
 - uid: System.Data.SqlTypes.SqlBinary.op_GreaterThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.op_GreaterThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: op_GreaterThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: GreaterThan(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.GreaterThan(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.GreaterThan(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Operator
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 298
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_GreaterThan
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 625
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether the first is greater than the second.
   syntax:
     content: public static SqlBoolean operator>(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Operator>(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the first instance is greater than the second instance. Otherwise <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref>. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.op_GreaterThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.op_GreaterThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: op_GreaterThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: GreaterThanOrEqual(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.GreaterThanOrEqual(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.GreaterThanOrEqual(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Operator
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 325
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_GreaterThanOrEqual
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 626
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structues to determine whether the first is greater than or equal to the second.
   syntax:
     content: public static SqlBoolean operator >=(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Operator >=(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the first instance is greater than or equal to the second instance. Otherwise <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref>. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.op_Implicit(System.Byte[])~System.Data.SqlTypes.SqlBinary
+  commentId: M:System.Data.SqlTypes.SqlBinary.op_Implicit(System.Byte[])~System.Data.SqlTypes.SqlBinary
   id: op_Implicit(System.Byte[])~System.Data.SqlTypes.SqlBinary
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Implicit(Byte[] to SqlBinary)
-  name.vb: Widening(Byte() to SqlBinary)
+  nameWithType: SqlBinary.Implicit(Byte[] to SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.Implicit(System.Byte[] to System.Data.SqlTypes.SqlBinary)
-  fullName.vb: System.Data.SqlTypes.SqlBinary.Widening(System.Byte() to System.Data.SqlTypes.SqlBinary)
   type: Operator
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 131
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Implicit
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 627
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Converts an array of bytes to a <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure.
   syntax:
     content: public static implicit operator SqlBinary(byte[] x)
     content.vb: Public Shared Widening Operator CType(x As Byte()) As SqlBinary
     parameters:
     - id: x
       type: System.Byte[]
-      description: The array of bytes to be converted.
     return:
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structure that represents the converted array of bytes.
+  nameWithType.vb: SqlBinary.Widening(Byte() to SqlBinary)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: System.Data.SqlTypes.SqlBinary.Widening(System.Byte() to System.Data.SqlTypes.SqlBinary)
+  name.vb: Widening(Byte() to SqlBinary)
 - uid: System.Data.SqlTypes.SqlBinary.op_Inequality(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.op_Inequality(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: op_Inequality(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: Inequality(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.Inequality(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.Inequality(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Operator
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 274
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_Inequality
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 628
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether they are not equal.
   syntax:
     content: public static SqlBoolean operator !=(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Operator <>(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the two instances are not equal or <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref> if the two instances are equal. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.op_LessThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.op_LessThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: op_LessThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: LessThan(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.LessThan(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.LessThan(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Operator
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 285
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_LessThan
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 629
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether the first is less than the second.
   syntax:
     content: public static SqlBoolean operator <(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Operator <(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the first instance is less than the second instance. Otherwise <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref>. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.op_LessThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
+  commentId: M:System.Data.SqlTypes.SqlBinary.op_LessThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   id: op_LessThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: LessThanOrEqual(SqlBinary, SqlBinary)
+  nameWithType: SqlBinary.LessThanOrEqual(SqlBinary, SqlBinary)
   fullName: System.Data.SqlTypes.SqlBinary.LessThanOrEqual(System.Data.SqlTypes.SqlBinary, System.Data.SqlTypes.SqlBinary)
   type: Operator
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 311
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: op_LessThanOrEqual
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 630
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Compares two <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> structures to determine whether the first is less than or equal to the second.
   syntax:
     content: public static SqlBoolean operator <=(SqlBinary x, SqlBinary y)
     content.vb: Public Shared Operator <=(x As SqlBinary, y As SqlBinary) As SqlBoolean
     parameters:
     - id: x
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     - id: y
       type: System.Data.SqlTypes.SqlBinary
-      description: A <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object.
     return:
       type: System.Data.SqlTypes.SqlBoolean
-      description: A <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> that is <xref href="System.Data.SqlTypes.SqlBoolean.True" data-throw-if-not-resolved="false"></xref> if the first instance is less than or equal to the second instance. Otherwise <xref href="System.Data.SqlTypes.SqlBoolean.False" data-throw-if-not-resolved="false"></xref>. If either instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> is null, the <xref href="System.Data.SqlTypes.SqlBoolean.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBoolean" data-throw-if-not-resolved="false"></xref> will be <xref href="System.Data.SqlTypes.SqlBoolean.Null" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Data.SqlTypes.SqlBinary.ToSqlGuid
+  commentId: M:System.Data.SqlTypes.SqlBinary.ToSqlGuid
   id: ToSqlGuid
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: ToSqlGuid()
+  nameWithType: SqlBinary.ToSqlGuid()
   fullName: System.Data.SqlTypes.SqlBinary.ToSqlGuid()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 386
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToSqlGuid
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 631
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Converts this instance of <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> to <xref href="System.Data.SqlTypes.SqlGuid" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public SqlGuid ToSqlGuid()
     content.vb: Public Function ToSqlGuid As SqlGuid
     return:
       type: System.Data.SqlTypes.SqlGuid
-      description: A <xref href="System.Data.SqlTypes.SqlGuid" data-throw-if-not-resolved="false"></xref> structure.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Data.SqlTypes.SqlBinary.ToString
+  commentId: M:System.Data.SqlTypes.SqlBinary.ToString
   id: ToString
   parent: System.Data.SqlTypes.SqlBinary
+  langs:
+  - csharp
+  - vb
   name: ToString()
+  nameWithType: SqlBinary.ToString()
   fullName: System.Data.SqlTypes.SqlBinary.ToString()
   type: Method
   source:
-    remote: *o0
-    path: src/System.Data.SqlClient/src/System/Data/SqlTypes/SQLBinary.cs
-    startLine: 153
+    remote:
+      path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Data.SqlClient/ref/System.Data.SqlClient.cs
+    startLine: 632
   assemblies:
   - System.Data.SqlClient
   namespace: System.Data.SqlTypes
-  summary: Converts this <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref> object to a string.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: A string that contains the <xref href="System.Data.SqlTypes.SqlBinary.Value" data-throw-if-not-resolved="false"></xref> of the <xref href="System.Data.SqlTypes.SqlBinary" data-throw-if-not-resolved="false"></xref>. If the <xref href="System.Data.SqlTypes.SqlBinary.Value" data-throw-if-not-resolved="false"></xref> is null the string will contain "null".
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.Data.SqlTypes
+  commentId: N:System.Data.SqlTypes
   isExternal: false
   name: System.Data.SqlTypes
+  nameWithType: System.Data.SqlTypes
   fullName: System.Data.SqlTypes
 - uid: System.Data.SqlTypes.INullable
+  commentId: T:System.Data.SqlTypes.INullable
   parent: System.Data.SqlTypes
   isExternal: false
   name: INullable
+  nameWithType: INullable
   fullName: System.Data.SqlTypes.INullable
 - uid: System.IComparable
+  commentId: T:System.IComparable
   parent: System
   isExternal: false
   name: IComparable
+  nameWithType: IComparable
   fullName: System.IComparable
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
-- uid: System.Byte[]
+- uid: System.Data.SqlTypes.SqlBinary
+  commentId: T:System.Data.SqlTypes.SqlBinary
+  parent: System.Data.SqlTypes
   isExternal: false
+  name: SqlBinary
+  nameWithType: SqlBinary
+  fullName: System.Data.SqlTypes.SqlBinary
+- uid: System.Byte[]
   name: Byte[]
-  name.vb: Byte()
+  nameWithType: Byte[]
   fullName: System.Byte[]
-  fullName.vb: System.Byte()
+  nameWithType.vb: Byte()
+  fullname.vb: System.Byte()
+  name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: ()
+    nameWithType: ()
     fullName: ()
+- uid: System.Data.SqlTypes.INullable.IsNull
+  commentId: P:System.Data.SqlTypes.INullable.IsNull
+  parent: System.Data.SqlTypes.INullable
+  isExternal: false
+  name: IsNull
+  nameWithType: INullable.IsNull
+  fullName: System.Data.SqlTypes.INullable.IsNull
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Byte
+  commentId: T:System.Byte
   parent: System
   isExternal: false
   name: Byte
+  nameWithType: Byte
   fullName: System.Byte
-- uid: System.Data.SqlTypes.SqlBinary
-  parent: System.Data.SqlTypes
-  isExternal: false
-  name: SqlBinary
-  fullName: System.Data.SqlTypes.SqlBinary
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Data.SqlTypes.SqlBoolean
+  commentId: T:System.Data.SqlTypes.SqlBoolean
   parent: System.Data.SqlTypes
   isExternal: false
   name: SqlBoolean
+  nameWithType: SqlBoolean
   fullName: System.Data.SqlTypes.SqlBoolean
 - uid: System.Data.SqlTypes.SqlGuid
+  commentId: T:System.Data.SqlTypes.SqlGuid
   parent: System.Data.SqlTypes
   isExternal: false
   name: SqlGuid
+  nameWithType: SqlGuid
   fullName: System.Data.SqlTypes.SqlGuid
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
-- uid: System.Data.SqlTypes.SqlNullValueException
-  isExternal: false
-  name: SqlNullValueException
-  fullName: System.Data.SqlTypes.SqlNullValueException

@@ -1,5 +1,6 @@
 items:
 - uid: System.Runtime.Serialization.DataContractSerializerSettings
+  commentId: T:System.Runtime.Serialization.DataContractSerializerSettings
   id: DataContractSerializerSettings
   parent: System.Runtime.Serialization
   children:
@@ -11,29 +12,46 @@ items:
   - System.Runtime.Serialization.DataContractSerializerSettings.RootName
   - System.Runtime.Serialization.DataContractSerializerSettings.RootNamespace
   - System.Runtime.Serialization.DataContractSerializerSettings.SerializeReadOnlyTypes
+  langs:
+  - csharp
+  - vb
   name: DataContractSerializerSettings
+  nameWithType: DataContractSerializerSettings
   fullName: System.Runtime.Serialization.DataContractSerializerSettings
   type: Class
   source:
-    remote: &o0
-      path: src/System.Private.DataContractSerialization/src/System/Runtime/Serialization/DataContractSerializerSettings.cs
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
-    path: src/System.Private.DataContractSerialization/src/System/Runtime/Serialization/DataContractSerializerSettings.cs
-    startLine: 13
+    id: DataContractSerializerSettings
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 48
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Runtime.Serialization
-  summary: Specifies data contract serializer settings.
   syntax:
     content: 'public class DataContractSerializerSettings : object'
-    content.vb: Public Class DataContractSerializerSettings Inherits Object
+    content.vb: >-
+      Public Class DataContractSerializerSettings
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Runtime.Serialization.DataContractSerializerSettings.#ctor
+  commentId: M:System.Runtime.Serialization.DataContractSerializerSettings.#ctor
   id: '#ctor'
   parent: System.Runtime.Serialization.DataContractSerializerSettings
+  langs:
+  - csharp
+  - vb
   name: DataContractSerializerSettings()
+  nameWithType: DataContractSerializerSettings.DataContractSerializerSettings()
   fullName: System.Runtime.Serialization.DataContractSerializerSettings.DataContractSerializerSettings()
   type: Constructor
   source:
@@ -41,258 +59,388 @@ items:
       path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: .ctor
     path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
-    startLine: 47
+    startLine: 50
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Runtime.Serialization
-  summary: Initializes a new instance of the <xref href="System.Runtime.Serialization.DataContractSerializerSettings" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public DataContractSerializerSettings()
     content.vb: Public Sub New
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Serialization.DataContractSerializerSettings.DataContractResolver
+  commentId: P:System.Runtime.Serialization.DataContractSerializerSettings.DataContractResolver
   id: DataContractResolver
   parent: System.Runtime.Serialization.DataContractSerializerSettings
+  langs:
+  - csharp
+  - vb
   name: DataContractResolver
+  nameWithType: DataContractSerializerSettings.DataContractResolver
   fullName: System.Runtime.Serialization.DataContractSerializerSettings.DataContractResolver
   type: Property
   source:
-    remote: *o0
-    path: src/System.Private.DataContractSerialization/src/System/Runtime/Serialization/DataContractSerializerSettings.cs
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DataContractResolver
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
     startLine: 51
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Runtime.Serialization
-  summary: Gets or sets the component used to dynamically map xsi:type declarations to known contract types.
   syntax:
     content: public DataContractResolver DataContractResolver { get; set; }
     content.vb: Public Property DataContractResolver As DataContractResolver
     parameters: []
     return:
       type: System.Runtime.Serialization.DataContractResolver
-      description: The component used to dynamically map xsi:type declarations to known contract types.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Serialization.DataContractSerializerSettings.KnownTypes
+  commentId: P:System.Runtime.Serialization.DataContractSerializerSettings.KnownTypes
   id: KnownTypes
   parent: System.Runtime.Serialization.DataContractSerializerSettings
+  langs:
+  - csharp
+  - vb
   name: KnownTypes
+  nameWithType: DataContractSerializerSettings.KnownTypes
   fullName: System.Runtime.Serialization.DataContractSerializerSettings.KnownTypes
   type: Property
   source:
-    remote: *o0
-    path: src/System.Private.DataContractSerialization/src/System/Runtime/Serialization/DataContractSerializerSettings.cs
-    startLine: 30
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: KnownTypes
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 52
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Runtime.Serialization
-  summary: Gets or sets a collection of types that may be present in the object graph serialized using this instance of the DataContractSerializerSettings.
   syntax:
     content: public Collections.Generic.IEnumerable<Type> KnownTypes { get; set; }
     content.vb: Public Property KnownTypes As Collections.Generic.IEnumerable(Of Type)
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-      description: A collection of types that may be present in the object graph serialized using this instance of the DataContractSerializerSettings.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Serialization.DataContractSerializerSettings.MaxItemsInObjectGraph
+  commentId: P:System.Runtime.Serialization.DataContractSerializerSettings.MaxItemsInObjectGraph
   id: MaxItemsInObjectGraph
   parent: System.Runtime.Serialization.DataContractSerializerSettings
+  langs:
+  - csharp
+  - vb
   name: MaxItemsInObjectGraph
+  nameWithType: DataContractSerializerSettings.MaxItemsInObjectGraph
   fullName: System.Runtime.Serialization.DataContractSerializerSettings.MaxItemsInObjectGraph
   type: Property
   source:
-    remote: *o0
-    path: src/System.Private.DataContractSerialization/src/System/Runtime/Serialization/DataContractSerializerSettings.cs
-    startLine: 35
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: MaxItemsInObjectGraph
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 53
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Runtime.Serialization
-  summary: Gets or sets the maximum number of items in an object graph to serialize or deserialize.
   syntax:
     content: public int MaxItemsInObjectGraph { get; set; }
     content.vb: Public Property MaxItemsInObjectGraph As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The maximum number of items in an object graph to serialize or deserialize.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Serialization.DataContractSerializerSettings.PreserveObjectReferences
+  commentId: P:System.Runtime.Serialization.DataContractSerializerSettings.PreserveObjectReferences
   id: PreserveObjectReferences
   parent: System.Runtime.Serialization.DataContractSerializerSettings
+  langs:
+  - csharp
+  - vb
   name: PreserveObjectReferences
+  nameWithType: DataContractSerializerSettings.PreserveObjectReferences
   fullName: System.Runtime.Serialization.DataContractSerializerSettings.PreserveObjectReferences
   type: Property
   source:
-    remote: *o0
-    path: src/System.Private.DataContractSerialization/src/System/Runtime/Serialization/DataContractSerializerSettings.cs
-    startLine: 45
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: PreserveObjectReferences
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 54
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Runtime.Serialization
-  summary: Gets or sets a value that specifies whether to use non-standard XML constructs to preserve object reference data.
   syntax:
     content: public bool PreserveObjectReferences { get; set; }
     content.vb: Public Property PreserveObjectReferences As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: True to use non-standard XML constructs to preserve object reference data; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Serialization.DataContractSerializerSettings.RootName
+  commentId: P:System.Runtime.Serialization.DataContractSerializerSettings.RootName
   id: RootName
   parent: System.Runtime.Serialization.DataContractSerializerSettings
+  langs:
+  - csharp
+  - vb
   name: RootName
+  nameWithType: DataContractSerializerSettings.RootName
   fullName: System.Runtime.Serialization.DataContractSerializerSettings.RootName
   type: Property
   source:
-    remote: *o0
-    path: src/System.Private.DataContractSerialization/src/System/Runtime/Serialization/DataContractSerializerSettings.cs
-    startLine: 20
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RootName
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 55
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Runtime.Serialization
-  summary: Gets or sets the root name of the selected object.
   syntax:
     content: public XmlDictionaryString RootName { get; set; }
     content.vb: Public Property RootName As XmlDictionaryString
     parameters: []
     return:
       type: System.Xml.XmlDictionaryString
-      description: The root name of the selected object.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Serialization.DataContractSerializerSettings.RootNamespace
+  commentId: P:System.Runtime.Serialization.DataContractSerializerSettings.RootNamespace
   id: RootNamespace
   parent: System.Runtime.Serialization.DataContractSerializerSettings
+  langs:
+  - csharp
+  - vb
   name: RootNamespace
+  nameWithType: DataContractSerializerSettings.RootNamespace
   fullName: System.Runtime.Serialization.DataContractSerializerSettings.RootNamespace
   type: Property
   source:
-    remote: *o0
-    path: src/System.Private.DataContractSerialization/src/System/Runtime/Serialization/DataContractSerializerSettings.cs
-    startLine: 25
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: RootNamespace
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 56
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Runtime.Serialization
-  summary: Gets or sets the root namespace for the specified object.
   syntax:
     content: public XmlDictionaryString RootNamespace { get; set; }
     content.vb: Public Property RootNamespace As XmlDictionaryString
     parameters: []
     return:
       type: System.Xml.XmlDictionaryString
-      description: The root namespace for the specified object.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Runtime.Serialization.DataContractSerializerSettings.SerializeReadOnlyTypes
+  commentId: P:System.Runtime.Serialization.DataContractSerializerSettings.SerializeReadOnlyTypes
   id: SerializeReadOnlyTypes
   parent: System.Runtime.Serialization.DataContractSerializerSettings
+  langs:
+  - csharp
+  - vb
   name: SerializeReadOnlyTypes
+  nameWithType: DataContractSerializerSettings.SerializeReadOnlyTypes
   fullName: System.Runtime.Serialization.DataContractSerializerSettings.SerializeReadOnlyTypes
   type: Property
   source:
-    remote: *o0
-    path: src/System.Private.DataContractSerialization/src/System/Runtime/Serialization/DataContractSerializerSettings.cs
-    startLine: 56
+    remote:
+      path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SerializeReadOnlyTypes
+    path: src/System.Runtime.Serialization.Xml/ref/System.Runtime.Serialization.Xml.cs
+    startLine: 57
   assemblies:
   - System.Runtime.Serialization.Xml
   namespace: System.Runtime.Serialization
-  summary: Gets or sets a value that specifies whether to serialize read only types.
   syntax:
     content: public bool SerializeReadOnlyTypes { get; set; }
     content.vb: Public Property SerializeReadOnlyTypes As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: True to serialize read only types; otherwise, false.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
   isExternal: false
   name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
   fullName: System.Runtime.Serialization
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Runtime.Serialization.DataContractResolver
+  commentId: T:System.Runtime.Serialization.DataContractResolver
   parent: System.Runtime.Serialization
   isExternal: false
   name: DataContractResolver
+  nameWithType: DataContractResolver
   fullName: System.Runtime.Serialization.DataContractResolver
 - uid: System.Collections.Generic.IEnumerable{System.Type}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Type}'
   definition: System.Collections.Generic.IEnumerable`1
   name: Collections.Generic.IEnumerable<Type>
-  name.vb: Collections.Generic.IEnumerable(Of Type)
+  nameWithType: Collections.Generic.IEnumerable<Type>
   fullName: System.Collections.Generic.IEnumerable<System.Type>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Type)
+  nameWithType.vb: Collections.Generic.IEnumerable(Of Type)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Type)
+  name.vb: Collections.Generic.IEnumerable(Of Type)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
+    nameWithType: <
     fullName: <
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
   - uid: System.Type
     name: Type
+    nameWithType: Type
     fullName: System.Type
     isExternal: true
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.IEnumerable`1
-  parent: System.Collections.Generic
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: false
   name: Collections.Generic.IEnumerable<>
-  name.vb: Collections.Generic.IEnumerable(Of )
+  nameWithType: Collections.Generic.IEnumerable<>
   fullName: System.Collections.Generic.IEnumerable<>
-  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  nameWithType.vb: Collections.Generic.IEnumerable(Of )
+  fullname.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: Collections.Generic.IEnumerable(Of )
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: <
+    nameWithType: <
     fullName: <
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: '>'
+    nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.Collections.Generic.IEnumerable`1
     name: Collections.Generic.IEnumerable
+    nameWithType: Collections.Generic.IEnumerable
     fullName: System.Collections.Generic.IEnumerable
   - name: '(Of '
+    nameWithType: '(Of '
     fullName: '(Of '
-  - {}
+  - name: 
+    nameWithType: 
+    fullName: 
   - name: )
+    nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Xml.XmlDictionaryString
+  commentId: T:System.Xml.XmlDictionaryString
   parent: System.Xml
   isExternal: false
   name: XmlDictionaryString
+  nameWithType: XmlDictionaryString
   fullName: System.Xml.XmlDictionaryString
 - uid: System.Xml
+  commentId: N:System.Xml
   isExternal: false
   name: System.Xml
+  nameWithType: System.Xml
   fullName: System.Xml

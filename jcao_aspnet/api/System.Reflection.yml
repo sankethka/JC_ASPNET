@@ -1,5 +1,6 @@
 items:
 - uid: System.Reflection
+  commentId: N:System.Reflection
   id: System.Reflection
   children:
   - System.Reflection.AmbiguousMatchException
@@ -41,13 +42,17 @@ items:
   - System.Reflection.FieldAttributes
   - System.Reflection.FieldInfo
   - System.Reflection.GenericParameterAttributes
+  - System.Reflection.ICustomAttributeProvider
   - System.Reflection.InterfaceMapping
   - System.Reflection.IntrospectionExtensions
+  - System.Reflection.InvalidFilterCriteriaException
   - System.Reflection.IReflectableType
   - System.Reflection.LocalVariableInfo
   - System.Reflection.ManifestResourceInfo
+  - System.Reflection.MemberFilter
   - System.Reflection.MemberInfo
   - System.Reflection.MemberInfoExtensions
+  - System.Reflection.MemberTypes
   - System.Reflection.MethodAttributes
   - System.Reflection.MethodBase
   - System.Reflection.MethodImplAttributes
@@ -58,6 +63,7 @@ items:
   - System.Reflection.ModuleExtensions
   - System.Reflection.ParameterAttributes
   - System.Reflection.ParameterInfo
+  - System.Reflection.ParameterModifier
   - System.Reflection.ProcessorArchitecture
   - System.Reflection.PropertyAttributes
   - System.Reflection.PropertyInfo
@@ -66,332 +72,518 @@ items:
   - System.Reflection.ReflectionTypeLoadException
   - System.Reflection.ResourceLocation
   - System.Reflection.RuntimeReflectionExtensions
+  - System.Reflection.TargetException
   - System.Reflection.TargetInvocationException
   - System.Reflection.TargetParameterCountException
   - System.Reflection.TypeAttributes
   - System.Reflection.TypeExtensions
+  - System.Reflection.TypeFilter
   - System.Reflection.TypeInfo
+  langs:
+  - csharp
+  - vb
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection
   type: Namespace
-  source:
-    remote:
-      path: src/System.Reflection.Metadata/src/System/Reflection/System.Reflection.cs
-      branch: master
-      repo: https://github.com/dotnet/corefx.git
-    path: src/System.Reflection.Metadata/src/System/Reflection/System.Reflection.cs
-    startLine: 4
   assemblies:
-  - System.Reflection.Primitives
-  summary: The <xref href="System.Reflection" data-throw-if-not-resolved="false"></xref> namespace contains types that retrieve information about assemblies, modules, members, parameters, and other entities in managed code by examining their metadata. These types also can be used to manipulate instances of loaded types, for example to hook up events or to invoke methods. To dynamically create types, use the <xref href="System.Reflection.Emit" data-throw-if-not-resolved="false"></xref> namespace.
+  - System.Reflection
 references:
-- uid: System.Reflection.CallingConventions
-  parent: System.Reflection
-  isExternal: false
-  name: CallingConventions
-  fullName: System.Reflection.CallingConventions
-- uid: System.Reflection.EventAttributes
-  parent: System.Reflection
-  isExternal: false
-  name: EventAttributes
-  fullName: System.Reflection.EventAttributes
-- uid: System.Reflection.FieldAttributes
-  parent: System.Reflection
-  isExternal: false
-  name: FieldAttributes
-  fullName: System.Reflection.FieldAttributes
-- uid: System.Reflection.GenericParameterAttributes
-  parent: System.Reflection
-  isExternal: false
-  name: GenericParameterAttributes
-  fullName: System.Reflection.GenericParameterAttributes
-- uid: System.Reflection.MethodAttributes
-  parent: System.Reflection
-  isExternal: false
-  name: MethodAttributes
-  fullName: System.Reflection.MethodAttributes
-- uid: System.Reflection.MethodImplAttributes
-  parent: System.Reflection
-  isExternal: false
-  name: MethodImplAttributes
-  fullName: System.Reflection.MethodImplAttributes
-- uid: System.Reflection.ParameterAttributes
-  parent: System.Reflection
-  isExternal: false
-  name: ParameterAttributes
-  fullName: System.Reflection.ParameterAttributes
-- uid: System.Reflection.PropertyAttributes
-  parent: System.Reflection
-  isExternal: false
-  name: PropertyAttributes
-  fullName: System.Reflection.PropertyAttributes
-- uid: System.Reflection.TypeAttributes
-  parent: System.Reflection
-  isExternal: false
-  name: TypeAttributes
-  fullName: System.Reflection.TypeAttributes
-- uid: System.Reflection.AssemblyExtensions
-  isExternal: false
-  name: AssemblyExtensions
-  fullName: System.Reflection.AssemblyExtensions
-- uid: System.Reflection.BindingFlags
-  parent: System.Reflection
-  isExternal: false
-  name: BindingFlags
-  fullName: System.Reflection.BindingFlags
-- uid: System.Reflection.EventInfoExtensions
-  isExternal: false
-  name: EventInfoExtensions
-  fullName: System.Reflection.EventInfoExtensions
-- uid: System.Reflection.MemberInfoExtensions
-  isExternal: false
-  name: MemberInfoExtensions
-  fullName: System.Reflection.MemberInfoExtensions
-- uid: System.Reflection.MethodInfoExtensions
-  isExternal: false
-  name: MethodInfoExtensions
-  fullName: System.Reflection.MethodInfoExtensions
-- uid: System.Reflection.ModuleExtensions
-  isExternal: false
-  name: ModuleExtensions
-  fullName: System.Reflection.ModuleExtensions
-- uid: System.Reflection.PropertyInfoExtensions
-  isExternal: false
-  name: PropertyInfoExtensions
-  fullName: System.Reflection.PropertyInfoExtensions
-- uid: System.Reflection.TypeExtensions
-  isExternal: false
-  name: TypeExtensions
-  fullName: System.Reflection.TypeExtensions
-- uid: System.Reflection.AssemblyCompanyAttribute
-  isExternal: false
-  name: AssemblyCompanyAttribute
-  fullName: System.Reflection.AssemblyCompanyAttribute
-- uid: System.Reflection.AssemblyConfigurationAttribute
-  isExternal: false
-  name: AssemblyConfigurationAttribute
-  fullName: System.Reflection.AssemblyConfigurationAttribute
-- uid: System.Reflection.AssemblyCopyrightAttribute
-  isExternal: false
-  name: AssemblyCopyrightAttribute
-  fullName: System.Reflection.AssemblyCopyrightAttribute
-- uid: System.Reflection.AssemblyCultureAttribute
-  isExternal: false
-  name: AssemblyCultureAttribute
-  fullName: System.Reflection.AssemblyCultureAttribute
-- uid: System.Reflection.AssemblyDefaultAliasAttribute
-  isExternal: false
-  name: AssemblyDefaultAliasAttribute
-  fullName: System.Reflection.AssemblyDefaultAliasAttribute
-- uid: System.Reflection.AssemblyDelaySignAttribute
-  isExternal: false
-  name: AssemblyDelaySignAttribute
-  fullName: System.Reflection.AssemblyDelaySignAttribute
-- uid: System.Reflection.AssemblyDescriptionAttribute
-  isExternal: false
-  name: AssemblyDescriptionAttribute
-  fullName: System.Reflection.AssemblyDescriptionAttribute
-- uid: System.Reflection.AssemblyFileVersionAttribute
-  isExternal: false
-  name: AssemblyFileVersionAttribute
-  fullName: System.Reflection.AssemblyFileVersionAttribute
-- uid: System.Reflection.AssemblyFlagsAttribute
-  isExternal: false
-  name: AssemblyFlagsAttribute
-  fullName: System.Reflection.AssemblyFlagsAttribute
-- uid: System.Reflection.AssemblyInformationalVersionAttribute
-  isExternal: false
-  name: AssemblyInformationalVersionAttribute
-  fullName: System.Reflection.AssemblyInformationalVersionAttribute
-- uid: System.Reflection.AssemblyKeyFileAttribute
-  isExternal: false
-  name: AssemblyKeyFileAttribute
-  fullName: System.Reflection.AssemblyKeyFileAttribute
-- uid: System.Reflection.AssemblyKeyNameAttribute
-  isExternal: false
-  name: AssemblyKeyNameAttribute
-  fullName: System.Reflection.AssemblyKeyNameAttribute
-- uid: System.Reflection.AssemblyMetadataAttribute
-  isExternal: false
-  name: AssemblyMetadataAttribute
-  fullName: System.Reflection.AssemblyMetadataAttribute
-- uid: System.Reflection.AssemblyNameFlags
-  parent: System.Reflection
-  isExternal: false
-  name: AssemblyNameFlags
-  fullName: System.Reflection.AssemblyNameFlags
-- uid: System.Reflection.AssemblyProductAttribute
-  isExternal: false
-  name: AssemblyProductAttribute
-  fullName: System.Reflection.AssemblyProductAttribute
-- uid: System.Reflection.AssemblySignatureKeyAttribute
-  isExternal: false
-  name: AssemblySignatureKeyAttribute
-  fullName: System.Reflection.AssemblySignatureKeyAttribute
-- uid: System.Reflection.AssemblyTitleAttribute
-  isExternal: false
-  name: AssemblyTitleAttribute
-  fullName: System.Reflection.AssemblyTitleAttribute
-- uid: System.Reflection.AssemblyTrademarkAttribute
-  isExternal: false
-  name: AssemblyTrademarkAttribute
-  fullName: System.Reflection.AssemblyTrademarkAttribute
-- uid: System.Reflection.AssemblyVersionAttribute
-  isExternal: false
-  name: AssemblyVersionAttribute
-  fullName: System.Reflection.AssemblyVersionAttribute
-- uid: System.Reflection.DefaultMemberAttribute
-  isExternal: false
-  name: DefaultMemberAttribute
-  fullName: System.Reflection.DefaultMemberAttribute
-- uid: System.Reflection.ProcessorArchitecture
-  parent: System.Reflection
-  isExternal: false
-  name: ProcessorArchitecture
-  fullName: System.Reflection.ProcessorArchitecture
-- uid: System.Reflection.CustomAttributeExtensions
-  isExternal: false
-  name: CustomAttributeExtensions
-  fullName: System.Reflection.CustomAttributeExtensions
-- uid: System.Reflection.InterfaceMapping
-  parent: System.Reflection
-  isExternal: false
-  name: InterfaceMapping
-  fullName: System.Reflection.InterfaceMapping
-- uid: System.Reflection.RuntimeReflectionExtensions
-  isExternal: false
-  name: RuntimeReflectionExtensions
-  fullName: System.Reflection.RuntimeReflectionExtensions
-- uid: System.Reflection.Missing
-  parent: System.Reflection
-  isExternal: false
-  name: Missing
-  fullName: System.Reflection.Missing
 - uid: System.Reflection.AmbiguousMatchException
+  commentId: T:System.Reflection.AmbiguousMatchException
   isExternal: false
   name: AmbiguousMatchException
+  nameWithType: AmbiguousMatchException
   fullName: System.Reflection.AmbiguousMatchException
 - uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
   parent: System.Reflection
   isExternal: false
-  name: Reflection.Assembly
+  name: Assembly
+  nameWithType: Assembly
   fullName: System.Reflection.Assembly
 - uid: System.Reflection.AssemblyContentType
+  commentId: T:System.Reflection.AssemblyContentType
   parent: System.Reflection
   isExternal: false
   name: AssemblyContentType
+  nameWithType: AssemblyContentType
   fullName: System.Reflection.AssemblyContentType
 - uid: System.Reflection.AssemblyName
+  commentId: T:System.Reflection.AssemblyName
   parent: System.Reflection
   isExternal: false
   name: AssemblyName
+  nameWithType: AssemblyName
   fullName: System.Reflection.AssemblyName
 - uid: System.Reflection.ConstructorInfo
+  commentId: T:System.Reflection.ConstructorInfo
+  parent: System.Reflection
   isExternal: false
   name: ConstructorInfo
+  nameWithType: ConstructorInfo
   fullName: System.Reflection.ConstructorInfo
 - uid: System.Reflection.CustomAttributeData
+  commentId: T:System.Reflection.CustomAttributeData
   isExternal: false
   name: CustomAttributeData
+  nameWithType: CustomAttributeData
   fullName: System.Reflection.CustomAttributeData
 - uid: System.Reflection.CustomAttributeNamedArgument
+  commentId: T:System.Reflection.CustomAttributeNamedArgument
+  parent: System.Reflection
   isExternal: false
   name: CustomAttributeNamedArgument
+  nameWithType: CustomAttributeNamedArgument
   fullName: System.Reflection.CustomAttributeNamedArgument
 - uid: System.Reflection.CustomAttributeTypedArgument
+  commentId: T:System.Reflection.CustomAttributeTypedArgument
   parent: System.Reflection
   isExternal: false
   name: CustomAttributeTypedArgument
+  nameWithType: CustomAttributeTypedArgument
   fullName: System.Reflection.CustomAttributeTypedArgument
 - uid: System.Reflection.EventInfo
+  commentId: T:System.Reflection.EventInfo
   parent: System.Reflection
   isExternal: false
   name: EventInfo
+  nameWithType: EventInfo
   fullName: System.Reflection.EventInfo
 - uid: System.Reflection.FieldInfo
+  commentId: T:System.Reflection.FieldInfo
   parent: System.Reflection
   isExternal: false
   name: FieldInfo
+  nameWithType: FieldInfo
   fullName: System.Reflection.FieldInfo
 - uid: System.Reflection.IntrospectionExtensions
+  commentId: T:System.Reflection.IntrospectionExtensions
   isExternal: false
   name: IntrospectionExtensions
+  nameWithType: IntrospectionExtensions
   fullName: System.Reflection.IntrospectionExtensions
 - uid: System.Reflection.IReflectableType
+  commentId: T:System.Reflection.IReflectableType
   parent: System.Reflection
   isExternal: false
   name: IReflectableType
+  nameWithType: IReflectableType
   fullName: System.Reflection.IReflectableType
 - uid: System.Reflection.LocalVariableInfo
+  commentId: T:System.Reflection.LocalVariableInfo
   isExternal: false
   name: LocalVariableInfo
+  nameWithType: LocalVariableInfo
   fullName: System.Reflection.LocalVariableInfo
 - uid: System.Reflection.ManifestResourceInfo
+  commentId: T:System.Reflection.ManifestResourceInfo
   parent: System.Reflection
   isExternal: false
   name: ManifestResourceInfo
+  nameWithType: ManifestResourceInfo
   fullName: System.Reflection.ManifestResourceInfo
 - uid: System.Reflection.MemberInfo
+  commentId: T:System.Reflection.MemberInfo
   parent: System.Reflection
   isExternal: false
   name: MemberInfo
+  nameWithType: MemberInfo
   fullName: System.Reflection.MemberInfo
 - uid: System.Reflection.MethodBase
+  commentId: T:System.Reflection.MethodBase
   parent: System.Reflection
   isExternal: false
-  name: Reflection.MethodBase
+  name: MethodBase
+  nameWithType: MethodBase
   fullName: System.Reflection.MethodBase
 - uid: System.Reflection.MethodInfo
+  commentId: T:System.Reflection.MethodInfo
   parent: System.Reflection
   isExternal: false
   name: MethodInfo
+  nameWithType: MethodInfo
   fullName: System.Reflection.MethodInfo
 - uid: System.Reflection.Module
+  commentId: T:System.Reflection.Module
   parent: System.Reflection
   isExternal: false
   name: Module
+  nameWithType: Module
   fullName: System.Reflection.Module
 - uid: System.Reflection.ParameterInfo
+  commentId: T:System.Reflection.ParameterInfo
   parent: System.Reflection
   isExternal: false
   name: ParameterInfo
+  nameWithType: ParameterInfo
   fullName: System.Reflection.ParameterInfo
 - uid: System.Reflection.PropertyInfo
+  commentId: T:System.Reflection.PropertyInfo
   parent: System.Reflection
   isExternal: false
   name: PropertyInfo
+  nameWithType: PropertyInfo
   fullName: System.Reflection.PropertyInfo
 - uid: System.Reflection.ReflectionContext
+  commentId: T:System.Reflection.ReflectionContext
   isExternal: false
   name: ReflectionContext
+  nameWithType: ReflectionContext
   fullName: System.Reflection.ReflectionContext
 - uid: System.Reflection.ReflectionTypeLoadException
+  commentId: T:System.Reflection.ReflectionTypeLoadException
   isExternal: false
   name: ReflectionTypeLoadException
+  nameWithType: ReflectionTypeLoadException
   fullName: System.Reflection.ReflectionTypeLoadException
 - uid: System.Reflection.ResourceLocation
+  commentId: T:System.Reflection.ResourceLocation
   parent: System.Reflection
   isExternal: false
   name: ResourceLocation
+  nameWithType: ResourceLocation
   fullName: System.Reflection.ResourceLocation
 - uid: System.Reflection.TargetInvocationException
+  commentId: T:System.Reflection.TargetInvocationException
   isExternal: false
   name: TargetInvocationException
+  nameWithType: TargetInvocationException
   fullName: System.Reflection.TargetInvocationException
 - uid: System.Reflection.TargetParameterCountException
+  commentId: T:System.Reflection.TargetParameterCountException
   isExternal: false
   name: TargetParameterCountException
+  nameWithType: TargetParameterCountException
   fullName: System.Reflection.TargetParameterCountException
 - uid: System.Reflection.TypeInfo
+  commentId: T:System.Reflection.TypeInfo
   parent: System.Reflection
   isExternal: false
   name: TypeInfo
+  nameWithType: TypeInfo
   fullName: System.Reflection.TypeInfo
+- uid: System.Reflection.BindingFlags
+  commentId: T:System.Reflection.BindingFlags
+  parent: System.Reflection
+  isExternal: false
+  name: BindingFlags
+  nameWithType: BindingFlags
+  fullName: System.Reflection.BindingFlags
+- uid: System.Reflection.ICustomAttributeProvider
+  commentId: T:System.Reflection.ICustomAttributeProvider
+  parent: System.Reflection
+  isExternal: false
+  name: ICustomAttributeProvider
+  nameWithType: ICustomAttributeProvider
+  fullName: System.Reflection.ICustomAttributeProvider
+- uid: System.Reflection.InvalidFilterCriteriaException
+  commentId: T:System.Reflection.InvalidFilterCriteriaException
+  isExternal: false
+  name: InvalidFilterCriteriaException
+  nameWithType: InvalidFilterCriteriaException
+  fullName: System.Reflection.InvalidFilterCriteriaException
+- uid: System.Reflection.MemberFilter
+  commentId: T:System.Reflection.MemberFilter
+  parent: System.Reflection
+  isExternal: false
+  name: MemberFilter
+  nameWithType: MemberFilter
+  fullName: System.Reflection.MemberFilter
+- uid: System.Reflection.MemberTypes
+  commentId: T:System.Reflection.MemberTypes
+  parent: System.Reflection
+  isExternal: false
+  name: MemberTypes
+  nameWithType: MemberTypes
+  fullName: System.Reflection.MemberTypes
+- uid: System.Reflection.ParameterModifier
+  commentId: T:System.Reflection.ParameterModifier
+  isExternal: false
+  name: ParameterModifier
+  nameWithType: ParameterModifier
+  fullName: System.Reflection.ParameterModifier
+- uid: System.Reflection.TargetException
+  commentId: T:System.Reflection.TargetException
+  isExternal: false
+  name: TargetException
+  nameWithType: TargetException
+  fullName: System.Reflection.TargetException
+- uid: System.Reflection.TypeFilter
+  commentId: T:System.Reflection.TypeFilter
+  parent: System.Reflection
+  isExternal: false
+  name: TypeFilter
+  nameWithType: TypeFilter
+  fullName: System.Reflection.TypeFilter
+- uid: System.Reflection.CallingConventions
+  commentId: T:System.Reflection.CallingConventions
+  parent: System.Reflection
+  isExternal: false
+  name: CallingConventions
+  nameWithType: CallingConventions
+  fullName: System.Reflection.CallingConventions
+- uid: System.Reflection.EventAttributes
+  commentId: T:System.Reflection.EventAttributes
+  parent: System.Reflection
+  isExternal: false
+  name: EventAttributes
+  nameWithType: EventAttributes
+  fullName: System.Reflection.EventAttributes
+- uid: System.Reflection.FieldAttributes
+  commentId: T:System.Reflection.FieldAttributes
+  parent: System.Reflection
+  isExternal: false
+  name: FieldAttributes
+  nameWithType: FieldAttributes
+  fullName: System.Reflection.FieldAttributes
+- uid: System.Reflection.GenericParameterAttributes
+  commentId: T:System.Reflection.GenericParameterAttributes
+  parent: System.Reflection
+  isExternal: false
+  name: GenericParameterAttributes
+  nameWithType: GenericParameterAttributes
+  fullName: System.Reflection.GenericParameterAttributes
+- uid: System.Reflection.MethodAttributes
+  commentId: T:System.Reflection.MethodAttributes
+  parent: System.Reflection
+  isExternal: false
+  name: MethodAttributes
+  nameWithType: MethodAttributes
+  fullName: System.Reflection.MethodAttributes
+- uid: System.Reflection.MethodImplAttributes
+  commentId: T:System.Reflection.MethodImplAttributes
+  parent: System.Reflection
+  isExternal: false
+  name: MethodImplAttributes
+  nameWithType: MethodImplAttributes
+  fullName: System.Reflection.MethodImplAttributes
+- uid: System.Reflection.ParameterAttributes
+  commentId: T:System.Reflection.ParameterAttributes
+  parent: System.Reflection
+  isExternal: false
+  name: ParameterAttributes
+  nameWithType: ParameterAttributes
+  fullName: System.Reflection.ParameterAttributes
+- uid: System.Reflection.PropertyAttributes
+  commentId: T:System.Reflection.PropertyAttributes
+  parent: System.Reflection
+  isExternal: false
+  name: PropertyAttributes
+  nameWithType: PropertyAttributes
+  fullName: System.Reflection.PropertyAttributes
+- uid: System.Reflection.TypeAttributes
+  commentId: T:System.Reflection.TypeAttributes
+  parent: System.Reflection
+  isExternal: false
+  name: TypeAttributes
+  nameWithType: TypeAttributes
+  fullName: System.Reflection.TypeAttributes
 - uid: System.Reflection.DispatchProxy
+  commentId: T:System.Reflection.DispatchProxy
   isExternal: false
   name: DispatchProxy
+  nameWithType: DispatchProxy
   fullName: System.Reflection.DispatchProxy
+- uid: System.Reflection.CustomAttributeExtensions
+  commentId: T:System.Reflection.CustomAttributeExtensions
+  isExternal: false
+  name: CustomAttributeExtensions
+  nameWithType: CustomAttributeExtensions
+  fullName: System.Reflection.CustomAttributeExtensions
+- uid: System.Reflection.InterfaceMapping
+  commentId: T:System.Reflection.InterfaceMapping
+  parent: System.Reflection
+  isExternal: false
+  name: InterfaceMapping
+  nameWithType: InterfaceMapping
+  fullName: System.Reflection.InterfaceMapping
+- uid: System.Reflection.RuntimeReflectionExtensions
+  commentId: T:System.Reflection.RuntimeReflectionExtensions
+  isExternal: false
+  name: RuntimeReflectionExtensions
+  nameWithType: RuntimeReflectionExtensions
+  fullName: System.Reflection.RuntimeReflectionExtensions
+- uid: System.Reflection.Missing
+  commentId: T:System.Reflection.Missing
+  parent: System.Reflection
+  isExternal: false
+  name: Missing
+  nameWithType: Missing
+  fullName: System.Reflection.Missing
+- uid: System.Reflection.AssemblyExtensions
+  commentId: T:System.Reflection.AssemblyExtensions
+  isExternal: false
+  name: AssemblyExtensions
+  nameWithType: AssemblyExtensions
+  fullName: System.Reflection.AssemblyExtensions
+- uid: System.Reflection.EventInfoExtensions
+  commentId: T:System.Reflection.EventInfoExtensions
+  isExternal: false
+  name: EventInfoExtensions
+  nameWithType: EventInfoExtensions
+  fullName: System.Reflection.EventInfoExtensions
+- uid: System.Reflection.MemberInfoExtensions
+  commentId: T:System.Reflection.MemberInfoExtensions
+  isExternal: false
+  name: MemberInfoExtensions
+  nameWithType: MemberInfoExtensions
+  fullName: System.Reflection.MemberInfoExtensions
+- uid: System.Reflection.MethodInfoExtensions
+  commentId: T:System.Reflection.MethodInfoExtensions
+  isExternal: false
+  name: MethodInfoExtensions
+  nameWithType: MethodInfoExtensions
+  fullName: System.Reflection.MethodInfoExtensions
+- uid: System.Reflection.ModuleExtensions
+  commentId: T:System.Reflection.ModuleExtensions
+  isExternal: false
+  name: ModuleExtensions
+  nameWithType: ModuleExtensions
+  fullName: System.Reflection.ModuleExtensions
+- uid: System.Reflection.PropertyInfoExtensions
+  commentId: T:System.Reflection.PropertyInfoExtensions
+  isExternal: false
+  name: PropertyInfoExtensions
+  nameWithType: PropertyInfoExtensions
+  fullName: System.Reflection.PropertyInfoExtensions
+- uid: System.Reflection.TypeExtensions
+  commentId: T:System.Reflection.TypeExtensions
+  isExternal: false
+  name: TypeExtensions
+  nameWithType: TypeExtensions
+  fullName: System.Reflection.TypeExtensions
+- uid: System.Reflection.AssemblyCompanyAttribute
+  commentId: T:System.Reflection.AssemblyCompanyAttribute
+  isExternal: false
+  name: AssemblyCompanyAttribute
+  nameWithType: AssemblyCompanyAttribute
+  fullName: System.Reflection.AssemblyCompanyAttribute
+- uid: System.Reflection.AssemblyConfigurationAttribute
+  commentId: T:System.Reflection.AssemblyConfigurationAttribute
+  isExternal: false
+  name: AssemblyConfigurationAttribute
+  nameWithType: AssemblyConfigurationAttribute
+  fullName: System.Reflection.AssemblyConfigurationAttribute
+- uid: System.Reflection.AssemblyCopyrightAttribute
+  commentId: T:System.Reflection.AssemblyCopyrightAttribute
+  isExternal: false
+  name: AssemblyCopyrightAttribute
+  nameWithType: AssemblyCopyrightAttribute
+  fullName: System.Reflection.AssemblyCopyrightAttribute
+- uid: System.Reflection.AssemblyCultureAttribute
+  commentId: T:System.Reflection.AssemblyCultureAttribute
+  isExternal: false
+  name: AssemblyCultureAttribute
+  nameWithType: AssemblyCultureAttribute
+  fullName: System.Reflection.AssemblyCultureAttribute
+- uid: System.Reflection.AssemblyDefaultAliasAttribute
+  commentId: T:System.Reflection.AssemblyDefaultAliasAttribute
+  isExternal: false
+  name: AssemblyDefaultAliasAttribute
+  nameWithType: AssemblyDefaultAliasAttribute
+  fullName: System.Reflection.AssemblyDefaultAliasAttribute
+- uid: System.Reflection.AssemblyDelaySignAttribute
+  commentId: T:System.Reflection.AssemblyDelaySignAttribute
+  isExternal: false
+  name: AssemblyDelaySignAttribute
+  nameWithType: AssemblyDelaySignAttribute
+  fullName: System.Reflection.AssemblyDelaySignAttribute
+- uid: System.Reflection.AssemblyDescriptionAttribute
+  commentId: T:System.Reflection.AssemblyDescriptionAttribute
+  isExternal: false
+  name: AssemblyDescriptionAttribute
+  nameWithType: AssemblyDescriptionAttribute
+  fullName: System.Reflection.AssemblyDescriptionAttribute
+- uid: System.Reflection.AssemblyFileVersionAttribute
+  commentId: T:System.Reflection.AssemblyFileVersionAttribute
+  isExternal: false
+  name: AssemblyFileVersionAttribute
+  nameWithType: AssemblyFileVersionAttribute
+  fullName: System.Reflection.AssemblyFileVersionAttribute
+- uid: System.Reflection.AssemblyFlagsAttribute
+  commentId: T:System.Reflection.AssemblyFlagsAttribute
+  isExternal: false
+  name: AssemblyFlagsAttribute
+  nameWithType: AssemblyFlagsAttribute
+  fullName: System.Reflection.AssemblyFlagsAttribute
+- uid: System.Reflection.AssemblyInformationalVersionAttribute
+  commentId: T:System.Reflection.AssemblyInformationalVersionAttribute
+  isExternal: false
+  name: AssemblyInformationalVersionAttribute
+  nameWithType: AssemblyInformationalVersionAttribute
+  fullName: System.Reflection.AssemblyInformationalVersionAttribute
+- uid: System.Reflection.AssemblyKeyFileAttribute
+  commentId: T:System.Reflection.AssemblyKeyFileAttribute
+  isExternal: false
+  name: AssemblyKeyFileAttribute
+  nameWithType: AssemblyKeyFileAttribute
+  fullName: System.Reflection.AssemblyKeyFileAttribute
+- uid: System.Reflection.AssemblyKeyNameAttribute
+  commentId: T:System.Reflection.AssemblyKeyNameAttribute
+  isExternal: false
+  name: AssemblyKeyNameAttribute
+  nameWithType: AssemblyKeyNameAttribute
+  fullName: System.Reflection.AssemblyKeyNameAttribute
+- uid: System.Reflection.AssemblyMetadataAttribute
+  commentId: T:System.Reflection.AssemblyMetadataAttribute
+  isExternal: false
+  name: AssemblyMetadataAttribute
+  nameWithType: AssemblyMetadataAttribute
+  fullName: System.Reflection.AssemblyMetadataAttribute
+- uid: System.Reflection.AssemblyNameFlags
+  commentId: T:System.Reflection.AssemblyNameFlags
+  parent: System.Reflection
+  isExternal: false
+  name: AssemblyNameFlags
+  nameWithType: AssemblyNameFlags
+  fullName: System.Reflection.AssemblyNameFlags
+- uid: System.Reflection.AssemblyProductAttribute
+  commentId: T:System.Reflection.AssemblyProductAttribute
+  isExternal: false
+  name: AssemblyProductAttribute
+  nameWithType: AssemblyProductAttribute
+  fullName: System.Reflection.AssemblyProductAttribute
+- uid: System.Reflection.AssemblySignatureKeyAttribute
+  commentId: T:System.Reflection.AssemblySignatureKeyAttribute
+  isExternal: false
+  name: AssemblySignatureKeyAttribute
+  nameWithType: AssemblySignatureKeyAttribute
+  fullName: System.Reflection.AssemblySignatureKeyAttribute
+- uid: System.Reflection.AssemblyTitleAttribute
+  commentId: T:System.Reflection.AssemblyTitleAttribute
+  isExternal: false
+  name: AssemblyTitleAttribute
+  nameWithType: AssemblyTitleAttribute
+  fullName: System.Reflection.AssemblyTitleAttribute
+- uid: System.Reflection.AssemblyTrademarkAttribute
+  commentId: T:System.Reflection.AssemblyTrademarkAttribute
+  isExternal: false
+  name: AssemblyTrademarkAttribute
+  nameWithType: AssemblyTrademarkAttribute
+  fullName: System.Reflection.AssemblyTrademarkAttribute
+- uid: System.Reflection.AssemblyVersionAttribute
+  commentId: T:System.Reflection.AssemblyVersionAttribute
+  isExternal: false
+  name: AssemblyVersionAttribute
+  nameWithType: AssemblyVersionAttribute
+  fullName: System.Reflection.AssemblyVersionAttribute
+- uid: System.Reflection.DefaultMemberAttribute
+  commentId: T:System.Reflection.DefaultMemberAttribute
+  isExternal: false
+  name: DefaultMemberAttribute
+  nameWithType: DefaultMemberAttribute
+  fullName: System.Reflection.DefaultMemberAttribute
+- uid: System.Reflection.ProcessorArchitecture
+  commentId: T:System.Reflection.ProcessorArchitecture
+  parent: System.Reflection
+  isExternal: false
+  name: ProcessorArchitecture
+  nameWithType: ProcessorArchitecture
+  fullName: System.Reflection.ProcessorArchitecture
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection

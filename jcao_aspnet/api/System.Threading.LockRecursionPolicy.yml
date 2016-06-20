@@ -1,5 +1,6 @@
 items:
 - uid: System.Threading.LockRecursionPolicy
+  commentId: T:System.Threading.LockRecursionPolicy
   id: LockRecursionPolicy
   parent: System.Threading
   children:
@@ -9,6 +10,7 @@ items:
   - csharp
   - vb
   name: LockRecursionPolicy
+  nameWithType: LockRecursionPolicy
   fullName: System.Threading.LockRecursionPolicy
   type: Enum
   source:
@@ -16,22 +18,30 @@ items:
       path: src/System.Threading/ref/System.Threading.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: LockRecursionPolicy
     path: src/System.Threading/ref/System.Threading.cs
-    startLine: 152
+    startLine: 155
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: Specifies whether a lock can be entered multiple times by the same thread.
   syntax:
     content: 'public enum LockRecursionPolicy : int'
     content.vb: Public Enum LockRecursionPolicy As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
 - uid: System.Threading.LockRecursionPolicy.NoRecursion
+  commentId: F:System.Threading.LockRecursionPolicy.NoRecursion
   id: NoRecursion
   parent: System.Threading.LockRecursionPolicy
   langs:
   - csharp
   - vb
   name: NoRecursion
+  nameWithType: LockRecursionPolicy.NoRecursion
   fullName: System.Threading.LockRecursionPolicy.NoRecursion
   type: Field
   source:
@@ -39,22 +49,32 @@ items:
       path: src/System.Threading/ref/System.Threading.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: NoRecursion
     path: src/System.Threading/ref/System.Threading.cs
-    startLine: 154
+    startLine: 157
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: If a thread tries to enter a lock recursively, an exception is thrown. Some classes may allow certain recursions when this setting is in effect.
   syntax:
     content: NoRecursion = null
     content.vb: NoRecursion = Nothing
+    return:
+      type: System.Threading.LockRecursionPolicy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: System.Threading.LockRecursionPolicy.SupportsRecursion
+  commentId: F:System.Threading.LockRecursionPolicy.SupportsRecursion
   id: SupportsRecursion
   parent: System.Threading.LockRecursionPolicy
   langs:
   - csharp
   - vb
   name: SupportsRecursion
+  nameWithType: LockRecursionPolicy.SupportsRecursion
   fullName: System.Threading.LockRecursionPolicy.SupportsRecursion
   type: Field
   source:
@@ -62,17 +82,34 @@ items:
       path: src/System.Threading/ref/System.Threading.cs
       branch: master
       repo: https://github.com/dotnet/corefx.git
+    id: SupportsRecursion
     path: src/System.Threading/ref/System.Threading.cs
-    startLine: 155
+    startLine: 158
   assemblies:
   - System.Threading
   namespace: System.Threading
-  summary: A thread can enter a lock recursively. Some classes may restrict this capability.
   syntax:
     content: SupportsRecursion = null
     content.vb: SupportsRecursion = Nothing
+    return:
+      type: System.Threading.LockRecursionPolicy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
 - uid: System.Threading
+  commentId: N:System.Threading
   isExternal: false
   name: System.Threading
+  nameWithType: System.Threading
   fullName: System.Threading
+- uid: System.Threading.LockRecursionPolicy
+  commentId: T:System.Threading.LockRecursionPolicy
+  parent: System.Threading
+  isExternal: false
+  name: LockRecursionPolicy
+  nameWithType: LockRecursionPolicy
+  fullName: System.Threading.LockRecursionPolicy

@@ -1,27 +1,39 @@
 items:
 - uid: System.Reflection.AssemblyInformationalVersionAttribute
+  commentId: T:System.Reflection.AssemblyInformationalVersionAttribute
   id: AssemblyInformationalVersionAttribute
   parent: System.Reflection
   children:
   - System.Reflection.AssemblyInformationalVersionAttribute.#ctor(System.String)
   - System.Reflection.AssemblyInformationalVersionAttribute.InformationalVersion
+  langs:
+  - csharp
+  - vb
   name: AssemblyInformationalVersionAttribute
+  nameWithType: AssemblyInformationalVersionAttribute
   fullName: System.Reflection.AssemblyInformationalVersionAttribute
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Reflection/AssemblyAttributes.cs
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Reflection/AssemblyAttributes.cs
-    startLine: 165
+      repo: https://github.com/dotnet/corefx.git
+    id: AssemblyInformationalVersionAttribute
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2722
   assemblies:
   - System.Runtime
   namespace: System.Reflection
-  summary: Defines additional version information for an assembly manifest.
   syntax:
-    content: 'public sealed class AssemblyInformationalVersionAttribute : Attribute'
-    content.vb: Public NotInheritable Class AssemblyInformationalVersionAttribute Inherits Attribute
+    content: >-
+      [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]
+
+      public sealed class AssemblyInformationalVersionAttribute : Attribute
+    content.vb: >-
+      <AttributeUsage(AttributeTargets.Assembly, Inherited:=False)>
+
+      Public NotInheritable Class AssemblyInformationalVersionAttribute
+          Inherits Attribute
   inheritance:
   - System.Object
   - System.Attribute
@@ -33,254 +45,376 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  attributes:
+  - type: System.AttributeUsageAttribute
+    ctor: System.AttributeUsageAttribute.#ctor(System.AttributeTargets)
+    arguments:
+    - type: System.AttributeTargets
+      value: 1
+    namedArguments:
+    - name: Inherited
+      type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Reflection.AssemblyInformationalVersionAttribute.#ctor(System.String)
+  commentId: M:System.Reflection.AssemblyInformationalVersionAttribute.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.Reflection.AssemblyInformationalVersionAttribute
+  langs:
+  - csharp
+  - vb
   name: AssemblyInformationalVersionAttribute(String)
+  nameWithType: AssemblyInformationalVersionAttribute.AssemblyInformationalVersionAttribute(String)
   fullName: System.Reflection.AssemblyInformationalVersionAttribute.AssemblyInformationalVersionAttribute(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/AssemblyAttributes.cs
-    startLine: 171
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2725
   assemblies:
   - System.Runtime
   namespace: System.Reflection
-  summary: Initializes a new instance of the <xref href="System.Reflection.AssemblyInformationalVersionAttribute" data-throw-if-not-resolved="false"></xref> class.
   syntax:
     content: public AssemblyInformationalVersionAttribute(string informationalVersion)
     content.vb: Public Sub New(informationalVersion As String)
     parameters:
     - id: informationalVersion
       type: System.String
-      description: The assembly version information.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Reflection.AssemblyInformationalVersionAttribute.InformationalVersion
+  commentId: P:System.Reflection.AssemblyInformationalVersionAttribute.InformationalVersion
   id: InformationalVersion
   parent: System.Reflection.AssemblyInformationalVersionAttribute
+  langs:
+  - csharp
+  - vb
   name: InformationalVersion
+  nameWithType: AssemblyInformationalVersionAttribute.InformationalVersion
   fullName: System.Reflection.AssemblyInformationalVersionAttribute.InformationalVersion
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Reflection/AssemblyAttributes.cs
-    startLine: 176
+    remote:
+      path: src/System.Runtime/ref/System.Runtime.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: InformationalVersion
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 2726
   assemblies:
   - System.Runtime
   namespace: System.Reflection
-  summary: Gets version information.
   syntax:
     content: public string InformationalVersion { get; }
     content.vb: Public ReadOnly Property InformationalVersion As String
     parameters: []
     return:
       type: System.String
-      description: A string containing the version information.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: System.Reflection
+  commentId: N:System.Reflection
   isExternal: false
   name: System.Reflection
+  nameWithType: System.Reflection
   fullName: System.Reflection
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Attribute
+  commentId: T:System.Attribute
   parent: System
   isExternal: false
   name: Attribute
+  nameWithType: Attribute
   fullName: System.Attribute
 - uid: System.Attribute.Equals(System.Object)
+  commentId: M:System.Attribute.Equals(System.Object)
   parent: System.Attribute
   isExternal: false
   name: Equals(Object)
+  nameWithType: Attribute.Equals(Object)
   fullName: System.Attribute.Equals(System.Object)
   spec.csharp:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.Equals(System.Object)
     name: Equals
+    nameWithType: Attribute.Equals
     fullName: System.Attribute.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Attribute.GetHashCode
+  commentId: M:System.Attribute.GetHashCode
   parent: System.Attribute
   isExternal: false
   name: GetHashCode()
+  nameWithType: Attribute.GetHashCode()
   fullName: System.Attribute.GetHashCode()
   spec.csharp:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Attribute.GetHashCode
     name: GetHashCode
+    nameWithType: Attribute.GetHashCode
     fullName: System.Attribute.GetHashCode
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
   fullName: System.Object.Equals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.Equals(System.Object,System.Object)
     name: Equals
+    nameWithType: Object.Equals
     fullName: System.Object.Equals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.GetType
+  commentId: M:System.Object.GetType
   parent: System.Object
   isExternal: false
   name: GetType()
+  nameWithType: Object.GetType()
   fullName: System.Object.GetType()
   spec.csharp:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.GetType
     name: GetType
+    nameWithType: Object.GetType
     fullName: System.Object.GetType
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
   parent: System.Object
   isExternal: false
   name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
   fullName: System.Object.MemberwiseClone()
   spec.csharp:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.MemberwiseClone
     name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
     fullName: System.Object.MemberwiseClone
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
   parent: System.Object
   isExternal: false
   name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
   fullName: System.Object.ReferenceEquals(System.Object, System.Object)
   spec.csharp:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ReferenceEquals(System.Object,System.Object)
     name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
     fullName: System.Object.ReferenceEquals
   - name: (
+    nameWithType: (
     fullName: (
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: ', '
+    nameWithType: ', '
     fullName: ', '
   - uid: System.Object
     name: Object
+    nameWithType: Object
     fullName: System.Object
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System.Object.ToString
+  commentId: M:System.Object.ToString
   parent: System.Object
   isExternal: false
   name: ToString()
+  nameWithType: Object.ToString()
   fullName: System.Object.ToString()
   spec.csharp:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.Object.ToString
     name: ToString
+    nameWithType: Object.ToString
     fullName: System.Object.ToString
   - name: (
+    nameWithType: (
     fullName: (
   - name: )
+    nameWithType: )
     fullName: )
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String

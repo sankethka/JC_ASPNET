@@ -1,5 +1,6 @@
 items:
 - uid: System.Collections.BitArray
+  commentId: T:System.Collections.BitArray
   id: BitArray
   parent: System.Collections
   children:
@@ -19,544 +20,705 @@ items:
   - System.Collections.BitArray.Set(System.Int32,System.Boolean)
   - System.Collections.BitArray.SetAll(System.Boolean)
   - System.Collections.BitArray.Xor(System.Collections.BitArray)
+  langs:
+  - csharp
+  - vb
   name: BitArray
+  nameWithType: BitArray
   fullName: System.Collections.BitArray
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Collections/BitArray.cs
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 21
+      repo: https://github.com/dotnet/corefx.git
+    id: BitArray
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 10
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Manages a compact array of bit values, which are represented as Booleans, where true indicates that the bit is on (1) and false indicates the bit is off (0).
   syntax:
     content: 'public sealed class BitArray : ICollection, IEnumerable'
-    content.vb: Public NotInheritable Class BitArray Inherits ICollection Implements IEnumerable
+    content.vb: >-
+      Public NotInheritable Class BitArray
+          Inherits ICollection
+          Implements IEnumerable
   inheritance:
   - System.Object
   implements:
   - System.Collections.IEnumerable
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
 - uid: System.Collections.BitArray.#ctor(System.Boolean[])
+  commentId: M:System.Collections.BitArray.#ctor(System.Boolean[])
   id: '#ctor(System.Boolean[])'
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: BitArray(Boolean[])
-  name.vb: BitArray(Boolean())
+  nameWithType: BitArray.BitArray(Boolean[])
   fullName: System.Collections.BitArray.BitArray(System.Boolean[])
-  fullName.vb: System.Collections.BitArray.BitArray(System.Boolean())
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 112
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 12
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Initializes a new instance of the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> class that contains bit values copied from the specified array of Booleans.
   syntax:
     content: public BitArray(bool[] values)
     content.vb: Public Sub New(values As Boolean())
     parameters:
     - id: values
       type: System.Boolean[]
-      description: An array of Booleans to copy.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*values* is null.'
+  nameWithType.vb: BitArray.BitArray(Boolean())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.BitArray.BitArray(System.Boolean())
+  name.vb: BitArray(Boolean())
 - uid: System.Collections.BitArray.#ctor(System.Byte[])
+  commentId: M:System.Collections.BitArray.#ctor(System.Byte[])
   id: '#ctor(System.Byte[])'
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: BitArray(Byte[])
-  name.vb: BitArray(Byte())
+  nameWithType: BitArray.BitArray(Byte[])
   fullName: System.Collections.BitArray.BitArray(System.Byte[])
-  fullName.vb: System.Collections.BitArray.BitArray(System.Byte())
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 67
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 13
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Initializes a new instance of the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> class that contains bit values copied from the specified array of bytes.
   syntax:
     content: public BitArray(byte[] bytes)
     content.vb: Public Sub New(bytes As Byte())
     parameters:
     - id: bytes
       type: System.Byte[]
-      description: An array of bytes containing the values to copy, where each byte represents eight consecutive bits.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*bytes* is null.'
-  - type: System.ArgumentException
-    description: The length of *bytes* is greater than <xref href="System.Int32.MaxValue" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: BitArray.BitArray(Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.BitArray.BitArray(System.Byte())
+  name.vb: BitArray(Byte())
 - uid: System.Collections.BitArray.#ctor(System.Collections.BitArray)
+  commentId: M:System.Collections.BitArray.#ctor(System.Collections.BitArray)
   id: '#ctor(System.Collections.BitArray)'
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: BitArray(BitArray)
+  nameWithType: BitArray.BitArray(BitArray)
   fullName: System.Collections.BitArray.BitArray(System.Collections.BitArray)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 161
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 14
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Initializes a new instance of the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> class that contains bit values copied from the specified <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public BitArray(BitArray bits)
     content.vb: Public Sub New(bits As BitArray)
     parameters:
     - id: bits
       type: System.Collections.BitArray
-      description: The <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> to copy.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*bits* is null.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.#ctor(System.Int32)
+  commentId: M:System.Collections.BitArray.#ctor(System.Int32)
   id: '#ctor(System.Int32)'
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: BitArray(Int32)
+  nameWithType: BitArray.BitArray(Int32)
   fullName: System.Collections.BitArray.BitArray(System.Int32)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 32
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 15
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Initializes a new instance of the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> class that can hold the specified number of bit values, which are initially set to false.
   syntax:
     content: public BitArray(int length)
     content.vb: Public Sub New(length As Integer)
     parameters:
     - id: length
       type: System.Int32
-      description: The number of bit values in the new <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*length* is less than zero.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.#ctor(System.Int32,System.Boolean)
+  commentId: M:System.Collections.BitArray.#ctor(System.Int32,System.Boolean)
   id: '#ctor(System.Int32,System.Boolean)'
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: BitArray(Int32, Boolean)
+  nameWithType: BitArray.BitArray(Int32, Boolean)
   fullName: System.Collections.BitArray.BitArray(System.Int32, System.Boolean)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 42
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 16
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Initializes a new instance of the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> class that can hold the specified number of bit values, which are initially set to the specified value.
   syntax:
     content: public BitArray(int length, bool defaultValue)
     content.vb: Public Sub New(length As Integer, defaultValue As Boolean)
     parameters:
     - id: length
       type: System.Int32
-      description: The number of bit values in the new <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.
     - id: defaultValue
       type: System.Boolean
-      description: The Boolean value to assign to each bit.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*length* is less than zero.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.#ctor(System.Int32[])
+  commentId: M:System.Collections.BitArray.#ctor(System.Int32[])
   id: '#ctor(System.Int32[])'
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: BitArray(Int32[])
-  name.vb: BitArray(Int32())
+  nameWithType: BitArray.BitArray(Int32[])
   fullName: System.Collections.BitArray.BitArray(System.Int32[])
-  fullName.vb: System.Collections.BitArray.BitArray(System.Int32())
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 138
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 17
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Initializes a new instance of the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> class that contains bit values copied from the specified array of 32-bit integers.
   syntax:
     content: public BitArray(int[] values)
     content.vb: Public Sub New(values As Integer())
     parameters:
     - id: values
       type: System.Int32[]
-      description: An array of integers containing the values to copy, where each integer represents 32 consecutive bits.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*values* is null.'
-  - type: System.ArgumentException
-    description: The length of *values* is greater than <xref href="System.Int32.MaxValue" data-throw-if-not-resolved="false"></xref>
+  nameWithType.vb: BitArray.BitArray(Int32())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.BitArray.BitArray(System.Int32())
+  name.vb: BitArray(Int32())
 - uid: System.Collections.BitArray.Item(System.Int32)
+  commentId: P:System.Collections.BitArray.Item(System.Int32)
   id: Item(System.Int32)
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: Item[Int32]
-  name.vb: Item(Int32)
+  nameWithType: BitArray.Item[Int32]
   fullName: System.Collections.BitArray.Item[System.Int32]
-  fullName.vb: System.Collections.BitArray.Item(System.Int32)
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 176
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: this[]
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 18
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Gets or sets the value of the bit at a specific position in the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public bool this[int index] { get; set; }
     content.vb: Public Property Item(index As Integer) As Boolean
     parameters:
     - id: index
       type: System.Int32
-      description: The zero-based index of the value to get or set.
     return:
       type: System.Boolean
-      description: The value of the bit at position *index*.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*index* is less than zero.-or- *index* is equal to or greater than <xref href="System.Collections.BitArray.Count" data-throw-if-not-resolved="false"></xref>.'
+  nameWithType.vb: BitArray.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: System.Collections.BitArray.Item(System.Int32)
+  name.vb: Item(Int32)
 - uid: System.Collections.BitArray.Length
+  commentId: P:System.Collections.BitArray.Length
   id: Length
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: Length
+  nameWithType: BitArray.Length
   fullName: System.Collections.BitArray.Length
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 315
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Length
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 19
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Gets or sets the number of elements in the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public int Length { get; set; }
     content.vb: Public Property Length As Integer
     parameters: []
     return:
       type: System.Int32
-      description: The number of elements in the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: The property is set to a value that is less than zero.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.And(System.Collections.BitArray)
+  commentId: M:System.Collections.BitArray.And(System.Collections.BitArray)
   id: And(System.Collections.BitArray)
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: And(BitArray)
+  nameWithType: BitArray.And(BitArray)
   fullName: System.Collections.BitArray.And(System.Collections.BitArray)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 240
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: And
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 23
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Performs the bitwise AND operation between the elements of the current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> object and the corresponding elements in the specified array. The current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> object will be modified to store the result of the bitwise AND operation.
   syntax:
     content: public BitArray And(BitArray value)
     content.vb: Public Function And(value As BitArray) As BitArray
     parameters:
     - id: value
       type: System.Collections.BitArray
-      description: The array with which to perform the bitwise AND operation.
     return:
       type: System.Collections.BitArray
-      description: An array containing the result of the bitwise AND operation, which is a reference to the current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> object.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*value* is null.'
-  - type: System.ArgumentException
-    description: '*value* and the current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> do not have the same number of elements.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.Get(System.Int32)
+  commentId: M:System.Collections.BitArray.Get(System.Int32)
   id: Get(System.Int32)
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: Get(Int32)
+  nameWithType: BitArray.Get(Int32)
   fullName: System.Collections.BitArray.Get(System.Int32)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 191
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Get
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 24
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Gets the value of the bit at a specific position in the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public bool Get(int index)
     content.vb: Public Function Get(index As Integer) As Boolean
     parameters:
     - id: index
       type: System.Int32
-      description: The zero-based index of the value to get.
     return:
       type: System.Boolean
-      description: The value of the bit at position *index*.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*index* is less than zero.-or- *index* is greater than or equal to the number of elements in the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.GetEnumerator
+  commentId: M:System.Collections.BitArray.GetEnumerator
   id: GetEnumerator
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: GetEnumerator()
+  nameWithType: BitArray.GetEnumerator()
   fullName: System.Collections.BitArray.GetEnumerator()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 437
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetEnumerator
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 25
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Returns an enumerator that iterates through the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public IEnumerator GetEnumerator()
     content.vb: Public Function GetEnumerator As IEnumerator
     return:
       type: System.Collections.IEnumerator
-      description: An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> for the entire <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.Not
+  commentId: M:System.Collections.BitArray.Not
   id: Not
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: Not()
+  nameWithType: BitArray.Not()
   fullName: System.Collections.BitArray.Not()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 305
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Not
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 26
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Inverts all the bit values in the current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>, so that elements set to true are changed to false, and elements set to false are changed to true.
   syntax:
     content: public BitArray Not()
     content.vb: Public Function Not As BitArray
     return:
       type: System.Collections.BitArray
-      description: The current instance with inverted bit values.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.Or(System.Collections.BitArray)
+  commentId: M:System.Collections.BitArray.Or(System.Collections.BitArray)
   id: Or(System.Collections.BitArray)
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: Or(BitArray)
+  nameWithType: BitArray.Or(BitArray)
   fullName: System.Collections.BitArray.Or(System.Collections.BitArray)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 262
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Or
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 27
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Performs the bitwise OR operation between the elements of the current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> object and the corresponding elements in the specified array. The current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> object will be modified to store the result of the bitwise OR operation.
   syntax:
     content: public BitArray Or(BitArray value)
     content.vb: Public Function Or(value As BitArray) As BitArray
     parameters:
     - id: value
       type: System.Collections.BitArray
-      description: The array with which to perform the bitwise OR operation.
     return:
       type: System.Collections.BitArray
-      description: An array containing the result of the bitwise OR operation, which is a reference to the current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> object.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*value* is null.'
-  - type: System.ArgumentException
-    description: '*value* and the current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> do not have the same number of elements.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.Set(System.Int32,System.Boolean)
+  commentId: M:System.Collections.BitArray.Set(System.Int32,System.Boolean)
   id: Set(System.Int32,System.Boolean)
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: Set(Int32, Boolean)
+  nameWithType: BitArray.Set(Int32, Boolean)
   fullName: System.Collections.BitArray.Set(System.Int32, System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 206
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Set
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 28
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Sets the bit at a specific position in the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> to the specified value.
   syntax:
     content: public void Set(int index, bool value)
     content.vb: Public Sub Set(index As Integer, value As Boolean)
     parameters:
     - id: index
       type: System.Int32
-      description: The zero-based index of the bit to set.
     - id: value
       type: System.Boolean
-      description: The Boolean value to assign to the bit.
-  exceptions:
-  - type: System.ArgumentOutOfRangeException
-    description: '*index* is less than zero.-or- *index* is greater than or equal to the number of elements in the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref>.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.SetAll(System.Boolean)
+  commentId: M:System.Collections.BitArray.SetAll(System.Boolean)
   id: SetAll(System.Boolean)
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: SetAll(Boolean)
+  nameWithType: BitArray.SetAll(Boolean)
   fullName: System.Collections.BitArray.SetAll(System.Boolean)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 224
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: SetAll
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 29
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Sets all bits in the <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> to the specified value.
   syntax:
     content: public void SetAll(bool value)
     content.vb: Public Sub SetAll(value As Boolean)
     parameters:
     - id: value
       type: System.Boolean
-      description: The Boolean value to assign to all bits.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Collections.BitArray.Xor(System.Collections.BitArray)
+  commentId: M:System.Collections.BitArray.Xor(System.Collections.BitArray)
   id: Xor(System.Collections.BitArray)
   parent: System.Collections.BitArray
+  langs:
+  - csharp
+  - vb
   name: Xor(BitArray)
+  nameWithType: BitArray.Xor(BitArray)
   fullName: System.Collections.BitArray.Xor(System.Collections.BitArray)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Collections/BitArray.cs
-    startLine: 284
+    remote:
+      path: src/System.Collections/ref/System.Collections.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Xor
+    path: src/System.Collections/ref/System.Collections.cs
+    startLine: 31
   assemblies:
   - System.Collections
   namespace: System.Collections
-  summary: Performs the bitwise exclusive OR operation between the elements of the current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> object against the corresponding elements in the specified array. The current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> object will be modified to store the result of the bitwise exclusive OR operation.
   syntax:
     content: public BitArray Xor(BitArray value)
     content.vb: Public Function Xor(value As BitArray) As BitArray
     parameters:
     - id: value
       type: System.Collections.BitArray
-      description: The array with which to perform the bitwise exclusive OR operation.
     return:
       type: System.Collections.BitArray
-      description: An array containing the result of the bitwise exclusive OR operation, which is a reference to the current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> object.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*value* is null.'
-  - type: System.ArgumentException
-    description: '*value* and the current <xref href="System.Collections.BitArray" data-throw-if-not-resolved="false"></xref> do not have the same number of elements.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: System.Collections
+  commentId: N:System.Collections
   isExternal: false
   name: System.Collections
+  nameWithType: System.Collections
   fullName: System.Collections
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
   parent: System.Collections
   isExternal: false
   name: Collections.IEnumerable
+  nameWithType: Collections.IEnumerable
   fullName: System.Collections.IEnumerable
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Boolean[]
-  isExternal: true
   name: Boolean[]
-  name.vb: Boolean()
+  nameWithType: Boolean[]
   fullName: System.Boolean[]
-  fullName.vb: System.Boolean()
+  nameWithType.vb: Boolean()
+  fullname.vb: System.Boolean()
+  name.vb: Boolean()
   spec.csharp:
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Boolean
     name: Boolean
+    nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Byte[]
-  isExternal: false
   name: Byte[]
-  name.vb: Byte()
+  nameWithType: Byte[]
   fullName: System.Byte[]
-  fullName.vb: System.Byte()
+  nameWithType.vb: Byte()
+  fullname.vb: System.Byte()
+  name.vb: Byte()
   spec.csharp:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Byte
     name: Byte
+    nameWithType: Byte
     fullName: System.Byte
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Collections.BitArray
+  commentId: T:System.Collections.BitArray
   parent: System.Collections
   isExternal: false
   name: BitArray
+  nameWithType: BitArray
   fullName: System.Collections.BitArray
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Int32[]
-  isExternal: false
   name: Int32[]
-  name.vb: Int32()
+  nameWithType: Int32[]
   fullName: System.Int32[]
-  fullName.vb: System.Int32()
+  nameWithType.vb: Int32()
+  fullname.vb: System.Int32()
+  name.vb: Int32()
   spec.csharp:
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Int32
     name: Int32
+    nameWithType: Int32
     fullName: System.Int32
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
   parent: System.Collections
   isExternal: false
   name: Collections.IEnumerator
+  nameWithType: Collections.IEnumerator
   fullName: System.Collections.IEnumerator
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.ArgumentOutOfRangeException
-  isExternal: false
-  name: ArgumentOutOfRangeException
-  fullName: System.ArgumentOutOfRangeException

@@ -1,36 +1,50 @@
 items:
 - uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
   id: AsyncCallback
   parent: System
   children: []
+  langs:
+  - csharp
+  - vb
   name: AsyncCallback
+  nameWithType: AsyncCallback
   fullName: System.AsyncCallback
   type: Delegate
   source:
     remote:
-      path: src/mscorlib/src/System/AsyncCallback.cs
+      path: src/System.Runtime/ref/System.Runtime.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/AsyncCallback.cs
-    startLine: 12
+      repo: https://github.com/dotnet/corefx.git
+    id: AsyncCallback
+    path: src/System.Runtime/ref/System.Runtime.cs
+    startLine: 192
   assemblies:
   - System.Runtime
   namespace: System
-  summary: References a method to be called when a corresponding asynchronous operation completes.
   syntax:
     content: public delegate void AsyncCallback(IAsyncResult ar);
     content.vb: Public Delegate Sub AsyncCallback(ar As IAsyncResult)
     parameters:
     - id: ar
       type: System.IAsyncResult
-      description: The result of the asynchronous operation.
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
 references:
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
   parent: System
   isExternal: false
   name: IAsyncResult
+  nameWithType: IAsyncResult
   fullName: System.IAsyncResult

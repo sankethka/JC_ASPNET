@@ -1,136 +1,170 @@
 items:
 - uid: System.Runtime.CompilerServices.ContractHelper
+  commentId: T:System.Runtime.CompilerServices.ContractHelper
   id: ContractHelper
   parent: System.Runtime.CompilerServices
   children:
   - System.Runtime.CompilerServices.ContractHelper.RaiseContractFailedEvent(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.Exception)
   - System.Runtime.CompilerServices.ContractHelper.TriggerFailure(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.String,System.Exception)
+  langs:
+  - csharp
+  - vb
   name: ContractHelper
+  nameWithType: ContractHelper
   fullName: System.Runtime.CompilerServices.ContractHelper
   type: Class
   source:
     remote:
-      path: src/mscorlib/src/System/Diagnostics/Contracts/ContractsBCL.cs
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Diagnostics/Contracts/ContractsBCL.cs
-    startLine: 270
+      repo: https://github.com/dotnet/corefx.git
+    id: ContractHelper
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 154
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Runtime.CompilerServices
-  summary: Provides methods that the binary rewriter uses to handle contract failures.
   syntax:
     content: 'public class ContractHelper : object'
-    content.vb: Public Class ContractHelper Inherits Object
+    content.vb: >-
+      Public Class ContractHelper
+          Inherits Object
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Runtime.CompilerServices.ContractHelper.RaiseContractFailedEvent(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.Exception)
+  commentId: M:System.Runtime.CompilerServices.ContractHelper.RaiseContractFailedEvent(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.Exception)
   id: RaiseContractFailedEvent(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.Exception)
   parent: System.Runtime.CompilerServices.ContractHelper
+  langs:
+  - csharp
+  - vb
   name: RaiseContractFailedEvent(ContractFailureKind, String, String, Exception)
+  nameWithType: ContractHelper.RaiseContractFailedEvent(ContractFailureKind, String, String, Exception)
   fullName: System.Runtime.CompilerServices.ContractHelper.RaiseContractFailedEvent(System.Diagnostics.Contracts.ContractFailureKind, System.String, System.String, System.Exception)
   type: Method
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 968
+      repo: https://github.com/dotnet/corefx.git
+    id: RaiseContractFailedEvent
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 156
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Runtime.CompilerServices
-  summary: Used by the binary rewriter to activate the default failure behavior.
   syntax:
     content: public static string RaiseContractFailedEvent(ContractFailureKind failureKind, string userMessage, string conditionText, Exception innerException)
     content.vb: Public Shared Function RaiseContractFailedEvent(failureKind As ContractFailureKind, userMessage As String, conditionText As String, innerException As Exception) As String
     parameters:
     - id: failureKind
       type: System.Diagnostics.Contracts.ContractFailureKind
-      description: One of the enumeration values that specifies the type of failure.
     - id: userMessage
       type: System.String
-      description: Additional user information.
     - id: conditionText
       type: System.String
-      description: The description of the condition that caused the failure.
     - id: innerException
       type: System.Exception
-      description: The inner exception that caused the current exception.
     return:
       type: System.String
-      description: A null reference (Nothing in Visual Basic) if the event was handled and should not trigger a failure; otherwise, returns the localized failure message.
-  exceptions:
-  - type: System.ArgumentException
-    description: '*failureKind* is not a valid <xref href="System.Diagnostics.Contracts.ContractFailureKind" data-throw-if-not-resolved="false"></xref> value.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Runtime.CompilerServices.ContractHelper.TriggerFailure(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.String,System.Exception)
+  commentId: M:System.Runtime.CompilerServices.ContractHelper.TriggerFailure(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.String,System.Exception)
   id: TriggerFailure(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.String,System.Exception)
   parent: System.Runtime.CompilerServices.ContractHelper
+  langs:
+  - csharp
+  - vb
   name: TriggerFailure(ContractFailureKind, String, String, String, Exception)
+  nameWithType: ContractHelper.TriggerFailure(ContractFailureKind, String, String, String, Exception)
   fullName: System.Runtime.CompilerServices.ContractHelper.TriggerFailure(System.Diagnostics.Contracts.ContractFailureKind, System.String, System.String, System.String, System.Exception)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Diagnostics/Contracts/Contracts.cs
-    startLine: 984
+    remote:
+      path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TriggerFailure
+    path: src/System.Diagnostics.Contracts/ref/System.Diagnostics.Contracts.cs
+    startLine: 157
   assemblies:
   - System.Diagnostics.Contracts
   namespace: System.Runtime.CompilerServices
-  summary: Triggers the default failure behavior.
   syntax:
     content: public static void TriggerFailure(ContractFailureKind kind, string displayMessage, string userMessage, string conditionText, Exception innerException)
     content.vb: Public Shared Sub TriggerFailure(kind As ContractFailureKind, displayMessage As String, userMessage As String, conditionText As String, innerException As Exception)
     parameters:
     - id: kind
       type: System.Diagnostics.Contracts.ContractFailureKind
-      description: One of the enumeration values that specifies the type of failure.
     - id: displayMessage
       type: System.String
-      description: The message to display.
     - id: userMessage
       type: System.String
-      description: Additional user information.
     - id: conditionText
       type: System.String
-      description: The description of the condition that caused the failure.
     - id: innerException
       type: System.Exception
-      description: The inner exception that caused the current exception.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Runtime.CompilerServices
+  commentId: N:System.Runtime.CompilerServices
   isExternal: false
   name: System.Runtime.CompilerServices
+  nameWithType: System.Runtime.CompilerServices
   fullName: System.Runtime.CompilerServices
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.Diagnostics.Contracts.ContractFailureKind
+  commentId: T:System.Diagnostics.Contracts.ContractFailureKind
   parent: System.Diagnostics.Contracts
   isExternal: false
   name: ContractFailureKind
+  nameWithType: ContractFailureKind
   fullName: System.Diagnostics.Contracts.ContractFailureKind
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: false
   name: Exception
+  nameWithType: Exception
   fullName: System.Exception
 - uid: System.Diagnostics.Contracts
+  commentId: N:System.Diagnostics.Contracts
   isExternal: false
   name: System.Diagnostics.Contracts
+  nameWithType: System.Diagnostics.Contracts
   fullName: System.Diagnostics.Contracts
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException

@@ -1,5 +1,6 @@
 items:
 - uid: System.Globalization.CultureInfo
+  commentId: T:System.Globalization.CultureInfo
   id: CultureInfo
   parent: System.Globalization
   children:
@@ -29,703 +30,1068 @@ items:
   - System.Globalization.CultureInfo.TextInfo
   - System.Globalization.CultureInfo.ToString
   - System.Globalization.CultureInfo.TwoLetterISOLanguageName
+  langs:
+  - csharp
+  - vb
   name: CultureInfo
+  nameWithType: CultureInfo
   fullName: System.Globalization.CultureInfo
   type: Class
   source:
-    remote: &o0
-      path: src/mscorlib/src/System/Globalization/CultureInfo.cs
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
       branch: master
-      repo: https://github.com/dotnet/coreclr.git
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 44
+      repo: https://github.com/dotnet/corefx.git
+    id: CultureInfo
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 121
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Provides information about a specific culture (called a locale for unmanaged code development). The information includes the names for the culture, the writing system, the calendar used, the sort order of strings, and formatting for dates and numbers.
   syntax:
     content: 'public class CultureInfo : IFormatProvider'
-    content.vb: Public Class CultureInfo Inherits IFormatProvider
+    content.vb: >-
+      Public Class CultureInfo
+          Inherits IFormatProvider
   inheritance:
   - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
 - uid: System.Globalization.CultureInfo.#ctor(System.String)
+  commentId: M:System.Globalization.CultureInfo.#ctor(System.String)
   id: '#ctor(System.String)'
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: CultureInfo(String)
+  nameWithType: CultureInfo.CultureInfo(String)
   fullName: System.Globalization.CultureInfo.CultureInfo(System.String)
   type: Constructor
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 321
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: .ctor
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 123
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Initializes a new instance of the <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> class based on the culture specified by name.
   syntax:
     content: public CultureInfo(string name)
     content.vb: Public Sub New(name As String)
     parameters:
     - id: name
       type: System.String
-      description: A predefined <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> name, <xref href="System.Globalization.CultureInfo.Name" data-throw-if-not-resolved="false"></xref> of an existing <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>, or Windows-only culture name. *name* is not case-sensitive.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*name* is null.'
-  - type: System.Globalization.CultureNotFoundException
-    description: '*name* is not a valid culture name. For more information, see the Notes to Callers section.'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: System.Globalization.CultureInfo.Calendar
+  commentId: P:System.Globalization.CultureInfo.Calendar
   id: Calendar
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: Calendar
+  nameWithType: CultureInfo.Calendar
   fullName: System.Globalization.CultureInfo.Calendar
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1525
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Calendar
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 124
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the default calendar used by the culture.
   syntax:
     content: public virtual Calendar Calendar { get; }
     content.vb: Public Overridable ReadOnly Property Calendar As Calendar
     parameters: []
     return:
       type: System.Globalization.Calendar
-      description: A <xref href="System.Globalization.Calendar" data-throw-if-not-resolved="false"></xref> that represents the default calendar used by the culture.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.CompareInfo
+  commentId: P:System.Globalization.CultureInfo.CompareInfo
   id: CompareInfo
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: CompareInfo
+  nameWithType: CultureInfo.CompareInfo
   fullName: System.Globalization.CultureInfo.CompareInfo
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1191
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CompareInfo
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 125
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref> that defines how to compare strings for the culture.
   syntax:
     content: public virtual CompareInfo CompareInfo { get; }
     content.vb: Public Overridable ReadOnly Property CompareInfo As CompareInfo
     parameters: []
     return:
       type: System.Globalization.CompareInfo
-      description: The <xref href="System.Globalization.CompareInfo" data-throw-if-not-resolved="false"></xref> that defines how to compare strings for the culture.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.CurrentCulture
+  commentId: P:System.Globalization.CultureInfo.CurrentCulture
   id: CurrentCulture
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: CurrentCulture
+  nameWithType: CultureInfo.CurrentCulture
   fullName: System.Globalization.CultureInfo.CurrentCulture
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 687
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CurrentCulture
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 126
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets or sets the <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> object that represents the culture used by the current thread.
   syntax:
     content: public static CultureInfo CurrentCulture { get; set; }
     content.vb: Public Shared Property CurrentCulture As CultureInfo
     parameters: []
     return:
       type: System.Globalization.CultureInfo
-      description: An object that represents the culture used by the current thread.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The property is set to null.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Globalization.CultureInfo.CurrentUICulture
+  commentId: P:System.Globalization.CultureInfo.CurrentUICulture
   id: CurrentUICulture
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: CurrentUICulture
+  nameWithType: CultureInfo.CurrentUICulture
   fullName: System.Globalization.CultureInfo.CurrentUICulture
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 786
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: CurrentUICulture
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 127
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets or sets the <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> object that represents the current user interface culture used by the Resource Manager to look up culture-specific resources at run time.
   syntax:
     content: public static CultureInfo CurrentUICulture { get; set; }
     content.vb: Public Shared Property CurrentUICulture As CultureInfo
     parameters: []
     return:
       type: System.Globalization.CultureInfo
-      description: The culture used by the Resource Manager to look up culture-specific resources at run time.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The property is set to null.
-  - type: System.ArgumentException
-    description: The property is set to a culture name that cannot be used to locate a resource file. Resource filenames can include only letters, numbers, hyphens, or underscores.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Globalization.CultureInfo.DateTimeFormat
+  commentId: P:System.Globalization.CultureInfo.DateTimeFormat
   id: DateTimeFormat
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: DateTimeFormat
+  nameWithType: CultureInfo.DateTimeFormat
   fullName: System.Globalization.CultureInfo.DateTimeFormat
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1415
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DateTimeFormat
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 128
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets or sets a <xref href="System.Globalization.DateTimeFormatInfo" data-throw-if-not-resolved="false"></xref> that defines the culturally appropriate format of displaying dates and times.
   syntax:
     content: public virtual DateTimeFormatInfo DateTimeFormat { get; set; }
     content.vb: Public Overridable Property DateTimeFormat As DateTimeFormatInfo
     parameters: []
     return:
       type: System.Globalization.DateTimeFormatInfo
-      description: A <xref href="System.Globalization.DateTimeFormatInfo" data-throw-if-not-resolved="false"></xref> that defines the culturally appropriate format of displaying dates and times.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The property is set to null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Globalization.CultureInfo.DateTimeFormat" data-throw-if-not-resolved="false"></xref> property or any of the <xref href="System.Globalization.DateTimeFormatInfo" data-throw-if-not-resolved="false"></xref> properties is set, and the <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> is read-only.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CultureInfo.DefaultThreadCurrentCulture
+  commentId: P:System.Globalization.CultureInfo.DefaultThreadCurrentCulture
   id: DefaultThreadCurrentCulture
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: DefaultThreadCurrentCulture
+  nameWithType: CultureInfo.DefaultThreadCurrentCulture
   fullName: System.Globalization.CultureInfo.DefaultThreadCurrentCulture
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 858
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DefaultThreadCurrentCulture
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 129
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets or sets the default culture for threads in the current application domain.
   syntax:
     content: public static CultureInfo DefaultThreadCurrentCulture { get; set; }
     content.vb: Public Shared Property DefaultThreadCurrentCulture As CultureInfo
     parameters: []
     return:
       type: System.Globalization.CultureInfo
-      description: The default culture for threads in the current application domain, or null if the current system culture is the default thread culture in the application domain.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Globalization.CultureInfo.DefaultThreadCurrentUICulture
+  commentId: P:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture
   id: DefaultThreadCurrentUICulture
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: DefaultThreadCurrentUICulture
+  nameWithType: CultureInfo.DefaultThreadCurrentUICulture
   fullName: System.Globalization.CultureInfo.DefaultThreadCurrentUICulture
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 876
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DefaultThreadCurrentUICulture
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 130
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets or sets the default UI culture for threads in the current application domain.
   syntax:
     content: public static CultureInfo DefaultThreadCurrentUICulture { get; set; }
     content.vb: Public Shared Property DefaultThreadCurrentUICulture As CultureInfo
     parameters: []
     return:
       type: System.Globalization.CultureInfo
-      description: The default UI culture for threads in the current application domain, or null if the current system UI culture is the default thread UI culture in the application domain.
-  exceptions:
-  - type: System.ArgumentException
-    description: In a set operation, the <xref href="System.Globalization.CultureInfo.Name" data-throw-if-not-resolved="false"></xref> property value is invalid.
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Globalization.CultureInfo.DisplayName
+  commentId: P:System.Globalization.CultureInfo.DisplayName
   id: DisplayName
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: DisplayName
+  nameWithType: CultureInfo.DisplayName
   fullName: System.Globalization.CultureInfo.DisplayName
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1102
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: DisplayName
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 131
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the full localized culture name.
   syntax:
     content: public virtual string DisplayName { get; }
     content.vb: Public Overridable ReadOnly Property DisplayName As String
     parameters: []
     return:
       type: System.String
-      description: The full localized culture name in the format languagefull [country/regionfull], where languagefull is the full name of the language and country/regionfull is the full name of the country/region.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.EnglishName
+  commentId: P:System.Globalization.CultureInfo.EnglishName
   id: EnglishName
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: EnglishName
+  nameWithType: CultureInfo.EnglishName
   fullName: System.Globalization.CultureInfo.EnglishName
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1140
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: EnglishName
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 132
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the culture name in the format languagefull [country/regionfull] in English.
   syntax:
     content: public virtual string EnglishName { get; }
     content.vb: Public Overridable ReadOnly Property EnglishName As String
     parameters: []
     return:
       type: System.String
-      description: The culture name in the format languagefull [country/regionfull] in English, where languagefull is the full name of the language and country/regionfull is the full name of the country/region.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.InvariantCulture
+  commentId: P:System.Globalization.CultureInfo.InvariantCulture
   id: InvariantCulture
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: InvariantCulture
+  nameWithType: CultureInfo.InvariantCulture
   fullName: System.Globalization.CultureInfo.InvariantCulture
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 931
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: InvariantCulture
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 133
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> object that is culture-independent (invariant).
   syntax:
     content: public static CultureInfo InvariantCulture { get; }
     content.vb: Public Shared ReadOnly Property InvariantCulture As CultureInfo
     parameters: []
     return:
       type: System.Globalization.CultureInfo
-      description: The object that is culture-independent (invariant).
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.IsNeutralCulture
+  commentId: P:System.Globalization.CultureInfo.IsNeutralCulture
   id: IsNeutralCulture
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: IsNeutralCulture
+  nameWithType: CultureInfo.IsNeutralCulture
   fullName: System.Globalization.CultureInfo.IsNeutralCulture
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1348
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsNeutralCulture
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 134
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets a value indicating whether the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> represents a neutral culture.
   syntax:
     content: public virtual bool IsNeutralCulture { get; }
     content.vb: Public Overridable ReadOnly Property IsNeutralCulture As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> represents a neutral culture; otherwise, false.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.IsReadOnly
+  commentId: P:System.Globalization.CultureInfo.IsReadOnly
   id: IsReadOnly
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: IsReadOnly
+  nameWithType: CultureInfo.IsReadOnly
   fullName: System.Globalization.CultureInfo.IsReadOnly
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1680
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: IsReadOnly
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 135
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets a value indicating whether the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> is read-only.
   syntax:
     content: public bool IsReadOnly { get; }
     content.vb: Public ReadOnly Property IsReadOnly As Boolean
     parameters: []
     return:
       type: System.Boolean
-      description: true if the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> is read-only; otherwise, false. The default is false.
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.Name
+  commentId: P:System.Globalization.CultureInfo.Name
   id: Name
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: Name
+  nameWithType: CultureInfo.Name
   fullName: System.Globalization.CultureInfo.Name
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1042
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Name
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 136
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the culture name in the format languagecode2-country/regioncode2.
   syntax:
     content: public virtual string Name { get; }
     content.vb: Public Overridable ReadOnly Property Name As String
     parameters: []
     return:
       type: System.String
-      description: The culture name in the format languagecode2-country/regioncode2. languagecode2 is a lowercase two-letter code derived from ISO 639-1. country/regioncode2 is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.NativeName
+  commentId: P:System.Globalization.CultureInfo.NativeName
   id: NativeName
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: NativeName
+  nameWithType: CultureInfo.NativeName
   fullName: System.Globalization.CultureInfo.NativeName
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1123
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NativeName
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 137
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the culture name, consisting of the language, the country/region, and the optional script, that the culture is set to display.
   syntax:
     content: public virtual string NativeName { get; }
     content.vb: Public Overridable ReadOnly Property NativeName As String
     parameters: []
     return:
       type: System.String
-      description: The culture name. consisting of the full name of the language, the full name of the country/region, and the optional script. The format is discussed in the description of the <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> class.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.NumberFormat
+  commentId: P:System.Globalization.CultureInfo.NumberFormat
   id: NumberFormat
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: NumberFormat
+  nameWithType: CultureInfo.NumberFormat
   fullName: System.Globalization.CultureInfo.NumberFormat
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1382
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: NumberFormat
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 138
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets or sets a <xref href="System.Globalization.NumberFormatInfo" data-throw-if-not-resolved="false"></xref> that defines the culturally appropriate format of displaying numbers, currency, and percentage.
   syntax:
     content: public virtual NumberFormatInfo NumberFormat { get; set; }
     content.vb: Public Overridable Property NumberFormat As NumberFormatInfo
     parameters: []
     return:
       type: System.Globalization.NumberFormatInfo
-      description: A <xref href="System.Globalization.NumberFormatInfo" data-throw-if-not-resolved="false"></xref> that defines the culturally appropriate format of displaying numbers, currency, and percentage.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: The property is set to null.
-  - type: System.InvalidOperationException
-    description: The <xref href="System.Globalization.CultureInfo.NumberFormat" data-throw-if-not-resolved="false"></xref> property or any of the <xref href="System.Globalization.NumberFormatInfo" data-throw-if-not-resolved="false"></xref> properties is set, and the <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> is read-only.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CultureInfo.OptionalCalendars
+  commentId: P:System.Globalization.CultureInfo.OptionalCalendars
   id: OptionalCalendars
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: OptionalCalendars
+  nameWithType: CultureInfo.OptionalCalendars
   fullName: System.Globalization.CultureInfo.OptionalCalendars
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1550
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: OptionalCalendars
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 139
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the list of calendars that can be used by the culture.
   syntax:
     content: public virtual Calendar[] OptionalCalendars { get; }
     content.vb: Public Overridable ReadOnly Property OptionalCalendars As Calendar()
     parameters: []
     return:
       type: System.Globalization.Calendar[]
-      description: An array of type <xref href="System.Globalization.Calendar" data-throw-if-not-resolved="false"></xref> that represents the calendars that can be used by the culture represented by the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.Parent
+  commentId: P:System.Globalization.CultureInfo.Parent
   id: Parent
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: Parent
+  nameWithType: CultureInfo.Parent
   fullName: System.Globalization.CultureInfo.Parent
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 948
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Parent
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 140
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> that represents the parent culture of the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public virtual CultureInfo Parent { get; }
     content.vb: Public Overridable ReadOnly Property Parent As CultureInfo
     parameters: []
     return:
       type: System.Globalization.CultureInfo
-      description: The <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> that represents the parent culture of the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.TextInfo
+  commentId: P:System.Globalization.CultureInfo.TextInfo
   id: TextInfo
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: TextInfo
+  nameWithType: CultureInfo.TextInfo
   fullName: System.Globalization.CultureInfo.TextInfo
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1251
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TextInfo
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 141
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the <xref href="System.Globalization.TextInfo" data-throw-if-not-resolved="false"></xref> that defines the writing system associated with the culture.
   syntax:
     content: public virtual TextInfo TextInfo { get; }
     content.vb: Public Overridable ReadOnly Property TextInfo As TextInfo
     parameters: []
     return:
       type: System.Globalization.TextInfo
-      description: The <xref href="System.Globalization.TextInfo" data-throw-if-not-resolved="false"></xref> that defines the writing system associated with the culture.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.TwoLetterISOLanguageName
+  commentId: P:System.Globalization.CultureInfo.TwoLetterISOLanguageName
   id: TwoLetterISOLanguageName
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: TwoLetterISOLanguageName
+  nameWithType: CultureInfo.TwoLetterISOLanguageName
   fullName: System.Globalization.CultureInfo.TwoLetterISOLanguageName
   type: Property
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1149
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: TwoLetterISOLanguageName
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 142
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets the ISO 639-1 two-letter code for the language of the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public virtual string TwoLetterISOLanguageName { get; }
     content.vb: Public Overridable ReadOnly Property TwoLetterISOLanguageName As String
     parameters: []
     return:
       type: System.String
-      description: The ISO 639-1 two-letter code for the language of the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
 - uid: System.Globalization.CultureInfo.Clone
+  commentId: M:System.Globalization.CultureInfo.Clone
   id: Clone
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: Clone()
+  nameWithType: CultureInfo.Clone()
   fullName: System.Globalization.CultureInfo.Clone()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1591
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Clone
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 143
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Creates a copy of the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public virtual object Clone()
     content.vb: Public Overridable Function Clone As Object
     return:
       type: System.Object
-      description: A copy of the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CultureInfo.Equals(System.Object)
+  commentId: M:System.Globalization.CultureInfo.Equals(System.Object)
   id: Equals(System.Object)
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: Equals(Object)
+  nameWithType: CultureInfo.Equals(Object)
   fullName: System.Globalization.CultureInfo.Equals(System.Object)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1284
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: Equals
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 144
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Determines whether the specified object is the same culture as the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
   syntax:
     content: public override bool Equals(object value)
     content.vb: Public Overrides Function Equals(value As Object) As Boolean
     parameters:
     - id: value
       type: System.Object
-      description: The object to compare with the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Boolean
-      description: true if *value* is the same culture as the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>; otherwise, false.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Globalization.CultureInfo.GetFormat(System.Type)
+  commentId: M:System.Globalization.CultureInfo.GetFormat(System.Type)
   id: GetFormat(System.Type)
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: GetFormat(Type)
+  nameWithType: CultureInfo.GetFormat(Type)
   fullName: System.Globalization.CultureInfo.GetFormat(System.Type)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1338
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetFormat
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 145
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Gets an object that defines how to format the specified type.
   syntax:
     content: public virtual object GetFormat(Type formatType)
     content.vb: Public Overridable Function GetFormat(formatType As Type) As Object
     parameters:
     - id: formatType
       type: System.Type
-      description: The <xref href="System.Type" data-throw-if-not-resolved="false"></xref> for which to get a formatting object. This method only supports the <xref href="System.Globalization.NumberFormatInfo" data-throw-if-not-resolved="false"></xref> and <xref href="System.Globalization.DateTimeFormatInfo" data-throw-if-not-resolved="false"></xref> types.
     return:
       type: System.Object
-      description: The value of the <xref href="System.Globalization.CultureInfo.NumberFormat" data-throw-if-not-resolved="false"></xref> property, which is a <xref href="System.Globalization.NumberFormatInfo" data-throw-if-not-resolved="false"></xref> containing the default number format information for the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>, if *formatType* is the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object for the <xref href="System.Globalization.NumberFormatInfo" data-throw-if-not-resolved="false"></xref> class.-or- The value of the <xref href="System.Globalization.CultureInfo.DateTimeFormat" data-throw-if-not-resolved="false"></xref> property, which is a <xref href="System.Globalization.DateTimeFormatInfo" data-throw-if-not-resolved="false"></xref> containing the default date and time format information for the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>, if *formatType* is the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> object for the <xref href="System.Globalization.DateTimeFormatInfo" data-throw-if-not-resolved="false"></xref> class.-or- null, if *formatType* is any other object.
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: System.Globalization.CultureInfo.GetHashCode
+  commentId: M:System.Globalization.CultureInfo.GetHashCode
   id: GetHashCode
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: GetHashCode()
+  nameWithType: CultureInfo.GetHashCode()
   fullName: System.Globalization.CultureInfo.GetHashCode()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1313
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: GetHashCode
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 146
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Serves as a hash function for the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>, suitable for hashing algorithms and data structures, such as a hash table.
   syntax:
     content: public override int GetHashCode()
     content.vb: Public Overrides Function GetHashCode As Integer
     return:
       type: System.Int32
-      description: A hash code for the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: System.Globalization.CultureInfo.ReadOnly(System.Globalization.CultureInfo)
+  commentId: M:System.Globalization.CultureInfo.ReadOnly(System.Globalization.CultureInfo)
   id: ReadOnly(System.Globalization.CultureInfo)
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: ReadOnly(CultureInfo)
+  nameWithType: CultureInfo.ReadOnly(CultureInfo)
   fullName: System.Globalization.CultureInfo.ReadOnly(System.Globalization.CultureInfo)
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1632
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ReadOnly
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 147
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Returns a read-only wrapper around the specified <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> object.
   syntax:
     content: public static CultureInfo ReadOnly(CultureInfo ci)
     content.vb: Public Shared Function ReadOnly(ci As CultureInfo) As CultureInfo
     parameters:
     - id: ci
       type: System.Globalization.CultureInfo
-      description: The <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> object to wrap.
     return:
       type: System.Globalization.CultureInfo
-      description: A read-only <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> wrapper around *ci*.
-  exceptions:
-  - type: System.ArgumentNullException
-    description: '*ci* is null.'
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: System.Globalization.CultureInfo.ToString
+  commentId: M:System.Globalization.CultureInfo.ToString
   id: ToString
   parent: System.Globalization.CultureInfo
+  langs:
+  - csharp
+  - vb
   name: ToString()
+  nameWithType: CultureInfo.ToString()
   fullName: System.Globalization.CultureInfo.ToString()
   type: Method
   source:
-    remote: *o0
-    path: src/mscorlib/src/System/Globalization/CultureInfo.cs
-    startLine: 1329
+    remote:
+      path: src/System.Globalization/ref/System.Globalization.cs
+      branch: master
+      repo: https://github.com/dotnet/corefx.git
+    id: ToString
+    path: src/System.Globalization/ref/System.Globalization.cs
+    startLine: 148
   assemblies:
   - System.Globalization
   namespace: System.Globalization
-  summary: Returns a string containing the name of the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref> in the format languagecode2-country/regioncode2.
   syntax:
     content: public override string ToString()
     content.vb: Public Overrides Function ToString As String
     return:
       type: System.String
-      description: A string containing the name of the current <xref href="System.Globalization.CultureInfo" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: System.Globalization
+  commentId: N:System.Globalization
   isExternal: false
   name: System.Globalization
+  nameWithType: System.Globalization
   fullName: System.Globalization
 - uid: System.Object
+  commentId: T:System.Object
   parent: System
   isExternal: false
   name: Object
+  nameWithType: Object
   fullName: System.Object
 - uid: System
+  commentId: N:System
   isExternal: false
   name: System
+  nameWithType: System
   fullName: System
 - uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: false
   name: String
+  nameWithType: String
   fullName: System.String
 - uid: System.Globalization.Calendar
+  commentId: T:System.Globalization.Calendar
   parent: System.Globalization
   isExternal: false
   name: Calendar
+  nameWithType: Calendar
   fullName: System.Globalization.Calendar
 - uid: System.Globalization.CompareInfo
+  commentId: T:System.Globalization.CompareInfo
   parent: System.Globalization
   isExternal: false
   name: Globalization.CompareInfo
+  nameWithType: Globalization.CompareInfo
   fullName: System.Globalization.CompareInfo
 - uid: System.Globalization.CultureInfo
+  commentId: T:System.Globalization.CultureInfo
   parent: System.Globalization
   isExternal: false
   name: Globalization.CultureInfo
+  nameWithType: Globalization.CultureInfo
   fullName: System.Globalization.CultureInfo
 - uid: System.Globalization.DateTimeFormatInfo
+  commentId: T:System.Globalization.DateTimeFormatInfo
   parent: System.Globalization
   isExternal: false
   name: DateTimeFormatInfo
+  nameWithType: DateTimeFormatInfo
   fullName: System.Globalization.DateTimeFormatInfo
 - uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
   isExternal: false
   name: Boolean
+  nameWithType: Boolean
   fullName: System.Boolean
 - uid: System.Globalization.NumberFormatInfo
+  commentId: T:System.Globalization.NumberFormatInfo
   parent: System.Globalization
   isExternal: false
   name: NumberFormatInfo
+  nameWithType: NumberFormatInfo
   fullName: System.Globalization.NumberFormatInfo
 - uid: System.Globalization.Calendar[]
-  isExternal: false
   name: Calendar[]
-  name.vb: Calendar()
+  nameWithType: Calendar[]
   fullName: System.Globalization.Calendar[]
-  fullName.vb: System.Globalization.Calendar()
+  nameWithType.vb: Calendar()
+  fullname.vb: System.Globalization.Calendar()
+  name.vb: Calendar()
   spec.csharp:
   - uid: System.Globalization.Calendar
     name: Calendar
+    nameWithType: Calendar
     fullName: System.Globalization.Calendar
   - name: '[]'
+    nameWithType: '[]'
     fullName: '[]'
   spec.vb:
   - uid: System.Globalization.Calendar
     name: Calendar
+    nameWithType: Calendar
     fullName: System.Globalization.Calendar
   - name: ()
+    nameWithType: ()
     fullName: ()
 - uid: System.Globalization.TextInfo
+  commentId: T:System.Globalization.TextInfo
   parent: System.Globalization
   isExternal: false
   name: TextInfo
+  nameWithType: TextInfo
   fullName: System.Globalization.TextInfo
 - uid: System.Type
+  commentId: T:System.Type
   parent: System
   isExternal: false
   name: Type
+  nameWithType: Type
   fullName: System.Type
 - uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: false
   name: Int32
+  nameWithType: Int32
   fullName: System.Int32
-- uid: System.ArgumentNullException
-  isExternal: false
-  name: ArgumentNullException
-  fullName: System.ArgumentNullException
-- uid: System.Globalization.CultureNotFoundException
-  isExternal: false
-  name: CultureNotFoundException
-  fullName: System.Globalization.CultureNotFoundException
-- uid: System.ArgumentException
-  parent: System
-  isExternal: false
-  name: ArgumentException
-  fullName: System.ArgumentException
-- uid: System.InvalidOperationException
-  parent: System
-  isExternal: false
-  name: InvalidOperationException
-  fullName: System.InvalidOperationException
