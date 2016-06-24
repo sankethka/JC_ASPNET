@@ -37,3 +37,10 @@ example:
     ' The example displays output like the following:
     '      The workstation garbage collector is running.</code></pre>
 ---
+
+---
+uid: System.Runtime.GCSettings
+author: sharriexie
+manager: jeffgilb
+ms.date: June 24, 2016
+---
