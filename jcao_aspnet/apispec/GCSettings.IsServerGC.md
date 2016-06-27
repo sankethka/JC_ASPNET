@@ -40,7 +40,8 @@ example:
 
 ---
 uid: System.Runtime.GCSettings
-author: sharriexie
-manager: jeffgilb
+ms.prod: doctnet
+ms.service: .net core
+ms.technology: .net
 ms.date: June 24, 2016
 ---
